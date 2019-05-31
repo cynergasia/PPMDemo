@@ -114,14 +114,57 @@ class Dashboard extends Component {
           <Col xs="12" sm="12" lg="6">
             <Card>
               <CardHeader>
-                Financial Status
+                Notification
                 <div className="card-header-actions">
                 </div>
               </CardHeader>
               <CardBody>
-                <div className="chart-wrapper financial" >
-                  <Financial />
-                </div>
+                <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
+                  <thead className="thead-light">
+                    {/* <tr>
+                        <td colspan="3" className="text-center" style={{ background: "#ccecff", fontWeight: 600 }}>Notificaitons</td>
+                      </tr> */}
+                    <tr>
+                      <th className="text-center">Due Date V</th>
+                      <th className="text-center">Project</th>
+                      <th className="text-center">Notification</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="text-center"><div>4/22/2019</div></td>
+                      <td className="text-center"><div>Project 4</div></td>
+                      <td className="text-center"><div>Invoice Approval Pending</div></td>
+                    </tr>
+
+                    <tr>
+                      <td className="text-center"><div>4/22/2019</div></td>
+                      <td className="text-center"><div>Project 5</div></td>
+                      <td className="text-center"><div>Status Report Pending</div></td>
+                    </tr>
+                    <tr>
+                      <td className="text-center"><div>4/22/2019</div></td>
+                      <td className="text-center"><div>Project 6</div></td>
+                      <td className="text-center"><div>Issue Review pending</div></td>
+                    </tr>
+                    <tr>
+                      <td className="text-center"><div>4/22/2019</div></td>
+                      <td className="text-center"><div>Project 6</div></td>
+                      <td className="text-center"><div>Issue Review pending</div></td>
+                    </tr>
+                    <tr>
+                      <td className="text-center"><div>4/22/2019</div></td>
+                      <td className="text-center"><div>Project 6</div></td>
+                      <td className="text-center"><div>Issue Review pending</div></td>
+                    </tr>
+                    <tr>
+                      <td className="text-center"><div>4/22/2019</div></td>
+                      <td className="text-center"><div>Project 6</div></td>
+                      <td className="text-center"><div>Issue Review pending</div></td>
+                    </tr>
+                  </tbody>
+                </Table>
+
               </CardBody>
             </Card>
           </Col>
@@ -142,9 +185,9 @@ class Dashboard extends Component {
           </Col>
 
           <Col xs="8" sm="4" lg="2">
-            <Card className="text-white bg-danger">
+            <Card className="text-white bg-success">
               <CardBody className="pb-0">
-                <div className="text-value">45</div>
+                <div className="text-value">8</div>
                 <Link to="/500">
                   <div className="text-summary"> Active Workpackages</div>
                 </Link>
@@ -155,9 +198,9 @@ class Dashboard extends Component {
           </Col>
 
           <Col xs="8" sm="4" lg="2">
-            <Card className="text-white bg-danger">
+            <Card className="text-white bg-warning">
               <CardBody className="pb-0">
-                <div className="text-value">9</div>
+                <div className="text-value">26</div>
                 <Link to="/500">
                   <div className="text-summary">Open Activitiess</div>
                 </Link>
@@ -168,9 +211,9 @@ class Dashboard extends Component {
           </Col>
 
           <Col xs="8" sm="4" lg="2">
-            <Card className="text-white bg-danger">
+            <Card className="text-white bg-warning">
               <CardBody className="pb-0">
-                <div className="text-value">6</div>
+                <div className="text-value">12</div>
                 <Link to="/500">
                   <div className="text-summary">Open Issues</div>
                 </Link>
@@ -181,7 +224,7 @@ class Dashboard extends Component {
           </Col>
 
           <Col xs="8" sm="4" lg="2">
-            <Card className="text-white bg-warning">
+            <Card className="text-white bg-success">
               <CardBody className="pb-0">
                 <div className="text-value">5</div>
                 <Link to="/500">
@@ -194,7 +237,7 @@ class Dashboard extends Component {
             </Card>
           </Col>
           <Col xs="8" sm="4" lg="2">
-            <Card className="text-white bg-warning">
+            <Card className="text-white bg-success">
               <CardBody className="pb-0">
                 <div className="text-value">3</div>
                 <Link to="/500">
@@ -316,7 +359,7 @@ class Dashboard extends Component {
                   <Col xs="12" sm="12" lg="4"  >
                     <div className="title-wrap">
                       <h6 className="left">TARGET DATE</h6>
-                      <h6 className="right">3 OVERDUE</h6>
+                      <Link to="/500"><h6 className="right">3 OVERDUE</h6></Link>
                     </div>
                     <Row>
                       <Col xs="8" sm="6" lg="6">
@@ -372,6 +415,9 @@ class Dashboard extends Component {
                   <Col xs="8" sm="4" lg="6">
                     <div className="chart-wrapper">
                       <Doughnut data={summaryMilestone} />
+                      <span className="doughnutText text-center">
+                        <p>6</p> <span>Milestone</span>
+                      </span>
                     </div>
                   </Col >
                   <Col xs="8" sm="4" lg="6">
@@ -677,7 +723,7 @@ class Dashboard extends Component {
                   <Col xs="12" sm="12" lg="4"  >
                     <div className="title-wrap">
                       <h6 className="left">DUE DATE</h6>
-                      <h6 className="right">4 OVERDUE</h6>
+                      <Link to="/500"><h6 className="right">4 OVERDUE</h6></Link>
                     </div>
                     <Row>
                       <Col xs="8" sm="6" lg="6">
@@ -790,7 +836,7 @@ class Dashboard extends Component {
                   <Col xs="12" sm="12" lg="4"  >
                     <div className="title-wrap">
                       <h6 className="left">DUE DATE</h6>
-                      <h6 className="right">4 OVERDUE</h6>
+                      <Link to="/500"><h6 className="right">4 OVERDUE</h6></Link>
                     </div>
                     <Row>
                       <Col xs="8" sm="6" lg="6">
@@ -824,8 +870,43 @@ class Dashboard extends Component {
             </Card>
           </Col>
         </Row>
-
         <Row>
+          <Col xs="12" sm="12" lg="6">
+            <Card>
+              <CardHeader>
+                Effort Anaysis
+              </CardHeader>
+              <CardBody>
+                <div className="chart-wrapper">
+                  <FinancialAnalysis />
+                </div>
+              </CardBody>
+            </Card>
+          </Col>
+          <Col xs="12" sm="12" lg="6">
+            <Card>
+              <CardHeader>
+                Financial Status
+                <div className="card-header-actions">
+                </div>
+
+              </CardHeader>
+              <CardBody>
+                <div className="chart-wrapper financial" >
+                  <div className="chart-header">
+                    <p>PhysicaL Percent Complete</p>
+                  </div>
+                  <Financial />
+                  <div className="chart-footer">
+                    <p>In $ Millions</p>
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+
+        {/* <Row>
           <Col>
             <Card>
               <CardHeader>
@@ -833,11 +914,11 @@ class Dashboard extends Component {
               </CardHeader>
               <CardBody>
                 <Row>
-                  <Col xs="12" sm="12" md="12" lg="6">
+                  <Col xs="12" sm="12" lg="6">
                     <FinancialAnalysis />
                   </Col>
 
-                  <Col xs="12" sm="12" md="12" lg="6">
+                  <Col xs="12" sm="12" lg="6">
                     <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
                       <thead className="thead-light">
                         <tr>
@@ -874,7 +955,7 @@ class Dashboard extends Component {
               </CardBody>
             </Card>
           </Col>
-        </Row>
+        </Row> */}
       </div>
     );
   }

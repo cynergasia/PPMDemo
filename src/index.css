@@ -119,6 +119,34 @@ h6.chart-title{
     font-weight: 600;
 }
 
+.doughnutText{
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%,-40%)
+}
+.doughnutText p{margin: 0 0 -6px 0;}
+.doughnutText span{font-size: 12px;}
+.chart-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.financial{
+    position: relative;
+    padding-left: 23px;
+}
+.financial .chart-footer p{
+    padding: 0 15px;
+    text-transform: capitalize;
+    margin: 0;
+}
+.financial .chart-header {
+    position: absolute;
+    left: -62px;
+    top: 45%;
+    transform: rotate(-90deg);
+}
 
 /***** Responsive *****/
 

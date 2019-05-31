@@ -71,7 +71,7 @@ class Risks extends Component {
             },
             showLabel: false
           }} load={this.load.bind(this)} tooltipRender={this.tooltipTemplate} style={{
-            height: "210px",
+            height: "230px",
             width: "auto",
             // minHeight: "20rem",
             // minWidth: "22rem"
