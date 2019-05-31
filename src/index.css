@@ -109,9 +109,11 @@ h6.chart-title{
     margin: 0;
     font-size: 14px;
     font-weight: 600;
+    color:black;
 }
 .target-date-wrapper .inner-td-wrapper p{
     font-size: 12px;
+    color:black;
 }
 .card .card-header {
     font-weight: 600;
@@ -189,6 +191,14 @@ h6.chart-title{
     margin-top: 87px;
 }
 
+}
+.text-summary{
+    font-size: 1.0rem;
+    font-weight: 500;
+    color:white;
+}
+.card-header-icons{
+    margin-left:10px;
 }
 
 @media screen and (max-width: 600px) {

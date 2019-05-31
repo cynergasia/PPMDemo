@@ -1,0 +1,5 @@
+#heatmap-container #heatmap-containerXAxisLabels,
+#heatmap-container #heatmap-containerYAxisLabels,
+#heatmap-container  {
+    display: none;
+}

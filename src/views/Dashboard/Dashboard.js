@@ -1,8 +1,11 @@
 import React, { Component, lazy, Suspense } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { Bar, Doughnut, Line, Pie, Polar, Radar, Bubble } from 'react-chartjs-2';
 import Risk from './../Charts/RiskGraph/Risks';
 import Project from './../Charts/MyProject/Project';
 import Financial from './../Charts/FinancialStatus/Financial';
+import Calendar from '../Charts/Calender/Calendar'
+
 import Menu from './Menu';
 import {
   Badge,
@@ -127,7 +130,9 @@ class Dashboard extends Component {
             <Card className="text-white bg-info">
               <CardBody className="pb-0">
                 <div className="text-value">71.92%</div>
-                <div>Complete</div>
+                <Link to="/500">
+                  <div className="text-summary">Complete</div>
+                </Link>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '30px' }}>
 
@@ -139,7 +144,9 @@ class Dashboard extends Component {
             <Card className="text-white bg-danger">
               <CardBody className="pb-0">
                 <div className="text-value">45</div>
-                <div> Active Workpackages</div>
+                <Link to="/500">
+                  <div className="text-summary"> Active Workpackages</div>
+                </Link>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '30px' }}>
               </div>
@@ -150,7 +157,9 @@ class Dashboard extends Component {
             <Card className="text-white bg-danger">
               <CardBody className="pb-0">
                 <div className="text-value">9</div>
-                <div>Open Activities</div>
+                <Link to="/500">
+                  <div className="text-summary">Open Activitiess</div>
+                </Link>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '30px' }}>
               </div>
@@ -161,7 +170,9 @@ class Dashboard extends Component {
             <Card className="text-white bg-danger">
               <CardBody className="pb-0">
                 <div className="text-value">6</div>
-                <div>Open Issues</div>
+                <Link to="/500">
+                  <div className="text-summary">Open Issues</div>
+                </Link>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '30px' }}>
               </div>
@@ -172,7 +183,9 @@ class Dashboard extends Component {
             <Card className="text-white bg-warning">
               <CardBody className="pb-0">
                 <div className="text-value">5</div>
-                <div>Pending Risks</div>
+                <Link to="/500">
+                  <div className="text-summary">Pending Risks</div>
+                </Link>
               </CardBody>
               <div className="chart-wrapper" style={{ height: '30px' }}>
 
@@ -183,7 +196,9 @@ class Dashboard extends Component {
             <Card className="text-white bg-warning">
               <CardBody className="pb-0">
                 <div className="text-value">3</div>
-                <div>Pending Changes</div>
+                <Link to="/500">
+                  <div className="text-summary">Pending Changes</div>
+                </Link>
               </CardBody>
               <div className="chart-wrapper" style={{ height: '30px' }}>
 
@@ -198,7 +213,9 @@ class Dashboard extends Component {
               <CardHeader>
                 Risk All Project
                 <div className="card-header-actions">
-                  <i className="icon-settings"></i>
+                  <i class="fa fa-download card-header-icons" aria-hidden="true"></i>
+                  <i class="fa fa-ellipsis-h card-header-icons"></i>
+                  {/* <i class="fa fa-th"></i> */}
                 </div>
               </CardHeader>
               <CardBody>
@@ -218,11 +235,11 @@ class Dashboard extends Component {
 
                           </div>
                           <div className="property">
-                            Overdue
+                            20
                                 </div>
                         </div>
                         <div className="right">
-                          3
+                          1
                             </div>
                       </div>
 
@@ -232,11 +249,11 @@ class Dashboard extends Component {
 
                           </div>
                           <div className="property">
-                            Action Required
+                            16
                                 </div>
                         </div>
                         <div className="right">
-                          0
+                          2
                             </div>
                       </div>
 
@@ -247,11 +264,11 @@ class Dashboard extends Component {
 
                           </div>
                           <div className="property">
-                            On Hold
+                            12
                                 </div>
                         </div>
                         <div className="right">
-                          0
+                          1
                             </div>
                       </div>
                       <div className="summary-status-value-wrap">
@@ -260,11 +277,37 @@ class Dashboard extends Component {
 
                           </div>
                           <div className="property">
-                            At Risk
+                            12
                                 </div>
                         </div>
                         <div className="right">
-                          0
+                          1
+                            </div>
+                      </div>
+                      <div className="summary-status-value-wrap">
+                        <div className="left">
+                          <div className="property-value" style={{ backgroundColor: 'yellow' }}>
+
+                          </div>
+                          <div className="property">
+                            9
+                                </div>
+                        </div>
+                        <div className="right">
+                          1
+                            </div>
+                      </div>
+                      <div className="summary-status-value-wrap">
+                        <div className="left">
+                          <div className="property-value" style={{ backgroundColor: 'green' }}>
+
+                          </div>
+                          <div className="property">
+                            6
+                            </div>
+                        </div>
+                        <div className="right">
+                          2
                             </div>
                       </div>
                     </div>
@@ -293,10 +336,12 @@ class Dashboard extends Component {
                             <h4>0</h4>
                             <p>TOMMOROW</p>
                           </div>
-                          <div className="inner-td-wrapper">
-                            <h4>3</h4>
-                            <p>THIS MONTH</p>
-                          </div>
+                          <Link to="/500">
+                            <div className="inner-td-wrapper">
+                              <h4>3</h4>
+                              <p>THIS MONTH</p>
+                            </div>
+                          </Link>
                         </div>
                       </Col>
                     </Row>
@@ -313,7 +358,12 @@ class Dashboard extends Component {
                   {/* <a href="http://www.chartjs.org" className="card-header-action">
                     <small className="text-muted">docs</small>
                   </a> */}
-                  <i className="icon-settings"></i>
+
+                  <i class="fa fa-download card-header-icons" aria-hidden="true"></i>
+
+
+                  <i class="fa fa-ellipsis-h card-header-icons"></i>
+
                 </div>
               </CardHeader>
               <CardBody>
@@ -443,7 +493,8 @@ class Dashboard extends Component {
               <CardHeader>
                 Change Register
                 <div className="card-header-actions">
-                  <i className="icon-settings"></i>
+                  <i class="fa fa-download card-header-icons" aria-hidden="true"></i>
+                  <i class="fa fa-ellipsis-h card-header-icons"></i>
                 </div>
               </CardHeader>
               <CardBody>
@@ -525,90 +576,20 @@ class Dashboard extends Component {
           <Col xs="12" sm="12" lg="6">
             <Card>
               <CardHeader>
-                Issue All Projects
+                Calendar
               <div className="card-header-actions">
                   {/* <a href="http://www.chartjs.org" className="card-header-action">
                     <small className="text-muted">docs</small>
                   </a> */}
-                  <i className="icon-settings"></i>
+                  <i class="fa fa-download card-header-icons" aria-hidden="true"></i>
+                  <i class="fa fa-ellipsis-h card-header-icons"></i>
                 </div>
               </CardHeader>
               <CardBody>
                 <Row>
-                  <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
-                    <thead className="thead-light">
-                      <tr>
-                        <th>Due Date V</th>
-                        <th className="text-center">Project</th>
-                        <th className="text-center">Notification</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <div>Enéas Kwadwo</div>
-                          <div className="small text-muted">
-                            <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                        </td>
-                        <td>
-                          <div>Enéas Kwadwo</div>
-                          <div className="small text-muted">
-                            <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                        </td>
-                        <td>
-                          <div>Enéas Kwadwo</div>
-                          <div className="small text-muted">
-                            <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <div>Enéas Kwadwo</div>
-                          <div className="small text-muted">
-                            <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                        </td>
-                        <td>
-                          <div>Enéas Kwadwo</div>
-                          <div className="small text-muted">
-                            <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                        </td>
-                        <td>
-                          <div>Enéas Kwadwo</div>
-                          <div className="small text-muted">
-                            <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                        </td>
-
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Enéas Kwadwo</div>
-                          <div className="small text-muted">
-                            <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                        </td>
-                        <td>
-                          <div>Enéas Kwadwo</div>
-                          <div className="small text-muted">
-                            <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                        </td>
-                        <td>
-                          <div>Enéas Kwadwo</div>
-                          <div className="small text-muted">
-                            <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                        </td>
-                      </tr>
-
-                    </tbody>
-                  </Table>
+                  <Col xs="12" sm="12" lg="12">
+                    <Calendar />
+                  </Col>
                 </Row>
               </CardBody>
             </Card>
@@ -618,9 +599,10 @@ class Dashboard extends Component {
           <Col xs="12" sm="12" lg="6">
             <Card>
               <CardHeader>
-                Change Register
+                Activities
                 <div className="card-header-actions">
-                  <i className="icon-settings"></i>
+                  <i class="fa fa-download card-header-icons" aria-hidden="true"></i>
+                  <i class="fa fa-ellipsis-h card-header-icons"></i>
                 </div>
               </CardHeader>
               <CardBody>
@@ -632,7 +614,7 @@ class Dashboard extends Component {
                   </Col >
                   <Col xs="12" sm="12" lg="3"  >
                     <div className="chart-wrapper">
-                      <h6 class="chart-title">RISK SCORE</h6>
+                      <h6 class="chart-title">  STATUS</h6>
                       <div className="summary-status-value-wrap">
 
                         <div className="left">
@@ -644,7 +626,7 @@ class Dashboard extends Component {
                                 </div>
                         </div>
                         <div className="right">
-                          3
+                          4
                             </div>
                       </div>
 
@@ -693,8 +675,8 @@ class Dashboard extends Component {
                   </Col >
                   <Col xs="12" sm="12" lg="4"  >
                     <div className="title-wrap">
-                      <h6 className="left">TARGET DATE</h6>
-                      <h6 className="right">3 OVERDUE</h6>
+                      <h6 className="left">DUE DATE</h6>
+                      <h6 className="right">4 OVERDUE</h6>
                     </div>
                     <Row>
                       <Col xs="8" sm="6" lg="6">
@@ -716,7 +698,7 @@ class Dashboard extends Component {
                             <p>TOMMOROW</p>
                           </div>
                           <div className="inner-td-wrapper">
-                            <h4>3</h4>
+                            <h4>0</h4>
                             <p>THIS MONTH</p>
                           </div>
                         </div>
@@ -730,9 +712,10 @@ class Dashboard extends Component {
           <Col xs="12" sm="12" lg="6">
             <Card>
               <CardHeader>
-                Change Register
+                Deliverables
                 <div className="card-header-actions">
-                  <i className="icon-settings"></i>
+                  <i class="fa fa-download card-header-icons" aria-hidden="true"></i>
+                  <i class="fa fa-ellipsis-h card-header-icons"></i>
                 </div>
               </CardHeader>
               <CardBody>
@@ -744,7 +727,7 @@ class Dashboard extends Component {
                   </Col >
                   <Col xs="12" sm="12" lg="3"  >
                     <div className="chart-wrapper">
-                      <h6 class="chart-title">RISK SCORE</h6>
+                      <h6 class="chart-title">STATUS</h6>
                       <div className="summary-status-value-wrap">
 
                         <div className="left">
@@ -756,7 +739,7 @@ class Dashboard extends Component {
                                 </div>
                         </div>
                         <div className="right">
-                          3
+                          4
                             </div>
                       </div>
 
@@ -805,8 +788,8 @@ class Dashboard extends Component {
                   </Col >
                   <Col xs="12" sm="12" lg="4"  >
                     <div className="title-wrap">
-                      <h6 className="left">TARGET DATE</h6>
-                      <h6 className="right">3 OVERDUE</h6>
+                      <h6 className="left">DUE DATE</h6>
+                      <h6 className="right">4 OVERDUE</h6>
                     </div>
                     <Row>
                       <Col xs="8" sm="6" lg="6">
@@ -828,7 +811,7 @@ class Dashboard extends Component {
                             <p>TOMMOROW</p>
                           </div>
                           <div className="inner-td-wrapper">
-                            <h4>3</h4>
+                            <h4>0</h4>
                             <p>THIS MONTH</p>
                           </div>
                         </div>
@@ -943,81 +926,31 @@ class Dashboard extends Component {
                     <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
                       <thead className="thead-light">
                         <tr>
-                          <th>Due Date V</th>
-
+                          <td colspan="3" className="text-center" style={{ background: "#ccecff", fontWeight: 600 }}>Notificaitons</td>
                         </tr>
                         <tr>
-                          <th>Due Date V</th>
+                          <th className="text-center">Due Date V</th>
                           <th className="text-center">Project</th>
                           <th className="text-center">Notification</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>
-                            <div>Enéas Kwadwo</div>
-                            <div className="small text-muted">
-                              <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                          </td>
-                          <td>
-                            <div>Enéas Kwadwo</div>
-                            <div className="small text-muted">
-                              <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                          </td>
-                          <td>
-                            <div>Enéas Kwadwo</div>
-                            <div className="small text-muted">
-                              <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                          </td>
+                          <td className="text-center"><div>4/22/2019</div></td>
+                          <td className="text-center"><div>Project 4</div></td>
+                          <td className="text-center"><div>Invoice Approval Pending</div></td>
                         </tr>
 
                         <tr>
-                          <td>
-                            <div>Enéas Kwadwo</div>
-                            <div className="small text-muted">
-                              <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                          </td>
-                          <td>
-                            <div>Enéas Kwadwo</div>
-                            <div className="small text-muted">
-                              <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                          </td>
-                          <td>
-                            <div>Enéas Kwadwo</div>
-                            <div className="small text-muted">
-                              <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                          </td>
-
+                          <td className="text-center"><div>4/22/2019</div></td>
+                          <td className="text-center"><div>Project 5</div></td>
+                          <td className="text-center"><div>Status Report Pending</div></td>
                         </tr>
                         <tr>
-
-                          <td>
-                            <div>Enéas Kwadwo</div>
-                            <div className="small text-muted">
-                              <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                          </td>
-                          <td>
-                            <div>Enéas Kwadwo</div>
-                            <div className="small text-muted">
-                              <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                          </td>
-                          <td>
-                            <div>Enéas Kwadwo</div>
-                            <div className="small text-muted">
-                              <span>New</span> | Registered: Jan 1, 2015
-                            </div>
-                          </td>
-
+                          <td className="text-center"><div>4/22/2019</div></td>
+                          <td className="text-center"><div>Project 6</div></td>
+                          <td className="text-center"><div>Issue Review pending</div></td>
                         </tr>
-
                       </tbody>
                     </Table>
 
