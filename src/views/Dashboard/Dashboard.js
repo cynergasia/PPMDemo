@@ -4,7 +4,9 @@ import { Bar, Doughnut, Line, Pie, Polar, Radar, Bubble } from 'react-chartjs-2'
 import Risk from './../Charts/RiskGraph/Risks';
 import Project from './../Charts/MyProject/Project';
 import Financial from './../Charts/FinancialStatus/Financial';
-import Calendar from '../Charts/Calender/Calendar'
+import Calendar from '../Charts/Calender/Calendar';
+import ChangeRegisterGraph from '../Charts/ChangeRegister/ChangeRegisterGraph';
+import FinancialAnalysis from '../Charts/FinancialAnalysis/FinancialAnalysis';
 
 import Menu from './Menu';
 import {
@@ -29,7 +31,6 @@ import {
 } from 'reactstrap';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
-import FinancialAnalysis from '../Charts/FinancialAnalysis/FinancialAnalysis';
 const Widget03 = lazy(() => import('../../views/Widgets/Widget03'));
 
 const brandPrimary = getStyle('--primary')
@@ -105,9 +106,25 @@ class Dashboard extends Component {
                 My Project
               </CardHeader>
               <CardBody>
-                <div className="chart-wrapper">
+                <div className="chart-wrapper project">
+                  <div className="chart-header">
+                    <p>Physical Percent Complete</p>
+                  </div>
                   <Project />
+                  <div className="chart-footer">
+                    <p>Financial Percent Complete</p>
+                  </div>
                 </div>
+                {/* <div className="chart-wrapper financial" >
+                  <div className="chart-header">
+                    <p>PhysicaL Percent Complete</p>
+                  </div>
+                  <Financial />
+                  <div className="chart-footer">
+                    <p>In $ Millions</p>
+                  </div>
+                </div> */}
+
               </CardBody>
             </Card>
           </Col>
@@ -255,7 +272,7 @@ class Dashboard extends Component {
           <Col xs="12" sm="12" lg="6">
             <Card>
               <CardHeader>
-                Risk All Project
+                Risk Register
                 <div className="card-header-actions">
                   <i class="fa fa-download card-header-icons" aria-hidden="true"></i>
                   <i class="fa fa-ellipsis-h card-header-icons"></i>
@@ -397,7 +414,7 @@ class Dashboard extends Component {
           <Col xs="12" sm="12" lg="6">
             <Card>
               <CardHeader>
-                Issue All Projects
+                Issue Register
               <div className="card-header-actions">
                   {/* <a href="http://www.chartjs.org" className="card-header-action">
                     <small className="text-muted">docs</small>
@@ -540,18 +557,24 @@ class Dashboard extends Component {
               <CardHeader>
                 Change Register
                 <div className="card-header-actions">
-                  <i class="fa fa-download card-header-icons" aria-hidden="true"></i>
+                  <a href="/#" download>
+                    <i class="fa fa-download card-header-icons" aria-hidden="true">
+                    </i>
+                  </a>
                   <i class="fa fa-ellipsis-h card-header-icons"></i>
                 </div>
               </CardHeader>
               <CardBody>
                 <Row>
-                  <Col xs="12" sm="12" lg="5"  >
+                  <Col md="12" lg="6"  >
                     <div className="chart-wrapper">
                       <Doughnut data={summaryMilestone} />
+                      <span className="doughnutText text-center">
+                        <p>4</p> <span>Status</span>
+                      </span>
                     </div>
                   </Col >
-                  <Col xs="12" sm="12" lg="3"  >
+                  <Col md="12" lg="2"  >
                     <div className="chart-wrapper">
                       <h6 class="chart-title">Status</h6>
                       <div className="summary-status-value-wrap">
@@ -584,7 +607,7 @@ class Dashboard extends Component {
                       </div>
                     </div>
                   </Col >
-                  <Col xs="12" sm="12" lg="4"  >
+                  <Col md="12" lg="4"  >
                     <div className="title-wrap">
                       <h6 className="left">TARGET DATE</h6>
                       {/* <h6 className="right">3 OVERDUE</h6> */}
@@ -592,14 +615,18 @@ class Dashboard extends Component {
                     <Row>
                       <Col xs="8" sm="6" lg="6">
                         <div className="target-date-wrapper">
-                          <div className="inner-td-wrapper">
-                            <h4>1</h4>
-                            <p>TODAY</p>
-                          </div>
-                          <div className="inner-td-wrapper">
-                            <h4>1</h4>
-                            <p>THIS WEEK</p>
-                          </div>
+                          <Link to="/500">
+                            <div className="inner-td-wrapper">
+                              <h4>1</h4>
+                              <p>TODAY</p>
+                            </div>
+                          </Link>
+                          <Link to="/500">
+                            <div className="inner-td-wrapper">
+                              <h4>1</h4>
+                              <p>THIS WEEK</p>
+                            </div>
+                          </Link>
                         </div>
                       </Col>
                       <Col xs="8" sm="6" lg="6">
@@ -608,14 +635,21 @@ class Dashboard extends Component {
                             <h4>0</h4>
                             <p>TOMMOROW</p>
                           </div>
-                          <div className="inner-td-wrapper">
-                            <h4>1</h4>
-                            <p>THIS MONTH</p>
-                          </div>
+                          <Link to="/500">
+                            <div className="inner-td-wrapper">
+                              <h4>1</h4>
+                              <p>THIS MONTH</p>
+                            </div>
+                          </Link>
                         </div>
                       </Col>
                     </Row>
                   </Col >
+                </Row>
+                <Row>
+                  <Col sm="12" md="12" lg="12">
+                    <ChangeRegisterGraph />
+                  </Col>
                 </Row>
               </CardBody>
             </Card>
@@ -657,6 +691,9 @@ class Dashboard extends Component {
                   <Col xs="12" sm="12" lg="5"  >
                     <div className="chart-wrapper">
                       <Doughnut data={summaryMilestone} />
+                      <span className="doughnutText text-center">
+                        <p>26</p> <span>Milestone</span>
+                      </span>
                     </div>
                   </Col >
                   <Col xs="12" sm="12" lg="3"  >
@@ -718,6 +755,7 @@ class Dashboard extends Component {
                           0
                             </div>
                       </div>
+
                     </div>
                   </Col >
                   <Col xs="12" sm="12" lg="4"  >
@@ -770,6 +808,9 @@ class Dashboard extends Component {
                   <Col xs="12" sm="12" lg="5"  >
                     <div className="chart-wrapper">
                       <Doughnut data={summaryMilestone} />
+                      <span className="doughnutText text-center">
+                        <p>6</p> <span>Milestone</span>
+                      </span>
                     </div>
                   </Col >
                   <Col xs="12" sm="12" lg="3"  >
@@ -874,7 +915,7 @@ class Dashboard extends Component {
           <Col xs="12" sm="12" lg="6">
             <Card>
               <CardHeader>
-                Effort Anaysis
+                Effort Analysis
               </CardHeader>
               <CardBody>
                 <div className="chart-wrapper">
@@ -893,9 +934,9 @@ class Dashboard extends Component {
               </CardHeader>
               <CardBody>
                 <div className="chart-wrapper financial" >
-                  <div className="chart-header">
+                  {/* <div className="chart-header">
                     <p>PhysicaL Percent Complete</p>
-                  </div>
+                  </div> */}
                   <Financial />
                   <div className="chart-footer">
                     <p>In $ Millions</p>
@@ -905,57 +946,6 @@ class Dashboard extends Component {
             </Card>
           </Col>
         </Row>
-
-        {/* <Row>
-          <Col>
-            <Card>
-              <CardHeader>
-                Financial Management
-              </CardHeader>
-              <CardBody>
-                <Row>
-                  <Col xs="12" sm="12" lg="6">
-                    <FinancialAnalysis />
-                  </Col>
-
-                  <Col xs="12" sm="12" lg="6">
-                    <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
-                      <thead className="thead-light">
-                        <tr>
-                          <td colspan="3" className="text-center" style={{ background: "#ccecff", fontWeight: 600 }}>Notificaitons</td>
-                        </tr>
-                        <tr>
-                          <th className="text-center">Due Date V</th>
-                          <th className="text-center">Project</th>
-                          <th className="text-center">Notification</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td className="text-center"><div>4/22/2019</div></td>
-                          <td className="text-center"><div>Project 4</div></td>
-                          <td className="text-center"><div>Invoice Approval Pending</div></td>
-                        </tr>
-
-                        <tr>
-                          <td className="text-center"><div>4/22/2019</div></td>
-                          <td className="text-center"><div>Project 5</div></td>
-                          <td className="text-center"><div>Status Report Pending</div></td>
-                        </tr>
-                        <tr>
-                          <td className="text-center"><div>4/22/2019</div></td>
-                          <td className="text-center"><div>Project 6</div></td>
-                          <td className="text-center"><div>Issue Review pending</div></td>
-                        </tr>
-                      </tbody>
-                    </Table>
-
-                  </Col>
-                </Row>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row> */}
       </div>
     );
   }

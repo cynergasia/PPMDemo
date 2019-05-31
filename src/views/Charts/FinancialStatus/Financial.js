@@ -32,7 +32,7 @@ const brandWarning = getStyle('--warning')
 const brandDanger = getStyle('--danger')
 
 const mainChart = {
-    labels: ['12/18', '19-Jan', '19-Feb', '19-Mar', '19-Apr', '19 - May', '19-Jun'],
+    labels: ['Dec/18', 'Jan-19', 'Feb-19', 'Mar-19', 'Apr-19', 'May-19', 'Jun-19'],
     datasets: [
         {
             label: 'Contracted Value',
