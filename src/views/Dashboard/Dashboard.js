@@ -30,6 +30,7 @@ import {
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import FinancialAnalysis from '../Charts/FinancialAnalysis/FinancialAnalysis';
+import ChangeRegisterGraph from '../Charts/ChangeRegister/ChangeRegisterGraph';
 const Widget03 = lazy(() => import('../../views/Widgets/Widget03'));
 
 const brandPrimary = getStyle('--primary')
@@ -369,12 +370,12 @@ class Dashboard extends Component {
               </CardHeader>
               <CardBody>
                 <Row>
-                  <Col xs="8" sm="4" lg="6">
+                  <Col xs="8" sm="12" lg="6">
                     <div className="chart-wrapper">
-                      <Doughnut data={summaryMilestone} />
+                      <Doughnut data={summaryMilestone}  />
                     </div>
                   </Col >
-                  <Col xs="8" sm="4" lg="6">
+                  <Col xs="8" sm="12" lg="6">
                     <h6 className="chart-title">STATUS</h6>
                     <Row>
                       <Col xs="8" sm="6" lg="6">
@@ -500,12 +501,12 @@ class Dashboard extends Component {
               </CardHeader>
               <CardBody>
                 <Row>
-                  <Col xs="12" sm="12" lg="5"  >
+                  <Col md="12" lg="6"  >
                     <div className="chart-wrapper">
-                      <Doughnut data={summaryMilestone} />
+                      <Doughnut data={summaryMilestone}   />
                     </div>
                   </Col >
-                  <Col xs="12" sm="12" lg="3"  >
+                  <Col md="12" lg="2"  >
                     <div className="chart-wrapper">
                       <h6 class="chart-title">Status</h6>
                       <div className="summary-status-value-wrap">
@@ -538,7 +539,7 @@ class Dashboard extends Component {
                       </div>
                     </div>
                   </Col >
-                  <Col xs="12" sm="12" lg="4"  >
+                  <Col md="12" lg="4"  >
                     <div className="title-wrap">
                       <h6 className="left">TARGET DATE</h6>
                       {/* <h6 className="right">3 OVERDUE</h6> */}
@@ -570,6 +571,11 @@ class Dashboard extends Component {
                       </Col>
                     </Row>
                   </Col >
+                </Row>
+                <Row>
+                  <Col sm="12" md="12" lg="12">
+                    <ChangeRegisterGraph />
+                  </Col>
                 </Row>
               </CardBody>
             </Card>
