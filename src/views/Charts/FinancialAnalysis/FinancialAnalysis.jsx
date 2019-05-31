@@ -8,7 +8,8 @@ import {
   Category,
   Tooltip,
   ColumnSeries,
-  DataLabel
+  DataLabel,
+  colorNameToHex
 } from "@syncfusion/ej2-react-charts";
 import {Browser} from "@syncfusion/ej2-base";
 
@@ -123,10 +124,10 @@ export let data3 = [
     y: 9000
   }, {
     x: "Nov 2018",
-    y: 0
+    y: 35000
   }, {
     x: "Dec 2018",
-    y: 300
+    y: 25000
   }
 ];
 const SAMPLE_CSS = `
@@ -150,7 +151,7 @@ export class FinancialAnalysis extends Component {
               majorGridLines: {
                 width: 0
               },
-              
+
               labelIntersectAction: "Rotate45"
             }} primaryYAxis={{
               majorGridLines: {
@@ -173,16 +174,17 @@ export class FinancialAnalysis extends Component {
               : "60%"} title="FINANCIAL ANALYSIS" loaded={this.onChartLoad.bind(this)}>
             <Inject services={[ColumnSeries, Legend, Tooltip, Category, DataLabel]}/>
             <SeriesCollectionDirective>
-              <SeriesDirective dataSource={data1} xName="x" yName="y" lineStyle={{backgroundColor: "blue"}} name="Actuals" type="Column"  marker={{
+              <SeriesDirective dataSource={data1} xName="x" yName="y" lineStyle={{
+                  backgroundColor: "blue"
+                }} name="Actuals" type="Column" fill={"#1767b7"} marker={{
                   dataLabel: {
                     visible: false,
                     position: "Top",
                     font: {
                       fontWeight: "600",
                       color: "#f2d1fc"
-                    },
-                  },
-                
+                    }
+                  }
                 }}/>
               <SeriesDirective dataSource={data2} xName="x" yName="y" name="Planned" type="Column" marker={{
                   dataLabel: {
@@ -192,9 +194,9 @@ export class FinancialAnalysis extends Component {
                       fontWeight: "600",
                       color: "#ffffff"
                     }
-                  },
+                  }
                 }}/>
-              <SeriesDirective dataSource={data3} xName="x" yName="y" name="Forecast (saved)" type="Column" marker={{
+              <SeriesDirective dataSource={data3} xName="x" yName="y" name="Forecast (saved)" type="Column" fill={"#edc02d"} marker={{
                   dataLabel: {
                     visible: false,
                     position: "Top",

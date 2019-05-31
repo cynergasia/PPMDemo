@@ -39,54 +39,82 @@ const brandInfo = getStyle('--info')
 const brandWarning = getStyle('--warning')
 const brandDanger = getStyle('--danger')
 //Doughnut Chart with some specific data
-const doughnut = {
+
+const issueProjectData = {
   labels: [
-    'Red',
-    'Green',
-    'Yellow',
+    'Overdue',
+    'Action Required',
+    'On Hold',
+    'At Risk',
+    'Completed',
+    'Not Started',
+    'Started'
   ],
   datasets: [
     {
-      data: [300, 200, 50],
+      data: [5,0,0,0,3,0,1],
       backgroundColor: [
-        '#FF6384',
-        '#4dbd74',
-        '#FFCE56',
+        '#edc02d', //Yellow
+        '#bf2511', //red
+        '#59239d', // Purple
+        '#09090a', //Black
+        '#06a54e', // Green
+        '#0077b5', // Blue
+        '#fc6d21', // Orange
       ],
-      hoverBackgroundColor: [
-        '#FF6384',
-        '#4dbd74',
-        '#FFCE56',
-      ],
+
     }],
-};
+}
+const changeRegisterData = {
+  labels: [
+    'Logged',
+    'Closed'
+  ],
+  datasets: [
+    {
+      data: [5,1],
+      backgroundColor: [
+        '#edc02d', // yellow
+        '#fc6d21', // Orange
+      ],
+
+    }],
+}
+
 const summaryMilestone = {
   labels: [
-    'Red',
-    'Green',
-    'Yellow',
+    'Not Started',
+    'Started',
+    'Completed',
+    'On Hold',
+    'Action'
   ],
   datasets: [
     {
-      data: [300, 200, 50],
+      data: [300, 200, 50,0,20],
       backgroundColor: [
-        '#FF6384',
-        '#4dbd74',
-        '#FFCE56',
+        '#0077b5', // Blue
+        '#fc6d21', // Orange
+        '#06a54e', // Green
+        '#59239d', // Purple
+        '#bf2511', //red
       ],
-      hoverBackgroundColor: [
-        '#FF6384',
-        '#4dbd74',
-        '#FFCE56',
-      ],
+
     }],
 };
+
 const options = {
   tooltips: {
     enabled: false,
     custom: CustomTooltips
   },
-  maintainAspectRatio: false
+  title: {
+    position : 'bottom'
+  },
+  legend : {
+    display: false
+  },
+  maintainAspectRatio:false
 }
 class Dashboard extends Component {
   loading = () => <div className="animated fadeIn pt-1 text-center">Loading...</div>
@@ -372,7 +400,7 @@ class Dashboard extends Component {
                 <Row>
                   <Col xs="8" sm="12" lg="6">
                     <div className="chart-wrapper">
-                      <Doughnut data={summaryMilestone}  />
+                      <Doughnut data={issueProjectData} options={options}  />
                     </div>
                   </Col >
                   <Col xs="8" sm="12" lg="6">
@@ -383,7 +411,7 @@ class Dashboard extends Component {
 
                           <div className="summary-status-value-wrap">
                             <div className="left">
-                              <div className="property-value" style={{ backgroundColor: brandDanger }}>
+                              <div className="property-value" style={{ backgroundColor: "#f1458e" }}>
 
                               </div>
                               <div className="property">
@@ -391,13 +419,13 @@ class Dashboard extends Component {
                                 </div>
                             </div>
                             <div className="right">
-                              3
+                              {issueProjectData.datasets[0].data[0]}
                             </div>
                           </div>
 
                           <div className="summary-status-value-wrap">
                             <div className="left">
-                              <div className="property-value" style={{ backgroundColor: 'purple' }}>
+                              <div className="property-value" style={{ backgroundColor: '#bf2511' }}>
 
                               </div>
                               <div className="property">
@@ -405,14 +433,14 @@ class Dashboard extends Component {
                                 </div>
                             </div>
                             <div className="right">
-                              0
+                            {issueProjectData.datasets[0].data[1]}
                             </div>
                           </div>
 
 
                           <div className="summary-status-value-wrap">
                             <div className="left">
-                              <div className="property-value" style={{ backgroundColor: 'black' }} >
+                              <div className="property-value" style={{ backgroundColor: '#59239d' }} >
 
                               </div>
                               <div className="property">
@@ -420,12 +448,12 @@ class Dashboard extends Component {
                                 </div>
                             </div>
                             <div className="right">
-                              0
+                            {issueProjectData.datasets[0].data[2]}
                             </div>
                           </div>
                           <div className="summary-status-value-wrap">
                             <div className="left">
-                              <div className="property-value" style={{ backgroundColor: 'green' }}>
+                              <div className="property-value" style={{ backgroundColor: 'black' }}>
 
                               </div>
                               <div className="property">
@@ -433,7 +461,7 @@ class Dashboard extends Component {
                                 </div>
                             </div>
                             <div className="right">
-                              0
+                            {issueProjectData.datasets[0].data[3]}
                             </div>
                           </div>
                         </div>
@@ -442,7 +470,7 @@ class Dashboard extends Component {
                         <div className="chart-wrapper">
                           <div className="summary-status-value-wrap">
                             <div className="left">
-                              <div className="property-value" style={{ backgroundColor: 'yellow' }}>
+                              <div className="property-value" style={{ backgroundColor: '#06a54e' }}>
 
                               </div>
                               <div className="property">
@@ -450,12 +478,12 @@ class Dashboard extends Component {
                                 </div>
                             </div>
                             <div className="right">
-                              2
+                            {issueProjectData.datasets[0].data[4]}
                             </div>
                           </div>
                           <div className="summary-status-value-wrap">
                             <div className="left">
-                              <div className="property-value" style={{ backgroundColor: 'black' }}>
+                              <div className="property-value" style={{ backgroundColor: '#0077b5' }}>
 
                               </div>
                               <div className="property">
@@ -463,12 +491,12 @@ class Dashboard extends Component {
                                 </div>
                             </div>
                             <div className="right">
-                              0
+                            {issueProjectData.datasets[0].data[5]}
                             </div>
                           </div>
                           <div className="summary-status-value-wrap">
                             <div className="left">
-                              <div className="property-value" style={{ backgroundColor: 'black' }}>
+                              <div className="property-value" style={{ backgroundColor: '#fc6d21' }}>
 
                               </div>
                               <div className="property">
@@ -476,7 +504,7 @@ class Dashboard extends Component {
                                 </div>
                             </div>
                             <div className="right">
-                              1
+                            {issueProjectData.datasets[0].data[6]}
                             </div>
                           </div>
                         </div>
@@ -503,7 +531,7 @@ class Dashboard extends Component {
                 <Row>
                   <Col md="12" lg="6"  >
                     <div className="chart-wrapper">
-                      <Doughnut data={summaryMilestone}   />
+                      <Doughnut data={changeRegisterData} options={options}   />
                     </div>
                   </Col >
                   <Col md="12" lg="2"  >
@@ -512,7 +540,7 @@ class Dashboard extends Component {
                       <div className="summary-status-value-wrap">
 
                         <div className="left">
-                          <div className="property-value" style={{ backgroundColor: brandDanger }}>
+                          <div className="property-value" style={{ backgroundColor: '#edc02d' }}>
 
                           </div>
                           <div className="property">
@@ -520,13 +548,13 @@ class Dashboard extends Component {
                                 </div>
                         </div>
                         <div className="right">
-                          3
+                          {changeRegisterData.datasets[0].data[0]}
                             </div>
                       </div>
 
                       <div className="summary-status-value-wrap">
                         <div className="left">
-                          <div className="property-value" style={{ backgroundColor: 'purple' }}>
+                          <div className="property-value" style={{ backgroundColor: '#fc6d21' }}>
 
                           </div>
                           <div className="property">
@@ -534,7 +562,7 @@ class Dashboard extends Component {
                                 </div>
                         </div>
                         <div className="right">
-                          1
+                        {changeRegisterData.datasets[0].data[1]}
                             </div>
                       </div>
                     </div>
@@ -616,7 +644,7 @@ class Dashboard extends Component {
                 <Row>
                   <Col xs="12" sm="12" lg="5"  >
                     <div className="chart-wrapper">
-                      <Doughnut data={summaryMilestone} />
+                      <Doughnut data={summaryMilestone} options={options} />
                     </div>
                   </Col >
                   <Col xs="12" sm="12" lg="3"  >
@@ -729,7 +757,7 @@ class Dashboard extends Component {
                 <Row>
                   <Col xs="12" sm="12" lg="5"  >
                     <div className="chart-wrapper">
-                      <Doughnut data={summaryMilestone} />
+                      <Doughnut data={summaryMilestone} options={options} />
                     </div>
                   </Col >
                   <Col xs="12" sm="12" lg="3"  >
