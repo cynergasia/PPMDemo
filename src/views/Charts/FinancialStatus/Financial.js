@@ -40,44 +40,14 @@ const brandWarning = getStyle("--warning");
 const brandDanger = getStyle("--danger");
 
 const mainChart = {
-<<<<<<< HEAD
-    labels: ['Dec/18', 'Jan-19', 'Feb-19', 'Mar-19', 'Apr-19', 'May-19', 'Jun-19'],
-    datasets: [
-        {
-            label: 'Contracted Value',
-            backgroundColor: hexToRgba(brandInfo, 10),
-            borderColor: 'black',
-            pointHoverBackgroundColor: '#fff',
-            borderWidth: 3,
-            data: [3.5, 3.5, 3.3, 3.4, 3.2, 3.0, 3.5, 3.0, 2.8],
-        },
-        {
-            label: 'Invoiced Amounts',
-            backgroundColor: 'transparent',
-            borderColor: brandSuccess,
-            pointHoverBackgroundColor: '#fff',
-            borderWidth: 3,
-            data: [, 2.5, 2.4, 2.5, 2.3, 2.4, 3.2, 2.3, 2.2],
-        },
-        {
-            label: 'Paid',
-            backgroundColor: 'transparent',
-            borderColor: brandDanger,
-            pointHoverBackgroundColor: '#fff',
-            borderWidth: 3,
-            // borderDash: [8, 5],
-            data: [2.3, 2.4, 2.5, 2.5, 2.6, 2.8, 3.0, 2.8, 2.2],
-        },
-    ],
-=======
   labels: [
-    "12/18",
-    "19-Jan",
-    "19-Feb",
-    "19-Mar",
-    "19-Apr",
-    "19 - May",
-    "19-Jun"
+    "Dec/18",
+    "Jan-19",
+    "Feb-19",
+    "Mar-19",
+    "Apr-19",
+    "May-19",
+    "Jun-19"
   ],
   datasets: [
     {
@@ -134,7 +104,6 @@ const mainChart = {
       ]
     }
   ]
->>>>>>> ec19bdda064555ebc513de76b98a3f845ec0c6ca
 };
 
 const mainChartOpts = {

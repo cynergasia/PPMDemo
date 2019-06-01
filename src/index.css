@@ -1,22 +1,22 @@
-
-.header{
-  background:'#ccecf' !important;  
+.header {
+  background: "#ccecf" !important;
 }
-
 
 .topnav .search-container {
   float: right;
 }
-.topnav .search-container form{
-    position: relative;
-    border: 1px solid #b1dffb;
-    border-radius: 7px;
-    background-color: #ffffff;
-    margin: 0 8px 1px 8px;
+
+.topnav .search-container form {
+  position: relative;
+  border: 1px solid #b1dffb;
+  border-radius: 7px;
+  background-color: #ffffff;
+  margin: 0 8px 1px;
 }
-.topnav input[type=text] {
+
+.topnav input[type="text"] {
   padding: 6px 40px 6px 6px;
-  font-size: 15px; 
+  font-size: 15px;
   border-radius: 7px;
   height: 30px;
   border: 2px solid #ccecff;
@@ -24,185 +24,206 @@
 }
 
 .topnav .search-container button {
-    float: right;
-    padding: 4px 10px;
-    margin-top: -1px;
-    border: 1px solid #b1dffb !important;
-    background: #66b4e2 !important;
-    font-size: 13px;
-    line-height: 0.3;
-    cursor: pointer;
-    position: absolute;
-    right: 0px;
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
-    height: 32px;
+  float: right;
+  padding: 4px 10px;
+  margin-top: -1px;
+  border: 1px solid #b1dffb !important;
+  background: #66b4e2 !important;
+  font-size: 13px;
+  line-height: 0.3;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  height: 32px;
 }
 
 .topnav .search-container button:hover {
   background: #ccc;
 }
-.fa-search{
- color: white;   
+
+.fa-search {
+  color: white;
 }
 
-.nav-head{
-  margin-left:20px;
+.nav-head {
+  margin-left: 20px;
 }
-.financial{
-height: 313px;
-margin-top:40px;
+
+.financial {
+  height: 313px;
+  margin-top: 40px;
 }
+
 .card {
-    height: calc(100% - 1.5rem);
+  height: calc(100% - 1.5rem);
 }
 
-.summary-status-value-wrap{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+.summary-status-value-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
-.summary-status-value-wrap .left{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+
+.summary-status-value-wrap .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
+
 .summary-status-value-wrap .left .property-value {
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    background-color: red;
-    border-radius: 50%;
-    margin-right: 8px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: red;
+  border-radius: 50%;
+  margin-right: 8px;
 }
-h6.chart-title{
-    margin: 10px 0 15px 0;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #333;
+
+h6.chart-title {
+  margin: 10px 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #333;
 }
+
 .title-wrap {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
+
 .title-wrap h6 {
-    margin: 10px 0 15px 0;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #333;
-}
-.title-wrap h6.right{
-    color: #f86c6b;
+  margin: 10px 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #333;
 }
 
-.target-date-wrapper .inner-td-wrapper{
-    padding-left: 15px;
-    border-left: 4px solid #f86c6b;
+.title-wrap h6.right {
+  color: #f86c6b;
 }
-.target-date-wrapper .inner-td-wrapper h4{
-    margin: 0;
-    font-size: 14px;
-    font-weight: 600;
-    color:black;
+
+.target-date-wrapper .inner-td-wrapper {
+  padding-left: 15px;
+  border-left: 4px solid #f86c6b;
 }
-.target-date-wrapper .inner-td-wrapper p{
-    font-size: 12px;
-    color:black;
+
+.target-date-wrapper .inner-td-wrapper h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
 }
+
+.target-date-wrapper .inner-td-wrapper p {
+  font-size: 12px;
+  color: black;
+}
+
 .card .card-header {
-    font-weight: 600;
+  font-weight: 600;
 }
 
-.doughnutText{
-    position: absolute;
-    top: 56%;
-    left: 50%;
-    transform: translate(-50%,-40%)
+.doughnutText {
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -40%);
 }
-.doughnutText p{margin: 0 0 -6px 0;}
-.doughnutText span{font-size: 12px;}
+
+.doughnutText p {
+  margin: 0 0 -6px;
+}
+
+.doughnutText span {
+  font-size: 12px;
+}
+
 .chart-footer {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
 }
-.financial{
-    position: relative;
-    padding-left: 23px;
+
+.financial {
+  position: relative;
+  padding-left: 23px;
 }
-.financial .chart-footer p{
-    padding: 0 15px;
-    text-transform: capitalize;
-    margin: 0;
+
+.financial .chart-footer p {
+  padding: 0 15px;
+  text-transform: capitalize;
+  margin: 0;
 }
+
 .financial .chart-header {
-    position: absolute;
-    left: -62px;
-    top: 45%;
-    transform: rotate(-90deg);
+  position: absolute;
+  left: -62px;
+  top: 45%;
+  transform: rotate(-90deg);
 }
-.project{
-    position: relative;
-    padding-left: 23px;
+
+.project {
+  position: relative;
+  padding-left: 23px;
 }
-.project .chart-footer p{
-    padding: 0 15px;
-    text-transform: capitalize;
-    margin: 0;
+
+.project .chart-footer p {
+  padding: 0 15px;
+  text-transform: capitalize;
+  margin: 0;
 }
+
 .project .chart-header {
-    position: absolute;
-    left: -62px;
-    top: 45%;
-    transform: rotate(-90deg);
+  position: absolute;
+  left: -62px;
+  top: 45%;
+  transform: rotate(-90deg);
 }
+
 /***** Responsive *****/
 
-
-@media (max-width: 991px){
-.app-header a.navbar-brand{
+@media (max-width: 991px) {
+  .app-header a.navbar-brand {
     position: unset;
     padding-left: 5px !important;
     margin-right: 15px !important;
     margin-left: inherit !important;
-}
-.sub-navbar ol.right-breadcrumb {
+  }
+  .sub-navbar ol.right-breadcrumb {
     padding-left: inherit !important;
+  }
 }
 
-}
-
-@media (min-width: 992px){
-
-.header-fixed .app-body {
+@media (min-width: 992px) {
+  .header-fixed .app-body {
     margin-top: 45px;
+  }
 }
 
-}
-
-@media(min-width:992px) and (max-width:1024px){
+@media (min-width: 992px) and (max-width: 1024px) {
   .sub-navbar ol.breadcrumb li.nav-head a {
     font-size: 13px;
   }
   .nav-head {
     margin-left: 14px;
   }
-
 }
 
 @media screen and (max-width: 680px) {
-  .app .app-header.navbar{
+  .app .app-header.navbar {
     justify-content: inherit !important;
     height: inherit;
   }
   .app-header p.project-name {
-   font-size: 14px;
+    font-size: 14px;
   }
 
   .topnav .search-container button {
@@ -212,62 +233,64 @@ h6.chart-title{
     display: block !important;
     width: inherit !important;
   }
-  .topnav .search-container form{
+  .topnav .search-container form {
     display: flex;
   }
   .app-header .navbar-nav {
     margin-left: inherit !important;
     margin-bottom: 8px;
     width: 100%;
-}
-.app-header .navbar-nav .topnav {
+  }
+  .app-header .navbar-nav .topnav {
     width: 100%;
-}
-.app-header .navbar-nav .topnav .search-container {
+  }
+  .app-header .navbar-nav .topnav .search-container {
     width: 100%;
-}
-.app-header .navbar-nav .topnav input[type=text] {
+  }
+  .app-header .navbar-nav .topnav input[type="text"] {
     width: 100%;
-}
-.app-body {
+  }
+  .app-body {
     margin-top: 87px;
+  }
 }
 
+.text-summary {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
 }
-.text-summary{
-    font-size: 1.0rem;
-    font-weight: 500;
-    color:white;
-}
-.card-header-icons{
-    margin-left:10px;
+
+.card-header-icons {
+  margin-left: 10px;
 }
 
 @media screen and (max-width: 600px) {
   .topnav .search-container {
     float: none;
   }
-  .topnav a, .topnav input[type=text], .topnav .search-container button {
+  .topnav a,
+  .topnav input[type="text"],
+  .topnav .search-container button {
     float: none;
     display: block;
-    text-align: left; 
+    text-align: left;
     width: 100%;
     margin: 0;
     padding: 14px;
   }
-  .topnav input[type=text] {
-    border: 1px solid #ccc;  
+  .topnav input[type="text"] {
+    border: 1px solid #ccc;
   }
 
-.financial {
+  .financial {
     height: 251px;
-    margin-top: 40px
-}
-
+    margin-top: 40px;
+  }
 }
 
 @media screen and (max-width: 375px) {
-.app-header p.project-name {
+  .app-header p.project-name {
     font-size: 15px !important;
-}
+  }
 }

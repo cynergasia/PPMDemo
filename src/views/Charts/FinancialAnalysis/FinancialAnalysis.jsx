@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import {
   ChartComponent,
   SeriesCollectionDirective,
@@ -11,7 +11,7 @@ import {
   DataLabel,
   colorNameToHex
 } from "@syncfusion/ej2-react-charts";
-import { Browser } from "@syncfusion/ej2-base";
+import {Browser} from "@syncfusion/ej2-base";
 
 export let data1 = [
   {
@@ -144,69 +144,6 @@ export class FinancialAnalysis extends Component {
           }</style>
         <div className="control-section">
           <ChartComponent id="charts" style={{
-<<<<<<< HEAD
-            textAlign: "center"
-          }} primaryXAxis={{
-            valueType: "Category",
-            interval: 1,
-            majorGridLines: {
-              width: 0
-            },
-
-            labelIntersectAction: "Rotate45"
-          }} primaryYAxis={{
-            majorGridLines: {
-              width: 0
-            },
-            majorTickLines: {
-              width: 0
-            },
-            lineStyle: {
-              width: 0
-            }
-          }} chartArea={{
-            border: {
-              width: 0
-            }
-          }} tooltip={{
-            enable: true
-          }} width={Browser.isDevice
-            ? "100%"
-            : "60%"} title="FINANCIAL ANALYSIS" loaded={this.onChartLoad.bind(this)}>
-            <Inject services={[ColumnSeries, Legend, Tooltip, Category, DataLabel]} />
-            <SeriesCollectionDirective>
-              <SeriesDirective dataSource={data1} xName="x" yName="y" name="Actuals" type="Column" marker={{
-                dataLabel: {
-                  visible: false,
-                  position: "Top",
-                  // font: {
-                  //   fontWeight: "600",
-                  //   color: "#f2d1fc"
-                  // },
-                },
-
-              }} />
-              <SeriesDirective dataSource={data2} xName="x" yName="y" name="Planned" type="Column" marker={{
-                dataLabel: {
-                  visible: false,
-                  position: "Top",
-                  // font: {
-                  //   fontWeight: "600",
-                  //   color: "#ffffff"
-                  // }
-                },
-              }} />
-              <SeriesDirective dataSource={data3} xName="x" yName="y" name="Forecast (saved)" type="Column" marker={{
-                dataLabel: {
-                  visible: false,
-                  position: "Top",
-                  // font: {
-                  //   fontWeight: "600",
-                  //   color: "yellow"
-                  // }
-                }
-              }} />
-=======
               textAlign: "center"
             }} primaryXAxis={{
               valueType: "Category",
@@ -269,7 +206,6 @@ export class FinancialAnalysis extends Component {
                     }
                   }
                 }}/>
->>>>>>> ec19bdda064555ebc513de76b98a3f845ec0c6ca
             </SeriesCollectionDirective>
           </ChartComponent>
         </div>
