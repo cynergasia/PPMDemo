@@ -165,8 +165,20 @@ h6.chart-title {
 
 .financial .chart-header {
   position: absolute;
-  left: -62px;
+  left: -17px;
   top: 45%;
+  transform: rotate(-90deg);
+}
+
+.risks {
+  position: relative;
+  padding-left: 23px;
+}
+
+.risks .chart-header {
+  position: absolute;
+  left: -19px;
+  top: 50%;
   transform: rotate(-90deg);
 }
 

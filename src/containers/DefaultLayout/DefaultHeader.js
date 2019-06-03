@@ -31,7 +31,7 @@ class DefaultHeader extends Component {
   render() {
     // eslint-disable-next-line
     const { children, ...attributes } = this.props;
-
+    console.log("Header", this.props);
     return (
       <React.Fragment>
         <AppSidebarToggler className="d-lg-none" display="md" mobile />
