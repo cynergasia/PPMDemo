@@ -200,6 +200,14 @@ h6.chart-title {
   transform: rotate(-90deg);
 }
 
+.riskItems-projectwiki {
+  font-weight: 600;
+}
+
+.card-body.myproejct-boxs {
+  min-height: 363px;
+}
+
 /***** Responsive *****/
 
 @media (max-width: 991px) {
@@ -263,7 +271,11 @@ h6.chart-title {
     width: 100%;
   }
   .app-body {
-    margin-top: 87px;
+    margin-top: 87px !important;
+  }
+
+  .card-body.myproejct-boxs {
+    min-height: initial;
   }
 }
 

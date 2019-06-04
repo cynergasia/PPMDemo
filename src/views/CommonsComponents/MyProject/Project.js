@@ -180,7 +180,7 @@ class Project extends Component {
       <div>
         <Card>
           <CardHeader>My Project</CardHeader>
-          <CardBody>
+          <CardBody className="myproejct-boxs">
             <div className="chart-wrapper project">
               <div className="chart-header">
                 <p>

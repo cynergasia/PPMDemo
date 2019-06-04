@@ -46,7 +46,7 @@ class DefaultHeader extends Component {
         <Nav className="d-md-down-none" navbar />
         <Nav className="ml-auto" navbar>
           <NavItem className="d-md-down-none">
-            <NavLink tag={Link} to="#" className="nav-link">
+            <NavLink tag={Link} to="/projectwiki" className="nav-link">
               <i class="fa fa-plus-circle" aria-hidden="true" />
             </NavLink>
           </NavItem>

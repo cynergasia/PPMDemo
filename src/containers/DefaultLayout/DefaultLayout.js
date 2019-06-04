@@ -35,7 +35,6 @@ class DefaultLayout extends Component {
   }
 
   render() {
-    console.log("default Layout", this.props);
     return (
       <div className="app">
         <AppHeader fixed>
@@ -48,28 +47,29 @@ class DefaultLayout extends Component {
             <AppSidebarHeader />
             <AppSidebarForm />
             <Suspense>
-              <AppSidebarNav navConfig={navigation} {...this.props} router={router} />
+              <AppSidebarNav
+                navConfig={navigation}
+                {...this.props}
+                router={router}
+              />
             </Suspense>
             <AppSidebarFooter />
             <AppSidebarMinimizer />
-          </AppSidebar>  */}
+          </AppSidebar> */}
           <main className="main">
             {/* <AppBreadcrumb appRoutes={routes} router={router} /> */}
             <Container fluid>
               <Suspense fallback={this.loading()}>
                 <Switch>
-                  {routes.map((route, key) => {
-                    const { render, component, ...p } = route;
-                    const attr = { key, ...p };
+                  {routes.map((route, idx) => {
                     return route.component ? (
                       <Route
-                        {...{
-                          ...attr,
-                          render: props => <component {...props} />
-                        }}
+                        key={idx}
+                        path={route.path}
+                        exact={route.exact}
+                        name={route.name}
+                        render={props => <route.component {...props} />}
                       />
-                    ) : route.render ? (
-                      <Route {...{ ...attr, render }} />
                     ) : null;
                   })}
                   <Redirect from="/" to="/dashboard" />
@@ -79,7 +79,6 @@ class DefaultLayout extends Component {
           </main>
           <AppAside fixed>
             <Suspense fallback={this.loading()}>
-              {/*When we click on 9 squre then half page will be display*/}
               <DefaultAside />
             </Suspense>
           </AppAside>

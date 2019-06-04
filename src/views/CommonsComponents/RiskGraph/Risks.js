@@ -93,7 +93,9 @@ class Risks extends Component {
                   <span
                     style={{
                       position: "absolute",
-                      left: "50%"
+                      left: "50%",
+                      bottom: "-10px",
+                      transform: "translateX(-50%)"
                     }}
                   >
                     <b>Impact</b>

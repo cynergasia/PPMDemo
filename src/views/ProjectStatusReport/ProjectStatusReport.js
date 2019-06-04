@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Menu from "../SubMenu/Menu";
 import { Row, Col } from "reactstrap";
-import Project from "../CommonsComponents/MyProject/Project";
 import { CustomTooltips } from "@coreui/coreui-plugin-chartjs-custom-tooltips";
 import Notification from "../CommonsComponents/Notification/Notification";
 import Summary from "../CommonsComponents/Summary/Summary";
@@ -13,6 +12,7 @@ import ActivityRegister from "../CommonsComponents/ActivityRegister/ActivityRegi
 import Deliverables from "../CommonsComponents/Deliverables/Deliverables";
 import FinancialAnalysis from "../CommonsComponents/EffortAnalysis/FinancialAnalysis";
 import FinancialStatus from "../CommonsComponents/FinancialStatus/FinancialStatus";
+import OverallStatus from "../CommonsComponents/PSROverallStatus/OverallStatus";
 
 const options = {
   tooltips: {
@@ -43,7 +43,7 @@ class ProjectStatusReport extends Component {
         {/* MyProject and Financial status  */}
         <Row>
           <Col xs="12" sm="12" lg="6">
-            <Project />
+            <OverallStatus />
           </Col>
           <Col xs="12" sm="12" lg="6">
             <Notification />
