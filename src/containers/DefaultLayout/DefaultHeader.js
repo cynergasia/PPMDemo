@@ -20,7 +20,7 @@ import {
 import logo from "../../assets/img/brand/logo.png";
 import sygnet from "../../assets/img/brand/sygnet.svg";
 import img1 from "../../assets/img/avatars/6.jpg";
-
+import Popup from './Popup';
 const propTypes = {
   children: PropTypes.node
 };
@@ -34,11 +34,13 @@ class DefaultHeader extends Component {
     console.log("Header", this.props);
     return (
       <React.Fragment>
-        <AppSidebarToggler className="d-lg-none" display="md" mobile />
+        {/* <AppSidebarToggler className="d-lg-none" display="md" mobile /> */}
+        <AppAsideToggler className="d-lg-none" display="md" mobile />
         <AppNavbarBrand
           full={{ src: logo, width: 30, height: 30, alt: "ANS Corp" }}
           minimized={{ src: sygnet, width: 30, height: 30, alt: "ANS Corp" }}
         />
+        
         <p className="project-name">ANS Corp - Project Dashboard </p>
 
         {/* <AppSidebarToggler className="d-md-down-none" display="lg" /> */}
@@ -46,9 +48,10 @@ class DefaultHeader extends Component {
         <Nav className="d-md-down-none" navbar />
         <Nav className="ml-auto" navbar>
           <NavItem className="d-md-down-none">
-            <NavLink tag={Link} to="/projectwiki" className="nav-link">
-              <i class="fa fa-plus-circle" aria-hidden="true" />
-            </NavLink>
+            {/* <NavLink tag={Link} to="/projectwiki" className="nav-link"> */}
+             
+              <Popup />
+            {/* </NavLink> */}
           </NavItem>
           <div className="topnav">
             <div className="search-container">
@@ -62,14 +65,14 @@ class DefaultHeader extends Component {
           </div>
           <NavItem className="d-md-down-none">
             <NavLink tag={Link} to="/dashboard" className="nav-link">
-              <i class="fa fa-home" aria-hidden="true" />
+              <i className="fa fa-home" aria-hidden="true" />
             </NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
             <AppHeaderDropdown direction="down">
               <DropdownToggle nav>
                 <i
-                  class="fa fa-star-o"
+                  className="fa fa-star-o"
                   aria-hidden="true"
                   style={{ fontSize: "23px", verticalAlign: "center" }}
                 />
@@ -104,31 +107,32 @@ class DefaultHeader extends Component {
           <NavItem className="d-md-down-none">
             <NavLink tag={Link} to="#" className="nav-link">
               {" "}
-              <i class="fa fa-calendar" aria-hidden="true" />{" "}
+              <i className="fa fa-calendar" aria-hidden="true" />{" "}
+              {/* <AppAsideToggler className="fa fa-calendar"  /> */}
             </NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
             <NavLink tag={Link} to="#" className="nav-link">
               {" "}
-              <i class="fa fa-pencil-square-o" aria-hidden="true" />{" "}
+              <i className="fa fa-pencil-square-o" aria-hidden="true" />{" "}
             </NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
             <NavLink tag={Link} to="#" className="nav-link">
-              <i class="fa fa-comments" aria-hidden="true" />
+              <i className="fa fa-comments" aria-hidden="true" />
             </NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
             <NavLink tag={Link} to="#" className="nav-link">
               {" "}
-              <i class="fa fa-bell" aria-hidden="true" />{" "}
+              <i className="fa fa-bell" aria-hidden="true" />{" "}
               <Badge pill color="danger">
                 5
               </Badge>
             </NavLink>
           </NavItem>
           {/* className="fa fa-th" */}
-          <AppAsideToggler className="d-md-down-none" mobile />
+          <AppAsideToggler className="d-md-down-none" display="lg" />
           <AppHeaderDropdown direction="down">
             <DropdownToggle nav>
               <img

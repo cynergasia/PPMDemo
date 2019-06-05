@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody, Table } from "reactstrap";
+import { hashHistory,Redirect } from 'react-router-dom'
 
 class Notification extends Component {
+  handleClick = (id) => {
+    window.location.hash = "/500"
+  }
+  
   render() {
     return (
       <React.Fragment>
@@ -23,7 +28,7 @@ class Notification extends Component {
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr onClick={() => this.handleClick("1")}>
                   <td className="text-center">
                     <div>4/22/2019</div>
                   </td>
@@ -35,7 +40,7 @@ class Notification extends Component {
                   </td>
                 </tr>
 
-                <tr>
+                <tr onClick={() => this.handleClick("1")}>
                   <td className="text-center">
                     <div>4/22/2019</div>
                   </td>
@@ -46,7 +51,7 @@ class Notification extends Component {
                     <div>Status Report Pending</div>
                   </td>
                 </tr>
-                <tr>
+                <tr onClick={() => this.handleClick("1")}>
                   <td className="text-center">
                     <div>4/22/2019</div>
                   </td>
@@ -57,7 +62,7 @@ class Notification extends Component {
                     <div>Issue Review pending</div>
                   </td>
                 </tr>
-                <tr>
+                <tr onClick={() => this.handleClick("1")}>
                   <td className="text-center">
                     <div>4/22/2019</div>
                   </td>
@@ -68,7 +73,7 @@ class Notification extends Component {
                     <div>Issue Review pending</div>
                   </td>
                 </tr>
-                <tr>
+                <tr onClick={() => this.handleClick("1")}>
                   <td className="text-center">
                     <div>4/22/2019</div>
                   </td>
@@ -79,7 +84,7 @@ class Notification extends Component {
                     <div>Issue Review pending</div>
                   </td>
                 </tr>
-                <tr>
+                <tr onClick={() => this.handleClick("1")}>
                   <td className="text-center">
                     <div>4/22/2019</div>
                   </td>

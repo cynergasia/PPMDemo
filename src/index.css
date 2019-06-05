@@ -237,6 +237,12 @@ h6.chart-title {
   min-height: 363px;
 }
 
+
+.modal-open {
+  overflow: visible !important;
+  padding: 0 !important; 
+}
+
 /***** Responsive *****/
 
 @media (max-width: 991px) {

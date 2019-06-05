@@ -46,7 +46,7 @@ class ActivityRegister extends Component {
                     options={this.props.options}
                   />
                   <span className="doughnutText text-center">
-                    <p>{totalCount}</p> <span>Activity</span>
+                    <p>{totalCount}</p> <span>Activities</span>
                   </span>
                 </div>
               </Col>

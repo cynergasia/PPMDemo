@@ -48,22 +48,26 @@ const routes = [
   {
     path: "/dashboard",
     name: "Dashboard",
-    component: Dashboard
+    component: Dashboard,
+    title:"Project Dashboard"
   },
   {
     path: "/psr/:id",
     name: "ProjectStatusReport",
-    component: ProjectStatusReport
+    component: ProjectStatusReport,
+    title:"Project Status Report"
   },
   {
     path: "/projectwiki",
     name: "projectwiki",
-    component: ProjectWiki
+    component: ProjectWiki,
+    title:"Project Status Report"
   },
   {
     path: "/deliverablesWiki",
     name: "deliverablesWiki",
-    component: DeliverablesWiki
+    component: DeliverablesWiki,
+    title:"Project Status Report"
   }
   // { path: '/theme', exact: true, name: 'Theme', component: Colors },
   // { path: '/theme/colors', name: 'Colors', component: Colors },

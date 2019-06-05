@@ -75,7 +75,7 @@ class ProjectStatusReport extends Component {
             <ActivityRegister options={options} />
           </Col>
           <Col xs="12" sm="12" lg="6">
-            <Deliverables options={options} />
+            <Deliverables options={options}  />
           </Col>
         </Row>
         <Row>
