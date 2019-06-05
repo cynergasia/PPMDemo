@@ -73,7 +73,7 @@ class IssueRegister extends Component {
                 <div className="chart-wrapper">
                   <Doughnut data={issueProjectData} options={options} />
                   <span className="doughnutText text-center">
-                    <p>{totalCount}</p> <span>Milestone</span>
+                    <p>{totalCount}</p> <span>Issue</span>
                   </span>
                 </div>
               </Col>

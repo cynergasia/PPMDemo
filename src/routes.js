@@ -38,20 +38,32 @@ const Dashboard = React.lazy(() => import("./views/Dashboard"));
 const ProjectStatusReport = React.lazy(() =>
   import("./views/ProjectStatusReport/ProjectStatusReport.js")
 );
+const ProjectWiki = React.lazy(() => import("./views/ProjectWiki/ProjectWiki"));
+const DeliverablesWiki = React.lazy(() =>
+  import("./views/DeliverablesWiki/DeliverablesWiki")
+);
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
   { path: "/", exact: true, name: "Home" },
   {
     path: "/dashboard",
     name: "Dashboard",
-    render: props => <Dashboard {...{ props }} />
+    component: Dashboard
   },
   {
     path: "/psr/:id",
-    name: "Dashboard",
-    render: props => (
-      <ProjectStatusReport {...{ props, title: "Project Status Report" }} />
-    )
+    name: "ProjectStatusReport",
+    component: ProjectStatusReport
+  },
+  {
+    path: "/projectwiki",
+    name: "projectwiki",
+    component: ProjectWiki
+  },
+  {
+    path: "/deliverablesWiki",
+    name: "deliverablesWiki",
+    component: DeliverablesWiki
   }
   // { path: '/theme', exact: true, name: 'Theme', component: Colors },
   // { path: '/theme/colors', name: 'Colors', component: Colors },

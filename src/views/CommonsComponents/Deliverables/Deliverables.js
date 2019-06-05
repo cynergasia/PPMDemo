@@ -27,7 +27,7 @@ class Deliverables extends Component {
       <React.Fragment>
         <Card>
           <CardHeader>
-            Deliverables
+          Deliverable Register
             <div className="card-header-actions">
               <a href="/#/500" download>
                 <i
@@ -47,7 +47,7 @@ class Deliverables extends Component {
                     options={this.props.options}
                   />
                   <span className="doughnutText text-center">
-                    <p>{totalCount}</p> <span>Milestone</span>
+                    <p>{totalCount}</p> <span>Deliverable </span>
                   </span>
                 </div>
               </Col>

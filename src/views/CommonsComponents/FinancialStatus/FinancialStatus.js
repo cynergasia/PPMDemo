@@ -56,7 +56,7 @@ const mainChart = {
       borderColor: "black",
       pointHoverBackgroundColor: "#fff",
       borderWidth: 3,
-      data: [3.5, 3.5, 3.3, 3.4, 3.2, 3.0, 3.5, 3.0, 2.8]
+      data: [35, 35, 33, 34, 32, 30, 35, 30, 28],
     },
     {
       label: "Invoiced Amounts",
@@ -64,7 +64,7 @@ const mainChart = {
       borderColor: brandSuccess,
       pointHoverBackgroundColor: "#fff",
       borderWidth: 3,
-      data: [, 2.5, 2.4, 2.5, 2.3, 2.4, 3.2, 2.3, 2.2]
+      data: [, 5, 10, 24, 25, 23, 24, 32, 23, 22],
     },
     {
       label: "Paid",
@@ -73,7 +73,7 @@ const mainChart = {
       pointHoverBackgroundColor: "#fff",
       borderWidth: 3,
       // borderDash: [8, 5],
-      data: [2.3, 2.4, 2.5, 2.5, 2.6, 2.8, 3.0, 2.8, 2.2]
+      data: [10, 15, 25, 25, 26, 28, 30, 28, 22],
     }
   ]
 };
@@ -109,10 +109,10 @@ const mainChartOpts = {
     yAxes: [
       {
         ticks: {
-          beginAtZero: false,
+          beginAtZero: true,
           maxTicksLimit: 7,
-          stepSize: 0.5,
-          max: 4.5
+          stepSize: 5,
+          max: 60
         }
       }
     ]
@@ -138,11 +138,9 @@ class FinancialStatus extends Component {
           </CardHeader>
           <CardBody>
             <div className="chart-wrapper financial">
-              <div className="chart-header">
-                <p>
-                  <b>In $ Millions</b>
-                </p>
-              </div>
+                  <div className="chart-header">
+                  <p>In $ Millions</p>
+                </div>
               <div className="chart-wrapper financial">
                 <Line data={mainChart} options={mainChartOpts} height={320} />
               </div>

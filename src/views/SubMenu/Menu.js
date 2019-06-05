@@ -7,11 +7,9 @@ class Menu extends Component {
       <div className="">
         <nav className="sub-navbar" aria-label="breadcrumb">
           <div class="row">
-            <div class="col-12 col-sm-12 col-lg-6">
+            <div class="col-12 col-sm-12 col-lg-6 d-flex">
+              <h4 className="customer-title">Customer</h4>
               <ol className="breadcrumb left-breadcrumb">
-                <li className="breadcrumb-item">
-                  <h4>Customer</h4>
-                </li>
                 <li className="nav-head active" aria-current="page">
                   <Link exact to="#/">
                     ABC Corp.
@@ -36,13 +34,9 @@ class Menu extends Component {
                 </li>
               </ol>
             </div>
-            <div class="col-12 col-sm-12 col-lg-6">
+            <div class="col-12 col-sm-12 col-lg-6 d-flex">
+              <h4 className="customer-title">Project</h4>
               <ol className="breadcrumb right-breadcrumb">
-                <li className="head breadcrumb-item">
-                  <center>
-                    <h4>Project</h4>
-                  </center>
-                </li>
                 <li className="nav-head active" aria-current="page">
                   <Link exact to="/psr/project1">
                     Project1
