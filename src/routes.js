@@ -1,4 +1,6 @@
 import React from "react";
+import ActivitiesList from "./views/ProjectWiki/ActivitiesList";
+import ResourcesList from "./views/ProjectWiki/ResourcesList";
 
 // const Breadcrumbs = React.lazy(() => import('./views/Base/Breadcrumbs'));
 // const Cards = React.lazy(() => import('./views/Base/Cards'));
@@ -42,6 +44,15 @@ const ProjectWiki = React.lazy(() => import("./views/ProjectWiki/ProjectWiki"));
 const DeliverablesWiki = React.lazy(() =>
   import("./views/DeliverablesWiki/DeliverablesWiki")
 );
+const DeliverablesList = React.lazy(() =>
+  import("./views/DeliverablesWiki/DeliverablesList")
+);
+const WorkPackageWiki = React.lazy(() =>
+  import("./views/WorkPackageWiki/WorkPackageWiki")
+);
+const TaskWiki = React.lazy(() => import("./views/TaskWiki/TaskWiki"));
+const Meeting = React.lazy(() => import("./views/Meetings/Meeting"));
+const MettingList = React.lazy(() => import("./views/Meetings/MettingList"));
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
   { path: "/", exact: true, name: "Home" },
@@ -66,8 +77,47 @@ const routes = [
   {
     path: "/deliverablesWiki",
     name: "deliverablesWiki",
+<<<<<<< HEAD
     component: DeliverablesWiki,
     title:"Project Status Report"
+=======
+    component: DeliverablesWiki
+  },
+  {
+    path: "/deliverableslist",
+    name: "deliverableslist",
+    component: DeliverablesList
+  },
+  {
+    path: "/workpackageWiki",
+    name: "workpackageWiki",
+    component: WorkPackageWiki
+  },
+  {
+    path: "/taskWiki",
+    name: "TaskWiki",
+    component: TaskWiki
+  },
+  {
+    path: "/meeting",
+    name: "meeting",
+    component: Meeting
+  },
+  {
+    path: "/meetinglist",
+    name: "meetinglist",
+    component: MettingList
+  },
+  {
+    path: "/activitieslist",
+    name: "activitieslist",
+    component: ActivitiesList
+  },
+  {
+    path: "/resourceslist",
+    name: "resourceslist",
+    component: ResourcesList
+>>>>>>> 021d7df17c743b22749cf98fe2d8effc7f2080d2
   }
   // { path: '/theme', exact: true, name: 'Theme', component: Colors },
   // { path: '/theme/colors', name: 'Colors', component: Colors },

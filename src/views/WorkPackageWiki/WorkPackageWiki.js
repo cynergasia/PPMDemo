@@ -1,56 +1,52 @@
 import React, { Component } from "react";
-import ProjectWikiMenu from "../SubMenu/ProjectWikiMenu";
-import BasicInformation from "../../components/ProjectsWiki/BasicInformation";
-import RecoardInformation from "../../components/RecoardInformation";
-import Activities from "../../components/ProjectsWiki/Activities";
-import Attachments from "../../components/Attachments";
-import WorkPackages from "../../components/ProjectsWiki/WorkPackages";
-import IssueChanges from "../../components/ProjectsWiki/IssueChanges";
-import Meetings from "../../components/ProjectsWiki/Meetings";
-import Financial from "../../components/ProjectsWiki/Financial";
-import Risks from "../../components/ProjectsWiki/Risks";
-import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import { Row, Col } from "reactstrap";
+import WorkPackageWikiMenu from "../SubMenu/WorkPackageWikiMenu";
+import RecoardInformation from "../../components/RecoardInformation";
+import Attachments from "../../components/Attachments";
+import Comments from "../../components/Comments";
+import ActivityLog from "../../components/ActivityLog";
+import WorkPackageInformation from "../../components/WorkPackageWiki/WorkPackageInformation";
+import WorkPackageActivities from "../../components/WorkPackageWiki/WorkPackageActivities";
+import WorkPackageIssueChanges from "../../components/WorkPackageWiki/WorkPackageIssueChanges";
+import WorkPackageDeliverables from "../../components/WorkPackageWiki/WorkPackageDeliverables";
+import WorkPackageMeeting from "../../components/WorkPackageWiki/WorkPackageMeeting";
 
-class ProjectWiki extends Component {
+class WorkPackageWiki extends Component {
   render() {
     return (
       <React.Fragment>
         <div className="animated fadeIn">
           <Row>
             <Col sm="12" md="12" lg="12">
-              <ProjectWikiMenu />
+              <WorkPackageWikiMenu />
             </Col>
           </Row>
           <Row>
             <Col sm="12" md="12" lg="8">
               <Row>
                 <Col sm="12" md="12" lg="12">
-                  <BasicInformation />
+                  <WorkPackageInformation />
                 </Col>
                 <Col sm="12" md="12" lg="12">
-                  <Activities />
+                  <WorkPackageActivities />
                 </Col>
                 <Col sm="12" md="12" lg="12">
                   <Attachments />
                 </Col>
                 <Col sm="12" md="12" lg="12">
-                  <WorkPackages />
+                  <Comments />
                 </Col>
                 <Col sm="12" md="12" lg="12">
-                  <IssueChanges />
+                  <WorkPackageIssueChanges />
                 </Col>
                 <Col sm="12" md="12" lg="12">
-                  <Meetings />
+                  <WorkPackageDeliverables />
                 </Col>
                 <Col sm="12" md="12" lg="12">
-                  <Financial />
+                  <WorkPackageMeeting />
                 </Col>
                 <Col sm="12" md="12" lg="12">
-                  <Risks />
-                </Col>
-                <Col sm="12" md="12" lg="12">
-                  <ActivityLog />
+                  <ActivityLog title="WorkPackage ActivityLog" />
                 </Col>
               </Row>
             </Col>
@@ -64,4 +60,4 @@ class ProjectWiki extends Component {
   }
 }
 
-export default ProjectWiki;
+export default WorkPackageWiki;

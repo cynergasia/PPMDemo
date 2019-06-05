@@ -5,34 +5,48 @@ class DeliverablesApprovalStatus extends Component {
   render() {
     return (
       <React.Fragment>
-        <Card>
+        <Card className="approval">
           <CardHeader>
             Approval Status
             <div className="card-header-actions" />
           </CardHeader>
           <CardBody>
             <Row>
-              <div className="col-sm-12 col-md-6 col-lg-6 justify-content-center">
-                <div className="card">
-                  <div className="card-header">asdfasdf</div>
-                  <div className="card-body">
-                    <i className="fa fa-user" style={{ fontSize: "3rem" }} />
+              <div className="col justify-content-center">
+                <div className="row approval-container">
+                  {/* Item */}
+                  <div className="col approval-item">
+                    <div className="col-12 text-center p-0 mb-2">John Doe</div>
+                    <div className="col-12 text-center p-0 ">
+                      <i className="fa fa-user" />
+                    </div>
+                    <div className="col-12 text-center p-0 mt-2">Submitted</div>
+                    <div className="col-12 text-center p-0 mt-2">
+                      04/05/2019
+                    </div>
+                  </div>
+                  {/* Item */}
+                  <div className="col approval-item">
+                    <div className="col-12 text-center p-0 mb-2">QA</div>
+                    <div className="col-12 text-center p-0 ">
+                      <i className="fa fa-user" />
+                    </div>
+                    <div className="col-12 text-center p-0 mt-2">Approved</div>
+                    <div className="col-12 text-center p-0 mt-2">####</div>
+                  </div>
+                  {/* Item */}
+                  <div className="col approval-item">
+                    <div className="col-12 text-center p-0 mb-2">Customer</div>
+                    <div className="col-12 text-center p-0 ">
+                      <i className="fa fa-user" />
+                    </div>
+                    <div className="col-12 text-center p-0 mt-2">Pending</div>
                   </div>
                 </div>
-                <i
-                  className="ml-4 fa fa-long-arrow-right text-success"
-                  style={{ fontSize: "3rem" }}
-                />
-                <i className="ml-4 fa fa-user" style={{ fontSize: "3rem" }} />
-                <i
-                  className="ml-4 fa fa-long-arrow-right text-success"
-                  style={{ fontSize: "3rem" }}
-                />
-                <i className="ml-4 fa fa-user" style={{ fontSize: "3rem" }} />
               </div>
             </Row>
-            <div className="row mt-5 justify-content-center">
-              <div className="col-sm-12 col-md-6 col-lg-6">
+            <div className="row mt-5">
+              <div className="col-12 col-sm-12 col-md-6 mx-auto">
                 <div className="form-group">
                   <label>Comments:</label>
                   <Input type="textarea" name="comments" />

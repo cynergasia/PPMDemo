@@ -17,42 +17,42 @@ class ProjectWikiMenu extends Component {
                 </ol>
                 <ol className="breadcrumb left-breadcrumb">
                   <li className="nav-head active" aria-current="page">
-                    <Link exact to="#/">
+                    <Link exact to="/500">
                       <i className="fa fa-edit" /> Edit
                     </Link>
                   </li>
                   <li className="nav-head active" aria-current="page">
-                    <Link exact to="#/">
+                    <Link exact to="/500">
                       <i className="cui-comment-square" /> Comment
                     </Link>
                   </li>
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="#/">
+                    <Link exact to="/500">
                       <i className="fa fa-sitemap" /> WBS
                     </Link>
                   </li>
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="#/">
+                    <Link exact to="/500">
                       <i className="fa fa-refresh" /> Issues/Changes
                     </Link>
                   </li>
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="#/">
+                    <Link exact to="/meetinglist">
                       <i className="fa fa-pencil-square" /> Meeting Minutes
                     </Link>
                   </li>
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="#/">
+                    <Link exact to="/500">
                       <i className="fa fa-bar-chart" /> Financials
                     </Link>
                   </li>
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="#/">
+                    <Link exact to="/activitieslist">
                       <i className="fa fa-clipboard" /> Activity Log
                     </Link>
                   </li>
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="#/">
+                    <Link exact to="/500">
                       <i className="fa fa-rss" /> Follow
                     </Link>
                   </li>
