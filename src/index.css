@@ -152,15 +152,16 @@ h6.chart-title {
   margin-top: 15px;
 }
 
-.financial{
+.financial {
   position: relative;
   padding-left: 23px;
-  
 }
-.financial .chartjs-render-monitor{
+
+.financial .chartjs-render-monitor {
   height: 339px !important;
 }
-.financial .chart-footer p{
+
+.financial .chart-footer p {
   padding: 0 15px;
   text-transform: capitalize;
   margin: 0;
@@ -173,23 +174,25 @@ h6.chart-title {
   top: 45%;
   transform: rotate(-90deg);
 }
-.financial .chart-header p , .project .chart-header p{
+
+.financial .chart-header p,
+.project .chart-header p {
   font-weight: 600;
 }
 
-.risk{
+.risk {
   position: relative;
   padding-left: 23px;
 }
-.risk .chart-footer p{
+
+.risk .chart-footer p {
   padding: 0 15px;
   text-transform: capitalize;
   margin: 0;
   font-weight: 600;
- 
 }
 
-.risk  .chart-header p{
+.risk .chart-header p {
   position: absolute;
   left: -17px;
   top: 45%;
@@ -197,7 +200,8 @@ h6.chart-title {
   transform: rotate(-90deg);
   font-weight: 600;
 }
-.risk .chart-footer{
+
+.risk .chart-footer {
   /* position: absolute;
   left: 57%;
   bottom: 11%;
@@ -223,18 +227,23 @@ h6.chart-title {
 }
 
 .project .chart-header {
-    position: absolute;
-    left: -71px;
-    top: 45%;
-    transform: rotate(-90deg);
+  position: absolute;
+  left: -71px;
+  top: 45%;
+  transform: rotate(-90deg);
 }
 
+.meetings,
 .riskItems-projectwiki {
   font-weight: 600;
 }
 
 .card-body.myproejct-boxs {
   min-height: 363px;
+}
+
+.card-header-actions .fa {
+  font-size: 1rem;
 }
 
 /***** Responsive *****/

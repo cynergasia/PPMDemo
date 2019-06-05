@@ -3,6 +3,7 @@ import { HashRouter, Route, Switch } from "react-router-dom";
 // import { renderRoutes } from 'react-router-config';
 import "./App.scss";
 import "./index.css";
+import { scrollTop } from "./utils";
 
 const loading = () => (
   <div className="animated fadeIn pt-3 text-center">Loading...</div>
@@ -16,10 +17,15 @@ const Login = React.lazy(() => import("./views/Pages/Login"));
 const Register = React.lazy(() => import("./views/Pages/Register"));
 const Page404 = React.lazy(() => import("./views/Pages/Page404"));
 const Page500 = React.lazy(() => import("./views/Pages/Page500"));
-const ProjectStatusReport = React.lazy(() =>
-  import("./views/ProjectStatusReport/ProjectStatusReport.js")
-);
+// const ProjectStatusReport = React.lazy(() =>
+//   import("./views/ProjectStatusReport/ProjectStatusReport.js")
+// );
+
 class App extends Component {
+  componentDidMount() {
+    scrollTop();
+  }
+
   render() {
     return (
       <HashRouter>

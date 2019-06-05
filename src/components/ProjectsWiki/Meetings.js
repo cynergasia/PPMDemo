@@ -27,11 +27,15 @@ class Meetings extends Component {
               <ListGroupItem>
                 <ListGroupItemHeading>Upcomming Meeting :</ListGroupItemHeading>
                 <ListGroupItemText>
-                  <Link to="#">20-Jun-2019 : Review Design with Client</Link>
+                  <Link to="/meeting">
+                    20-Jun-2019 : Review Design with Client
+                  </Link>
                   <br />
-                  <Link to="#">20-Jun-2019 : Review Design with Client </Link>
+                  <Link to="/meeting">
+                    20-Jun-2019 : Review Design with Client{" "}
+                  </Link>
                   <br />
-                  <Link to="#">More..</Link>
+                  <Link to="/meetinglist">More..</Link>
                 </ListGroupItemText>
               </ListGroupItem>
               <ListGroupItem className="mt-3">
@@ -39,12 +43,15 @@ class Meetings extends Component {
                   Review Past Meeting :
                 </ListGroupItemHeading>
                 <ListGroupItemText>
-                  <Link to="#">
+                  <Link to="/meeting">
                     03-May-2019: Initial Requirement collection{" "}
                   </Link>{" "}
                   <br />
-                  <Link to="#">15-May-2019: Requirement Review </Link> <br />
-                  <Link to="#">More..</Link>
+                  <Link to="/meeting">
+                    15-May-2019: Requirement Review{" "}
+                  </Link>{" "}
+                  <br />
+                  <Link to="/meetinglist">More..</Link>
                 </ListGroupItemText>
               </ListGroupItem>
             </ListGroup>

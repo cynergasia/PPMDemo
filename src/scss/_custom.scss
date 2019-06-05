@@ -107,3 +107,37 @@
     }
   }
 }
+
+.approval {
+  &-container {
+    max-width: 21.8125rem;
+    margin: auto;
+  }
+
+  &-item {
+    &:last-child {
+      max-width: 6rem;
+    }
+
+    &:not(:last-child) {
+      max-width: 12rem;
+      padding-right: 2rem;
+      position: relative;
+    }
+
+    &:not(:last-child)::after {
+      content: "\f178";
+      color: $success;
+      display: inline-block;
+      font: normal normal normal 3rem/1 FontAwesome;
+      left: 5.8rem;
+      position: absolute;
+      text-rendering: auto;
+      top: 1.2rem;
+    }
+
+    > div > .fa {
+      font-size: 3rem;
+    }
+  }
+}

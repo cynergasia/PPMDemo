@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody } from "reactstrap";
 
-class DeliverablesComments extends Component {
+class WorkPackageInformation extends Component {
   render() {
     return (
       <React.Fragment>
         <Card>
           <CardHeader>
-            Comments
+            WorkPackage Information
             <div className="card-header-actions">
-              <i className="fa fa-save" />
+              <i className="fa fa-pencil-square" />
             </div>
           </CardHeader>
           <CardBody />
@@ -19,4 +19,4 @@ class DeliverablesComments extends Component {
   }
 }
 
-export default DeliverablesComments;
+export default WorkPackageInformation;

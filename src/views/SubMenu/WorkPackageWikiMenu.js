@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-class DeliverablesWikiMenu extends Component {
+class WorkPackageWikiMenu extends Component {
   render() {
     return (
       <React.Fragment>
@@ -35,22 +35,6 @@ class DeliverablesWikiMenu extends Component {
                   </li>
                   <li className="nav-head active " aria-current="page">
                     <Link exact to="/500">
-                      <i className="fa fa-user-secret" /> Assign
-                    </Link>
-                  </li>
-                  <li className="nav-head active " aria-current="page">
-                    <Link exact to="/500">
-                      <i className="fa fa-check-square" /> Approved Status
-                    </Link>
-                  </li>
-
-                  <li className="nav-head active " aria-current="page">
-                    <Link exact to="/500">
-                      <i className="fa fa-clipboard" /> Activity Log
-                    </Link>
-                  </li>
-                  <li className="nav-head active " aria-current="page">
-                    <Link exact to="/500">
                       <i className="fa fa-rss" /> Follow
                     </Link>
                   </li>
@@ -64,4 +48,4 @@ class DeliverablesWikiMenu extends Component {
   }
 }
 
-export default DeliverablesWikiMenu;
+export default WorkPackageWikiMenu;

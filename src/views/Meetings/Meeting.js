@@ -1,32 +1,36 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
-import DeliverablesWikiMenu from "../SubMenu/DeliverablesWikiMenu";
+import MeetingMenu from "../SubMenu/MeetingMenu";
 import RecoardInformation from "../../components/RecoardInformation";
 import Attachments from "../../components/Attachments";
-import DeliverablesInformation from "../../components/DeliverablesWiki/DeliverablesInformation";
-import DeliverablesActivities from "../../components/DeliverablesWiki/DeliverablesActivities";
 import Comments from "../../components/Comments";
-import DeliverablesApprovalStatus from "../../components/DeliverablesWiki/DeliverablesApprovalStatus";
-import DeliverablesActivityLog from "../../components/DeliverablesWiki/DeliverablesActivityLog";
+import ActivityLog from "../../components/ActivityLog";
+import MeetingInformation from "../../components/Meeting/MeetingInformation";
+import MeetingDescription from "../../components/Meeting/MeetingDescription";
+import { scrollTop } from "../../utils";
 
-class DeliverablesWiki extends Component {
+class Meeting extends Component {
+  componentDidMount() {
+    scrollTop();
+  }
+
   render() {
     return (
       <React.Fragment>
         <div className="animated fadeIn">
           <Row>
             <Col sm="12" md="12" lg="12">
-              <DeliverablesWikiMenu />
+              <MeetingMenu />
             </Col>
           </Row>
           <Row>
             <Col sm="12" md="12" lg="8">
               <Row>
                 <Col sm="12" md="12" lg="12">
-                  <DeliverablesInformation />
+                  <MeetingInformation />
                 </Col>
                 <Col sm="12" md="12" lg="12">
-                  <DeliverablesActivities />
+                  <MeetingDescription />
                 </Col>
                 <Col sm="12" md="12" lg="12">
                   <Attachments />
@@ -35,10 +39,7 @@ class DeliverablesWiki extends Component {
                   <Comments />
                 </Col>
                 <Col sm="12" md="12" lg="12">
-                  <DeliverablesApprovalStatus />
-                </Col>
-                <Col sm="12" md="12" lg="12">
-                  <DeliverablesActivityLog />
+                  <ActivityLog title="Meeting ActivityLog" />
                 </Col>
               </Row>
             </Col>
@@ -52,4 +53,4 @@ class DeliverablesWiki extends Component {
   }
 }
 
-export default DeliverablesWiki;
+export default Meeting;

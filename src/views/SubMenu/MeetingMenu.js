@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-class DeliverablesWikiMenu extends Component {
+class MeetingMenu extends Component {
   render() {
     return (
       <React.Fragment>
@@ -16,11 +16,6 @@ class DeliverablesWikiMenu extends Component {
                       design(P0001)
                     </Link>
                   </li>
-                  <li className="nav-head active " area-current="page">
-                    <Link exact to="/workpackageWiki">
-                      Workpackage01
-                    </Link>
-                  </li>
                 </ol>
                 <ol className="breadcrumb left-breadcrumb">
                   <li className="nav-head active" aria-current="page">
@@ -33,27 +28,6 @@ class DeliverablesWikiMenu extends Component {
                       <i className="cui-comment-square" /> Comment
                     </Link>
                   </li>
-                  <li className="nav-head active " aria-current="page">
-                    <Link exact to="/500">
-                      <i className="fa fa-user-secret" /> Assign
-                    </Link>
-                  </li>
-                  <li className="nav-head active " aria-current="page">
-                    <Link exact to="/500">
-                      <i className="fa fa-check-square" /> Approved Status
-                    </Link>
-                  </li>
-
-                  <li className="nav-head active " aria-current="page">
-                    <Link exact to="/500">
-                      <i className="fa fa-clipboard" /> Activity Log
-                    </Link>
-                  </li>
-                  <li className="nav-head active " aria-current="page">
-                    <Link exact to="/500">
-                      <i className="fa fa-rss" /> Follow
-                    </Link>
-                  </li>
                 </ol>
               </div>
             </div>
@@ -64,4 +38,4 @@ class DeliverablesWikiMenu extends Component {
   }
 }
 
-export default DeliverablesWikiMenu;
+export default MeetingMenu;
