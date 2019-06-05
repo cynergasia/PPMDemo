@@ -97,7 +97,7 @@ class ChangeRegisterGraph extends Component {
   render() {
     return (
       <div>
-        <Line data={mainChart} options={mainChartOpts} height={270} />
+        <Line data={mainChart} options={mainChartOpts} height={284} />
       </div>
     );
   }

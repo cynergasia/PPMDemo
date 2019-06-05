@@ -79,10 +79,10 @@ class Risks extends Component {
           <CardBody>
             <Row>
               <div className="col-xs-12 col-sm-12 col-lg-5 position-relative">
-                <div className="chart-wrapper risks">
+                <div className="chart-wrapper risk">
                   <div className="chart-header">
                     <p>
-                      <b>Likelihood</b>
+                     Likelihood
                     </p>
                   </div>
                   <ReactAnyChart
@@ -90,16 +90,12 @@ class Risks extends Component {
                     charts={[heatmap]}
                     height={200}
                   />
-                  <span
-                    style={{
-                      position: "absolute",
-                      left: "50%",
-                      bottom: "-10px",
-                      transform: "translateX(-50%)"
-                    }}
-                  >
-                    <b>Impact</b>
-                  </span>
+                 
+                  
+                   <div className="chart-footer">
+                   Impact
+                  </div>
+                  
                 </div>
               </div>
               <Col xs="12" sm="12" lg="3">

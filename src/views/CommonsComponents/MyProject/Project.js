@@ -36,7 +36,7 @@ const dataBubble = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      label: "Lable is here",
+      label: "Red",
       data: [{ x: 50, y: 80, r: 35, label: "Red" }]
     },
     {
@@ -184,13 +184,13 @@ class Project extends Component {
             <div className="chart-wrapper project">
               <div className="chart-header">
                 <p>
-                  <b>Physical Percent Complete</b>
+                  Physical Percent Complete
                 </p>
               </div>
               <Bubble data={dataBubble} options={dataBubbleChartOpts} />
               <div className="chart-footer">
-                <p>
-                  <b>Financial Percent Complete</b>
+                 <p>
+                 Financial Percent Complete
                 </p>
               </div>
             </div>

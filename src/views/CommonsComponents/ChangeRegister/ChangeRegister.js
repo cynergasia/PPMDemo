@@ -45,7 +45,7 @@ class ChangeRegister extends Component {
                     options={this.props.options}
                   />
                   <span className="doughnutText text-center">
-                    <p>{totalCount}</p> <span>Milestone</span>
+                    <p>{totalCount}</p> <span>Status</span>
                   </span>
                 </div>
               </Col>

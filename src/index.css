@@ -133,7 +133,7 @@ h6.chart-title {
 
 .doughnutText {
   position: absolute;
-  top: 56%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -40%);
 }
@@ -152,15 +152,19 @@ h6.chart-title {
   margin-top: 15px;
 }
 
-.financial {
+.financial{
   position: relative;
   padding-left: 23px;
+  
 }
-
-.financial .chart-footer p {
+.financial .chartjs-render-monitor{
+  height: 339px !important;
+}
+.financial .chart-footer p{
   padding: 0 15px;
   text-transform: capitalize;
   margin: 0;
+  font-weight: 600;
 }
 
 .financial .chart-header {
@@ -169,17 +173,41 @@ h6.chart-title {
   top: 45%;
   transform: rotate(-90deg);
 }
+.financial .chart-header p , .project .chart-header p{
+  font-weight: 600;
+}
 
-.risks {
+.risk{
   position: relative;
   padding-left: 23px;
 }
+.risk .chart-footer p{
+  padding: 0 15px;
+  text-transform: capitalize;
+  margin: 0;
+  font-weight: 600;
+ 
+}
 
-.risks .chart-header {
+.risk  .chart-header p{
   position: absolute;
-  left: -19px;
-  top: 50%;
+  left: -17px;
+  top: 45%;
+  -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
+  font-weight: 600;
+}
+.risk .chart-footer{
+  /* position: absolute;
+  left: 57%;
+  bottom: 11%;
+  z-index: 9;
+  transform: initial;
+  font-size: 1.7rem; */
+  padding: 0 15px;
+  text-transform: capitalize;
+  margin: 0;
+  font-weight: 600;
 }
 
 .project {
@@ -191,13 +219,14 @@ h6.chart-title {
   padding: 0 15px;
   text-transform: capitalize;
   margin: 0;
+  font-weight: 600;
 }
 
 .project .chart-header {
-  position: absolute;
-  left: -62px;
-  top: 45%;
-  transform: rotate(-90deg);
+    position: absolute;
+    left: -71px;
+    top: 45%;
+    transform: rotate(-90deg);
 }
 
 .riskItems-projectwiki {

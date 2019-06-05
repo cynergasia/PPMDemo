@@ -26,7 +26,7 @@ class ActivityRegister extends Component {
       <React.Fragment>
         <Card>
           <CardHeader>
-            Activities
+          Activity Register
             <div className="card-header-actions">
               <a href="/#/500" download>
                 <i
@@ -46,7 +46,7 @@ class ActivityRegister extends Component {
                     options={this.props.options}
                   />
                   <span className="doughnutText text-center">
-                    <p>{totalCount}</p> <span>Milestone</span>
+                    <p>{totalCount}</p> <span>Activity</span>
                   </span>
                 </div>
               </Col>
