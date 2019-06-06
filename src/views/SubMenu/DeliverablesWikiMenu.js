@@ -11,49 +11,48 @@ class DeliverablesWikiMenu extends Component {
               <div class="col-12 col-sm-12 col-lg-12">
                 <ol className="breadcrumb left-breadcrumb">
                   <li className="nav-head active" area-current="page">
-                    <Link to="/projectWiki">
-                      <i className="fa fa-map-marker" /> Bay Bridge Construction
-                      design(P0001)
-                    </Link>
-                  </li>
-                  <li className="nav-head active " area-current="page">
-                    <Link exact to="/workpackageWiki">
-                      Workpackage01
-                    </Link>
+                    <i className="fa fa-map-marker" /> Bay Bridge Construction
+                    design(P0001)
                   </li>
                 </ol>
                 <ol className="breadcrumb left-breadcrumb">
+                
                   <li className="nav-head active" aria-current="page">
-                    <Link exact to="/500">
+                    <Link exact to="#/">
                       <i className="fa fa-edit" /> Edit
                     </Link>
                   </li>
+
                   <li className="nav-head active" aria-current="page">
-                    <Link exact to="/500">
+                    <Link exact to="#/">
                       <i className="cui-comment-square" /> Comment
                     </Link>
                   </li>
+
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="/500">
+                    <Link exact to="#/">
                       <i className="fa fa-user-secret" /> Assign
                     </Link>
                   </li>
+
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="/500">
+                    <Link exact to="#/">
                       <i className="fa fa-check-square" /> Approved Status
                     </Link>
                   </li>
 
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="/500">
+                    <Link exact to="#/">
                       <i className="fa fa-clipboard" /> Activity Log
                     </Link>
                   </li>
+
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="/500">
+                    <Link exact to="#/">
                       <i className="fa fa-rss" /> Follow
                     </Link>
                   </li>
+
                 </ol>
               </div>
             </div>

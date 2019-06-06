@@ -242,15 +242,13 @@ h6.chart-title {
   min-height: 363px;
 }
 
-<<<<<<< HEAD
 
 .modal-open {
   overflow: visible !important;
   padding: 0 !important; 
-=======
+}
 .card-header-actions .fa {
   font-size: 1rem;
->>>>>>> 021d7df17c743b22749cf98fe2d8effc7f2080d2
 }
 
 /***** Responsive *****/

@@ -77,48 +77,56 @@ const routes = [
   {
     path: "/deliverablesWiki",
     name: "deliverablesWiki",
-<<<<<<< HEAD
     component: DeliverablesWiki,
     title:"Project Status Report"
-=======
-    component: DeliverablesWiki
   },
   {
     path: "/deliverableslist",
-    name: "deliverableslist",
-    component: DeliverablesList
+    name: "DeliverablesList",
+    component: DeliverablesList,
+    title:"Project Status Report"
   },
+  
+  {
+    path: "/meetinglist",
+    name: "MettingList",
+    component: MettingList,
+    title:"Project Status Report"
+  },    
   {
     path: "/workpackageWiki",
-    name: "workpackageWiki",
-    component: WorkPackageWiki
+    name: "WorkPackageWiki",
+    component: WorkPackageWiki,
+    title:"Project Status Report"
   },
+
   {
     path: "/taskWiki",
     name: "TaskWiki",
-    component: TaskWiki
+    component: TaskWiki,
+    title:"Project Status Report"
   },
+  //gfhgfjhgj
   {
     path: "/meeting",
-    name: "meeting",
-    component: Meeting
-  },
-  {
-    path: "/meetinglist",
-    name: "meetinglist",
-    component: MettingList
+    name: "Meeting",
+    component: Meeting,
+    title:"Project Status Report"
   },
   {
     path: "/activitieslist",
-    name: "activitieslist",
-    component: ActivitiesList
+    name: "ActivitiesList",
+    component: ActivitiesList,
+    title:"Project Status Report"
   },
   {
     path: "/resourceslist",
-    name: "resourceslist",
-    component: ResourcesList
->>>>>>> 021d7df17c743b22749cf98fe2d8effc7f2080d2
-  }
+    name: "ResourcesList",
+    component: ResourcesList,
+    title:"Project Status Report"
+  },
+ 
+  
   // { path: '/theme', exact: true, name: 'Theme', component: Colors },
   // { path: '/theme/colors', name: 'Colors', component: Colors },
   // { path: '/theme/typography', name: 'Typography', component: Typography },

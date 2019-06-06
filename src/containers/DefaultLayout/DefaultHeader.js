@@ -10,16 +10,17 @@ import {
   NavItem
 } from "reactstrap";
 import PropTypes from "prop-types";
+import Profile from './ProfileAside';
+import MiscAside from './MiscAside';
 
 import {
-  AppAsideToggler,
+  AppAsideToggler, 
   AppHeaderDropdown,
   AppNavbarBrand,
   AppSidebarToggler
 } from "@coreui/react";
 import logo from "../../assets/img/brand/logo.png";
 import sygnet from "../../assets/img/brand/sygnet.svg";
-import img1 from "../../assets/img/avatars/6.jpg";
 import Popup from './Popup';
 const propTypes = {
   children: PropTypes.node
@@ -28,10 +29,16 @@ const propTypes = {
 const defaultProps = {};
 
 class DefaultHeader extends Component {
+  
+  signOut(e) {
+    e.preventDefault();
+    //this.props.history.push("/login");
+    window.location.hash = "/login";
+  }
   render() {
     // eslint-disable-next-line
     const { children, ...attributes } = this.props;
-    console.log("Header", this.props);
+  
     return (
       <React.Fragment>
         {/* <AppSidebarToggler className="d-lg-none" display="md" mobile /> */}
@@ -41,15 +48,14 @@ class DefaultHeader extends Component {
           minimized={{ src: sygnet, width: 30, height: 30, alt: "ANS Corp" }}
         />
         
-        <p className="project-name">ANS Corp - Project Dashboard </p>
+        <p className="project-name">ANS Corp - {this.props.title} </p>
 
-        {/* <AppSidebarToggler className="d-md-down-none" display="lg" /> */}
+        {/* <AppSidebarToggler className="d-md-down-none" display="lg" /> Project Dashboard*/}
 
         <Nav className="d-md-down-none" navbar />
         <Nav className="ml-auto" navbar>
           <NavItem className="d-md-down-none">
-            {/* <NavLink tag={Link} to="/projectwiki" className="nav-link"> */}
-             
+            {/* <NavLink tag={Link} to="/projectwiki" className="nav-link"> */}             
               <Popup />
             {/* </NavLink> */}
           </NavItem>
@@ -114,12 +120,14 @@ class DefaultHeader extends Component {
           <NavItem className="d-md-down-none">
             <NavLink tag={Link} to="#" className="nav-link">
               {" "}
-              <i className="fa fa-pencil-square-o" aria-hidden="true" />{" "}
+              <AppAsideToggler className="fa fa-pencil-square-o" display="lg" />
+              {/* <i className="fa fa-pencil-square-o" aria-hidden="true" />{" "} */}
             </NavLink>
           </NavItem>
-          <NavItem className="d-md-down-none">
+          <NavItem className="d-md-down-none comments-boxs">
             <NavLink tag={Link} to="#" className="nav-link">
-              <i className="fa fa-comments" aria-hidden="true" />
+            <AppAsideToggler className="fa fa-comments" display="lg" />
+              {/* <i className="fa fa-comments" aria-hidden="true" /> */}
             </NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
@@ -132,67 +140,9 @@ class DefaultHeader extends Component {
             </NavLink>
           </NavItem>
           {/* className="fa fa-th" */}
-          <AppAsideToggler className="d-md-down-none" display="lg" />
-          <AppHeaderDropdown direction="down">
-            <DropdownToggle nav>
-              <img
-                src={img1}
-                className="img-avatar"
-                alt="admin@bootstrapmaster.com"
-              />
-            </DropdownToggle>
-            <DropdownMenu right style={{ right: "auto" }}>
-              <DropdownItem header tag="div" className="text-center">
-                <strong>Account</strong>
-              </DropdownItem>
-              <DropdownItem>
-                <i className="fa fa-bell-o" /> Updates<Badge color="info">
-                  42
-                </Badge>
-              </DropdownItem>
-              <DropdownItem>
-                <i className="fa fa-envelope-o" /> Messages<Badge color="success">
-                  42
-                </Badge>
-              </DropdownItem>
-              <DropdownItem>
-                <i className="fa fa-tasks" /> Tasks<Badge color="danger">
-                  42
-                </Badge>
-              </DropdownItem>
-              <DropdownItem>
-                <i className="fa fa-comments" /> Comments<Badge color="warning">
-                  42
-                </Badge>
-              </DropdownItem>
-              <DropdownItem header tag="div" className="text-center">
-                <strong>Settings</strong>
-              </DropdownItem>
-              <DropdownItem>
-                <i className="fa fa-user" /> Profile
-              </DropdownItem>
-              <DropdownItem>
-                <i className="fa fa-wrench" /> Settings
-              </DropdownItem>
-              <DropdownItem>
-                <i className="fa fa-usd" /> Payments<Badge color="secondary">
-                  42
-                </Badge>
-              </DropdownItem>
-              <DropdownItem>
-                <i className="fa fa-file" /> Projects<Badge color="primary">
-                  42
-                </Badge>
-              </DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>
-                <i className="fa fa-shield" /> Lock Account
-              </DropdownItem>
-              <DropdownItem onClick={e => this.props.onLogout(e)}>
-                <i className="fa fa-lock" /> Logout
-              </DropdownItem>
-            </DropdownMenu>
-          </AppHeaderDropdown>
+          {/* <AppAsideToggler className="d-md-down-none" display="lg" /> */}
+          <MiscAside/>
+          <Profile onLogout={e => this.signOut(e)} />
         </Nav>
       </React.Fragment>
     );

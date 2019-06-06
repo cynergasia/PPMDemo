@@ -21,6 +21,7 @@ import navigation from "../../_nav";
 import routes from "../../routes";
 
 const DefaultAside = React.lazy(() => import("./DefaultAside"));
+const ChatAside = React.lazy(() => import("./ChatAside"));
 const NotificationAside = React.lazy(() => import("./NotificationAside"));
 const DefaultFooter = React.lazy(() => import("./DefaultFooter"));
 const DefaultHeader = React.lazy(() => import("./DefaultHeader"));
@@ -30,17 +31,24 @@ class DefaultLayout extends Component {
     <div className="animated fadeIn pt-1 text-center">Loading...</div>
   );
 
-  signOut(e) {
-    e.preventDefault();
-    this.props.history.push("/login");
-  }
-
   render() {
+    const path = this.props.location.pathname;
+    let currentpath = "/" + path .split('/')[1];
+ 
+    const title= routes.map((route, idx) => { 
+      let newpath = route.path.split('/:id')[0]
+    
+      if(currentpath==newpath)
+      {     
+       return  route.title;
+      } 
+      
+    });
     return (
       <div className="app">
         <AppHeader fixed>
           <Suspense fallback={this.loading()}>
-            <DefaultHeader onLogout={e => this.signOut(e)} />
+            <DefaultHeader title={title}  />
           </Suspense>
         </AppHeader>
         <div className="app-body">
@@ -80,7 +88,7 @@ class DefaultLayout extends Component {
           </main>
           <AppAside fixed>
             <Suspense fallback={this.loading()}>
-              <DefaultAside />           
+              <ChatAside />           
             </Suspense>
           </AppAside>
           {/* <AppAside fixed>

@@ -36,11 +36,28 @@
     li.nav-item {
       min-width: inherit;
       margin: 0 8px;
+
+      &.dropdown .navbar-toggler-icon {
+        min-width: 38px;
+      }
+
       a.nav-link {
         font-size: 22px;
         span.badge-pill {
           font-size: 12px;
         }
+
+        button.fa.navbar-toggler {
+          font-size: 22px;
+          color: #73818f;
+          min-width: inherit;
+
+          .navbar-toggler-icon {
+            display: none;
+          }
+
+        }
+
       }
     }
     li.dropdown.nav-item {
@@ -139,5 +156,32 @@
     > div > .fa {
       font-size: 3rem;
     }
+  }
+}
+
+
+html:not([dir="rtl"]) .aside-menu {
+  margin-right: -340px;
+}
+
+.app-body {
+
+  .aside-menu {
+    flex: 0 0 340px;
+    width: 340px;
+  }
+
+}
+
+.app {
+  .main {
+    margin: 0 auto 0;
+  }
+}
+
+
+@media (min-width: 992px) {
+  html:not([dir="rtl"]) .aside-menu-show.aside-menu-fixed .main, html:not([dir="rtl"]) .aside-menu-show.aside-menu-fixed .app-footer, html:not([dir="rtl"]) .aside-menu-lg-show.aside-menu-fixed .main, html:not([dir="rtl"]) .aside-menu-lg-show.aside-menu-fixed .app-footer {
+    margin-right: 340px;
   }
 }
