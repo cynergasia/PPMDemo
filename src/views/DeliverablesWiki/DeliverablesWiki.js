@@ -31,19 +31,21 @@ class DeliverablesWiki extends Component {
                 <Col sm="12" md="12" lg="12">
                   <Attachments />
                 </Col>
-                <Col sm="12" md="12" lg="12">
-                  <Comments />
-                </Col>
-                <Col sm="12" md="12" lg="12">
-                  <DeliverablesApprovalStatus />
-                </Col>
-                <Col sm="12" md="12" lg="12">
-                  <DeliverablesActivityLog />
-                </Col>
               </Row>
             </Col>
             <Col sm="12" md="12" lg="4">
               <RecoardInformation />
+            </Col>
+          </Row>
+          <Row>
+            <Col sm="12" md="12" lg="8">
+              <Comments />
+            </Col>
+            <Col sm="12" md="12" lg="8">
+              <DeliverablesApprovalStatus />
+            </Col>
+            <Col sm="12" md="12" lg="8">
+              <DeliverablesActivityLog />
             </Col>
           </Row>
         </div>

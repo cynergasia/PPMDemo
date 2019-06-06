@@ -10,9 +10,27 @@ import Meetings from "../../components/ProjectsWiki/Meetings";
 import Financial from "../../components/ProjectsWiki/Financial";
 import Risks from "../../components/ProjectsWiki/Risks";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
+import StickySidebar from "sticky-sidebar";
 import { Row, Col } from "reactstrap";
 
 class ProjectWiki extends Component {
+  sidebar = null;
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.fixSidebar();
+    }, 80);
+  }
+
+  fixSidebar = () => {
+    this.sidebar = new StickySidebar(".sidebar", {
+      topSpacing: 0,
+      bottomSpacing: 0,
+      containerSelector: ".main-content",
+      innerWrapperSelector: ".sidebar__inner"
+    });
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -22,42 +40,51 @@ class ProjectWiki extends Component {
               <ProjectWikiMenu />
             </Col>
           </Row>
-          <Row>
-            <Col sm="12" md="12" lg="8">
+
+          <div className="row flex-row-reverse align-items-start main-content">
+            <div className="col-12 col-lg-4">
+              <div className="sidebar">
+                <div className="sidebar__inner">
+                  <RecoardInformation />
+                </div>
+              </div>
+            </div>
+
+            <div className="col-12 col-lg-8">
               <Row>
-                <Col sm="12" md="12" lg="12">
+                <Col xs="12">
                   <BasicInformation />
                 </Col>
-                <Col sm="12" md="12" lg="12">
+                <Col xs="12">
                   <Activities />
                 </Col>
-                <Col sm="12" md="12" lg="12">
+
+                <Col xs="12">
                   <Attachments />
                 </Col>
-                <Col sm="12" md="12" lg="12">
+                <Col xs="12">
                   <WorkPackages />
                 </Col>
-                <Col sm="12" md="12" lg="12">
+                <Col xs="12">
                   <IssueChanges />
                 </Col>
-                <Col sm="12" md="12" lg="12">
+                <Col xs="12">
                   <Meetings />
                 </Col>
-                <Col sm="12" md="12" lg="12">
+                <Col xs="12">
                   <Financial />
                 </Col>
-                <Col sm="12" md="12" lg="12">
+                <Col xs="12">
                   <Risks />
                 </Col>
-                <Col sm="12" md="12" lg="12">
+                <Col xs="12">
                   <ActivityLog />
                 </Col>
               </Row>
-            </Col>
-            <Col sm="12" md="12" lg="4">
-              <RecoardInformation />
-            </Col>
-          </Row>
+            </div>
+          </div>
+
+          <Row />
         </div>
       </React.Fragment>
     );

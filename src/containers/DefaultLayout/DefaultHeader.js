@@ -21,7 +21,9 @@ import {
 } from "@coreui/react";
 import logo from "../../assets/img/brand/logo.png";
 import sygnet from "../../assets/img/brand/sygnet.svg";
-import Popup from './Popup';
+import img1 from "../../assets/img/avatars/6.jpg";
+import Popup from "./Popup";
+import { routesURL } from "../../constant/routesURL";
 const propTypes = {
   children: PropTypes.node
 };
@@ -70,7 +72,7 @@ class DefaultHeader extends Component {
             </div>
           </div>
           <NavItem className="d-md-down-none">
-            <NavLink tag={Link} to="/dashboard" className="nav-link">
+            <NavLink tag={Link} to={routesURL.DASHBOARD} className="nav-link">
               <i className="fa fa-home" aria-hidden="true" />
             </NavLink>
           </NavItem>
@@ -88,22 +90,38 @@ class DefaultHeader extends Component {
                   <strong>Most Recent</strong>
                 </DropdownItem>
                 <DropdownItem>
-                  <NavLink tag={Link} to="/500" className="nav-link">
+                  <NavLink
+                    tag={Link}
+                    to={routesURL.PAGE_NOT_FOUND}
+                    className="nav-link"
+                  >
                     Project1
                   </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <NavLink tag={Link} to="/500" className="nav-link">
+                  <NavLink
+                    tag={Link}
+                    to={routesURL.PAGE_NOT_FOUND}
+                    className="nav-link"
+                  >
                     Project4
                   </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <NavLink tag={Link} to="/500" className="nav-link">
+                  <NavLink
+                    tag={Link}
+                    to={routesURL.PAGE_NOT_FOUND}
+                    className="nav-link"
+                  >
                     Project8
                   </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <NavLink tag={Link} to="/500" className="nav-link">
+                  <NavLink
+                    tag={Link}
+                    to={routesURL.PAGE_NOT_FOUND}
+                    className="nav-link"
+                  >
                     Project6
                   </NavLink>
                 </DropdownItem>
@@ -111,14 +129,22 @@ class DefaultHeader extends Component {
             </AppHeaderDropdown>
           </NavItem>
           <NavItem className="d-md-down-none">
-            <NavLink tag={Link} to="#" className="nav-link">
+            <NavLink
+              tag={Link}
+              to={routesURL.PAGE_NOT_FOUND}
+              className="nav-link"
+            >
               {" "}
               <i className="fa fa-calendar" aria-hidden="true" />{" "}
               {/* <AppAsideToggler className="fa fa-calendar"  /> */}
             </NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
-            <NavLink tag={Link} to="#" className="nav-link">
+            <NavLink
+              tag={Link}
+              to={routesURL.PAGE_NOT_FOUND}
+              className="nav-link"
+            >
               {" "}
               <AppAsideToggler className="fa fa-pencil-square-o" display="lg" />
               {/* <i className="fa fa-pencil-square-o" aria-hidden="true" />{" "} */}
@@ -131,7 +157,11 @@ class DefaultHeader extends Component {
             </NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
-            <NavLink tag={Link} to="#" className="nav-link">
+            <NavLink
+              tag={Link}
+              to={routesURL.PAGE_NOT_FOUND}
+              className="nav-link"
+            >
               {" "}
               <i className="fa fa-bell" aria-hidden="true" />{" "}
               <Badge pill color="danger">

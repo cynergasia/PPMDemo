@@ -33,25 +33,27 @@ class WorkPackageWiki extends Component {
                 <Col sm="12" md="12" lg="12">
                   <Attachments />
                 </Col>
-                <Col sm="12" md="12" lg="12">
-                  <Comments />
-                </Col>
-                <Col sm="12" md="12" lg="12">
-                  <WorkPackageIssueChanges />
-                </Col>
-                <Col sm="12" md="12" lg="12">
-                  <WorkPackageDeliverables />
-                </Col>
-                <Col sm="12" md="12" lg="12">
-                  <WorkPackageMeeting />
-                </Col>
-                <Col sm="12" md="12" lg="12">
-                  <ActivityLog title="WorkPackage ActivityLog" />
-                </Col>
               </Row>
             </Col>
             <Col sm="12" md="12" lg="4">
               <RecoardInformation />
+            </Col>
+          </Row>
+          <Row>
+            <Col sm="12" md="12" lg="8">
+              <Comments />
+            </Col>
+            <Col sm="12" md="12" lg="8">
+              <WorkPackageIssueChanges />
+            </Col>
+            <Col sm="12" md="12" lg="8">
+              <WorkPackageDeliverables />
+            </Col>
+            <Col sm="12" md="12" lg="8">
+              <WorkPackageMeeting />
+            </Col>
+            <Col sm="12" md="12" lg="8">
+              <ActivityLog title="WorkPackage ActivityLog" />
             </Col>
           </Row>
         </div>

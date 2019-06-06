@@ -8,6 +8,7 @@ class DeliverablesTableList extends Component {
       <Card>
         <CardHeader>
           <div className="card-header-actions">
+            <i className="fa fa-window-close-o mr-2" />
             <i className="fa fa-plus-circle mr-2" />
             <i className="fa fa-save" />
           </div>

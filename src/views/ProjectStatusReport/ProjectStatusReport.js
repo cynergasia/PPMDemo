@@ -33,11 +33,12 @@ class ProjectStatusReport extends Component {
     <div className="animated fadeIn pt-1 text-center">Loading...</div>
   );
   render() {
+    const {id} = this.props.match.params
     return (
       <div className="animated fadeIn">
         <Row>
           <Col xs="12" sm="12" lg="12">
-            <Menu />
+            <Menu id={id} />
           </Col>
         </Row>
         {/* MyProject and Financial status  */}
