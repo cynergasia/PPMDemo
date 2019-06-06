@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { routesURL } from "../../constant/routesURL";
 
 class Menu extends Component {
   render() {
@@ -11,23 +12,23 @@ class Menu extends Component {
               <h4 className="customer-title">Customer</h4>
               <ol className="breadcrumb left-breadcrumb">
                 <li className="nav-head active" aria-current="page">
-                  <Link exact to="#/">
+                  <Link exact to={routesURL.PAGE_NOT_FOUND}>
                     ABC Corp.
                   </Link>
                 </li>
                 <li className="nav-head active" aria-current="page">
-                  <Link exact to="#/">
+                  <Link exact to={routesURL.PAGE_NOT_FOUND}>
                     {" "}
                     HDR Inc.
                   </Link>
                 </li>
                 <li className="nav-head active " aria-current="page">
-                  <Link exact to="#/">
+                  <Link exact to={routesURL.PAGE_NOT_FOUND}>
                     AECOM
                   </Link>
                 </li>
                 <li className="nav-head active " aria-current="page">
-                  <Link exact to="#/">
+                  <Link exact to={routesURL.PAGE_NOT_FOUND}>
                     {" "}
                     XYZ Inc.
                   </Link>
@@ -38,32 +39,32 @@ class Menu extends Component {
               <h4 className="customer-title">Project</h4>
               <ol className="breadcrumb right-breadcrumb">
                 <li className="nav-head active" aria-current="page">
-                  <Link exact to="/psr/project1">
+                  <Link exact to={routesURL.PSR + "project1"}>
                     Project1
                   </Link>
                 </li>
                 <li className="nav-head active" aria-current="page">
-                  <Link exact to="/psr/project2">
+                  <Link exact to={routesURL.PSR + "project2"}>
                     Project2
                   </Link>
                 </li>
                 <li className="nav-head active" aria-current="page">
-                  <Link exact to="/psr/project3">
+                  <Link exact to={routesURL.PSR + "project3"}>
                     Project3
                   </Link>
                 </li>
                 <li className="nav-head active" aria-current="page">
-                  <Link exact to="/psr/project4">
+                  <Link exact to={routesURL.PSR + "project4"}>
                     Project4
                   </Link>
                 </li>
                 <li className="nav-head active" aria-current="page">
-                  <Link exact to="/psr/project5">
+                  <Link exact to={routesURL.PSR + "project5"}>
                     Project5
                   </Link>
                 </li>
                 <li className="nav-head active" aria-current="page">
-                  <Link exact to="/psr/project6">
+                  <Link exact to={routesURL.PSR + "project5"}>
                     Project6
                   </Link>
                 </li>

@@ -32,19 +32,21 @@ class Meeting extends Component {
                 <Col sm="12" md="12" lg="12">
                   <MeetingDescription />
                 </Col>
-                <Col sm="12" md="12" lg="12">
-                  <Attachments />
-                </Col>
-                <Col sm="12" md="12" lg="12">
-                  <Comments />
-                </Col>
-                <Col sm="12" md="12" lg="12">
-                  <ActivityLog title="Meeting ActivityLog" />
-                </Col>
               </Row>
             </Col>
             <Col sm="12" md="12" lg="4">
               <RecoardInformation />
+            </Col>
+          </Row>
+          <Row>
+            <Col sm="12" md="12" lg="8">
+              <Attachments />
+            </Col>
+            <Col sm="12" md="12" lg="8">
+              <Comments />
+            </Col>
+            <Col sm="12" md="12" lg="8">
+              <ActivityLog title="Meeting ActivityLog" />
             </Col>
           </Row>
         </div>

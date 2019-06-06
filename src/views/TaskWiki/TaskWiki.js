@@ -29,13 +29,15 @@ class TaskWiki extends Component {
                 <Col sm="12" md="12" lg="12">
                   <Comments />
                 </Col>
-                <Col sm="12" md="12" lg="12">
-                  <ActivityLog title="Task ActivityLog" />
-                </Col>
               </Row>
             </Col>
             <Col sm="12" md="12" lg="4">
               <RecoardInformation />
+            </Col>
+          </Row>
+          <Row>
+            <Col sm="12" md="12" lg="8">
+              <ActivityLog title="Task ActivityLog" />
             </Col>
           </Row>
         </div>

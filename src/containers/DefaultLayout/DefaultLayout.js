@@ -19,6 +19,7 @@ import {
 import navigation from "../../_nav";
 // routes config
 import routes from "../../routes";
+import { routesURL } from "../../constant/routesURL";
 
 const DefaultAside = React.lazy(() => import("./DefaultAside"));
 const NotificationAside = React.lazy(() => import("./NotificationAside"));
@@ -62,25 +63,25 @@ class DefaultLayout extends Component {
             <Container fluid>
               <Suspense fallback={this.loading()}>
                 <Switch>
-                  {routes.map((route, idx) => {                    
+                  {routes.map((route, idx) => {
                     return route.component ? (
                       <Route
                         key={idx}
                         path={route.path}
                         exact={route.exact}
-                        name={route.name}                        
+                        name={route.name}
                         render={props => <route.component {...props} />}
                       />
                     ) : null;
                   })}
-                  <Redirect from="/" to="/dashboard" />
+                  <Redirect from="/" to={routesURL.DASHBOARD} />
                 </Switch>
               </Suspense>
             </Container>
           </main>
           <AppAside fixed>
             <Suspense fallback={this.loading()}>
-              <DefaultAside />           
+              <DefaultAside />
             </Suspense>
           </AppAside>
           {/* <AppAside fixed>
@@ -88,7 +89,6 @@ class DefaultLayout extends Component {
               <NotificationAside />
             </Suspense>
           </AppAside> */}
-          
         </div>
         <AppFooter>
           <Suspense fallback={this.loading()}>

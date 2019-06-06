@@ -20,7 +20,8 @@ import {
 import logo from "../../assets/img/brand/logo.png";
 import sygnet from "../../assets/img/brand/sygnet.svg";
 import img1 from "../../assets/img/avatars/6.jpg";
-import Popup from './Popup';
+import Popup from "./Popup";
+import { routesURL } from "../../constant/routesURL";
 const propTypes = {
   children: PropTypes.node
 };
@@ -40,7 +41,7 @@ class DefaultHeader extends Component {
           full={{ src: logo, width: 30, height: 30, alt: "ANS Corp" }}
           minimized={{ src: sygnet, width: 30, height: 30, alt: "ANS Corp" }}
         />
-        
+
         <p className="project-name">ANS Corp - Project Dashboard </p>
 
         {/* <AppSidebarToggler className="d-md-down-none" display="lg" /> */}
@@ -49,8 +50,8 @@ class DefaultHeader extends Component {
         <Nav className="ml-auto" navbar>
           <NavItem className="d-md-down-none">
             {/* <NavLink tag={Link} to="/projectwiki" className="nav-link"> */}
-             
-              <Popup />
+
+            <Popup />
             {/* </NavLink> */}
           </NavItem>
           <div className="topnav">
@@ -64,7 +65,7 @@ class DefaultHeader extends Component {
             </div>
           </div>
           <NavItem className="d-md-down-none">
-            <NavLink tag={Link} to="/dashboard" className="nav-link">
+            <NavLink tag={Link} to={routesURL.DASHBOARD} className="nav-link">
               <i className="fa fa-home" aria-hidden="true" />
             </NavLink>
           </NavItem>
@@ -82,22 +83,38 @@ class DefaultHeader extends Component {
                   <strong>Most Recent</strong>
                 </DropdownItem>
                 <DropdownItem>
-                  <NavLink tag={Link} to="/500" className="nav-link">
+                  <NavLink
+                    tag={Link}
+                    to={routesURL.PAGE_NOT_FOUND}
+                    className="nav-link"
+                  >
                     Project1
                   </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <NavLink tag={Link} to="/500" className="nav-link">
+                  <NavLink
+                    tag={Link}
+                    to={routesURL.PAGE_NOT_FOUND}
+                    className="nav-link"
+                  >
                     Project4
                   </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <NavLink tag={Link} to="/500" className="nav-link">
+                  <NavLink
+                    tag={Link}
+                    to={routesURL.PAGE_NOT_FOUND}
+                    className="nav-link"
+                  >
                     Project8
                   </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <NavLink tag={Link} to="/500" className="nav-link">
+                  <NavLink
+                    tag={Link}
+                    to={routesURL.PAGE_NOT_FOUND}
+                    className="nav-link"
+                  >
                     Project6
                   </NavLink>
                 </DropdownItem>
@@ -105,25 +122,41 @@ class DefaultHeader extends Component {
             </AppHeaderDropdown>
           </NavItem>
           <NavItem className="d-md-down-none">
-            <NavLink tag={Link} to="#" className="nav-link">
+            <NavLink
+              tag={Link}
+              to={routesURL.PAGE_NOT_FOUND}
+              className="nav-link"
+            >
               {" "}
               <i className="fa fa-calendar" aria-hidden="true" />{" "}
               {/* <AppAsideToggler className="fa fa-calendar"  /> */}
             </NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
-            <NavLink tag={Link} to="#" className="nav-link">
+            <NavLink
+              tag={Link}
+              to={routesURL.PAGE_NOT_FOUND}
+              className="nav-link"
+            >
               {" "}
               <i className="fa fa-pencil-square-o" aria-hidden="true" />{" "}
             </NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
-            <NavLink tag={Link} to="#" className="nav-link">
+            <NavLink
+              tag={Link}
+              to={routesURL.PAGE_NOT_FOUND}
+              className="nav-link"
+            >
               <i className="fa fa-comments" aria-hidden="true" />
             </NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
-            <NavLink tag={Link} to="#" className="nav-link">
+            <NavLink
+              tag={Link}
+              to={routesURL.PAGE_NOT_FOUND}
+              className="nav-link"
+            >
               {" "}
               <i className="fa fa-bell" aria-hidden="true" />{" "}
               <Badge pill color="danger">

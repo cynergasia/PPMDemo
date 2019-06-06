@@ -242,15 +242,27 @@ h6.chart-title {
   min-height: 363px;
 }
 
-<<<<<<< HEAD
-
 .modal-open {
   overflow: visible !important;
-  padding: 0 !important; 
-=======
+  padding: 0 !important;
+}
+
 .card-header-actions .fa {
   font-size: 1rem;
->>>>>>> 021d7df17c743b22749cf98fe2d8effc7f2080d2
+}
+
+.sidebar-fixed .main-content .sidebar {
+  position: relative;
+  margin: 0;
+  height: auto;
+  width: 100%;
+  flex: 0 0 100%;
+  background: none;
+  color: #000;
+}
+
+.sidebar-fixed .main-content .sidebar.is-affixed .position-sticky {
+  margin-top: 55px;
 }
 
 /***** Responsive *****/
@@ -264,6 +276,15 @@ h6.chart-title {
   }
   .sub-navbar ol.right-breadcrumb {
     padding-left: inherit !important;
+  }
+
+  .sidebar-fixed .main-content .sidebar .sidebar__inner {
+    position: relative !important;
+    left: 0 !important;
+  }
+
+  .sidebar-fixed .main-content .sidebar.is-affixed .position-sticky {
+    margin-top: 0;
   }
 }
 

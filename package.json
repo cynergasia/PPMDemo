@@ -39,9 +39,11 @@
     "react-dropzone": "^10.1.5",
     "react-router-config": "^5.0.0",
     "react-router-dom": "^5.0.0",
+    "react-table": "^6.10.0",
     "react-test-renderer": "^16.8.6",
     "reactstrap": "^7.1.0",
-    "simple-line-icons": "^2.4.1"
+    "simple-line-icons": "^2.4.1",
+    "sticky-sidebar": "^3.3.1"
   },
   "devDependencies": {
     "react-scripts": "^3.0.1"
