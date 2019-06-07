@@ -19,7 +19,7 @@ const ProjectWiki = React.lazy(() => import("./views/ProjectWiki/ProjectWiki"));
 // const Meeting = React.lazy(() => import("./views/Meetings/Meeting"));
 // const MettingList = React.lazy(() => import("./views/Meetings/MettingList"));
 
-const IssueList = React.lazy(() => import("./views/IssueWiki/IssueList"));
+// const IssueList = React.lazy(() => import("./views/IssueWiki/IssueList"));
 
 const routes = [
   { path: "/", exact: true, name: "Home" },
@@ -37,12 +37,12 @@ const routes = [
     path: routesURL.PROJECT_WIKI,
     component: ProjectWiki,
     title: "Project Wiki"
-  },
-  {
-    path: routesURL.ISSUE_LIST,
-    component: IssueList,
-    title: "Issue List"
   }
+  // {
+  //   path: routesURL.ISSUE_LIST,
+  //   component: IssueList,
+  //   title: "Issue List"
+  // }
   // {
   //   path: routesURL.DELIVERABLES_WIKI,
   //   component: DeliverablesWiki
