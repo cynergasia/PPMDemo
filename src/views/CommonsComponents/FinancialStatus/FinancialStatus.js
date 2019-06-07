@@ -1,41 +1,15 @@
-import React, { Component, lazy, Suspense } from "react";
-import {
-  Bar,
-  Doughnut,
-  Line,
-  Pie,
-  Polar,
-  Radar,
-  Bubble
-} from "react-chartjs-2";
-import {
-  Badge,
-  Button,
-  ButtonDropdown,
-  ButtonGroup,
-  ButtonToolbar,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-  Col,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-  Progress,
-  Row,
-  Table
-} from "reactstrap";
+/* eslint-disable no-sparse-arrays */
+import React, { Component } from "react";
+import { Line } from "react-chartjs-2";
+import { Card, CardBody, CardHeader } from "reactstrap";
 import { CustomTooltips } from "@coreui/coreui-plugin-chartjs-custom-tooltips";
 import { getStyle, hexToRgba } from "@coreui/coreui/dist/js/coreui-utilities";
 
-const Widget03 = lazy(() => import("../../../views/Widgets/Widget03"));
-
+// eslint-disable-next-line no-unused-vars
 const brandPrimary = getStyle("--primary");
 const brandSuccess = getStyle("--success");
 const brandInfo = getStyle("--info");
+// eslint-disable-next-line no-unused-vars
 const brandWarning = getStyle("--warning");
 const brandDanger = getStyle("--danger");
 
@@ -56,7 +30,7 @@ const mainChart = {
       borderColor: "black",
       pointHoverBackgroundColor: "#fff",
       borderWidth: 3,
-      data: [35, 35, 33, 34, 32, 30, 35, 30, 28],
+      data: [35, 35, 33, 34, 32, 30, 35, 30, 28]
     },
     {
       label: "Invoiced Amounts",
@@ -64,7 +38,7 @@ const mainChart = {
       borderColor: brandSuccess,
       pointHoverBackgroundColor: "#fff",
       borderWidth: 3,
-      data: [, 5, 10, 24, 25, 23, 24, 32, 23, 22],
+      data: [, 5, 10, 24, 25, 23, 24, 32, 23, 22]
     },
     {
       label: "Paid",
@@ -73,7 +47,7 @@ const mainChart = {
       pointHoverBackgroundColor: "#fff",
       borderWidth: 3,
       // borderDash: [8, 5],
-      data: [10, 15, 25, 25, 26, 28, 30, 28, 22],
+      data: [10, 15, 25, 25, 26, 28, 30, 28, 22]
     }
   ]
 };
@@ -138,9 +112,9 @@ class FinancialStatus extends Component {
           </CardHeader>
           <CardBody>
             <div className="chart-wrapper financial">
-                  <div className="chart-header">
-                  <p>In $ Millions</p>
-                </div>
+              <div className="chart-header">
+                <p>In $ Millions</p>
+              </div>
               <div className="chart-wrapper financial">
                 <Line data={mainChart} options={mainChartOpts} height={320} />
               </div>

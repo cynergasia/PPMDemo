@@ -5,7 +5,7 @@ import { Card, CardBody, Col } from "reactstrap";
 const Summary = props => {
   return (
     <React.Fragment>
-      <Col xs="8" sm="4" lg="2">
+      <Col xs="8" sm="4" lg="2" className="pr-0">
         <Card className="text-white bg-info">
           <CardBody className="pb-0">
             <div className="text-value">71.92%</div>

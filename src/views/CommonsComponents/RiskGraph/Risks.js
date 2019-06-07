@@ -68,12 +68,12 @@ class Risks extends Component {
             <div className="card-header-actions">
               <a href="/#/500" download>
                 <i
-                  class="fa fa-download card-header-icons"
+                  className="fa fa-download card-header-icons"
                   aria-hidden="true"
                 />
               </a>
-              <i class="fa fa-ellipsis-h card-header-icons" />
-              {/* <i class="fa fa-th"></i> */}
+              <i className="fa fa-ellipsis-h card-header-icons" />
+              {/* <i className="fa fa-th"></i> */}
             </div>
           </CardHeader>
           <CardBody>
@@ -81,21 +81,15 @@ class Risks extends Component {
               <div className="col-xs-12 col-sm-12 col-lg-5 position-relative">
                 <div className="chart-wrapper risk">
                   <div className="chart-header">
-                    <p>
-                     Likelihood
-                    </p>
+                    <p>Likelihood</p>
                   </div>
                   <ReactAnyChart
                     instance={stage}
                     charts={[heatmap]}
                     height={200}
                   />
-                 
-                  
-                   <div className="chart-footer">
-                   Impact
-                  </div>
-                  
+
+                  <div className="chart-footer">Impact</div>
                 </div>
               </div>
               <Col xs="12" sm="12" lg="3">

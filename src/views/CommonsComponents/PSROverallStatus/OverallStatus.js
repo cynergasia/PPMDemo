@@ -11,12 +11,12 @@ class OverallStatus extends Component {
             <div className="card-header-actions">
               <a href="/#/500" download>
                 <i
-                  class="fa fa-download card-header-icons"
+                  className="fa fa-download card-header-icons"
                   aria-hidden="true"
                 />
               </a>
-              <i class="fa fa-ellipsis-h card-header-icons" />
-              {/* <i class="fa fa-th"></i> */}
+              <i className="fa fa-ellipsis-h card-header-icons" />
+              {/* <i className="fa fa-th"></i> */}
             </div>
           </CardHeader>
           <CardBody>

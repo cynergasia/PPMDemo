@@ -1,12 +1,14 @@
-import React, { Component, lazy, Suspense } from "react";
+import React, { Component, lazy } from "react";
 import { Bubble } from "react-chartjs-2";
 import { Card, CardBody, CardHeader } from "reactstrap";
 import { getStyle } from "@coreui/coreui/dist/js/coreui-utilities";
 
+// eslint-disable-next-line no-unused-vars
 const Widget03 = lazy(() => import("../../Widgets/Widget03"));
 
 const brandPrimary = getStyle("--primary");
 const brandSuccess = getStyle("--success");
+// eslint-disable-next-line no-unused-vars
 const brandInfo = getStyle("--info");
 const brandWarning = getStyle("--warning");
 const brandDanger = getStyle("--danger");
@@ -74,7 +76,6 @@ const dataBubble = {
       //backgroundColor: 'rgba(75,192,192,0.4)',
       // borderColor: 'rgba(75,192,192,1)',
       borderCapStyle: "butt",
-      borderDash: [],
       borderDashOffset: 0.0,
       borderJoinStyle: "miter",
       //pointBorderColor: 'rgba(75,192,192,1)',
@@ -183,15 +184,11 @@ class Project extends Component {
           <CardBody className="myproejct-boxs">
             <div className="chart-wrapper project">
               <div className="chart-header">
-                <p>
-                  Physical Percent Complete
-                </p>
+                <p>Physical Percent Complete</p>
               </div>
               <Bubble data={dataBubble} options={dataBubbleChartOpts} />
               <div className="chart-footer">
-                 <p>
-                 Financial Percent Complete
-                </p>
+                <p>Financial Percent Complete</p>
               </div>
             </div>
           </CardBody>

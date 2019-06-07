@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, CardHeader, CardBody, Input, Row, Col } from "reactstrap";
+import { Card, CardHeader, CardBody, Input, Row } from "reactstrap";
 
 class DeliverablesApprovalStatus extends Component {
   render() {

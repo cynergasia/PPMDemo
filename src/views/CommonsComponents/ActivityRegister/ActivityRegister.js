@@ -26,15 +26,15 @@ class ActivityRegister extends Component {
       <React.Fragment>
         <Card>
           <CardHeader>
-          Activity Register
+            Activity Register
             <div className="card-header-actions">
               <a href="/#/500" download>
                 <i
-                  class="fa fa-download card-header-icons"
+                  className="fa fa-download card-header-icons"
                   aria-hidden="true"
                 />
               </a>
-              <i class="fa fa-ellipsis-h card-header-icons" />
+              <i className="fa fa-ellipsis-h card-header-icons" />
             </div>
           </CardHeader>
           <CardBody>
@@ -52,9 +52,9 @@ class ActivityRegister extends Component {
               </Col>
               <Col xs="12" sm="12" lg="3">
                 <div className="chart-wrapper">
-                  <h6 class="chart-title"> STATUS</h6>
+                  <h6 className="chart-title"> STATUS</h6>
                   {activitiesData.datasets[0].data.map((data, index) => (
-                    <div className="summary-status-value-wrap">
+                    <div className="summary-status-value-wrap" key={index}>
                       <div className="left">
                         <div
                           className="property-value"

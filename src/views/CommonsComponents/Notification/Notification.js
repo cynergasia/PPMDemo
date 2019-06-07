@@ -1,86 +1,98 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody } from "reactstrap";
-import ReactDataTable from "../../../components/ReactDataTable";
-import moment from "moment";
+import ReactDataTableNew from "../../../components/ReactDataTableNew";
 
-const data = [
-  {
-    due_date: new Date("4/22/2019"),
-    project: "Project 4",
-    notification: "Invoice Approval Pending"
-  },
-  {
-    due_date: new Date("4/22/2019"),
-    project: "Project 3",
-    notification: "Status Report Pending"
-  },
-  {
-    due_date: new Date("4/22/2019"),
-    project: "Project 10",
-    notification: "Invoice Approval Pending"
-  },
-  {
-    due_date: new Date("4/22/2019"),
-    project: "Project 1",
-    notification: "Issue Review Pending"
-  },
-  {
-    due_date: new Date("4/22/2019"),
-    project: "Project 6",
-    notification: "Status Report Pending"
-  },
-  {
-    due_date: new Date("10/10/2019"),
-    project: "Project 2",
-    notification: "Issue Review Pending"
-  },
-  {
-    due_date: new Date("3/02/2019"),
-    project: "Project 1",
-    notification: "Status Report Pending"
-  },
-  {
-    due_date: new Date("2/22/2019"),
-    project: "Project 3",
-    notification: "Invoice Approval Pending"
-  },
-  {
-    due_date: new Date("01/10/2019"),
-    project: "Project 5",
-    notification: "Issue Review Pending"
-  },
-  {
-    due_date: new Date("2/18/2019"),
-    project: "Project 6",
-    notification: "Status Report Pending"
-  }
-];
-const columns = [
-  {
-    Header: "Due Date V",
-    accessor: "due_date",
-    sortable: true,
-    
-    Cell: row => moment(row.value).format("MM/DD/YYYY")
-  },
-  {
-    Header: "Project",
-    accessor: "project",
+let data = {
+  columns: [
+    {
+      label: "Due Date V",
+      field: "due_date",
+      sort: "asc"
+    },
+    {
+      label: "Project",
+      field: "project",
+      sort: "asc"
+    },
+    {
+      label: "Notification",
+      field: "notification",
+      sort: "asc"
+    }
+  ],
+  rows: [
+    {
+      due_date: "4/22/2019",
+      project: "project4",
+      notification: "Invoice Approval Pending"
+    },
+    {
+      due_date: "4/22/2019",
+      project: "project3",
+      notification: "Status Report Pending"
+    },
+    {
+      due_date: "4/22/2019",
+      project: "project10",
+      notification: "Invoice Approval Pending"
+    },
+    {
+      due_date: "4/22/2019",
+      project: "project1",
+      notification: "Issue Review Pending"
+    },
+    {
+      due_date: "4/22/2019",
+      project: "project6",
+      notification: "Status Report Pending"
+    },
+    {
+      due_date: "10/10/2019",
+      project: "project2",
+      notification: "Issue Review Pending"
+    },
+    {
+      due_date: "3/02/2019",
+      project: "project1",
+      notification: "Status Report Pending"
+    },
+    {
+      due_date: "2/22/2019",
+      project: "project3",
+      notification: "Invoice Approval Pending"
+    },
+    {
+      due_date: "01/10/2019",
+      project: "project5",
+      notification: "Issue Review Pending"
+    },
+    {
+      due_date: "2/18/2019",
+      project: "project6",
+      notification: "Status Report Pending"
+    }
+  ]
+};
 
-    filterMethod: (filter, row) => row[filter.id].startsWith(filter.value)
-  },
-  {
-    Header: "Notification",
-    accessor: "notification",
-    filterMethod: (filter, row) => row[filter.id].startsWith(filter.value)
-  }
-];
 class Notification extends Component {
-  handleClick = id => {
-    window.location.hash = "/500";
+  state = {
+    data: []
   };
 
+  componentDidMount() {
+    this.setState({
+      data: ["dashboard"].includes(window.location.hash.split("/")["1"])
+        ? { ...data }
+        : {
+            rows: data["rows"].filter(data => data.project === this.props.id),
+            columns: data["columns"]
+          }
+    });
+  }
+
   render() {
+    const { data } = this.state;
+
     return (
       <React.Fragment>
         <Card>
@@ -89,14 +101,7 @@ class Notification extends Component {
             <div className="card-header-actions" />
           </CardHeader>
           <CardBody>
-            <ReactDataTable
-              data={data}
-              columns={columns}
-              handleClick={this.handleClick}
-              pageSize={5}
-              minRows={7}
-              paginationDown={false}
-            />
+            <ReactDataTableNew data={data} />
           </CardBody>
         </Card>
       </React.Fragment>

@@ -33,7 +33,7 @@ class ProjectStatusReport extends Component {
     <div className="animated fadeIn pt-1 text-center">Loading...</div>
   );
   render() {
-    const {id} = this.props.match.params
+    const { id } = this.props.match.params;
     return (
       <div className="animated fadeIn">
         <Row>
@@ -47,7 +47,7 @@ class ProjectStatusReport extends Component {
             <OverallStatus />
           </Col>
           <Col xs="12" sm="12" lg="6">
-            <Notification />
+            <Notification id={id} />
           </Col>
         </Row>
         <Row>
@@ -76,7 +76,7 @@ class ProjectStatusReport extends Component {
             <ActivityRegister options={options} />
           </Col>
           <Col xs="12" sm="12" lg="6">
-            <Deliverables options={options}  />
+            <Deliverables options={options} />
           </Col>
         </Row>
         <Row>
