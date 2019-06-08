@@ -70,7 +70,7 @@ const dataBubble = {
       borderColor: brandPrimary,
       pointHoverBackgroundColor: "#fff",
       borderWidth: 3,
-      borderDash: [8, 5],
+      borderDash: [],
       fill: true,
       lineTension: 0.1,
       //backgroundColor: 'rgba(75,192,192,0.4)',

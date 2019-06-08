@@ -140,6 +140,7 @@ class Activities extends Component {
               data={data}
               entries={5}
               entriesOptions={[5, 10, 20, 50, 100]}
+              isButton={true}
             />
           </CardBody>
         </Card>
