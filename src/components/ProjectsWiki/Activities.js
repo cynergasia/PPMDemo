@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody } from "reactstrap";
 import ReactDataTableNew from "../ReactDataTableNew";
+import {
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
+  UncontrolledDropdown
+} from "reactstrap";
+import { Link } from "react-router-dom";
+import ExportExcel from "../../helper/ExportExcel";
+import { CSVLink } from "react-csv";
 
 let data = {
   columns: [
@@ -120,6 +129,17 @@ let data = {
 };
 
 class Activities extends Component {
+  state = {
+    dropdownOpen: false
+  };
+  toggle = () => {
+    this.setState({
+      dropdownOpen: !this.state.dropdownOpen
+    });
+  };
+  handleExcel = () => {
+    return;
+  };
   render() {
     return (
       <React.Fragment>
@@ -127,7 +147,36 @@ class Activities extends Component {
           <CardHeader>
             Activities
             <div className="card-header-actions">
-              <i className="fa fa-file-excel-o mr-2" />
+              <UncontrolledDropdown tag="i" className="mr-2 cursor-pointer">
+                <DropdownToggle tag="i">
+                  <i className="fa fa-download card-header-icons text-primary" />
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem header>Download as </DropdownItem>
+                  <DropdownItem onClick={() => <ExportExcel />}>
+                    <i className="fa fa-file-excel-o mr-2" />{" "}
+                    <ExportExcel data={data} filename="activities.xlsx" />
+                  </DropdownItem>
+                  <DropdownItem>
+                    <i className="fa fa-file-pdf-o mr-2" /> PDF
+                  </DropdownItem>
+                  <DropdownItem>
+                    <i className="fa fa-file mr-2" />{" "}
+                    <CSVLink
+                      filename="activities.csv"
+                      separator=" "
+                      data={data.rows}
+                      className="text-dark text-decoration-none"
+                    >
+                      CSV
+                    </CSVLink>
+                  </DropdownItem>
+                  <DropdownItem onClick={() => window.print()}>
+                    <i className="fa fa-print mr-2" /> Print
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+
               <i className="fa fa-plus-circle mr-2" />
               <i className="fa fa-pencil-square" />
             </div>
