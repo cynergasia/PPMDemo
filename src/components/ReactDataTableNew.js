@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { MDBDataTable } from "mdbreact";
 import { CSVLink } from "react-csv";
-import Workbook from "react-excel-workbook";
 import ExportExcel from "../helper/ExportExcel";
 class ReactDataTableNew extends Component {
   render() {

@@ -5,7 +5,7 @@ import ReactDataTableNew from "../../../components/ReactDataTableNew";
 let data = {
   columns: [
     {
-      label: "Due Date V",
+      label: "Due Date",
       field: "due_date",
       sort: "asc"
     },

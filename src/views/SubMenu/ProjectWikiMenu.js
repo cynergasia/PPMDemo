@@ -1,8 +1,21 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 
 class ProjectWikiMenu extends Component {
+  scrollTo = ({ current: ref }) => {
+    let scrollRef = ReactDOM.findDOMNode(ref);
+    let scrollOptions = {
+      left: 0,
+      top: scrollRef.offsetTop,
+      behavior: "smooth"
+    };
+    window.scrollTo(scrollOptions);
+  };
+
   render() {
+    const { refs } = this.props;
     return (
       <React.Fragment>
         <div className="">
@@ -32,7 +45,10 @@ class ProjectWikiMenu extends Component {
                     </Link>
                   </li>
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="/500">
+                    <Link
+                      onClick={() => this.scrollTo(refs.issueChangesRef)}
+                      className="cursor-pointer"
+                    >
                       <i className="fa fa-refresh" /> Issues/Changes
                     </Link>
                   </li>

@@ -1,7 +1,16 @@
 import React, { Component } from "react";
 import { Card, CardBody, CardHeader, Row, Col, Input, Label } from "reactstrap";
-
+import DatePicker from "react-datepicker";
 class OverallStatus extends Component {
+  state = {
+    startDate: new Date()
+  };
+  handleChange = date => {
+    this.setState({
+      startDate: date
+    });
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -25,7 +34,15 @@ class OverallStatus extends Component {
                 <Label className="float-right">PSR As Of : </Label>
               </Col>
               <Col sm="12" md="4" lg="4">
-                <Input type="date" name="psrasof" />
+                {/* <Input type="date" name="psrasof" /> */}
+                <DatePicker
+                  selected={this.state.startDate}
+                  onChange={this.handleChange}
+                  className="form-control"
+                  showYearDropdown
+                  showMonthDropdown
+                  useShortMonthInDropdown
+                />
               </Col>
             </Row>
             <Row className="mt-2">

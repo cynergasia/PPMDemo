@@ -7,7 +7,7 @@ class RecoardInformation extends Component {
       <React.Fragment>
         <Card className="position-sticky">
           <CardHeader>
-            Recoard Information
+            Record Information
             <div className="card-header-actions" />
           </CardHeader>
           <CardBody>
