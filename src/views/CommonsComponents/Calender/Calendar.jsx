@@ -23,11 +23,11 @@ class Calendar extends Component {
                   </a> */}
               <a href="/#/500" download>
                 <i
-                  class="fa fa-download card-header-icons"
+                  className="fa fa-download card-header-icons"
                   aria-hidden="true"
                 />
               </a>
-              <i class="fa fa-ellipsis-h card-header-icons" />
+              <i className="fa fa-ellipsis-h card-header-icons" />
             </div>
           </CardHeader>
           <CardBody>

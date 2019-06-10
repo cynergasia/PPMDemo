@@ -4,7 +4,7 @@ const RiskScore = props => {
   return (
     <React.Fragment>
       <div className="chart-wrapper">
-        <h6 class="chart-title">RISK SCORE</h6>
+        <h6 className="chart-title">RISK SCORE</h6>
         <div className="summary-status-value-wrap">
           <div className="left">
             <div

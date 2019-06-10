@@ -10,18 +10,16 @@ import {
   NavItem
 } from "reactstrap";
 import PropTypes from "prop-types";
-import Profile from './ProfileAside';
-import MiscAside from './MiscAside';
+import Profile from "./ProfileAside";
+import MiscAside from "./MiscAside";
 
 import {
-  AppAsideToggler, 
+  AppAsideToggler,
   AppHeaderDropdown,
-  AppNavbarBrand,
-  AppSidebarToggler
+  AppNavbarBrand
 } from "@coreui/react";
 import logo from "../../assets/img/brand/logo.png";
 import sygnet from "../../assets/img/brand/sygnet.svg";
-import img1 from "../../assets/img/avatars/6.jpg";
 import Popup from "./Popup";
 import { routesURL } from "../../constant/routesURL";
 const propTypes = {
@@ -31,7 +29,6 @@ const propTypes = {
 const defaultProps = {};
 
 class DefaultHeader extends Component {
-  
   signOut(e) {
     e.preventDefault();
     //this.props.history.push("/login");
@@ -40,7 +37,7 @@ class DefaultHeader extends Component {
   render() {
     // eslint-disable-next-line
     const { children, ...attributes } = this.props;
-  
+
     return (
       <React.Fragment>
         {/* <AppSidebarToggler className="d-lg-none" display="md" mobile /> */}
@@ -49,7 +46,7 @@ class DefaultHeader extends Component {
           full={{ src: logo, width: 30, height: 30, alt: "ANS Corp" }}
           minimized={{ src: sygnet, width: 30, height: 30, alt: "ANS Corp" }}
         />
-        
+
         <p className="project-name">ANS Corp - {this.props.title} </p>
 
         {/* <AppSidebarToggler className="d-md-down-none" display="lg" /> Project Dashboard*/}
@@ -57,8 +54,8 @@ class DefaultHeader extends Component {
         <Nav className="d-md-down-none" navbar />
         <Nav className="ml-auto" navbar>
           <NavItem className="d-md-down-none">
-            {/* <NavLink tag={Link} to="/projectwiki" className="nav-link"> */}             
-              <Popup />
+            {/* <NavLink tag={Link} to="/projectwiki" className="nav-link"> */}
+            <Popup />
             {/* </NavLink> */}
           </NavItem>
           <div className="topnav">
@@ -76,58 +73,60 @@ class DefaultHeader extends Component {
               <i className="fa fa-home" aria-hidden="true" />
             </NavLink>
           </NavItem>
-          <NavItem className="d-md-down-none">
-            <AppHeaderDropdown direction="down">
-              <DropdownToggle nav>
-                <i
-                  className="fa fa-star-o"
-                  aria-hidden="true"
-                  style={{ fontSize: "23px", verticalAlign: "center" }}
-                />
-              </DropdownToggle>
-              <DropdownMenu right style={{ right: "auto" }}>
-                <DropdownItem header tag="div" className="text-center">
-                  <strong>Most Recent</strong>
-                </DropdownItem>
-                <DropdownItem>
-                  <NavLink
-                    tag={Link}
-                    to={routesURL.PAGE_NOT_FOUND}
-                    className="nav-link"
-                  >
-                    Project1
-                  </NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                  <NavLink
-                    tag={Link}
-                    to={routesURL.PAGE_NOT_FOUND}
-                    className="nav-link"
-                  >
-                    Project4
-                  </NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                  <NavLink
-                    tag={Link}
-                    to={routesURL.PAGE_NOT_FOUND}
-                    className="nav-link"
-                  >
-                    Project8
-                  </NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                  <NavLink
-                    tag={Link}
-                    to={routesURL.PAGE_NOT_FOUND}
-                    className="nav-link"
-                  >
-                    Project6
-                  </NavLink>
-                </DropdownItem>
-              </DropdownMenu>
-            </AppHeaderDropdown>
-          </NavItem>
+          <AppHeaderDropdown
+            direction="down"
+            className="d-md-down-none"
+            style={{ margin: "0 8px" }}
+          >
+            <DropdownToggle nav>
+              <i
+                className="fa fa-star-o"
+                aria-hidden="true"
+                style={{ fontSize: "23px", verticalAlign: "center" }}
+              />
+            </DropdownToggle>
+            <DropdownMenu right style={{ right: "auto" }}>
+              <DropdownItem header tag="div" className="text-center">
+                <strong>Most Recent</strong>
+              </DropdownItem>
+              <DropdownItem>
+                <NavLink
+                  tag={Link}
+                  to={routesURL.PAGE_NOT_FOUND}
+                  className="nav-link"
+                >
+                  Project1
+                </NavLink>
+              </DropdownItem>
+              <DropdownItem>
+                <NavLink
+                  tag={Link}
+                  to={routesURL.PAGE_NOT_FOUND}
+                  className="nav-link"
+                >
+                  Project4
+                </NavLink>
+              </DropdownItem>
+              <DropdownItem>
+                <NavLink
+                  tag={Link}
+                  to={routesURL.PAGE_NOT_FOUND}
+                  className="nav-link"
+                >
+                  Project8
+                </NavLink>
+              </DropdownItem>
+              <DropdownItem>
+                <NavLink
+                  tag={Link}
+                  to={routesURL.PAGE_NOT_FOUND}
+                  className="nav-link"
+                >
+                  Project6
+                </NavLink>
+              </DropdownItem>
+            </DropdownMenu>
+          </AppHeaderDropdown>
           <NavItem className="d-md-down-none">
             <NavLink
               tag={Link}
@@ -152,7 +151,7 @@ class DefaultHeader extends Component {
           </NavItem>
           <NavItem className="d-md-down-none comments-boxs">
             <NavLink tag={Link} to="#" className="nav-link">
-            <AppAsideToggler className="fa fa-comments" display="lg" />
+              <AppAsideToggler className="fa fa-comments" display="lg" />
               {/* <i className="fa fa-comments" aria-hidden="true" /> */}
             </NavLink>
           </NavItem>
@@ -171,7 +170,7 @@ class DefaultHeader extends Component {
           </NavItem>
           {/* className="fa fa-th" */}
           {/* <AppAsideToggler className="d-md-down-none" display="lg" /> */}
-          <MiscAside/>
+          <MiscAside />
           <Profile onLogout={e => this.signOut(e)} />
         </Nav>
       </React.Fragment>

@@ -1,4 +1,4 @@
-import React, { Component, lazy, Suspense } from "react";
+import React, { Component } from "react";
 import Project from "../CommonsComponents/MyProject/Project";
 import Menu from "../SubMenu/Menu";
 import { Row, Col } from "reactstrap";
@@ -13,7 +13,6 @@ import ActivityRegister from "../CommonsComponents/ActivityRegister/ActivityRegi
 import Deliverables from "../CommonsComponents/Deliverables/Deliverables";
 import FinancialAnalysis from "../CommonsComponents/EffortAnalysis/FinancialAnalysis";
 import FinancialStatus from "../CommonsComponents/FinancialStatus/FinancialStatus";
-import DefaultHeader from "../../containers/DefaultLayout/DefaultHeader";
 
 const options = {
   tooltips: {

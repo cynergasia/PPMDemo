@@ -29,11 +29,11 @@ class ChangeRegister extends Component {
             <div className="card-header-actions">
               <a href="/#/500" download>
                 <i
-                  class="fa fa-download card-header-icons"
+                  className="fa fa-download card-header-icons"
                   aria-hidden="true"
                 />
               </a>
-              <i class="fa fa-ellipsis-h card-header-icons" />
+              <i className="fa fa-ellipsis-h card-header-icons" />
             </div>
           </CardHeader>
           <CardBody>
@@ -51,7 +51,7 @@ class ChangeRegister extends Component {
               </Col>
               <Col md="12" lg="2">
                 <div className="chart-wrapper">
-                  <h6 class="chart-title">Status</h6>
+                  <h6 className="chart-title">Status</h6>
                   <div className="summary-status-value-wrap">
                     <div className="left">
                       <div

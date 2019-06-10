@@ -16,10 +16,10 @@ import { Row, Col } from "reactstrap";
 class ProjectWiki extends Component {
   sidebar = null;
 
+  issueChangesRef = React.createRef();
+
   componentDidMount() {
-    setTimeout(() => {
-      this.fixSidebar();
-    }, 80);
+    setTimeout(this.fixSidebar, 80);
   }
 
   fixSidebar = () => {
@@ -37,7 +37,11 @@ class ProjectWiki extends Component {
         <div className="animated fadeIn">
           <Row>
             <Col sm="12" md="12" lg="12">
-              <ProjectWikiMenu />
+              <ProjectWikiMenu
+                refs={{
+                  issueChangesRef: this.issueChangesRef
+                }}
+              />
             </Col>
           </Row>
 
@@ -65,9 +69,9 @@ class ProjectWiki extends Component {
                 <Col xs="12">
                   <WorkPackages />
                 </Col>
-                <Col xs="12">
+                <div className="col-12" ref={this.issueChangesRef}>
                   <IssueChanges />
-                </Col>
+                </div>
                 <Col xs="12">
                   <Meetings />
                 </Col>

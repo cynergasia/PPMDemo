@@ -19,37 +19,38 @@ class IssueChanges extends Component {
       <React.Fragment>
         <Card>
           <CardHeader>
-            <span
-              className={`${
-                activeTab === "1" ? "text-primary" : ""
-              } mr-3 cursor-pointer`}
-              onClick={() => this.toggle("1")}
-            >
-              Issues
-            </span>
+            <ul class="nav nav-tabs">
+              <li className="nav-item">
+                <a data-toggle="tab" 
+                className={`${
+                  activeTab === "1" ? "active nav-link" : "nav-link"
+                  }`}
+                onClick={() => this.toggle("1")}>Issues</a>
+              </li>
 
-            <span
-              className={`${
-                activeTab === "2" ? "text-primary" : ""
-              } mr-3 cursor-pointer`}
-              onClick={() => this.toggle("2")}
-            >
-              Changes
-            </span>
+              <li className="nav-item">
+                <a data-toggle="tab" className={`${
+                  activeTab === "2" ? "active nav-link" : "nav-link"
+                  }`}
+                onClick={() => this.toggle("2")}>Changes</a>
+              </li>
 
-            <span
-              className={`${
-                activeTab === "3" ? "text-primary" : ""
-              } mr-3 cursor-pointer`}
-              onClick={() => this.toggle("3")}
-            >
-              RFIs
-            </span>
+              <li className="nav-item">
+                <a data-toggle="tab" className={`${
+                  activeTab === "3" ? "active nav-link" : "nav-link"
+                  }`}
+                onClick={() => this.toggle("3")}>RFIs</a>
+              </li>
+            </ul>
+
+
             <div className="card-header-actions">
               <i className="fa fa-file-excel-o mr-2" />
               <i className="fa fa-plus-circle mr-2" />
               <i className="fa fa-pencil-square" />
             </div>
+
+
           </CardHeader>
           <CardBody>
             <TabContent activeTab={activeTab} className="border-0">

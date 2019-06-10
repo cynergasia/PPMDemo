@@ -1,7 +1,16 @@
 import React, { Component } from "react";
 import { Card, CardBody, CardHeader, Row, Col, Input, Label } from "reactstrap";
-
+import DatePicker from "react-datepicker";
 class OverallStatus extends Component {
+  state = {
+    startDate: new Date()
+  };
+  handleChange = date => {
+    this.setState({
+      startDate: date
+    });
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -11,12 +20,12 @@ class OverallStatus extends Component {
             <div className="card-header-actions">
               <a href="/#/500" download>
                 <i
-                  class="fa fa-download card-header-icons"
+                  className="fa fa-download card-header-icons"
                   aria-hidden="true"
                 />
               </a>
-              <i class="fa fa-ellipsis-h card-header-icons" />
-              {/* <i class="fa fa-th"></i> */}
+              <i className="fa fa-ellipsis-h card-header-icons" />
+              {/* <i className="fa fa-th"></i> */}
             </div>
           </CardHeader>
           <CardBody>
@@ -25,7 +34,15 @@ class OverallStatus extends Component {
                 <Label className="float-right">PSR As Of : </Label>
               </Col>
               <Col sm="12" md="4" lg="4">
-                <Input type="date" name="psrasof" />
+                {/* <Input type="date" name="psrasof" /> */}
+                <DatePicker
+                  selected={this.state.startDate}
+                  onChange={this.handleChange}
+                  className="form-control"
+                  showYearDropdown
+                  showMonthDropdown
+                  useShortMonthInDropdown
+                />
               </Col>
             </Row>
             <Row className="mt-2">

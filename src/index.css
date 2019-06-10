@@ -58,6 +58,7 @@
 
 .card {
   height: calc(100% - 1.5rem);
+  box-shadow: none !important;
 }
 
 .summary-status-value-wrap {
@@ -239,7 +240,7 @@ h6.chart-title {
 }
 
 .card-body.myproejct-boxs {
-  min-height: 363px;
+  min-height: 380px;
 }
 
 .modal-open {
@@ -263,6 +264,25 @@ h6.chart-title {
 
 .sidebar-fixed .main-content .sidebar.is-affixed .position-sticky {
   margin-top: 55px;
+}
+
+.card-body table.table td,
+.card-body table.table th {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.card-body div.dataTables_wrapper div.dataTables_info {
+  padding: 0.5rem 0;
+}
+
+.card-body div.dataTables_wrapper div.dataTables_paginate {
+  padding: 0;
+}
+
+.card-body div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+  padding: 0;
+  margin: 0;
 }
 
 /***** Responsive *****/
@@ -346,7 +366,7 @@ h6.chart-title {
 }
 
 .text-summary {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: white;
 }
