@@ -3,7 +3,7 @@ import ReactAnyChart from "anychart-react";
 import anyChart from "anychart";
 import data from "./data.json";
 import "./Risk.css";
-import { Row, Col, Card, CardBody, CardHeader } from "reactstrap";
+import { Row, Col, Card, CardBody, CardHeader, Popover, PopoverBody, PopoverHeader,Button } from "reactstrap";
 import { Link } from "react-router-dom";
 import RiskScore from "./RiskScore.js";
 
@@ -59,6 +59,19 @@ heatmap
   });
 
 class Risks extends Component {
+  constructor(props) {
+    super(props);
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      popoverOpen: false,      
+    };
+  }
+  toggle() {
+    this.setState({
+      popoverOpen: !this.state.popoverOpen,
+    });
+  }
+  
   render() {
     return (
       <div>
@@ -67,12 +80,18 @@ class Risks extends Component {
             Risk Register
             <div className="card-header-actions">
               <a href="/#/500" download>
-                <i
+                <i 
                   class="fa fa-download card-header-icons"
                   aria-hidden="true"
                 />
               </a>
+              <a id="Popover1" onClick={this.toggle}>
               <i class="fa fa-ellipsis-h card-header-icons" />
+             </a>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+              <PopoverHeader>Popover Title</PopoverHeader>
+              <PopoverBody>The text you are looking for is temporarily unavailable.</PopoverBody>
+            </Popover>            
               {/* <i class="fa fa-th"></i> */}
             </div>
           </CardHeader>
@@ -89,8 +108,7 @@ class Risks extends Component {
                     instance={stage}
                     charts={[heatmap]}
                     height={200}
-                  />
-                 
+                  />              
                   
                    <div className="chart-footer">
                    Impact
