@@ -8,7 +8,7 @@ const ExportExcel = props => {
     <React.Fragment>
       <Workbook
         filename={filename}
-        element={<button className="btn">{btnname}</button>}
+        element={<span className="">{btnname}</span>}
       >
         <Workbook.Sheet data={data1} name="Sheet A">
           {data.columns.map(data => (

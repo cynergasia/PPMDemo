@@ -21,7 +21,7 @@ class Attachments extends Component {
           </CardHeader>
           <CardBody>
             <Row>
-              <Col sm="12" md="8" lg="8" className="mb-5 h-100">
+              <Col sm="12" md="8" lg="12" className="mb-5 h-100">
                 <Dropzone onDrop={files => this.saveFiles(files)}>
                   {({ getRootProps, getInputProps }) => (
                     <div {...getRootProps()} className="dropzone">
@@ -30,7 +30,7 @@ class Attachments extends Component {
                         className="col-12 h-100"
                         style={{
                           border: "1px dotted black",
-                          minHeight: "164px"
+                          minHeight: "164px",                         
                         }}
                       >
                         <div className="mt-3 mb-5 text-center">
@@ -58,7 +58,7 @@ class Attachments extends Component {
                   )}
                 </Dropzone>
               </Col>
-              <Col sm="12" md="4" lg="4">
+              {/* <Col sm="12" md="4" lg="4">
                 <ul>
                   <li>Sort By Name</li>
                   <li>Sort By Date</li>
@@ -69,7 +69,7 @@ class Attachments extends Component {
                   <li>Download All</li>
                   <li>Manage Attachments</li>
                 </ul>
-              </Col>
+              </Col> */}
             </Row>
           </CardBody>
         </Card>

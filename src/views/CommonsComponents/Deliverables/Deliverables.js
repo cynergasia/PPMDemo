@@ -46,7 +46,7 @@ class Deliverables extends Component {
                     data={deliverablesData}
                     options={this.props.options}
                   />
-                  <span className="doughnutText text-center">
+                  <span className="deliverable doughnutText text-center">
                     <p>{totalCount}</p> <span>Deliverable </span>
                   </span>
                 </div>

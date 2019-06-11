@@ -1,6 +1,16 @@
 import React, { Component } from "react";
-import { Card, CardBody, CardHeader, Row, Col, Input, Label } from "reactstrap";
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Row,
+  Col,
+  Input,
+  Label,
+  Button
+} from "reactstrap";
 import DatePicker from "react-datepicker";
+
 class OverallStatus extends Component {
   state = {
     startDate: new Date()
@@ -24,6 +34,18 @@ class OverallStatus extends Component {
                   aria-hidden="true"
                 />
               </a>
+              {/* <a href="/#/500" download>
+                <i
+                  className="fa fa-save card-header-icons"
+                  aria-hidden="true"
+                />
+              </a>
+              <a href="/#/500" download>
+                <i
+                  className="fa fa-group card-header-icons"
+                  aria-hidden="true"
+                />
+              </a> */}
               <i className="fa fa-ellipsis-h card-header-icons" />
               {/* <i className="fa fa-th"></i> */}
             </div>
@@ -42,6 +64,7 @@ class OverallStatus extends Component {
                   showYearDropdown
                   showMonthDropdown
                   useShortMonthInDropdown
+                  todayButton={"Today"}
                 />
               </Col>
             </Row>
@@ -58,7 +81,16 @@ class OverallStatus extends Component {
                 <Label className="float-right">Overall Status : </Label>
               </Col>
               <Col sm="12" md="4" lg="4">
-                <Label>In-Trouble</Label>
+                <Input
+                  type="select"
+                  className="custom-select"
+                  defaultValue="In-Trouble"
+                >
+                  <option selected disabled>
+                    Select
+                  </option>
+                  <option>In-Trouble</option>
+                </Input>
               </Col>
             </Row>
             <Row className="mt-2">
@@ -67,6 +99,18 @@ class OverallStatus extends Component {
               </Col>
               <Col sm="12" md="4" lg="9">
                 <Input type="textarea" rows="6" />
+              </Col>
+            </Row>
+            <Row className="mt-2">
+              <Col sm="12" md="12" lg="12">
+                <div className="float-right">
+                  <Button color="primary" style={{ textTransform: "none" }}>
+                    <i className="fa fa-save mr-2" />Save
+                  </Button>
+                  <Button color="primary" style={{ textTransform: "none" }}>
+                    <i className="fa fa-group mr-2" />Publish
+                  </Button>
+                </div>
               </Col>
             </Row>
           </CardBody>

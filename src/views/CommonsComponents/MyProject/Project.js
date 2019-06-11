@@ -112,22 +112,7 @@ const dataBubble = {
 };
 
 const dataBubbleChartOpts = {
-  // tooltips: {
-  //   enabled: false,
-  //   custom: CustomTooltips,
-  //   intersect: true,
-  //   mode: 'index',
-  //   position: 'nearest',
-  //   callbacks: {
-  //     labelColor: function (tooltipItem, chart) {
-  //       return { backgroundColor: chart.data.datasets[tooltipItem.datasetIndex].borderColor }
-  //     }
-  //   }
-  // },
-  // maintainAspectRatio: false,
-  // legend: {
-  //   display: false,
-  // },
+ 
   scales: {
     xAxes: [
       {
@@ -161,18 +146,6 @@ const dataBubbleChartOpts = {
     }
   }
 
-  // legend: {
-  //   display: true,
-  //   labels: {
-  //     fontColor: 'red',
-  //     text: "Amit",
-
-  //   },
-  //   title: {
-  //     display: true,
-  //     text: 'Custom Chart Title'
-  //   }
-  // },
 };
 
 class Project extends Component {

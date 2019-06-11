@@ -17,7 +17,8 @@ class ProjectWiki extends Component {
   sidebar = null;
 
   issueChangesRef = React.createRef();
-
+  workPageRef = React.createRef();
+  
   componentDidMount() {
     setTimeout(this.fixSidebar, 80);
   }
@@ -39,8 +40,9 @@ class ProjectWiki extends Component {
             <Col sm="12" md="12" lg="12">
               <ProjectWikiMenu
                 refs={{
-                  issueChangesRef: this.issueChangesRef
+                  issueChangesRef: this.issueChangesRef,                 
                 }}
+                workPageRef={this.workPageRef}
               />
             </Col>
           </Row>
@@ -66,8 +68,8 @@ class ProjectWiki extends Component {
                 <Col xs="12">
                   <Attachments />
                 </Col>
-                <Col xs="12">
-                  <WorkPackages />
+                <Col xs="12"  ref={this.workPageRef}>
+                  <WorkPackages/>
                 </Col>
                 <div className="col-12" ref={this.issueChangesRef}>
                   <IssueChanges />

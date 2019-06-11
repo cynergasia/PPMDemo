@@ -11,7 +11,7 @@ import { routesURL } from "../../constant/routesURL";
 
 // const DefaultAside = React.lazy(() => import("./DefaultAside"));
 const ChatAside = React.lazy(() => import("./ChatAside"));
-// const NotificationAside = React.lazy(() => import("./NotificationAside"));
+ const NotificationAside = React.lazy(() => import("./NotificationAside"));
 const DefaultFooter = React.lazy(() => import("./DefaultFooter"));
 const DefaultHeader = React.lazy(() => import("./DefaultHeader"));
 
@@ -74,16 +74,16 @@ class DefaultLayout extends Component {
               </Suspense>
             </Container>
           </main>
-          <AppAside fixed>
+          {/* <AppAside fixed>
             <Suspense fallback={this.loading()}>
               <ChatAside />
             </Suspense>
-          </AppAside>
-          {/* <AppAside fixed>
+          </AppAside> */}
+          <AppAside fixed>
             <Suspense fallback={this.loading()}>
               <NotificationAside />
             </Suspense>
-          </AppAside> */}
+          </AppAside>
         </div>
         <AppFooter>
           <Suspense fallback={this.loading()}>

@@ -9,7 +9,7 @@ import {
   ListGroupItemText
 } from "reactstrap";
 import { Link } from "react-router-dom";
-
+import { routesURL } from "../../constant/routesURL";
 class Meetings extends Component {
   render() {
     return (
@@ -27,15 +27,15 @@ class Meetings extends Component {
               <ListGroupItem>
                 <ListGroupItemHeading>Upcomming Meeting :</ListGroupItemHeading>
                 <ListGroupItemText>
-                  <Link to="/meeting">
+                  <Link to={routesURL.PAGE_NOT_FOUND}>
                     20-Jun-2019 : Review Design with Client
                   </Link>
                   <br />
-                  <Link to="/meeting">
+                  <Link to={routesURL.PAGE_NOT_FOUND}>
                     20-Jun-2019 : Review Design with Client{" "}
                   </Link>
                   <br />
-                  <Link to="/meetinglist">More..</Link>
+                  <Link to={routesURL.PAGE_NOT_FOUND}>More..</Link>
                 </ListGroupItemText>
               </ListGroupItem>
               <ListGroupItem className="mt-3">
@@ -43,15 +43,15 @@ class Meetings extends Component {
                   Review Past Meeting :
                 </ListGroupItemHeading>
                 <ListGroupItemText>
-                  <Link to="/meeting">
+                  <Link to={routesURL.PAGE_NOT_FOUND}>
                     03-May-2019: Initial Requirement collection{" "}
                   </Link>{" "}
                   <br />
-                  <Link to="/meeting">
+                  <Link to={routesURL.PAGE_NOT_FOUND}>
                     15-May-2019: Requirement Review{" "}
                   </Link>{" "}
                   <br />
-                  <Link to="/meetinglist">More..</Link>
+                  <Link to={routesURL.PAGE_NOT_FOUND}>More..</Link>
                 </ListGroupItemText>
               </ListGroupItem>
             </ListGroup>

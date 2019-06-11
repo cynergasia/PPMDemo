@@ -12,7 +12,6 @@ import {
 import PropTypes from "prop-types";
 import Profile from "./ProfileAside";
 import MiscAside from "./MiscAside";
-
 import {
   AppAsideToggler,
   AppHeaderDropdown,
@@ -22,6 +21,8 @@ import logo from "../../assets/img/brand/logo.png";
 import sygnet from "../../assets/img/brand/sygnet.svg";
 import Popup from "./Popup";
 import { routesURL } from "../../constant/routesURL";
+import DatePicker from "react-datepicker";
+
 const propTypes = {
   children: PropTypes.node
 };
@@ -29,11 +30,23 @@ const propTypes = {
 const defaultProps = {};
 
 class DefaultHeader extends Component {
+  state = {
+    startDate: new Date()
+  };
   signOut(e) {
     e.preventDefault();
     //this.props.history.push("/login");
     window.location.hash = "/login";
   }
+  handleChange = date => {
+    this.setState({ startDate: date });
+    this.toggleCalendar();
+  };
+  toggleCalendar = e => {
+    e && e.preventDefault();
+    this.setState({ isOpen: !this.state.isOpen });
+  };
+
   render() {
     // eslint-disable-next-line
     const { children, ...attributes } = this.props;
@@ -128,13 +141,24 @@ class DefaultHeader extends Component {
             </DropdownMenu>
           </AppHeaderDropdown>
           <NavItem className="d-md-down-none">
-            <NavLink
-              tag={Link}
-              to={routesURL.PAGE_NOT_FOUND}
-              className="nav-link"
-            >
+            <NavLink tag={Link} to={"#"} className="nav-link">
               {" "}
-              <i className="fa fa-calendar" aria-hidden="true" />{" "}
+              <i
+                className="fa fa-calendar"
+                onClick={this.toggleCalendar}
+                aria-hidden="true"
+              />{" "}
+              {this.state.isOpen && (
+                <DatePicker
+                  selected={this.state.startDate}
+                  onChange={this.handleChange}
+                  inline
+                  showYearDropdown
+                  showMonthDropdown
+                  useShortMonthInDropdown
+                  todayButton={"Today"}
+                />
+              )}
               {/* <AppAsideToggler className="fa fa-calendar"  /> */}
             </NavLink>
           </NavItem>

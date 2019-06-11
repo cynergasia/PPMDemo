@@ -128,9 +128,30 @@ h6.chart-title {
   color: black;
 }
 
-.card .card-header {
+.card .cardtabsboxs {
+  font-weight: 600;
+  padding: 0 1.25rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card .cardtabsboxs .card-header-actions {
+  margin: auto 0 auto auto;
+}
+
+.card .cardtabsboxs .nav.nav-tabs {
+  margin: 0px;
+}
+
+.card .cardtabsboxs .nav.nav-tabs li a.nav-link {
+  color: #20a8d8;
   font-weight: 600;
 }
+
+.card .cardtabsboxs .nav.nav-tabs li a.nav-link.active {
+  color: #333;
+}
+
 
 .doughnutText {
   position: absolute;
@@ -138,6 +159,12 @@ h6.chart-title {
   left: 50%;
   transform: translate(-50%, -40%);
 }
+.register.doughnutText,.deliverable.doughnutText{
+  top: 43%;
+}
+/* .deliverable.doughnutText{
+  top: 43%;
+} */
 
 .doughnutText p {
   margin: 0 0 -6px;
@@ -285,6 +312,25 @@ h6.chart-title {
   margin: 0;
 }
 
+.text-summary {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+}
+
+.card-header-icons {
+  margin-left: 10px;
+}
+
+.dataTables_wrapper thead:last-child {
+  display: none;
+}
+
+.app-header.navbar .react-datepicker {
+  position: absolute;
+  left: -7rem;
+}
+
 /***** Responsive *****/
 
 @media (max-width: 991px) {
@@ -363,16 +409,6 @@ h6.chart-title {
   .card-body.myproejct-boxs {
     min-height: initial;
   }
-}
-
-.text-summary {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: white;
-}
-
-.card-header-icons {
-  margin-left: 10px;
 }
 
 @media screen and (max-width: 600px) {
