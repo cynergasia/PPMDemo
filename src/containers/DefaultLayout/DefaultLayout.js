@@ -8,14 +8,62 @@ import { AppAside, AppFooter, AppHeader } from "@coreui/react";
 // routes config
 import routes from "../../routes";
 import { routesURL } from "../../constant/routesURL";
+import CalendarAside from "./CalendarAside";
+import MiscAside from "./MiscAside";
+import NewsFeedAside from "./NewsFeedAside";
 
 // const DefaultAside = React.lazy(() => import("./DefaultAside"));
 const ChatAside = React.lazy(() => import("./ChatAside"));
-// const NotificationAside = React.lazy(() => import("./NotificationAside"));
+const NotificationAside = React.lazy(() => import("./NotificationAside"));
 const DefaultFooter = React.lazy(() => import("./DefaultFooter"));
 const DefaultHeader = React.lazy(() => import("./DefaultHeader"));
 
 class DefaultLayout extends Component {
+  initialState = {
+    isChat: false,
+    isNotification: false,
+    isCalendar: false,
+    isMisc: false,
+    isNewsFeed: false
+  };
+
+  state = { ...this.initialState };
+
+  toggleChat = () => {
+    this.setState({
+      ...this.initialState,
+      isChat: !this.state.isChat
+    });
+  };
+
+  toggleNotification = () => {
+    this.setState({
+      ...this.initialState,
+      isNotification: !this.state.isNotification
+    });
+  };
+
+  toggleCalendar = () => {
+    this.setState({
+      ...this.initialState,
+      isCalendar: !this.state.isCalendar
+    });
+  };
+
+  toggleMisc = () => {
+    this.setState({
+      ...this.initialState,
+      isMisc: !this.state.isMisc
+    });
+  };
+
+  toggleNewsFeed = () => {
+    this.setState({
+      ...this.initialState,
+      isNewsFeed: !this.state.isNewsFeed
+    });
+  };
+
   loading = () => (
     <div className="animated fadeIn pt-1 text-center">Loading...</div>
   );
@@ -36,7 +84,19 @@ class DefaultLayout extends Component {
       <div className="app">
         <AppHeader fixed>
           <Suspense fallback={this.loading()}>
-            <DefaultHeader title={title} />
+            <DefaultHeader
+              title={title}
+              toggleChat={this.toggleChat}
+              toggleNotification={this.toggleNotification}
+              toggleCalendar={this.toggleCalendar}
+              toggleMisc={this.toggleMisc}
+              toggleNewsFeed={this.toggleNewsFeed}
+              isChat={this.state.isChat}
+              isNotification={this.state.isNotification}
+              isCalendar={this.state.isCalendar}
+              isMisc={this.state.isMisc}
+              isNewsFeed={this.state.isNewsFeed}
+            />
           </Suspense>
         </AppHeader>
         <div className="app-body">
@@ -74,16 +134,51 @@ class DefaultLayout extends Component {
               </Suspense>
             </Container>
           </main>
-          <AppAside fixed>
-            <Suspense fallback={this.loading()}>
-              <ChatAside />
-            </Suspense>
-          </AppAside>
-          {/* <AppAside fixed>
-            <Suspense fallback={this.loading()}>
-              <NotificationAside />
-            </Suspense>
-          </AppAside> */}
+          {this.state.isChat ? (
+            <AppAside fixed className="animated slideInRight">
+              <Suspense fallback={this.loading()}>
+                <ChatAside />
+              </Suspense>
+            </AppAside>
+          ) : (
+            <AppAside className="animated slideOutRight" />
+          )}
+          {this.state.isNotification ? (
+            <AppAside fixed className="animated slideInRight">
+              <Suspense fallback={this.loading()}>
+                <NotificationAside />
+              </Suspense>
+            </AppAside>
+          ) : (
+            <AppAside className="animated slideOutRight" />
+          )}
+          {this.state.isCalendar ? (
+            <AppAside fixed className="animated slideInRight">
+              <Suspense fallback={this.loading()}>
+                <CalendarAside />
+              </Suspense>
+            </AppAside>
+          ) : (
+            <AppAside className="animated slideOutRight" />
+          )}
+          {this.state.isMisc ? (
+            <AppAside fixed className="animated slideInRight">
+              <Suspense fallback={this.loading()}>
+                <MiscAside />
+              </Suspense>
+            </AppAside>
+          ) : (
+            <AppAside className="animated slideOutRight" />
+          )}
+          {this.state.isNewsFeed ? (
+            <AppAside fixed className="animated slideInRight">
+              <Suspense fallback={this.loading()}>
+                <NewsFeedAside />
+              </Suspense>
+            </AppAside>
+          ) : (
+            <AppAside className="animated slideOutRight" />
+          )}
         </div>
         <AppFooter>
           <Suspense fallback={this.loading()}>

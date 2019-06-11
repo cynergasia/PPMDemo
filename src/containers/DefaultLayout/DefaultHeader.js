@@ -141,14 +141,24 @@ class DefaultHeader extends Component {
             </DropdownMenu>
           </AppHeaderDropdown>
           <NavItem className="d-md-down-none">
-            <NavLink tag={Link} to={"#"} className="nav-link">
-              {" "}
-              <i
-                className="fa fa-calendar"
-                onClick={this.toggleCalendar}
-                aria-hidden="true"
-              />{" "}
-              {this.state.isOpen && (
+            <NavLink
+              tag={Link}
+              to={"#"}
+              className="nav-link"
+              onClick={() => this.props.toggleCalendar()}
+            >
+              {this.props.isCalendar ? (
+                <AppAsideToggler
+                  defaultOpen={true}
+                  className="fa fa-calendar"
+                  display="lg"
+                />
+              ) : (
+                <i className="fa fa-calendar" aria-hidden="true" />
+              )}
+
+              {/* onClick={this.toggleCalendar} */}
+              {/* {this.state.isOpen && (
                 <DatePicker
                   selected={this.state.startDate}
                   onChange={this.handleChange}
@@ -158,43 +168,85 @@ class DefaultHeader extends Component {
                   useShortMonthInDropdown
                   todayButton={"Today"}
                 />
-              )}
+              )} */}
               {/* <AppAsideToggler className="fa fa-calendar"  /> */}
             </NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
             <NavLink
               tag={Link}
-              to={routesURL.PAGE_NOT_FOUND}
+              to={"#"}
               className="nav-link"
+              onClick={() => this.props.toggleNewsFeed()}
             >
-              {" "}
-              <AppAsideToggler className="fa fa-pencil-square-o" display="lg" />
-              {/* <i className="fa fa-pencil-square-o" aria-hidden="true" />{" "} */}
+              {this.props.isNewsFeed ? (
+                <AppAsideToggler
+                  defaultOpen={true}
+                  className="fa fa-pencil-square-o"
+                  display="lg"
+                />
+              ) : (
+                <i className="fa fa-pencil-square-o" aria-hidden="true" />
+              )}
             </NavLink>
           </NavItem>
           <NavItem className="d-md-down-none comments-boxs">
-            <NavLink tag={Link} to="#" className="nav-link">
-              <AppAsideToggler className="fa fa-comments" display="lg" />
-              {/* <i className="fa fa-comments" aria-hidden="true" /> */}
+            <NavLink
+              tag={Link}
+              to="#"
+              className="nav-link"
+              onClick={() => this.props.toggleChat()}
+            >
+              {this.props.isChat ? (
+                <AppAsideToggler
+                  defaultOpen={true}
+                  className="fa fa-comments"
+                  display="lg"
+                />
+              ) : (
+                <i className="fa fa-comments" aria-hidden="true" />
+              )}
             </NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
             <NavLink
               tag={Link}
-              to={routesURL.PAGE_NOT_FOUND}
+              to={"#"}
               className="nav-link"
+              onClick={() => this.props.toggleNotification()}
             >
               {" "}
-              <i className="fa fa-bell" aria-hidden="true" />{" "}
+              {this.props.isNotification ? (
+                <AppAsideToggler
+                  defaultOpen={true}
+                  className="fa fa-bell"
+                  display="lg"
+                />
+              ) : (
+                <i className="fa fa-bell" aria-hidden="true" />
+              )}
               <Badge pill color="danger">
                 5
               </Badge>
             </NavLink>
           </NavItem>
           {/* className="fa fa-th" */}
-          {/* <AppAsideToggler className="d-md-down-none" display="lg" /> */}
-          <MiscAside />
+          <NavItem
+            className="d-md-down-none"
+            onClick={() => this.props.toggleMisc()}
+          >
+            {this.props.isMisc ? (
+              <AppAsideToggler defaultOpen={true} tag={"a"} display="lg" />
+            ) : (
+              <NavLink tag={Link} to={"#"} className="nav-link">
+                <span
+                  className="navbar-toggler-icon"
+                  tag={"a.navbar-toggler"}
+                />
+              </NavLink>
+            )}
+          </NavItem>
+
           <Profile onLogout={e => this.signOut(e)} />
         </Nav>
       </React.Fragment>

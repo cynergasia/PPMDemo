@@ -40,7 +40,10 @@ class ProjectWikiMenu extends Component {
                     </Link>
                   </li>
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="/500">
+                    <Link
+                      onClick={() => this.scrollTo(refs.workPackageRef)}
+                      className="cursor-pointer"
+                    >
                       <i className="fa fa-sitemap" /> WBS
                     </Link>
                   </li>
@@ -53,17 +56,26 @@ class ProjectWikiMenu extends Component {
                     </Link>
                   </li>
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="/meetinglist">
+                    <Link
+                      onClick={() => this.scrollTo(refs.meetingMinutesRef)}
+                      className="cursor-pointer"
+                    >
                       <i className="fa fa-pencil-square" /> Meeting Minutes
                     </Link>
                   </li>
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="/500">
+                    <Link
+                      onClick={() => this.scrollTo(refs.financialsRef)}
+                      className="cursor-pointer"
+                    >
                       <i className="fa fa-bar-chart" /> Financials
                     </Link>
                   </li>
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="/activitieslist">
+                    <Link
+                      onClick={() => this.scrollTo(refs.activityLogRef)}
+                      className="cursor-pointer"
+                    >
                       <i className="fa fa-clipboard" /> Activity Log
                     </Link>
                   </li>
