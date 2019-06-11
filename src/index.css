@@ -331,6 +331,15 @@ h6.chart-title {
   left: -7rem;
 }
 
+.react-datepicker__month-container {
+  width: 100%;
+}
+
+.aside-menu-lg-show .sidebar.is-affixed .sidebar__inner {
+  width: 296px !important;
+  /* left: 683px !important; */
+}
+
 /***** Responsive *****/
 
 @media (max-width: 991px) {

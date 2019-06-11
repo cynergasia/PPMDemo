@@ -17,8 +17,11 @@ class ProjectWiki extends Component {
   sidebar = null;
 
   issueChangesRef = React.createRef();
-  workPageRef = React.createRef();
-  
+  workPackageRef = React.createRef();
+  meetingMinutesRef = React.createRef();
+  financialsRef = React.createRef();
+  activityLogRef = React.createRef();
+
   componentDidMount() {
     setTimeout(this.fixSidebar, 80);
   }
@@ -40,7 +43,11 @@ class ProjectWiki extends Component {
             <Col sm="12" md="12" lg="12">
               <ProjectWikiMenu
                 refs={{
-                  issueChangesRef: this.issueChangesRef,                 
+                  issueChangesRef: this.issueChangesRef,
+                  workPackageRef: this.workPackageRef,
+                  meetingMinutesRef: this.meetingMinutesRef,
+                  financialsRef: this.financialsRef,
+                  activityLogRef: this.activityLogRef
                 }}
                 workPageRef={this.workPageRef}
               />
@@ -68,24 +75,24 @@ class ProjectWiki extends Component {
                 <Col xs="12">
                   <Attachments />
                 </Col>
-                <Col xs="12"  ref={this.workPageRef}>
-                  <WorkPackages/>
-                </Col>
+                <div className="col-12" ref={this.workPackageRef}>
+                  <WorkPackages />
+                </div>
                 <div className="col-12" ref={this.issueChangesRef}>
                   <IssueChanges />
                 </div>
-                <Col xs="12">
+                <div className="col-12" ref={this.meetingMinutesRef}>
                   <Meetings />
-                </Col>
-                <Col xs="12">
+                </div>
+                <div className="col-12" ref={this.financialsRef}>
                   <Financial />
-                </Col>
+                </div>
                 <Col xs="12">
                   <Risks />
                 </Col>
-                <Col xs="12">
+                <div className="col-12" ref={this.activityLogRef}>
                   <ActivityLog />
-                </Col>
+                </div>
               </Row>
             </div>
           </div>

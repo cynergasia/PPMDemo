@@ -1,108 +1,75 @@
-/* eslint-disable no-unused-vars */
 import React, { Component } from "react";
-import { DropdownItem, DropdownMenu, DropdownToggle } from "reactstrap";
-import { AppSwitch } from "@coreui/react";
-import { AppHeaderDropdown } from "@coreui/react";
+import {
+  Nav,
+  NavItem,
+  NavLink,
+  TabContent,
+  TabPane,
+  Row,
+  Col
+} from "reactstrap";
 import PropTypes from "prop-types";
+import classNames from "classnames";
+import { Link } from "react-router-dom";
+import { routesURL } from "../../constant/routesURL";
+
 const propTypes = {
   children: PropTypes.node
 };
 
 const defaultProps = {};
 class MiscAside extends Component {
+  state = {
+    activeTab: "1"
+  };
+
+  toggle = tab => {
+    if (this.state.activeTab !== tab) {
+      this.setState({
+        activeTab: tab
+      });
+    }
+  };
   render() {
     const { children, ...attributes } = this.props;
 
     return (
-      <AppHeaderDropdown direction="down">
-        <DropdownToggle nav>
-          <i className="navbar-toggler-icon" aria-hidden="true" />
-        </DropdownToggle>
-        <DropdownMenu right style={{ right: "auto" }}>
-          <DropdownItem>
-            <h6>Settings</h6>
+      <React.Fragment>
+        <Nav tabs>
+          <NavItem>
+            <NavLink
+              className={classNames({ active: this.state.activeTab === "1" })}
+              onClick={() => {
+                this.toggle("1");
+              }}
+            >
+              <i className="fa fa-bars" />
+            </NavLink>
+          </NavItem>
+        </Nav>
+        <TabContent activeTab={this.state.activeTab}>
+          <TabPane tabId="1" className="p-3">
+            <Row>
+              <Col md="4" className="text-center">
+                <Link to={routesURL.DASHBOARD}>
+                  <i className="fa fa-dashboard" style={{ fontSize: "50px" }} />{" "}
+                  DashBoard
+                </Link>
+              </Col>
 
-            <div className="aside-options">
-              <div className="clearfix mt-4">
-                <small>
-                  <b>Option 1</b>
-                </small>
-                <AppSwitch
-                  className={"float-right"}
-                  variant={"pill"}
-                  label
-                  color={"success"}
-                  defaultChecked
-                  size={"sm"}
-                />
-              </div>
-              <div>
-                <small className="text-muted">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </small>
-              </div>
-            </div>
-
-            <div className="aside-options">
-              <div className="clearfix mt-3">
-                <small>
-                  <b>Option 2</b>
-                </small>
-                <AppSwitch
-                  className={"float-right"}
-                  variant={"pill"}
-                  label
-                  color={"success"}
-                  size={"sm"}
-                />
-              </div>
-              <div>
-                <small className="text-muted">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </small>
-              </div>
-            </div>
-
-            <div className="aside-options">
-              <div className="clearfix mt-3">
-                <small>
-                  <b>Option 3</b>
-                </small>
-                <AppSwitch
-                  className={"float-right"}
-                  variant={"pill"}
-                  label
-                  color={"success"}
-                  defaultChecked
-                  size={"sm"}
-                  disabled
-                />
-                <div>
-                  <small className="text-muted">Option disabled.</small>
-                </div>
-              </div>
-            </div>
-
-            <div className="aside-options">
-              <div className="clearfix mt-3">
-                <small>
-                  <b>Option 4</b>
-                </small>
-                <AppSwitch
-                  className={"float-right"}
-                  variant={"pill"}
-                  label
-                  color={"success"}
-                  defaultChecked
-                  size={"sm"}
-                />
-              </div>
-            </div>
-          </DropdownItem>
-        </DropdownMenu>
-      </AppHeaderDropdown>
+              <Col md="4" className="text-center">
+                <Link to={routesURL.PROJECT_WIKI}>
+                  <i
+                    className="fa fa-product-hunt"
+                    style={{ fontSize: "50px" }}
+                  />{" "}
+                  ProjectWiki
+                </Link>
+              </Col>
+            </Row>
+          </TabPane>
+        </TabContent>
+      </React.Fragment>
     );
   }
 }
