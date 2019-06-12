@@ -13,10 +13,12 @@ import MiscAside from "./MiscAside";
 import NewsFeedAside from "./NewsFeedAside";
 
 // const DefaultAside = React.lazy(() => import("./DefaultAside"));
+
 const ChatAside = React.lazy(() => import("./ChatAside"));
  const NotificationAside = React.lazy(() => import("./NotificationAside"));
 const DefaultFooter = React.lazy(() => import("./DefaultFooter"));
 const DefaultHeader = React.lazy(() => import("./DefaultHeader"));
+
 
 class DefaultLayout extends Component {
   initialState = {

@@ -1,0 +1,143 @@
+{
+    "basicInfo": [
+        {
+            "project_name": "6000001",
+            "project_number": "Extensions N/Cape Mall Phase 3",
+            "project_type": "Contract",
+            "opportunity_number": "SFOPP00030",
+            "organization": "80.ACM.LAX.1",
+            "federal_project": "No",
+            "currency": "USD",
+            "partnering_needed": "No",
+            "stage": "Execution",
+            "project_m_nager": "Suresh Padmanabhan(SP)",
+            "project_approver": "Neeraj Garg (NG)",
+            "p&l_manager": "Arindam Mukherjee(AM)",
+            "region": "United States",
+            "available_to_copy": "Yes",
+            "type": "Contract"
+        }
+    ],
+    "projectDetail": [
+        {
+            "detail": "Extensions N/Cape Mall Phase 3"
+        }
+    ],
+    "teamMember": [
+        {
+            "person": "Suresh Padmanabhan",
+            "role": "Project Manager",
+            "start_date": "01-Jan-2019",
+            "end_date": "16-Feb-2020"
+        },
+        {
+            "person": "Neeraj Garg",
+            "role": "Project Approver",
+            "start_date": "01-Jan-2019",
+            "end_date": "16-Feb-2020"
+        },
+        {
+            "person": "Arindam Mukherjee",
+            "role": "P&L Manager",
+            "start_date": "01-Jan-2019",
+            "end_date": "16-Feb-2020"
+        }
+    ],
+    "classification": [
+        {
+            "category": "Business Line",
+            "value": "Transportation",
+            "start_date": "01-Jan-2019",
+            "end_date": "16-Feb-2020"
+        },
+        {
+            "category": "Sub-Business Line",
+            "value": "Rail",
+            "start_date": "01-Jan-2019",
+            "end_date": "16-Feb-2020"
+        },
+        {
+            "category": "Fedral Project",
+            "value": "No",
+            "start_date": "01-Jan-2019",
+            "end_date": "16-Feb-2020"
+        }
+    ],
+    "sheduleInformation": [
+        {
+            "estimate_start_date": "01-Jan-19",
+            "estimate_end_date": "16-Feb-20",
+            "transaction_start_date": "02-Jan-19",
+            "transaction_end_date": "16-Feb-20",
+            "project_status": "Approved",
+            "planned_efforts": "2156 Hours",
+            "actual_efforts": "1048 Hours",
+            "%_spent": "49%",
+            "%_complete": "55%"
+        }
+    ],
+    "workflowInformation": [
+        {
+            "Status": "In Approval",
+            "Last_Approved_By": "Neeraj Garg",
+            "Next_Approver": "Arindam",
+            "Due_Date": "12-Jun-19",
+            "Last_Approval_Date": "10-May-19"
+        }
+    ],
+    "auditInformation": [
+        {
+            "Created_By": "Suresh Padmanabhan",
+            "Creation_Date": "15-Dec-18",
+            "Last_Updated_By": "10-Jun-19",
+            "Last_Updated_Date": "10-Jun-19",
+            "Latest_Activity_dat": "08-Jun-19",
+            "Locked_By": "Suresh Padmanabhan"
+        }
+    ],
+    "projects": [
+        {
+            "id": 60453005,
+            "name": "Shangri-la - SLUB Pha",
+            "financial_per_complete": 70,
+            "execution_per_complete": 68,
+            "contract_value": 6500000
+        },
+        {
+            "id": 60453007,
+            "name": "Tai Kok Tsui, Kowloon",
+            "financial_per_complete": 60,
+            "execution_per_complete": 54,
+            "contract_value": 2300000
+        },
+        {
+            "id": 60453009,
+            "name": "HKHA  for Supervising",
+            "financial_per_complete": 30,
+            "execution_per_complete": 76,
+            "contract_value": 320000
+        },
+        {
+            "id": 60453010,
+            "name": "Tsing Yi Indoor Recre",
+            "financial_per_complete": 40,
+            "execution_per_complete": 80,
+            "contract_value": 800000
+        },
+        {
+            "id": 60453012,
+            "name": "810B West KLN Terminu",
+            "financial_per_complete": 84,
+            "execution_per_complete": 86,
+            "contract_value": 1589000
+        },
+        {
+            "id": 60453013,
+            "name": "TWGH Wong Fat Nam Col",
+            "financial_per_complete": 91,
+            "execution_per_complete": 93,
+            "contract_value": 5000000
+        }
+    ]
+}
+

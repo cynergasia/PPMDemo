@@ -7,7 +7,8 @@ import {
   Col,
   Input,
   Label,
-  Button
+  Button,
+  Progress
 } from "reactstrap";
 import DatePicker from "react-datepicker";
 
@@ -72,8 +73,9 @@ class OverallStatus extends Component {
               <Col sm="2" md="2" lg="3">
                 <Label className="float-right">PPC : </Label>
               </Col>
-              <Col sm="12" md="4" lg="3">
+              <Col sm="12" md="4" lg="6">
                 <Label>40%</Label>
+                {/* <Progress animated value={100 * 8}  /> */}
               </Col>
             </Row>
             <Row className="mt-2">

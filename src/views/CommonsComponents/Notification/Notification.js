@@ -79,7 +79,7 @@ class title extends Component {
       <React.Fragment>
         <Card>
           <CardHeader>
-            title
+            Notification
             <div className="card-header-actions" />
           </CardHeader>
           <CardBody>
