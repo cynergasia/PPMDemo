@@ -15,66 +15,48 @@ let data = {
       sort: "asc"
     },
     {
-      label: "Notification",
-      field: "notification",
+      label: "Title",
+      field: "title",
       sort: "asc"
     }
   ],
+
   rows: [
     {
-      due_date: "4/22/2019",
-      project: "project4",
-      notification: "Invoice Approval Pending"
+      due_date: "16-Jun-19",
+      project: "Shangri-la - SLUB Pha(60453005)",
+      title: "Change Order C60453005-3 Approval"
     },
     {
-      due_date: "4/22/2019",
-      project: "project3",
-      notification: "Status Report Pending"
+      due_date: "12-Jun-19",
+      project: "Tai Kok Tsui, Kowloon(60453007)",
+      title: "Invoice Approval - INV1018"
     },
     {
-      due_date: "4/22/2019",
-      project: "project10",
-      notification: "Invoice Approval Pending"
+      due_date: "12-Jun-19",
+      project: "HKHA  for Supervising(60453009)",
+      title: "Invoice Approval - INV1009"
     },
     {
-      due_date: "4/22/2019",
-      project: "project1",
-      notification: "Issue Review Pending"
+      due_date: "09-Jun-19",
+      project: "Tsing Yi Indoor Recre(60453010)",
+      title: "Deliverable D10256 Due"
     },
     {
-      due_date: "4/22/2019",
-      project: "project6",
-      notification: "Status Report Pending"
+      due_date: "09-Jun-19",
+      project: "810B West KLN Terminu(60453012)",
+      title: "Project EAC change Approval"
     },
     {
-      due_date: "10/10/2019",
-      project: "project2",
-      notification: "Issue Review Pending"
-    },
-    {
-      due_date: "3/02/2019",
-      project: "project1",
-      notification: "Status Report Pending"
-    },
-    {
-      due_date: "2/22/2019",
-      project: "project3",
-      notification: "Invoice Approval Pending"
-    },
-    {
-      due_date: "01/10/2019",
-      project: "project5",
-      notification: "Issue Review Pending"
-    },
-    {
-      due_date: "2/18/2019",
-      project: "project6",
-      notification: "Status Report Pending"
+      due_date: "07-Jun-19",
+      project: "TWGH Wong Fat Nam Col(60453013)",
+      title: "Change Order C60453013-2 Approved"
     }
+    
   ]
 };
 
-class Notification extends Component {
+class title extends Component {
   state = {
     data: []
   };
@@ -97,7 +79,7 @@ class Notification extends Component {
       <React.Fragment>
         <Card>
           <CardHeader>
-            Notification
+            title
             <div className="card-header-actions" />
           </CardHeader>
           <CardBody>
@@ -109,4 +91,4 @@ class Notification extends Component {
   }
 }
 
-export default Notification;
+export default title;

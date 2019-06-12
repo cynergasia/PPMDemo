@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Card, CardBody, Col } from "reactstrap";
 
+
 const Summary = props => {
   return (
     <React.Fragment>
@@ -20,7 +21,7 @@ const Summary = props => {
       <Col xs="8" sm="4" lg="2">
         <Card className="text-white bg-success">
           <CardBody className="pb-0">
-            <div className="text-value">8</div>
+            <div className="text-value">9</div>
             <Link to="/500">
               <div className="text-summary"> Active Workpackages</div>
             </Link>
@@ -32,7 +33,7 @@ const Summary = props => {
       <Col xs="8" sm="4" lg="2">
         <Card className="text-white bg-warning">
           <CardBody className="pb-0">
-            <div className="text-value">26</div>
+            <div className="text-value">11</div>
             <Link to="/500">
               <div className="text-summary">Open Activitiess</div>
             </Link>
@@ -44,7 +45,7 @@ const Summary = props => {
       <Col xs="8" sm="4" lg="2">
         <Card className="text-white bg-warning">
           <CardBody className="pb-0">
-            <div className="text-value">12</div>
+            <div className="text-value">6</div>
             <Link to="/500">
               <div className="text-summary">Open Issues</div>
             </Link>
@@ -56,7 +57,7 @@ const Summary = props => {
       <Col xs="8" sm="4" lg="2">
         <Card className="text-white bg-success">
           <CardBody className="pb-0">
-            <div className="text-value">5</div>
+            <div className="text-value">8</div>
             <Link to="/500">
               <div className="text-summary">Pending Risks</div>
             </Link>
@@ -67,7 +68,7 @@ const Summary = props => {
       <Col xs="8" sm="4" lg="2">
         <Card className="text-white bg-success">
           <CardBody className="pb-0">
-            <div className="text-value">3</div>
+            <div className="text-value">5</div>
             <Link to="/500">
               <div className="text-summary">Pending Changes</div>
             </Link>

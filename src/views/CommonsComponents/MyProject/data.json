@@ -1,128 +1,50 @@
+
+
+60453005	Shangri-la - SLUB Pha	65%	68%	 $65,00,000 
+60453007	Tai Kok Tsui, Kowloon	60%	54%	 $23,00,000 
+60453009	HKHA  for Supervising	80%	76%	 $3,20,000 
+60453010	Tsing Yi Indoor Recre	76%	80%	 $8,00,000 
+60453012	810B West KLN Terminu	84%	86%	 $15,89,000 
+60453013	TWGH Wong Fat Nam Col	91%	93%	 $50,00,000 
+
+
+6500000 
+2300000 
+320000 
+800000 
+1589000 
+5000000 
+
+
 [
   {
-    "x": "Project1",
-    "y": "A",
-    "heat": 9,
-    "custom_field": ""
-  }, {
-    "x": "Project2",
-    "y": "A",
-    "heat": 12,
-    "custom_field": ""
-  }, {
-    "x": "Project3",
-    "y": "A",
-    "heat": 16,
-    "custom_field": ""
-  }, {
-    "x": "Project4",
-    "y": "A",
-    "heat": 20,
-    "custom_field": "1"
-  }, {
-    "x": "Project5",
-    "y": "A",
-    "heat": 21,
-    "custom_field": ""
-  }, {
-    "x": "Project1",
-    "y": "B",
-    "heat": 6,
-    "custom_field": ""
-  }, {
-    "x": "Project2",
-    "y": "B",
-    "heat": 9,
-    "custom_field": ""
-  }, {
-    "x": "Project3",
-    "y": "B",
-    "heat": 12,
-    "custom_field": "1"
-  }, {
-    "x": "Project4",
-    "y": "B",
-    "heat": 16,
-    "custom_field": "2"
-  }, {
-    "x": "Project5",
-    "y": "B",
-    "heat": 20,
-    "custom_field": ""
-  }, {
-    "x": "Project1",
-    "y": "C",
-    "heat": 6,
-    "custom_field": ""
-  }, {
-    "x": "Project2",
-    "y": "C",
-    "heat": 6,
-    "custom_field": ""
-  }, {
-    "x": "Project3",
-    "y": "C",
-    "heat": 9,
-    "custom_field": "1"
-  }, {
-    "x": "Project4",
-    "y": "C",
-    "heat": 12,
-    "custom_field": "1"
-  }, {
-    "x": "Project5",
-    "y": "C",
-    "heat": 16,
-    "custom_field": ""
-  }, {
-    "x": "Project1",
-    "y": "D",
-    "heat": 6,
-    "custom_field": ""
-  }, {
-    "x": "Project2",
-    "y": "D",
-    "heat": 6,
-    "custom_field": ""
-  }, {
-    "x": "Project3",
-    "y": "D",
-    "heat": 6,
-    "custom_field": "2"
-  }, {
-    "x": "Project4",
-    "y": "D",
-    "heat": 8,
-    "custom_field": ""
-  }, {
-    "x": "Project5",
-    "y": "D",
-    "heat": 12,
-    "custom_field": ""
-  }, {
-    "x": "Project1",
-    "y": "E",
-    "heat": 6,
-    "custom_field": ""
-  }, {
-    "x": "Project2",
-    "y": "E",
-    "heat": 6,
-    "custom_field": ""
-  }, {
-    "x": "Project3",
-    "y": "E",
-    "heat": 6,
-    "custom_field": ""
-  }, {
-    "x": "Project4",
-    "y": "E",
-    "heat": 6,
-    "custom_field": "1"
-  }, {
-    "x": "Project5",
-    "y": "E",
-    "heat": 9,
-    "custom_field": ""
-  }
+    x:65,
+    y:68,
+    r:6500000/100000
+  },
+  {
+    x:60,
+    y:54,
+    r:2300000/10000
+  },
+  {
+    x:80,
+    y:76,
+    r:320000/10000
+  },
+  {
+    x:76,
+    y:80,
+    r:800000/10000
+  },
+  {
+    x:84,
+    y:86,
+    r:1589000/10000
+  },
+  {
+    x:91,
+    y:93,
+    r:5000000/10000
+  },
 ]
