@@ -2,22 +2,23 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Card, CardHeader, Row, Col, CardBody } from "reactstrap";
 import { Doughnut } from "react-chartjs-2";
+import _sum from "lodash/sum";
 
-const activitiesData = {
-  labels: ["Not Started", "Started", "Completed", "On Hold", "Action"],
-  datasets: [
-    {
-      data: [4, 7, 16, 0, 0],
-      backgroundColor: [
-        "#0077b5", // Blue
-        "#fc6d21", // Orange
-        "#06a54e", // Green
-        "#59239d", // Purple
-        "#bf2511" //red
-      ]
-    }
-  ]
-};
+const labels = ["Not Started", "Started", "Completed", "On Hold", "Action"];
+const datasets = [
+  {
+    data: [4, 7, 16, 0, 0],
+    backgroundColor: [
+      "#0077b5", // Blue
+      "#fc6d21", // Orange
+      "#06a54e", // Green
+      "#59239d", // Purple
+      "#bf2511" //red
+    ]
+  }
+];
+const text = [`${_sum(datasets["0"].data)}`, "Activities"];
+const activitiesData = { labels, datasets, text };
 class ActivityRegister extends Component {
   render() {
     let totalCount = 0;
@@ -45,9 +46,9 @@ class ActivityRegister extends Component {
                     data={activitiesData}
                     options={this.props.options}
                   />
-                  <span className="register doughnutText text-center">
+                  {/* <span className="register doughnutText text-center">
                     <p>{totalCount}</p> <span>Activities</span>
-                  </span>
+                  </span> */}
                 </div>
               </Col>
               <Col xs="12" sm="12" lg="3">

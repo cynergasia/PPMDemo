@@ -140,7 +140,7 @@ h6.chart-title {
 }
 
 .card .cardtabsboxs .nav.nav-tabs {
-  margin: 0px;
+  margin: 0;
 }
 
 .card .cardtabsboxs .nav.nav-tabs li a.nav-link {
@@ -152,16 +152,18 @@ h6.chart-title {
   color: #333;
 }
 
-
 .doughnutText {
   position: absolute;
   top: 47%;
   left: 50%;
   transform: translate(-50%, -40%);
 }
-.register.doughnutText,.deliverable.doughnutText{
+
+.deliverable.doughnutText,
+.register.doughnutText {
   top: 43%;
 }
+
 /* .deliverable.doughnutText{
   top: 43%;
 } */

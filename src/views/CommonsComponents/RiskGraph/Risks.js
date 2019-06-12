@@ -3,7 +3,17 @@ import ReactAnyChart from "anychart-react";
 import anyChart from "anychart";
 import data from "./data.json";
 import "./Risk.css";
-import { Row, Col, Card, CardBody, CardHeader, Popover, PopoverBody, PopoverHeader,Button } from "reactstrap";
+import {
+  Row,
+  Col,
+  Card,
+  CardBody,
+  CardHeader,
+  Popover,
+  PopoverBody,
+  PopoverHeader,
+  Button
+} from "reactstrap";
 import { Link } from "react-router-dom";
 import RiskScore from "./RiskScore.js";
 
@@ -63,15 +73,15 @@ class Risks extends Component {
     super(props);
     this.toggle = this.toggle.bind(this);
     this.state = {
-      popoverOpen: false,      
+      popoverOpen: false
     };
   }
   toggle() {
     this.setState({
-      popoverOpen: !this.state.popoverOpen,
+      popoverOpen: !this.state.popoverOpen
     });
   }
-  
+
   render() {
     return (
       <div>
@@ -80,19 +90,26 @@ class Risks extends Component {
             Risk Register
             <div className="card-header-actions">
               <a href="/#/500" download>
-                <i 
-                  class="fa fa-download card-header-icons"
+                <i
+                  className="fa fa-download card-header-icons"
                   aria-hidden="true"
                 />
               </a>
               <a id="Popover1" onClick={this.toggle}>
-              <i class="fa fa-ellipsis-h card-header-icons" />
-             </a>
-            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
-              <PopoverHeader>Popover Title</PopoverHeader>
-              <PopoverBody>The text you are looking for is temporarily unavailable.</PopoverBody>
-            </Popover>            
-              {/* <i class="fa fa-th"></i> */}
+                <i className="fa fa-ellipsis-h card-header-icons" />
+              </a>
+              <Popover
+                placement="bottom"
+                isOpen={this.state.popoverOpen}
+                target="Popover1"
+                toggle={this.toggle}
+              >
+                <PopoverHeader>Popover Title</PopoverHeader>
+                <PopoverBody>
+                  The text you are looking for is temporarily unavailable.
+                </PopoverBody>
+              </Popover>
+              {/* <i className="fa fa-th"></i> */}
             </div>
           </CardHeader>
           <CardBody>

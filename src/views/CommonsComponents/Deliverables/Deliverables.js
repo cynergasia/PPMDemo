@@ -2,22 +2,23 @@ import React, { Component } from "react";
 import { Col, Row, Card, CardHeader, CardBody } from "reactstrap";
 import { Doughnut } from "react-chartjs-2";
 import { Link } from "react-router-dom";
+import _sum from "lodash/sum";
 
-const deliverablesData = {
-  labels: ["Not Started", "Started", "Completed", "On Hold", "Action"],
-  datasets: [
-    {
-      data: [3, 6, 16, 0, 0],
-      backgroundColor: [
-        "#0077b5", // Blue
-        "#fc6d21", // Orange
-        "#06a54e", // Green
-        "#59239d", // Purple
-        "#bf2511" //red
-      ]
-    }
-  ]
-};
+const labels = ["Not Started", "Started", "Completed", "On Hold", "Action"];
+const datasets = [
+  {
+    data: [3, 6, 16, 0, 0],
+    backgroundColor: [
+      "#0077b5", // Blue
+      "#fc6d21", // Orange
+      "#06a54e", // Green
+      "#59239d", // Purple
+      "#bf2511" //red
+    ]
+  }
+];
+const text = [`${_sum(datasets["0"].data)}`, "Deliverable"];
+const deliverablesData = { labels, datasets, text };
 
 class Deliverables extends Component {
   render() {
@@ -46,9 +47,9 @@ class Deliverables extends Component {
                     data={deliverablesData}
                     options={this.props.options}
                   />
-                  <span className="deliverable doughnutText text-center">
+                  {/* <span className="deliverable doughnutText text-center">
                     <p>{totalCount}</p> <span>Deliverable </span>
-                  </span>
+                  </span> */}
                 </div>
               </Col>
               <Col xs="12" sm="12" lg="3">
