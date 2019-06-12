@@ -57,7 +57,7 @@ class Dashboard extends Component {
               <Risks />
             </Col>
             <Col xs="12" sm="12" lg="6">
-              <IssueRegister />
+              <IssueRegister options={options} />
             </Col>
           </Row>
 

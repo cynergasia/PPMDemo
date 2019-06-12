@@ -2,6 +2,9 @@ import React, { Component, lazy } from "react";
 import { Bubble } from "react-chartjs-2";
 import { Card, CardBody, CardHeader } from "reactstrap";
 import { getStyle } from "@coreui/coreui/dist/js/coreui-utilities";
+import _maxBy from "lodash/maxBy";
+import _minBy from "lodash/minBy";
+import database from "../../../database";
 
 // eslint-disable-next-line no-unused-vars
 const Widget03 = lazy(() => import("../../Widgets/Widget03"));
@@ -13,8 +16,49 @@ const brandInfo = getStyle("--info");
 const brandWarning = getStyle("--warning");
 const brandDanger = getStyle("--danger");
 
+let inProgressData = [];
+let dangerData = [];
+let warningData = [];
+
+let data = [];
+
+database.projects.forEach(item => {
+  data.push({
+    x: item.financial_per_complete,
+    y: item.execution_per_complete,
+    contract: item.contract_value,
+    project: item.name
+  });
+});
+
+// const data = [
+//   { x: 70, y: 68, contract: 6500000, project: "Shangri-la - SLUB Pha" },
+//   { x: 60, y: 54, contract: 2300000, project: "Tai Kok Tsui, Kowloon" },
+//   { x: 30, y: 76, contract: 320000, project: "HKHA  for Supervising" },
+//   { x: 40, y: 80, contract: 800000, project: "Tsing Yi Indoor Recre" },
+//   { x: 84, y: 86, contract: 1589000, project: "810B West KLN Terminu" },
+//   { x: 91, y: 93, contract: 5000000, project: "TWGH Wong Fat Nam Col" }
+// ];
+
+// const min = _minBy(data, "contract").contract;
+const max = _maxBy(data, "contract").contract;
+// const average = (max + min) / 2;
+// const range = max - min;
+
+data.forEach(({ x, y, contract, project }) => {
+  // console.log((contract / 2 + average / 2) / 2 * 100);
+  const n = y / x;
+  const r = parseInt(contract / max * 30 + 8);
+  const item = { x, y, r, project, contract };
+  n >= 2
+    ? dangerData.push(item)
+    : n >= 1 && n < 2
+      ? warningData.push(item)
+      : inProgressData.push(item);
+});
+
 const dataBubble = {
-  label: ["Red", "Yellow", "Green"],
+  label: ["Danger", "Warning", "Green"],
   datasets: [
     {
       backgroundColor: brandDanger,
@@ -39,7 +83,7 @@ const dataBubble = {
       pointRadius: 1,
       pointHitRadius: 10,
       label: "Red",
-      data: [{ x: 50, y: 80, r: 35, label: "Red" }]
+      data: dangerData
     },
     {
       label: "Yellow",
@@ -62,7 +106,7 @@ const dataBubble = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: [{ x: 68, y: 45, r: 20 }]
+      data: warningData
     },
     {
       label: "Green",
@@ -87,38 +131,8 @@ const dataBubble = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: [
-        {
-          x:65,
-          y:68,
-          r:39.3724635
-        },
-        {
-          x:60,
-          y:54,
-          r:13.93179478
-        },
-        {
-          x:80,
-          y:76,
-          r:1.938336665
-        },
-        {
-          x:76,
-          y:80,
-          r:4.845841662
-        },
-        {
-          x:84,
-          y:86,
-          r:9.625053001
-        },
-        {
-          x:91,
-          y:93,
-          r:30.28651039
-        },
-      ]
+      data: inProgressData
+
       // data: [
       //   { x: 80, y: 25, r: 10 },
       //   { x: 90, y: 15, r: 20 },
@@ -144,7 +158,6 @@ const dataBubble = {
 };
 
 const dataBubbleChartOpts = {
- 
   scales: {
     xAxes: [
       {
@@ -176,8 +189,23 @@ const dataBubbleChartOpts = {
       hoverRadius: 4,
       hoverBorderWidth: 3
     }
+  },
+  tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        console.log(tooltipItem, data);
+        const datasetIndex = tooltipItem.datasetIndex;
+        const Index = tooltipItem.index;
+        const project = data.datasets[datasetIndex].data[Index];
+        return (
+          "Project : " +
+          project.project +
+          "\n Contract Value : $" +
+          project.contract
+        );
+      }
+    }
   }
-
 };
 
 class Project extends Component {

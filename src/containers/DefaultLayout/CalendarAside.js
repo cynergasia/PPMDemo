@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import DatePicker from "react-datepicker";
+import moment from "moment";
 import {
   Nav,
   NavItem,
@@ -10,6 +11,9 @@ import {
   ListGroupItem
 } from "reactstrap";
 import classNames from "classnames";
+import BigCalendar from "react-big-calendar";
+import "../../views/CommonsComponents/Calender/Calendar.css";
+import CustomCalendarToolbar from "../../views/CommonsComponents/Calender/CustomCalendarToolbar";
 
 class CalendarAside extends Component {
   state = {
@@ -35,7 +39,7 @@ class CalendarAside extends Component {
                 Calendar
               </ListGroupItem>
             </ListGroup>
-            <DatePicker
+            {/* <DatePicker
               calendarClassName="w-100"
               selected={this.state.startDate}
               onChange={this.handleChange}
@@ -45,7 +49,20 @@ class CalendarAside extends Component {
               useShortMonthInDropdown
               inline
               todayButton={"Today"}
-            />
+            /> */}
+            <div style={{ height: 300 }}>
+              <BigCalendar
+                localizer={BigCalendar.momentLocalizer(moment)}
+                events={[]}
+                popup={true}
+                components={{
+                  toolbar: CustomCalendarToolbar
+                }}
+                step={30}
+                views={["month", "week", "day"]}
+                rtl={true}
+              />
+            </div>
           </TabPane>
         </TabContent>
       </React.Fragment>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { routesURL } from "../../constant/routesURL";
+import database from "../../database";
 
 class Menu extends Component {
   render() {
@@ -65,36 +66,13 @@ class Menu extends Component {
             <div className="col-12 col-sm-12 col-lg-6 d-flex">
               <h4 className="customer-title">Project</h4>
               <ol className="breadcrumb right-breadcrumb">
-                <li className="nav-head active" aria-current="page">
-                  <Link exact="true" to={routesURL.PSR + "project1"}>
-                    Project1
-                  </Link>
-                </li>
-                <li className="nav-head active" aria-current="page">
-                  <Link exact="true" to={routesURL.PSR + "project2"}>
-                    Project2
-                  </Link>
-                </li>
-                <li className="nav-head active" aria-current="page">
-                  <Link exact="true" to={routesURL.PSR + "project3"}>
-                    Project3
-                  </Link>
-                </li>
-                <li className="nav-head active" aria-current="page">
-                  <Link exact="true" to={routesURL.PSR + "project4"}>
-                    Project4
-                  </Link>
-                </li>
-                <li className="nav-head active" aria-current="page">
-                  <Link exact="true" to={routesURL.PSR + "project5"}>
-                    Project5
-                  </Link>
-                </li>
-                <li className="nav-head active" aria-current="page">
-                  <Link exact="true" to={routesURL.PSR + "project5"}>
-                    Project6
-                  </Link>
-                </li>
+                {database.projects.map(project => (
+                  <li className="nav-head active" aria-current="page">
+                    <Link exact="true" to={routesURL.PSR + project.id}>
+                      {project.id}
+                    </Link>
+                  </li>
+                ))}
               </ol>
             </div>
           </div>

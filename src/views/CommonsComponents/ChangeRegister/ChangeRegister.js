@@ -3,19 +3,20 @@ import { Card, CardHeader, CardBody, Row, Col } from "reactstrap";
 import { Doughnut } from "react-chartjs-2";
 import { Link } from "react-router-dom";
 import ChangeRegisterGraph from "./ChangeRegisterGraph";
+import _sum from "lodash/sum";
 
-const changeRegisterData = {
-  labels: ["Logged", "Closed"],
-  datasets: [
-    {
-      data: [5, 1],
-      backgroundColor: [
-        "#edc02d", // yellow
-        "#fc6d21" // Orange
-      ]
-    }
-  ]
-};
+const labels = ["Logged", "Closed"];
+const datasets = [
+  {
+    data: [5, 1],
+    backgroundColor: [
+      "#edc02d", // yellow
+      "#fc6d21" // Orange
+    ]
+  }
+];
+const text = [`${_sum(datasets["0"].data)}`, "Changes"];
+const changeRegisterData = { labels, datasets, text };
 
 class ChangeRegister extends Component {
   render() {
@@ -44,9 +45,9 @@ class ChangeRegister extends Component {
                     data={changeRegisterData}
                     options={this.props.options}
                   />
-                  <span className="doughnutText text-center">
+                  {/* <span className="doughnutText text-center">
                     <p>{totalCount}</p> <span>Changes</span>
-                  </span>
+                  </span> */}
                 </div>
               </Col>
               <Col md="12" lg="2">
