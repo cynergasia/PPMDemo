@@ -39,12 +39,11 @@ database.projects.forEach(item => {
 //   { x: 84, y: 86, contract: 1589000, project: "810B West KLN Terminu" },
 //   { x: 91, y: 93, contract: 5000000, project: "TWGH Wong Fat Nam Col" }
 // ];
-
 // const min = _minBy(data, "contract").contract;
+
 const max = _maxBy(data, "contract").contract;
 // const average = (max + min) / 2;
 // const range = max - min;
-
 data.forEach(({ x, y, contract, project }) => {
   // console.log((contract / 2 + average / 2) / 2 * 100);
   const n = y / x;
@@ -66,19 +65,13 @@ const dataBubble = {
       pointHoverBackgroundColor: "#fff",
       borderWidth: 3,
       fill: false,
-      lineTension: 0.1,
-      //backgroundColor: 'rgba(75,192,192,0.4)',
-      // borderColor: 'rgba(75,192,192,1)',
+      lineTension: 0.1,   
       borderCapStyle: "butt",
       borderDash: [],
       borderDashOffset: 0.0,
-      borderJoinStyle: "miter",
-      //pointBorderColor: 'rgba(75,192,192,1)',
-      // pointBackgroundColor: '#fff',
+      borderJoinStyle: "miter",      
       pointBorderWidth: 1,
-      pointHoverRadius: 5,
-      // pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-      //pointHoverBorderColor: 'rgba(220,220,220,1)',
+      pointHoverRadius: 5,    
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
@@ -96,13 +89,9 @@ const dataBubble = {
       borderCapStyle: "butt",
       borderDash: [],
       borderDashOffset: 0.0,
-      borderJoinStyle: "miter",
-      // pointBorderColor: 'rgba(75,192,192,1)',
-      //pointBackgroundColor: '#fff',
+      borderJoinStyle: "miter",      
       pointBorderWidth: 1,
-      pointHoverRadius: 5,
-      //pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-      //pointHoverBorderColor: 'rgba(220,220,220,1)',
+      pointHoverRadius: 5,     
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
@@ -116,18 +105,12 @@ const dataBubble = {
       borderWidth: 3,
       borderDash: [],
       fill: true,
-      lineTension: 0.1,
-      //backgroundColor: 'rgba(75,192,192,0.4)',
-      // borderColor: 'rgba(75,192,192,1)',
+      lineTension: 0.1,      
       borderCapStyle: "butt",
       borderDashOffset: 0.0,
-      borderJoinStyle: "miter",
-      //pointBorderColor: 'rgba(75,192,192,1)',
-      // pointBackgroundColor: '#fff',
+      borderJoinStyle: "miter",     
       pointBorderWidth: 1,
-      pointHoverRadius: 5,
-      //pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-      //pointHoverBorderColor: 'rgba(220,220,220,1)',
+      pointHoverRadius: 5,      
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
@@ -143,18 +126,7 @@ const dataBubble = {
       // ]
     }
   ]
-  // scales: {
-  //   xAxes: [
-  //     {
-  //       display: [10, 20, 30, 40, 50, 60],
-  //     }],
-  //   yAxes: [
-  //     {
-  //       display: [10, 20, 30, 40, 50, 60],
-  //     }],Traffic & Sales
-  // },
-
-  //data: [{ label: 'red', x: 20, y: 10, r: 5 }, { label: 'Yellow', x: 40, y: 20, label: 'Yellow', r: 15 }, { label: 'Green', x: 60, y: 15, r: 10 }]
+ 
 };
 
 const dataBubbleChartOpts = {

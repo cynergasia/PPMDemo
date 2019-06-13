@@ -44,7 +44,7 @@ class RecoardInformation extends Component {
             <small className="text-muted">
               <i className="icon-location-pin" /> Palo Alto, CA
             </small>
-            <hr />
+            <hr/>
             <div className="avatar float-right">
               <img
                 className="img-avatar"

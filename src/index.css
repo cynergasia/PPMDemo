@@ -459,3 +459,11 @@ h6.chart-title {
     font-size: 15px !important;
   }
 }
+
+/* basic infor */
+.basicinfo{
+    color: #5c6873;
+    font-family: bold;
+    background-color: #e4e7ea;
+    border-color: #c8ced3;
+}
