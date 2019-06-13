@@ -11,7 +11,7 @@ const IssueRegisterStatus = props => {
               <div className="left">
                 <div
                   className="property-value"
-                  style={{ backgroundColor: "#f1458e" }}
+                  style={{ backgroundColor: "#edc02d" }}
                 />
                 <div className="property">Overdue</div>
               </div>

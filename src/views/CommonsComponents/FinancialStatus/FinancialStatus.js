@@ -4,6 +4,7 @@ import { Line } from "react-chartjs-2";
 import { Card, CardBody, CardHeader } from "reactstrap";
 import { CustomTooltips } from "@coreui/coreui-plugin-chartjs-custom-tooltips";
 import { getStyle, hexToRgba } from "@coreui/coreui/dist/js/coreui-utilities";
+import database from "../../../database";
 
 // eslint-disable-next-line no-unused-vars
 const brandPrimary = getStyle("--primary");
@@ -30,7 +31,7 @@ const mainChart = {
       borderColor: "black",
       pointHoverBackgroundColor: "#fff",
       borderWidth: 3,
-      data: [35, 35, 33, 34, 32, 30, 35, 30, 28]
+      data: []
     },
     {
       label: "Invoiced Amounts",
@@ -38,7 +39,7 @@ const mainChart = {
       borderColor: brandSuccess,
       pointHoverBackgroundColor: "#fff",
       borderWidth: 3,
-      data: [, 5, 10, 24, 25, 23, 24, 32, 23, 22]
+      data: []
     },
     {
       label: "Paid",
@@ -47,7 +48,7 @@ const mainChart = {
       pointHoverBackgroundColor: "#fff",
       borderWidth: 3,
       // borderDash: [8, 5],
-      data: [10, 15, 25, 25, 26, 28, 30, 28, 22]
+      data: []
     }
   ]
 };
@@ -102,6 +103,25 @@ const mainChartOpts = {
 };
 
 class FinancialStatus extends Component {
+  state = {
+    data: {}
+  };
+  componentDidMount() {
+    const { financialStatus } = this.props;
+    mainChart.datasets[0].data = financialStatus
+      ? financialStatus.contract
+      : database.financialStatus.contract;
+
+    mainChart.datasets[1].data = financialStatus
+      ? financialStatus.invoiced
+      : database.financialStatus.invoiced;
+
+    mainChart.datasets[2].data = financialStatus
+      ? financialStatus.paid
+      : database.financialStatus.paid;
+
+    this.setState({ data: mainChart });
+  }
   render() {
     return (
       <>
@@ -116,7 +136,11 @@ class FinancialStatus extends Component {
                 <p>In $ Millions</p>
               </div>
               <div className="chart-wrapper financial">
-                <Line data={mainChart} options={mainChartOpts} height={320} />
+                <Line
+                  data={this.state.data}
+                  options={mainChartOpts}
+                  height={320}
+                />
               </div>
             </div>
           </CardBody>

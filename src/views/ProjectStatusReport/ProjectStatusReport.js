@@ -13,6 +13,8 @@ import Deliverables from "../CommonsComponents/Deliverables/Deliverables";
 import FinancialAnalysis from "../CommonsComponents/EffortAnalysis/FinancialAnalysis";
 import FinancialStatus from "../CommonsComponents/FinancialStatus/FinancialStatus";
 import OverallStatus from "../CommonsComponents/PSROverallStatus/OverallStatus";
+import database from "../../database";
+import { routesURL } from "../../constant/routesURL";
 
 const options = {
   tooltips: {
@@ -34,6 +36,17 @@ class ProjectStatusReport extends Component {
   );
   render() {
     const { id } = this.props.match.params;
+    const project = database.projects.filter(project => `${project.id}` === id);
+    if (project.length === 0) {
+      window.location.hash = routesURL.DASHBOARD;
+    }
+    const {
+      tiles,
+      financialStatus,
+      financial_per_complete,
+      execution_per_complete
+    } = project[0];
+
     return (
       <div className="animated fadeIn">
         <Row>
@@ -44,14 +57,17 @@ class ProjectStatusReport extends Component {
         {/* MyProject and Financial status  */}
         <Row>
           <Col xs="12" sm="12" lg="6">
-            <OverallStatus />
+            <OverallStatus
+              financial_per_complete={financial_per_complete}
+              execution_per_complete={execution_per_complete}
+            />
           </Col>
           <Col xs="12" sm="12" lg="6">
             <Notification id={id} />
           </Col>
         </Row>
         <Row>
-          <Summary />
+          <Summary id={id} tiles={tiles} />
         </Row>
         <Row>
           <Col xs="12" sm="12" lg="6">
@@ -84,7 +100,7 @@ class ProjectStatusReport extends Component {
             <FinancialAnalysis />
           </Col>
           <Col xs="12" sm="12" lg="6">
-            <FinancialStatus />
+            <FinancialStatus financialStatus={financialStatus} />
           </Col>
         </Row>
       </div>
