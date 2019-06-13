@@ -11,7 +11,44 @@
           "due_date": "16 Jun 19",
           "title": "Change Order C60453005-3 Approval"
         }
-      ]
+      ],
+      "tiles": {
+        "per_complete": "68%",
+        "active_workpackages": "2",
+        "open_activities": "4",
+        "open_issues": "3",
+        "pending_risks": "1",
+        "pending_changes": "1"
+      },
+      "financialStatus": {
+        "contract": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4
+        ],
+        "invoiced": [
+          0.75,
+          1.2,
+          1.8,
+          2.4,
+          2.8,
+          3.3,
+          0
+        ],
+        "paid": [
+          0.75,
+          1,
+          1.6,
+          2.2,
+          2.1,
+          0,
+          0
+        ]
+      }
     }, {
       "id": 60453007,
       "name": "Tai Kok Tsui, Kowloon",
@@ -23,7 +60,44 @@
           "due_date": "12 Jun 19",
           "title": "Invoice Approval - INV1018"
         }
-      ]
+      ],
+      "tiles": {
+        "per_complete": "70%",
+        "active_workpackages": "6",
+        "open_activities": "8",
+        "open_issues": "2",
+        "pending_risks": "3",
+        "pending_changes": "1"
+      },
+      "financialStatus": {
+        "contract": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4
+        ],
+        "invoiced": [
+          0.75,
+          1.2,
+          1.8,
+          2.4,
+          2.8,
+          3.3,
+          0
+        ],
+        "paid": [
+          0.75,
+          1,
+          1.6,
+          2.2,
+          2.1,
+          0,
+          0
+        ]
+      }
     }, {
       "id": 60453009,
       "name": "HKHA  for Supervising",
@@ -35,7 +109,44 @@
           "due_date": "12 Jun 19",
           "title": "Invoice Approval - INV1009"
         }
-      ]
+      ],
+      "tiles": {
+        "per_complete": "80%",
+        "active_workpackages": "8",
+        "open_activities": "10",
+        "open_issues": "5",
+        "pending_risks": "7",
+        "pending_changes": "3"
+      },
+      "financialStatus": {
+        "contract": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4
+        ],
+        "invoiced": [
+          0.75,
+          1.2,
+          1.8,
+          2.4,
+          2.8,
+          3.3,
+          0
+        ],
+        "paid": [
+          0.75,
+          1,
+          1.6,
+          2.2,
+          2.1,
+          0,
+          0
+        ]
+      }
     }, {
       "id": 60453010,
       "name": "Tsing Yi Indoor Recre",
@@ -47,7 +158,44 @@
           "due_date": "09 Jun 19",
           "title": "Deliverable D10256 Due"
         }
-      ]
+      ],
+      "tiles": {
+        "per_complete": "50%",
+        "active_workpackages": "6",
+        "open_activities": "4",
+        "open_issues": "3",
+        "pending_risks": "2",
+        "pending_changes": "1"
+      },
+      "financialStatus": {
+        "contract": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4
+        ],
+        "invoiced": [
+          0.75,
+          1.2,
+          1.8,
+          2.4,
+          2.8,
+          3.3,
+          0
+        ],
+        "paid": [
+          0.75,
+          1,
+          1.6,
+          2.2,
+          2.1,
+          0,
+          0
+        ]
+      }
     }, {
       "id": 60453012,
       "name": "810B West KLN Terminu",
@@ -59,7 +207,44 @@
           "due_date": "09 Jun 19",
           "title": "Project EAC change Approval"
         }
-      ]
+      ],
+      "tiles": {
+        "per_complete": "70%",
+        "active_workpackages": "5",
+        "open_activities": "7",
+        "open_issues": "3",
+        "pending_risks": "2",
+        "pending_changes": "1"
+      },
+      "financialStatus": {
+        "contract": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4
+        ],
+        "invoiced": [
+          0.75,
+          1.2,
+          1.8,
+          2.4,
+          2.8,
+          3.3,
+          0
+        ],
+        "paid": [
+          0.75,
+          1,
+          1.6,
+          2.2,
+          2.1,
+          0,
+          0
+        ]
+      }
     }, {
       "id": 60453013,
       "name": "TWGH Wong Fat Nam Col",
@@ -71,7 +256,231 @@
           "due_date": "07 Jun 19",
           "title": "FYI: Change Order C60453013-2 Approved"
         }
-      ]
+      ],
+      "tiles": {
+        "per_complete": "70%",
+        "active_workpackages": "1",
+        "open_activities": "1",
+        "open_issues": "0",
+        "pending_risks": "3",
+        "pending_changes": "1"
+      },
+      "financialStatus": {
+        "contract": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4
+        ],
+        "invoiced": [
+          0.75,
+          1.2,
+          1.8,
+          2.4,
+          2.8,
+          3.3,
+          0
+        ],
+        "paid": [
+          0.75,
+          1,
+          1.6,
+          2.2,
+          2.1,
+          0,
+          0
+        ]
+      }
     }
-  ]
+  ],
+
+  "tiles": {
+    "per_complete": "76%",
+    "active_workpackages": "9",
+    "open_activities": "11",
+    "open_issues": "6",
+    "pending_risks": "8",
+    "pending_changes": "5"
+  },
+  "financialStatus": {
+    "contract": [
+      35,
+      35,
+      33,
+      34,
+      32,
+      30,
+      35
+    ],
+    "invoiced": [
+      "NaN",
+      5,
+      10,
+      24,
+      25,
+      23,
+      24
+    ],
+    "paid": [
+      10,
+      15,
+      25,
+      25,
+      26,
+      28,
+      30
+    ]
+  },
+  "customers": [
+    "AECOM", "HDR", "Oxy"
+  ],
+  "activity": [
+    {
+      "activityNumber": "A1.03.01",
+      "name": "Prelim Model",
+      "work_package": "MODELLING(1.03)",
+      "owner": "SP",
+      "due_date": "9/Jun/2019",
+      "planned": 240,
+      "actual": 200,
+      "remaning": 40,
+      "status": "In Progress",
+      "per_complete": "83%",
+      "comments": ""
+    }, {
+      "activityNumber": "A1.03.02",
+      "name": "Tender Model",
+      "work_package": "MODELLING(1.03)",
+      "owner": "SP",
+      "due_date": "11/Jun/2019",
+      "planned": 8,
+      "actual": 0,
+      "remaning": 8,
+      "status": "Not Started",
+      "per_complete": "0%",
+      "comments": ""
+    }, {
+      "activityNumber": "A1.03.03",
+      "name": "Final Model",
+      "work_package": "MODELLING(1.03)",
+      "owner": "AM",
+      "due_date": "12/Jul/2019",
+      "planned": 240,
+      "actual": 0,
+      "remaning": 240,
+      "status": "Not Started",
+      "per_complete": "0%",
+      "comments": ""
+    }, {
+      "activityNumber": "A1.03.04",
+      "name": "Model Maintenance",
+      "work_package": "MODELLING(1.03)",
+      "owner": "AM",
+      "due_date": "12/Aug/2019",
+      "planned": 240,
+      "actual": 0,
+      "remaning": 240,
+      "status": "Not Started",
+      "per_complete": "0%",
+      "comments": ""
+    }, {
+      "activityNumber": "A1.02.01",
+      "name": "Prelim Design",
+      "work_package": "DESIGN(1.02)",
+      "owner": "SP",
+      "due_date": "2/Mar/2019",
+      "planned": 300,
+      "actual": 300,
+      "remaning": 0,
+      "status": "Completed",
+      "per_complete": "100%",
+      "comments": ""
+    }, {
+      "activityNumber": "A1.02.02",
+      "name": "Tender Design",
+      "work_package": "DESIGN(1.02)",
+      "owner": "SP",
+      "due_date": "4/Mar/2019",
+      "planned": 8,
+      "actual": 8,
+      "remaning": 0,
+      "status": "Completed",
+      "per_complete": "100%",
+      "comments": ""
+    }
+  ],
+  "recoard_information": {
+    "schedule_info": [
+      {
+        "title": "Estimate Start Date",
+        "value": "1 Jan 19"
+      }, {
+        "title": "Estimate End Date",
+        "value": "16 Fab 20"
+      }, {
+        "title": "Transaction Start Date",
+        "value": "2 Jan 19"
+      }, {
+        "title": "Transaction End Date",
+        "value": "16 Fab 20"
+      }, {
+        "title": "Project Status",
+        "value": "Approved"
+      }, {
+        "title": "Planned Efforts",
+        "value": "2156 Hours"
+      }, {
+        "title": "Actual Efforts",
+        "value": "1048 Hours"
+      }, {
+        "title": "% Spent",
+        "value": "49%"
+      }, {
+        "title": "% Complete",
+        "value": "55%"
+      }
+    ],
+    "workflow_info": [
+      {
+        "title": "Status",
+        "value": "In Approval"
+      }, {
+        "title": "Last Approved By",
+        "value": "Neeraj Garg"
+      }, {
+        "title": "Next Approver",
+        "value": "Arindam"
+      }, {
+        "title": "Due Date",
+        "value": "12 Jun 19"
+      }, {
+        "title": "Last Approval Date",
+        "value": "10 May 19"
+      }
+    ],
+    "audit_info": [
+      {
+        "title": "Created By",
+        "value": "Suresh Padmanabhan"
+      }, {
+        "title": "Creation Date",
+        "value": "15 Dec 18"
+      }, {
+        "title": "Last Updated By",
+        "value": "Suresh Padmanabhan"
+      }, {
+        "title": "Last Updated Date",
+        "value": "10 Jun 19"
+      }, {
+        "title": "Latest Activity date",
+        "value": "8 Jun 19"
+      }, {
+        "title": "Locked By",
+        "value": "Suresh Padmanabhan"
+      }
+    ]
+  }
 }

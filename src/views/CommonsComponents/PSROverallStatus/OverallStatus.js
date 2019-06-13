@@ -7,8 +7,7 @@ import {
   Col,
   Input,
   Label,
-  Button,
-  Progress
+  Button
 } from "reactstrap";
 import DatePicker from "react-datepicker";
 
@@ -23,6 +22,9 @@ class OverallStatus extends Component {
   };
 
   render() {
+    const { financial_per_complete, execution_per_complete } = this.props;
+    const n = execution_per_complete / financial_per_complete;
+    const data = n >= 2 ? "danger" : n >= 1 && n < 2 ? "warning" : "success";
     return (
       <React.Fragment>
         <Card>
@@ -75,6 +77,10 @@ class OverallStatus extends Component {
               </Col>
               <Col sm="12" md="4" lg="6">
                 <Label>40%</Label>
+                <button
+                  className={"btn rounded-circle btn-lg btn-" + data}
+                  style={{ padding: "1rem 1.1rem" }}
+                />
                 {/* <Progress animated value={100 * 8}  /> */}
               </Col>
             </Row>
@@ -92,6 +98,10 @@ class OverallStatus extends Component {
                     Select
                   </option>
                   <option>In-Trouble</option>
+                  <option>At Risk</option>
+                  <option>Critical</option>
+                  <option>Not Started</option>
+                  <option>On Track</option>
                 </Input>
               </Col>
             </Row>

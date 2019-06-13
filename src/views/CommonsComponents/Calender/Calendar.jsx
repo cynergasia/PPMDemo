@@ -35,7 +35,7 @@ class Calendar extends Component {
               <Col xs="12" sm="12" lg="12">
                 <div
                   style={{
-                    height: 450
+                    height: 416
                   }}
                 >
                   <BigCalendar

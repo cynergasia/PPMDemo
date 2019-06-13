@@ -10,22 +10,145 @@ import {
 import { Link } from "react-router-dom";
 import ExportExcel from "../../helper/ExportExcel";
 import { CSVLink } from "react-csv";
+import database from "../../database";
+
+// let data = {
+//   columns: [
+//     {
+//       label: "Description",
+//       field: "description",
+//       sort: "asc"
+//     },
+//     {
+//       label: "Assigned To",
+//       field: "assigned_to",
+//       sort: "asc"
+//     },
+//     {
+//       label: "Start Date",
+//       field: "start_date",
+//       sort: "asc"
+//     },
+//     {
+//       label: "Due Date",
+//       field: "due_date",
+//       sort: "asc"
+//     },
+//     {
+//       label: "Status",
+//       field: "status",
+//       sort: "asc"
+//     },
+//     {
+//       label: "% Complete",
+//       field: "perc_complete",
+//       sort: "asc"
+//     },
+//     {
+//       label: "Planned Hrs",
+//       field: "planned_hrs",
+//       sort: "asc"
+//     },
+//     {
+//       label: "Actual Hrs",
+//       field: "actual_hrs",
+//       sort: "asc"
+//     }
+//   ],
+//   rows: [
+//     {
+//       description: "asd",
+//       assigned_to: "abc",
+//       start_date: "02-05-2019",
+//       due_date: "31-02-2019",
+//       status: "Pending",
+//       perc_complete: "80",
+//       planned_hrs: "50",
+//       actual_hrs: "60"
+//     },
+//     {
+//       description: "bbb",
+//       assigned_to: "abc",
+//       start_date: "02-08-2016",
+//       due_date: "31-07-206",
+//       status: "Complete",
+//       perc_complete: "100",
+//       planned_hrs: "200",
+//       actual_hrs: "250"
+//     },
+//     {
+//       description: "ccc",
+//       assigned_to: "abc",
+//       start_date: "02-08-2016",
+//       due_date: "31-07-206",
+//       status: "Complete",
+//       perc_complete: "100",
+//       planned_hrs: "200",
+//       actual_hrs: "250"
+//     },
+//     {
+//       description: "ddd",
+//       assigned_to: "abc",
+//       start_date: "02-08-2016",
+//       due_date: "31-03-206",
+//       status: "Complete",
+//       perc_complete: "100",
+//       planned_hrs: "200",
+//       actual_hrs: "250"
+//     },
+//     {
+//       description: "eee",
+//       assigned_to: "abc",
+//       start_date: "02-08-2016",
+//       due_date: "31-07-206",
+//       status: "Complete",
+//       perc_complete: "100",
+//       planned_hrs: "200",
+//       actual_hrs: "250"
+//     },
+//     {
+//       description: "fff",
+//       assigned_to: "abc",
+//       start_date: "02-08-2016",
+//       due_date: "31-05-206",
+//       status: "Complete",
+//       perc_complete: "100",
+//       planned_hrs: "200",
+//       actual_hrs: "250"
+//     },
+//     {
+//       description: "ggg",
+//       assigned_to: "abc",
+//       start_date: "02-08-2016",
+//       due_date: "31-08-206",
+//       status: "Complete",
+//       perc_complete: "100",
+//       planned_hrs: "200",
+//       actual_hrs: "250"
+//     }
+//   ]
+// };
 
 let data = {
   columns: [
     {
-      label: "Description",
-      field: "description",
+      label: "Activity Number",
+      field: "activityNumber",
       sort: "asc"
     },
     {
-      label: "Assigned To",
-      field: "assigned_to",
+      label: "Name",
+      field: "name",
       sort: "asc"
     },
     {
-      label: "Start Date",
-      field: "start_date",
+      label: "Work Package",
+      field: "work_package",
+      sort: "asc"
+    },
+    {
+      label: "Owner",
+      field: "owner",
       sort: "asc"
     },
     {
@@ -34,103 +157,44 @@ let data = {
       sort: "asc"
     },
     {
+      label: "Planned",
+      field: "planned",
+      sort: "asc"
+    },
+    {
+      label: "Actual",
+      field: "actual",
+      sort: "asc"
+    },
+    {
+      label: "Remaning",
+      field: "remaning",
+      sort: "asc"
+    },
+    {
       label: "Status",
       field: "status",
       sort: "asc"
     },
+
     {
       label: "% Complete",
-      field: "perc_complete",
+      field: "per_complete",
       sort: "asc"
     },
     {
-      label: "Planned Hrs",
-      field: "planned_hrs",
-      sort: "asc"
-    },
-    {
-      label: "Actual Hrs",
-      field: "actual_hrs",
+      label: "Comments",
+      field: "comments",
       sort: "asc"
     }
   ],
-  rows: [
-    {
-      description: "asd",
-      assigned_to: "abc",
-      start_date: "02-05-2019",
-      due_date: "31-02-2019",
-      status: "Pending",
-      perc_complete: "80",
-      planned_hrs: "50",
-      actual_hrs: "60"
-    },
-    {
-      description: "bbb",
-      assigned_to: "abc",
-      start_date: "02-08-2016",
-      due_date: "31-07-206",
-      status: "Complete",
-      perc_complete: "100",
-      planned_hrs: "200",
-      actual_hrs: "250"
-    },
-    {
-      description: "ccc",
-      assigned_to: "abc",
-      start_date: "02-08-2016",
-      due_date: "31-07-206",
-      status: "Complete",
-      perc_complete: "100",
-      planned_hrs: "200",
-      actual_hrs: "250"
-    },
-    {
-      description: "ddd",
-      assigned_to: "abc",
-      start_date: "02-08-2016",
-      due_date: "31-03-206",
-      status: "Complete",
-      perc_complete: "100",
-      planned_hrs: "200",
-      actual_hrs: "250"
-    },
-    {
-      description: "eee",
-      assigned_to: "abc",
-      start_date: "02-08-2016",
-      due_date: "31-07-206",
-      status: "Complete",
-      perc_complete: "100",
-      planned_hrs: "200",
-      actual_hrs: "250"
-    },
-    {
-      description: "fff",
-      assigned_to: "abc",
-      start_date: "02-08-2016",
-      due_date: "31-05-206",
-      status: "Complete",
-      perc_complete: "100",
-      planned_hrs: "200",
-      actual_hrs: "250"
-    },
-    {
-      description: "ggg",
-      assigned_to: "abc",
-      start_date: "02-08-2016",
-      due_date: "31-08-206",
-      status: "Complete",
-      perc_complete: "100",
-      planned_hrs: "200",
-      actual_hrs: "250"
-    }
-  ]
+  rows: []
 };
 
 class Activities extends Component {
   state = {
-    dropdownOpen: false
+    dropdownOpen: false,
+    data: {}
   };
   toggle = () => {
     this.setState({
@@ -140,6 +204,11 @@ class Activities extends Component {
   handleExcel = () => {
     return;
   };
+
+  componentDidMount() {
+    data.rows = database.activity;
+    this.setState({ data });
+  }
   render() {
     return (
       <React.Fragment>
@@ -186,7 +255,7 @@ class Activities extends Component {
               striped
               bordered
               responsive
-              data={data}
+              data={this.state.data}
               entries={5}
               entriesOptions={[5, 10, 20, 50, 100]}
               isButton={true}
