@@ -3,7 +3,7 @@ import { Bubble } from "react-chartjs-2";
 import { Card, CardBody, CardHeader } from "reactstrap";
 import { getStyle } from "@coreui/coreui/dist/js/coreui-utilities";
 import _maxBy from "lodash/maxBy";
-import _minBy from "lodash/minBy";
+
 import database from "../../../database";
 
 // eslint-disable-next-line no-unused-vars
@@ -65,13 +65,13 @@ const dataBubble = {
       pointHoverBackgroundColor: "#fff",
       borderWidth: 3,
       fill: false,
-      lineTension: 0.1,   
+      lineTension: 0.1,
       borderCapStyle: "butt",
       borderDash: [],
       borderDashOffset: 0.0,
-      borderJoinStyle: "miter",      
+      borderJoinStyle: "miter",
       pointBorderWidth: 1,
-      pointHoverRadius: 5,    
+      pointHoverRadius: 5,
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
@@ -89,9 +89,9 @@ const dataBubble = {
       borderCapStyle: "butt",
       borderDash: [],
       borderDashOffset: 0.0,
-      borderJoinStyle: "miter",      
+      borderJoinStyle: "miter",
       pointBorderWidth: 1,
-      pointHoverRadius: 5,     
+      pointHoverRadius: 5,
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
@@ -105,12 +105,12 @@ const dataBubble = {
       borderWidth: 3,
       borderDash: [],
       fill: true,
-      lineTension: 0.1,      
+      lineTension: 0.1,
       borderCapStyle: "butt",
       borderDashOffset: 0.0,
-      borderJoinStyle: "miter",     
+      borderJoinStyle: "miter",
       pointBorderWidth: 1,
-      pointHoverRadius: 5,      
+      pointHoverRadius: 5,
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
@@ -126,7 +126,6 @@ const dataBubble = {
       // ]
     }
   ]
- 
 };
 
 const dataBubbleChartOpts = {
@@ -165,7 +164,6 @@ const dataBubbleChartOpts = {
   tooltips: {
     callbacks: {
       label: function(tooltipItem, data) {
-        console.log(tooltipItem, data);
         const datasetIndex = tooltipItem.datasetIndex;
         const Index = tooltipItem.index;
         const project = data.datasets[datasetIndex].data[Index];

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, CardHeader, CardBody } from "reactstrap";
+import { CardHeader, CardBody } from "reactstrap";
 import ReactDataTableNew from "../../../components/ReactDataTableNew";
 import database from "../../../database";
 
@@ -37,7 +37,6 @@ class title extends Component {
   };
   updateData() {
     if (!["dashboard"].includes(window.location.hash.split("/")["1"])) {
-      console.log(this.props);
       data.rows = [];
       const projectdata = database.projects.filter(
         ({ id }) => `${id}` === this.props.id

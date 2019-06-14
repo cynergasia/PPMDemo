@@ -7,7 +7,6 @@ import {
   DropdownToggle,
   UncontrolledDropdown
 } from "reactstrap";
-import { Link } from "react-router-dom";
 import ExportExcel from "../../helper/ExportExcel";
 import { CSVLink } from "react-csv";
 import database from "../../database";

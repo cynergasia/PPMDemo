@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 class ProjectWikiMenu extends Component {
   scrollTo = ({ current: ref }) => {
-    console.log(ref)
     let scrollRef = ReactDOM.findDOMNode(ref);
     let scrollOptions = {
       left: 0,
@@ -14,8 +13,6 @@ class ProjectWikiMenu extends Component {
     };
     window.scrollTo(scrollOptions);
   };
-
- 
 
   render() {
     const { refs } = this.props;
@@ -49,7 +46,6 @@ class ProjectWikiMenu extends Component {
                     >
                       <i className="fa fa-sitemap" /> WBS
                     </Link>
-                   
                   </li>
                   <li className="nav-head active " aria-current="page">
                     <Link
