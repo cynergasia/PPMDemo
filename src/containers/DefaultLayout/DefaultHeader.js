@@ -226,7 +226,7 @@ class DefaultHeader extends Component {
                 <i className="fa fa-bell" aria-hidden="true" />
               )}
               <Badge pill color="danger">
-                5
+                6
               </Badge>
             </NavLink>
           </NavItem>

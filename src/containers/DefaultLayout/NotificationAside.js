@@ -11,6 +11,9 @@ import {
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { AppSwitch } from "@coreui/react";
+import {routesURL} from '../../constant/routesURL'
+import database from '../../database.json';
+import {Link} from 'react-router-dom'
 
 const propTypes = {
   children: PropTypes.node
@@ -38,8 +41,18 @@ class NotificationAside extends Component {
 
   render() {
     // eslint-disable-next-line
-    const { children, ...attributes } = this.props;
-
+    // const { children, ...attributes } = this.props;
+    // database.projects.forEach(project => {
+    //   project.notification.forEach(item => {
+    //     data.rows.push({
+    //       due_date: item.due_date,
+    //       title: item.title,
+    //       project: project.name,
+    //       clickEvent: f => this.handleClick(f)
+    //     });
+    //   });
+    // });
+    
     return (
       <React.Fragment>
         <Nav tabs>
@@ -60,192 +73,29 @@ class NotificationAside extends Component {
               <ListGroupItem className="list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">
                 Notification
               </ListGroupItem>
-              <ListGroupItem
-                action
-                tag="a"
-                href="#"
-                className="list-group-item-accent-warning list-group-item-divider"
-              >
-                <div className="avatar float-right">
-                  <img
-                    className="img-avatar"
-                    src="assets/img/avatars/7.jpg"
-                    alt="admin@bootstrapmaster.com"
-                  />
-                </div>
-                <div>
-                  Notification<strong>Lucas</strong>{" "}
-                </div>
-                <small className="text-muted mr-3">
-                  <i className="icon-calendar" />&nbsp; 1 - 3pm
-                </small>
-                <small className="text-muted">
-                  <i className="icon-location-pin" /> Palo Alto, CA
-                </small>
-              </ListGroupItem>
-              <ListGroupItem
-                action
-                tag="a"
-                href="#"
-                className="list-group-item-accent-info list-group-item-divider"
-              >
-                <div className="avatar float-right">
-                  <img
-                    className="img-avatar"
-                    src="assets/img/avatars/4.jpg"
-                    alt="admin@bootstrapmaster.com"
-                  />
-                </div>
-                <div>
-                  Skype with <strong>Megan</strong>
-                </div>
-                <small className="text-muted mr-3">
-                  <i className="icon-calendar" />&nbsp; 4 - 5pm
-                </small>
-                <small className="text-muted">
-                  <i className="icon-social-skype" /> On-line
-                </small>
-              </ListGroupItem>
-              <ListGroupItem className="list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">
-                Tomorrow
-              </ListGroupItem>
-              <ListGroupItem
-                action
-                tag="a"
-                href="#"
-                className="list-group-item-accent-danger list-group-item-divider"
-              >
-                <div>
-                  New UI Project - <strong>deadline</strong>
-                </div>
-                <small className="text-muted mr-3">
-                  <i className="icon-calendar" />&nbsp; 10 - 11pm
-                </small>
-                <small className="text-muted">
-                  <i className="icon-home" />&nbsp; creativeLabs HQ
-                </small>
-                <div className="avatars-stack mt-2">
-                  <div className="avatar avatar-xs">
-                    <img
-                      src={"assets/img/avatars/2.jpg"}
-                      className="img-avatar"
-                      alt="admin@bootstrapmaster.com"
-                    />
-                  </div>
-                  <div className="avatar avatar-xs">
-                    <img
-                      src={"assets/img/avatars/3.jpg"}
-                      className="img-avatar"
-                      alt="admin@bootstrapmaster.com"
-                    />
-                  </div>
-                  <div className="avatar avatar-xs">
-                    <img
-                      src={"assets/img/avatars/4.jpg"}
-                      className="img-avatar"
-                      alt="admin@bootstrapmaster.com"
-                    />
-                  </div>
-                  <div className="avatar avatar-xs">
-                    <img
-                      src={"assets/img/avatars/5.jpg"}
-                      className="img-avatar"
-                      alt="admin@bootstrapmaster.com"
-                    />
-                  </div>
-                  <div className="avatar avatar-xs">
-                    <img
-                      src={"assets/img/avatars/6.jpg"}
-                      className="img-avatar"
-                      alt="admin@bootstrapmaster.com"
-                    />
-                  </div>
-                </div>
-              </ListGroupItem>
-              <ListGroupItem
-                action
-                tag="a"
-                href="#"
-                className="list-group-item-accent-success list-group-item-divider"
-              >
-                <div>
-                  <strong>#10 Startups.Garden</strong> Meetup
-                </div>
-                <small className="text-muted mr-3">
-                  <i className="icon-calendar" />&nbsp; 1 - 3pm
-                </small>
-                <small className="text-muted">
-                  <i className="icon-location-pin" />&nbsp; Palo Alto, CA
-                </small>
-              </ListGroupItem>
-              <ListGroupItem
-                action
-                tag="a"
-                href="#"
-                className="list-group-item-accent-primary list-group-item-divider"
-              >
-                <div>
-                  <strong>Team meeting</strong>
-                </div>
-                <small className="text-muted mr-3">
-                  <i className="icon-calendar" />&nbsp; 4 - 6pm
-                </small>
-                <small className="text-muted">
-                  <i className="icon-home" />&nbsp; creativeLabs HQ
-                </small>
-                <div className="avatars-stack mt-2">
-                  <div className="avatar avatar-xs">
-                    <img
-                      src={"assets/img/avatars/2.jpg"}
-                      className="img-avatar"
-                      alt="admin@bootstrapmaster.com"
-                    />
-                  </div>
-                  <div className="avatar avatar-xs">
-                    <img
-                      src={"assets/img/avatars/3.jpg"}
-                      className="img-avatar"
-                      alt="admin@bootstrapmaster.com"
-                    />
-                  </div>
-                  <div className="avatar avatar-xs">
-                    <img
-                      src={"assets/img/avatars/4.jpg"}
-                      className="img-avatar"
-                      alt="admin@bootstrapmaster.com"
-                    />
-                  </div>
-                  <div className="avatar avatar-xs">
-                    <img
-                      src={"assets/img/avatars/5.jpg"}
-                      className="img-avatar"
-                      alt="admin@bootstrapmaster.com"
-                    />
-                  </div>
-                  <div className="avatar avatar-xs">
-                    <img
-                      src={"assets/img/avatars/6.jpg"}
-                      className="img-avatar"
-                      alt="admin@bootstrapmaster.com"
-                    />
-                  </div>
-                  <div className="avatar avatar-xs">
-                    <img
-                      src={"assets/img/avatars/7.jpg"}
-                      className="img-avatar"
-                      alt="admin@bootstrapmaster.com"
-                    />
-                  </div>
-                  <div className="avatar avatar-xs">
-                    <img
-                      src={"assets/img/avatars/8.jpg"}
-                      className="img-avatar"
-                      alt="admin@bootstrapmaster.com"
-                    />
-                  </div>
-                </div>
-              </ListGroupItem>
-            </ListGroup>
+             { database.projects.map(project => (
+               
+               project.notification.map(item => (
+                    
+                    <ListGroupItem
+                        action
+                        // tag={Link}
+                        // to={routesURL.PAGE_NOT_FOUND}
+                        className="list-group-item-accent-warning list-group-item-divider"
+                        >                      
+                        <div>                        
+                          {item.title}
+                        </div>
+                        <small className="text-muted mr-3">
+                          <i className="icon-calendar" />&nbsp;{item.due_date}
+                        </small>
+                     
+                      </ListGroupItem>
+                   ))
+                ))
+               }
+           
+              </ListGroup>            
           </TabPane>
         </TabContent>
       </React.Fragment>
