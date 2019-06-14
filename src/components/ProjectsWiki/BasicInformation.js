@@ -3,15 +3,30 @@ import {
   Card,
   CardHeader,
   CardBody,
+  Collapse,
   Input,
   FormGroup,
   Button,
   Table,
   ListGroup,
-  ListGroupItem
+  ListGroupItem,
+  ListGroupItemHeading,
+  ListGroupItemText
+  
 } from "reactstrap";
 import Modal from "../../helper/Modal";
 import wikidata from "./projectwikidata";
+
+const intialState = {
+  isProjectInfo: false,
+  isProjectDetail: false,
+  isTeamMember: false,
+  isClassification: false,
+  isplusclass1: false,
+  isplusclass2: false,
+  isplusclass3: false,
+  isplusclass4: false
+};
 
 let data = [];
 
@@ -37,6 +52,7 @@ wikidata.basicInfo.forEach(item => {
 
 
 class BasicInformation extends Component {
+  state = { ...intialState };
   state = {
     modal: false,
     basicProjectInfo:
@@ -45,6 +61,35 @@ class BasicInformation extends Component {
       "This project has 6 internal stakeholders and 2 external stakeholders."
   };
   toggle = () => this.setState(prevState => ({ modal: !prevState.modal }));
+
+  toggleInfo = () => {
+    this.setState({
+      ...intialState,
+      isProjectInfo: !this.state.isProjectInfo,
+      isplusclass1: !this.state.isplusclass1
+    });
+  };
+  toggleDetail = () => {
+    this.setState({
+      ...intialState,
+      isProjectDetail: !this.state.isProjectDetail,
+      isplusclass2: !this.state.isplusclass2
+    });
+  };
+  toggleTeamMember = () => {
+    this.setState({
+      ...intialState,
+      isTeamMember: !this.state.isTeamMember,
+      isplusclass3: !this.state.isplusclass3
+    });
+  };
+  toggleClassification = () => {
+    this.setState({
+      ...intialState,
+      isClassification: !this.state.isClassification,
+      isplusclass4: !this.state.isplusclass4
+    });
+  };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
@@ -100,10 +145,25 @@ class BasicInformation extends Component {
             </div>
           </CardHeader>
           <CardBody>
-            {/* <pre className="m-0">{basicProjectInfo}</pre> */}
-            <div className="project-wiki-basicinfo" >  
+            {/* <pre className="m-0">{basicProjectInfo}</pre> className="project-wiki-basicinfo"  */}
+            <div >  
             <ListGroup>
-              <ListGroupItem>         
+              <ListGroupItem>  
+              <ListGroupItemHeading
+                  className="cursor-pointer"
+                  onClick={() => this.toggleInfo()}
+                >
+                  <i
+                    className={
+                      this.state.isplusclass1
+                        ? "fa-plus-minus fa fa-plus-square-o mr-2"
+                        : "fa-plus-minus fa fa-minus-square-o mr-2"
+                    }
+                  />
+                  <span className="text-primary">Project Information</span>
+                </ListGroupItemHeading>
+                <ListGroupItemText>   
+                <Collapse isOpen={this.state.isplusclass1}>    
                <Table
                responsive 
                bordered                 
@@ -167,11 +227,28 @@ class BasicInformation extends Component {
            
                 </tbody>
                 </Table>
+                </Collapse>
+                </ListGroupItemText>
                 </ListGroupItem> 
                 </ListGroup>
-
+                {/* Project detail */}
                 <ListGroup>   
                 <ListGroupItem> 
+                <ListGroupItemHeading
+                  className="cursor-pointer"
+                  onClick={() => this.toggleDetail()}
+                >
+                  <i
+                    className={
+                      this.state.isplusclass2
+                        ? "fa-plus-minus fa fa-plus-square-o mr-2"
+                        : "fa-plus-minus fa fa-minus-square-o mr-2"
+                    }
+                  />
+                  <span className="text-primary">Project Details</span>
+                </ListGroupItemHeading>
+                <ListGroupItemText>   
+                <Collapse isOpen={this.state.isplusclass2}> 
                 <Table
                   hover
                   responsive
@@ -193,11 +270,29 @@ class BasicInformation extends Component {
                   </tbody>
 
                   </Table>
+                  </Collapse>
+                </ListGroupItemText>
                 </ListGroupItem>   
                 </ListGroup>
+
+                {/* Team Members */}
                 <ListGroup>   
                 <ListGroupItem> 
-
+                <ListGroupItemHeading
+                  className="cursor-pointer"
+                  onClick={() => this.toggleTeamMember()}
+                >
+                  <i
+                    className={
+                      this.state.isplusclass3
+                        ? "fa-plus-minus fa fa-plus-square-o mr-2"
+                        : "fa-plus-minus fa fa-minus-square-o mr-2"
+                    }
+                  />
+                  <span className="text-primary">Team Members</span>
+                </ListGroupItemHeading>
+                <ListGroupItemText>   
+                <Collapse isOpen={this.state.isplusclass3}>
                 <Table
                   hover
                   responsive
@@ -207,8 +302,8 @@ class BasicInformation extends Component {
                   <tr>
                   <th className="text-center">Team Members</th>
                   <th className="text-center"></th>
-                  <th className="text-center">Add Button</th>
-                  <th className="text-center">Delete Button</th>
+                  <th className="text-center"><span className="btn btn-success"><i className="fa fa-plus"></i></span></th>
+                  <th className="text-center"><span className="btn btn-danger"><i className="fa fa-trash"></i></span></th>
                   </tr>
                   <tr>
                     <th className="text-center">Person</th>
@@ -238,10 +333,30 @@ class BasicInformation extends Component {
                   </tr>  
                   </tbody>
                   </Table>
+                  </Collapse>
+                </ListGroupItemText>
                 </ListGroupItem>   
                 </ListGroup>
+
+                {/* Classification */}
+
                 <ListGroup>   
                 <ListGroupItem> 
+                <ListGroupItemHeading
+                  className="cursor-pointer"
+                  onClick={() => this.toggleClassification()}
+                >
+                  <i
+                    className={
+                      this.state.isplusclass4
+                        ? "fa-plus-minus fa fa-plus-square-o mr-2"
+                        : "fa-plus-minus fa fa-minus-square-o mr-2"
+                    }
+                  />
+                  <span className="text-primary">Classification</span>
+                </ListGroupItemHeading>
+                <ListGroupItemText>   
+                <Collapse isOpen={this.state.isplusclass4}>
                 <Table
                   hover
                   responsive
@@ -251,8 +366,8 @@ class BasicInformation extends Component {
                     <tr>
                       <th className="text-center">Classification</th>
                       <th className="text-center"></th>
-                      <th className="text-center">Add Button</th>
-                      <th className="text-center">Delete Button</th>
+                      <th className="text-center"><button class="btn btn-primary" ><i class="fa fa-plus mr-2"></i>Add</button></th>
+                      <th className="text-center"><button class="btn btn-danger" ><i class="fa fa-trash mr-2"></i>Delete</button></th>
                     </tr>
                     <tr>
                       <th className="text-center">Category</th>
@@ -283,6 +398,8 @@ class BasicInformation extends Component {
                   </tbody>
 
                   </Table>
+                  </Collapse>
+                </ListGroupItemText>
                 </ListGroupItem>   
                 </ListGroup>
        
