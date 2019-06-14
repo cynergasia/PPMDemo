@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { CardHeader, CardBody } from "reactstrap";
+import { Card, CardHeader, CardBody } from "reactstrap";
 import ReactDataTableNew from "../../../components/ReactDataTableNew";
 import database from "../../../database";
 
@@ -32,11 +32,14 @@ class title extends Component {
   componentWillMount() {
     this.updateData();
   }
+
   handleClick = f => {
     window.location.hash = "/500";
   };
+
   updateData() {
     if (!["dashboard"].includes(window.location.hash.split("/")["1"])) {
+      console.log(this.props);
       data.rows = [];
       const projectdata = database.projects.filter(
         ({ id }) => `${id}` === this.props.id
@@ -53,7 +56,9 @@ class title extends Component {
           });
         });
       }
-    } else {
+    } 
+    else
+    {
       data.rows = [];
       database.projects.forEach(project => {
         project.notification.forEach(item => {
