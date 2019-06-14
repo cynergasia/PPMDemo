@@ -25,7 +25,7 @@ const options = {
   legend: {
     display: false
   },
-  maintainAspectRatio: false
+  maintainAspectRatio: true
 };
 class Dashboard extends Component {
   loading = () => (
@@ -36,16 +36,16 @@ class Dashboard extends Component {
       <React.Fragment>
         <div className="animated fadeIn">
           <Row>
-            <Col xs="12" sm="12" lg="12">
+            <Col xs="12" md="12" lg="12">
               <Menu />
             </Col>
           </Row>
           {/* MyProject and Financial status  */}
           <Row>
-            <Col xs="12" sm="12" lg="6">
+            <Col xs="12" md="12" lg="6">
               <Project />
             </Col>
-            <Col xs="12" sm="12" lg="6">
+            <Col xs="12" md="12" lg="6">
               <Notification />
             </Col>
           </Row>
@@ -53,36 +53,36 @@ class Dashboard extends Component {
             <Summary />
           </Row>
           <Row>
-            <Col xs="12" sm="12" lg="6">
+            <Col xs="12" md="12" lg="6">
               <Risks />
             </Col>
-            <Col xs="12" sm="12" lg="6">
+            <Col xs="12" md="12" lg="6">
               <IssueRegister options={options} />
             </Col>
           </Row>
 
           <Row>
-            <Col xs="12" sm="12" lg="6">
+            <Col xs="12" md="12" lg="6">
               <ChangeRegister options={options} />
             </Col>
-            <Col xs="12" sm="12" lg="6">
+            <Col xs="12" md="12" lg="6">
               <Calendar />
             </Col>
           </Row>
 
           <Row>
-            <Col xs="12" sm="12" lg="6">
+            <Col xs="12" md="12" lg="6">
               <ActivityRegister options={options} />
             </Col>
-            <Col xs="12" sm="12" lg="6">
+            <Col xs="12" md="12" lg="6">
               <Deliverables options={options} />
             </Col>
           </Row>
           <Row>
-            <Col xs="12" sm="12" lg="6">
+            <Col xs="12" md="12" lg="6">
               <FinancialAnalysis />
             </Col>
-            <Col xs="12" sm="12" lg="6">
+            <Col xs="12" md="12" lg="6">
               <FinancialStatus />
             </Col>
           </Row>

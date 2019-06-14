@@ -12,7 +12,6 @@ import {
   ListGroupItem,
   ListGroupItemHeading,
   ListGroupItemText
-  
 } from "reactstrap";
 import Modal from "../../helper/Modal";
 import wikidata from "./projectwikidata";
@@ -32,24 +31,23 @@ let data = [];
 
 wikidata.basicInfo.forEach(item => {
   data.push({
-      project_name  : item.project_name,
-    project_number  : item.project_number,
-      project_type  : item.project_type,
- opportunity_number : item.pportunity_number,
-      organization  : item.organization,
-   federal_project  : item.federal_project,
-          currency  : item.currency,
- partnering_needed  : item.partnering_needed,
-             stage  : item.stage,
-   project_m_nager  : item.project_m_nager,
-  project_approver  : item.project_approver,
-       p_l_manager  : item.p_l_manager,
-            region  : item.region,
- available_to_copy  : item.available_to_copy, 
-             type   : item.type
+    project_name: item.project_name,
+    project_number: item.project_number,
+    project_type: item.project_type,
+    opportunity_number: item.pportunity_number,
+    organization: item.organization,
+    federal_project: item.federal_project,
+    currency: item.currency,
+    partnering_needed: item.partnering_needed,
+    stage: item.stage,
+    project_m_nager: item.project_m_nager,
+    project_approver: item.project_approver,
+    p_l_manager: item.p_l_manager,
+    region: item.region,
+    available_to_copy: item.available_to_copy,
+    type: item.type
   });
 });
-
 
 class BasicInformation extends Component {
   state = { ...intialState };
@@ -146,7 +144,7 @@ class BasicInformation extends Component {
           </CardHeader>
           <CardBody>
             {/* <pre className="m-0">{basicProjectInfo}</pre> className="project-wiki-basicinfo"  */}
-            <div >  
+            
             <ListGroup>
               <ListGroupItem>  
               <ListGroupItemHeading
@@ -164,15 +162,15 @@ class BasicInformation extends Component {
                 </ListGroupItemHeading>
                 <ListGroupItemText>   
                 <Collapse isOpen={this.state.isplusclass1}>    
-               <Table
-               responsive 
-               bordered                 
-                >                         
+                 <Table
+                  responsive 
+                  bordered                 
+                    >                         
                 
                   <tbody>                  
                     <tr>
                       <td className="basicinfo text-left"><div>Project Number </div></td>
-                      <td className="text-left"><div>6000001</div></td>
+                      <td className="text-left"><div>60453005</div></td>
                       <td className="basicinfo text-left"><div>Project Name </div></td>
                       <td className="text-left"><div>Extensions N/Cape Mall Phase 3 </div></td>
                     </tr>
@@ -237,109 +235,85 @@ class BasicInformation extends Component {
                 </ListGroupItemText>
                 </ListGroupItem> 
                 </ListGroup>
-                {/* Project detail */}
-                {/* <ListGroup>   
-                <ListGroupItem> 
-                <ListGroupItemHeading
-                  className="cursor-pointer"
-                  onClick={() => this.toggleDetail()}
-                >
-                  <i
-                    className={
-                      this.state.isplusclass2
-                        ? "fa-plus-minus fa fa-plus-square-o mr-2"
-                        : "fa-plus-minus fa fa-minus-square-o mr-2"
-                    }
-                  />
-                  <span className="text-primary">Project Details</span>
-                </ListGroupItemHeading>
-                <ListGroupItemText>   
-                <Collapse isOpen={this.state.isplusclass2}> 
-                <Table
-                  hover
-                  responsive
-                  className="table-outline mb-0 d-none d-sm-table"
-                >
-                  <thead className="thead-light">                   
-                    <tr>
-                      <th className="text-left">Project Details</th>
-                      <th className="text-left"></th>
-                      <th className="text-left"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td className="text-left"><div>Extensions N/Cape Mall Phase 3 </div></td>
-                    <td className="text-left"><div> </div></td>
-                    <td className="text-left"><div> </div></td>                     
-                  </tr>    
-                  </tbody>
+         
+             
 
-                  </Table>
-                  </Collapse>
-                </ListGroupItemText>
-                </ListGroupItem>   
-                </ListGroup> */}
+              {/* Team Members */}
+              <ListGroup>
+                <ListGroupItem>
 
-                {/* Team Members */}
-                <ListGroup>   
-                <ListGroupItem> 
-                <ListGroupItemHeading
-                  className="cursor-pointer"
-                  onClick={() => this.toggleTeamMember()}
-                >
-                  <i
-                    className={
-                      this.state.isplusclass3
-                        ? "fa-plus-minus fa fa-minus-square-o mr-2"
-                        : "fa-plus-minus fa fa-plus-square-o mr-2"
-                    }
-                  />
-                  <span className="text-primary">Team Members</span>
-                </ListGroupItemHeading>
-                <ListGroupItemText>   
-                <Collapse isOpen={this.state.isplusclass3}>
-                <Table
-                  hover
-                  responsive
-                  className="table-outline mb-0 d-none d-sm-table"
-                >
-                  <thead className="thead-light">                 
-                
-                  <tr>
-                    <th className="text-left">Person</th>
-                    <th className="text-left">Role</th>
-                    <th className="text-left">Start Date</th>
-                    <th className="text-left">End Date</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td className="text-left"><div>Suresh Padmanabhan </div></td>
-                    <td className="text-left"><div>Project Manager </div></td>
-                    <td className="text-left"><div>01-01-2019 </div></td>
-                    <th className="text-left">02-16-2020</th>                     
-                  </tr>
-                  <tr>
-                      <td className="text-left"><div>Neeraj Garg </div></td>
-                      <td className="text-left"><div>Project Approver </div></td>
-                      <td className="text-left"><div>01-01-2019 </div></td>
-                      <th className="text-left">02-16-2020</th>                     
-                  </tr>
-                  <tr>
-                      <td className="text-left"><div>Arindam Mukherjee</div></td>
-                      <td className="text-left"><div>P&L Manager </div></td>
-                      <td className="text-left"><div>01-01-2019 </div></td>
-                      <th className="text-left">02-16-2020</th>                     
-                  </tr>  
-                  </tbody>
-                  </Table>
-                  </Collapse>
-                </ListGroupItemText>
-                </ListGroupItem>   
-                </ListGroup>
-
-                {/* Classification */}
+                  <ListGroupItemHeading
+                    className="cursor-pointer"
+                    onClick={() => this.toggleTeamMember()}
+                  >
+                    <i
+                      className={
+                        this.state.isplusclass3
+                          ? "fa-plus-minus fa fa-minus-square-o mr-2"
+                          : "fa-plus-minus fa fa-plus-square-o mr-2"
+                      }
+                    />
+                    <span className="text-primary">Team Members</span>
+                  </ListGroupItemHeading>
+                  <ListGroupItemText>
+                    <Collapse isOpen={this.state.isplusclass3}>
+                      <Table
+                        hover
+                        responsive
+                        className="table-outline mb-0 d-none d-sm-table"
+                      >
+                        <thead className="thead-light">
+                       
+                          <tr>
+                            <th className="text-center">Person</th>
+                            <th className="text-center">Role</th>
+                            <th className="text-center">Start Date</th>
+                            <th className="text-center">End Date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td className="text-center">
+                              <div>Suresh Padmanabhan </div>
+                            </td>
+                            <td className="text-center">
+                              <div>Project Manager </div>
+                            </td>
+                            <td className="text-center">
+                              <div>01-01-2019 </div>
+                            </td>
+                            <th className="text-center">16-02-2020</th>
+                          </tr>
+                          <tr>
+                            <td className="text-center">
+                              <div>Neeraj Garg </div>
+                            </td>
+                            <td className="text-center">
+                              <div>Project Approver </div>
+                            </td>
+                            <td className="text-center">
+                              <div>01-01-2019 </div>
+                            </td>
+                            <th className="text-center">16-02-2020</th>
+                          </tr>
+                          <tr>
+                            <td className="text-center">
+                              <div>Arindam Mukherjee</div>
+                            </td>
+                            <td className="text-center">
+                              <div>P&L Manager </div>
+                            </td>
+                            <td className="text-center">
+                              <div>01-01-2019 </div>
+                            </td>
+                            <th className="text-center">16-02-2020</th>
+                          </tr>
+                        </tbody>
+                      </Table>
+                    </Collapse>
+                  </ListGroupItemText>
+                </ListGroupItem>
+              </ListGroup>
 
                 <ListGroup>   
                 <ListGroupItem> 
@@ -392,14 +366,14 @@ class BasicInformation extends Component {
                     <th className="text-left">02-16-2020</th>                     
                   </tr>    
                   </tbody>
-
                   </Table>
                   </Collapse>
-                </ListGroupItemText>
-                </ListGroupItem>   
-                </ListGroup>
-       
-            </div>
+                  </ListGroupItemText>
+                  </ListGroupItem>
+                  </ListGroup>     
+            
+           
+            
           </CardBody>
         </Card>
       </React.Fragment>

@@ -178,7 +178,7 @@
 
 html:not([dir="rtl"]) .aside-menu {
   margin-right: -340px;
- // flex: 0 0 calc(100% - 340px);
+  // flex: 0 0 calc(100% - 340px);
 }
 
 .app-body {
@@ -190,7 +190,7 @@ html:not([dir="rtl"]) .aside-menu {
 
 .app {
   .main {
-     flex:1 1;
+    flex: 1 1;
     margin: 0;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
@@ -218,6 +218,13 @@ table.dataTable {
         font-family: "FontAwesome" !important;
       }
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .col-doughnut {
+    flex: 0 0 30%;
+    max-width: 30%;
   }
 }
 

@@ -77,6 +77,11 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.summary-status-value-wrap .left .property {
+  width: calc(100% - 18px);
 }
 
 .summary-status-value-wrap .left .property-value {
@@ -352,6 +357,35 @@ h6.chart-title {
   font-size: 13px;
 }
 
+.right-calendar {
+  height: 32rem;
+}
+
+.right-calendar .rbc-toolbar .btn.btn-sm {
+  padding: 0 1.3rem 0.3rem;
+  font-size: 1.64rem;
+  line-height: 1;
+}
+
+.right-calendar .rbc-toolbar .rbc-toolbar-label {
+  width: 100%;
+  padding: 5px 0;
+  display: block;
+}
+
+.right-calendar .rbc-toolbar .rbc-btn-group {
+  margin-bottom: 15px;
+}
+
+.right-calendar .rbc-row-segment {
+  font-size: 10px;
+}
+
+.aside-menu-lg-show .rbc-toolbar .rbc-toolbar-label {
+  width: 100%;
+  display: block;
+}
+
 /***** Responsive *****/
 
 @media (max-width: 991px) {
@@ -472,9 +506,10 @@ h6.chart-title {
 }
 
 /* basic infor */
-.basicinfo{
-    color: #5c6873;
-    font-family: bold;
-    background-color: #e4e7ea;
-    border-color: #c8ced3;
+
+.basicinfo {
+  color: #5c6873;
+  font-family: bold;
+  background-color: #e4e7ea;
+  border-color: #c8ced3;
 }

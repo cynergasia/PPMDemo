@@ -17,39 +17,201 @@
         "active_workpackages": "2",
         "open_activities": "4",
         "open_issues": "3",
-        "pending_risks": "1",
+        "pending_risks": "3",
         "pending_changes": "1"
       },
+      "riskRegister": {
+        "risks": [
+          {
+            "x": "Project1",
+            "y": "A",
+            "heat": 9,
+            "custom_field": ""
+          },
+          {
+            "x": "Project2",
+            "y": "A",
+            "heat": 12,
+            "custom_field": ""
+          },
+          {
+            "x": "Project3",
+            "y": "A",
+            "heat": 16,
+            "custom_field": ""
+          },
+          {
+            "x": "Project4",
+            "y": "A",
+            "heat": 20,
+            "custom_field": "1"
+          },
+          {
+            "x": "Project5",
+            "y": "A",
+            "heat": 21,
+            "custom_field": ""
+          },
+          {
+            "x": "Project1",
+            "y": "B",
+            "heat": 6,
+            "custom_field": ""
+          },
+          {
+            "x": "Project2",
+            "y": "B",
+            "heat": 9,
+            "custom_field": ""
+          },
+          {
+            "x": "Project3",
+            "y": "B",
+            "heat": 12,
+            "custom_field": "1"
+          },
+          {
+            "x": "Project4",
+            "y": "B",
+            "heat": 16,
+            "custom_field": ""
+          },
+          {
+            "x": "Project5",
+            "y": "B",
+            "heat": 20,
+            "custom_field": ""
+          },
+          {
+            "x": "Project1",
+            "y": "C",
+            "heat": 6,
+            "custom_field": ""
+          },
+          {
+            "x": "Project2",
+            "y": "C",
+            "heat": 6,
+            "custom_field": ""
+          },
+          {
+            "x": "Project3",
+            "y": "C",
+            "heat": 9,
+            "custom_field": ""
+          },
+          {
+            "x": "Project4",
+            "y": "C",
+            "heat": 12,
+            "custom_field": ""
+          },
+          {
+            "x": "Project5",
+            "y": "C",
+            "heat": 16,
+            "custom_field": ""
+          },
+          {
+            "x": "Project1",
+            "y": "D",
+            "heat": 6,
+            "custom_field": ""
+          },
+          {
+            "x": "Project2",
+            "y": "D",
+            "heat": 6,
+            "custom_field": ""
+          },
+          {
+            "x": "Project3",
+            "y": "D",
+            "heat": 6,
+            "custom_field": ""
+          },
+          {
+            "x": "Project4",
+            "y": "D",
+            "heat": 9,
+            "custom_field": ""
+          },
+          {
+            "x": "Project5",
+            "y": "D",
+            "heat": 12,
+            "custom_field": ""
+          },
+          {
+            "x": "Project1",
+            "y": "E",
+            "heat": 6,
+            "custom_field": ""
+          },
+          {
+            "x": "Project2",
+            "y": "E",
+            "heat": 6,
+            "custom_field": ""
+          },
+          {
+            "x": "Project3",
+            "y": "E",
+            "heat": 6,
+            "custom_field": ""
+          },
+          {
+            "x": "Project4",
+            "y": "E",
+            "heat": 6,
+            "custom_field": "1"
+          },
+          {
+            "x": "Project5",
+            "y": "E",
+            "heat": 9,
+            "custom_field": ""
+          }
+        ],
+        "overdue": 1,
+        "today": 0,
+        "tommorow": 0,
+        "week": 0,
+        "month": 1
+      },
+      "issueRegister": {
+        "status": {
+          "overdue": 2,
+          "actionRequired": 0,
+          "onHold": 0,
+          "atRisk": 0,
+          "completed": 3,
+          "notStarted": 0,
+          "started": 1
+        }
+      },
+      "changeRegisterGraph": [1, 2],
+      "activityRegister": {
+        "status": {
+          "notStarted": 2,
+          "started": 2,
+          "completed": 6,
+          "onHold": 0,
+          "action": 0
+        },
+        "overdue": 4,
+        "today": 0,
+        "tommorow": 0,
+        "week": 0,
+        "month": 1
+      },
       "financialStatus": {
-        "contract": [
-          3,
-          3,
-          3,
-          4,
-          4,
-          4,
-          4
-        ],
-        "invoiced": [
-          0.75,
-          1.2,
-          1.8,
-          2.4,
-          2.8,
-          3.3,
-          0
-        ],
-        "paid": [
-          0.75,
-          1,
-          1.6,
-          2.2,
-          2.1,
-          0,
-          0
-        ]
+        "contract": [3, 3, 3, 4, 4, 4, 4],
+        "invoiced": [0.75, 1.2, 1.8, 2.4, 2.8, 3.3, 0],
+        "paid": [0.75, 1, 1.6, 2.2, 2.1, 0, 0]
       }
-    }, {
+    },
+    {
       "id": 60453007,
       "name": "Tai Kok Tsui, Kowloon",
       "financial_per_complete": 60,
@@ -70,35 +232,12 @@
         "pending_changes": "1"
       },
       "financialStatus": {
-        "contract": [
-          3,
-          3,
-          3,
-          4,
-          4,
-          4,
-          4
-        ],
-        "invoiced": [
-          0.75,
-          1.2,
-          1.8,
-          2.4,
-          2.8,
-          3.3,
-          0
-        ],
-        "paid": [
-          0.75,
-          1,
-          1.6,
-          2.2,
-          2.1,
-          0,
-          0
-        ]
+        "contract": [3, 3, 3, 4, 4, 4, 4],
+        "invoiced": [0.75, 1.2, 1.8, 2.4, 2.8, 3.3, 0],
+        "paid": [0.75, 1, 1.6, 2.2, 2.1, 0, 0]
       }
-    }, {
+    },
+    {
       "id": 60453009,
       "name": "HKHA  for Supervising",
       "financial_per_complete": 30,
@@ -119,35 +258,12 @@
         "pending_changes": "3"
       },
       "financialStatus": {
-        "contract": [
-          3,
-          3,
-          3,
-          4,
-          4,
-          4,
-          4
-        ],
-        "invoiced": [
-          0.75,
-          1.2,
-          1.8,
-          2.4,
-          2.8,
-          3.3,
-          0
-        ],
-        "paid": [
-          0.75,
-          1,
-          1.6,
-          2.2,
-          2.1,
-          0,
-          0
-        ]
+        "contract": [3, 3, 3, 4, 4, 4, 4],
+        "invoiced": [0.75, 1.2, 1.8, 2.4, 2.8, 3.3, 0],
+        "paid": [0.75, 1, 1.6, 2.2, 2.1, 0, 0]
       }
-    }, {
+    },
+    {
       "id": 60453010,
       "name": "Tsing Yi Indoor Recre",
       "financial_per_complete": 40,
@@ -168,35 +284,12 @@
         "pending_changes": "1"
       },
       "financialStatus": {
-        "contract": [
-          3,
-          3,
-          3,
-          4,
-          4,
-          4,
-          4
-        ],
-        "invoiced": [
-          0.75,
-          1.2,
-          1.8,
-          2.4,
-          2.8,
-          3.3,
-          0
-        ],
-        "paid": [
-          0.75,
-          1,
-          1.6,
-          2.2,
-          2.1,
-          0,
-          0
-        ]
+        "contract": [3, 3, 3, 4, 4, 4, 4],
+        "invoiced": [0.75, 1.2, 1.8, 2.4, 2.8, 3.3, 0],
+        "paid": [0.75, 1, 1.6, 2.2, 2.1, 0, 0]
       }
-    }, {
+    },
+    {
       "id": 60453012,
       "name": "810B West KLN Terminu",
       "financial_per_complete": 84,
@@ -217,35 +310,12 @@
         "pending_changes": "1"
       },
       "financialStatus": {
-        "contract": [
-          3,
-          3,
-          3,
-          4,
-          4,
-          4,
-          4
-        ],
-        "invoiced": [
-          0.75,
-          1.2,
-          1.8,
-          2.4,
-          2.8,
-          3.3,
-          0
-        ],
-        "paid": [
-          0.75,
-          1,
-          1.6,
-          2.2,
-          2.1,
-          0,
-          0
-        ]
+        "contract": [3, 3, 3, 4, 4, 4, 4],
+        "invoiced": [0.75, 1.2, 1.8, 2.4, 2.8, 3.3, 0],
+        "paid": [0.75, 1, 1.6, 2.2, 2.1, 0, 0]
       }
-    }, {
+    },
+    {
       "id": 60453013,
       "name": "TWGH Wong Fat Nam Col",
       "financial_per_complete": 91,
@@ -266,33 +336,9 @@
         "pending_changes": "1"
       },
       "financialStatus": {
-        "contract": [
-          3,
-          3,
-          3,
-          4,
-          4,
-          4,
-          4
-        ],
-        "invoiced": [
-          0.75,
-          1.2,
-          1.8,
-          2.4,
-          2.8,
-          3.3,
-          0
-        ],
-        "paid": [
-          0.75,
-          1,
-          1.6,
-          2.2,
-          2.1,
-          0,
-          0
-        ]
+        "contract": [3, 3, 3, 4, 4, 4, 4],
+        "invoiced": [0.75, 1.2, 1.8, 2.4, 2.8, 3.3, 0],
+        "paid": [0.75, 1, 1.6, 2.2, 2.1, 0, 0]
       }
     }
   ],
@@ -306,104 +352,83 @@
     "pending_changes": "5"
   },
   "financialStatus": {
-    "contract": [
-      35,
-      35,
-      33,
-      34,
-      32,
-      30,
-      35
-    ],
-    "invoiced": [
-      "NaN",
-      5,
-      10,
-      24,
-      25,
-      23,
-      24
-    ],
-    "paid": [
-      10,
-      15,
-      25,
-      25,
-      26,
-      28,
-      30
-    ]
+    "contract": [35, 35, 33, 34, 32, 30, 35],
+    "invoiced": ["NaN", 5, 10, 24, 25, 23, 24],
+    "paid": [10, 15, 25, 25, 26, 28, 30]
   },
-  "customers": [
-    "AECOM", "HDR", "Oxy"
-  ],
+  "customers": ["AECOM", "HDR", "Oxy"],
   "activity": [
     {
       "activityNumber": "A1.03.01",
       "name": "Prelim Model",
       "work_package": "MODELLING(1.03)",
       "owner": "SP",
-      "due_date": "9/Jun/2019",
+      "due_date": "06/09/2019",
       "planned": 240,
       "actual": 200,
       "remaning": 40,
       "status": "In Progress",
       "per_complete": "83%",
       "comments": ""
-    }, {
+    },
+    {
       "activityNumber": "A1.03.02",
       "name": "Tender Model",
       "work_package": "MODELLING(1.03)",
       "owner": "SP",
-      "due_date": "11/Jun/2019",
+      "due_date": "06/11/2019",
       "planned": 8,
       "actual": 0,
       "remaning": 8,
       "status": "Not Started",
       "per_complete": "0%",
       "comments": ""
-    }, {
+    },
+    {
       "activityNumber": "A1.03.03",
       "name": "Final Model",
       "work_package": "MODELLING(1.03)",
       "owner": "AM",
-      "due_date": "12/Jul/2019",
+      "due_date": "07/12/2019",
       "planned": 240,
       "actual": 0,
       "remaning": 240,
       "status": "Not Started",
       "per_complete": "0%",
       "comments": ""
-    }, {
+    },
+    {
       "activityNumber": "A1.03.04",
       "name": "Model Maintenance",
       "work_package": "MODELLING(1.03)",
       "owner": "AM",
-      "due_date": "12/Aug/2019",
+      "due_date": "08/12/2019",
       "planned": 240,
       "actual": 0,
       "remaning": 240,
       "status": "Not Started",
       "per_complete": "0%",
       "comments": ""
-    }, {
+    },
+    {
       "activityNumber": "A1.02.01",
       "name": "Prelim Design",
       "work_package": "DESIGN(1.02)",
       "owner": "SP",
-      "due_date": "2/Mar/2019",
+      "due_date": "03/02/2019",
       "planned": 300,
       "actual": 300,
       "remaning": 0,
       "status": "Completed",
       "per_complete": "100%",
       "comments": ""
-    }, {
+    },
+    {
       "activityNumber": "A1.02.02",
       "name": "Tender Design",
       "work_package": "DESIGN(1.02)",
       "owner": "SP",
-      "due_date": "4/Mar/2019",
+      "due_date": "03/04/2019",
       "planned": 8,
       "actual": 8,
       "remaning": 0,
@@ -417,28 +442,36 @@
       {
         "title": "Estimate Start Date",
         "value": "1 Jan 19"
-      }, {
+      },
+      {
         "title": "Estimate End Date",
         "value": "16 Fab 20"
-      }, {
+      },
+      {
         "title": "Transaction Start Date",
         "value": "2 Jan 19"
-      }, {
+      },
+      {
         "title": "Transaction End Date",
         "value": "16 Fab 20"
-      }, {
+      },
+      {
         "title": "Project Status",
         "value": "Approved"
-      }, {
+      },
+      {
         "title": "Planned Efforts",
         "value": "2156 Hours"
-      }, {
+      },
+      {
         "title": "Actual Efforts",
         "value": "1048 Hours"
-      }, {
+      },
+      {
         "title": "% Spent",
         "value": "49%"
-      }, {
+      },
+      {
         "title": "% Complete",
         "value": "55%"
       }
@@ -447,16 +480,20 @@
       {
         "title": "Status",
         "value": "In Approval"
-      }, {
+      },
+      {
         "title": "Last Approved By",
         "value": "Neeraj Garg"
-      }, {
+      },
+      {
         "title": "Next Approver",
         "value": "Arindam"
-      }, {
+      },
+      {
         "title": "Due Date",
         "value": "12 Jun 19"
-      }, {
+      },
+      {
         "title": "Last Approval Date",
         "value": "10 May 19"
       }
@@ -465,22 +502,211 @@
       {
         "title": "Created By",
         "value": "Suresh Padmanabhan"
-      }, {
+      },
+      {
         "title": "Creation Date",
         "value": "15 Dec 18"
-      }, {
+      },
+      {
         "title": "Last Updated By",
         "value": "Suresh Padmanabhan"
-      }, {
+      },
+      {
         "title": "Last Updated Date",
         "value": "10 Jun 19"
-      }, {
+      },
+      {
         "title": "Latest Activity date",
         "value": "8 Jun 19"
-      }, {
+      },
+      {
         "title": "Locked By",
         "value": "Suresh Padmanabhan"
       }
     ]
+  },
+  "riskRegister": {
+    "risks": [
+      {
+        "x": "Project1",
+        "y": "A",
+        "heat": 9,
+        "custom_field": ""
+      },
+      {
+        "x": "Project2",
+        "y": "A",
+        "heat": 12,
+        "custom_field": ""
+      },
+      {
+        "x": "Project3",
+        "y": "A",
+        "heat": 16,
+        "custom_field": ""
+      },
+      {
+        "x": "Project4",
+        "y": "A",
+        "heat": 20,
+        "custom_field": "1"
+      },
+      {
+        "x": "Project5",
+        "y": "A",
+        "heat": 21,
+        "custom_field": ""
+      },
+      {
+        "x": "Project1",
+        "y": "B",
+        "heat": 6,
+        "custom_field": ""
+      },
+      {
+        "x": "Project2",
+        "y": "B",
+        "heat": 9,
+        "custom_field": ""
+      },
+      {
+        "x": "Project3",
+        "y": "B",
+        "heat": 12,
+        "custom_field": "1"
+      },
+      {
+        "x": "Project4",
+        "y": "B",
+        "heat": 16,
+        "custom_field": "2"
+      },
+      {
+        "x": "Project5",
+        "y": "B",
+        "heat": 20,
+        "custom_field": ""
+      },
+      {
+        "x": "Project1",
+        "y": "C",
+        "heat": 6,
+        "custom_field": ""
+      },
+      {
+        "x": "Project2",
+        "y": "C",
+        "heat": 6,
+        "custom_field": ""
+      },
+      {
+        "x": "Project3",
+        "y": "C",
+        "heat": 9,
+        "custom_field": "1"
+      },
+      {
+        "x": "Project4",
+        "y": "C",
+        "heat": 12,
+        "custom_field": "1"
+      },
+      {
+        "x": "Project5",
+        "y": "C",
+        "heat": 16,
+        "custom_field": ""
+      },
+      {
+        "x": "Project1",
+        "y": "D",
+        "heat": 6,
+        "custom_field": ""
+      },
+      {
+        "x": "Project2",
+        "y": "D",
+        "heat": 6,
+        "custom_field": ""
+      },
+      {
+        "x": "Project3",
+        "y": "D",
+        "heat": 6,
+        "custom_field": "2"
+      },
+      {
+        "x": "Project4",
+        "y": "D",
+        "heat": 8,
+        "custom_field": ""
+      },
+      {
+        "x": "Project5",
+        "y": "D",
+        "heat": 12,
+        "custom_field": ""
+      },
+      {
+        "x": "Project1",
+        "y": "E",
+        "heat": 6,
+        "custom_field": ""
+      },
+      {
+        "x": "Project2",
+        "y": "E",
+        "heat": 6,
+        "custom_field": ""
+      },
+      {
+        "x": "Project3",
+        "y": "E",
+        "heat": 6,
+        "custom_field": ""
+      },
+      {
+        "x": "Project4",
+        "y": "E",
+        "heat": 6,
+        "custom_field": "1"
+      },
+      {
+        "x": "Project5",
+        "y": "E",
+        "heat": 9,
+        "custom_field": ""
+      }
+    ],
+    "overdue": 3,
+    "today": 0,
+    "tommorow": 0,
+    "week": 0,
+    "month": 3
+  },
+  "activityRegister": {
+    "status": {
+      "notStarted": 3,
+      "started": 6,
+      "completed": 17,
+      "onHold": 0,
+      "action": 0
+    },
+    "overdue": 4,
+    "today": 0,
+    "tommorow": 0,
+    "week": 0,
+    "month": 0
+  },
+  "issueRegister": {
+    "status": {
+      "overdue": 5,
+      "actionRequired": 0,
+      "onHold": 0,
+      "atRisk": 0,
+      "completed": 3,
+      "notStarted": 0,
+      "started": 1
+    }
   }
 }

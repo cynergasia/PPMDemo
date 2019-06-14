@@ -8,7 +8,7 @@ import _sum from "lodash/sum";
 const labels = ["Logged", "Closed"];
 const datasets = [
   {
-    data: [5, 1],
+    data: [],
     backgroundColor: [
       "#edc02d", // yellow
       "#fc6d21" // Orange
@@ -16,12 +16,24 @@ const datasets = [
   }
 ];
 const text = [`${_sum(datasets["0"].data)}`, "Changes"];
-const changeRegisterData = { labels, datasets, text };
+let changeRegisterData = { labels, datasets, text };
 
 class ChangeRegister extends Component {
+  state = {
+    data: { ...changeRegisterData }
+  };
+  componentDidMount() {
+    changeRegisterData.datasets[0].data = [];
+    this.props.changeRegisterGraph
+      ? (changeRegisterData.datasets[0].data = this.props.changeRegisterGraph)
+      : (changeRegisterData.datasets[0].data = [5, 1]);
+    changeRegisterData.text = [
+      `${_sum(changeRegisterData.datasets[0].data)}`,
+      "Changes"
+    ];
+    this.setState({ data: { ...changeRegisterData } });
+  }
   render() {
-    let totalCount = 0;
-    changeRegisterData.datasets[0].data.map(i => (totalCount = totalCount + i));
     return (
       <div>
         <Card>
@@ -37,20 +49,22 @@ class ChangeRegister extends Component {
               <i className="fa fa-ellipsis-h card-header-icons" />
             </div>
           </CardHeader>
-          <CardBody>
+          <CardBody className="d-flex flex-column justify-content-center">
             <Row>
-              <Col md="12" lg="6">
+              <Col sm="12" className="mx-auto col-doughnut">
                 <div className="chart-wrapper">
                   <Doughnut
                     data={changeRegisterData}
                     options={this.props.options}
+                    height={1}
+                    width={1}
                   />
                   {/* <span className="doughnutText text-center">
                     <p>{totalCount}</p> <span>Changes</span>
                   </span> */}
                 </div>
               </Col>
-              <Col md="12" lg="2">
+              <Col md="12" lg="3">
                 <div className="chart-wrapper">
                   <h6 className="chart-title">Status</h6>
                   <div className="summary-status-value-wrap">
@@ -80,7 +94,7 @@ class ChangeRegister extends Component {
                   </div>
                 </div>
               </Col>
-              <Col md="12" lg="4">
+              <Col md="12" lg="5">
                 <div className="title-wrap">
                   <h6 className="left">TARGET DATE</h6>
                   {/* <h6 className="right">3 OVERDUE</h6> */}

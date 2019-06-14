@@ -4,6 +4,7 @@ import { Doughnut } from "react-chartjs-2";
 import { CustomTooltips } from "@coreui/coreui-plugin-chartjs-custom-tooltips";
 import IssueRegisterStatus from "./IssueRegisterStatus";
 import _sum from "lodash/sum";
+import database from "../../../database";
 
 const labels = [
   "Overdue",
@@ -31,13 +32,28 @@ const datasets = [
 ];
 
 const text = [`${_sum(datasets["0"].data)}`, "Issues"];
-
 const issueProjectData = { labels, datasets, text };
 
 class IssueRegister extends Component {
+  state = {
+    data: { ...issueProjectData }
+  };
+  componentDidMount() {
+    const { status } = this.props.issueRegister
+      ? this.props.issueRegister
+      : database.issueRegister;
+    const newArr = Object.keys(status).map(i => status[i]);
+    issueProjectData.datasets[0].data = newArr;
+    issueProjectData.text = [
+      `${_sum(issueProjectData.datasets[0].data)}`,
+      "Issues"
+    ];
+    this.setState({ data: { ...issueProjectData } });
+    console.log(newArr);
+  }
   render() {
     return (
-      <>
+      <React.Fragment>
         <Card>
           <CardHeader>
             Issue Register
@@ -51,24 +67,26 @@ class IssueRegister extends Component {
               <i className="fa fa-ellipsis-h card-header-icons" />
             </div>
           </CardHeader>
-          <CardBody>
+          <CardBody className="d-flex flex-column">
             <Row>
-              <Col xs="8" sm="12" lg="6">
+              <Col sm="12" className="mx-auto col-doughnut">
                 <div className="chart-wrapper">
                   <Doughnut
-                    data={issueProjectData}
+                    data={this.state.data}
                     options={this.props.options}
+                    height={1}
+                    width={1}
                   />
                 </div>
               </Col>
-              <Col xs="8" sm="12" lg="6">
+              <Col sm="12" md="7" className="mr-auto">
                 <h6 className="chart-title">STATUS</h6>
                 <IssueRegisterStatus issueProjectData={issueProjectData} />
               </Col>
             </Row>
           </CardBody>
         </Card>
-      </>
+      </React.Fragment>
     );
   }
 }

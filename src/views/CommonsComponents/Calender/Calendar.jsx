@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import BigCalendar from "react-big-calendar";
-import "react-big-calendar/lib/css/react-big-calendar.css";
+// import "react-big-calendar/lib/css/react-big-calendar.css";
 import eventsList from "./eventsList";
 import CustomCalendarToolbar from "./CustomCalendarToolbar";
 import moment from "moment";
-import "./Calendar.css";
+// import "./Calendar.css";
 import { Card, CardBody, CardHeader, Col, Row } from "reactstrap";
 
 moment.locale("en-GB");
@@ -35,7 +35,7 @@ class Calendar extends Component {
               <Col xs="12" sm="12" lg="12">
                 <div
                   style={{
-                    height: 416
+                    height: 450
                   }}
                 >
                   <BigCalendar

@@ -55,8 +55,13 @@ class OverallStatus extends Component {
           </CardHeader>
           <CardBody>
             <Row>
-              <Col sm="2" md="2" lg="3">
-                <Label className="float-right">PSR As Of : </Label>
+              <Col
+                sm="2"
+                md="2"
+                lg="3"
+                className="justify-content-end align-items-center d-flex"
+              >
+                <Label className="m-0 text-right">PSR As Of : </Label>
               </Col>
               <Col sm="12" md="4" lg="4">
                 {/* <Input type="date" name="psrasof" /> */}
@@ -72,8 +77,13 @@ class OverallStatus extends Component {
               </Col>
             </Row>
             <Row className="mt-2">
-              <Col sm="2" md="2" lg="3">
-                <Label className="float-right">PPC : </Label>
+              <Col
+                sm="2"
+                md="2"
+                lg="3"
+                className="justify-content-end align-items-center d-flex"
+              >
+                <Label className="m-0 text-right">PPC : </Label>
               </Col>
               <Col sm="12" md="4" lg="6">
                 <Label>40%</Label>
@@ -85,8 +95,13 @@ class OverallStatus extends Component {
               </Col>
             </Row>
             <Row className="mt-2">
-              <Col sm="2" md="2" lg="3">
-                <Label className="float-right">Overall Status : </Label>
+              <Col
+                sm="2"
+                md="2"
+                lg="3"
+                className="justify-content-end align-items-center d-flex"
+              >
+                <Label className="m-0 text-right">Overall Status : </Label>
               </Col>
               <Col sm="12" md="4" lg="4">
                 <Input
@@ -106,8 +121,13 @@ class OverallStatus extends Component {
               </Col>
             </Row>
             <Row className="mt-2">
-              <Col sm="2" md="2" lg="3">
-                <Label className="float-right">Narrative : </Label>
+              <Col
+                sm="2"
+                md="2"
+                lg="3"
+                className="justify-content-end align-items-start d-flex"
+              >
+                <Label className="m-0 text-right">Narrative : </Label>
               </Col>
               <Col sm="12" md="4" lg="9">
                 <Input type="textarea" rows="6" />
