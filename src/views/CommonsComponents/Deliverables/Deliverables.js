@@ -41,18 +41,20 @@ class Deliverables extends Component {
           </CardHeader>
           <CardBody>
             <Row>
-              <Col xs="12" sm="12" lg="5">
+              <Col sm="12" className="mx-auto col-doughnut">
                 <div className="chart-wrapper">
                   <Doughnut
                     data={deliverablesData}
                     options={this.props.options}
+                    height={1}
+                    width={1}
                   />
                   {/* <span className="deliverable doughnutText text-center">
                     <p>{totalCount}</p> <span>Deliverable </span>
                   </span> */}
                 </div>
               </Col>
-              <Col xs="12" sm="12" lg="3">
+              <Col xs="12" sm="12" lg="3" className="mr-auto">
                 <div className="chart-wrapper">
                   <h6 className="chart-title">STATUS</h6>
                   {deliverablesData.datasets[0].data.map((data, index) => (
@@ -76,7 +78,7 @@ class Deliverables extends Component {
                   ))}
                 </div>
               </Col>
-              <Col xs="12" sm="12" lg="4">
+              <Col xs="12" sm="12" lg="5">
                 <div className="title-wrap">
                   <h6 className="left">DUE DATE</h6>
                   <Link to="/500">

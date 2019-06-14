@@ -15,9 +15,9 @@ const intialState = {
   isOpenSchedule: false,
   isWorkflowSchedule: false,
   isAuditSchedule: false,
-  isplusclass1: false,
-  isplusclass2: false,
-  isplusclass3: false
+  isplusclass1: true,
+  isplusclass2: true,
+  isplusclass3: true
 };
 
 class RecoardInformation extends Component {
@@ -73,17 +73,17 @@ class RecoardInformation extends Component {
                   <span className="text-primary">Schedule Information</span>
                 </ListGroupItemHeading>
                 <Collapse isOpen={this.state.isOpenSchedule}>
-                  <ListGroupItemText>
-                    {scheduleinfo.map((item, index) => (
+                  {scheduleinfo.map((item, index) => (
+                    <ListGroupItemText className="pt-3 pr-3 pl-3 mb-0 d-flex flex-wrap">
                       <React.Fragment key={index}>
-                        <small className="text-muted mr-3 mt-5">
+                        <small className="text-muted mr-3">
                           <b>{item.title} : </b>
                         </small>
                         <small className="text-muted">{item.value}</small>
-                        <hr style={{ marginTop: "0.1rem" }} />
+                        <hr className="mb-0 w-100" />
                       </React.Fragment>
-                    ))}
-                  </ListGroupItemText>
+                    </ListGroupItemText>
+                  ))}
                 </Collapse>
               </ListGroupItem>
             </ListGroup>
@@ -104,17 +104,17 @@ class RecoardInformation extends Component {
                   <span className="text-primary">Workflow Information</span>
                 </ListGroupItemHeading>
                 <Collapse isOpen={this.state.isWorkflowSchedule}>
-                  <ListGroupItemText>
-                    {workflowinfo.map((item, index) => (
+                  {workflowinfo.map((item, index) => (
+                    <ListGroupItemText className="pt-3 pr-3 pl-3 mb-0 d-flex flex-wrap">
                       <React.Fragment key={index}>
                         <small className="text-muted mr-3">
                           <b>{item.title} : </b>
                         </small>
                         <small className="text-muted">{item.value}</small>
-                        <hr style={{ marginTop: "0.1rem" }} />
+                        <hr className="mb-0 w-100" />
                       </React.Fragment>
-                    ))}
-                  </ListGroupItemText>
+                    </ListGroupItemText>
+                  ))}
                 </Collapse>
               </ListGroupItem>
             </ListGroup>
@@ -135,17 +135,17 @@ class RecoardInformation extends Component {
                   <span className="text-primary">Audit Information</span>
                 </ListGroupItemHeading>
                 <Collapse isOpen={this.state.isAuditSchedule}>
-                  <ListGroupItemText>
-                    {auditinfo.map((item, index) => (
+                  {auditinfo.map((item, index) => (
+                    <ListGroupItemText className="pt-3 pr-3 pl-3 mb-0 d-flex flex-wrap">
                       <React.Fragment key={index}>
                         <small className="text-muted mr-3">
                           <b>{item.title} : </b>
                         </small>
                         <small className="text-muted">{item.value}</small>
-                        <hr style={{ marginTop: "0.1rem" }} />
+                        <hr className="mb-0 w-100" />
                       </React.Fragment>
-                    ))}
-                  </ListGroupItemText>
+                    </ListGroupItemText>
+                  ))}
                 </Collapse>
               </ListGroupItem>
             </ListGroup>

@@ -12,8 +12,9 @@ import {
 } from "reactstrap";
 import classNames from "classnames";
 import BigCalendar from "react-big-calendar";
-import "../../views/CommonsComponents/Calender/Calendar.css";
+
 import CustomCalendarToolbar from "../../views/CommonsComponents/Calender/CustomCalendarToolbar";
+import eventsList from "../../views/CommonsComponents/Calender/eventsList";
 
 class CalendarAside extends Component {
   state = {
@@ -35,7 +36,7 @@ class CalendarAside extends Component {
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1" className="p-3">
             <ListGroup className="list-group-accent mb-3" tag={"div"}>
-              <ListGroupItem className="list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">
+              <ListGroupItem className="list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small border-0">
                 Calendar
               </ListGroupItem>
             </ListGroup>
@@ -50,10 +51,10 @@ class CalendarAside extends Component {
               inline
               todayButton={"Today"}
             /> */}
-            <div style={{ height: 300 }}>
+            <div className="right-calendar">
               <BigCalendar
                 localizer={BigCalendar.momentLocalizer(moment)}
-                events={[]}
+                events={eventsList}
                 popup={true}
                 components={{
                   toolbar: CustomCalendarToolbar

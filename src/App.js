@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
 // import { renderRoutes } from 'react-router-config';
+import "react-big-calendar/lib/css/react-big-calendar.css";
 import "./App.scss";
 import "./index.css";
 import { scrollTop } from "./utils";

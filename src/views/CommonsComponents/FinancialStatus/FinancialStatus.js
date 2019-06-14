@@ -104,7 +104,8 @@ const mainChartOpts = {
 
 class FinancialStatus extends Component {
   state = {
-    data: {}
+    data: {},
+    mainChartOpts: { ...mainChartOpts }
   };
   componentDidMount() {
     const { financialStatus } = this.props;
@@ -120,7 +121,13 @@ class FinancialStatus extends Component {
       ? financialStatus.paid
       : database.financialStatus.paid;
 
-    this.setState({ data: mainChart });
+    mainChartOpts.scales.yAxes[0].ticks.max = this.props.financialStatus
+      ? 10
+      : 60;
+    mainChartOpts.scales.yAxes[0].ticks.stepSize = this.props.financialStatus
+      ? 2
+      : 5;
+    this.setState({ data: mainChart, mainChartOpts });
   }
   render() {
     return (
@@ -138,7 +145,7 @@ class FinancialStatus extends Component {
               <div className="chart-wrapper financial">
                 <Line
                   data={this.state.data}
-                  options={mainChartOpts}
+                  options={this.state.mainChartOpts}
                   height={320}
                 />
               </div>

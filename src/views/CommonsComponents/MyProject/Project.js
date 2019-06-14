@@ -75,11 +75,11 @@ const dataBubble = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      label: "Red",
+      label: "Danger",
       data: dangerData
     },
     {
-      label: "Yellow",
+      label: "Warning",
       borderColor: brandPrimary,
       pointHoverBackgroundColor: "#fff",
       borderWidth: 3,
@@ -98,7 +98,7 @@ const dataBubble = {
       data: warningData
     },
     {
-      label: "Green",
+      label: "In Progress",
       backgroundColor: brandSuccess,
       borderColor: brandPrimary,
       pointHoverBackgroundColor: "#fff",

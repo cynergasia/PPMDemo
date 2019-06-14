@@ -44,7 +44,11 @@ class ProjectStatusReport extends Component {
       tiles,
       financialStatus,
       financial_per_complete,
-      execution_per_complete
+      execution_per_complete,
+      changeRegisterGraph,
+      riskRegister,
+      activityRegister,
+      issueRegister
     } = project[0];
 
     return (
@@ -71,16 +75,19 @@ class ProjectStatusReport extends Component {
         </Row>
         <Row>
           <Col xs="12" sm="12" lg="6">
-            <Risks />
+            <Risks riskRegister={riskRegister} />
           </Col>
           <Col xs="12" sm="12" lg="6">
-            <IssueRegister options={options} />
+            <IssueRegister options={options} issueRegister={issueRegister} />
           </Col>
         </Row>
 
         <Row>
           <Col xs="12" sm="12" lg="6">
-            <ChangeRegister options={options} />
+            <ChangeRegister
+              options={options}
+              changeRegisterGraph={changeRegisterGraph}
+            />
           </Col>
           <Col xs="12" sm="12" lg="6">
             <Calendar />
@@ -89,7 +96,10 @@ class ProjectStatusReport extends Component {
 
         <Row>
           <Col xs="12" sm="12" lg="6">
-            <ActivityRegister options={options} />
+            <ActivityRegister
+              options={options}
+              activityRegister={activityRegister}
+            />
           </Col>
           <Col xs="12" sm="12" lg="6">
             <Deliverables options={options} />
