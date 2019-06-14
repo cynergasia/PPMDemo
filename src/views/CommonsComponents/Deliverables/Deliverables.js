@@ -17,7 +17,7 @@ const datasets = [
     ]
   }
 ];
-const text = [`${_sum(datasets["0"].data)}`, "Deliverable"];
+const text = [`${_sum(datasets["0"].data)}`, "Deliverables"];
 const deliverablesData = { labels, datasets, text };
 
 class Deliverables extends Component {

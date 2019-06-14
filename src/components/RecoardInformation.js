@@ -57,76 +57,6 @@ class RecoardInformation extends Component {
             <div className="card-header-actions" />
           </CardHeader>
           <CardBody>
-<<<<<<< HEAD
-            <div className="avatar float-right">
-              <img
-                className="img-avatar"
-                src="assets/img/avatars/7.jpg"
-                alt="admin@bootstrapmaster.com"
-              />
-            </div>
-            <div>
-              Meeting with <strong>Lucas</strong>{" "}
-            </div>
-            <small className="text-muted mr-3">
-              <i className="icon-calendar" />&nbsp; 1 - 3pm
-            </small>
-            <small className="text-muted">
-              <i className="icon-location-pin" /> Palo Alto, CA
-            </small>
-            <hr />
-            <div className="avatar float-right">
-              <img
-                className="img-avatar"
-                src="assets/img/avatars/7.jpg"
-                alt="admin@bootstrapmaster.com"
-              />
-            </div>
-            <div>
-              Meeting with <strong>Lucas</strong>{" "}
-            </div>
-            <small className="text-muted mr-3">
-              <i className="icon-calendar" />&nbsp; 1 - 3pm
-            </small>
-            <small className="text-muted">
-              <i className="icon-location-pin" /> Palo Alto, CA
-            </small>
-            <hr/>
-            <div className="avatar float-right">
-              <img
-                className="img-avatar"
-                src="assets/img/avatars/7.jpg"
-                alt="admin@bootstrapmaster.com"
-              />
-            </div>
-            <div>
-              Meeting with <strong>Lucas</strong>{" "}
-            </div>
-            <small className="text-muted mr-3">
-              <i className="icon-calendar" />&nbsp; 1 - 3pm
-            </small>
-            <small className="text-muted">
-              <i className="icon-location-pin" /> Palo Alto, CA
-            </small>
-            <hr />
-            <div className="avatar float-right">
-              <img
-                className="img-avatar"
-                src="assets/img/avatars/7.jpg"
-                alt="admin@bootstrapmaster.com"
-              />
-            </div>
-            <div>
-              Meeting with <strong>Lucas</strong>{" "}
-            </div>
-            <small className="text-muted mr-3">
-              <i className="icon-calendar" />&nbsp; 1 - 3pm
-            </small>
-            <small className="text-muted">
-              <i className="icon-location-pin" /> Palo Alto, CA
-            </small>
-            <hr />
-=======
             <ListGroup>
               <ListGroupItem>
                 <ListGroupItemHeading
@@ -219,7 +149,6 @@ class RecoardInformation extends Component {
                 </Collapse>
               </ListGroupItem>
             </ListGroup>
->>>>>>> 880aab3e0966f82442dfb3ddcfa6a2ac1b841ee3
           </CardBody>
         </Card>
       </React.Fragment>
