@@ -8,7 +8,7 @@
       "contract_value": 6500000,
       "notification": [
         {
-          "due_date": "16 Jun 19",
+          "due_date": "06-16-19",
           "title": "Change Order C60453005-3 Approval"
         }
       ],
@@ -385,7 +385,7 @@
       "contract_value": 2300000,
       "notification": [
         {
-          "due_date": "12 Jun 19",
+          "due_date": "06-12-19",
           "title": "Invoice Approval - INV1018"
         }
       ],
@@ -411,7 +411,7 @@
       "contract_value": 320000,
       "notification": [
         {
-          "due_date": "12 Jun 19",
+          "due_date": "06-12-19",
           "title": "Invoice Approval - INV1009"
         }
       ],
@@ -437,7 +437,7 @@
       "contract_value": 800000,
       "notification": [
         {
-          "due_date": "09 Jun 19",
+          "due_date": "06-09-19",
           "title": "Deliverable D10256 Due"
         }
       ],
@@ -463,7 +463,7 @@
       "contract_value": 1589000,
       "notification": [
         {
-          "due_date": "09 Jun 19",
+          "due_date": "06-09-19",
           "title": "Project EAC change Approval"
         }
       ],
@@ -489,7 +489,7 @@
       "contract_value": 5000000,
       "notification": [
         {
-          "due_date": "07 Jun 19",
+          "due_date": "06-07-19",
           "title": "FYI: Change Order C60453013-2 Approved"
         }
       ],
@@ -529,7 +529,7 @@
       "name": "Prelim Model",
       "work_package": "MODELLING(1.03)",
       "owner": "SP",
-      "due_date": "06/09/2019",
+      "due_date": "06-09-2019",
       "planned": 240,
       "actual": 200,
       "remaning": 40,
@@ -542,7 +542,7 @@
       "name": "Tender Model",
       "work_package": "MODELLING(1.03)",
       "owner": "SP",
-      "due_date": "06/11/2019",
+      "due_date": "06-11-2019",
       "planned": 8,
       "actual": 0,
       "remaning": 8,
@@ -555,7 +555,7 @@
       "name": "Final Model",
       "work_package": "MODELLING(1.03)",
       "owner": "AM",
-      "due_date": "07/12/2019",
+      "due_date": "07-12-2019",
       "planned": 240,
       "actual": 0,
       "remaning": 240,
@@ -568,7 +568,7 @@
       "name": "Model Maintenance",
       "work_package": "MODELLING(1.03)",
       "owner": "AM",
-      "due_date": "08/12/2019",
+      "due_date": "08-12-2019",
       "planned": 240,
       "actual": 0,
       "remaning": 240,
@@ -581,7 +581,7 @@
       "name": "Prelim Design",
       "work_package": "DESIGN(1.02)",
       "owner": "SP",
-      "due_date": "03/02/2019",
+      "due_date": "03-02-2019",
       "planned": 300,
       "actual": 300,
       "remaning": 0,
@@ -594,7 +594,7 @@
       "name": "Tender Design",
       "work_package": "DESIGN(1.02)",
       "owner": "SP",
-      "due_date": "03/04/2019",
+      "due_date": "03-04-2019",
       "planned": 8,
       "actual": 8,
       "remaning": 0,
@@ -1040,5 +1040,60 @@
         "y": 25000
       }
     ]
-  }
+  },
+  "comments": [
+    {
+      "date": "06-12-19 8:15 PM",
+      "by": "Arindam Mukherjee",
+      "comment": "@Neeraj Not yet, will review tomorrow"
+    },
+    {
+      "date": "06-12-19 8:00 PM",
+      "by": "Neeraj Garg",
+      "comment": "@Arindam did you get a chance to check the draft invoice?"
+    },
+    {
+      "date": "06-11-19 7:15 PM",
+      "by": "Suresh Padmanabhan",
+      "comment": "Yes, it is at 83%. I will update progress today"
+    },
+    {
+      "date": "06-11-19 6:00 PM",
+      "by": "Arindam Mukherjee",
+      "comment":
+        "Should I extend the date for this activity and what is the % complete now?"
+    },
+    {
+      "date": "06-11-19 4:45 PM",
+      "by": "Suresh Padmanabhan",
+      "comment": "I am behind on #Activity A1.3.1"
+    }
+  ],
+  "activityLog": [
+    {
+      "date": "06-13-19 8:15 PM",
+      "by": "System",
+      "comment": "Project Approval Complete"
+    },
+    {
+      "date": "06-13-19 8:14 PM",
+      "by": "Neeraj Garg",
+      "comment": "Approved project execution request"
+    },
+    {
+      "date": "06-13-19 7:50 PM",
+      "by": "Suresh Padmanabhan",
+      "comment": "Updated PPC on #activity A1.03.01 to 83%"
+    },
+    {
+      "date": "06-13-19 7:30 PM",
+      "by": "Suresh Padmanabhan",
+      "comment": "Submitted project for approval"
+    },
+    {
+      "date": "06-13-19 7:30 PM",
+      "by": "System",
+      "comment": "Draft Invoice for USD 100,000 generated"
+    }
+  ]
 }

@@ -64,8 +64,8 @@ class ActivityRegister extends Component {
                   <Doughnut
                     data={this.state.data}
                     options={this.props.options}
-                    height={1}
-                    width={1}
+                    height={150}
+                    width={150}
                   />
                   {/* <span className="register doughnutText text-center">
                     <p>{totalCount}</p> <span>Activities</span>

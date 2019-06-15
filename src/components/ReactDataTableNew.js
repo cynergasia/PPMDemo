@@ -6,7 +6,9 @@ class ReactDataTableNew extends Component {
     const {
       entries = 3,
       entriesOptions = [3, 10, 20, 50, 100],
-      isButton = false
+      isButton = false,
+      paging = true,
+      searching = true
     } = this.props;
     return (
       <React.Fragment>
@@ -22,6 +24,8 @@ class ReactDataTableNew extends Component {
           data={this.props.data}
           entriesOptions={entriesOptions}
           entries={entries}
+          paging={paging}
+          searching={searching}
         />
       </React.Fragment>
     );

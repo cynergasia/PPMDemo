@@ -56,8 +56,8 @@ class ChangeRegister extends Component {
                   <Doughnut
                     data={changeRegisterData}
                     options={this.props.options}
-                    height={512}
-                    width={512}
+                    height={150}
+                    width={150}
                   />
                   {/* <span className="doughnutText text-center">
                     <p>{totalCount}</p> <span>Changes</span>

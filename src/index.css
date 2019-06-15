@@ -80,9 +80,9 @@
   flex-wrap: wrap;
 }
 
-.summary-status-value-wrap .left .property {
+/* .summary-status-value-wrap .left .property {
   width: calc(100% - 18px);
-}
+} */
 
 .summary-status-value-wrap .left .property-value {
   width: 10px;
@@ -387,6 +387,13 @@ h6.chart-title {
 }
 
 /***** Responsive *****/
+
+@media (min-width: 768px) {
+  .col-doughnut {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+}
 
 @media (max-width: 991px) {
   .app-header a.navbar-brand {
