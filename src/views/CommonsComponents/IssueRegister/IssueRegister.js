@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody, Row, Col } from "reactstrap";
 import { Doughnut } from "react-chartjs-2";
-import { CustomTooltips } from "@coreui/coreui-plugin-chartjs-custom-tooltips";
 import IssueRegisterStatus from "./IssueRegisterStatus";
 import _sum from "lodash/sum";
 import database from "../../../database";
@@ -49,7 +48,6 @@ class IssueRegister extends Component {
       "Issues"
     ];
     this.setState({ data: { ...issueProjectData } });
-    console.log(newArr);
   }
   render() {
     return (
