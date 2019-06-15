@@ -221,13 +221,6 @@ table.dataTable {
   }
 }
 
-@media (min-width: 768px) {
-  .col-doughnut {
-    flex: 0 0 30%;
-    max-width: 30%;
-  }
-}
-
 @media (min-width: 992px) {
   html:not([dir="rtl"]) .aside-menu-show.aside-menu-fixed .main,
   html:not([dir="rtl"]) .aside-menu-show.aside-menu-fixed .app-footer,

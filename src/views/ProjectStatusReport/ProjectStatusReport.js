@@ -48,7 +48,9 @@ class ProjectStatusReport extends Component {
       changeRegisterGraph,
       riskRegister,
       activityRegister,
-      issueRegister
+      issueRegister,
+      deliverablesRegister,
+      financialAnalysis
     } = project[0];
 
     return (
@@ -102,12 +104,15 @@ class ProjectStatusReport extends Component {
             />
           </Col>
           <Col xs="12" sm="12" lg="6">
-            <Deliverables options={options} />
+            <Deliverables
+              options={options}
+              deliverablesRegister={deliverablesRegister}
+            />
           </Col>
         </Row>
         <Row>
           <Col xs="12" sm="12" lg="6">
-            <FinancialAnalysis />
+            <FinancialAnalysis financialAnalysis={financialAnalysis} />
           </Col>
           <Col xs="12" sm="12" lg="6">
             <FinancialStatus financialStatus={financialStatus} />

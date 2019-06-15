@@ -12,162 +12,31 @@ import {
 } from "@syncfusion/ej2-react-charts";
 import { Browser } from "@syncfusion/ej2-base";
 import { Card, CardBody, CardHeader } from "reactstrap";
+import database from "../../../database";
 
-export let data1 = [
-  {
-    x: "Jan 2018",
-    y: 4000
-  },
-  {
-    x: "Feb 2018",
-    y: 20000
-  },
-  {
-    x: "Mar 2018",
-    y: 29000
-  },
-  {
-    x: "Apr 2018",
-    y: 29000
-  },
-  {
-    x: "May 2018",
-    y: 29000
-  },
-  {
-    x: "Jun 2018",
-    y: 29000
-  },
-  {
-    x: "July 2018",
-    y: 0
-  },
-  {
-    x: "Aug 2018",
-    y: 29000
-  },
-  {
-    x: "Sep 2018",
-    y: 1200
-  },
-  {
-    x: "Octo 2018",
-    y: 500
-  },
-  {
-    x: "Nov 2018",
-    y: 29000
-  },
-  {
-    x: "Dec 2018",
-    y: 29000
-  }
-];
-export let data2 = [
-  {
-    x: "Jan 2018",
-    y: 4000
-  },
-  {
-    x: "Feb 2018",
-    y: 20000
-  },
-  {
-    x: "Mar 2018",
-    y: 29000
-  },
-  {
-    x: "Apr 2018",
-    y: 29000
-  },
-  {
-    x: "May 2018",
-    y: 5000
-  },
-  {
-    x: "Jun 2018",
-    y: 39000
-  },
-  {
-    x: "July 2018",
-    y: 40000
-  },
-  {
-    x: "Aug 2018",
-    y: 4000
-  },
-  {
-    x: "Sep 2018",
-    y: 2000
-  },
-  {
-    x: "Octo 2018",
-    y: 35000
-  },
-  {
-    x: "Nov 2018",
-    y: 15000
-  },
-  {
-    x: "Dec 2018",
-    y: 10000
-  }
-];
-export let data3 = [
-  {
-    x: "Jan 2018",
-    y: 500
-  },
-  {
-    x: "Feb 2018",
-    y: 7000
-  },
-  {
-    x: "Mar 2018",
-    y: 35000
-  },
-  {
-    x: "Apr 2018",
-    y: 7500
-  },
-  {
-    x: "May 2018",
-    y: 5500
-  },
-  {
-    x: "Jun 2018",
-    y: 3300
-  },
-  {
-    x: "July 2018",
-    y: 2000
-  },
-  {
-    x: "Aug 2018",
-    y: 900
-  },
-  {
-    x: "Sep 2018",
-    y: 0
-  },
-  {
-    x: "Octo 2018",
-    y: 9000
-  },
-  {
-    x: "Nov 2018",
-    y: 35000
-  },
-  {
-    x: "Dec 2018",
-    y: 25000
-  }
-];
 const SAMPLE_CSS = `
     .control-fluid {
 		padding: 0px !important;
     }`;
 export class FinancialAnalysis extends Component {
+  state = {
+    data1: [],
+    data2: [],
+    data3: []
+  };
+
+  componentDidMount() {
+    const { actualData, plannedData, forecastData } = this.props
+      .financialAnalysis
+      ? this.props.financialAnalysis
+      : database.financialAnalysis;
+    this.setState({
+      data1: actualData,
+      data2: plannedData,
+      data3: forecastData
+    });
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -226,7 +95,7 @@ export class FinancialAnalysis extends Component {
                     />
                     <SeriesCollectionDirective>
                       <SeriesDirective
-                        dataSource={data1}
+                        dataSource={this.state.data1}
                         xName="x"
                         yName="y"
                         lineStyle={{
@@ -247,7 +116,7 @@ export class FinancialAnalysis extends Component {
                         }}
                       />
                       <SeriesDirective
-                        dataSource={data2}
+                        dataSource={this.state.data2}
                         xName="x"
                         yName="y"
                         name="Planned"
@@ -264,7 +133,7 @@ export class FinancialAnalysis extends Component {
                         }}
                       />
                       <SeriesDirective
-                        dataSource={data3}
+                        dataSource={this.state.data3}
                         xName="x"
                         yName="y"
                         name="Forecast (saved)"
