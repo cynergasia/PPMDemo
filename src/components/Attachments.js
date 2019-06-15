@@ -35,7 +35,7 @@ class Attachments extends Component {
                       >
                         <div className="mt-3 mb-5 text-center">
                           <i className="cui-cloud-upload text-primary" /> Drop
-                          files to attach,or browse
+                          files to attach,or browser
                         </div>
                         <div />
                         <div className="mt-5 row align-items-center justify-content-between">

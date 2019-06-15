@@ -187,11 +187,11 @@ class Project extends Component {
           <CardBody className="myproejct-boxs">
             <div className="chart-wrapper project">
               <div className="chart-header">
-                <p>Physical Percent Complete</p>
+                <p>Financial Percent Complete</p>
               </div>
               <Bubble data={dataBubble} options={dataBubbleChartOpts} />
               <div className="chart-footer">
-                <p>Financial Percent Complete</p>
+                <p>Physical Percent Complete</p>
               </div>
             </div>
           </CardBody>
