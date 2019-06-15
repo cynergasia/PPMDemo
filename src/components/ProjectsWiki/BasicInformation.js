@@ -18,11 +18,11 @@ import wikidata from "./projectwikidata";
 
 const intialState = {
   isProjectInfo: false,
-  isProjectDetail: false,
+  //isProjectDetail: false,
   isTeamMember: false,
   isClassification: false,
   isplusclass1: false,
-  isplusclass2: false,
+  //isplusclass2: false,
   isplusclass3: false,
   isplusclass4: false
 };
@@ -67,13 +67,13 @@ class BasicInformation extends Component {
       isplusclass1: !this.state.isplusclass1
     });
   };
-  toggleDetail = () => {
-    this.setState({
-      ...intialState,
-      isProjectDetail: !this.state.isProjectDetail,
-      isplusclass2: !this.state.isplusclass2
-    });
-  };
+  // toggleDetail = () => {
+  //   this.setState({
+  //     ...intialState,
+  //     isProjectDetail: !this.state.isProjectDetail,
+  //     isplusclass2: !this.state.isplusclass2
+  //   });
+  // };
   toggleTeamMember = () => {
     this.setState({
       ...intialState,
@@ -144,197 +144,104 @@ class BasicInformation extends Component {
           </CardHeader>
           <CardBody>
             {/* <pre className="m-0">{basicProjectInfo}</pre> className="project-wiki-basicinfo"  */}
-            <div>
-              <ListGroup>
-                <ListGroupItem>
-                  <ListGroupItemHeading
-                    className="cursor-pointer"
-                    onClick={() => this.toggleInfo()}
-                  >
-                    <i
-                      className={
-                        this.state.isplusclass1
-                          ? "fa-plus-minus fa fa-minus-square-o mr-2"
-                          : "fa-plus-minus fa fa-plus-square-o mr-2"
-                      }
-                    />
-                    <span className="text-primary">Project Information</span>
-                  </ListGroupItemHeading>
-                  <ListGroupItemText>
-                    <Collapse isOpen={this.state.isplusclass1}>
-                      <Table responsive bordered>
-                        <tbody>
-                          <tr>
-                            <td className="basicinfo text-center">
-                              <div>Project Number </div>
-                            </td>
-                            <td className="text-center">
-                              <div>6000001</div>
-                            </td>
-                            <td className="basicinfo text-center">
-                              <div>Project Number </div>
-                            </td>
-                            <td className="text-center">
-                              <div>Extensions N/Cape Mall Phase 3 </div>
-                            </td>
-                          </tr>
+            
+            <ListGroup>
+              <ListGroupItem>  
+              <ListGroupItemHeading
+                  className="cursor-pointer"
+                  onClick={() => this.toggleInfo()}
+                >
+                  <i
+                    className={
+                      this.state.isplusclass1
+                        ? "fa-plus-minus fa fa-minus-square-o mr-2"
+                        : "fa-plus-minus fa fa-plus-square-o mr-2"
+                    }
+                  />
+                  <span className="text-primary">Project Information</span>
+                </ListGroupItemHeading>
+                <ListGroupItemText>   
+                <Collapse isOpen={this.state.isplusclass1}>    
+                 <Table
+                  responsive 
+                  bordered                 
+                    >                         
+                
+                  <tbody>                  
+                    <tr>
+                      <td className="basicinfo text-left"><div>Project Number </div></td>
+                      <td className="text-left"><div>60453005</div></td>
+                      <td className="basicinfo text-left"><div>Project Name </div></td>
+                      <td className="text-left"><div>Extensions N/Cape Mall Phase 3 </div></td>
+                    </tr>
 
-                          <tr>
-                            <td className="basicinfo text-center">
-                              <div>Project Type </div>
-                            </td>
-                            <td className="text-center">
-                              <div>Contract</div>
-                            </td>
-                            <td className="basicinfo text-center">
-                              <div>Opportunity Number </div>
-                            </td>
-                            <td className="text-center">
-                              <div>SFOPP00030</div>
-                            </td>
-                          </tr>
+                    <tr>
+                      <td className="basicinfo text-left"><div>Project Type </div></td>
+                      <td className="text-left"><div>Contract</div></td>
+                      <td className="basicinfo text-left"><div>Opportunity Number </div></td>
+                      <td className="text-left"><div>SFOPP00030</div></td>
+                    </tr>
 
-                          <tr>
-                            <td className="basicinfo text-center">
-                              <div>Organization </div>
-                            </td>
-                            <td className="text-center">
-                              <div>80.ACM.LAX.1</div>
-                            </td>
-                            <td className="basicinfo text-center">
-                              <div>Federal Project </div>
-                            </td>
-                            <td className="text-center">
-                              <div>No</div>
-                            </td>
-                          </tr>
+                    <tr>
+                      <td className="basicinfo text-left"><div>Organization </div></td>
+                      <td className="text-left"><div>80.ACM.LAX.1</div></td>
+                      <td className="basicinfo text-left"><div>Federal Project </div></td>
+                      <td className="text-left"><div>No</div></td>
+                    </tr>
 
-                          <tr>
-                            <td className="basicinfo text-center">
-                              <div>Currency </div>
-                            </td>
-                            <td className="text-center">
-                              <div>USD </div>
-                            </td>
-                            <td className="basicinfo text-center">
-                              <div>Partnering Needed </div>
-                            </td>
-                            <td className="text-center">
-                              <div>No </div>
-                            </td>
-                          </tr>
+                    <tr>
+                      <td className="basicinfo text-left"><div>Currency </div></td>
+                      <td className="text-left"><div>USD </div></td>
+                      <td className="basicinfo text-left"><div>Partnering Needed </div></td>
+                      <td className="text-left"><div>No </div></td>
+                    </tr>
 
-                          <tr>
-                            <td className="basicinfo text-center">
-                              <div>Stage </div>
-                            </td>
-                            <td className="text-center">
-                              <div>Execution </div>
-                            </td>
-                            <td className="basicinfo text-center">
-                              <div>Project Manager </div>
-                            </td>
-                            <td className="text-center">
-                              <div>Suresh Padmanabhan(SP) </div>
-                            </td>
-                          </tr>
+                    <tr>
+                        <td className="basicinfo text-left"><div>Stage </div></td>
+                        <td className="text-left"><div>Execution </div></td>
+                        <td className="basicinfo text-left"><div>Project Manager </div></td>
+                        <td className="text-left"><div>Suresh Padmanabhan(SP) </div></td>
+                    </tr>
 
-                          <tr>
-                            <td className="basicinfo text-center">
-                              <div>Project Approve </div>
-                            </td>
-                            <td className="text-center">
-                              <div>Neeraj Garg (NG) </div>
-                            </td>
-                            <td className="basicinfo text-center">
-                              <div>P&L Manager </div>
-                            </td>
-                            <td className="text-center">
-                              <div>Arindam Mukherjee(AM) </div>
-                            </td>
-                          </tr>
+                    <tr>
+                      <td className="basicinfo text-left"><div>Project Approve </div></td>
+                      <td className="text-left"><div>Neeraj Garg (NG) </div></td>
+                      <td className="basicinfo text-left"><div>P&L Manager </div></td>
+                      <td className="text-left"><div>Arindam Mukherjee(AM) </div></td>
+                    </tr>
 
-                          <tr>
-                            <td className="basicinfo text-center">
-                              <div>Region </div>
-                            </td>
-                            <td className="text-center">
-                              <div>United States </div>
-                            </td>
-                            <td className="basicinfo text-center">
-                              <div>Available to Copy </div>
-                            </td>
-                            <td className="text-center">
-                              <div>Yes</div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td className="basicinfo text-center">
-                              <div>Type </div>
-                            </td>
-                            <td className="text-center">
-                              <div>Contract </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </Table>
-                    </Collapse>
-                  </ListGroupItemText>
-                </ListGroupItem>
-              </ListGroup>
-              {/* Project detail */}
-              <ListGroup>
-                <ListGroupItem>
-                  <ListGroupItemHeading
-                    className="cursor-pointer"
-                    onClick={() => this.toggleDetail()}
-                  >
-                    <i
-                      className={
-                        this.state.isplusclass2
-                          ? "fa-plus-minus fa fa-minus-square-o mr-2"
-                          : "fa-plus-minus fa fa-plus-square-o mr-2"
-                      }
-                    />
-                    <span className="text-primary">Project Details</span>
-                  </ListGroupItemHeading>
-                  <ListGroupItemText>
-                    <Collapse isOpen={this.state.isplusclass2}>
-                      <Table
-                        hover
-                        responsive
-                        className="table-outline mb-0 d-none d-sm-table"
-                      >
-                        <thead className="thead-light">
-                          <tr>
-                            <th className="text-center">Project Details</th>
-                            <th className="text-center" />
-                            <th className="text-center" />
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td className="text-center">
-                              <div>Extensions N/Cape Mall Phase 3 </div>
-                            </td>
-                            <td className="text-center">
-                              <div> </div>
-                            </td>
-                            <td className="text-center">
-                              <div> </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </Table>
-                    </Collapse>
-                  </ListGroupItemText>
-                </ListGroupItem>
-              </ListGroup>
+                    <tr>
+                      <td className="basicinfo text-left"><div>Region </div></td>
+                      <td className="text-left"><div>United States </div></td>
+                      <td className="basicinfo text-left"><div>Available to Copy </div></td>
+                      <td className="text-left"><div>Yes</div></td>
+                    </tr>
+                    
+                    <tr>
+                    <td className="basicinfo text-left"><div>Type </div></td>
+                    <td className="text-left"><div>Contract </div></td>
+                     
+                    </tr>   
+                    <tr>
+                      <td className=" basicinfo text-left">Project Details</td>
+                      <td colspan="3">
+                      <Input type="textarea" rows="2" value="Extensions N/Cape Mall Phase 3" /> 
+                      </td>
+                    </tr>                
+           
+                </tbody>
+                </Table>
+                </Collapse>
+                </ListGroupItemText>
+                </ListGroupItem> 
+                </ListGroup>
+         
+             
 
               {/* Team Members */}
               <ListGroup>
                 <ListGroupItem>
+
                   <ListGroupItemHeading
                     className="cursor-pointer"
                     onClick={() => this.toggleTeamMember()}
@@ -356,20 +263,7 @@ class BasicInformation extends Component {
                         className="table-outline mb-0 d-none d-sm-table"
                       >
                         <thead className="thead-light">
-                          <tr>
-                            <th className="text-center">Team Members</th>
-                            <th className="text-center" />
-                            <th className="text-center">
-                              <span className="btn btn-success">
-                                <i className="fa fa-plus" />
-                              </span>
-                            </th>
-                            <th className="text-center">
-                              <span className="btn btn-danger">
-                                <i className="fa fa-trash" />
-                              </span>
-                            </th>
-                          </tr>
+                       
                           <tr>
                             <th className="text-center">Person</th>
                             <th className="text-center">Role</th>
@@ -421,96 +315,65 @@ class BasicInformation extends Component {
                 </ListGroupItem>
               </ListGroup>
 
-              {/* Classification */}
-
-              <ListGroup>
-                <ListGroupItem>
-                  <ListGroupItemHeading
-                    className="cursor-pointer"
-                    onClick={() => this.toggleClassification()}
-                  >
-                    <i
-                      className={
-                        this.state.isplusclass4
-                          ? "fa-plus-minus fa fa-minus-square-o mr-2"
-                          : "fa-plus-minus fa fa-plus-square-o mr-2"
-                      }
-                    />
-                    <span className="text-primary">Classification</span>
-                  </ListGroupItemHeading>
-                  <ListGroupItemText>
-                    <Collapse isOpen={this.state.isplusclass4}>
-                      <Table
-                        hover
-                        responsive
-                        className="table-outline mb-0 d-none d-sm-table"
-                      >
-                        <thead className="thead-light">
-                          <tr>
-                            <th className="text-center">Classification</th>
-                            <th className="text-center" />
-                            <th className="text-center">
-                              <button class="btn btn-primary">
-                                <i class="fa fa-plus mr-2" />Add
-                              </button>
-                            </th>
-                            <th className="text-center">
-                              <button class="btn btn-danger">
-                                <i class="fa fa-trash mr-2" />Delete
-                              </button>
-                            </th>
-                          </tr>
-                          <tr>
-                            <th className="text-center">Category</th>
-                            <th className="text-center">Value</th>
-                            <th className="text-center">Start Date</th>
-                            <th className="text-center">End Date</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td className="text-center">
-                              <div>Business Line </div>
-                            </td>
-                            <td className="text-center">
-                              <div>Transportation </div>
-                            </td>
-                            <td className="text-center">
-                              <div>01-01-2019 </div>
-                            </td>
-                            <th className="text-center">16-02-2020</th>
-                          </tr>
-                          <tr>
-                            <td className="text-center">
-                              <div>Sub-Business Line </div>
-                            </td>
-                            <td className="text-center">
-                              <div>Rail </div>
-                            </td>
-                            <td className="text-center">
-                              <div>01-01-2019 </div>
-                            </td>
-                            <th className="text-center">16-02-2020</th>
-                          </tr>
-                          <tr>
-                            <td className="text-center">
-                              <div>Fedral Project</div>
-                            </td>
-                            <td className="text-center">
-                              <div>No</div>
-                            </td>
-                            <td className="text-center">
-                              <div>01-01-2019 </div>
-                            </td>
-                            <th className="text-center">16-02-2020</th>
-                          </tr>
-                        </tbody>
-                      </Table>
-                    </Collapse>
+                <ListGroup>   
+                <ListGroupItem> 
+                <ListGroupItemHeading
+                  className="cursor-pointer"
+                  onClick={() => this.toggleClassification()}
+                >
+                  <i
+                    className={
+                      this.state.isplusclass4
+                        ? "fa-plus-minus fa fa-minus-square-o mr-2"
+                        : "fa-plus-minus fa fa-plus-square-o mr-2"
+                    }
+                  />
+                  <span className="text-primary">Classification</span>
+                </ListGroupItemHeading>
+                <ListGroupItemText>   
+                <Collapse isOpen={this.state.isplusclass4}>
+                <Table
+                  hover
+                  responsive
+                  className="table-outline mb-0 d-none d-sm-table"
+                >
+                  <thead className="thead-light">                   
+                   
+                    <tr>
+                      <th className="text-left">Category</th>
+                      <th className="text-left">Value</th>
+                      <th className="text-left">Start Date</th>
+                      <th className="text-left">End Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td className="text-left"><div>Business Line </div></td>
+                    <td className="text-left"><div>Transportation </div></td>
+                    <td className="text-left"><div>01-01-2019 </div></td>
+                    <th className="text-left">02-16-2020</th>                     
+                  </tr>    
+                  <tr>
+                    <td className="text-left"><div>Sub-Business Line </div></td>
+                    <td className="text-left"><div>Rail </div></td>
+                    <td className="text-left"><div>01-01-2019 </div></td>
+                    <th className="text-left">02-16-2020</th>                     
+                  </tr>    
+                  <tr>
+                    <td className="text-left"><div>Fedral Project</div></td>
+                    <td className="text-left"><div>No</div></td>
+                    <td className="text-left"><div>01-01-2019 </div></td>
+                    <th className="text-left">02-16-2020</th>                     
+                  </tr>    
+                  </tbody>
+                  </Table>
+                  </Collapse>
                   </ListGroupItemText>
-                </ListGroupItem>
-              </ListGroup>
-            </div>
+                  </ListGroupItem>
+                  </ListGroup>     
+            
+           
+            
           </CardBody>
         </Card>
       </React.Fragment>

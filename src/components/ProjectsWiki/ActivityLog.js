@@ -40,7 +40,7 @@ export class ActivityLog extends Component {
                 <a data-toggle="tab" className={`${
                   activeTab === "2" ? "active nav-link" : "nav-link"
                   }`}
-                onClick={() => this.toggle("2")}>Project ActivityLog</a>
+                onClick={() => this.toggle("2")}>Activity Log</a>
              </li>
             
             </ul>
