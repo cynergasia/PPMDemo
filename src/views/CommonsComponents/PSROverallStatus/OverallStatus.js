@@ -73,6 +73,7 @@ class OverallStatus extends Component {
                   showMonthDropdown
                   useShortMonthInDropdown
                   todayButton={"Today"}
+                  dateFormat="MM-dd-yyyy"
                 />
               </Col>
             </Row>

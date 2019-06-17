@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import MeetingTableList from "../../components/Meeting/MeetingTableList";
+import getMeetingList from "../../meetinglist_database";
 
 class MettingList extends Component {
   render() {
+    const { meetingList } = getMeetingList();
+
     return (
       <React.Fragment>
         <div className="animated fadeIn">
@@ -28,7 +31,7 @@ class MettingList extends Component {
           </Row>
           <Row>
             <Col sm="12" md="12" lg="12">
-              <MeetingTableList />
+              <MeetingTableList meetingList={meetingList} />
             </Col>
           </Row>
         </div>

@@ -1,0 +1,50 @@
+{
+  "activities": [
+    {
+      "description": "NULL",
+      "assigned_to": "NULL",
+      "start_date": "NULL",
+      "due_date": "NULL",
+      "status": "NULL",
+      "per_complete": "NULL"
+    }
+  ],
+  "activityLog": [
+    {
+      "date": "06-13-19 8:15 PM",
+      "by": "Neeraj Garg",
+      "comment": "Digital and Printed Draft Exhibit for Potential Conversion"
+    },
+    {
+      "date": "06-13-19 8:14 PM",
+      "by": "Arindam Mukherjee",
+      "comment": "Digital and Printed Draft of cart path modifications"
+    }
+  ],
+  "deliverablesList": [
+    {
+      "deliverable_name": "Design Document",
+      "workpackage": "WP01",
+      "type": "Document",
+      "owner": "Arindam",
+      "due_date": "01-03-20",
+      "status": "Transmitted",
+      "completion_date": "NULL",
+      "progress": "NULL",
+      "comments": "NULL",
+      "public": "Y"
+    },
+    {
+      "deliverable_name": "Design Document",
+      "workpackage": "WP02",
+      "type": "Document",
+      "owner": "SD",
+      "due_date": "01-03-20",
+      "status": "Closed",
+      "completion_date": "NULL",
+      "progress": "NULL",
+      "comments": "NULL",
+      "public": "Y"
+    }
+  ]
+}

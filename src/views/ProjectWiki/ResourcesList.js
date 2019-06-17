@@ -2,9 +2,17 @@ import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import ResourcesTableList from "../../components/Resources/ResourcesTableList";
+import user_database from "../../user_database";
 
 class ResourcesList extends Component {
   render() {
+    const { id } = this.props.match.params;
+    const { users } = user_database;
+    let user = users.filter(item => item.id === id);
+    if (user.length === 0) {
+      window.location.hash = "/";
+    }
+
     return (
       <React.Fragment>
         <div className="animated fadeIn">
@@ -28,7 +36,7 @@ class ResourcesList extends Component {
           </Row>
           <Row>
             <Col sm="12" md="12" lg="12">
-              <ResourcesTableList />
+              <ResourcesTableList user={user[0]} />
             </Col>
           </Row>
         </div>

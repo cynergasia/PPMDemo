@@ -1,7 +1,17 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody, Row, Col, Input } from "reactstrap";
+import DatePicker from "react-datepicker";
 
 class MeetingInformation extends Component {
+  state = {
+    startDate: new Date()
+  };
+  handleChange = date => {
+    this.setState({
+      startDate: date
+    });
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -28,7 +38,7 @@ class MeetingInformation extends Component {
               <Col sm="12" md="6" lg="3" className="mb-2">
                 <Row>
                   <Col sm="12" md="6" lg="6">
-                    Recurring
+                    Recurring :
                   </Col>
                   <Col sm="12" md="6" lg="6">
                     <Input type="text" name="template" />
@@ -38,7 +48,7 @@ class MeetingInformation extends Component {
               <Col sm="12" md="6" lg="3" className="mb-2">
                 <Row>
                   <Col sm="12" md="6" lg="6">
-                    Frequency
+                    Frequency :
                   </Col>
                   <Col sm="12" md="6" lg="6">
                     <select name="frequency" className="form-control">
@@ -53,7 +63,7 @@ class MeetingInformation extends Component {
               <Col sm="12" md="6" lg="3" className="mb-2">
                 <Row>
                   <Col sm="12" md="6" lg="6">
-                    Ends on
+                    Ends on :
                   </Col>
                   <Col sm="12" md="6" lg="6">
                     <Input type="text" name="template" />
@@ -65,17 +75,26 @@ class MeetingInformation extends Component {
               <Col sm="12" md="6" lg="3" className="mb-2">
                 <Row>
                   <Col sm="12" md="6" lg="5">
-                    Date
+                    Date :
                   </Col>
                   <Col sm="12" md="6" lg="7">
-                    <Input type="date" name="meetingdate" />
+                    <DatePicker
+                      selected={this.state.startDate}
+                      onChange={this.handleChange}
+                      className="form-control"
+                      showYearDropdown
+                      showMonthDropdown
+                      useShortMonthInDropdown
+                      todayButton={"Today"}
+                      dateFormat="MM-dd-yyyy"
+                    />
                   </Col>
                 </Row>
               </Col>
               <Col sm="12" md="6" lg="3">
                 <Row>
                   <Col sm="12" md="6" lg="6">
-                    Location
+                    Location :
                   </Col>
                   <Col sm="12" md="6" lg="6">
                     <Input type="text" name="location" />
@@ -86,7 +105,7 @@ class MeetingInformation extends Component {
             <Row>
               <Col sm="12" md="12" lg="12">
                 <div className="form-group">
-                  <label>Attendee </label>
+                  <label>Attendee : </label>
                   <Input type="textarea" rows="3" />
                 </div>
               </Col>
