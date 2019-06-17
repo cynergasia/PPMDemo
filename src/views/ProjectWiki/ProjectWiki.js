@@ -23,13 +23,14 @@ class ProjectWiki extends Component {
   activityLogRef = React.createRef();
 
   componentDidMount() {
-    setTimeout(this.fixSidebar, 80);
+    // setTimeout(this.fixSidebar, 80);
+    this.fixSidebar();
   }
 
   fixSidebar = () => {
     this.sidebar = new StickySidebar(".sidebar", {
       topSpacing: 0,
-      bottomSpacing: 0,
+      bottomSpacing: 0,    
       containerSelector: ".main-content",
       innerWrapperSelector: ".sidebar__inner"
     });
