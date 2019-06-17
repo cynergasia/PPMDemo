@@ -1,5 +1,18 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
-import { Card, CardHeader, CardBody, TabContent, TabPane } from "reactstrap";
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  TabContent,
+  TabPane,
+  ListGroup,
+  ListGroupItem,
+  ListGroupItemText,
+  ListGroupItemHeading
+} from "reactstrap";
+import { routesURL } from "../../constant/routesURL";
+import { Link } from "react-router-dom";
 
 class WorkPackageIssueChanges extends Component {
   state = {
@@ -19,24 +32,32 @@ class WorkPackageIssueChanges extends Component {
     return (
       <React.Fragment>
         <Card>
-          <CardHeader>
-            <span
-              className={`${
-                activeTab === "1" ? "text-primary" : ""
-              } mr-3 cursor-pointer`}
-              onClick={() => this.toggle("1")}
-            >
-              Issues
-            </span>
+          <CardHeader className="cardtabsboxs">
+            <ul class="nav nav-tabs">
+              <li className="nav-item">
+                <a
+                  data-toggle="tab"
+                  className={`${
+                    activeTab === "1" ? "active nav-link" : "nav-link"
+                  }`}
+                  onClick={() => this.toggle("1")}
+                >
+                  Issues
+                </a>
+              </li>
 
-            <span
-              className={`${
-                activeTab === "2" ? "text-primary" : ""
-              } mr-3 cursor-pointer`}
-              onClick={() => this.toggle("2")}
-            >
-              Changes
-            </span>
+              <li className="nav-item">
+                <a
+                  data-toggle="tab"
+                  className={`${
+                    activeTab === "2" ? "active nav-link" : "nav-link"
+                  }`}
+                  onClick={() => this.toggle("2")}
+                >
+                  Changes
+                </a>
+              </li>
+            </ul>
 
             <div className="card-header-actions">
               <i className="fa fa-file-excel-o mr-2" />
@@ -47,33 +68,10 @@ class WorkPackageIssueChanges extends Component {
           <CardBody>
             <TabContent activeTab={activeTab} className="border-0">
               <TabPane tabId="1">
-                {
-                  "Overdue High Priority Issues (<30 days): issue1 (Neeraj) issue 2(Suresh), Issue3 (Arindam), (…)"
-                }{" "}
-                <br />
-                {
-                  "Overdue High Prioirity Issues(>30 & < 60): Issue 4(Suresh), Issue 9(Arindam), (..)"
-                }{" "}
-                <br />
-                {
-                  "Overdue High Prioirity Issues(> 60): Issue 0(Suresh), Issue 900(Arindam), (..)"
-                }{" "}
-                <br />
-                All Issues .. <br />
+                There are 4 change orders approved till system date. Last change
+                order of $40000 was approved on 21st Mar,2019.
               </TabPane>
-              <TabPane tabId="2">
-                {"Pending Approval Changes: Change1, Change4, (…)"}
-                <br />
-                {
-                  "Approved Changes Still open: Change 400(Neeraj), Change 19(Arindam), (..)"
-                }
-                <br />
-                {
-                  "Overdue Approved Changes(> 30): Change 220(Suresh), Change 9100(Arindam), (..)"
-                }
-                <br />
-                All Changes ..
-              </TabPane>
+              <TabPane tabId="2" />
             </TabContent>
           </CardBody>
         </Card>

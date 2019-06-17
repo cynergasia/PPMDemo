@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import { Card, CardHeader, CardBody, TabContent, TabPane,
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  TabContent,
+  TabPane,
   ListGroup,
   ListGroupItem,
   ListGroupItemHeading,
@@ -27,126 +32,216 @@ class IssueChanges extends Component {
         <Card>
           <CardHeader className="cardtabsboxs">
             <ul class="nav nav-tabs">
-            
               <li className="nav-item">
-                <a data-toggle="tab" 
-                className={`${
-                  activeTab === "1" ? "active nav-link" : "nav-link"
+                <a
+                  data-toggle="tab"
+                  className={`${
+                    activeTab === "1" ? "active nav-link" : "nav-link"
                   }`}
-                onClick={() => this.toggle("1")}>Issues</a>
+                  onClick={() => this.toggle("1")}
+                >
+                  Issues
+                </a>
               </li>
 
               <li className="nav-item">
-                <a data-toggle="tab" className={`${
-                  activeTab === "2" ? "active nav-link" : "nav-link"
+                <a
+                  data-toggle="tab"
+                  className={`${
+                    activeTab === "2" ? "active nav-link" : "nav-link"
                   }`}
-                onClick={() => this.toggle("2")}>Changes</a>
+                  onClick={() => this.toggle("2")}
+                >
+                  Changes
+                </a>
               </li>
 
               <li className="nav-item">
-                <a data-toggle="tab" className={`${
-                  activeTab === "3" ? "active nav-link" : "nav-link"
+                <a
+                  data-toggle="tab"
+                  className={`${
+                    activeTab === "3" ? "active nav-link" : "nav-link"
                   }`}
-                onClick={() => this.toggle("3")}>RFIs</a>
+                  onClick={() => this.toggle("3")}
+                >
+                  RFIs
+                </a>
               </li>
             </ul>
 
-
-            <div className="card-header-actions">             
+            <div className="card-header-actions">
               <i className="fa fa-plus-circle mr-2" />
               <i className="fa fa-pencil-square" />
             </div>
-
-
           </CardHeader>
           <CardBody>
             <TabContent activeTab={activeTab} className="border-0">
               <TabPane tabId="1">
-              <ListGroup>
-                <ListGroupItem>  
-                <ListGroupItemText>
-                <ListGroupItemHeading> {"Overdue High Priority Issues (<30 days)"}: </ListGroupItemHeading> 
-                  
-                  <Link to={routesURL.PAGE_NOT_FOUND}> issue1 (Neeraj)</Link><br/>
-                  <Link to={routesURL.PAGE_NOT_FOUND}> issue 2(Suresh)</Link><br/>
-                  <Link to={routesURL.PAGE_NOT_FOUND}> Issue3 (Arindam)</Link><br/>                  
-                  <br />
-                  <ListGroupItemHeading> {"Overdue High Prioirity Issues(>30 & < 60)"}: </ListGroupItemHeading> 
-                  
-                  <Link to={routesURL.PAGE_NOT_FOUND}> Issue 4(Suresh)</Link><br/>
-                  <Link to={routesURL.PAGE_NOT_FOUND}> Issue 9(Arindam)</Link><br/>                 
-                  <br />
-                  <ListGroupItemHeading> {"Overdue High Prioirity Issues(> 60)"}: </ListGroupItemHeading> 
-                  
-                  <Link to={routesURL.PAGE_NOT_FOUND}> Issue 0(Suresh)</Link>,<br/>
-                  <Link to={routesURL.PAGE_NOT_FOUND}> Issue 900(Arindam)  </Link><br/>               
-                  <br />              
-                  <Link to={routesURL.PAGE_NOT_FOUND}> All Issues ... </Link>               
-                  </ListGroupItemText>
-                  </ListGroupItem>                 
-                 </ListGroup>            
-                <br />
-              
+                <ListGroup>
+                  <ListGroupItem>
+                    <ListGroupItemText>
+                      <ListGroupItemHeading>
+                        {" "}
+                        {"Overdue High Priority Issues (<30 days)"}:{" "}
+                      </ListGroupItemHeading>
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        issue1 (Neeraj)
+                      </Link>
+                      <br />
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        issue 2(Suresh)
+                      </Link>
+                      <br />
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        Issue3 (Arindam)
+                      </Link>
+                      <br />
+                      <br />
+                      <ListGroupItemHeading>
+                        {" "}
+                        {"Overdue High Prioirity Issues(>30 & < 60)"}:{" "}
+                      </ListGroupItemHeading>
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        Issue 4(Suresh)
+                      </Link>
+                      <br />
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        Issue 9(Arindam)
+                      </Link>
+                      <br />
+                      <br />
+                      <ListGroupItemHeading>
+                        {" "}
+                        {"Overdue High Prioirity Issues(> 60)"}:{" "}
+                      </ListGroupItemHeading>
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        Issue 0(Suresh)
+                      </Link>,<br />
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        Issue 900(Arindam){" "}
+                      </Link>
+                      <br />
+                      <br />
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        All Issues ...{" "}
+                      </Link>
+                    </ListGroupItemText>
+                  </ListGroupItem>
+                </ListGroup>
               </TabPane>
 
-
               <TabPane tabId="2">
-
-              <ListGroup>
-                <ListGroupItem>  
-                <ListGroupItemText>
-                <ListGroupItemHeading>   {"Pending Approval Changes"}: </ListGroupItemHeading> 
-                 
-                  <Link to={routesURL.PAGE_NOT_FOUND}> Change1</Link><br/>
-                  <Link to={routesURL.PAGE_NOT_FOUND}> Change4</Link><br/>                
-               
-                  <br />
-                  <ListGroupItemHeading>  {"Approved Changes Still open"}: </ListGroupItemHeading> 
-                 
-                  <Link to={routesURL.PAGE_NOT_FOUND}> Change 400(Neeraj)</Link><br/>
-                  <Link to={routesURL.PAGE_NOT_FOUND}> Change 19(Arindam)</Link><br/>
-                 
-                  <br />
-                  <ListGroupItemHeading>  {"Overdue Approved Changes(> 30)"}:  </ListGroupItemHeading> 
-                 
-                  <Link to={routesURL.PAGE_NOT_FOUND}>  Change 220(Suresh)</Link>,<br/>
-                  <Link to={routesURL.PAGE_NOT_FOUND}> Change 9100(Arindam) </Link><br/>
-               
-                  <br />              
-                  <Link to={routesURL.PAGE_NOT_FOUND}> All Changes ... </Link>               
-                  </ListGroupItemText>
-                  </ListGroupItem>                 
-                 </ListGroup>                   
+                <ListGroup>
+                  <ListGroupItem>
+                    <ListGroupItemText>
+                      <ListGroupItemHeading>
+                        {" "}
+                        {"Pending Approval Changes"}:{" "}
+                      </ListGroupItemHeading>
+                      <Link to={routesURL.PAGE_NOT_FOUND}> Change1</Link>
+                      <br />
+                      <Link to={routesURL.PAGE_NOT_FOUND}> Change4</Link>
+                      <br />
+                      <br />
+                      <ListGroupItemHeading>
+                        {" "}
+                        {"Approved Changes Still open"}:{" "}
+                      </ListGroupItemHeading>
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        Change 400(Neeraj)
+                      </Link>
+                      <br />
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        Change 19(Arindam)
+                      </Link>
+                      <br />
+                      <br />
+                      <ListGroupItemHeading>
+                        {" "}
+                        {"Overdue Approved Changes(> 30)"}:{" "}
+                      </ListGroupItemHeading>
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        Change 220(Suresh)
+                      </Link>,<br />
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        Change 9100(Arindam){" "}
+                      </Link>
+                      <br />
+                      <br />
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        All Changes ...{" "}
+                      </Link>
+                    </ListGroupItemText>
+                  </ListGroupItem>
+                </ListGroup>
               </TabPane>
 
               <TabPane tabId="3">
+                <ListGroup>
+                  <ListGroupItem>
+                    <ListGroupItemText>
+                      <ListGroupItemHeading>
+                        {" "}
+                        {"New RFI"}:{" "}
+                      </ListGroupItemHeading>
 
-                 <ListGroup>
-                <ListGroupItem>  
-                <ListGroupItemText>
-                <ListGroupItemHeading>  {"New RFI"}: </ListGroupItemHeading> 
-                  
-                  <Link to={routesURL.PAGE_NOT_FOUND}> RFI1</Link><br/>
-                  <Link to={routesURL.PAGE_NOT_FOUND}> RFI4</Link><br/>               
-                  
-                  <br />
-                  <ListGroupItemHeading> {"In progress RFI"}: </ListGroupItemHeading> 
-                  
-                  <Link to={routesURL.PAGE_NOT_FOUND}> RFI 400(Neeraj)</Link><br/>
-                  <Link to={routesURL.PAGE_NOT_FOUND}> RFI 19(Arindam)</Link><br/>
-                 
-                  <br />
-                  <ListGroupItemHeading> {"Overdue RFI(> 30)"}: </ListGroupItemHeading> 
-                  
-                  <Link to={routesURL.PAGE_NOT_FOUND}> RFI 220(Suresh)</Link><br/>
-                  <Link to={routesURL.PAGE_NOT_FOUND}> RFI 9100(Arindam)</Link><br/>
-                 
-                  <br />              
-                  <Link to={routesURL.PAGE_NOT_FOUND}> All RFI ... </Link>               
-                  </ListGroupItemText>
-                  </ListGroupItem>                 
-                 </ListGroup>       
-                
+                      <Link to={routesURL.PAGE_NOT_FOUND}> RFI1</Link>
+                      <br />
+                      <Link to={routesURL.PAGE_NOT_FOUND}> RFI4</Link>
+                      <br />
+
+                      <br />
+                      <ListGroupItemHeading>
+                        {" "}
+                        {"In progress RFI"}:{" "}
+                      </ListGroupItemHeading>
+
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        RFI 400(Neeraj)
+                      </Link>
+                      <br />
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        RFI 19(Arindam)
+                      </Link>
+                      <br />
+
+                      <br />
+                      <ListGroupItemHeading>
+                        {" "}
+                        {"Overdue RFI(> 30)"}:{" "}
+                      </ListGroupItemHeading>
+
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        RFI 220(Suresh)
+                      </Link>
+                      <br />
+                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                        {" "}
+                        RFI 9100(Arindam)
+                      </Link>
+                      <br />
+
+                      <br />
+                      <Link to={routesURL.PAGE_NOT_FOUND}> All RFI ... </Link>
+                    </ListGroupItemText>
+                  </ListGroupItem>
+                </ListGroup>
               </TabPane>
             </TabContent>
           </CardBody>

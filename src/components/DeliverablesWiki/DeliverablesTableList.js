@@ -1,8 +1,76 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody, Table } from "reactstrap";
 import DeliverablesTableListItems from "./DeliverablesTableListItems";
+import ReactDataTableNew from "../ReactDataTableNew";
+
+let deliveriablesListData = {
+  columns: [
+    {
+      label: "Deliverable Name",
+      field: "deliverable_name",
+      sort: "asc"
+    },
+    {
+      label: "Workpackage",
+      field: "workpackage",
+      sort: "asc"
+    },
+    {
+      label: "Type",
+      field: "type",
+      sort: "asc"
+    },
+    {
+      label: "Owner",
+      field: "owner",
+      sort: "asc"
+    },
+    {
+      label: "Due Date",
+      field: "due_date",
+      sort: "asc"
+    },
+
+    {
+      label: "Status",
+      field: "status",
+      sort: "asc"
+    },
+    {
+      label: "Completion Date",
+      field: "completion_date",
+      sort: "asc"
+    },
+    {
+      label: "Progress",
+      field: "progress",
+      sort: "asc"
+    },
+    {
+      label: "Comments",
+      field: "comments",
+      sort: "asc"
+    },
+    {
+      label: "Public",
+      field: "public",
+      sort: "asc"
+    }
+  ],
+  rows: []
+};
 
 class DeliverablesTableList extends Component {
+  state = {
+    data: { ...deliveriablesListData }
+  };
+  handleClick = () => {
+    console.log("Click");
+  };
+  componentDidMount() {
+    deliveriablesListData.rows = this.props.deliverablesList;
+    this.setState({ data: { ...deliveriablesListData } });
+  }
   render() {
     return (
       <Card>
@@ -14,7 +82,7 @@ class DeliverablesTableList extends Component {
           </div>
         </CardHeader>
         <CardBody>
-          <Table responsive>
+          {/* <Table responsive>
             <thead>
               <tr>
                 <th>Deliverable Name</th>
@@ -34,7 +102,8 @@ class DeliverablesTableList extends Component {
               <DeliverablesTableListItems />
               <DeliverablesTableListItems />
             </tbody>
-          </Table>
+          </Table> */}
+          <ReactDataTableNew data={this.state.data} />
         </CardBody>
       </Card>
     );

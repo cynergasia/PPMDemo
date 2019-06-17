@@ -607,19 +607,19 @@
     "schedule_info": [
       {
         "title": "Estimate Start Date",
-        "value": "1 Jan 19"
+        "value": "01-01-19"
       },
       {
         "title": "Estimate End Date",
-        "value": "16 Fab 20"
+        "value": "02-16-20"
       },
       {
         "title": "Transaction Start Date",
-        "value": "2 Jan 19"
+        "value": "01-02-19"
       },
       {
         "title": "Transaction End Date",
-        "value": "16 Fab 20"
+        "value": "02-16-20"
       },
       {
         "title": "Project Status",
@@ -657,11 +657,11 @@
       },
       {
         "title": "Due Date",
-        "value": "12 Jun 19"
+        "value": "06-12-19"
       },
       {
         "title": "Last Approval Date",
-        "value": "10 May 19"
+        "value": "05-10-19"
       }
     ],
     "audit_info": [
@@ -671,7 +671,7 @@
       },
       {
         "title": "Creation Date",
-        "value": "15 Dec 18"
+        "value": "12-15-18"
       },
       {
         "title": "Last Updated By",
@@ -679,11 +679,11 @@
       },
       {
         "title": "Last Updated Date",
-        "value": "10 Jun 19"
+        "value": "06-10-19"
       },
       {
         "title": "Latest Activity date",
-        "value": "8 Jun 19"
+        "value": "06-08-19"
       },
       {
         "title": "Locked By",

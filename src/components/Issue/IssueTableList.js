@@ -3,7 +3,7 @@ import { Card, CardHeader, CardBody } from "reactstrap";
 
 import ReactDataTableNew from "../ReactDataTableNew";
 
-const data = {
+const issueListData = {
   columns: [
     {
       label: "Issue Number",
@@ -51,154 +51,17 @@ const data = {
       sort: "asc"
     }
   ],
-  rows: [
-    {
-      issue_number: 1001,
-      issue_name: "Fireproofing",
-      type: "Design Flaw",
-      assignee: "Arindam",
-      comments: "",
-      activities_due: "AD001 AD002",
-      impact_type: "Schedule",
-      per_complete: "",
-      public: "N"
-    },
-    {
-      issue_number: 1002,
-      issue_name: "Earthquake reinforcement",
-      type: "Material",
-      assignee: "Suresh, Neeraj",
-      comments: "",
-      activities_due: "AD003 AD004",
-      impact_type: "Budget",
-      per_complete: "",
-      public: "Y"
-    },
-    {
-      issue_number: 1002,
-      issue_name: "Earthquake reinforcement",
-      type: "Material",
-      assignee: "Suresh, Neeraj",
-      comments: "",
-      activities_due: "AD003 AD004",
-      impact_type: "Budget",
-      per_complete: "",
-      public: "Y"
-    },
-    {
-      issue_number: 1002,
-      issue_name: "Earthquake reinforcement",
-      type: "Material",
-      assignee: "Suresh, Neeraj",
-      comments: "",
-      activities_due: "AD003 AD004",
-      impact_type: "Budget",
-      per_complete: "",
-      public: "Y"
-    },
-    {
-      issue_number: 1002,
-      issue_name: "Earthquake reinforcement",
-      type: "Material",
-      assignee: "Suresh, Neeraj",
-      comments: "",
-      activities_due: "AD003 AD004",
-      impact_type: "Budget",
-      per_complete: "",
-      public: "Y"
-    },
-    {
-      issue_number: 1002,
-      issue_name: "Earthquake reinforcement",
-      type: "Material",
-      assignee: "Suresh, Neeraj",
-      comments: "",
-      activities_due: "AD003 AD004",
-      impact_type: "Budget",
-      per_complete: "",
-      public: "Y"
-    },
-    {
-      issue_number: 1002,
-      issue_name: "Earthquake reinforcement",
-      type: "Material",
-      assignee: "Suresh, Neeraj",
-      comments: "",
-      activities_due: "AD003 AD004",
-      impact_type: "Budget",
-      per_complete: "",
-      public: "Y"
-    },
-    {
-      issue_number: 1002,
-      issue_name: "Earthquake reinforcement",
-      type: "Material",
-      assignee: "Suresh, Neeraj",
-      comments: "",
-      activities_due: "AD003 AD004",
-      impact_type: "Budget",
-      per_complete: "",
-      public: "Y"
-    },
-    {
-      issue_number: 1002,
-      issue_name: "Earthquake reinforcement",
-      type: "Material",
-      assignee: "Suresh, Neeraj",
-      comments: "",
-      activities_due: "AD003 AD004",
-      impact_type: "Budget",
-      per_complete: "",
-      public: "Y"
-    },
-    {
-      issue_number: 1002,
-      issue_name: "Earthquake reinforcement",
-      type: "Material",
-      assignee: "Suresh, Neeraj",
-      comments: "",
-      activities_due: "AD003 AD004",
-      impact_type: "Budget",
-      per_complete: "",
-      public: "Y"
-    },
-    {
-      issue_number: 1002,
-      issue_name: "Earthquake reinforcement",
-      type: "Material",
-      assignee: "Suresh, Neeraj",
-      comments: "",
-      activities_due: "AD003 AD004",
-      impact_type: "Budget",
-      per_complete: "",
-      public: "Y"
-    },
-    {
-      issue_number: 1002,
-      issue_name: "Earthquake reinforcement",
-      type: "Material",
-      assignee: "Suresh, Neeraj",
-      comments: "",
-      activities_due: "AD003 AD004",
-      impact_type: "Budget",
-      per_complete: "",
-      public: "Y"
-    },
-    {
-      issue_number: 1002,
-      issue_name: "Earthquake reinforcement",
-      type: "Material",
-      assignee: "Suresh, Neeraj",
-      comments: "",
-      activities_due: "AD003 AD004",
-      impact_type: "Budget",
-      per_complete: "",
-      public: "Y"
-    }
-  ]
+  rows: []
 };
 
 class IssueTableList extends Component {
+  state = {
+    data: { ...issueListData }
+  };
+  componentDidMount() {
+    issueListData.rows = this.props.issueList;
+    this.setState({ data: { ...issueListData } });
+  }
   render() {
     return (
       <React.Fragment>
@@ -211,7 +74,7 @@ class IssueTableList extends Component {
             </div>
           </CardHeader>
           <CardBody>
-            <ReactDataTableNew data={data} />
+            <ReactDataTableNew data={this.state.data} />
           </CardBody>
         </Card>
       </React.Fragment>

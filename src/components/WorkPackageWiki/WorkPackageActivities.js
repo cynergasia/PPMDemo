@@ -1,7 +1,51 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody, Table } from "reactstrap";
+import ReactDataTableNew from "../ReactDataTableNew";
+
+let workPackageActivitiesData = {
+  columns: [
+    {
+      label: "Description",
+      field: "description",
+      sort: "asc"
+    },
+    {
+      label: "Assigned To",
+      field: "assigned_to",
+      sort: "asc"
+    },
+    {
+      label: "Start Date",
+      field: "start_date",
+      sort: "asc"
+    },
+    {
+      label: "Due Date",
+      field: "due_date",
+      sort: "asc"
+    },
+    {
+      label: "Status",
+      field: "status",
+      sort: "asc"
+    },
+    {
+      label: "% Complete",
+      field: "per_complete",
+      sort: "asc"
+    }
+  ],
+  rows: []
+};
 
 class WorkPackageActivities extends Component {
+  state = {
+    data: { ...workPackageActivitiesData }
+  };
+  componentDidMount() {
+    workPackageActivitiesData.rows = this.props.activities;
+    this.setState({ data: { ...workPackageActivitiesData } });
+  }
   render() {
     return (
       <React.Fragment>
@@ -15,36 +59,7 @@ class WorkPackageActivities extends Component {
             </div>
           </CardHeader>
           <CardBody>
-            <Table bordered responsive>
-              <thead>
-                <tr>
-                  <th>Description</th>
-                  <th>Assigned To</th>
-                  <th>Start Date</th>
-                  <th>Due Date</th>
-                  <th>Status</th>
-                  <th>% Complete</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                </tr>
-                <tr>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                </tr>
-              </tbody>
-            </Table>
+            <ReactDataTableNew data={this.state.data} />
           </CardBody>
         </Card>
       </React.Fragment>

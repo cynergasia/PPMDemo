@@ -1,8 +1,46 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody, Table } from "reactstrap";
 import MeetingTableListItems from "./MeetingTableListItems";
+import ReactDataTableNew from "../ReactDataTableNew";
 
+let meetingListData = {
+  columns: [
+    {
+      label: "Date",
+      field: "date",
+      sort: "asc"
+    },
+    {
+      label: "Meeting Title",
+      field: "meeting_title",
+      sort: "asc"
+    },
+    {
+      label: "Attendees",
+      field: "attendees",
+      sort: "asc"
+    },
+    {
+      label: "Document",
+      field: "document",
+      sort: "asc"
+    },
+    {
+      label: "Public",
+      field: "public",
+      sort: "asc"
+    }
+  ],
+  rows: []
+};
 class MeetingTableList extends Component {
+  state = {
+    data: { ...meetingListData }
+  };
+  componentDidMount() {
+    meetingListData.rows = this.props.meetingList;
+    this.setState({ data: { ...meetingListData } });
+  }
   render() {
     return (
       <React.Fragment>
@@ -14,7 +52,7 @@ class MeetingTableList extends Component {
             </div>
           </CardHeader>
           <CardBody>
-            <Table responsive>
+            {/* <Table responsive>
               <thead>
                 <tr>
                   <th>Date</th>
@@ -29,7 +67,8 @@ class MeetingTableList extends Component {
                 <MeetingTableListItems />
                 <MeetingTableListItems />
               </tbody>
-            </Table>
+            </Table> */}
+            <ReactDataTableNew data={this.state.data} />
           </CardBody>
         </Card>
       </React.Fragment>

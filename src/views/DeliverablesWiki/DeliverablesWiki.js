@@ -8,9 +8,11 @@ import DeliverablesActivities from "../../components/DeliverablesWiki/Deliverabl
 import Comments from "../../components/Comments";
 import DeliverablesApprovalStatus from "../../components/DeliverablesWiki/DeliverablesApprovalStatus";
 import DeliverablesActivityLog from "../../components/DeliverablesWiki/DeliverablesActivityLog";
+import deliverableswiki_database from "../../deliverableswiki_database";
 
 class DeliverablesWiki extends Component {
   render() {
+    const { activities, activityLog } = deliverableswiki_database;
     return (
       <React.Fragment>
         <div className="animated fadeIn">
@@ -26,7 +28,7 @@ class DeliverablesWiki extends Component {
                   <DeliverablesInformation />
                 </Col>
                 <Col sm="12" md="12" lg="12">
-                  <DeliverablesActivities />
+                  <DeliverablesActivities activities={activities} />
                 </Col>
                 <Col sm="12" md="12" lg="12">
                   <Attachments />
@@ -45,7 +47,7 @@ class DeliverablesWiki extends Component {
               <DeliverablesApprovalStatus />
             </Col>
             <Col sm="12" md="12" lg="8">
-              <DeliverablesActivityLog />
+              <DeliverablesActivityLog activityLog={activityLog} />
             </Col>
           </Row>
         </div>

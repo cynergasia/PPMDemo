@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import IssueTableList from "../../components/Issue/IssueTableList";
+import getIssueList from "../../issuelist_database";
 
 class IssueList extends Component {
   render() {
+    const { issueList } = getIssueList();
     return (
       <React.Fragment>
         <div className="animated fadeIn">
@@ -28,7 +30,7 @@ class IssueList extends Component {
           </Row>
           <Row>
             <Col sm="12" md="12" lg="12">
-              <IssueTableList />
+              <IssueTableList issueList={issueList} />
             </Col>
           </Row>
         </div>
