@@ -14,10 +14,8 @@ import StickySidebar from "sticky-sidebar";
 import { Row, Col } from "reactstrap";
 import projectwiki_database from "../../projectwiki_database";
 
-
 class ProjectWiki extends Component {
   sidebar = null;
-  
 
   issueChangesRef = React.createRef();
   workPackageRef = React.createRef();
@@ -25,9 +23,8 @@ class ProjectWiki extends Component {
   financialsRef = React.createRef();
   activityLogRef = React.createRef();
 
-
-  componentDidMount() {   
-    this.fixSidebar();   
+  componentDidMount() {
+    this.fixSidebar();
   }
 
   fixSidebar = () => {
@@ -37,7 +34,6 @@ class ProjectWiki extends Component {
       containerSelector: ".main-content",
       innerWrapperSelector: ".sidebar__inner"
     });
- 
   };
 
   render() {
@@ -55,7 +51,6 @@ class ProjectWiki extends Component {
                   financialsRef: this.financialsRef,
                   activityLogRef: this.activityLogRef
                 }}
-                workPageRef={this.workPageRef}
               />
             </Col>
           </Row>

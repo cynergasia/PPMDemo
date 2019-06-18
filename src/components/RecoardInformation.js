@@ -44,6 +44,11 @@ class RecoardInformation extends Component {
     });
   };
   render() {
+    const {
+      isScheduleinfo = true,
+      isWorkflowinfo = true,
+      isAuditinfo = true
+    } = this.props;
     const scheduleinfo = database.recoard_information.schedule_info;
     const workflowinfo = database.recoard_information.workflow_info;
     const auditinfo = database.recoard_information.audit_info;
@@ -56,107 +61,111 @@ class RecoardInformation extends Component {
             <div className="card-header-actions" />
           </CardHeader>
           <CardBody>
-            <ListGroup>
-              <ListGroupItem>
-                <ListGroupItemHeading
-                  className="cursor-pointer"
-                  onClick={() => this.toggle()}
-                >
-                  <i
-                    className={
-                      this.state.isplusclass1
-                        ? "fa-plus-minus fa fa-plus-square-o mr-2"
-                        : "fa-plus-minus fa fa-minus-square-o mr-2"
-                    }
-                  />
-                  <span className="text-primary">Schedule Information</span>
-                </ListGroupItemHeading>
-                <Collapse isOpen={this.state.isOpenSchedule}>
-                  {scheduleinfo.map((item, index) => (
-                    <ListGroupItemText
-                      className="pt-3 pr-3 pl-3 mb-0 d-flex flex-wrap"
-                      key={index}
-                    >
-                      <React.Fragment>
-                        <small className="text-muted mr-3">
-                          <b>{item.title} : </b>
-                        </small>
-                        <small className="text-muted">{item.value}</small>
-                        {/* <hr className="mb-0 w-100" /> */}
-                      </React.Fragment>
-                    </ListGroupItemText>
-                  ))}
-                </Collapse>
-              </ListGroupItem>
-            </ListGroup>
-
-            <ListGroup className="mt-3">
-              <ListGroupItem>
-                <ListGroupItemHeading
-                  className="cursor-pointer"
-                  onClick={() => this.toggleWorkFlow()}
-                >
-                  <i
-                    className={
-                      this.state.isplusclass2
-                        ? "fa-plus-minus fa fa-plus-square-o mr-2"
-                        : "fa-plus-minus fa fa-minus-square-o mr-2"
-                    }
-                  />
-                  <span className="text-primary">Workflow Information</span>
-                </ListGroupItemHeading>
-                <Collapse isOpen={this.state.isWorkflowSchedule}>
-                  {workflowinfo.map((item, index) => (
-                    <ListGroupItemText
-                      className="pt-3 pr-3 pl-3 mb-0 d-flex flex-wrap"
-                      key={index}
-                    >
-                      <React.Fragment key={index}>
-                        <small className="text-muted mr-3">
-                          <b>{item.title} : </b>
-                        </small>
-                        <small className="text-muted">{item.value}</small>
-                        {/* <hr className="mb-0 w-100" /> */}
-                      </React.Fragment>
-                    </ListGroupItemText>
-                  ))}
-                </Collapse>
-              </ListGroupItem>
-            </ListGroup>
-
-            <ListGroup className="mt-3">
-              <ListGroupItem>
-                <ListGroupItemHeading
-                  className="cursor-pointer"
-                  onClick={() => this.toggleAuditInfo()}
-                >
-                  <i
-                    className={
-                      this.state.isplusclass3
-                        ? "fa-plus-minus fa fa-plus-square-o mr-2"
-                        : "fa-plus-minus fa fa-minus-square-o mr-2"
-                    }
-                  />
-                  <span className="text-primary">Audit Information</span>
-                </ListGroupItemHeading>
-                <Collapse isOpen={this.state.isAuditSchedule}>
-                  {auditinfo.map((item, index) => (
-                    <ListGroupItemText
-                      className="pt-3 pr-3 pl-3 mb-0 d-flex flex-wrap"
-                      key={index}
-                    >
-                      <React.Fragment key={index}>
-                        <small className="text-muted mr-3">
-                          <b>{item.title} : </b>
-                        </small>
-                        <small className="text-muted">{item.value}</small>
-                        {/* <hr className="mb-0 w-100" /> */}
-                      </React.Fragment>
-                    </ListGroupItemText>
-                  ))}
-                </Collapse>
-              </ListGroupItem>
-            </ListGroup>
+            {isScheduleinfo && (
+              <ListGroup>
+                <ListGroupItem>
+                  <ListGroupItemHeading
+                    className="cursor-pointer"
+                    onClick={() => this.toggle()}
+                  >
+                    <i
+                      className={
+                        this.state.isplusclass1
+                          ? "fa-plus-minus fa fa-plus-square-o mr-2"
+                          : "fa-plus-minus fa fa-minus-square-o mr-2"
+                      }
+                    />
+                    <span className="text-primary">Schedule Information</span>
+                  </ListGroupItemHeading>
+                  <Collapse isOpen={this.state.isOpenSchedule}>
+                    {scheduleinfo.map((item, index) => (
+                      <ListGroupItemText
+                        className="pt-3 pr-3 pl-3 mb-0 d-flex flex-wrap"
+                        key={index}
+                      >
+                        <React.Fragment>
+                          <small className="text-muted mr-3">
+                            <b>{item.title} : </b>
+                          </small>
+                          <small className="text-muted">{item.value}</small>
+                          {/* <hr className="mb-0 w-100" /> */}
+                        </React.Fragment>
+                      </ListGroupItemText>
+                    ))}
+                  </Collapse>
+                </ListGroupItem>
+              </ListGroup>
+            )}
+            {isWorkflowinfo && (
+              <ListGroup className="mt-3">
+                <ListGroupItem>
+                  <ListGroupItemHeading
+                    className="cursor-pointer"
+                    onClick={() => this.toggleWorkFlow()}
+                  >
+                    <i
+                      className={
+                        this.state.isplusclass2
+                          ? "fa-plus-minus fa fa-plus-square-o mr-2"
+                          : "fa-plus-minus fa fa-minus-square-o mr-2"
+                      }
+                    />
+                    <span className="text-primary">Workflow Information</span>
+                  </ListGroupItemHeading>
+                  <Collapse isOpen={this.state.isWorkflowSchedule}>
+                    {workflowinfo.map((item, index) => (
+                      <ListGroupItemText
+                        className="pt-3 pr-3 pl-3 mb-0 d-flex flex-wrap"
+                        key={index}
+                      >
+                        <React.Fragment key={index}>
+                          <small className="text-muted mr-3">
+                            <b>{item.title} : </b>
+                          </small>
+                          <small className="text-muted">{item.value}</small>
+                          {/* <hr className="mb-0 w-100" /> */}
+                        </React.Fragment>
+                      </ListGroupItemText>
+                    ))}
+                  </Collapse>
+                </ListGroupItem>
+              </ListGroup>
+            )}
+            {isAuditinfo && (
+              <ListGroup className="mt-3">
+                <ListGroupItem>
+                  <ListGroupItemHeading
+                    className="cursor-pointer"
+                    onClick={() => this.toggleAuditInfo()}
+                  >
+                    <i
+                      className={
+                        this.state.isplusclass3
+                          ? "fa-plus-minus fa fa-plus-square-o mr-2"
+                          : "fa-plus-minus fa fa-minus-square-o mr-2"
+                      }
+                    />
+                    <span className="text-primary">Audit Information</span>
+                  </ListGroupItemHeading>
+                  <Collapse isOpen={this.state.isAuditSchedule}>
+                    {auditinfo.map((item, index) => (
+                      <ListGroupItemText
+                        className="pt-3 pr-3 pl-3 mb-0 d-flex flex-wrap"
+                        key={index}
+                      >
+                        <React.Fragment key={index}>
+                          <small className="text-muted mr-3">
+                            <b>{item.title} : </b>
+                          </small>
+                          <small className="text-muted">{item.value}</small>
+                          {/* <hr className="mb-0 w-100" /> */}
+                        </React.Fragment>
+                      </ListGroupItemText>
+                    ))}
+                  </Collapse>
+                </ListGroupItem>
+              </ListGroup>
+            )}
           </CardBody>
         </Card>
       </React.Fragment>

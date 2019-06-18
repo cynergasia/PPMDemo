@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React, { Component, Suspense } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { Container } from "reactstrap";
-import $ from 'jquery'; 
+//import $ from "jquery";
 
 import { AppAside, AppFooter, AppHeader } from "@coreui/react";
 // sidebar nav config
@@ -16,10 +17,9 @@ import NewsFeedAside from "./NewsFeedAside";
 // const DefaultAside = React.lazy(() => import("./DefaultAside"));
 
 const ChatAside = React.lazy(() => import("./ChatAside"));
- const NotificationAside = React.lazy(() => import("./NotificationAside"));
+const NotificationAside = React.lazy(() => import("./NotificationAside"));
 const DefaultFooter = React.lazy(() => import("./DefaultFooter"));
 const DefaultHeader = React.lazy(() => import("./DefaultHeader"));
-
 
 class DefaultLayout extends Component {
   initialState = {
@@ -28,13 +28,13 @@ class DefaultLayout extends Component {
     isCalendar: false,
     isMisc: false,
     isNewsFeed: false,
-    position:null
+    position: null
   };
 
   state = { ...this.initialState };
 
   toggleChat = () => {
-   //this.scrollSidebar();
+    //this.scrollSidebar();
     this.setState({
       ...this.initialState,
       isChat: !this.state.isChat
@@ -72,17 +72,17 @@ class DefaultLayout extends Component {
   loading = () => (
     <div className="animated fadeIn pt-1 text-center">Loading...</div>
   );
-// scrollSidebar method
+  // scrollSidebar method
   // scrollSidebar=()=>{
   //   // alert("rip");
   //   // if($('.aside-menu-lg-show .sidebar__inner').position()){
-      
+
   //   var position = $('.is-affixed').children().first().position();
   //   var widthfiex = $('.is-affixed').children().first().width();
   //   var asidemenuwidth = $('.aside-menu').width();
-    
-  //   if(this.state.isChat){ 
-    
+
+  //   if(this.state.isChat){
+
   //     $('.is-affixed').children().first().css( "left",  position.left + asidemenuwidth - 100);
   //     $('.is-affixed').children().first().css( "width", widthfiex + asidemenuwidth - 250);
   //     return false;
@@ -97,8 +97,7 @@ class DefaultLayout extends Component {
   //   // alert(asidemenuwidth);
   // }
 
-  render() {  
-    
+  render() {
     const path = this.props.location.pathname;
     let currentpath = "/" + path.split("/")[1];
 
@@ -176,7 +175,9 @@ class DefaultLayout extends Component {
           {this.state.isNotification ? (
             <AppAside fixed className="animated slideInRight">
               <Suspense fallback={this.loading()}>
-                <NotificationAside />
+                <NotificationAside
+                  toggleNotification={this.toggleNotification}
+                />
               </Suspense>
             </AppAside>
           ) : (

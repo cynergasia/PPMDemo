@@ -5,7 +5,8 @@ import ProjectWikiMenu from "../SubMenu/ProjectWikiMenu";
 import RecoardInformation from "../../components/RecoardInformation";
 import Attachments from "../../components/Attachments";
 import Comments from "../../components/Comments";
-import ActivityLog from "../../components/ActivityLog";
+// import ActivityLog from "../../components/ActivityLog";
+import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import WorkPackageInformation from "../../components/WorkPackageWiki/WorkPackageInformation";
 import WorkPackageActivities from "../../components/WorkPackageWiki/WorkPackageActivities";
 import WorkPackageIssueChanges from "../../components/WorkPackageWiki/WorkPackageIssueChanges";
@@ -17,7 +18,6 @@ import _omit from "lodash/omit";
 
 class WorkPackageWiki extends Component {
   sidebar = null;
-  
 
   issueChangesRef = React.createRef();
   workPackageRef = React.createRef();
@@ -25,19 +25,17 @@ class WorkPackageWiki extends Component {
   financialsRef = React.createRef();
   activityLogRef = React.createRef();
 
-
-  componentDidMount() {   
-    this.fixSidebar();   
+  componentDidMount() {
+    this.fixSidebar();
   }
 
   fixSidebar = () => {
     this.sidebar = new StickySidebar(".sidebar", {
       topSpacing: 0,
-      bottomSpacing: 0,    
+      bottomSpacing: 0,
       containerSelector: ".main-content",
       innerWrapperSelector: ".sidebar__inner"
     });
-  
   };
   render() {
     const { id } = this.props.match.params;
@@ -51,15 +49,15 @@ class WorkPackageWiki extends Component {
         <div className="animated fadeIn">
           <Row>
             <Col sm="12" md="12" lg="12">
-              <WorkPackageWikiMenu 
-               refs={{
-                issueChangesRef: this.issueChangesRef,
-                workPackageRef: this.workPackageRef,
-                meetingMinutesRef: this.meetingMinutesRef,             
-                activityLogRef: this.activityLogRef
-              }}
-              workPageRef={this.workPageRef}/>
-             
+              <WorkPackageWikiMenu
+                refs={{
+                  issueChangesRef: this.issueChangesRef,
+                  workPackageRef: this.workPackageRef,
+                  meetingMinutesRef: this.meetingMinutesRef,
+                  activityLogRef: this.activityLogRef
+                }}
+                workPageRef={this.workPageRef}
+              />
             </Col>
           </Row>
 
@@ -67,7 +65,7 @@ class WorkPackageWiki extends Component {
             <div className="col-12 col-lg-4">
               <div className="sidebar">
                 <div className="sidebar__inner">
-                  <RecoardInformation />
+                  <RecoardInformation isWorkflowinfo={false} />
                 </div>
               </div>
             </div>
@@ -94,7 +92,7 @@ class WorkPackageWiki extends Component {
                 <div className="col-12">
                   <WorkPackageDeliverables />
                 </div>
-                <div className="col-12"  ref={this.meetingMinutesRef}>
+                <div className="col-12" ref={this.meetingMinutesRef}>
                   <WorkPackageMeeting />
                 </div>
                 <div className="col-12" ref={this.activityLogRef}>

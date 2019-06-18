@@ -234,13 +234,14 @@ class DefaultHeader extends Component {
             onClick={() => this.props.toggleMisc()}
           >
             {this.props.isMisc ? (
-              <AppAsideToggler className="nav-link" defaultOpen={true}  display="lg" />
+              <AppAsideToggler
+                className="nav-link"
+                defaultOpen={true}
+                display="lg"
+              />
             ) : (
               <NavLink tag={Link} to={"#"} className="nav-link">
-                <span
-                  className="navbar-toggler-icon"
-                  tag={"a"}
-                />
+                <span className="navbar-toggler-icon" tag={"a"} />
               </NavLink>
             )}
           </NavItem>

@@ -522,7 +522,7 @@
     "invoiced": ["NaN", 5, 10, 24, 25, 23, 24],
     "paid": [10, 15, 25, 25, 26, 28, 30]
   },
-  "customers": ["AECOM", "HDR", "Oxy"],
+  "customers": ["BP", "SHELL", "OXY"],
   "activity": [
     {
       "activityNumber": "A1.03.01",
@@ -853,7 +853,7 @@
   "activityRegister": {
     "status": {
       "notStarted": 3,
-      "started": 6,
+      "started": 8,
       "completed": 17,
       "onHold": 0,
       "action": 0

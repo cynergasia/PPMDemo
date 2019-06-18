@@ -9,8 +9,28 @@ import Comments from "../../components/Comments";
 import DeliverablesApprovalStatus from "../../components/DeliverablesWiki/DeliverablesApprovalStatus";
 import DeliverablesActivityLog from "../../components/DeliverablesWiki/DeliverablesActivityLog";
 import deliverableswiki_database from "../../deliverableswiki_database";
+import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
+import StickySidebar from "sticky-sidebar";
 
 class DeliverablesWiki extends Component {
+  sidebar = null;
+
+  approvedStatus = React.createRef();
+  activityLogRef = React.createRef();
+
+  componentDidMount() {
+    this.fixSidebar();
+  }
+
+  fixSidebar = () => {
+    this.sidebar = new StickySidebar(".sidebar", {
+      topSpacing: 0,
+      bottomSpacing: 0,
+      containerSelector: ".main-content",
+      innerWrapperSelector: ".sidebar__inner"
+    });
+  };
+
   render() {
     const { activities, activityLog } = deliverableswiki_database;
     return (
@@ -18,38 +38,47 @@ class DeliverablesWiki extends Component {
         <div className="animated fadeIn">
           <Row>
             <Col sm="12" md="12" lg="12">
-              <DeliverablesWikiMenu />
+              <DeliverablesWikiMenu
+                refs={{
+                  approvedStatus: this.approvedStatus,
+                  activityLogRef: this.activityLogRef
+                }}
+              />
             </Col>
           </Row>
-          <Row>
-            <Col sm="12" md="12" lg="8">
+
+          <div className="row flex-row-reverse align-items-start main-content">
+            <div className="col-12 col-lg-4">
+              <div className="sidebar">
+                <div className="sidebar__inner">
+                  <RecoardInformation isWorkflowinfo={false} />
+                </div>
+              </div>
+            </div>
+
+            <div className="col-12 col-lg-8">
               <Row>
-                <Col sm="12" md="12" lg="12">
+                <Col xs="12">
                   <DeliverablesInformation />
                 </Col>
-                <Col sm="12" md="12" lg="12">
+                <Col xs="12">
                   <DeliverablesActivities activities={activities} />
                 </Col>
-                <Col sm="12" md="12" lg="12">
+
+                <Col xs="12">
                   <Attachments />
                 </Col>
+                <div className="col-12" ref={this.approvedStatus}>
+                  <DeliverablesApprovalStatus />
+                </div>
+                <div className="col-12" ref={this.activityLogRef}>
+                  <ActivityLog />
+                </div>
               </Row>
-            </Col>
-            <Col sm="12" md="12" lg="4">
-              <RecoardInformation />
-            </Col>
-          </Row>
-          <Row>
-            <Col sm="12" md="12" lg="8">
-              <Comments />
-            </Col>
-            <Col sm="12" md="12" lg="8">
-              <DeliverablesApprovalStatus />
-            </Col>
-            <Col sm="12" md="12" lg="8">
-              <DeliverablesActivityLog activityLog={activityLog} />
-            </Col>
-          </Row>
+            </div>
+          </div>
+
+          <Row />
         </div>
       </React.Fragment>
     );
