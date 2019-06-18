@@ -70,7 +70,7 @@ class DefaultLayout extends Component {
     <div className="animated fadeIn pt-1 text-center">Loading...</div>
   );
 
-  render() {
+  render() {   
     const path = this.props.location.pathname;
     let currentpath = "/" + path.split("/")[1];
 

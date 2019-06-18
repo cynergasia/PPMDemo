@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, CardHeader, CardBody } from "reactstrap";
+import {CardHeader, CardBody } from "reactstrap";
 import ReactDataTableNew from "../../../components/ReactDataTableNew";
 import database from "../../../database";
 

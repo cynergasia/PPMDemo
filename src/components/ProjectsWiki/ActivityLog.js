@@ -6,15 +6,15 @@ import {
   CardBody,
   TabContent,
   TabPane,
-  ListGroup,
-  ListGroupItem,
-  ListGroupItemHeading,
-  ListGroupItemText
+  Input,
+  Button
 } from "reactstrap";
-import { Link } from "react-router-dom";
-import { routesURL } from "../../constant/routesURL";
+
 import ReactDataTableNew from "../ReactDataTableNew";
 import database from "../../database";
+import Modal from "../../helper/Modal";
+import { formatDate } from "../../helper/TextFormat";
+import { APP_LOCAL_DATETIME_FORMAT } from "../../constant";
 
 let commentData = {
   columns: [
@@ -62,7 +62,9 @@ export class ActivityLog extends Component {
   state = {
     activeTab: "1",
     commentsData: { ...commentData },
-    activityLogData: { ...activityData }
+    activityLogData: { ...activityData },
+    isModal: false,
+    comment: ""
   };
 
   toggle = tab => {
@@ -73,6 +75,25 @@ export class ActivityLog extends Component {
     }
   };
 
+  toggleModal = () => this.setState({ isModal: !this.state.isModal });
+
+  handleChangeComment = ({ target }) =>
+    this.setState({ [target.name]: target.value });
+
+  addComment = () => {
+    const { comment } = this.state;
+    commentData.rows.push({
+      date: formatDate(new Date(), APP_LOCAL_DATETIME_FORMAT),
+      by: "Suresh Padmanabhan",
+      comment
+    });
+    this.setState({
+      commentsData: { ...commentData },
+      comment: "",
+      isModal: false
+    });
+  };
+
   componentDidMount() {
     commentData.rows = database.comments;
     activityData.rows = database.activityLog;
@@ -81,8 +102,40 @@ export class ActivityLog extends Component {
       activityLogData: { ...activityData }
     });
   }
+
   render() {
     const { activeTab } = this.state;
+    const addCommentBody = (
+      <React.Fragment>
+        <Input
+          type="textarea"
+          rows="2"
+          name="comment"
+          placeholder="Enter Comment"
+          value={this.state.comment}
+          onChange={this.handleChangeComment}
+        />
+        <div className="mt-3">
+          <Button
+            onClick={this.addComment}
+            color="success"
+            size="sm"
+            className="m-0 float-right"
+          >
+            Add
+          </Button>
+          <Button
+            onClick={this.toggleModal}
+            color="danger"
+            size="sm"
+            className="m-0"
+          >
+            Close
+          </Button>
+        </div>
+      </React.Fragment>
+    );
+
     return (
       <React.Fragment>
         <Card>
@@ -115,9 +168,18 @@ export class ActivityLog extends Component {
             </ul>
 
             <div className="card-header-actions">
-              <i className="fa fa-plus-circle mr-2" />
+              <i
+                className="fa fa-plus-circle text-primary mr-2 cursor-pointer"
+                onClick={this.toggleModal}
+              />
               <i className="fa fa-pencil-square" />
             </div>
+            <Modal
+              isOpen={this.state.isModal}
+              toggle={this.toggleModal}
+              header="Add Comment"
+              body={addCommentBody}
+            />
           </CardHeader>
           <CardBody>
             <TabContent activeTab={activeTab} className="border-0">

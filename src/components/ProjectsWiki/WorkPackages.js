@@ -5,7 +5,6 @@ import {
   CardBody,
   TabContent,
   TabPane,
-  span,
   ListGroup,
   ListGroupItem,
   ListGroupItemHeading,
@@ -28,6 +27,9 @@ class WorkPackages extends Component {
 
   render() {
     const { activeTab } = this.state;
+    const tasks = this.props.tasks;
+    const { workPackages } = this.props.tasks[0];
+    console.log(tasks);
     return (
       <React.Fragment>
         <Card>
@@ -93,10 +95,22 @@ class WorkPackages extends Component {
                   <ListGroupItem>
                     <ListGroupItemHeading>Top Tasks:</ListGroupItemHeading>
                     <ListGroupItemText>
+                      {tasks.map((task, index) => (
+                        <React.Fragment key={index}>
+                          <Link
+                            to={routesURL.TASK_WIKI}
+                            className="text-capitalize"
+                          >
+                            {task.name}
+                          </Link>
+                          <br />
+                        </React.Fragment>
+                      ))}
                       <Link to={routesURL.TASK_WIKI}>
                         Requirements-1.0 (Complete)
                       </Link>
                       <br />
+
                       <Link to={routesURL.TASK_WIKI}>
                         Design - 2.0 (Open, 06/30/19){" "}
                       </Link>
@@ -114,51 +128,61 @@ class WorkPackages extends Component {
                       <ListGroupItemHeading>
                         Overdue Workpackages :
                       </ListGroupItemHeading>
+                      {workPackages.map(
+                        ({ name, id }) =>
+                          ["admin", "design"].includes(name) && (
+                            <React.Fragment>
+                              <Link
+                                to={routesURL.WORKPACKAGE_WIKI + id}
+                                className="text-capitalize"
+                              >
+                                {name}
+                              </Link>
+                              <br />
+                            </React.Fragment>
+                          )
+                      )}
 
-                      <Link to={routesURL.WORKPACKAGE_WIKI}>
-                        {" "}
-                        Design.Part.01(01-May-2019)
-                      </Link>
-                      <br />
-                      <Link to={routesURL.WORKPACKAGE_WIKI}>
-                        {" "}
-                        Delivery.Part.02(15-May-2019)
-                      </Link>
-                      <br />
                       <br />
                       <ListGroupItemHeading>
                         {" "}
                         Upcoming Workpackages :
                       </ListGroupItemHeading>
 
-                      <Link to={routesURL.WORKPACKAGE_WIKI}>
-                        {" "}
-                        Requirements-1.0 (20-Jun-2019)
-                      </Link>
-                      <br />
-                      <Link to={routesURL.WORKPACKAGE_WIKI}>
-                        {" "}
-                        Delivery.Part.02(30-Jun-2019)
-                      </Link>
-                      <br />
+                      {workPackages.map(
+                        ({ id, name }) =>
+                          ["modelling"].includes(name) && (
+                            <React.Fragment>
+                              <Link
+                                to={routesURL.WORKPACKAGE_WIKI + id}
+                                className="text-capitalize"
+                              >
+                                {name}
+                              </Link>
+                              <br />
+                            </React.Fragment>
+                          )
+                      )}
                       <br />
                       <ListGroupItemHeading>
                         {" "}
                         Workpackage Not started:{" "}
                       </ListGroupItemHeading>
 
-                      <Link to={routesURL.WORKPACKAGE_WIKI}> Design - 2.0</Link>
-                      <br />
-                      <Link to={routesURL.WORKPACKAGE_WIKI}>
-                        {" "}
-                        Quality Assurance{" "}
-                      </Link>
-                      <br />
-                      <br />
-                      <Link to={routesURL.PAGE_NOT_FOUND}>
-                        {" "}
-                        All Workpackages ...{" "}
-                      </Link>
+                      {workPackages.map(
+                        ({ name, id }) =>
+                          ["rebar"].includes(name) && (
+                            <React.Fragment>
+                              <Link
+                                to={routesURL.WORKPACKAGE_WIKI + id}
+                                className="text-capitalize"
+                              >
+                                {name}
+                              </Link>
+                              <br />
+                            </React.Fragment>
+                          )
+                      )}
                     </ListGroupItemText>
                   </ListGroupItem>
                 </ListGroup>

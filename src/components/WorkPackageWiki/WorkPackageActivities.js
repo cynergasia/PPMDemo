@@ -5,13 +5,18 @@ import ReactDataTableNew from "../ReactDataTableNew";
 let workPackageActivitiesData = {
   columns: [
     {
-      label: "Description",
-      field: "description",
+      label: "Number",
+      field: "wbsNumber",
       sort: "asc"
     },
     {
-      label: "Assigned To",
-      field: "assigned_to",
+      label: "Name",
+      field: "name",
+      sort: "asc"
+    },
+    {
+      label: "Duration",
+      field: "duration",
       sort: "asc"
     },
     {
@@ -20,18 +25,38 @@ let workPackageActivitiesData = {
       sort: "asc"
     },
     {
-      label: "Due Date",
-      field: "due_date",
+      label: "End Date",
+      field: "end_date",
       sort: "asc"
     },
     {
-      label: "Status",
-      field: "status",
+      label: "Resources",
+      field: "resources",
+      sort: "asc"
+    },
+    {
+      label: "Estimate Hours",
+      field: "estimatehours",
+      sort: "asc"
+    },
+    {
+      label: "Actual Hours",
+      field: "actualhours",
+      sort: "asc"
+    },
+    {
+      label: "Remaining Hours",
+      field: "remaininghours",
       sort: "asc"
     },
     {
       label: "% Complete",
-      field: "per_complete",
+      field: "complete",
+      sort: "asc"
+    },
+    {
+      label: "Public",
+      field: "public",
       sort: "asc"
     }
   ],

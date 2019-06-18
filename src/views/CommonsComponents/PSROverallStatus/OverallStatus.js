@@ -110,7 +110,7 @@ class OverallStatus extends Component {
                   className="custom-select"
                   defaultValue="In-Trouble"
                 >
-                  <option selected disabled>
+                  <option>
                     Select
                   </option>
                   <option>In-Trouble</option>

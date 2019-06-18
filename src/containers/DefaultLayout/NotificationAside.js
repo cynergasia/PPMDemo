@@ -10,10 +10,10 @@ import {
 } from "reactstrap";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { AppSwitch } from "@coreui/react";
-import {routesURL} from '../../constant/routesURL'
+//import { AppSwitch } from "@coreui/react";
+//import {routesURL} from '../../constant/routesURL'
 import database from '../../database.json';
-import {Link} from 'react-router-dom'
+//import {Link} from 'react-router-dom'
 
 const propTypes = {
   children: PropTypes.node
@@ -39,19 +39,7 @@ class NotificationAside extends Component {
     }
   }
 
-  render() {
-    // eslint-disable-next-line
-    // const { children, ...attributes } = this.props;
-    // database.projects.forEach(project => {
-    //   project.notification.forEach(item => {
-    //     data.rows.push({
-    //       due_date: item.due_date,
-    //       title: item.title,
-    //       project: project.name,
-    //       clickEvent: f => this.handleClick(f)
-    //     });
-    //   });
-    // });
+  render() {   
     
     return (
       <React.Fragment>
@@ -69,19 +57,20 @@ class NotificationAside extends Component {
         </Nav>
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
-            <ListGroup className="list-group-accent" tag={"div"}>
+            <ListGroup className="list-group-accent project-wiki-basicinfo" tag={"div"}>
               <ListGroupItem className="list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">
                 Notification
               </ListGroupItem>
-             { database.projects.map(project => (
+             { database.globalNotification.map(item => (
                
-               project.notification.map(item => (
+              
                     
                     <ListGroupItem
                         action
                         // tag={Link}
                         // to={routesURL.PAGE_NOT_FOUND}
                         className="list-group-item-accent-warning list-group-item-divider"
+                   
                         >                      
                         <div>                        
                           {item.title}
@@ -91,7 +80,7 @@ class NotificationAside extends Component {
                         </small>
                      
                       </ListGroupItem>
-                   ))
+                  
                 ))
                }
            

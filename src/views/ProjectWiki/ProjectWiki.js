@@ -12,6 +12,7 @@ import Risks from "../../components/ProjectsWiki/Risks";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import StickySidebar from "sticky-sidebar";
 import { Row, Col } from "reactstrap";
+import projectwiki_database from "../../projectwiki_database";
 
 class ProjectWiki extends Component {
   sidebar = null;
@@ -23,7 +24,8 @@ class ProjectWiki extends Component {
   activityLogRef = React.createRef();
 
   componentDidMount() {
-    setTimeout(this.fixSidebar, 80);
+    // setTimeout(this.fixSidebar, 80);
+    this.fixSidebar();
   }
 
   fixSidebar = () => {
@@ -36,6 +38,8 @@ class ProjectWiki extends Component {
   };
 
   render() {
+    const tasks = projectwiki_database;
+
     return (
       <React.Fragment>
         <div className="animated fadeIn">
@@ -76,7 +80,7 @@ class ProjectWiki extends Component {
                   <Attachments />
                 </Col>
                 <div className="col-12" ref={this.workPackageRef}>
-                  <WorkPackages />
+                  <WorkPackages tasks={tasks} />
                 </div>
                 <div className="col-12" ref={this.issueChangesRef}>
                   <IssueChanges />

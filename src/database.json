@@ -1104,5 +1104,52 @@
     "backlog": "USD 2,600,000.00",
     "paid": "USD 1,000,000.00",
     "overdue": "USD 20,000.00"
-  }
+  },
+  "globalNotification": [
+    {
+      "due_date": "18-Jun-19",
+      "contex": "Suresh Padmanabhan",
+      "title": "Expense Report: ER10021 requires approval"
+    },
+    {
+      "due_date": "18-Jun-19",
+      "contex": "Neeraj Garg",
+      "title": "Timecard for week ending 15-Jun-19 requires approval"
+    },
+    {
+      "due_date": "17-Jun-19",
+      "contex": "John Doe",
+      "title": "Purchase Order PR100234 requires approval"
+    },
+    {
+      "due_date": "16-Jun-19",
+      "contex": "Shangri-la - SLUB Pha(60453005)",
+      "title": "Change Order C60453005-3 Approval"
+    },
+    {
+      "due_date": "12-Jun-19",
+      "contex": "Tai Kok Tsui, Kowloon(60453007)",
+      "title": "Invoice Approval - INV1018"
+    },
+    {
+      "due_date": "12-Jun-19",
+      "contex": "HKHA  for Supervising(60453009)",
+      "title": "Invoice Approval - INV1009"
+    },
+    {
+      "due_date": "09-Jun-19",
+      "contex": "Tsing Yi Indoor Recre(60453010)",
+      "title": "Deliverable D10256 Due"
+    },
+    {
+      "due_date": "09-Jun-19",
+      "contex": "810B West KLN Terminu(60453012)",
+      "title": "Project EAC change Approval"
+    },
+    {
+      "due_date": "07-Jun-19",
+      "contex": "TWGH Wong Fat Nam Col(60453013)",
+      "title": "FYI: Change Order C60453013-2 Approved"
+    }
+  ]
 }

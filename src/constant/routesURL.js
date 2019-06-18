@@ -6,7 +6,7 @@ export const routesURL = {
   PROJECT_WIKI: `${BASE_PATH}projectwiki`,
   DELIVERABLES_WIKI: `${BASE_PATH}deliverableswiki`,
   // DELIVERABLES_LIST: `${BASE_PATH}deliverableslist`,
-  WORKPACKAGE_WIKI: `${BASE_PATH}workpackagewiki`
+  WORKPACKAGE_WIKI: `${BASE_PATH}workpackagewiki/`
   // TASK_WIKI: `${BASE_PATH}taskwiki`,
   // MEETING: `${BASE_PATH}meeting`,
   // MEETING_LIST: `${BASE_PATH}meetinglist`,

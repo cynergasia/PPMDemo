@@ -1,18 +1,12 @@
 import React, { Component } from "react";
-import DatePicker from "react-datepicker";
 import moment from "moment";
-import {
-  Nav,
-  NavItem,
-  NavLink,
+import {  
   TabContent,
   TabPane,
   ListGroup,
   ListGroupItem
 } from "reactstrap";
-import classNames from "classnames";
 import BigCalendar from "react-big-calendar";
-
 import CustomCalendarToolbar from "../../views/CommonsComponents/Calender/CustomCalendarToolbar";
 import eventsList from "../../views/CommonsComponents/Calender/eventsList";
 
@@ -39,18 +33,7 @@ class CalendarAside extends Component {
               <ListGroupItem className="list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small border-0">
                 Calendar
               </ListGroupItem>
-            </ListGroup>
-            {/* <DatePicker
-              calendarClassName="w-100"
-              selected={this.state.startDate}
-              onChange={this.handleChange}
-              className="form-control"
-              showYearDropdown
-              showMonthDropdown
-              useShortMonthInDropdown
-              inline
-              todayButton={"Today"}
-            /> */}
+            </ListGroup>        
             <div className="right-calendar">
               <BigCalendar
                 localizer={BigCalendar.momentLocalizer(moment)}

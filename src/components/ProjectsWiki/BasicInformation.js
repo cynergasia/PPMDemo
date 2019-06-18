@@ -98,7 +98,7 @@ class BasicInformation extends Component {
     });
 
   render() {
-    const { modal, basicProjectInfo, editBasicProjectInfo } = this.state;
+    const { modal,  editBasicProjectInfo } = this.state;
     const modelBody = (
       <React.Fragment>
         <FormGroup>
@@ -204,7 +204,7 @@ class BasicInformation extends Component {
                     </tr>
 
                     <tr>
-                      <td className="basicinfo text-left"><div>Project Approve </div></td>
+                      <td className="basicinfo text-left"><div>Project Approver </div></td>
                       <td className="text-left"><div>Neeraj Garg (NG) </div></td>
                       <td className="basicinfo text-left"><div>P&L Manager </div></td>
                       <td className="text-left"><div>Arindam Mukherjee(AM) </div></td>
@@ -224,7 +224,7 @@ class BasicInformation extends Component {
                     </tr>   
                     <tr>
                       <td className=" basicinfo text-left">Project Details</td>
-                      <td colspan="3">
+                      <td colSpan="3">
                       <Input type="textarea" rows="2" value="Extensions N/Cape Mall Phase 3" /> 
                       </td>
                     </tr>                
@@ -265,48 +265,48 @@ class BasicInformation extends Component {
                         <thead className="thead-light">
                        
                           <tr>
-                            <th className="text-center">Person</th>
-                            <th className="text-center">Role</th>
-                            <th className="text-center">Start Date</th>
-                            <th className="text-center">End Date</th>
+                            <th className="text-left">Person</th>
+                            <th className="text-left">Role</th>
+                            <th className="text-left">Start Date</th>
+                            <th className="text-left">End Date</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td className="text-center">
+                            <td className="text-left">
                               <div>Suresh Padmanabhan </div>
                             </td>
-                            <td className="text-center">
+                            <td className="text-left">
                               <div>Project Manager </div>
                             </td>
-                            <td className="text-center">
+                            <td className="text-left">
                               <div>01-01-2019 </div>
                             </td>
-                            <th className="text-center">16-02-2020</th>
+                            <th className="text-left">02-16-2020</th>
                           </tr>
                           <tr>
-                            <td className="text-center">
+                            <td className="text-left">
                               <div>Neeraj Garg </div>
                             </td>
-                            <td className="text-center">
+                            <td className="text-left">
                               <div>Project Approver </div>
                             </td>
-                            <td className="text-center">
+                            <td className="text-left">
                               <div>01-01-2019 </div>
                             </td>
-                            <th className="text-center">16-02-2020</th>
+                            <th className="text-left">02-16-2020</th>
                           </tr>
                           <tr>
-                            <td className="text-center">
+                            <td className="text-left">
                               <div>Arindam Mukherjee</div>
                             </td>
-                            <td className="text-center">
+                            <td className="text-left">
                               <div>P&L Manager </div>
                             </td>
-                            <td className="text-center">
+                            <td className="text-left">
                               <div>01-01-2019 </div>
                             </td>
-                            <th className="text-center">16-02-2020</th>
+                            <th className="text-left">02-16-2020</th>
                           </tr>
                         </tbody>
                       </Table>

@@ -48,7 +48,6 @@ class RecoardInformation extends Component {
     const workflowinfo = database.recoard_information.workflow_info;
     const auditinfo = database.recoard_information.audit_info;
 
-    console.log(scheduleinfo);
     return (
       <React.Fragment>
         <Card className="position-sticky">
@@ -74,13 +73,16 @@ class RecoardInformation extends Component {
                 </ListGroupItemHeading>
                 <Collapse isOpen={this.state.isOpenSchedule}>
                   {scheduleinfo.map((item, index) => (
-                    <ListGroupItemText className="pt-3 pr-3 pl-3 mb-0 d-flex flex-wrap">
-                      <React.Fragment key={index}>
+                    <ListGroupItemText
+                      className="pt-3 pr-3 pl-3 mb-0 d-flex flex-wrap"
+                      key={index}
+                    >
+                      <React.Fragment>
                         <small className="text-muted mr-3">
                           <b>{item.title} : </b>
                         </small>
                         <small className="text-muted">{item.value}</small>
-                        <hr className="mb-0 w-100" />
+                        {/* <hr className="mb-0 w-100" /> */}
                       </React.Fragment>
                     </ListGroupItemText>
                   ))}
@@ -105,13 +107,16 @@ class RecoardInformation extends Component {
                 </ListGroupItemHeading>
                 <Collapse isOpen={this.state.isWorkflowSchedule}>
                   {workflowinfo.map((item, index) => (
-                    <ListGroupItemText className="pt-3 pr-3 pl-3 mb-0 d-flex flex-wrap">
+                    <ListGroupItemText
+                      className="pt-3 pr-3 pl-3 mb-0 d-flex flex-wrap"
+                      key={index}
+                    >
                       <React.Fragment key={index}>
                         <small className="text-muted mr-3">
                           <b>{item.title} : </b>
                         </small>
                         <small className="text-muted">{item.value}</small>
-                        <hr className="mb-0 w-100" />
+                        {/* <hr className="mb-0 w-100" /> */}
                       </React.Fragment>
                     </ListGroupItemText>
                   ))}
@@ -136,13 +141,16 @@ class RecoardInformation extends Component {
                 </ListGroupItemHeading>
                 <Collapse isOpen={this.state.isAuditSchedule}>
                   {auditinfo.map((item, index) => (
-                    <ListGroupItemText className="pt-3 pr-3 pl-3 mb-0 d-flex flex-wrap">
+                    <ListGroupItemText
+                      className="pt-3 pr-3 pl-3 mb-0 d-flex flex-wrap"
+                      key={index}
+                    >
                       <React.Fragment key={index}>
                         <small className="text-muted mr-3">
                           <b>{item.title} : </b>
                         </small>
                         <small className="text-muted">{item.value}</small>
-                        <hr className="mb-0 w-100" />
+                        {/* <hr className="mb-0 w-100" /> */}
                       </React.Fragment>
                     </ListGroupItemText>
                   ))}

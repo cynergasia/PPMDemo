@@ -11,7 +11,6 @@ import {
 } from "reactstrap";
 import PropTypes from "prop-types";
 import Profile from "./ProfileAside";
-import MiscAside from "./MiscAside";
 import {
   AppAsideToggler,
   AppHeaderDropdown,
@@ -21,7 +20,6 @@ import logo from "../../assets/img/brand/logo.png";
 import sygnet from "../../assets/img/brand/sygnet.svg";
 import Popup from "./Popup";
 import { routesURL } from "../../constant/routesURL";
-import DatePicker from "react-datepicker";
 
 const propTypes = {
   children: PropTypes.node
@@ -226,7 +224,7 @@ class DefaultHeader extends Component {
                 <i className="fa fa-bell" aria-hidden="true" />
               )}
               <Badge pill color="danger">
-                6
+                9
               </Badge>
             </NavLink>
           </NavItem>
