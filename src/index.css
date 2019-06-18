@@ -290,11 +290,10 @@ h6.chart-title {
   position: relative;
   margin: 0;
   height: auto;
-  width: 100%; 
+  width: 100%;
   flex: 0 0 100%;
   background: none;
   color: #000;
-  
 }
 
 .sidebar-fixed .main-content .sidebar.is-affixed .position-sticky {
@@ -303,7 +302,6 @@ h6.chart-title {
   /* position: relative;
   width: 388px !important;
   left : 835 !important; */
-
   /* width: calc(100% - 1.5rem);
   left : 819 !important; */
   /* left: 819px !important;
@@ -335,6 +333,11 @@ h6.chart-title {
   color: white;
 }
 
+.card-header {
+  font-size: 0.99rem;
+  font-weight: 501;
+}
+
 .card-header-icons {
   margin-left: 10px;
 }
@@ -353,7 +356,7 @@ h6.chart-title {
 }
 
 .project-wiki-basicinfo {
-  position: relative;  
+  position: relative;
   overflow: auto;
   overflow-y: scroll;
 }
@@ -394,6 +397,7 @@ h6.chart-title {
   width: 100%;
   display: block;
 }
+
 /* .aside-menu-lg-show .rbc-toolbar .rbc-toolbar-label .sidebar-fixed .main-content .sidebar.is-affixed .position-sticky {
   width: 100%;
   display: block;
@@ -440,7 +444,6 @@ h6.chart-title {
   .sidebar-fixed .main-content .sidebar.is-affixed .position-sticky {
     margin-top: 0;
     /* My CSS */
-
     /* width: calc(100% - 1.5rem); */
   }
 }

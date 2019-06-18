@@ -1,8 +1,19 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import ReactDOM from "react-dom";
 
 class DeliverablesWikiMenu extends Component {
+  scrollTo = ({ current: ref }) => {
+    let scrollRef = ReactDOM.findDOMNode(ref);
+    let scrollOptions = {
+      left: 0,
+      top: scrollRef.offsetTop,
+      behavior: "smooth"
+    };
+    window.scrollTo(scrollOptions);
+  };
   render() {
+    const { refs } = this.props;
     return (
       <React.Fragment>
         <div className="">
@@ -16,43 +27,47 @@ class DeliverablesWikiMenu extends Component {
                   </li>
                 </ol>
                 <ol className="breadcrumb left-breadcrumb">
-                
                   <li className="nav-head active" aria-current="page">
-                    <Link exact to="#/">
-                      <i className="fa fa-edit" /> Edit
-                    </Link>
-                  </li>
-
-                  <li className="nav-head active" aria-current="page">
-                    <Link exact to="#/">
+                    <Link
+                      exact
+                      to="#"
+                      onClick={() => this.scrollTo(refs.activityLogRef)}
+                    >
                       <i className="cui-comment-square" /> Comment
                     </Link>
                   </li>
 
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="#/">
+                    <Link exact to="#">
                       <i className="fa fa-user-secret" /> Assign
                     </Link>
                   </li>
 
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="#/">
+                    <Link
+                      exact
+                      to="#"
+                      onClick={() => this.scrollTo(refs.approvedStatus)}
+                    >
                       <i className="fa fa-check-square" /> Approved Status
                     </Link>
                   </li>
 
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="#/">
+                    <Link
+                      exact
+                      to="#"
+                      onClick={() => this.scrollTo(refs.activityLogRef)}
+                    >
                       <i className="fa fa-clipboard" /> Activity Log
                     </Link>
                   </li>
 
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="#/">
+                    <Link exact to="#">
                       <i className="fa fa-rss" /> Follow
                     </Link>
                   </li>
-
                 </ol>
               </div>
             </div>

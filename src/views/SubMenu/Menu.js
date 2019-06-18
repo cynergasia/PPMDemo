@@ -14,7 +14,7 @@ class Menu extends Component {
               <ol className="breadcrumb left-breadcrumb">
                 <li className="nav-head active" aria-current="page">
                   <Link exact="true" to={routesURL.PAGE_NOT_FOUND}>
-                    ABC Corp.
+                    SHELL
                   </Link>
                 </li>
               </ol>
@@ -40,7 +40,11 @@ class Menu extends Component {
               <h4 className="customer-title">Customer</h4>
               <ol className="breadcrumb left-breadcrumb">
                 {database.customers.map((item, index) => (
-                  <li className="nav-head active" aria-current="page" key={index}>
+                  <li
+                    className="nav-head active"
+                    aria-current="page"
+                    key={index}
+                  >
                     <Link exact="true" to={routesURL.PAGE_NOT_FOUND}>
                       {item}
                     </Link>

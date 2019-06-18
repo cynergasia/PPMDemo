@@ -2,7 +2,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
-import {Button } from "reactstrap";
 
 class ProjectWikiMenu extends Component {
   scrollTo = ({ current: ref }) => {
@@ -25,7 +24,8 @@ class ProjectWikiMenu extends Component {
               <div className="col-12 col-sm-12 col-lg-12">
                 <ol className="breadcrumb left-breadcrumb">
                   <li className="nav-head active" area-current="page">
-                  <i className="fa fa-map-marker" /> Extensions N/Cape Mall Phase 3 (60453005)
+                    <i className="fa fa-map-marker" /> Extensions N/Cape Mall
+                    Phase 3 (60453005)
                   </li>
                 </ol>
                 <ol className="breadcrumb left-breadcrumb">
@@ -35,14 +35,14 @@ class ProjectWikiMenu extends Component {
                     </Link>
                   </li> */}
                   <li className="nav-head active" aria-current="page">
-                    <Link  onClick={() => this.scrollTo(refs.activityLogRef)}
-                      className="cursor-pointer">
+                    <Link
+                      onClick={() => this.scrollTo(refs.activityLogRef)}
+                      className="cursor-pointer"
+                    >
                       <i className="cui-comment-square" /> Comment
                     </Link>
                   </li>
-                  <li>
-          
-                  </li>
+                  <li />
                   {/* <li className="nav-head active " aria-current="page">
                     <Link
                       onClick={() => this.scrollTo(refs.activityLogRef)}
