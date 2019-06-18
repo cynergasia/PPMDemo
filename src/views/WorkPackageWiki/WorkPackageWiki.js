@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import WorkPackageWikiMenu from "../SubMenu/WorkPackageWikiMenu";
+import ProjectWikiMenu from "../SubMenu/ProjectWikiMenu";
 import RecoardInformation from "../../components/RecoardInformation";
 import Attachments from "../../components/Attachments";
 import Comments from "../../components/Comments";
-import ActivityLog from "../../components/ActivityLog";
+// import ActivityLog from "../../components/ActivityLog";
 import WorkPackageInformation from "../../components/WorkPackageWiki/WorkPackageInformation";
 import WorkPackageActivities from "../../components/WorkPackageWiki/WorkPackageActivities";
 import WorkPackageIssueChanges from "../../components/WorkPackageWiki/WorkPackageIssueChanges";
@@ -12,23 +13,32 @@ import WorkPackageDeliverables from "../../components/WorkPackageWiki/WorkPackag
 import WorkPackageMeeting from "../../components/WorkPackageWiki/WorkPackageMeeting";
 import workpackagewiki_database from "../../workpackagewiki_database";
 import StickySidebar from "sticky-sidebar";
+import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 
 class WorkPackageWiki extends Component {
   sidebar = null;
+  
 
-  componentDidMount() {
-    setTimeout(this.fixSidebar, 80);
+  issueChangesRef = React.createRef();
+  workPackageRef = React.createRef();
+  meetingMinutesRef = React.createRef();
+  financialsRef = React.createRef();
+  activityLogRef = React.createRef();
+
+
+  componentDidMount() {   
+    this.fixSidebar();   
   }
 
   fixSidebar = () => {
     this.sidebar = new StickySidebar(".sidebar", {
       topSpacing: 0,
-      bottomSpacing: 0,
+      bottomSpacing: 0,    
       containerSelector: ".main-content",
       innerWrapperSelector: ".sidebar__inner"
     });
+  
   };
-
   render() {
     const { activities } = workpackagewiki_database;
     return (
@@ -36,7 +46,15 @@ class WorkPackageWiki extends Component {
         <div className="animated fadeIn">
           <Row>
             <Col sm="12" md="12" lg="12">
-              <WorkPackageWikiMenu />
+              <WorkPackageWikiMenu 
+               refs={{
+                issueChangesRef: this.issueChangesRef,
+                workPackageRef: this.workPackageRef,
+                meetingMinutesRef: this.meetingMinutesRef,             
+                activityLogRef: this.activityLogRef
+              }}
+              workPageRef={this.workPageRef}/>
+             
             </Col>
           </Row>
 
@@ -51,9 +69,9 @@ class WorkPackageWiki extends Component {
 
             <div className="col-12 col-lg-8">
               <Row>
-                <Col xs="12">
+                <div className="col-12" ref={this.workPackageRef}>
                   <WorkPackageInformation />
-                </Col>
+                </div>
                 <Col xs="12">
                   <WorkPackageActivities activities={activities} />
                 </Col>
@@ -62,21 +80,22 @@ class WorkPackageWiki extends Component {
                   <Attachments />
                 </Col>
 
-                <Col lg="12">
+                {/* <Col lg="12">
                   <Comments />
-                </Col>
-                <Col lg="12">
+                </Col> */}
+                <div className="col-12" ref={this.issueChangesRef}>
                   <WorkPackageIssueChanges />
-                </Col>
-                <Col lg="12">
+                </div>
+                <div className="col-12">
                   <WorkPackageDeliverables />
-                </Col>
-                <Col lg="12">
+                </div>
+                <div className="col-12"  ref={this.meetingMinutesRef}>
                   <WorkPackageMeeting />
-                </Col>
-                <Col lg="12">
-                  <ActivityLog title="WorkPackage ActivityLog" />
-                </Col>
+                </div>
+                <div className="col-12" ref={this.activityLogRef}>
+                  {/* <ActivityLog title="WorkPackage ActivityLog"  /> */}
+                  <ActivityLog />
+                </div>
               </Row>
             </div>
           </div>

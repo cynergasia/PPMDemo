@@ -29,11 +29,11 @@ class ProjectWikiMenu extends Component {
                   </li>
                 </ol>
                 <ol className="breadcrumb left-breadcrumb">
-                  <li className="nav-head active" aria-current="page">
+                  {/* <li className="nav-head active" aria-current="page">
                     <Link exact to="/500">
                       <i className="fa fa-edit" /> Edit
                     </Link>
-                  </li>
+                  </li> */}
                   <li className="nav-head active" aria-current="page">
                     <Link  onClick={() => this.scrollTo(refs.activityLogRef)}
                       className="cursor-pointer">
@@ -41,7 +41,7 @@ class ProjectWikiMenu extends Component {
                     </Link>
                   </li>
                   <li>
-                  <Button block color="link" className="cursor-pointer">Link</Button>
+          
                   </li>
                   {/* <li className="nav-head active " aria-current="page">
                     <Link
