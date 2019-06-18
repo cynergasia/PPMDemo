@@ -5,7 +5,8 @@ import ProjectWikiMenu from "../SubMenu/ProjectWikiMenu";
 import RecoardInformation from "../../components/RecoardInformation";
 import Attachments from "../../components/Attachments";
 import Comments from "../../components/Comments";
-import ActivityLog from "../../components/ActivityLog";
+// import ActivityLog from "../../components/ActivityLog";
+import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import WorkPackageInformation from "../../components/WorkPackageWiki/WorkPackageInformation";
 import WorkPackageActivities from "../../components/WorkPackageWiki/WorkPackageActivities";
 import WorkPackageIssueChanges from "../../components/WorkPackageWiki/WorkPackageIssueChanges";
@@ -99,7 +100,7 @@ class WorkPackageWiki extends Component {
                 </div>
                 <div className="col-12" ref={this.activityLogRef}>
                   {/* <ActivityLog title="WorkPackage ActivityLog"  /> */}
-                  <ActivityLog />
+                  <ActivityLog/>
                 </div>
               </Row>
             </div>
