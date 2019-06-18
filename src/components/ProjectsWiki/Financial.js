@@ -1,8 +1,18 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody, Row, Col } from "reactstrap";
+import database from "../../database";
 
 class Financial extends Component {
   render() {
+    const {
+      contractedAmount,
+      approvedCost,
+      currentCost,
+      invoiced,
+      backlog,
+      paid,
+      overdue
+    } = database.financialDetails;
     return (
       <React.Fragment>
         <Card>
@@ -13,20 +23,38 @@ class Financial extends Component {
             </div>
           </CardHeader>
           <CardBody>
-            <Row>
+            <Row className="financial-detail">
               <Col sm="12" md="6" lg="5">
-                <label>Contracted Amount: xxxxxx.xx</label>
+                <label>
+                  <span className="financial-title">Contracted Amount:</span>{" "}
+                  {contractedAmount}
+                </label>
                 <br />
-                <label>Approved Cos: xxxxxx.xx </label>
+                <label>
+                  <span className="financial-title">Approved Cos:</span>{" "}
+                  {approvedCost}{" "}
+                </label>
                 <br />
-                <label>Current Amount: xxxxx.xx </label>
+                <label>
+                  <span className="financial-title">Current Amount:</span>{" "}
+                  {currentCost}{" "}
+                </label>
               </Col>
               <Col sm="12" md="6" lg="5">
-                <label>Invoiced: xxxxxx.xx</label>
+                <label>
+                  <span className="financial-title">Invoiced:</span> {invoiced}
+                </label>
                 <br />
-                <label>Backlog: xxxxx.xx</label>
+                <label>
+                  <span className="financial-title">Backlog:</span> {backlog}
+                </label>
                 <br />
-                <label>Paid: xxxxx.xx (Overdue: xxxxxx.xx)</label>
+                <label>
+                  <span className="financial-title">Paid:</span> {paid} (<span className="financial-title">
+                    Overdue:
+                  </span>{" "}
+                  {overdue})
+                </label>
               </Col>
             </Row>
           </CardBody>

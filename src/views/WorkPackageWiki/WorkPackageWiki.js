@@ -5,15 +5,15 @@ import ProjectWikiMenu from "../SubMenu/ProjectWikiMenu";
 import RecoardInformation from "../../components/RecoardInformation";
 import Attachments from "../../components/Attachments";
 import Comments from "../../components/Comments";
-// import ActivityLog from "../../components/ActivityLog";
+import ActivityLog from "../../components/ActivityLog";
 import WorkPackageInformation from "../../components/WorkPackageWiki/WorkPackageInformation";
 import WorkPackageActivities from "../../components/WorkPackageWiki/WorkPackageActivities";
 import WorkPackageIssueChanges from "../../components/WorkPackageWiki/WorkPackageIssueChanges";
 import WorkPackageDeliverables from "../../components/WorkPackageWiki/WorkPackageDeliverables";
 import WorkPackageMeeting from "../../components/WorkPackageWiki/WorkPackageMeeting";
-import workpackagewiki_database from "../../workpackagewiki_database";
 import StickySidebar from "sticky-sidebar";
-import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
+import projectwiki_database from "../../projectwiki_database";
+import _omit from "lodash/omit";
 
 class WorkPackageWiki extends Component {
   sidebar = null;
@@ -40,7 +40,12 @@ class WorkPackageWiki extends Component {
   
   };
   render() {
-    const { activities } = workpackagewiki_database;
+    const { id } = this.props.match.params;
+    const p = projectwiki_database[0].workPackages.filter(wp => wp.id === id);
+    const { activities: a } = { ...p["0"] };
+
+    const activities = a.map(item => _omit(item, ["type"]));
+
     return (
       <React.Fragment>
         <div className="animated fadeIn">

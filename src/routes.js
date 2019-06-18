@@ -53,7 +53,7 @@ const routes = [
   //   title: "Deliverables List"
   // },
   {
-    path: routesURL.WORKPACKAGE_WIKI,
+    path: `${routesURL.WORKPACKAGE_WIKI}:id`,
     component: WorkPackageWiki,
     title: "WorkPackage Wiki"
   }

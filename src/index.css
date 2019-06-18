@@ -408,6 +408,10 @@ h6.chart-title {
   left: 0 !important;
 } */
 
+.financial-detail .financial-title {
+  font-weight: 600;
+}
+
 /***** Responsive *****/
 
 @media (min-width: 768px) {
