@@ -5,7 +5,7 @@ import RecoardInformation from "../../components/RecoardInformation";
 import TaskInformation from "../../components/TaskWiki/TaskInformation";
 import Attachments from "../../components/Attachments";
 import Comments from "../../components/Comments";
-import ActivityLog from "../../components/ActivityLog";
+import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import StickySidebar from "sticky-sidebar";
 
 class TaskWiki extends Component {
@@ -52,9 +52,10 @@ class TaskWiki extends Component {
                 <Col xs="12">
                   <Attachments />
                 </Col>
-                <Col xs="12">
+
+                {/* <Col xs="12">
                   <Comments />
-                </Col>
+                </Col> */}
                 <Col xs="12">
                   <ActivityLog title="Task ActivityLog" />
                 </Col>

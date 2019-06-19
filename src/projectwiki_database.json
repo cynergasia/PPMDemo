@@ -27,7 +27,36 @@
         "remaininghours": "0",
         "complete": "100.00%",
         "public": "N",
-        "activities": []
+        "activities": [
+          {
+            "type": "activity",
+            "wbsNumber": "a1.01.01",
+            "name": "Team Managemnet",
+            "duration": "10",
+            "start_date": "01-01-2019",
+            "end_date": "01-11-2019",
+            "resources": "SP",
+            "estimatehours": "40",
+            "actualhours": "40",
+            "remaininghours": "0",
+            "complete": "100.00%",
+            "public": "N"
+          },
+          {
+            "type": "activity",
+            "wbsNumber": "a1.01.02",
+            "name": "Contract Mangemnet",
+            "duration": "49",
+            "start_date": "01-12-2019",
+            "end_date": "03-02-2019",
+            "resources": "SP",
+            "estimatehours": "260",
+            "actualhours": "260",
+            "remaininghours": "0",
+            "complete": "100.00%",
+            "public": "N"
+          }
+        ]
       },
       {
         "id": "f943d9a6-5fe9-4c97-957d-16d3f8af117d",
