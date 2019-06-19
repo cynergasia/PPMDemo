@@ -19,7 +19,8 @@ class DeliverablesWiki extends Component {
   activityLogRef = React.createRef();
 
   componentDidMount() {
-    this.fixSidebar();
+    setTimeout(this.fixSidebar, 80);
+    
   }
 
   fixSidebar = () => {
