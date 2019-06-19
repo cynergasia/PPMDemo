@@ -1,19 +1,20 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import WorkPackageWikiMenu from "../SubMenu/WorkPackageWikiMenu";
-import ProjectWikiMenu from "../SubMenu/ProjectWikiMenu";
 import RecoardInformation from "../../components/RecoardInformation";
 import Attachments from "../../components/Attachments";
-import Comments from "../../components/Comments";
+// import Comments from "../../components/Comments";
 // import ActivityLog from "../../components/ActivityLog";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import WorkPackageInformation from "../../components/WorkPackageWiki/WorkPackageInformation";
 import WorkPackageActivities from "../../components/WorkPackageWiki/WorkPackageActivities";
 import WorkPackageIssueChanges from "../../components/WorkPackageWiki/WorkPackageIssueChanges";
 import WorkPackageDeliverables from "../../components/WorkPackageWiki/WorkPackageDeliverables";
-import WorkPackageMeeting from "../../components/WorkPackageWiki/WorkPackageMeeting";
+// import WorkPackageMeeting from "../../components/WorkPackageWiki/WorkPackageMeeting";
+import Meetings from "../../components/ProjectsWiki/Meetings";
 import StickySidebar from "sticky-sidebar";
 import projectwiki_database from "../../projectwiki_database";
+import workpackagewiki_database from "../../workpackagewiki_database";
 import _omit from "lodash/omit";
 
 class WorkPackageWiki extends Component {
@@ -41,9 +42,13 @@ class WorkPackageWiki extends Component {
     const { id } = this.props.match.params;
     const p = projectwiki_database[0].workPackages.filter(wp => wp.id === id);
     const { activities: a } = { ...p["0"] };
-
     const activities = a.map(item => _omit(item, ["type"]));
-
+    const {
+      workPackageInfo,
+      issues,
+      changes,
+      deliverbales
+    } = workpackagewiki_database;
     return (
       <React.Fragment>
         <div className="animated fadeIn">
@@ -73,7 +78,7 @@ class WorkPackageWiki extends Component {
             <div className="col-12 col-lg-8">
               <Row>
                 <div className="col-12" ref={this.workPackageRef}>
-                  <WorkPackageInformation />
+                  <WorkPackageInformation workPackageInfo={workPackageInfo} />
                 </div>
                 <Col xs="12">
                   <WorkPackageActivities activities={activities} />
@@ -87,13 +92,14 @@ class WorkPackageWiki extends Component {
                   <Comments />
                 </Col> */}
                 <div className="col-12" ref={this.issueChangesRef}>
-                  <WorkPackageIssueChanges />
+                  <WorkPackageIssueChanges issues={issues} changes={changes} />
                 </div>
                 <div className="col-12">
-                  <WorkPackageDeliverables />
+                  <WorkPackageDeliverables deliverbales={deliverbales} />
                 </div>
                 <div className="col-12" ref={this.meetingMinutesRef}>
-                  <WorkPackageMeeting />
+                  {/* <WorkPackageMeeting /> */}
+                  <Meetings />
                 </div>
                 <div className="col-12" ref={this.activityLogRef}>
                   {/* <ActivityLog title="WorkPackage ActivityLog"  /> */}

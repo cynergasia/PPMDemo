@@ -1,7 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
 import ReactAnyChart from "anychart-react";
 import anyChart from "anychart";
-import data from "./data.json";
 import "./Risk.css";
 import {
   Row,
@@ -120,7 +120,7 @@ class Risks extends Component {
                   aria-hidden="true"
                 />
               </a>
-              <a id="Popover1" onClick={() => this.toggle()}>
+              <a id="Popover1" href="#" onClick={() => this.toggle()}>
                 <i className="fa fa-ellipsis-h card-header-icons" />
               </a>
               <Popover

@@ -1,22 +1,94 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  TabContent,
-  TabPane,
-  ListGroup,
-  ListGroupItem,
-  ListGroupItemText,
-  ListGroupItemHeading
-} from "reactstrap";
-import { routesURL } from "../../constant/routesURL";
-import { Link } from "react-router-dom";
+import { Card, CardHeader, CardBody, TabContent, TabPane } from "reactstrap";
+// import { routesURL } from "../../constant/routesURL";
+// import { Link } from "react-router-dom";
+import ReactDataTableNew from "../ReactDataTableNew";
+
+let issueData = {
+  columns: [
+    {
+      label: "Status",
+      field: "status",
+      sort: "asc"
+    },
+    {
+      label: "WorkPackage Number",
+      field: "workPackageNumber",
+      sort: "asc"
+    },
+
+    {
+      label: "Issue Number",
+      field: "issueNumber",
+      sort: "asc"
+    },
+    {
+      label: "Description",
+      field: "description",
+      sort: "asc"
+    },
+    {
+      label: "Due Date",
+      field: "dueDate",
+      sort: "asc"
+    },
+    {
+      label: "% Complete",
+      field: "completed",
+      sort: "asc"
+    }
+  ],
+  rows: []
+};
+
+let changesData = {
+  columns: [
+    {
+      label: "Status",
+      field: "status",
+      sort: "asc"
+    },
+    {
+      label: "WorkPackage Number",
+      field: "workPackageNumber",
+      sort: "asc"
+    },
+
+    {
+      label: "Change Number",
+      field: "changeNumber",
+      sort: "asc"
+    },
+    {
+      label: "Description",
+      field: "description",
+      sort: "asc"
+    },
+    {
+      label: "Due Date",
+      field: "dueDate",
+      sort: "asc"
+    },
+    {
+      label: "Value",
+      field: "value",
+      sort: "asc"
+    },
+    {
+      label: "% Complete",
+      field: "completed",
+      sort: "asc"
+    }
+  ],
+  rows: []
+};
 
 class WorkPackageIssueChanges extends Component {
   state = {
-    activeTab: "1"
+    activeTab: "1",
+    issueData: { ...issueData },
+    changesData: { ...changesData }
   };
 
   toggle = tab => {
@@ -27,6 +99,14 @@ class WorkPackageIssueChanges extends Component {
     }
   };
 
+  componentDidMount() {
+    issueData.rows = this.props.issues;
+    changesData.rows = this.props.changes;
+    this.setState({
+      issueData: { ...issueData },
+      changesData: { ...changesData }
+    });
+  }
   render() {
     const { activeTab } = this.state;
     return (
@@ -68,10 +148,11 @@ class WorkPackageIssueChanges extends Component {
           <CardBody>
             <TabContent activeTab={activeTab} className="border-0">
               <TabPane tabId="1">
-                There are 4 change orders approved till system date. Last change
-                order of $40000 was approved on 21st Mar,2019.
+                <ReactDataTableNew data={this.state.issueData} />
               </TabPane>
-              <TabPane tabId="2" />
+              <TabPane tabId="2">
+                <ReactDataTableNew data={this.state.changesData} />
+              </TabPane>
             </TabContent>
           </CardBody>
         </Card>

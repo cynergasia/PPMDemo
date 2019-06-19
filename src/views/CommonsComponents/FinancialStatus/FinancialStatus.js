@@ -15,7 +15,6 @@ const brandWarning = getStyle("--warning");
 const brandDanger = getStyle("--danger");
 
 const mainChart = {
-
   labels: [
     "Dec/18",
     "Jan-19",
@@ -36,15 +35,15 @@ const mainChart = {
       borderWidth: 3,
       pointBorderWidth: 3,
       //kkk
-      pointBorderColor: 'black',
-      pointBackgroundColor: 'black',
-     //pointBorderWidth: 1,
+      pointBorderColor: "black",
+      pointBackgroundColor: "black",
+      //pointBorderWidth: 1,
       //pointHoverRadius: 5,
-       pointHoverBackgroundColor: 'black',
-        pointHoverBorderColor: 'black',
+      //  pointHoverBackgroundColor: 'black',
+      pointHoverBorderColor: "black",
       //pointHoverBorderWidth: 2,
-       pointRadius: 1,
-       pointHitRadius: 10,
+      pointRadius: 1,
+      pointHitRadius: 10,
       data: []
     },
     {
@@ -53,11 +52,11 @@ const mainChart = {
       borderColor: brandSuccess,
       pointHoverBackgroundColor: "#fff",
       borderWidth: 3,
-      pointBorderWidth: 3,     
+      pointBorderWidth: 3,
       pointBorderColor: brandSuccess,
-      pointBackgroundColor: brandSuccess,     
-      pointHoverBackgroundColor: brandSuccess,
-      pointHoverBorderColor: brandSuccess,      
+      pointBackgroundColor: brandSuccess,
+      // pointHoverBackgroundColor: brandSuccess,
+      pointHoverBorderColor: brandSuccess,
       pointRadius: 1,
       pointHitRadius: 10,
       data: []
@@ -69,11 +68,11 @@ const mainChart = {
       pointHoverBackgroundColor: "#fff",
       borderWidth: 3,
       // borderDash: [8, 5],
-      pointBorderWidth: 3,     
+      pointBorderWidth: 3,
       pointBorderColor: brandDanger,
-      pointBackgroundColor: brandDanger,     
-      pointHoverBackgroundColor: brandDanger,
-      pointHoverBorderColor: brandDanger,      
+      pointBackgroundColor: brandDanger,
+      // pointHoverBackgroundColor: brandDanger,
+      pointHoverBorderColor: brandDanger,
       pointRadius: 1,
       pointHitRadius: 10,
       data: []

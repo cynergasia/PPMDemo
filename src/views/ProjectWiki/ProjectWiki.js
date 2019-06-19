@@ -24,7 +24,7 @@ class ProjectWiki extends Component {
   activityLogRef = React.createRef();
 
   componentDidMount() {
-    this.fixSidebar();
+    setTimeout(this.fixSidebar, 320);
   }
 
   fixSidebar = () => {
