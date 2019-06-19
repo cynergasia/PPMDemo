@@ -1,26 +1,25 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
-import DeliverablesWikiMenu from "../SubMenu/DeliverablesWikiMenu";
+import IssueWikiMenu from "../SubMenu/IssueWikiMenu";
+import IssueDescription from "../../components/IssueWiki/IssueDescription";
 import RecoardInformation from "../../components/RecoardInformation";
+import IssueActivities from "../../components/IssueWiki/IssueActivities";
 import Attachments from "../../components/Attachments";
-import DeliverablesInformation from "../../components/DeliverablesWiki/DeliverablesInformation";
-import DeliverablesActivities from "../../components/DeliverablesWiki/DeliverablesActivities";
-// import Comments from "../../components/Comments";
-import DeliverablesApprovalStatus from "../../components/DeliverablesWiki/DeliverablesApprovalStatus";
-// import DeliverablesActivityLog from "../../components/DeliverablesWiki/DeliverablesActivityLog";
-import deliverableswiki_database from "../../deliverableswiki_database";
+import IssueApprovalStatus from "../../components/IssueWiki/IssueApprovalStatus";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import StickySidebar from "sticky-sidebar";
+import deliverableswiki_database from "../../deliverableswiki_database";
+import issuewiki_database from "../../issuewiki_database";
 
-class DeliverablesWiki extends Component {
+class IssueWiki extends Component {
   sidebar = null;
 
-  approvedStatus = React.createRef();
+  attachmentRef = React.createRef();
+  approvedStatusRef = React.createRef();
   activityLogRef = React.createRef();
 
   componentDidMount() {
-    setTimeout(this.fixSidebar, 80);
-    
+    setTimeout(this.fixSidebar, 320);
   }
 
   fixSidebar = () => {
@@ -34,14 +33,16 @@ class DeliverablesWiki extends Component {
 
   render() {
     const { activities } = deliverableswiki_database;
+    const { issueDescription } = issuewiki_database;
     return (
       <React.Fragment>
         <div className="animated fadeIn">
           <Row>
             <Col sm="12" md="12" lg="12">
-              <DeliverablesWikiMenu
+              <IssueWikiMenu
                 refs={{
-                  approvedStatus: this.approvedStatus,
+                  attachmentRef: this.attachmentRef,
+                  approvedStatusRef: this.approvedStatusRef,
                   activityLogRef: this.activityLogRef
                 }}
               />
@@ -52,7 +53,7 @@ class DeliverablesWiki extends Component {
             <div className="col-12 col-lg-4">
               <div className="sidebar">
                 <div className="sidebar__inner">
-                  <RecoardInformation isWorkflowinfo={false} />
+                  <RecoardInformation />
                 </div>
               </div>
             </div>
@@ -60,17 +61,16 @@ class DeliverablesWiki extends Component {
             <div className="col-12 col-lg-8">
               <Row>
                 <Col xs="12">
-                  <DeliverablesInformation />
+                  <IssueDescription issueDescription={issueDescription} />
                 </Col>
                 <Col xs="12">
-                  <DeliverablesActivities activities={activities} />
+                  <IssueActivities activities={activities} />
                 </Col>
-
-                <Col xs="12">
+                <div className="col-12" ref={this.attachmentRef}>
                   <Attachments />
-                </Col>
-                <div className="col-12" ref={this.approvedStatus}>
-                  <DeliverablesApprovalStatus />
+                </div>
+                <div className="col-12" ref={this.approvedStatusRef}>
+                  <IssueApprovalStatus />
                 </div>
                 <div className="col-12" ref={this.activityLogRef}>
                   <ActivityLog />
@@ -86,4 +86,4 @@ class DeliverablesWiki extends Component {
   }
 }
 
-export default DeliverablesWiki;
+export default IssueWiki;

@@ -1,9 +1,8 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
+import ReactDOM from "react-dom";
 
-class WorkPackageWikiMenu extends Component {
+class IssueWikiMenu extends Component {
   scrollTo = ({ current: ref }) => {
     let scrollRef = ReactDOM.findDOMNode(ref);
     let scrollOptions = {
@@ -27,6 +26,9 @@ class WorkPackageWikiMenu extends Component {
                     <i className="fa fa-map-marker" /> Extensions N/Cape Mall
                     Phase 3 (60453005)
                   </li>
+                  <li className="nav-head active" area-current="page">
+                    Issue 1001 - Bridge fireproofing not sufficient
+                  </li>
                 </ol>
                 <ol className="breadcrumb left-breadcrumb">
                   {/* <li className="nav-head active" aria-current="page">
@@ -36,52 +38,35 @@ class WorkPackageWikiMenu extends Component {
                   </li> */}
                   <li className="nav-head active" aria-current="page">
                     <Link
-                      onClick={() => this.scrollTo(refs.activityLogRef)}
                       className="cursor-pointer"
+                      onClick={() => this.scrollTo(refs.activityLogRef)}
                     >
                       <i className="cui-comment-square" /> Comment
                     </Link>
                   </li>
                   <li />
-                  {/* <li className="nav-head active " aria-current="page">
-                    <Link
-                      onClick={() => this.scrollTo(refs.activityLogRef)}
-                      className="cursor-pointer"
-                    >
-                    <i className="fa fa-clipboard" /> Activity Log
-                    </Link>
-                  </li> */}
                   <li className="nav-head active " aria-current="page">
                     <Link
-                      onClick={() => this.scrollTo(refs.workPackageRef)}
-                      className="cursor-pointer"
+                      exact
+                      to="#"
+                      onClick={() => this.scrollTo(refs.approvedStatusRef)}
                     >
-                      <i className="fa fa-sitemap" /> WBS
+                      <i className="fa fa-check-square" /> Approved Status
+                    </Link>
+                  </li>
+                  <li className="nav-head active " aria-current="page">
+                    <Link
+                      className="cursor-pointer"
+                      onClick={() => this.scrollTo(refs.attachmentRef)}
+                    >
+                      <i className="fa fa-cloud-upload" /> Attachments
                     </Link>
                   </li>
 
                   <li className="nav-head active " aria-current="page">
                     <Link
-                      onClick={() => this.scrollTo(refs.issueChangesRef)}
                       className="cursor-pointer"
-                    >
-                      <i className="fa fa-refresh" /> Issues/Changes
-                    </Link>
-                  </li>
-                  
-                  <li className="nav-head active " aria-current="page">
-                    <Link
-                      onClick={() => this.scrollTo(refs.meetingMinutesRef)}
-                      className="cursor-pointer"
-                    >
-                      <i className="fa fa-pencil-square" /> Meeting Minutes
-                    </Link>
-                  </li>
-
-                  <li className="nav-head active " aria-current="page">
-                    <Link
                       onClick={() => this.scrollTo(refs.activityLogRef)}
-                      className="cursor-pointer"
                     >
                       <i className="fa fa-clipboard" /> Activity Log
                     </Link>
@@ -101,4 +86,4 @@ class WorkPackageWikiMenu extends Component {
   }
 }
 
-export default WorkPackageWikiMenu;
+export default IssueWikiMenu;

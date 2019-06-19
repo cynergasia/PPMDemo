@@ -1,0 +1,12 @@
+{
+  "issueDescription": {
+    "number": "1001",
+    "name": "Bridge fireproofing not sufficient",
+    "description": "",
+    "issueType": ["Design Flow", "Faulty raw materials"],
+    "impacts": "Schedule & Cost",
+    "days": "10",
+    "hours": "80",
+    "cost": "USD 4000"
+  }
+}

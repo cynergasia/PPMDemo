@@ -1,7 +1,57 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody } from "reactstrap";
+import ReactDataTableNew from "../ReactDataTableNew";
+
+let deliverablesData = {
+  columns: [
+    {
+      label: "Status",
+      field: "status",
+      sort: "asc"
+    },
+    {
+      label: "WorkPackage Number",
+      field: "workPackageNumber",
+      sort: "asc"
+    },
+
+    {
+      label: "Deliverable Number",
+      field: "deliverableNumber",
+      sort: "asc"
+    },
+    {
+      label: "Description",
+      field: "description",
+      sort: "asc"
+    },
+    {
+      label: "Due Date",
+      field: "dueDate",
+      sort: "asc"
+    },
+    {
+      label: "Estimate Effort",
+      field: "estimateEffort",
+      sort: "asc"
+    },
+    {
+      label: "% Complete",
+      field: "completed",
+      sort: "asc"
+    }
+  ],
+  rows: []
+};
 
 class WorkPackageDeliverables extends Component {
+  state = {
+    deliverablesData: { ...deliverablesData }
+  };
+  componentDidMount() {
+    deliverablesData.rows = this.props.deliverbales;
+    this.setState({ deliverablesData: { ...deliverablesData } });
+  }
   render() {
     return (
       <React.Fragment>
@@ -15,9 +65,7 @@ class WorkPackageDeliverables extends Component {
             </div>
           </CardHeader>
           <CardBody>
-            This Workpackage has 4 deliverables. There are 2 deliverables which
-            are due in 10 days : 11234, 79654. There are no overdue deliverables
-            at this point.
+            <ReactDataTableNew data={this.state.deliverablesData} />
           </CardBody>
         </Card>
       </React.Fragment>

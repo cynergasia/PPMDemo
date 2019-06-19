@@ -4,7 +4,7 @@ import MeetingMenu from "../SubMenu/MeetingMenu";
 import RecoardInformation from "../../components/RecoardInformation";
 import Attachments from "../../components/Attachments";
 import Comments from "../../components/Comments";
-import ActivityLog from "../../components/ActivityLog";
+import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import MeetingInformation from "../../components/Meeting/MeetingInformation";
 import MeetingDescription from "../../components/Meeting/MeetingDescription";
 import { scrollTop } from "../../utils";
@@ -42,9 +42,9 @@ class Meeting extends Component {
             <Col sm="12" md="12" lg="8">
               <Attachments />
             </Col>
-            <Col sm="12" md="12" lg="8">
+            {/* <Col sm="12" md="12" lg="8">
               <Comments />
-            </Col>
+            </Col> */}
             <Col sm="12" md="12" lg="8">
               <ActivityLog title="Meeting ActivityLog" />
             </Col>

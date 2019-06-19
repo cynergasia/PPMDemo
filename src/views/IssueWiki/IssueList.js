@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
-import IssueTableList from "../../components/Issue/IssueTableList";
+import IssueTableList from "../../components/IssueWiki/IssueTableList";
 import getIssueList from "../../issuelist_database";
 
 class IssueList extends Component {

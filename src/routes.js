@@ -6,23 +6,24 @@ const ProjectStatusReport = React.lazy(() =>
   import("./views/ProjectStatusReport/ProjectStatusReport.js")
 );
 const ProjectWiki = React.lazy(() => import("./views/ProjectWiki/ProjectWiki"));
-const ResourcesList = React.lazy(() =>
-  import("./views/ProjectWiki/ResourcesList")
-);
+// const ResourcesList = React.lazy(() =>
+//   import("./views/ProjectWiki/ResourcesList")
+// );
 const DeliverablesWiki = React.lazy(() =>
   import("./views/DeliverablesWiki/DeliverablesWiki")
 );
-const DeliverablesList = React.lazy(() =>
-  import("./views/DeliverablesWiki/DeliverablesList")
-);
+// const DeliverablesList = React.lazy(() =>
+//   import("./views/DeliverablesWiki/DeliverablesList")
+// );
 const WorkPackageWiki = React.lazy(() =>
   import("./views/WorkPackageWiki/WorkPackageWiki")
 );
 const TaskWiki = React.lazy(() => import("./views/TaskWiki/TaskWiki"));
 const Meeting = React.lazy(() => import("./views/Meetings/Meeting"));
-const MettingList = React.lazy(() => import("./views/Meetings/MettingList"));
+// const MettingList = React.lazy(() => import("./views/Meetings/MettingList"));
 
-const IssueList = React.lazy(() => import("./views/IssueWiki/IssueList"));
+// const IssueList = React.lazy(() => import("./views/IssueWiki/IssueList"));
+// const IssueWiki = React.lazy(() => import("./views/IssueWiki/IssueWiki"));
 
 const routes = [
   { path: "/", exact: true, name: "Home" },
@@ -56,22 +57,27 @@ const routes = [
     path: `${routesURL.WORKPACKAGE_WIKI}:id`,
     component: WorkPackageWiki,
     title: "WorkPackage Wiki"
+  },
+  {
+    path: routesURL.TASK_WIKI,
+    component: TaskWiki,
+    title: "Task Wiki"
+  },
+  {
+    path: routesURL.MEETING,
+    component: Meeting,
+    title: "Meetings Home"
   }
-  // {
-  //   path: routesURL.TASK_WIKI,
-  //   component: TaskWiki,
-  //   title: "Task Wiki"
-  // },
-  // {
-  //   path: routesURL.MEETING,
-  //   component: Meeting,
-  //   title: "Meetings Home"
-  // },
   // {
   //   path: routesURL.MEETING_LIST,
   //   component: MettingList,
   //   title: "Meetings List"
   // },
+  // {
+  //   path: routesURL.ISSUE_WIKI,
+  //   component: IssueWiki,
+  //   title: "Issue Home"
+  // }
   // {
   //   path: routesURL.ISSUE_LIST,
   //   component: IssueList,

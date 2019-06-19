@@ -7,11 +7,12 @@ export const routesURL = {
   DELIVERABLES_WIKI: `${BASE_PATH}deliverableswiki`,
   // DELIVERABLES_LIST: `${BASE_PATH}deliverableslist`,
   WORKPACKAGE_WIKI: `${BASE_PATH}workpackagewiki/`,
-  // TASK_WIKI: `${BASE_PATH}taskwiki`,
-  // MEETING: `${BASE_PATH}meeting`,
+  TASK_WIKI: `${BASE_PATH}taskwiki`,
+  MEETING: `${BASE_PATH}meeting`,
   // MEETING_LIST: `${BASE_PATH}meetinglist`,
   // ACTIVITIES_LIST: `${BASE_PATH}activitieslist`,
   // RESOURCE_LIST: `${BASE_PATH}resourcelist/`,
+  // ISSUE_WIKI: `${BASE_PATH}issuewiki`,
   // ISSUE_LIST: `${BASE_PATH}issuelist`,
   PAGE_NOT_FOUND: `${BASE_PATH}500`
 };

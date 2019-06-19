@@ -31,8 +31,6 @@ class MiscAside extends Component {
     }
   };
   render() {
-    const { children, ...attributes } = this.props;
-
     return (
       <React.Fragment>
         <Nav tabs>

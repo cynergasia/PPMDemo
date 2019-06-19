@@ -27,11 +27,11 @@ class Meetings extends Component {
               <ListGroupItem>
                 <ListGroupItemHeading>Upcomming Meeting :</ListGroupItemHeading>
                 <ListGroupItemText>
-                  <Link to={routesURL.PAGE_NOT_FOUND}>
+                  <Link to={routesURL.MEETING}>
                     20-Jun-2019 : Review Design with Client
                   </Link>
                   <br />
-                  <Link to={routesURL.PAGE_NOT_FOUND}>
+                  <Link to={routesURL.MEETING}>
                     20-Jun-2019 : Review Design with Client{" "}
                   </Link>
                   <br />
@@ -43,11 +43,11 @@ class Meetings extends Component {
                   Review Past Meeting :
                 </ListGroupItemHeading>
                 <ListGroupItemText>
-                  <Link to={routesURL.PAGE_NOT_FOUND}>
+                  <Link to={routesURL.MEETING}>
                     03-May-2019: Initial Requirement collection{" "}
                   </Link>{" "}
                   <br />
-                  <Link to={routesURL.PAGE_NOT_FOUND}>
+                  <Link to={routesURL.MEETING}>
                     15-May-2019: Requirement Review{" "}
                   </Link>{" "}
                   <br />
