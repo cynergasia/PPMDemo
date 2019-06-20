@@ -125,7 +125,10 @@ class DefaultLayout extends Component {
             />
           </Suspense>
         </AppHeader>
-        <div className="app-body">
+        <div
+          className="app-body"
+          style={{ overflowY: "scroll", maxHeight: "calc(100vh - 96px)" }}
+        >
           {/* <AppSidebar fixed display="lg">
             <AppSidebarHeader />
             <AppSidebarForm />
@@ -141,7 +144,7 @@ class DefaultLayout extends Component {
           </AppSidebar> */}
           <main className="main">
             {/* <AppBreadcrumb appRoutes={routes} router={router} /> */}
-            <Container fluid>
+            <Container fluid className="position-relative">
               <Suspense fallback={this.loading()}>
                 <Switch>
                   {routes.map((route, idx) => {

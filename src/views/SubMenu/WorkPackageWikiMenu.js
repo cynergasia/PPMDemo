@@ -11,7 +11,8 @@ class WorkPackageWikiMenu extends Component {
       top: scrollRef.offsetTop,
       behavior: "smooth"
     };
-    window.scrollTo(scrollOptions);
+    // window.scrollTo(scrollOptions);
+    document.querySelector(".app-body").scrollTo(scrollOptions);
   };
 
   render() {
@@ -68,7 +69,7 @@ class WorkPackageWikiMenu extends Component {
                       <i className="fa fa-refresh" /> Issues/Changes
                     </Link>
                   </li>
-                  
+
                   <li className="nav-head active " aria-current="page">
                     <Link
                       onClick={() => this.scrollTo(refs.meetingMinutesRef)}

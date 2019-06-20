@@ -30,7 +30,7 @@ class WorkPackages extends Component {
     const { activeTab } = this.state;
     const tasks = this.props.tasks;
     const { workPackages } = this.props.tasks[0];
-    console.log(tasks);
+    console.log(this.props.deliverablesInfo);
     return (
       <React.Fragment>
         <Card>
@@ -196,12 +196,21 @@ class WorkPackages extends Component {
                       <ListGroupItemHeading>
                         Overdue Deliverables :
                       </ListGroupItemHeading>
+                      {this.props.deliverablesInfo.map(
+                        item =>
+                          item.d_status === "Overdue" && (
+                            <>
+                              <Link
+                                to={routesURL.DELIVERABLES_WIKI + item.d_id}
+                              >
+                                {" "}
+                                {item.name}
+                              </Link>
+                              <br />
+                            </>
+                          )
+                      )}
 
-                      <Link to={routesURL.DELIVERABLES_WIKI}>
-                        {" "}
-                        Design.Code.01(01-May-2019)
-                      </Link>
-                      <br />
                       <Link to={routesURL.DELIVERABLES_WIKI}>
                         {" "}
                         Delivery.Code.02(15-May-2019)
@@ -212,6 +221,20 @@ class WorkPackages extends Component {
                         {" "}
                         Upcoming Deliverables :
                       </ListGroupItemHeading>
+                      {this.props.deliverablesInfo.map(
+                        item =>
+                          item.d_status === "Upcoming" && (
+                            <>
+                              <Link
+                                to={routesURL.DELIVERABLES_WIKI + item.d_id}
+                              >
+                                {" "}
+                                {item.name}
+                              </Link>
+                              <br />
+                            </>
+                          )
+                      )}
 
                       <Link to={routesURL.DELIVERABLES_WIKI}>
                         {" "}
@@ -228,7 +251,20 @@ class WorkPackages extends Component {
                         {" "}
                         Deliverables Not started:{" "}
                       </ListGroupItemHeading>
-
+                      {this.props.deliverablesInfo.map(
+                        item =>
+                          item.d_status === "Not Started" && (
+                            <>
+                              <Link
+                                to={routesURL.DELIVERABLES_WIKI + item.d_id}
+                              >
+                                {" "}
+                                {item.name}
+                              </Link>
+                              <br />
+                            </>
+                          )
+                      )}
                       <Link to={routesURL.DELIVERABLES_WIKI}>
                         {" "}
                         Design - 2.0

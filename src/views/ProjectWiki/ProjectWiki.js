@@ -14,6 +14,7 @@ import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import StickySidebar from "sticky-sidebar";
 import { Row, Col } from "reactstrap";
 import projectwiki_database from "../../projectwiki_database";
+import deliverableswiki_database from "../../deliverableswiki_database";
 import database from "../../database";
 
 class ProjectWiki extends Component {
@@ -30,17 +31,19 @@ class ProjectWiki extends Component {
   }
 
   fixSidebar = () => {
-    this.sidebar = new StickySidebar(".sidebar", {
-      topSpacing: 0,
-      bottomSpacing: 0,
-      containerSelector: ".main-content",
-      innerWrapperSelector: ".sidebar__inner"
-    });
+    // this.sidebar = new StickySidebar(".sidebar", {
+    //   topSpacing: 0,
+    //   bottomSpacing: 0,
+    //   containerSelector: ".main-content",
+    //   innerWrapperSelector: ".sidebar__inner"
+    // });
   };
 
   render() {
     const tasks = projectwiki_database;
     const { recoard_information } = database;
+    const { deliverablesInfo } = deliverableswiki_database;
+
     return (
       <React.Fragment>
         <SubMenu
@@ -52,53 +55,50 @@ class ProjectWiki extends Component {
             activityLogRef: this.activityLogRef
           }}
         />
-        <div className="animated fadeIn">
-          <div className="row main-content">
-            {/* flex-row-reverse align-items-start */}
-            <div className="col-12 col-lg-8">
-              <Row>
-                <Col xs="12">
-                  <BasicInformation />
-                </Col>
-                <Col xs="12">
-                  <Activities />
-                </Col>
+        <div className="animated fadeIn row">
+          {/* flex-row-reverse align-items-start */}
+          <div className="col-12 col-lg-8">
+            <Row>
+              <Col xs="12">
+                <BasicInformation />
+              </Col>
+              <Col xs="12">
+                <Activities />
+              </Col>
 
-                <Col xs="12">
-                  <Attachments />
-                </Col>
-                <div className="col-12" ref={this.workPackageRef}>
-                  <WorkPackages tasks={tasks} />
-                </div>
-                <div className="col-12" ref={this.issueChangesRef}>
-                  <IssueChanges />
-                </div>
-                <div className="col-12" ref={this.meetingMinutesRef}>
-                  <Meetings />
-                </div>
-                <div className="col-12" ref={this.financialsRef}>
-                  <Financial />
-                </div>
-                <Col xs="12">
-                  <Risks />
-                </Col>
-                <div className="col-12" ref={this.activityLogRef}>
-                  <ActivityLog />
-                </div>
-              </Row>
-            </div>
-
-            <div className="col-12 col-lg-4">
-              <div className="sidebar">
-                <div className="sidebar__inner">
-                  <RecoardInformation
-                    recoard_information={recoard_information}
-                  />
-                </div>
+              <Col xs="12">
+                <Attachments />
+              </Col>
+              <div className="col-12" ref={this.workPackageRef}>
+                <WorkPackages
+                  tasks={tasks}
+                  deliverablesInfo={deliverablesInfo}
+                />
               </div>
-            </div>
-            {/* sidebar */}
+              <div className="col-12" ref={this.issueChangesRef}>
+                <IssueChanges />
+              </div>
+              <div className="col-12" ref={this.meetingMinutesRef}>
+                <Meetings />
+              </div>
+              <div className="col-12" ref={this.financialsRef}>
+                <Financial />
+              </div>
+              <Col xs="12">
+                <Risks />
+              </Col>
+              <div className="col-12" ref={this.activityLogRef}>
+                <ActivityLog />
+              </div>
+            </Row>
           </div>
+
+          <div className="aside col-12 col-lg-4">
+            <div className="aside-inner">
+              <RecoardInformation recoard_information={recoard_information} />
+            </div>
+          </div>
+          {/* sidebar */}
         </div>
       </React.Fragment>
     );

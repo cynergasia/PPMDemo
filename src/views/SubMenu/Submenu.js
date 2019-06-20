@@ -49,7 +49,8 @@ class Submenu extends Component {
       top: scrollRef.offsetTop,
       behavior: "smooth"
     };
-    window.scrollTo(scrollOptions);
+    // window.scrollTo(scrollOptions);
+    document.querySelector(".app-body").scrollTo(scrollOptions);
   };
 
   render() {

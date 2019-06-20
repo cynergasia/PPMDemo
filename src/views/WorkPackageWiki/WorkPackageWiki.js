@@ -33,12 +33,12 @@ class WorkPackageWiki extends Component {
   }
 
   fixSidebar = () => {
-    this.sidebar = new StickySidebar(".sidebar", {
-      topSpacing: 0,
-      bottomSpacing: 0,
-      containerSelector: ".main-content",
-      innerWrapperSelector: ".sidebar__inner"
-    });
+    // this.sidebar = new StickySidebar(".sidebar", {
+    //   topSpacing: 0,
+    //   bottomSpacing: 0,
+    //   containerSelector: ".main-content",
+    //   innerWrapperSelector: ".sidebar__inner"
+    // });
   };
   render() {
     const { id } = this.props.match.params;
@@ -61,55 +61,53 @@ class WorkPackageWiki extends Component {
           isMenu={{ finanical: false }}
           name={workPackageInfo.name}
         />
-        <div className="animated fadeIn">
-          <div className="row flex-row-reverse align-items-start main-content">
-            <div className="col-12 col-lg-4">
-              <div className="sidebar">
-                <div className="sidebar__inner">
-                  <RecoardInformation
-                    recoard_information={recoard_information}
-                    isWorkflowinfo={false}
-                  />
-                </div>
+        <div className="animated fadeIn row">
+          <div className="col-12 col-lg-8">
+            <Row>
+              <div className="col-12" ref={this.workPackageRef}>
+                <WorkPackageInformation workPackageInfo={workPackageInfo} />
               </div>
-            </div>
+              <Col xs="12">
+                <WorkPackageActivities activities={activities} />
+              </Col>
 
-            <div className="col-12 col-lg-8">
-              <Row>
-                <div className="col-12" ref={this.workPackageRef}>
-                  <WorkPackageInformation workPackageInfo={workPackageInfo} />
-                </div>
-                <Col xs="12">
-                  <WorkPackageActivities activities={activities} />
-                </Col>
+              <Col xs="12">
+                <Attachments />
+              </Col>
 
-                <Col xs="12">
-                  <Attachments />
-                </Col>
-
-                {/* <Col lg="12">
+              {/* <Col lg="12">
                   <Comments />
                 </Col> */}
-                <div className="col-12" ref={this.issueChangesRef}>
-                  <WorkPackageIssueChanges issues={issues} changes={changes} />
-                </div>
-                <div className="col-12">
-                  <WorkPackageDeliverables deliverbales={deliverbales} />
-                </div>
-                <div className="col-12" ref={this.meetingMinutesRef}>
-                  {/* <WorkPackageMeeting /> */}
-                  <Meetings />
-                </div>
-                <div className="col-12" ref={this.activityLogRef}>
-                  {/* <ActivityLog title="WorkPackage ActivityLog"  /> */}
-                  <ActivityLog />
-                </div>
-              </Row>
-            </div>
+              <div className="col-12" ref={this.issueChangesRef}>
+                <WorkPackageIssueChanges issues={issues} changes={changes} />
+              </div>
+              <div className="col-12">
+                <WorkPackageDeliverables deliverbales={deliverbales} />
+              </div>
+              <div className="col-12" ref={this.meetingMinutesRef}>
+                {/* <WorkPackageMeeting /> */}
+                <Meetings />
+              </div>
+              <div className="col-12" ref={this.activityLogRef}>
+                {/* <ActivityLog title="WorkPackage ActivityLog"  /> */}
+                <ActivityLog />
+              </div>
+            </Row>
           </div>
 
-          <Row />
+          <div className="col-12 col-lg-4">
+            <div className="aside">
+              <div className="aside-inner">
+                <RecoardInformation
+                  recoard_information={recoard_information}
+                  isWorkflowinfo={false}
+                />
+              </div>
+            </div>
+          </div>
         </div>
+
+        <Row />
       </React.Fragment>
     );
   }
