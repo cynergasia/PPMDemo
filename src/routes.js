@@ -43,7 +43,7 @@ const routes = [
     title: "Project Wiki"
   },
   {
-    path: routesURL.DELIVERABLES_WIKI,
+    path: `${routesURL.DELIVERABLES_WIKI}:id`,
     component: DeliverablesWiki,
     title: "Deliverables Wiki"
   },

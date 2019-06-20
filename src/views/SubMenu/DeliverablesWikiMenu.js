@@ -10,38 +10,37 @@ class DeliverablesWikiMenu extends Component {
       top: scrollRef.offsetTop,
       behavior: "smooth"
     };
-    window.scrollTo(scrollOptions);
+    document.querySelector(".app-body").scrollTo(scrollOptions);
   };
   render() {
     const { refs } = this.props;
     return (
       <React.Fragment>
-        <div className="">
-          <nav className="sub-navbar" aria-label="breadcrumb">
-            <div class="row">
-              <div class="col-12 col-sm-12 col-lg-12">
-                <ol className="breadcrumb left-breadcrumb">
-                  <li className="nav-head active" area-current="page">
-                    <i className="fa fa-map-marker" /> Bay Bridge Construction
-                    design(P0001)
-                  </li>
-                </ol>
-                <ol className="breadcrumb left-breadcrumb">
-                  <li className="nav-head active" aria-current="page">
-                    <Link
-                      exact
-                      to="#"
-                      onClick={() => this.scrollTo(refs.activityLogRef)}
-                    >
-                      <i className="cui-comment-square" /> Comment
-                    </Link>
-                  </li>
+        <nav className="sub-navbar" aria-label="breadcrumb">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-lg-12">
+              <ol className="breadcrumb left-breadcrumb">
+                <li className="nav-head active" area-current="page">
+                  <i className="fa fa-map-marker" /> Bay Bridge Construction
+                  design(P0001)
+                </li>
+              </ol>
+              <ol className="breadcrumb left-breadcrumb">
+                <li className="nav-head active" aria-current="page">
+                  <Link
+                    exact
+                    to="#"
+                    onClick={() => this.scrollTo(refs.activityLogRef)}
+                  >
+                    <i className="cui-comment-square" /> Comment
+                  </Link>
+                </li>
 
-                  <li className="nav-head active " aria-current="page">
-                    <Link exact to="#">
-                      <i className="fa fa-user-secret" /> Assign
-                    </Link>
-                  </li>
+                <li className="nav-head active " aria-current="page">
+                  <Link exact to="#">
+                    <i className="fa fa-user-secret" /> Assign
+                  </Link>
+                </li>
 
                   <li className="nav-head active " aria-current="page">
                     <Link
@@ -71,16 +70,15 @@ class DeliverablesWikiMenu extends Component {
                     </Link>
                   </li>
 
-                  <li className="nav-head active " aria-current="page">
-                    <Link exact to="#">
-                      <i className="fa fa-rss" /> Follow
-                    </Link>
-                  </li>
-                </ol>
-              </div>
+                <li className="nav-head active " aria-current="page">
+                  <Link exact to="#">
+                    <i className="fa fa-rss" /> Follow
+                  </Link>
+                </li>
+              </ol>
             </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </React.Fragment>
     );
   }
