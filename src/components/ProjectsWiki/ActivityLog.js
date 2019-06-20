@@ -190,8 +190,8 @@ export class ActivityLog extends Component {
                   paging={false}
                   searching={false}
                 /> */}
-                 {database.comments.map((data)=>(
-                  <div className="message">
+                 {database.comments.map((data,index)=>(
+                  <div className="message" key={index}>
                   <div className=" mr-3 float-left">
                     <div className="avatar">
                       <img src={'assets/img/avatars/7.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
@@ -199,10 +199,10 @@ export class ActivityLog extends Component {
                     </div>
                   </div>
                   <div>
-                    <small className="text-muted">{data.by}</small>
+                    <small className="text-truncate  font-weight-bold">{data.by}</small>
                     <small className="text-muted float-right mt-1">{data.date}</small>
                   </div>
-                  <div className="text-truncate font-weight-bold">{data.comment}</div>
+                  <div className="text-muted font-weight-bold">{data.comment}</div>  <hr />
                   {/* <small className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt...
                   </small> */}

@@ -297,7 +297,7 @@ h6.chart-title {
 }
 
 .sidebar-fixed .main-content .sidebar.is-affixed .position-sticky {
-  margin-top: 55px;
+  margin-top: 145px;
   /*imp css*/
   /* position: relative;
   width: 388px !important;
@@ -415,6 +415,15 @@ h6.chart-title {
 .financial-detail .financial-title {
   font-weight: 600;
 }
+
+.sub-navbar.sticky {
+  position: fixed;
+  left: 0px;  
+  top: 45px;
+  right: 0px;
+  z-index: 9999;
+}
+
 
 /***** Responsive *****/
 

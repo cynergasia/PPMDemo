@@ -32,23 +32,7 @@ class DefaultLayout extends Component {
   };
 
   state = { ...this.initialState };
-  componentDidMount=()=> {
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount=()=>{
-      window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  handleScroll=(event)=> {
-        // let scrollTop = event.srcElement.body.scrollTop,
-        //     itemTranslate = Math.min(0, scrollTop/3 - 60);
-
-        // this.setState({
-        //   transform: itemTranslate
-        // });
-       // this.scrollSidebar();
-    }
+  
 
   toggleChat = () => {
     // this.scrollSidebar();
