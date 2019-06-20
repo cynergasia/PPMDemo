@@ -49,9 +49,9 @@ class RecoardInformation extends Component {
       isWorkflowinfo = true,
       isAuditinfo = true
     } = this.props;
-    const scheduleinfo = database.recoard_information.schedule_info;
-    const workflowinfo = database.recoard_information.workflow_info;
-    const auditinfo = database.recoard_information.audit_info;
+    const scheduleinfo = this.props.recoard_information.schedule_info;
+    const workflowinfo = this.props.recoard_information.workflow_info;
+    const auditinfo = this.props.recoard_information.audit_info;
 
     return (
       <React.Fragment>

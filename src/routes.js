@@ -42,7 +42,6 @@ const routes = [
     component: ProjectWiki,
     title: "Project Wiki"
   },
-
   {
     path: routesURL.DELIVERABLES_WIKI,
     component: DeliverablesWiki,

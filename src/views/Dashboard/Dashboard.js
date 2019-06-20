@@ -34,12 +34,8 @@ class Dashboard extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="animated fadeIn">
-          <Row>
-            <Col xs="12" md="12" lg="12">
-              <Menu />
-            </Col>
-          </Row>
+        <Menu />
+        <div className="animated fadeIn dashboard-container">
           {/* MyProject and Financial status  */}
           <Row>
             <Col xs="12" md="12" lg="6">

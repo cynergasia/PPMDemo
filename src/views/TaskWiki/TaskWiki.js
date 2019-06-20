@@ -7,6 +7,7 @@ import Attachments from "../../components/Attachments";
 import Comments from "../../components/Comments";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import StickySidebar from "sticky-sidebar";
+import taskwiki_database from "../../taskwiki_database";
 
 class TaskWiki extends Component {
   sidebar = null;
@@ -25,20 +26,18 @@ class TaskWiki extends Component {
   };
 
   render() {
+    const { recoard_information } = taskwiki_database;
     return (
       <React.Fragment>
+        <TaskWikiMenu />
         <div className="animated fadeIn">
-          <Row>
-            <Col sm="12" md="12" lg="12">
-              <TaskWikiMenu />
-            </Col>
-          </Row>
-
           <div className="row flex-row-reverse align-items-start main-content">
             <div className="col-12 col-lg-4">
               <div className="sidebar">
                 <div className="sidebar__inner">
-                  <RecoardInformation />
+                  <RecoardInformation
+                    recoard_information={recoard_information}
+                  />
                 </div>
               </div>
             </div>

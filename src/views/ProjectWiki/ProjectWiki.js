@@ -14,6 +14,7 @@ import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import StickySidebar from "sticky-sidebar";
 import { Row, Col } from "reactstrap";
 import projectwiki_database from "../../projectwiki_database";
+import database from "../../database";
 
 class ProjectWiki extends Component {
   sidebar = null;
@@ -39,32 +40,21 @@ class ProjectWiki extends Component {
 
   render() {
     const tasks = projectwiki_database;
+    const { recoard_information } = database;
     return (
       <React.Fragment>
+        <SubMenu
+          refs={{
+            issueChangesRef: this.issueChangesRef,
+            workPackageRef: this.workPackageRef,
+            meetingMinutesRef: this.meetingMinutesRef,
+            financialsRef: this.financialsRef,
+            activityLogRef: this.activityLogRef
+          }}
+        />
         <div className="animated fadeIn">
-          <Row>
-            <Col sm="12" md="12" lg="12">
-              <SubMenu
-                refs={{
-                  issueChangesRef: this.issueChangesRef,
-                  workPackageRef: this.workPackageRef,
-                  meetingMinutesRef: this.meetingMinutesRef,
-                  financialsRef: this.financialsRef,
-                  activityLogRef: this.activityLogRef
-                }}
-              />
-            </Col>
-          </Row>
-
-          <div className="row flex-row-reverse align-items-start main-content">
-            <div className="col-12 col-lg-4">
-              <div className="sidebar">
-                <div className="sidebar__inner">
-                  <RecoardInformation />
-                </div>
-              </div>
-            </div>
-
+          <div className="row main-content">
+            {/* flex-row-reverse align-items-start */}
             <div className="col-12 col-lg-8">
               <Row>
                 <Col xs="12">
@@ -97,9 +87,18 @@ class ProjectWiki extends Component {
                 </div>
               </Row>
             </div>
-          </div>
 
-          <Row />
+            <div className="col-12 col-lg-4">
+              <div className="sidebar">
+                <div className="sidebar__inner">
+                  <RecoardInformation
+                    recoard_information={recoard_information}
+                  />
+                </div>
+              </div>
+            </div>
+            {/* sidebar */}
+          </div>
         </div>
       </React.Fragment>
     );

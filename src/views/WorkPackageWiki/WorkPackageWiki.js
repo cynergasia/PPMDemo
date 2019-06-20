@@ -45,36 +45,31 @@ class WorkPackageWiki extends Component {
     const p = projectwiki_database[0].workPackages.filter(wp => wp.id === id);
     const { activities: a } = { ...p["0"] };
     const activities = a.map(item => _omit(item, ["type"]));
-    const {
-      workPackageInfo,
-      issues,
-      changes,
-      deliverbales
-    } = workpackagewiki_database;
-    console.log("admin",workPackageInfo);
+    const workPackageInfo = p[0];
+    const recoard_information = p[0].recoard_information;
+    const { issues, changes, deliverbales } = workpackagewiki_database;
+    console.log("admin", workPackageInfo);
     return (
       <React.Fragment>
+        <SubMenu
+          refs={{
+            issueChangesRef: this.issueChangesRef,
+            workPackageRef: this.workPackageRef,
+            meetingMinutesRef: this.meetingMinutesRef,
+            activityLogRef: this.activityLogRef
+          }}
+          isMenu={{ finanical: false }}
+          name={workPackageInfo.name}
+        />
         <div className="animated fadeIn">
-          <Row>
-            <Col sm="12" md="12" lg="12">
-              <SubMenu
-                refs={{
-                  issueChangesRef: this.issueChangesRef,
-                  workPackageRef: this.workPackageRef,
-                  meetingMinutesRef: this.meetingMinutesRef,
-                  activityLogRef: this.activityLogRef
-                }}
-                isMenu={{finanical: false}} 
-                name={workPackageInfo.name}               
-              />
-            </Col>
-          </Row>
-
           <div className="row flex-row-reverse align-items-start main-content">
             <div className="col-12 col-lg-4">
               <div className="sidebar">
                 <div className="sidebar__inner">
-                  <RecoardInformation isWorkflowinfo={false} />
+                  <RecoardInformation
+                    recoard_information={recoard_information}
+                    isWorkflowinfo={false}
+                  />
                 </div>
               </div>
             </div>
@@ -107,7 +102,7 @@ class WorkPackageWiki extends Component {
                 </div>
                 <div className="col-12" ref={this.activityLogRef}>
                   {/* <ActivityLog title="WorkPackage ActivityLog"  /> */}
-                  <ActivityLog/>
+                  <ActivityLog />
                 </div>
               </Row>
             </div>
