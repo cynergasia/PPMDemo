@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import WorkPackageWikiMenu from "../SubMenu/WorkPackageWikiMenu";
+import ProjectWikiMenu from "../SubMenu/ProjectWikiMenu";
+import SubMenu from "../SubMenu/Submenu";
 import RecoardInformation from "../../components/RecoardInformation";
 import Attachments from "../../components/Attachments";
 // import Comments from "../../components/Comments";
@@ -50,19 +52,21 @@ class WorkPackageWiki extends Component {
       deliverbales,
       recoard_information
     } = workpackagewiki_database;
+    console.log("admin",workPackageInfo);
     return (
       <React.Fragment>
         <div className="animated fadeIn">
           <Row>
             <Col sm="12" md="12" lg="12">
-              <WorkPackageWikiMenu
+              <SubMenu
                 refs={{
                   issueChangesRef: this.issueChangesRef,
                   workPackageRef: this.workPackageRef,
                   meetingMinutesRef: this.meetingMinutesRef,
                   activityLogRef: this.activityLogRef
                 }}
-                workPageRef={this.workPageRef}
+                isMenu={{finanical: false}} 
+                name={workPackageInfo.name}               
               />
             </Col>
           </Row>
@@ -107,7 +111,7 @@ class WorkPackageWiki extends Component {
                 </div>
                 <div className="col-12" ref={this.activityLogRef}>
                   {/* <ActivityLog title="WorkPackage ActivityLog"  /> */}
-                  <ActivityLog />
+                  <ActivityLog/>
                 </div>
               </Row>
             </div>

@@ -105,6 +105,7 @@ export class ActivityLog extends Component {
 
   render() {
     const { activeTab } = this.state;
+    console.log("Comment data",database.comments);
     const addCommentBody = (
       <React.Fragment>
         <Input
@@ -184,11 +185,31 @@ export class ActivityLog extends Component {
           <CardBody>
             <TabContent activeTab={activeTab} className="border-0">
               <TabPane tabId="1">
-                <ReactDataTableNew
+                {/* <ReactDataTableNew
                   data={this.state.commentsData}
                   paging={false}
                   searching={false}
-                />
+                /> */}
+                 {database.comments.map((data)=>(
+                  <div className="message">
+                  <div className=" mr-3 float-left">
+                    <div className="avatar">
+                      <img src={'assets/img/avatars/7.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
+                      <span className="avatar-status badge-success"></span>
+                    </div>
+                  </div>
+                  <div>
+                    <small className="text-muted">{data.by}</small>
+                    <small className="text-muted float-right mt-1">{data.date}</small>
+                  </div>
+                  <div className="text-truncate font-weight-bold">{data.comment}</div>
+                  {/* <small className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt...
+                  </small> */}
+                </div>
+               
+                ))
+                }
               </TabPane>
 
               <TabPane tabId="2">
@@ -196,7 +217,7 @@ export class ActivityLog extends Component {
                   data={this.state.activityLogData}
                   paging={false}
                   searching={false}
-                />
+                />               
               </TabPane>
             </TabContent>
           </CardBody>

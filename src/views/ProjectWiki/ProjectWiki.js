@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ProjectWikiMenu from "../SubMenu/ProjectWikiMenu";
+import SubMenu from "../SubMenu/Submenu";
 import BasicInformation from "../../components/ProjectsWiki/BasicInformation";
 import RecoardInformation from "../../components/RecoardInformation";
 import Activities from "../../components/ProjectsWiki/Activities";
@@ -45,7 +46,7 @@ class ProjectWiki extends Component {
         <div className="animated fadeIn">
           <Row>
             <Col sm="12" md="12" lg="12">
-              <ProjectWikiMenu
+              <SubMenu
                 refs={{
                   issueChangesRef: this.issueChangesRef,
                   workPackageRef: this.workPackageRef,

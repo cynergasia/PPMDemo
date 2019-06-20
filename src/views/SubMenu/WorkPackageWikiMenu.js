@@ -48,7 +48,7 @@ class WorkPackageWikiMenu extends Component {
                       onClick={() => this.scrollTo(refs.activityLogRef)}
                       className="cursor-pointer"
                     >
-                      <i className="fa fa-clipboard" /> Activity Log
+                    <i className="fa fa-clipboard" /> Activity Log
                     </Link>
                   </li> */}
                   <li className="nav-head active " aria-current="page">
@@ -59,6 +59,7 @@ class WorkPackageWikiMenu extends Component {
                       <i className="fa fa-sitemap" /> WBS
                     </Link>
                   </li>
+
                   <li className="nav-head active " aria-current="page">
                     <Link
                       onClick={() => this.scrollTo(refs.issueChangesRef)}
@@ -67,6 +68,7 @@ class WorkPackageWikiMenu extends Component {
                       <i className="fa fa-refresh" /> Issues/Changes
                     </Link>
                   </li>
+                  
                   <li className="nav-head active " aria-current="page">
                     <Link
                       onClick={() => this.scrollTo(refs.meetingMinutesRef)}

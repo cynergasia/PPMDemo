@@ -2,7 +2,7 @@
 import React, { Component, Suspense } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { Container } from "reactstrap";
-//import $ from "jquery";
+import $ from "jquery";
 
 import { AppAside, AppFooter, AppHeader } from "@coreui/react";
 // sidebar nav config
@@ -32,9 +32,26 @@ class DefaultLayout extends Component {
   };
 
   state = { ...this.initialState };
+  componentDidMount=()=> {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount=()=>{
+      window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll=(event)=> {
+        // let scrollTop = event.srcElement.body.scrollTop,
+        //     itemTranslate = Math.min(0, scrollTop/3 - 60);
+
+        // this.setState({
+        //   transform: itemTranslate
+        // });
+       // this.scrollSidebar();
+    }
 
   toggleChat = () => {
-    //this.scrollSidebar();
+    // this.scrollSidebar();
     this.setState({
       ...this.initialState,
       isChat: !this.state.isChat
@@ -85,19 +102,21 @@ class DefaultLayout extends Component {
 
   //     $('.is-affixed').children().first().css( "left",  position.left + asidemenuwidth - 100);
   //     $('.is-affixed').children().first().css( "width", widthfiex + asidemenuwidth - 250);
-  //     return false;
   //     //alert("raj");
   //   }
   //   else{
   //     $('.is-affixed').children().first().css( "left", position.left - asidemenuwidth + 100);
   //     $('.is-affixed').children().first().css( "width", widthfiex - asidemenuwidth + 250);
-  //     return false;
   //     //alert("rip");
   //   }
+
+  //   return false;
   //   // alert(asidemenuwidth);
   // }
 
-  render() {
+
+
+  render() {  
     const path = this.props.location.pathname;
     let currentpath = "/" + path.split("/")[1];
 
