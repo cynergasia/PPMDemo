@@ -4,17 +4,17 @@ import { Card, CardHeader, CardBody, Table, Input } from "reactstrap";
 class WorkPackageInformation extends Component {
   render() {
     const {
-      number,
+      wbsNumber,
       name,
-      scheduleStartDate,
-      scheduleEndDate,
+      start_date,
+      end_date,
       transactionStartDate,
       transactionEndDate,
-      numberOfDays,
+      duration,
       status,
       chargeable,
       billable,
-      estimateEffort,
+      estimatehours,
       description,
       location
     } = this.props.workPackageInfo;
@@ -35,7 +35,7 @@ class WorkPackageInformation extends Component {
                     <div>Number </div>
                   </td>
                   <td className="text-left">
-                    <div>{number}</div>
+                    <div>{wbsNumber}</div>
                   </td>
                   <td className="basicinfo text-left">
                     <div>Name </div>
@@ -50,13 +50,13 @@ class WorkPackageInformation extends Component {
                     <div>Schedule Start Date </div>
                   </td>
                   <td className="text-left">
-                    <div>{scheduleStartDate}</div>
+                    <div>{start_date}</div>
                   </td>
                   <td className="basicinfo text-left">
                     <div>Schedule End Date </div>
                   </td>
                   <td className="text-left">
-                    <div>{scheduleEndDate}</div>
+                    <div>{end_date}</div>
                   </td>
                 </tr>
 
@@ -65,13 +65,13 @@ class WorkPackageInformation extends Component {
                     <div>Transaction Start Date </div>
                   </td>
                   <td className="text-left">
-                    <div>{transactionStartDate}</div>
+                    <div>{start_date}</div>
                   </td>
                   <td className="basicinfo text-left">
                     <div>Transaction End Date </div>
                   </td>
                   <td className="text-left">
-                    <div>{transactionEndDate}</div>
+                    <div>{end_date}</div>
                   </td>
                 </tr>
 
@@ -80,12 +80,12 @@ class WorkPackageInformation extends Component {
                     <div>Number of Days</div>
                   </td>
                   <td className="text-left">
-                    <div>{numberOfDays} </div>
+                    <div>{duration} </div>
                   </td>
-                  <td className="basicinfo text-left">
+                  <td className="basicinfo text-left" rowSpan="4">
                     <div>Status</div>
                   </td>
-                  <td className="text-left">
+                  <td className="text-left" rowSpan="4">
                     <div>{status}</div>
                   </td>
                 </tr>
@@ -112,7 +112,7 @@ class WorkPackageInformation extends Component {
                     <div>Estimate Effort </div>
                   </td>
                   <td className="text-left">
-                    <div>{estimateEffort}</div>
+                    <div>{estimatehours}</div>
                   </td>
                 </tr>
 

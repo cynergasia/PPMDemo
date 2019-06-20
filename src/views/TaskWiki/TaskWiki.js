@@ -29,13 +29,8 @@ class TaskWiki extends Component {
     const { recoard_information } = taskwiki_database;
     return (
       <React.Fragment>
+        <TaskWikiMenu />
         <div className="animated fadeIn">
-          <Row>
-            <Col sm="12" md="12" lg="12">
-              <TaskWikiMenu />
-            </Col>
-          </Row>
-
           <div className="row flex-row-reverse align-items-start main-content">
             <div className="col-12 col-lg-4">
               <div className="sidebar">

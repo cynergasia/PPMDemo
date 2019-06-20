@@ -2,7 +2,7 @@
 import React, { Component, Suspense } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { Container } from "reactstrap";
-import $ from "jquery";
+// import $ from "jquery";
 
 import { AppAside, AppFooter, AppHeader } from "@coreui/react";
 // sidebar nav config
@@ -32,59 +32,39 @@ class DefaultLayout extends Component {
   };
 
   state = { ...this.initialState };
-  componentDidMount=()=> {
-    window.addEventListener('scroll', this.handleScroll);
-  }
+  componentDidMount = () => {
+    window.addEventListener("scroll", this.handleScroll);
+  };
 
-  componentWillUnmount=()=>{
-      window.removeEventListener('scroll', this.handleScroll);
-  }
+  componentWillUnmount = () => {
+    window.removeEventListener("scroll", this.handleScroll);
+  };
 
-  handleScroll=(event)=> {
-        // let scrollTop = event.srcElement.body.scrollTop,
-        //     itemTranslate = Math.min(0, scrollTop/3 - 60);
-
-        // this.setState({
-        //   transform: itemTranslate
-        // });
-       // this.scrollSidebar();
-    }
-
-  toggleChat = () => {
+  handleScroll = event => {
+    // let scrollTop = event.srcElement.body.scrollTop,
+    //     itemTranslate = Math.min(0, scrollTop/3 - 60);
+    // this.setState({
+    //   transform: itemTranslate
+    // });
     // this.scrollSidebar();
+  };
+
+  toggle = toggle => {
     this.setState({
       ...this.initialState,
-      isChat: !this.state.isChat
+      [`is${toggle}`]: !this.state[`is${toggle}`]
     });
   };
 
-  toggleNotification = () => {
-    this.setState({
-      ...this.initialState,
-      isNotification: !this.state.isNotification
-    });
-  };
+  toggleChat = () => this.toggle("Chat");
 
-  toggleCalendar = () => {
-    this.setState({
-      ...this.initialState,
-      isCalendar: !this.state.isCalendar
-    });
-  };
+  toggleNotification = () => this.toggle("Notification");
 
-  toggleMisc = () => {
-    this.setState({
-      ...this.initialState,
-      isMisc: !this.state.isMisc
-    });
-  };
+  toggleCalendar = () => this.toggle("Calendar");
 
-  toggleNewsFeed = () => {
-    this.setState({
-      ...this.initialState,
-      isNewsFeed: !this.state.isNewsFeed
-    });
-  };
+  toggleMisc = () => this.toggle("Misc");
+
+  toggleNewsFeed = () => this.toggle("NewsFeed");
 
   loading = () => (
     <div className="animated fadeIn pt-1 text-center">Loading...</div>
@@ -114,9 +94,7 @@ class DefaultLayout extends Component {
   //   // alert(asidemenuwidth);
   // }
 
-
-
-  render() {  
+  render() {
     const path = this.props.location.pathname;
     let currentpath = "/" + path.split("/")[1];
 

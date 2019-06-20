@@ -36,19 +36,14 @@ class IssueWiki extends Component {
     const { issueDescription, recoard_information } = issuewiki_database;
     return (
       <React.Fragment>
+        <IssueWikiMenu
+          refs={{
+            attachmentRef: this.attachmentRef,
+            approvedStatusRef: this.approvedStatusRef,
+            activityLogRef: this.activityLogRef
+          }}
+        />
         <div className="animated fadeIn">
-          <Row>
-            <Col sm="12" md="12" lg="12">
-              <IssueWikiMenu
-                refs={{
-                  attachmentRef: this.attachmentRef,
-                  approvedStatusRef: this.approvedStatusRef,
-                  activityLogRef: this.activityLogRef
-                }}
-              />
-            </Col>
-          </Row>
-
           <div className="row flex-row-reverse align-items-start main-content">
             <div className="col-12 col-lg-4">
               <div className="sidebar">

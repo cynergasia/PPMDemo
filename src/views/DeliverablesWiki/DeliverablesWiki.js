@@ -20,7 +20,6 @@ class DeliverablesWiki extends Component {
 
   componentDidMount() {
     setTimeout(this.fixSidebar, 80);
-    
   }
 
   fixSidebar = () => {
@@ -36,18 +35,13 @@ class DeliverablesWiki extends Component {
     const { activities, recoard_information } = deliverableswiki_database;
     return (
       <React.Fragment>
+        <DeliverablesWikiMenu
+          refs={{
+            approvedStatus: this.approvedStatus,
+            activityLogRef: this.activityLogRef
+          }}
+        />
         <div className="animated fadeIn">
-          <Row>
-            <Col sm="12" md="12" lg="12">
-              <DeliverablesWikiMenu
-                refs={{
-                  approvedStatus: this.approvedStatus,
-                  activityLogRef: this.activityLogRef
-                }}
-              />
-            </Col>
-          </Row>
-
           <div className="row flex-row-reverse align-items-start main-content">
             <div className="col-12 col-lg-4">
               <div className="sidebar">

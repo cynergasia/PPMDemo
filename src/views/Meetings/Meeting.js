@@ -31,13 +31,8 @@ class Meeting extends Component {
     const { recoard_information } = meeting_database;
     return (
       <React.Fragment>
+        <MeetingMenu />
         <div className="animated fadeIn">
-          <Row>
-            <Col sm="12" md="12" lg="12">
-              <MeetingMenu />
-            </Col>
-          </Row>
-
           <div className="row flex-row-reverse align-items-start main-content">
             <div className="col-12 col-lg-4">
               <div className="sidebar">

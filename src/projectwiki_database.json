@@ -27,6 +27,9 @@
         "remaininghours": "0",
         "complete": "100.00%",
         "public": "N",
+        "status": "Completed",
+        "chargeable": "Yes",
+        "billable": "Yes",
         "activities": [
           {
             "type": "activity",
@@ -56,7 +59,73 @@
             "complete": "100.00%",
             "public": "N"
           }
-        ]
+        ],
+        "recoard_information": {
+          "schedule_info": [
+            {
+              "title": "Estimate Start Date",
+              "value": "01-01-19"
+            },
+            {
+              "title": "Estimate End Date",
+              "value": "03-02-19"
+            },
+            {
+              "title": "Transaction Start Date",
+              "value": "01-01-19"
+            },
+            {
+              "title": "Transaction End Date",
+              "value": "03-02-19"
+            },
+            {
+              "title": "Project Status",
+              "value": "Completed"
+            },
+            {
+              "title": "Planned Efforts",
+              "value": "300 Hours"
+            },
+            {
+              "title": "Actual Efforts",
+              "value": "300 Hours"
+            },
+            {
+              "title": "% Spent",
+              "value": "0%"
+            },
+            {
+              "title": "% Complete",
+              "value": "100%"
+            }
+          ],
+          "audit_info": [
+            {
+              "title": "Created By",
+              "value": "Suresh Padmanabhan"
+            },
+            {
+              "title": "Creation Date",
+              "value": "12-15-18"
+            },
+            {
+              "title": "Last Updated By",
+              "value": "Suresh Padmanabhan"
+            },
+            {
+              "title": "Last Updated Date",
+              "value": "06-10-19"
+            },
+            {
+              "title": "Latest Activity date",
+              "value": "06-08-19"
+            },
+            {
+              "title": "Locked By",
+              "value": "Suresh Padmanabhan"
+            }
+          ]
+        }
       },
       {
         "id": "f943d9a6-5fe9-4c97-957d-16d3f8af117d",
@@ -72,6 +141,9 @@
         "remaininghours": "0",
         "complete": "100.00%",
         "public": "N",
+        "status": "Completed",
+        "chargeable": "Yes",
+        "billable": "Yes",
         "activities": [
           {
             "type": "activity",
@@ -143,7 +215,73 @@
             "complete": "100.00%",
             "public": "N"
           }
-        ]
+        ],
+        "recoard_information": {
+          "schedule_info": [
+            {
+              "title": "Estimate Start Date",
+              "value": "01-01-19"
+            },
+            {
+              "title": "Estimate End Date",
+              "value": "04-06-19"
+            },
+            {
+              "title": "Transaction Start Date",
+              "value": "01-01-19"
+            },
+            {
+              "title": "Transaction End Date",
+              "value": "04-06-19"
+            },
+            {
+              "title": "Project Status",
+              "value": "Completed"
+            },
+            {
+              "title": "Planned Efforts",
+              "value": "548 Hours"
+            },
+            {
+              "title": "Actual Efforts",
+              "value": "548 Hours"
+            },
+            {
+              "title": "% Spent",
+              "value": "0%"
+            },
+            {
+              "title": "% Complete",
+              "value": "100%"
+            }
+          ],
+          "audit_info": [
+            {
+              "title": "Created By",
+              "value": "Suresh Padmanabhan"
+            },
+            {
+              "title": "Creation Date",
+              "value": "12-15-18"
+            },
+            {
+              "title": "Last Updated By",
+              "value": "Suresh Padmanabhan"
+            },
+            {
+              "title": "Last Updated Date",
+              "value": "06-10-19"
+            },
+            {
+              "title": "Latest Activity date",
+              "value": "06-08-19"
+            },
+            {
+              "title": "Locked By",
+              "value": "Suresh Padmanabhan"
+            }
+          ]
+        }
       },
       {
         "id": "cab9c763-517c-41ac-829d-6f961d8b67c4",
@@ -158,6 +296,9 @@
         "actualhours": "200",
         "remaininghours": "768",
         "complete": "20.66%",
+        "status": "In Progress",
+        "chargeable": "Yes",
+        "billable": "Yes",
         "public": "Y",
         "activities": [
           {
@@ -230,7 +371,73 @@
             "complete": "0.00%",
             "public": "N"
           }
-        ]
+        ],
+        "recoard_information": {
+          "schedule_info": [
+            {
+              "title": "Estimate Start Date",
+              "value": "04-06-2019"
+            },
+            {
+              "title": "Estimate End Date",
+              "value": "12-31-2019"
+            },
+            {
+              "title": "Transaction Start Date",
+              "value": "04-06-2019"
+            },
+            {
+              "title": "Transaction End Date",
+              "value": "12-31-2019"
+            },
+            {
+              "title": "Project Status",
+              "value": "In Progress"
+            },
+            {
+              "title": "Planned Efforts",
+              "value": "968 Hours"
+            },
+            {
+              "title": "Actual Efforts",
+              "value": "200 Hours"
+            },
+            {
+              "title": "% Spent",
+              "value": "0%"
+            },
+            {
+              "title": "% Complete",
+              "value": "20.66%"
+            }
+          ],
+          "audit_info": [
+            {
+              "title": "Created By",
+              "value": "Suresh Padmanabhan"
+            },
+            {
+              "title": "Creation Date",
+              "value": "12-15-18"
+            },
+            {
+              "title": "Last Updated By",
+              "value": "Suresh Padmanabhan"
+            },
+            {
+              "title": "Last Updated Date",
+              "value": "06-10-19"
+            },
+            {
+              "title": "Latest Activity date",
+              "value": "06-08-19"
+            },
+            {
+              "title": "Locked By",
+              "value": "Suresh Padmanabhan"
+            }
+          ]
+        }
       },
       {
         "id": "e19f1bfa-af5d-4e40-8488-9183f7a3dbfb",
@@ -246,6 +453,9 @@
         "remaininghours": "888",
         "complete": "0.00%",
         "public": "N",
+        "chargeable": "Yes",
+        "billable": "Yes",
+        "status": "Not Started",
         "activities": [
           {
             "type": "activity",
@@ -331,7 +541,73 @@
             "complete": "0.00%",
             "public": "N"
           }
-        ]
+        ],
+        "recoard_information": {
+          "schedule_info": [
+            {
+              "title": "Estimate Start Date",
+              "value": "09-13-19"
+            },
+            {
+              "title": "Estimate End Date",
+              "value": "02-16-20"
+            },
+            {
+              "title": "Transaction Start Date",
+              "value": "09-13-19"
+            },
+            {
+              "title": "Transaction End Date",
+              "value": "02-16-20"
+            },
+            {
+              "title": "Project Status",
+              "value": "Not Started"
+            },
+            {
+              "title": "Planned Efforts",
+              "value": "888 Hours"
+            },
+            {
+              "title": "Actual Efforts",
+              "value": "0 Hours"
+            },
+            {
+              "title": "% Spent",
+              "value": "0%"
+            },
+            {
+              "title": "% Complete",
+              "value": "0%"
+            }
+          ],
+          "audit_info": [
+            {
+              "title": "Created By",
+              "value": "Suresh Padmanabhan"
+            },
+            {
+              "title": "Creation Date",
+              "value": "12-15-18"
+            },
+            {
+              "title": "Last Updated By",
+              "value": "Suresh Padmanabhan"
+            },
+            {
+              "title": "Last Updated Date",
+              "value": "06-10-19"
+            },
+            {
+              "title": "Latest Activity date",
+              "value": "06-08-19"
+            },
+            {
+              "title": "Locked By",
+              "value": "Suresh Padmanabhan"
+            }
+          ]
+        }
       }
     ]
   }

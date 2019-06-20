@@ -296,18 +296,6 @@ h6.chart-title {
   color: #000;
 }
 
-.sidebar-fixed .main-content .sidebar.is-affixed .position-sticky {
-  margin-top: 55px;
-  /*imp css*/
-  /* position: relative;
-  width: 388px !important;
-  left : 835 !important; */
-  /* width: calc(100% - 1.5rem);
-  left : 819 !important; */
-  /* left: 819px !important;
-   width: 405px; */
-}
-
 .card-body table.table td,
 .card-body table.table th {
   padding-bottom: 10px;
@@ -450,7 +438,8 @@ h6.chart-title {
 
 @media (min-width: 992px) {
   .header-fixed .app-body {
-    margin-top: 55px;
+    /* margin-top: 55px; */
+    margin-top: 2.9rem;
   }
 
   /* html:not([dir="rtl"]) .aside-menu-show.aside-menu-fixed .main, html:not([dir="rtl"]) .aside-menu-show.aside-menu-fixed .app-footer, html:not([dir="rtl"]) .aside-menu-lg-show.aside-menu-fixed .main, html:not([dir="rtl"]) .aside-menu-lg-show.aside-menu-fixed .app-footer {
