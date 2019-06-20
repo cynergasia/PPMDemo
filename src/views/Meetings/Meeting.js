@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import MeetingMenu from "../SubMenu/MeetingMenu";
+import SubMenu from "../SubMenu/Submenu";
 import RecoardInformation from "../../components/RecoardInformation";
 import Attachments from "../../components/Attachments";
 import Comments from "../../components/Comments";
@@ -13,6 +14,12 @@ import meeting_database from "../../meeting_database";
 
 class Meeting extends Component {
   sidebar = null;
+  issueChangesRef = React.createRef();
+  workPackageRef = React.createRef();
+  meetingMinutesRef = React.createRef();
+  financialsRef = React.createRef();
+  activityLogRef = React.createRef();
+
   componentDidMount() {
     scrollTop();
     setTimeout(this.fixSidebar, 320);
@@ -31,7 +38,17 @@ class Meeting extends Component {
     const { recoard_information } = meeting_database;
     return (
       <React.Fragment>
-        <MeetingMenu />
+        <SubMenu
+          refs={{
+            issueChangesRef: this.issueChangesRef,
+            workPackageRef: this.workPackageRef,
+            meetingMinutesRef: this.meetingMinutesRef,
+            activityLogRef: this.activityLogRef
+          }}
+          isMenu={{ finanical: false,wbs:false,issue_changes:false,deliverable:false,work_package:false,submit:false }}
+         // name={workPackageInfo.name}
+        />
+        {/* <MeetingMenu /> */}
         <div className="animated fadeIn">
           <div className="row flex-row-reverse align-items-start main-content">
             <div className="col-12 col-lg-4">
@@ -48,12 +65,12 @@ class Meeting extends Component {
 
             <div className="col-12 col-lg-8">
               <Row>
-                <Col xs="12">
-                  <MeetingInformation />
-                </Col>
-                <Col xs="12">
+                <div className="col-12" ref={this.meetingMinutesRef}>
+                  <MeetingInformation  />
+                </div>
+                <div className="col-12" >
                   <MeetingDescription />
-                </Col>
+                </div>
 
                 <Col xs="12">
                   <Attachments />

@@ -27,6 +27,7 @@ class WorkPackageWiki extends Component {
   meetingMinutesRef = React.createRef();
   financialsRef = React.createRef();
   activityLogRef = React.createRef();
+  deliverableRef = React.createRef();
 
   componentDidMount() {
     this.fixSidebar();
@@ -48,17 +49,18 @@ class WorkPackageWiki extends Component {
     const workPackageInfo = p[0];
     const recoard_information = p[0].recoard_information;
     const { issues, changes, deliverbales } = workpackagewiki_database;
-    console.log("admin", workPackageInfo);
+    //console.log("admin", workPackageInfo);
     return (
       <React.Fragment>
         <SubMenu
           refs={{
             issueChangesRef: this.issueChangesRef,
             workPackageRef: this.workPackageRef,
+            deliverableRef: this.deliverableRef,
             meetingMinutesRef: this.meetingMinutesRef,
             activityLogRef: this.activityLogRef
           }}
-          isMenu={{ finanical: false }}
+          isMenu={{ finanical: false,wbs:false,submit:false}}
           name={workPackageInfo.name}
         />
         <div className="animated fadeIn">
@@ -93,7 +95,7 @@ class WorkPackageWiki extends Component {
                 <div className="col-12" ref={this.issueChangesRef}>
                   <WorkPackageIssueChanges issues={issues} changes={changes} />
                 </div>
-                <div className="col-12">
+                <div className="col-12" ref={this.deliverableRef}>
                   <WorkPackageDeliverables deliverbales={deliverbales} />
                 </div>
                 <div className="col-12" ref={this.meetingMinutesRef}>

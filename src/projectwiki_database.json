@@ -17,7 +17,7 @@
         "id": "d588dc46-d7a8-4ac4-ad12-f0ff3914cebf",
         "type": "WorkPackage",
         "wbsNumber": "1.01",
-        "name": "admin",
+        "name": "Admin",
         "duration": "60",
         "start_date": "01-01-2019",
         "end_date": "03-02-2019",
@@ -63,11 +63,11 @@
         "recoard_information": {
           "schedule_info": [
             {
-              "title": "Estimate Start Date",
+              "title": "Schedule Start Date",
               "value": "01-01-19"
             },
             {
-              "title": "Estimate End Date",
+              "title": "Schedule End Date",
               "value": "03-02-19"
             },
             {
@@ -77,11 +77,7 @@
             {
               "title": "Transaction End Date",
               "value": "03-02-19"
-            },
-            {
-              "title": "Project Status",
-              "value": "Completed"
-            },
+            },           
             {
               "title": "Planned Efforts",
               "value": "300 Hours"
@@ -131,7 +127,7 @@
         "id": "f943d9a6-5fe9-4c97-957d-16d3f8af117d",
         "type": "WorkPackage",
         "wbsNumber": "1.02",
-        "name": "design",
+        "name": "Design",
         "duration": "70",
         "start_date": "01-01-2019",
         "end_date": "04-06-2019",
@@ -219,11 +215,11 @@
         "recoard_information": {
           "schedule_info": [
             {
-              "title": "Estimate Start Date",
+              "title": "Schedule Start Date",
               "value": "01-01-19"
             },
             {
-              "title": "Estimate End Date",
+              "title": "Schedule End Date",
               "value": "04-06-19"
             },
             {
@@ -234,10 +230,7 @@
               "title": "Transaction End Date",
               "value": "04-06-19"
             },
-            {
-              "title": "Project Status",
-              "value": "Completed"
-            },
+          
             {
               "title": "Planned Efforts",
               "value": "548 Hours"
@@ -287,7 +280,7 @@
         "id": "cab9c763-517c-41ac-829d-6f961d8b67c4",
         "type": "WorkPackage",
         "wbsNumber": "1.03",
-        "name": "modelling",
+        "name": "Modelling",
         "duration": "269",
         "start_date": "04-06-2019",
         "end_date": "12-31-2019",
@@ -375,11 +368,11 @@
         "recoard_information": {
           "schedule_info": [
             {
-              "title": "Estimate Start Date",
+              "title": "Schedule Start Date",
               "value": "04-06-2019"
             },
             {
-              "title": "Estimate End Date",
+              "title": "Schedule End Date",
               "value": "12-31-2019"
             },
             {
@@ -390,10 +383,7 @@
               "title": "Transaction End Date",
               "value": "12-31-2019"
             },
-            {
-              "title": "Project Status",
-              "value": "In Progress"
-            },
+           
             {
               "title": "Planned Efforts",
               "value": "968 Hours"
@@ -443,7 +433,7 @@
         "id": "e19f1bfa-af5d-4e40-8488-9183f7a3dbfb",
         "type": "WorkPackage",
         "wbsNumber": "1.04",
-        "name": "rebar",
+        "name": "Rebar",
         "duration": "156",
         "start_date": "09-13-2019",
         "end_date": "02-16-2020",
@@ -545,11 +535,11 @@
         "recoard_information": {
           "schedule_info": [
             {
-              "title": "Estimate Start Date",
+              "title": "Schedule Start Date",
               "value": "09-13-19"
             },
             {
-              "title": "Estimate End Date",
+              "title": "Schedule End Date",
               "value": "02-16-20"
             },
             {
@@ -559,11 +549,7 @@
             {
               "title": "Transaction End Date",
               "value": "02-16-20"
-            },
-            {
-              "title": "Project Status",
-              "value": "Not Started"
-            },
+            },           
             {
               "title": "Planned Efforts",
               "value": "888 Hours"

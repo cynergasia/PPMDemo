@@ -17,50 +17,40 @@ class MeetingInformation extends Component {
         <div className="card">
           <div className="card-header">
             Meeting Information
-            <div className="card-header-actions">
+            {/* <div className="card-header-actions">
               <i className="fa fa-times-circle-o mr-2" />
               <i className="fa fa-save" />
-            </div>
+            </div> */}
           </div>
           <div className="card-body">
-            <div className="row">
-              <div className="col-12">
-                <div className="form-group row">
-                  <label for="subject" className="col col-form-label">
-                    Subject :
-                  </label>
-                  <div className="col">
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="subject"
-                    />
-                  </div>
-                </div>
-              </div>
+            <div className="row">             
               <div className="col-12 col-md-6">
                 <div className="form-group row">
                   <label for="template" className="col col-form-label">
                     Template :
                   </label>
                   <div className="col">
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="template"
-                    />
+
+                    <select name="template" class="form-control">
+                      <option>Select</option>
+                      <option>Professional</option>
+                      <option>Detailed</option> 
+                      <option>Simple</option>                   
+                    </select>
+
                   </div>
                 </div>
                 <div className="form-group row">
                   <label for="frequency" className="col col-form-label">
                     Frequency :
                   </label>
-                  <div className="col">
-                    <input
-                      type="number"
-                      className="form-control"
-                      name="frequency"
-                    />
+                  <div className="col">                   
+                    <select name="frequency" class="form-control">
+                    <option>Select</option>
+                    <option>Daily</option>
+                    <option>Weekly</option>
+                    <option>Monthly</option>
+                    </select>
                   </div>
                 </div>
                 <div className="form-group row">
@@ -86,12 +76,12 @@ class MeetingInformation extends Component {
                   <label for="recurring" className="col col-form-label">
                     Recurring :
                   </label>
-                  <div className="col">
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="recurring"
-                    />
+                  <div className="col">                 
+                    <select name="recurring" class="form-control">
+                    <option>Select</option>
+                    <option>Y</option>
+                    <option>N</option>                 
+                    </select>
                   </div>
                 </div>
                 <div className="form-group row">
@@ -111,6 +101,20 @@ class MeetingInformation extends Component {
                       type="text"
                       className="form-control"
                       name="location"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="col-12">
+                <div className="form-group row">
+                  <label for="subject" className="col col-form-label">
+                    Subject :
+                  </label>
+                  <div className="col">
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="subject"
                     />
                   </div>
                 </div>

@@ -51,6 +51,7 @@ class ProjectWiki extends Component {
             financialsRef: this.financialsRef,
             activityLogRef: this.activityLogRef
           }}
+          isMenu={{ deliverable: false,work_package:false,submit:false }}
         />
         <div className="animated fadeIn">
           <div className="row main-content">

@@ -49,7 +49,7 @@ class DeliverablesWikiMenu extends Component {
                       to="#"
                       onClick={() => this.scrollTo(refs.approvedStatus)}
                     >
-                      <i className="fa fa-check-square" /> Approved Status
+                      <i className="fa fa-check-square" /> Approval Status
                     </Link>
                   </li>
 
@@ -60,6 +60,14 @@ class DeliverablesWikiMenu extends Component {
                       onClick={() => this.scrollTo(refs.activityLogRef)}
                     >
                       <i className="fa fa-clipboard" /> Activity Log
+                    </Link>
+                  </li>
+                  <li className="nav-head active " aria-current="page">
+                    <Link
+                      exact
+                      to="#"                     
+                    >
+                      <i className="fa fa-sitemap" /> Submit
                     </Link>
                   </li>
 

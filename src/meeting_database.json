@@ -2,11 +2,11 @@
   "recoard_information": {
     "schedule_info": [
       {
-        "title": "Estimate Start Date",
+        "title": "Schedule Start Date",
         "value": "01-01-19"
       },
       {
-        "title": "Estimate End Date",
+        "title": "Schedule End Date",
         "value": "02-16-20"
       },
       {
@@ -16,11 +16,7 @@
       {
         "title": "Transaction End Date",
         "value": "02-16-20"
-      },
-      {
-        "title": "Project Status",
-        "value": "Approved"
-      },
+      },     
       {
         "title": "Planned Efforts",
         "value": "2156 Hours"

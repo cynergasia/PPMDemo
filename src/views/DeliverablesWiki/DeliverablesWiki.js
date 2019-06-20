@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import DeliverablesWikiMenu from "../SubMenu/DeliverablesWikiMenu";
+import SubMenu from "../SubMenu/Submenu";
 import RecoardInformation from "../../components/RecoardInformation";
 import Attachments from "../../components/Attachments";
 import DeliverablesInformation from "../../components/DeliverablesWiki/DeliverablesInformation";
@@ -35,6 +36,13 @@ class DeliverablesWiki extends Component {
     const { activities, recoard_information } = deliverableswiki_database;
     return (
       <React.Fragment>
+        {/* <SubMenu
+          refs={{
+            approvedStatus: this.approvedStatus,
+            activityLogRef: this.activityLogRef
+          }}
+          isMenu={{ finanical: false,wbs:false,issue_changes:false,work_package:false}}
+        /> */}
         <DeliverablesWikiMenu
           refs={{
             approvedStatus: this.approvedStatus,
