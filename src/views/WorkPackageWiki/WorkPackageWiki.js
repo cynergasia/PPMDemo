@@ -51,6 +51,7 @@ class WorkPackageWiki extends Component {
       changes,
       deliverbales
     } = workpackagewiki_database;
+    console.log("admin",workPackageInfo);
     return (
       <React.Fragment>
         <div className="animated fadeIn">
@@ -63,7 +64,8 @@ class WorkPackageWiki extends Component {
                   meetingMinutesRef: this.meetingMinutesRef,
                   activityLogRef: this.activityLogRef
                 }}
-                isMenu={{finanical: false}}
+                isMenu={{finanical: false}} 
+                name={workPackageInfo.name}               
               />
             </Col>
           </Row>

@@ -39,7 +39,7 @@ class Submenu extends Component {
       };
 
     render() {  
-        const { refs } = this.props;    
+        const { refs , name } = this.props;    
         return (
         <React.Fragment>
         <div className="">
@@ -49,7 +49,7 @@ class Submenu extends Component {
                 <ol className="breadcrumb left-breadcrumb">
                   <li className="nav-head active" area-current="page">
                     <i className="fa fa-map-marker" /> Extensions N/Cape Mall
-                    Phase 3 (60453005)
+                    Phase 3 (60453005) {name}
                   </li>
                 </ol>
                 <ol className="breadcrumb left-breadcrumb">
@@ -63,11 +63,13 @@ class Submenu extends Component {
                             
                       
                       this.state[list] && <li className="nav-head active" aria-current="page">
+
                           <Link
                             onClick={() => this.scrollTo(refs[menulist[index][list][1]])}
                             className="cursor-pointer">
                             <i className={menulist[index][list][2]} /> {menulist[index][list][0]} 
                           </Link>
+                          
                           </li>                          
                            
                     ))
