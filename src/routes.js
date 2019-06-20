@@ -1,7 +1,7 @@
 import React from "react";
 import { routesURL } from "./constant/routesURL";
 
-const Dashboard = React.lazy(() => import("./views/Dashboard"));
+const Dashboard = React.lazy(() => import("./views/Dashboard/Dashboard"));
 const ProjectStatusReport = React.lazy(() =>
   import("./views/ProjectStatusReport/ProjectStatusReport.js")
 );
@@ -42,7 +42,6 @@ const routes = [
     component: ProjectWiki,
     title: "Project Wiki"
   },
-
   {
     path: routesURL.DELIVERABLES_WIKI,
     component: DeliverablesWiki,

@@ -13,6 +13,7 @@ import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import StickySidebar from "sticky-sidebar";
 import { Row, Col } from "reactstrap";
 import projectwiki_database from "../../projectwiki_database";
+import database from "../../database";
 
 class ProjectWiki extends Component {
   sidebar = null;
@@ -38,6 +39,7 @@ class ProjectWiki extends Component {
 
   render() {
     const tasks = projectwiki_database;
+    const { recoard_information } = database;
     return (
       <React.Fragment>
         <div className="animated fadeIn">
@@ -59,7 +61,9 @@ class ProjectWiki extends Component {
             <div className="col-12 col-lg-4">
               <div className="sidebar">
                 <div className="sidebar__inner">
-                  <RecoardInformation />
+                  <RecoardInformation
+                    recoard_information={recoard_information}
+                  />
                 </div>
               </div>
             </div>

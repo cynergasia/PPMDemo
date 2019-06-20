@@ -8,6 +8,7 @@ import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import MeetingInformation from "../../components/Meeting/MeetingInformation";
 import MeetingDescription from "../../components/Meeting/MeetingDescription";
 import { scrollTop } from "../../utils";
+import meeting_database from "../../meeting_database";
 
 class Meeting extends Component {
   componentDidMount() {
@@ -15,6 +16,7 @@ class Meeting extends Component {
   }
 
   render() {
+    const { recoard_information } = meeting_database;
     return (
       <React.Fragment>
         <div className="animated fadeIn">
@@ -35,7 +37,11 @@ class Meeting extends Component {
               </Row>
             </Col>
             <Col sm="12" md="12" lg="4">
-              <RecoardInformation />
+              <RecoardInformation
+                recoard_information={recoard_information}
+                isScheduleinfo={false}
+                isWorkflowinfo={false}
+              />
             </Col>
           </Row>
           <Row>

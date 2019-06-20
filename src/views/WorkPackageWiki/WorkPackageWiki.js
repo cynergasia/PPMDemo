@@ -47,7 +47,8 @@ class WorkPackageWiki extends Component {
       workPackageInfo,
       issues,
       changes,
-      deliverbales
+      deliverbales,
+      recoard_information
     } = workpackagewiki_database;
     return (
       <React.Fragment>
@@ -70,7 +71,10 @@ class WorkPackageWiki extends Component {
             <div className="col-12 col-lg-4">
               <div className="sidebar">
                 <div className="sidebar__inner">
-                  <RecoardInformation isWorkflowinfo={false} />
+                  <RecoardInformation
+                    recoard_information={recoard_information}
+                    isWorkflowinfo={false}
+                  />
                 </div>
               </div>
             </div>

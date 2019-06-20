@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Card, CardHeader, CardBody, Row, Col, Input } from "reactstrap";
 import DatePicker from "react-datepicker";
 
 class MeetingInformation extends Component {
@@ -14,70 +13,61 @@ class MeetingInformation extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <Card>
-          <CardHeader>
+      <form>
+        <div className="card">
+          <div className="card-header">
             Meeting Information
             <div className="card-header-actions">
               <i className="fa fa-times-circle-o mr-2" />
               <i className="fa fa-save" />
             </div>
-          </CardHeader>
-          <CardBody>
-            <Row>
-              <Col sm="12" md="6" lg="3" className="mb-2">
-                <Row>
-                  <Col sm="12" md="6" lg="5">
-                    Template
-                  </Col>
-                  <Col sm="12" md="6" lg="7">
-                    <Input type="text" name="template" />
-                  </Col>
-                </Row>
-              </Col>
-              <Col sm="12" md="6" lg="3" className="mb-2">
-                <Row>
-                  <Col sm="12" md="6" lg="6">
-                    Recurring :
-                  </Col>
-                  <Col sm="12" md="6" lg="6">
-                    <Input type="text" name="template" />
-                  </Col>
-                </Row>
-              </Col>
-              <Col sm="12" md="6" lg="3" className="mb-2">
-                <Row>
-                  <Col sm="12" md="6" lg="6">
+          </div>
+          <div className="card-body">
+            <div className="row">
+              <div className="col-12">
+                <div className="form-group row">
+                  <label for="subject" className="col col-form-label">
+                    Subject :
+                  </label>
+                  <div className="col">
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="subject"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-md-6">
+                <div className="form-group row">
+                  <label for="template" className="col col-form-label">
+                    Template :
+                  </label>
+                  <div className="col">
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="template"
+                    />
+                  </div>
+                </div>
+                <div className="form-group row">
+                  <label for="frequency" className="col col-form-label">
                     Frequency :
-                  </Col>
-                  <Col sm="12" md="6" lg="6">
-                    <select name="frequency" className="form-control">
-                      <option>Select</option>
-                      <option>Daily</option>
-                      <option>Weekly</option>
-                      <option>Monthly</option>
-                    </select>
-                  </Col>
-                </Row>
-              </Col>
-              <Col sm="12" md="6" lg="3" className="mb-2">
-                <Row>
-                  <Col sm="12" md="6" lg="6">
-                    Ends on :
-                  </Col>
-                  <Col sm="12" md="6" lg="6">
-                    <Input type="text" name="template" />
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-            <Row>
-              <Col sm="12" md="6" lg="3" className="mb-2">
-                <Row>
-                  <Col sm="12" md="6" lg="5">
+                  </label>
+                  <div className="col">
+                    <input
+                      type="number"
+                      className="form-control"
+                      name="frequency"
+                    />
+                  </div>
+                </div>
+                <div className="form-group row">
+                  <label for="date" className="col col-form-label">
                     Date :
-                  </Col>
-                  <Col sm="12" md="6" lg="7">
+                  </label>
+                  <div className="col">
                     <DatePicker
                       selected={this.state.startDate}
                       onChange={this.handleChange}
@@ -88,31 +78,63 @@ class MeetingInformation extends Component {
                       todayButton={"Today"}
                       dateFormat="MM-dd-yyyy"
                     />
-                  </Col>
-                </Row>
-              </Col>
-              <Col sm="12" md="6" lg="3">
-                <Row>
-                  <Col sm="12" md="6" lg="6">
-                    Location :
-                  </Col>
-                  <Col sm="12" md="6" lg="6">
-                    <Input type="text" name="location" />
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-            <Row>
-              <Col sm="12" md="12" lg="12">
-                <div className="form-group">
-                  <label>Attendee : </label>
-                  <Input type="textarea" rows="3" />
+                  </div>
                 </div>
-              </Col>
-            </Row>
-          </CardBody>
-        </Card>
-      </React.Fragment>
+              </div>
+              <div className="col-12 col-md-6">
+                <div className="form-group row">
+                  <label for="recurring" className="col col-form-label">
+                    Recurring :
+                  </label>
+                  <div className="col">
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="recurring"
+                    />
+                  </div>
+                </div>
+                <div className="form-group row">
+                  <label for="endsOn" className="col col-form-label">
+                    Ends on :
+                  </label>
+                  <div className="col">
+                    <input type="text" className="form-control" name="endsOn" />
+                  </div>
+                </div>
+                <div className="form-group row">
+                  <label for="location" className="col col-form-label">
+                    Location :
+                  </label>
+                  <div className="col">
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="location"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="col-12">
+                <div className="form-group row">
+                  <label for="attendee" className="col col-form-label">
+                    Attendee :
+                  </label>
+                  <div className="col">
+                    <textarea className="form-control" name="attendee" />
+                  </div>
+                </div>
+              </div>
+              <div className="col-12">
+                <div className="form-group row">
+                  <div className="btn btn-danger ml-auto">Cancel</div>
+                  <div className="btn btn-primary mr-auto">Save</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
     );
   }
 }

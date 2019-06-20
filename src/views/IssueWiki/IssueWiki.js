@@ -33,7 +33,7 @@ class IssueWiki extends Component {
 
   render() {
     const { activities } = deliverableswiki_database;
-    const { issueDescription } = issuewiki_database;
+    const { issueDescription, recoard_information } = issuewiki_database;
     return (
       <React.Fragment>
         <div className="animated fadeIn">
@@ -53,7 +53,9 @@ class IssueWiki extends Component {
             <div className="col-12 col-lg-4">
               <div className="sidebar">
                 <div className="sidebar__inner">
-                  <RecoardInformation />
+                  <RecoardInformation
+                    recoard_information={recoard_information}
+                  />
                 </div>
               </div>
             </div>

@@ -90,6 +90,22 @@
   }
 }
 
+.card-body {
+  .tab-pane {
+    padding: 0;
+  }
+}
+
+form {
+  .form-group {
+    &.row {
+      .col-form-label {
+        max-width: 6.5rem;
+      }
+    }
+  }
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -227,11 +243,5 @@ table.dataTable {
   html:not([dir="rtl"]) .aside-menu-lg-show.aside-menu-fixed .main,
   html:not([dir="rtl"]) .aside-menu-lg-show.aside-menu-fixed .app-footer {
     margin-right: 340px;
-  }
-}
-
-.card-body {
-  .tab-pane {
-    padding: 0;
   }
 }

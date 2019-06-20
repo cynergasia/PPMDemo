@@ -32,7 +32,7 @@ class DeliverablesWiki extends Component {
   };
 
   render() {
-    const { activities } = deliverableswiki_database;
+    const { activities, recoard_information } = deliverableswiki_database;
     return (
       <React.Fragment>
         <div className="animated fadeIn">
@@ -51,7 +51,10 @@ class DeliverablesWiki extends Component {
             <div className="col-12 col-lg-4">
               <div className="sidebar">
                 <div className="sidebar__inner">
-                  <RecoardInformation isWorkflowinfo={false} />
+                  <RecoardInformation
+                    recoard_information={recoard_information}
+                    isWorkflowinfo={false}
+                  />
                 </div>
               </div>
             </div>
