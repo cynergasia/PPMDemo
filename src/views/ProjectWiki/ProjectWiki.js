@@ -35,7 +35,7 @@ class ProjectWiki extends Component {
     const { record_information } = database;
     const { deliverablesInfo } = deliverableswiki_database;
     const { basicProjectInfo, activity } = project[0].projectwiki;
-    console.log("ProjectWiki", project[0].projectwiki);
+   
     return (
       <React.Fragment>
         <SubMenu
@@ -46,7 +46,7 @@ class ProjectWiki extends Component {
             financialsRef: this.financialsRef,
             activityLogRef: this.activityLogRef
           }}
-          isMenu={{ deliverable: false, work_package: false, submit: false }}
+          isMenu={{ deliverable: false, work_package: false}}
         />
         <div className="animated fadeIn row">
           {/* flex-row-reverse align-items-start */}

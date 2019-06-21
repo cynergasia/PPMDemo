@@ -8,29 +8,14 @@ import IssueActivities from "../../components/IssueWiki/IssueActivities";
 import Attachments from "../../components/Attachments";
 import IssueApprovalStatus from "../../components/IssueWiki/IssueApprovalStatus";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
-import StickySidebar from "sticky-sidebar";
 import deliverableswiki_database from "../../database/deliverableswiki_database";
 import issuewiki_database from "../../database/issuewiki_database";
 
 class IssueWiki extends Component {
-  sidebar = null;
 
   attachmentRef = React.createRef();
   approvedStatusRef = React.createRef();
   activityLogRef = React.createRef();
-
-  componentDidMount() {
-    setTimeout(this.fixSidebar, 320);
-  }
-
-  fixSidebar = () => {
-    this.sidebar = new StickySidebar(".sidebar", {
-      topSpacing: 0,
-      bottomSpacing: 0,
-      containerSelector: ".main-content",
-      innerWrapperSelector: ".sidebar__inner"
-    });
-  };
 
   render() {
     const { activities } = deliverableswiki_database;
@@ -46,17 +31,9 @@ class IssueWiki extends Component {
         />
         
         
-        <div className="animated fadeIn">
-          <div className="row flex-row-reverse align-items-start main-content">
-            <div className="col-12 col-lg-4">
-              <div className="sidebar">
-                <div className="sidebar__inner">
-                  <RecordInformation
-                    record_information={record_information}
-                  />
-                </div>
-              </div>
-            </div>
+        <div className="animated fadeIn row">
+          
+        
 
             <div className="col-12 col-lg-8">
               <Row>
@@ -77,10 +54,19 @@ class IssueWiki extends Component {
                 </div>
               </Row>
             </div>
+            <div className="col-12 col-lg-4">
+              <div className="aside">
+                <div className="aside-inner">
+                  <RecordInformation
+                    record_information={record_information}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
           <Row />
-        </div>
+        
       </React.Fragment>
     );
   }

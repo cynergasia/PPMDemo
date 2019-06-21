@@ -9,19 +9,38 @@ import {
   ListGroupItem
 } from "reactstrap";
 import classNames from "classnames";
+import database from "../../database/database";
+import PropTypes from "prop-types";
+
+const propTypes = {
+  children: PropTypes.node
+};
+
+const defaultProps = {};
 
 class NewsFeedAside extends Component {
-  state = {
-    activeTab: "1"
-  };
+  constructor(props) {
+    super(props);
 
-  toggle = tab => {
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      activeTab: "1"
+    };
+  }
+
+  toggle(tab) {
     if (this.state.activeTab !== tab) {
       this.setState({
         activeTab: tab
       });
     }
+  }
+
+  handleClick = () => {
+    this.props.toggleNotification();
+    window.location.hash = "/500";
   };
+
   render() {
     return (
       <React.Fragment>
@@ -39,56 +58,25 @@ class NewsFeedAside extends Component {
         </Nav>
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
-            <ListGroup className="list-group-accent" tag={"div"}>
+            <ListGroup
+              className="list-group-accent project-wiki-basicinfo"
+              tag={"div"}
+            >
               <ListGroupItem className="list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">
-                Latest News
+                Notification
               </ListGroupItem>
-              <ListGroupItem
-                action
-                tag="a"
-                href="#"
-                className="list-group-item-accent-warning list-group-item-divider"
-              >
-                <div className="avatar float-right">
-                  <img
-                    className="img-avatar"
-                    src="assets/img/avatars/7.jpg"
-                    alt="admin@bootstrapmaster.com"
-                  />
-                </div>
-                <div>
-                  Notification<strong>Lucas</strong>{" "}
-                </div>
-                <small className="text-muted mr-3">
-                  <i className="icon-calendar" />&nbsp; 1 - 3pm
-                </small>
-                <small className="text-muted">
-                  <i className="icon-location-pin" /> Palo Alto, CA
-                </small>
-              </ListGroupItem>
-              <ListGroupItem
-                action
-                tag="a"
-                href="#"
-                className="list-group-item-accent-info list-group-item-divider"
-              >
-                <div className="avatar float-right">
-                  <img
-                    className="img-avatar"
-                    src="assets/img/avatars/4.jpg"
-                    alt="admin@bootstrapmaster.com"
-                  />
-                </div>
-                <div>
-                  Skype with <strong>Megan</strong>
-                </div>
-                <small className="text-muted mr-3">
-                  <i className="icon-calendar" />&nbsp; 4 - 5pm
-                </small>
-                <small className="text-muted">
-                  <i className="icon-social-skype" /> On-line
-                </small>
-              </ListGroupItem>
+              {database.globalNewsFeed.map(item => (
+                <ListGroupItem
+                  action
+                  className="list-group-item-accent-warning list-group-item-divider"
+                  onClick={this.handleClick}
+                >
+                  <div>{item.title}</div>
+                  <small className="text-muted mr-3">
+                    <i className="icon-calendar" />&nbsp;{item.due_date}
+                  </small>
+                </ListGroupItem>
+              ))}
             </ListGroup>
           </TabPane>
         </TabContent>
@@ -96,5 +84,6 @@ class NewsFeedAside extends Component {
     );
   }
 }
-
+NewsFeedAside.propTypes = propTypes;
+NewsFeedAside.defaultProps = defaultProps;
 export default NewsFeedAside;

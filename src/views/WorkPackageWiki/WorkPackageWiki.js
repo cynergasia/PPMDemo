@@ -60,7 +60,7 @@ class WorkPackageWiki extends Component {
             meetingMinutesRef: this.meetingMinutesRef,
             activityLogRef: this.activityLogRef
           }}
-          isMenu={{ finanical: false, wbs: false, submit: false }}
+          isMenu={{ finanical: false, wbs: false}}
           name={workPackageInfo.name}
         />
         <div className="animated fadeIn row">

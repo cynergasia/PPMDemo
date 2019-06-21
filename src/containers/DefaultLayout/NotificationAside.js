@@ -10,9 +10,8 @@ import {
 } from "reactstrap";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-//import { AppSwitch } from "@coreui/react";
+
 import database from "../../database/database";
-// import { Link } from "react-router-dom";
 
 const propTypes = {
   children: PropTypes.node

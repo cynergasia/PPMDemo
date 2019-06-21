@@ -16,8 +16,7 @@ export const menulist = [
     ]
   },
   { finanical: ["Financials", "financialsRef", "fa fa-bar-chart"] },
-  { activity_log: ["Activity Log", "activityLogRef", "fa fa-clipboard"] },
-  { submit:["Submit/Cancel", "submitRef", "fa fa-sitemap"]},
+  { activity_log: ["Activity Log", "activityLogRef", "fa fa-clipboard"] },  
   { follow: ["Follow", "dummy", "fa fa-rss"] }
 ];
 
@@ -30,7 +29,6 @@ export const keylist = [
   "meeting_minutes",
   "finanical",
   "activity_log",
-  "submit",
   "follow"
 ];
 
@@ -43,8 +41,7 @@ class Submenu extends Component {
     deliverable:true,   
     meeting_minutes: true,
     finanical: true,
-    activity_log: true,
-    submit:true,
+    activity_log: true,    
     follow: true
   };
 
@@ -68,8 +65,7 @@ class Submenu extends Component {
   };
 
   render() {
-    const { refs, name,link } = this.props;
-    console.log("meeting",link);
+    const { refs, name,link } = this.props;  
     return (
       <nav className="sub-navbar navbar-fixed-top" aria-label="breadcrumb">
         <div className="row">
@@ -86,11 +82,15 @@ class Submenu extends Component {
                       <i className="fa fa-edit" /> Edit
                     </Link>
                   </li> */}
-              {link && <li className="nav-head active" aria-current="page">
-              <Link exact to={routesURL.MEETING_LIST}>
-                <i className="fa fa-check-square" /> Meeting Register
+              {/* {link && link.menulink.map((list, index) =>(list
+
+                  )
+              )} */}
+             {/* {link.submit && <li className="nav-head active" aria-current="page">
+              <Link exact to={routesURL.PAGE_NOT_FOUND}>
+                <i className="fa fa-check-square" /> Submit/Cancel
               </Link>
-             </li>}
+             </li>} */}
                
               {keylist.map(
                 (list, index) =>

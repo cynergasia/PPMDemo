@@ -11,6 +11,11 @@ import MeetingDescription from "../../components/Meeting/MeetingDescription";
 import { scrollTop } from "../../utils";
 import meeting_database from "../../database/database";
 
+export const menulink = [
+  { meeting_register: ["Meeting Register", "PROJECT_WIKI", "fa fa-check-square"] },
+  { submit: ["Submit/Cancel", "500", "fa fa-sitemap"] }, 
+];
+
 class Meeting extends Component {
   sidebar = null;
   issueChangesRef = React.createRef();
@@ -25,6 +30,7 @@ class Meeting extends Component {
 
   render() {
     const { record_information} = meeting_database;
+
     return (
       <React.Fragment>
         <SubMenu
@@ -35,8 +41,8 @@ class Meeting extends Component {
             activityLogRef: this.activityLogRef
           }}
           isMenu={{ finanical: false,wbs:false,issue_changes:false,deliverable:false,work_package:false}}
-          link={{meeting_register:true}}
-         // name={workPackageInfo.name}
+          link={{menulink,data:["meeting_register","submit"]}}
+        //  name={workPackageInfo.name}
         />
         {/* <MeetingMenu /> */}
         <div className="animated fadeIn row">
