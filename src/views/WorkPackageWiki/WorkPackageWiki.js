@@ -96,7 +96,7 @@ class WorkPackageWiki extends Component {
                 </div>
               </Row>
             </div>
-          </div>
+          
 
           <div className="col-12 col-lg-4">
             <div className="aside">

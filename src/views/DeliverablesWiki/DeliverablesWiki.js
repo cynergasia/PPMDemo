@@ -58,6 +58,7 @@ class DeliverablesWiki extends Component {
             approvedStatus: this.approvedStatus,
             activityLogRef: this.activityLogRef
           }}
+          name ={deliverInfo[0].name}
         />
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">

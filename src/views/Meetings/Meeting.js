@@ -38,7 +38,7 @@ class Meeting extends Component {
          // name={workPackageInfo.name}
         />
         {/* <MeetingMenu /> */}
-        <div className="animated fadeIn">       
+        <div className="animated fadeIn row">       
             
 
             <div className="col-12 col-lg-8">

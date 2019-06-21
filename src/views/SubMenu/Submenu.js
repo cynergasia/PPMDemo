@@ -9,7 +9,7 @@ export const menulist = [
   { deliverable:["Deliverables", "deliverableRef", "fa fa-refresh"]}, 
   {
     meeting_minutes: [
-      "Meeting Minutes",
+      "Meeting",
       "meetingMinutesRef",
       "fa fa-pencil-square"
     ]

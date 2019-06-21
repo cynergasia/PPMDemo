@@ -89,7 +89,16 @@ class MeetingInformation extends Component {
                     Ends on :
                   </label>
                   <div className="col">
-                    <input type="text" className="form-control" name="endsOn" />
+                  <DatePicker
+                      selected={this.state.startDate}
+                      onChange={this.handleChange}
+                      className="form-control"
+                      showYearDropdown
+                      showMonthDropdown
+                      useShortMonthInDropdown
+                      todayButton={"Today"}
+                      dateFormat="MM-dd-yyyy"
+                    />
                   </div>
                 </div>
                 <div className="form-group row">
