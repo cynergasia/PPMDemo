@@ -20,11 +20,7 @@ class TaskWiki extends Component {
   }
 
   render() {
-<<<<<<< HEAD
-    const { record_information } = taskwiki_database;
-=======
-    const { recoard_information } = database;
->>>>>>> 319a76d0441f2843a0d9dbcb5652c5a180d3cb46
+    const { record_information } = database;
     return (
       <React.Fragment>
         {/* <TaskWikiMenu /> */}

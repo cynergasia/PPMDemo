@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import DeliverablesTableList from "../../components/DeliverablesWiki/DeliverablesTableList";
-import getDeliverableswiki from "../../database/database"";
+import getDeliverableswiki from "../../database/deliverableswiki_database1";
 // import deliverableswiki_database from "../../database/database";
 
 class DeliverablesList extends Component {

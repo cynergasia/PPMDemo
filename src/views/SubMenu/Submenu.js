@@ -52,16 +52,6 @@ class Submenu extends Component {
     this.setState({ ...this.props.isMenu });
   }
 
-<<<<<<< HEAD
-  scrollTo = ({ current: ref }) => {
-    let scrollRef = ReactDOM.findDOMNode(ref);
-    let scrollOptions = {
-      left: 0,
-      top: scrollRef.offsetTop,
-      behavior: "smooth"
-    };    
-    document.querySelector(".app-body").scrollTo(scrollOptions);
-=======
   scrollTo = (e, { current: ref }) => {
     e.persist();
     const scrollRef = ReactDOM.findDOMNode(ref);
@@ -75,7 +65,6 @@ class Submenu extends Component {
     } catch (e) {
       appBody.scrollTop = scrollRef.offsetTop;
     }
->>>>>>> 319a76d0441f2843a0d9dbcb5652c5a180d3cb46
   };
 
   render() {
