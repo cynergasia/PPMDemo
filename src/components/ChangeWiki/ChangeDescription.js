@@ -1,25 +1,24 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody, Table, Input } from "reactstrap";
 
-class IssueDescription extends Component {
+class ChangeDescription extends Component {
   render() {
     const {
       number,
-      name,
       title,
       due_date,
       complete,
-      status,
-      issue_status,
+      change_status,
+      value,
       workpackage,
       planned_effort,
       owner,
       actual_effort,
-      issue_type,
-      issue_severity,
+      impact_type,
+      severity,
       days,
       description
-    } = this.props.issue;
+    } = this.props.changes;
     return (
       <React.Fragment>
         <Card>
@@ -67,7 +66,7 @@ class IssueDescription extends Component {
                     <div>Status</div>
                   </td>
                   <td className="text-left">
-                    <div>{status}</div>
+                    <div>{change_status}</div>
                   </td>
                   <td className="basicinfo text-left">
                     <div>Workpackage</div>
@@ -83,11 +82,11 @@ class IssueDescription extends Component {
                   <td className="text-left">
                     <div>{planned_effort}</div>
                   </td>
-                  <td className="basicinfo text-left" rowSpan="4">
-                    <div>Owner</div>
+                  <td className="basicinfo text-left">
+                    <div>Value</div>
                   </td>
-                  <td className="text-left" rowSpan="4">
-                    <div>{owner}</div>
+                  <td className="text-left">
+                    <div>{value}</div>
                   </td>
                 </tr>
 
@@ -98,35 +97,27 @@ class IssueDescription extends Component {
                   <td className="text-left">
                     <div>{actual_effort}</div>
                   </td>
-                </tr>
-                <tr>
-                  <td className="basicinfo text-left">
-                    <div>Issue Type</div>
+                  <td className="basicinfo text-left" rowSpan="3">
+                    <div>Owner</div>
                   </td>
-                  <td className="text-left">
-                    <div>
-                      <select
-                        className="custom-select"
-                        defaultValue={issue_type}
-                      >
-                        <option disabled selected>
-                          Select
-                        </option>
-                        <option>Contract</option>
-                        <option>Design</option>
-                        <option>Schedule</option>
-                        <option>Budget</option>
-                        <option>Invoice</option>
-                      </select>
-                    </div>
+                  <td className="text-left" rowSpan="3">
+                    <div>{owner}</div>
                   </td>
                 </tr>
                 <tr>
                   <td className="basicinfo text-left">
-                    <div>Issue Severity</div>
+                    <div>Impact Type</div>
                   </td>
                   <td className="text-left">
-                    <div>{issue_severity}</div>
+                    <div>{impact_type}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="basicinfo text-left">
+                    <div>Severity</div>
+                  </td>
+                  <td className="text-left">
+                    <div>{severity}</div>
                   </td>
                 </tr>
 
@@ -145,4 +136,4 @@ class IssueDescription extends Component {
   }
 }
 
-export default IssueDescription;
+export default ChangeDescription;

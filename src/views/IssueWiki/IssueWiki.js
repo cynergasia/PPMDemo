@@ -65,16 +65,11 @@ class IssueWiki extends Component {
           <div className="col-12 col-lg-4">
             <div className="aside">
               <div className="aside-inner">
-                <RecordInformation record_information={record_information} />
-              </div>
-            </div>
-            <div className="col-12 col-lg-4">
-              <div className="aside">
-                <div className="aside-inner">
-                  <RecordInformation
-                    record_information={record_information}
-                  />
-                </div>
+                <RecordInformation
+                  isScheduleinfo={false}
+                  isWorkflowinfo={false}
+                  record_information={record_information}
+                />
               </div>
             </div>
           </div>

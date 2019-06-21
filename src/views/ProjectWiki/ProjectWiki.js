@@ -14,6 +14,7 @@ import { Row, Col } from "reactstrap";
 import projectwiki_database from "../../database/projectwiki_database";
 import deliverableswiki_database from "../../database/deliverableswiki_database";
 import issuewiki_database from "../../database/issuewiki_database";
+import changewiki_database from "../../database/changewiki_database";
 import database from "../../database/database";
 import { routesURL } from "../../constant/routesURL";
 
@@ -35,8 +36,8 @@ class ProjectWiki extends Component {
     const { record_information } = database;
     const { deliverablesInfo } = deliverableswiki_database;
     const { basicProjectInfo, activity } = project[0].projectwiki;
-    const {issues} = issuewiki_database
-   
+    const { issues } = issuewiki_database;
+    const { changes } = changewiki_database;
     return (
       <React.Fragment>
         <SubMenu
@@ -47,7 +48,11 @@ class ProjectWiki extends Component {
             financialsRef: this.financialsRef,
             activityLogRef: this.activityLogRef
           }}
-          isMenu={{ deliverable: false, work_package: false}}
+          isMenu={{
+            deliverable: false,
+            work_package: false,
+            approved_status: false
+          }}
         />
         <div className="animated fadeIn row">
           {/* flex-row-reverse align-items-start */}
@@ -73,7 +78,7 @@ class ProjectWiki extends Component {
                 />
               </div>
               <div className="col-12" ref={this.issueChangesRef}>
-                <IssueChanges issues={issues} />
+                <IssueChanges issues={issues} changes={changes} />
               </div>
               <div className="col-12" ref={this.meetingMinutesRef}>
                 <Meetings />

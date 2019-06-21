@@ -8,11 +8,9 @@ export const menulist = [
   { work_package: ["Work Package", "workPackageRef", "fa fa-sitemap"] },
   { issue_changes: ["Issues/Changes", "issueChangesRef", "fa fa-refresh"] },
   { deliverable: ["Deliverables", "deliverableRef", "fa fa-refresh"] },
-  {
-    meeting_minutes: ["Meeting", "meetingMinutesRef", "fa fa-pencil-square"]
-  },
+  { meeting_minutes: ["Meeting", "meetingMinutesRef", "fa fa-pencil-square"] },
   { finanical: ["Financials", "financialsRef", "fa fa-bar-chart"] },
-  { activity_log: ["Activity Log", "activityLogRef", "fa fa-clipboard"] },  
+  { activity_log: ["Activity Log", "activityLogRef", "fa fa-clipboard"] },
   { follow: ["Follow", "dummy", "fa fa-rss"] }
 ];
 
@@ -37,7 +35,7 @@ class Submenu extends Component {
     deliverable: true,
     meeting_minutes: true,
     finanical: true,
-    activity_log: true,    
+    activity_log: true,
     follow: true
   };
 
@@ -61,7 +59,7 @@ class Submenu extends Component {
   };
 
   render() {
-    const { refs, name,link } = this.props;  
+    const { refs, name, link } = this.props;
     return (
       <nav className="sub-navbar navbar-fixed-top" aria-label="breadcrumb">
         <div className="row">
@@ -82,20 +80,20 @@ class Submenu extends Component {
                       <i className="fa fa-edit" /> Edit
                     </Link>
                   </li> */}
-              {link && 
+              {link && (
                 <>
-                <li className="nav-head active" aria-current="page">
-                  <Link exact to={routesURL.MEETING_LIST}>
-                    <i className="fa fa-check-square" /> Meeting Register
-                  </Link>
-                </li>
-                <li className="nav-head active" aria-current="page">
-                <Link exact to={routesURL.PAGE_NOT_FOUND}>
-                  <i className="fa fa-sitemap" /> Save/Cancel
-                </Link>
-              </li>
-              </>
-              }
+                  <li className="nav-head active" aria-current="page">
+                    <Link exact to={routesURL.MEETING_LIST}>
+                      <i className="fa fa-check-square" /> Meeting Register
+                    </Link>
+                  </li>
+                  <li className="nav-head active" aria-current="page">
+                    <Link exact to={routesURL.PAGE_NOT_FOUND}>
+                      <i className="fa fa-sitemap" /> Save/Cancel
+                    </Link>
+                  </li>
+                </>
+              )}
 
               {keylist.map(
                 (list, index) =>

@@ -1,49 +1,5 @@
 {
-  "issueDescription": {
-    "number": "1001",
-    "name": "Bridge fireproofing not sufficient",
-    "description": "",
-    "issueType": ["Design Flow", "Faulty raw materials"],
-    "impacts": "Schedule & Cost",
-    "days": "10",
-    "hours": "80",
-    "cost": "USD 4000"
-  },
   "record_information": {
-    "schedule_info": [
-      {
-        "title": "Schedule Start Date",
-        "value": "01-01-19"
-      },
-      {
-        "title": "Schedule End Date",
-        "value": "02-16-20"
-      },
-      {
-        "title": "Transaction Start Date",
-        "value": "01-02-19"
-      },
-      {
-        "title": "Transaction End Date",
-        "value": "02-16-20"
-      },
-      {
-        "title": "Planned Efforts",
-        "value": "2156 Hours"
-      },
-      {
-        "title": "Actual Efforts",
-        "value": "1048 Hours"
-      },
-      {
-        "title": "% Spent",
-        "value": "49%"
-      },
-      {
-        "title": "% Complete",
-        "value": "55%"
-      }
-    ],
     "workflow_info": [
       {
         "title": "Status",
@@ -93,143 +49,123 @@
       }
     ]
   },
-  "issues": [
+  "changes": [
     {
-      "i_id": "e5a84a85-30d8-406a-9c47-743e873dec94",
-      "number": "I2",
-      "name": "issue1",
+      "c_id": "9dc9ce25-45ca-40d6-b30f-15084b1f5daa",
+      "number": "C2",
+      "name": "Change1",
+      "title": "Path modification design",
+      "due_date": "09-30-19",
+      "complete": "100%",
+      "status": "Pending",
+      "change_status": "In Progress",
+      "workpackage": "DESIGN(1.02)",
+      "value": "USD 30,000.00",
+      "planned_effort": "30",
+      "owner": "Arindam",
+      "actual_effort": "30",
+      "impact_type": "Design",
+      "severity": "Medium",
+      "days": "25",
+      "description":
+        "Model missing cart path modification. Efforts and impact needs to be restimated and Change Order raised with client"
+    },
+    {
+      "c_id": "2454b41e-a40a-4b18-91b5-af9e7bd03a7f",
+      "number": "C1",
+      "name": "Change4",
       "title": "Model missing cart path modification",
       "due_date": "09-30-19",
       "complete": "0%",
-      "status": "Overdue",
-      "issue_status": "In Progress",
+      "status": "Pending",
+      "change_status": "In Progress",
       "workpackage": "DESIGN(1.02)",
+      "value": "USD 30,000.00",
+      "planned_effort": "10",
+      "owner": "Suresh",
+      "actual_effort": "0",
+      "impact_type": "Schedule",
+      "severity": "Medium",
+      "days": "25",
+      "description":
+        "Model missing cart path modification. Efforts and impact needs to be restimated and Change Order raised with client"
+    },
+    {
+      "c_id": "a9c48cfc-dbda-41d0-b9ec-ad6d374cd317",
+      "number": "C3",
+      "name": "Change 400",
+      "title": "Model missing cart path modification",
+      "due_date": "09-30-19",
+      "complete": "0%",
+      "status": "Approved",
+      "change_status": "In Progress",
+      "workpackage": "DESIGN(1.02)",
+      "value": "USD 30,000.00",
       "planned_effort": "10",
       "owner": "Neeraj",
       "actual_effort": "0",
-      "issue_type": "Design",
-      "issue_severity": "Medium",
-      "public": "N",
+      "impact_type": "Budget",
+      "severity": "Medium",
       "days": "25",
       "description":
         "Model missing cart path modification. Efforts and impact needs to be restimated and Change Order raised with client"
     },
     {
-      "i_id": "1c5d1ee3-edc8-4dc5-97a5-d70e0aee36bb",
-      "number": "I1",
-      "name": "issue2",
+      "c_id": "1ba8accd-c8a7-4bf8-81e2-d9b610f1f8cb",
+      "number": "C5",
+      "name": "Change 19",
       "title": "Model missing cart path modification",
       "due_date": "09-30-19",
       "complete": "0%",
-      "status": "Overdue",
-      "issue_status": "In Progress",
+      "status": "Approved",
+      "change_status": "In Progress",
       "workpackage": "DESIGN(1.02)",
-      "planned_effort": "10",
-      "owner": "Suresh",
-      "actual_effort": "0",
-      "issue_type": "Schedule",
-      "issue_severity": "Medium",
-      "public": "N",
-      "days": "25",
-      "description":
-        "Model missing cart path modification. Efforts and impact needs to be restimated and Change Order raised with client"
-    },
-    {
-      "i_id": "5362a855-0195-4fa7-aa15-f18c1d711bb7",
-      "number": "I3",
-      "name": "issue3",
-      "title": "Model missing cart path modification",
-      "due_date": "09-30-19",
-      "complete": "0%",
-      "status": "Overdue",
-      "issue_status": "In Progress",
-      "workpackage": "DESIGN(1.02)",
+      "value": "USD 30,000.00",
       "planned_effort": "10",
       "owner": "Arindam",
       "actual_effort": "0",
-      "issue_type": "Budget",
-      "issue_severity": "Medium",
-      "public": "N",
-      "days": "25",
-      "description":
-        "Model missing cart path modification. Efforts and impact needs to be restimated and Change Order raised with client"
-    },
-    {
-      "i_id": "bd88878e-1101-4ab6-a36d-beac2b684597",
-      "number": "I5",
-      "name": "issue4",
-      "title": "Model missing cart path modification",
-      "due_date": "09-30-19",
-      "complete": "0%",
-      "status": "Overdue",
-      "issue_status": "In Progress",
-      "workpackage": "DESIGN(1.02)",
-      "planned_effort": "10",
-      "owner": "Suresh",
-      "actual_effort": "0",
-      "issue_type": "Invoice",
-      "issue_severity": "Medium",
-      "public": "N",
+      "impact_type": "Invoice",
+      "severity": "Medium",
       "days": "35",
       "description":
         "Model missing cart path modification. Efforts and impact needs to be restimated and Change Order raised with client"
     },
     {
-      "i_id": "76acd683-7175-4c8c-98e8-d3a70886acad",
-      "number": "I9",
-      "name": "issue9",
+      "c_id": "1c752317-002a-4916-9a20-a94e3c474281",
+      "number": "C9",
+      "name": "Change 220",
       "title": "Model missing cart path modification",
       "due_date": "09-30-19",
       "complete": "0%",
       "status": "Overdue",
-      "issue_status": "In Progress",
+      "change_status": "In Progress",
       "workpackage": "DESIGN(1.02)",
+      "value": "USD 30,000.00",
       "planned_effort": "10",
-      "owner": "Arindam",
+      "owner": "Suresh",
       "actual_effort": "0",
-      "issue_type": "Contract",
-      "issue_severity": "Medium",
-      "public": "N",
+      "impact_type": "Contract",
+      "severity": "Medium",
       "days": "35",
       "description":
         "Model missing cart path modification. Efforts and impact needs to be restimated and Change Order raised with client"
     },
     {
-      "i_id": "7239eb52-1060-429a-a1d5-66a0da2a2406",
-      "number": "I12",
-      "name": "issue0",
+      "c_id": "c19e3a3c-eede-4c65-a696-17564d838062",
+      "number": "C12",
+      "name": "change9100",
       "title": "Model missing cart path modification",
       "due_date": "09-30-19",
       "complete": "0%",
       "status": "Overdue",
-      "issue_status": "In Progress",
+      "change_status": "In Progress",
       "workpackage": "DESIGN(1.02)",
-      "planned_effort": "10",
-      "owner": "Suresh",
-      "actual_effort": "0",
-      "issue_type": "Design",
-      "issue_severity": "Medium",
-      "public": "N",
-      "days": "65",
-      "description":
-        "Model missing cart path modification. Efforts and impact needs to be restimated and Change Order raised with client"
-    },
-    {
-      "i_id": "1d6aa4df-7651-487e-ac93-c07da567578d",
-      "number": "I6",
-      "name": "issue900",
-      "title": "Model missing cart path modification",
-      "due_date": "09-30-19",
-      "complete": "0%",
-      "status": "Overdue",
-      "issue_status": "In Progress",
-      "workpackage": "DESIGN(1.02)",
+      "value": "USD 30,000.00",
       "planned_effort": "10",
       "owner": "Arindam",
       "actual_effort": "0",
-      "issue_type": "Contract",
-      "issue_severity": "Medium",
-      "public": "N",
+      "impact_type": "Design",
+      "severity": "Medium",
       "days": "65",
       "description":
         "Model missing cart path modification. Efforts and impact needs to be restimated and Change Order raised with client"

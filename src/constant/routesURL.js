@@ -14,5 +14,7 @@ export const routesURL = {
   RESOURCE_LIST: `${BASE_PATH}resourcelist/`,
   ISSUE_WIKI: `${BASE_PATH}issuewiki/`,
   ISSUE_LIST: `${BASE_PATH}issuelist`,
+  CHANGE_WIKI: `${BASE_PATH}changewiki/`,
+  CHANGES_LIST: `${BASE_PATH}changeslist`,
   PAGE_NOT_FOUND: `${BASE_PATH}500`
 };

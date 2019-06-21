@@ -28,7 +28,7 @@ class IssueChanges extends Component {
   };
   render() {
     const { activeTab } = this.state;
-    const { issues } = this.props;
+    const { issues, changes } = this.props;
     return (
       <React.Fragment>
         <Card>
@@ -160,39 +160,61 @@ class IssueChanges extends Component {
                         {" "}
                         {"Pending Approval Changes"}:{" "}
                       </ListGroupItemHeading>
-                      <Link to={routesURL.PAGE_NOT_FOUND}> Change1</Link>
-                      <br />
-                      <Link to={routesURL.PAGE_NOT_FOUND}> Change4</Link>
-                      <br />
+                      {changes.map(
+                        (item, index) =>
+                          item.status === "Pending" && (
+                            <>
+                              <Link
+                                key={index}
+                                to={routesURL.CHANGE_WIKI + item.c_id}
+                              >
+                                {" "}
+                                {item.name} ({item.owner})
+                              </Link>
+                              <br />
+                            </>
+                          )
+                      )}
                       <br />
                       <ListGroupItemHeading>
                         {" "}
                         {"Approved Changes Still open"}:{" "}
                       </ListGroupItemHeading>
-                      <Link to={routesURL.PAGE_NOT_FOUND}>
-                        {" "}
-                        Change 400(Neeraj)
-                      </Link>
-                      <br />
-                      <Link to={routesURL.PAGE_NOT_FOUND}>
-                        {" "}
-                        Change 19(Arindam)
-                      </Link>
-                      <br />
+                      {changes.map(
+                        (item, index) =>
+                          item.status === "Approved" && (
+                            <>
+                              <Link
+                                key={index}
+                                to={routesURL.CHANGE_WIKI + item.c_id}
+                              >
+                                {" "}
+                                {item.name} ({item.owner})
+                              </Link>
+                              <br />
+                            </>
+                          )
+                      )}
                       <br />
                       <ListGroupItemHeading>
                         {" "}
                         {"Overdue Approved Changes(> 30)"}:{" "}
                       </ListGroupItemHeading>
-                      <Link to={routesURL.PAGE_NOT_FOUND}>
-                        {" "}
-                        Change 220(Suresh)
-                      </Link>,<br />
-                      <Link to={routesURL.PAGE_NOT_FOUND}>
-                        {" "}
-                        Change 9100(Arindam){" "}
-                      </Link>
-                      <br />
+                      {changes.map(
+                        (item, index) =>
+                          item.status === "Overdue" && (
+                            <>
+                              <Link
+                                key={index}
+                                to={routesURL.CHANGE_WIKI + item.c_id}
+                              >
+                                {" "}
+                                {item.name} ({item.owner})
+                              </Link>
+                              <br />
+                            </>
+                          )
+                      )}
                       <br />
                       <Link to={routesURL.PAGE_NOT_FOUND}>
                         {" "}
