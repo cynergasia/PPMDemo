@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Card, CardHeader, CardBody, Table } from "reactstrap";
-import DeliverablesTableListItems from "./DeliverablesTableListItems";
+import { Card, CardHeader, CardBody } from "reactstrap";
+// import DeliverablesTableListItems from "./DeliverablesTableListItems";
 import ReactDataTableNew from "../ReactDataTableNew";
 
 let deliveriablesListData = {

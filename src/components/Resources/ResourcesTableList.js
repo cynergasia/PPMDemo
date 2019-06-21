@@ -53,7 +53,7 @@ class ResourcesTableList extends Component {
     this.setState({ data: { ...resourceListData } });
   }
   render() {
-    const { name, resource } = this.props.user;
+    const { name } = this.props.user;
     return (
       <React.Fragment>
         <Card>

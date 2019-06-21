@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ProjectWikiMenu from "../SubMenu/ProjectWikiMenu";
 import SubMenu from "../SubMenu/Submenu";
 import BasicInformation from "../../components/ProjectsWiki/BasicInformation";
 import RecordInformation from "../../components/RecordInformation";
@@ -14,6 +13,7 @@ import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import { Row, Col } from "reactstrap";
 import projectwiki_database from "../../database/projectwiki_database";
 import deliverableswiki_database from "../../database/deliverableswiki_database";
+import issuewiki_database from "../../database/issuewiki_database";
 import database from "../../database/database";
 import { routesURL } from "../../constant/routesURL";
 
@@ -35,7 +35,7 @@ class ProjectWiki extends Component {
     const { record_information } = database;
     const { deliverablesInfo } = deliverableswiki_database;
     const { basicProjectInfo, activity } = project[0].projectwiki;
-    console.log("ProjectWiki", project[0].projectwiki);
+    const { issues } = issuewiki_database;
     return (
       <React.Fragment>
         <SubMenu
@@ -72,7 +72,7 @@ class ProjectWiki extends Component {
                 />
               </div>
               <div className="col-12" ref={this.issueChangesRef}>
-                <IssueChanges />
+                <IssueChanges issues={issues} />
               </div>
               <div className="col-12" ref={this.meetingMinutesRef}>
                 <Meetings />

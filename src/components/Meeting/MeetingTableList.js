@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Card, CardHeader, CardBody, Table } from "reactstrap";
-import MeetingTableListItems from "./MeetingTableListItems";
+import { Card, CardHeader, CardBody } from "reactstrap";
+// import MeetingTableListItems from "./MeetingTableListItems";
 import ReactDataTableNew from "../ReactDataTableNew";
 
 let meetingListData = {

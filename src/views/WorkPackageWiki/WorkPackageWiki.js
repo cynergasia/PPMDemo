@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
-import WorkPackageWikiMenu from "../SubMenu/WorkPackageWikiMenu";
-import ProjectWikiMenu from "../SubMenu/ProjectWikiMenu";
 import SubMenu from "../SubMenu/Submenu";
 import RecordInformation from "../../components/RecordInformation";
 import Attachments from "../../components/Attachments";
@@ -14,7 +12,6 @@ import WorkPackageIssueChanges from "../../components/WorkPackageWiki/WorkPackag
 import WorkPackageDeliverables from "../../components/WorkPackageWiki/WorkPackageDeliverables";
 // import WorkPackageMeeting from "../../components/WorkPackageWiki/WorkPackageMeeting";
 import Meetings from "../../components/ProjectsWiki/Meetings";
-import StickySidebar from "sticky-sidebar";
 import projectwiki_database from "../../database/projectwiki_database";
 import workpackagewiki_database from "../../database/workpackagewiki_database";
 import _omit from "lodash/omit";

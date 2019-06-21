@@ -4,15 +4,12 @@ import SubMenu from "../SubMenu/Submenu";
 import RecordInformation from "../../components/RecordInformation";
 import TaskInformation from "../../components/TaskWiki/TaskInformation";
 import Attachments from "../../components/Attachments";
-import Comments from "../../components/Comments";
+// import Comments from "../../components/Comments";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
-import StickySidebar from "sticky-sidebar";
 import database from "../../database/database";
 import { scrollTop } from "../../utils/index";
 
 class TaskWiki extends Component {
-
- 
   activityLogRef = React.createRef();
 
   componentDidMount() {
@@ -24,11 +21,18 @@ class TaskWiki extends Component {
     return (
       <React.Fragment>
         {/* <TaskWikiMenu /> */}
-        <SubMenu 
-         refs={{     
-          activityLogRef: this.activityLogRef
-        }}
-        isMenu={{ deliverable:false,meeting_minutes:false,finanical: false,wbs:false,issue_changes:false,work_package:false}}
+        <SubMenu
+          refs={{
+            activityLogRef: this.activityLogRef
+          }}
+          isMenu={{
+            deliverable: false,
+            meeting_minutes: false,
+            finanical: false,
+            wbs: false,
+            issue_changes: false,
+            work_package: false
+          }}
         />
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">
@@ -40,7 +44,7 @@ class TaskWiki extends Component {
               <Col xs="12">
                 <Attachments />
               </Col>
-             
+
               <div className="col-12" ref={this.activityLogRef}>
                 <ActivityLog title="Task ActivityLog" />
               </div>
