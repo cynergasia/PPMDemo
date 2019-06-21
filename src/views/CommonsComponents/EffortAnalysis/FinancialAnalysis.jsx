@@ -12,7 +12,7 @@ import {
 } from "@syncfusion/ej2-react-charts";
 import { Browser } from "@syncfusion/ej2-base";
 import { Card, CardBody, CardHeader } from "reactstrap";
-import database from "../../../database";
+import database from "../../../database/database";
 
 const SAMPLE_CSS = `
     .control-fluid {

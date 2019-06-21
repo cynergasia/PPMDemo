@@ -11,33 +11,17 @@ import Meetings from "../../components/ProjectsWiki/Meetings";
 import Financial from "../../components/ProjectsWiki/Financial";
 import Risks from "../../components/ProjectsWiki/Risks";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
-import StickySidebar from "sticky-sidebar";
 import { Row, Col } from "reactstrap";
-import projectwiki_database from "../../projectwiki_database";
+import projectwiki_database from "../../database/database";
 import deliverableswiki_database from "../../deliverableswiki_database";
-import database from "../../database";
+import database from "../../database/database";
 
 class ProjectWiki extends Component {
-  sidebar = null;
-
   issueChangesRef = React.createRef();
   workPackageRef = React.createRef();
   meetingMinutesRef = React.createRef();
   financialsRef = React.createRef();
   activityLogRef = React.createRef();
-
-  componentDidMount() {
-    setTimeout(this.fixSidebar, 320);
-  }
-
-  fixSidebar = () => {
-    // this.sidebar = new StickySidebar(".sidebar", {
-    //   topSpacing: 0,
-    //   bottomSpacing: 0,
-    //   containerSelector: ".main-content",
-    //   innerWrapperSelector: ".sidebar__inner"
-    // });
-  };
 
   render() {
     const tasks = projectwiki_database;

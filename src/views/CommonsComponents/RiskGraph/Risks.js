@@ -15,7 +15,7 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import RiskScore from "./RiskScore.js";
-import database from "../../../database";
+import database from "../../../database/database";
 
 let graphData = [];
 

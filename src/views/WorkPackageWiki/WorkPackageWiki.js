@@ -15,7 +15,7 @@ import WorkPackageDeliverables from "../../components/WorkPackageWiki/WorkPackag
 // import WorkPackageMeeting from "../../components/WorkPackageWiki/WorkPackageMeeting";
 import Meetings from "../../components/ProjectsWiki/Meetings";
 import StickySidebar from "sticky-sidebar";
-import projectwiki_database from "../../projectwiki_database";
+import projectwiki_database from "../../database/database";
 import workpackagewiki_database from "../../workpackagewiki_database";
 import _omit from "lodash/omit";
 

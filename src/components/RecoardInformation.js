@@ -9,7 +9,6 @@ import {
   ListGroupItemHeading,
   ListGroupItemText
 } from "reactstrap";
-import database from "../database";
 
 const intialState = {
   isOpenSchedule: false,

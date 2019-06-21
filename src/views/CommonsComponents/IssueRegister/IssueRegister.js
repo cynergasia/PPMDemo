@@ -3,7 +3,7 @@ import { Card, CardHeader, CardBody, Row, Col } from "reactstrap";
 import { Doughnut } from "react-chartjs-2";
 import IssueRegisterStatus from "./IssueRegisterStatus";
 import _sum from "lodash/sum";
-import database from "../../../database";
+import database from "../../../database/database";
 
 const labels = [
   "Overdue",

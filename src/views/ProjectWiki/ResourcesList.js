@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import ResourcesTableList from "../../components/Resources/ResourcesTableList";
-import user_database from "../../user_database";
+import user_database from "../../database/database";
 
 class ResourcesList extends Component {
   render() {

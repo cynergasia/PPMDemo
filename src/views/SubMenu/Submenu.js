@@ -42,15 +42,19 @@ class Submenu extends Component {
     this.setState({ ...this.props.isMenu });
   }
 
-  scrollTo = ({ current: ref }) => {
-    let scrollRef = ReactDOM.findDOMNode(ref);
-    let scrollOptions = {
-      left: 0,
-      top: scrollRef.offsetTop,
-      behavior: "smooth"
-    };
-    // window.scrollTo(scrollOptions);
-    document.querySelector(".app-body").scrollTo(scrollOptions);
+  scrollTo = (e, { current: ref }) => {
+    e.persist();
+    const scrollRef = ReactDOM.findDOMNode(ref);
+    const appBody = document.querySelector(".app-body");
+    try {
+      appBody.scrollTo({
+        left: 0,
+        top: scrollRef.offsetTop,
+        behavior: "smooth"
+      });
+    } catch (e) {
+      appBody.scrollTop = scrollRef.offsetTop;
+    }
   };
 
   render() {
@@ -76,9 +80,10 @@ class Submenu extends Component {
                   this.state[list] && (
                     <li className="nav-head active" aria-current="page">
                       <Link
-                        onClick={() =>
-                          this.scrollTo(refs[menulist[index][list][1]])
-                        }
+                        to="#"
+                        onClick={e => {
+                          this.scrollTo(e, refs[menulist[index][list][1]]);
+                        }}
                         className="cursor-pointer"
                       >
                         <i className={menulist[index][list][2]} />{" "}

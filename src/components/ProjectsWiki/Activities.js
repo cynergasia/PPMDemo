@@ -9,7 +9,7 @@ import {
 } from "reactstrap";
 import ExportExcel from "../../helper/ExportExcel";
 import { CSVLink } from "react-csv";
-import database from "../../database";
+import database from "../../database/database";
 
 // let data = {
 //   columns: [

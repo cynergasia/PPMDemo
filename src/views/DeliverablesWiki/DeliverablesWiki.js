@@ -10,26 +10,10 @@ import DeliverablesApprovalStatus from "../../components/DeliverablesWiki/Delive
 // import DeliverablesActivityLog from "../../components/DeliverablesWiki/DeliverablesActivityLog";
 import deliverableswiki_database from "../../deliverableswiki_database";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
-import StickySidebar from "sticky-sidebar";
 
 class DeliverablesWiki extends Component {
-  sidebar = null;
-
   approvedStatus = React.createRef();
   activityLogRef = React.createRef();
-
-  componentDidMount() {
-    setTimeout(this.fixSidebar, 80);
-  }
-
-  fixSidebar = () => {
-    // this.sidebar = new StickySidebar(".sidebar", {
-    //   topSpacing: 0,
-    //   bottomSpacing: 0,
-    //   containerSelector: ".main-content",
-    //   innerWrapperSelector: ".sidebar__inner"
-    // });
-  };
 
   render() {
     const { id } = this.props.match.params;

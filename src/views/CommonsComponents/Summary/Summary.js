@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Card, CardBody, Col } from "reactstrap";
-import database from "../../../database";
+import database from "../../../database/database";
 
 const Summary = props => {
   let tiles = props.tiles ? props.tiles : database.tiles;

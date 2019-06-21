@@ -13,7 +13,7 @@ import Deliverables from "../CommonsComponents/Deliverables/Deliverables";
 import FinancialAnalysis from "../CommonsComponents/EffortAnalysis/FinancialAnalysis";
 import FinancialStatus from "../CommonsComponents/FinancialStatus/FinancialStatus";
 import OverallStatus from "../CommonsComponents/PSROverallStatus/OverallStatus";
-import database from "../../database";
+import database from "../../database/database";
 import { routesURL } from "../../constant/routesURL";
 
 const options = {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { routesURL } from "../../constant/routesURL";
-import database from "../../database";
+import database from "../../database/database";
 
 class Menu extends Component {
   render() {
