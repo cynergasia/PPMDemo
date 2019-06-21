@@ -35,7 +35,7 @@ class Meetings extends Component {
                     20-Jun-2019 : Review Design with Client{" "}
                   </Link>
                   <br />
-                  <Link to={routesURL.PAGE_NOT_FOUND}>More..</Link>
+                  <Link to={routesURL.MEETING_LIST}>More..</Link>
                 </ListGroupItemText>
               </ListGroupItem>
               <ListGroupItem className="mt-3">
@@ -51,7 +51,7 @@ class Meetings extends Component {
                     15-May-2019: Requirement Review{" "}
                   </Link>{" "}
                   <br />
-                  <Link to={routesURL.PAGE_NOT_FOUND}>More..</Link>
+                  <Link to={routesURL.MEETING_LIST}>More..</Link>
                 </ListGroupItemText>
               </ListGroupItem>
             </ListGroup>

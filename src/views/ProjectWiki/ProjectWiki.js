@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ProjectWikiMenu from "../SubMenu/ProjectWikiMenu";
 import SubMenu from "../SubMenu/Submenu";
 import BasicInformation from "../../components/ProjectsWiki/BasicInformation";
-import RecoardInformation from "../../components/RecoardInformation";
+import RecordInformation from "../../components/RecordInformation";
 import Activities from "../../components/ProjectsWiki/Activities";
 import Attachments from "../../components/Attachments";
 import WorkPackages from "../../components/ProjectsWiki/WorkPackages";
@@ -41,7 +41,7 @@ class ProjectWiki extends Component {
 
   render() {
     const tasks = projectwiki_database;
-    const { recoard_information } = database;
+    const { record_information } = database;
     const { deliverablesInfo } = deliverableswiki_database;
 
     return (
@@ -96,7 +96,7 @@ class ProjectWiki extends Component {
 
           <div className="aside col-12 col-lg-4">
             <div className="aside-inner">
-              <RecoardInformation recoard_information={recoard_information} />
+              <RecordInformation record_information={record_information} />
             </div>
           </div>
           {/* sidebar */}

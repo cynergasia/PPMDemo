@@ -20,7 +20,7 @@ const intialState = {
   isplusclass3: true
 };
 
-class RecoardInformation extends Component {
+class RecordInformation extends Component {
   state = { ...intialState };
   toggle = () => {
     this.setState({
@@ -49,9 +49,9 @@ class RecoardInformation extends Component {
       isWorkflowinfo = true,
       isAuditinfo = true
     } = this.props;
-    const scheduleinfo = this.props.recoard_information.schedule_info;
-    const workflowinfo = this.props.recoard_information.workflow_info;
-    const auditinfo = this.props.recoard_information.audit_info;
+    const scheduleinfo = this.props.record_information.schedule_info;
+    const workflowinfo = this.props.record_information.workflow_info;
+    const auditinfo = this.props.record_information.audit_info;
 
     return (
       <React.Fragment>
@@ -90,6 +90,7 @@ class RecoardInformation extends Component {
                           <small className="text-muted">{item.value}</small>
                           {/* <hr className="mb-0 w-100" /> */}
                         </React.Fragment>
+                        
                       </ListGroupItemText>
                     ))}
                   </Collapse>
@@ -173,4 +174,4 @@ class RecoardInformation extends Component {
   }
 }
 
-export default RecoardInformation;
+export default RecordInformation;

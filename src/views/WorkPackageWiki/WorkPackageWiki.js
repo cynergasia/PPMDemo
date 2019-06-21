@@ -3,7 +3,7 @@ import { Row, Col } from "reactstrap";
 import WorkPackageWikiMenu from "../SubMenu/WorkPackageWikiMenu";
 import ProjectWikiMenu from "../SubMenu/ProjectWikiMenu";
 import SubMenu from "../SubMenu/Submenu";
-import RecoardInformation from "../../components/RecoardInformation";
+import RecordInformation from "../../components/RecordInformation";
 import Attachments from "../../components/Attachments";
 // import Comments from "../../components/Comments";
 // import ActivityLog from "../../components/ActivityLog";
@@ -47,7 +47,7 @@ class WorkPackageWiki extends Component {
     const { activities: a } = { ...p["0"] };
     const activities = a.map(item => _omit(item, ["type"]));
     const workPackageInfo = p[0];
-    const recoard_information = p[0].recoard_information;
+    const record_information = p[0].record_information;
     const { issues, changes, deliverbales } = workpackagewiki_database;
     //console.log("admin", workPackageInfo);
     return (
@@ -101,8 +101,8 @@ class WorkPackageWiki extends Component {
           <div className="col-12 col-lg-4">
             <div className="aside">
               <div className="aside-inner">
-                <RecoardInformation
-                  recoard_information={recoard_information}
+                <RecordInformation
+                  record_information={record_information}
                   isWorkflowinfo={false}
                 />
               </div>

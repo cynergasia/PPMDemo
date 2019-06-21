@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import DeliverablesWikiMenu from "../SubMenu/DeliverablesWikiMenu";
 import SubMenu from "../SubMenu/Submenu";
-import RecoardInformation from "../../components/RecoardInformation";
+import RecordInformation from "../../components/RecordInformation";
 import Attachments from "../../components/Attachments";
 import DeliverablesInformation from "../../components/DeliverablesWiki/DeliverablesInformation";
 import DeliverablesActivities from "../../components/DeliverablesWiki/DeliverablesActivities";
@@ -83,8 +83,8 @@ class DeliverablesWiki extends Component {
           </div>
           <div className="aside col-12 col-lg-4">
             <div className="aside-inner">
-              <RecoardInformation
-                recoard_information={deliverInfo[0].recoard_information}
+              <RecordInformation
+                record_information={deliverInfo[0].record_information}
                 isScheduleinfo={false}
               />
             </div>

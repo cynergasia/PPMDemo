@@ -85,17 +85,17 @@ class IssueChanges extends Component {
                         {" "}
                         {"Overdue High Priority Issues (<30 days)"}:{" "}
                       </ListGroupItemHeading>
-                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                      <Link to={routesURL.ISSUE_WIKI}>
                         {" "}
                         issue1 (Neeraj)
                       </Link>
                       <br />
-                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                      <Link to={routesURL.ISSUE_WIKI}>
                         {" "}
                         issue 2(Suresh)
                       </Link>
                       <br />
-                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                      <Link to={routesURL.ISSUE_WIKI}>
                         {" "}
                         Issue3 (Arindam)
                       </Link>
@@ -105,12 +105,12 @@ class IssueChanges extends Component {
                         {" "}
                         {"Overdue High Prioirity Issues(>30 & < 60)"}:{" "}
                       </ListGroupItemHeading>
-                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                      <Link to={routesURL.ISSUE_WIKI}>
                         {" "}
                         Issue 4(Suresh)
                       </Link>
                       <br />
-                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                      <Link to={routesURL.ISSUE_WIKI}>
                         {" "}
                         Issue 9(Arindam)
                       </Link>
@@ -120,17 +120,17 @@ class IssueChanges extends Component {
                         {" "}
                         {"Overdue High Prioirity Issues(> 60)"}:{" "}
                       </ListGroupItemHeading>
-                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                      <Link to={routesURL.ISSUE_WIKI}>
                         {" "}
                         Issue 0(Suresh)
                       </Link>,<br />
-                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                      <Link to={routesURL.ISSUE_WIKI}>
                         {" "}
                         Issue 900(Arindam){" "}
                       </Link>
                       <br />
                       <br />
-                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                      <Link to={routesURL.ISSUE_LIST}>
                         {" "}
                         All Issues ...{" "}
                       </Link>

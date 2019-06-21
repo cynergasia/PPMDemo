@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
+import { routesURL } from "../../constant/routesURL";
 export const menulist = [
   { comment: ["Comment", "activityLogRef", "cui-comment-square"] },
   { wbs: ["WBS", "workPackageRef", "fa fa-sitemap"] },
@@ -16,7 +17,7 @@ export const menulist = [
   },
   { finanical: ["Financials", "financialsRef", "fa fa-bar-chart"] },
   { activity_log: ["Activity Log", "activityLogRef", "fa fa-clipboard"] },
-  { submit:["Submit", "submitRef", "fa fa-sitemap"]},
+  { submit:["Submit/Cancel", "submitRef", "fa fa-sitemap"]},
   { follow: ["Follow", "dummy", "fa fa-rss"] }
 ];
 
@@ -57,21 +58,21 @@ class Submenu extends Component {
       left: 0,
       top: scrollRef.offsetTop,
       behavior: "smooth"
-    };
-    // window.scrollTo(scrollOptions);
+    };    
     document.querySelector(".app-body").scrollTo(scrollOptions);
   };
 
   render() {
-    const { refs, name } = this.props;
+    const { refs, name,link } = this.props;
+    console.log("meeting",link);
     return (
       <nav className="sub-navbar navbar-fixed-top" aria-label="breadcrumb">
         <div className="row">
           <div className="col-12 col-sm-12 col-lg-12">
             <ol className="breadcrumb left-breadcrumb">
               <li className="nav-head active" area-current="page">
-                <i className="fa fa-map-marker" /><Link to="/projectwiki"> Extensions N/Cape Mall Phase
-                3 (60453005)</Link> : {name}
+                <i className="fa fa-map-marker" /><Link to={routesURL.PROJECT_WIKI}> Extensions N/Cape Mall Phase
+                3 (60453005)</Link>  {name && <span>: {name}</span>}
               </li>
             </ol>
             <ol className="breadcrumb left-breadcrumb">
@@ -80,6 +81,12 @@ class Submenu extends Component {
                       <i className="fa fa-edit" /> Edit
                     </Link>
                   </li> */}
+              {link && <li className="nav-head active" aria-current="page">
+              <Link exact to={routesURL.MEETING_LIST}>
+                <i className="fa fa-check-square" /> Meeting Register
+              </Link>
+             </li>}
+               
               {keylist.map(
                 (list, index) =>
                   this.state[list] && (

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import IssueWikiMenu from "../SubMenu/IssueWikiMenu";
+import SubMenu from "../SubMenu/Submenu";
 import IssueDescription from "../../components/IssueWiki/IssueDescription";
-import RecoardInformation from "../../components/RecoardInformation";
+import RecordInformation from "../../components/RecordInformation";
 import IssueActivities from "../../components/IssueWiki/IssueActivities";
 import Attachments from "../../components/Attachments";
 import IssueApprovalStatus from "../../components/IssueWiki/IssueApprovalStatus";
@@ -33,7 +34,7 @@ class IssueWiki extends Component {
 
   render() {
     const { activities } = deliverableswiki_database;
-    const { issueDescription, recoard_information } = issuewiki_database;
+    const { issueDescription, record_information } = issuewiki_database;
     return (
       <React.Fragment>
         <IssueWikiMenu
@@ -43,13 +44,15 @@ class IssueWiki extends Component {
             activityLogRef: this.activityLogRef
           }}
         />
+        
+        
         <div className="animated fadeIn">
           <div className="row flex-row-reverse align-items-start main-content">
             <div className="col-12 col-lg-4">
               <div className="sidebar">
                 <div className="sidebar__inner">
-                  <RecoardInformation
-                    recoard_information={recoard_information}
+                  <RecordInformation
+                    record_information={record_information}
                   />
                 </div>
               </div>

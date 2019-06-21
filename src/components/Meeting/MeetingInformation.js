@@ -138,12 +138,12 @@ class MeetingInformation extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-12">
+              {/* <div className="col-12">
                 <div className="form-group row">
                   <div className="btn btn-danger ml-auto">Cancel</div>
                   <div className="btn btn-primary mr-auto">Save</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

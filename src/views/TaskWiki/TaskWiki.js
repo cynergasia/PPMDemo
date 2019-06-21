@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
-import TaskWikiMenu from "../SubMenu/TaskWikiMenu";
-import RecoardInformation from "../../components/RecoardInformation";
+import SubMenu from "../SubMenu/Submenu";
+import RecordInformation from "../../components/RecordInformation";
 import TaskInformation from "../../components/TaskWiki/TaskInformation";
 import Attachments from "../../components/Attachments";
 import Comments from "../../components/Comments";
@@ -11,15 +11,25 @@ import taskwiki_database from "../../taskwiki_database";
 import { scrollTop } from "../../utils/index";
 
 class TaskWiki extends Component {
+
+ 
+  activityLogRef = React.createRef();
+
   componentDidMount() {
     scrollTop();
   }
 
   render() {
-    const { recoard_information } = taskwiki_database;
+    const { record_information } = taskwiki_database;
     return (
       <React.Fragment>
-        <TaskWikiMenu />
+        {/* <TaskWikiMenu /> */}
+        <SubMenu 
+         refs={{     
+          activityLogRef: this.activityLogRef
+        }}
+        isMenu={{ deliverable:false,meeting_minutes:false,finanical: false,wbs:false,issue_changes:false,work_package:false}}
+        />
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">
             <Row>
@@ -30,19 +40,16 @@ class TaskWiki extends Component {
               <Col xs="12">
                 <Attachments />
               </Col>
-
-              {/* <Col xs="12">
-                  <Comments />
-                </Col> */}
-              <Col xs="12">
+             
+              <div className="col-12" ref={this.activityLogRef}>
                 <ActivityLog title="Task ActivityLog" />
-              </Col>
+              </div>
             </Row>
           </div>
           <div className="col-12 col-lg-4">
             <div className="aside">
               <div className="aside-inner">
-                <RecoardInformation recoard_information={recoard_information} />
+                <RecordInformation record_information={record_information} />
               </div>
             </div>
           </div>

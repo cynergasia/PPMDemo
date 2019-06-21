@@ -1,11 +1,34 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody, Table } from "reactstrap";
 import ActivitiesTableListItems from "./ActivitiesTableListItems";
+import { Link } from "react-router-dom";
+import {Row,Col} from "reactstrap";
 
 class ActivitiesTableList extends Component {
   render() {
     return (
       <React.Fragment>
+          <div className="animated fadeIn">
+          <Row>
+            <Col sm="12" md="12" lg="12">
+              <nav className="sub-navbar" aria-label="breadcrumb">
+                <div class="row">
+                  <div class="col-12 col-sm-12 col-lg-12">
+                    <ol className="breadcrumb left-breadcrumb">
+                      <li className="nav-head active" area-current="page">
+                        <Link to="/projectWiki">
+                          <i className="fa fa-map-marker" />  Extensions N/Cape Mall Phase 3 (60453005)
+                        </Link>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </nav>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm="12" md="12" lg="12">
+          
         <Card>
           <CardHeader>
             <div className="card-header-actions">
@@ -37,6 +60,10 @@ class ActivitiesTableList extends Component {
             </Table>
           </CardBody>
         </Card>
+          
+        </Col>
+          </Row>
+        </div>
       </React.Fragment>
     );
   }

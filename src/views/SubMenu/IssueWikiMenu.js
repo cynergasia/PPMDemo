@@ -25,9 +25,7 @@ class IssueWikiMenu extends Component {
                   <i className="fa fa-map-marker" /> Extensions N/Cape Mall
                   Phase 3 (60453005)
                 </li>
-                <li className="nav-head active" area-current="page">
-                  Issue 1001 - Bridge fireproofing not sufficient
-                </li>
+              
               </ol>
               <ol className="breadcrumb left-breadcrumb">
                 {/* <li className="nav-head active" aria-current="page">

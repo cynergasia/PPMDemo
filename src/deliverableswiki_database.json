@@ -15,9 +15,9 @@
       "severity": "High",
       "type": "Drawing",
       "description":
-        "Updated digital and printed dradt for cart path modifications",
+        "Updated digital and printed draft for cart path modifications",
       "d_status": "Overdue",
-      "recoard_information": {
+      "record_information": {
         "workflow_info": [
           {
             "title": "Status",
@@ -83,9 +83,9 @@
       "severity": "High",
       "type": "Drawing",
       "description":
-        "Updated digital and printed dradt for cart path modifications",
+        "Updated digital and printed draft for cart path modifications",
       "d_status": "Upcoming",
-      "recoard_information": {
+      "record_information": {
         "workflow_info": [
           {
             "title": "Status",
@@ -151,9 +151,9 @@
       "severity": "High",
       "type": "Drawing",
       "description":
-        "Updated digital and printed dradt for cart path modifications",
+        "Updated digital and printed draft for cart path modifications",
       "d_status": "Not Started",
-      "recoard_information": {
+      "record_information": {
         "workflow_info": [
           {
             "title": "Status",
@@ -219,9 +219,9 @@
       "severity": "High",
       "type": "Drawing",
       "description":
-        "Updated digital and printed dradt for cart path modifications",
+        "Updated digital and printed draft for cart path modifications",
       "d_status": "Overdue",
-      "recoard_information": {
+      "record_information": {
         "workflow_info": [
           {
             "title": "Status",
@@ -321,7 +321,7 @@
       "public": "Y"
     }
   ],
-  "recoard_information": {
+  "record_information": {
     "schedule_info": [
       {
         "title": "Schedule Start Date",

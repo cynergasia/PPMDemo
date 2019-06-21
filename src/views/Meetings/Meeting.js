@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import MeetingMenu from "../SubMenu/MeetingMenu";
 import SubMenu from "../SubMenu/Submenu";
-import RecoardInformation from "../../components/RecoardInformation";
+import RecordInformation from "../../components/RecordInformation";
 import Attachments from "../../components/Attachments";
 import Comments from "../../components/Comments";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
@@ -24,7 +24,7 @@ class Meeting extends Component {
   }
 
   render() {
-    const { recoard_information } = meeting_database;
+    const { record_information} = meeting_database;
     return (
       <React.Fragment>
         <SubMenu
@@ -34,7 +34,8 @@ class Meeting extends Component {
             meetingMinutesRef: this.meetingMinutesRef,
             activityLogRef: this.activityLogRef
           }}
-          isMenu={{ finanical: false,wbs:false,issue_changes:false,deliverable:false,work_package:false,submit:false }}
+          isMenu={{ finanical: false,wbs:false,issue_changes:false,deliverable:false,work_package:false}}
+          link={{meeting_register:true}}
          // name={workPackageInfo.name}
         />
         {/* <MeetingMenu /> */}
@@ -62,8 +63,8 @@ class Meeting extends Component {
             <div className="col-12 col-lg-4">
             <div className="aside">
               <div className="aside-inner">
-                <RecoardInformation
-                  recoard_information={recoard_information}
+                <RecordInformation
+                  record_information={record_information}
                   isScheduleinfo={false}
                   isWorkflowinfo={false}
                 />
