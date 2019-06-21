@@ -9,28 +9,12 @@ import DeliverablesActivities from "../../components/DeliverablesWiki/Deliverabl
 // import Comments from "../../components/Comments";
 import DeliverablesApprovalStatus from "../../components/DeliverablesWiki/DeliverablesApprovalStatus";
 // import DeliverablesActivityLog from "../../components/DeliverablesWiki/DeliverablesActivityLog";
-import deliverableswiki_database from "../../deliverableswiki_database";
+import deliverableswiki_database from "../../database/deliverableswiki_database";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
-import StickySidebar from "sticky-sidebar";
 
 class DeliverablesWiki extends Component {
-  sidebar = null;
-
   approvedStatus = React.createRef();
   activityLogRef = React.createRef();
-
-  componentDidMount() {
-    setTimeout(this.fixSidebar, 80);
-  }
-
-  fixSidebar = () => {
-    // this.sidebar = new StickySidebar(".sidebar", {
-    //   topSpacing: 0,
-    //   bottomSpacing: 0,
-    //   containerSelector: ".main-content",
-    //   innerWrapperSelector: ".sidebar__inner"
-    // });
-  };
 
   render() {
     const { id } = this.props.match.params;
@@ -58,7 +42,7 @@ class DeliverablesWiki extends Component {
             approvedStatus: this.approvedStatus,
             activityLogRef: this.activityLogRef
           }}
-          name ={deliverInfo[0].name}
+          name={deliverInfo[0].name}
         />
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">

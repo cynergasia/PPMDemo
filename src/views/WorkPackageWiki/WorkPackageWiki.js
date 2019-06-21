@@ -15,8 +15,8 @@ import WorkPackageDeliverables from "../../components/WorkPackageWiki/WorkPackag
 // import WorkPackageMeeting from "../../components/WorkPackageWiki/WorkPackageMeeting";
 import Meetings from "../../components/ProjectsWiki/Meetings";
 import StickySidebar from "sticky-sidebar";
-import projectwiki_database from "../../projectwiki_database";
-import workpackagewiki_database from "../../workpackagewiki_database";
+import projectwiki_database from "../../database/projectwiki_database";
+import workpackagewiki_database from "../../database/workpackagewiki_database";
 import _omit from "lodash/omit";
 
 class WorkPackageWiki extends Component {
@@ -60,7 +60,7 @@ class WorkPackageWiki extends Component {
             meetingMinutesRef: this.meetingMinutesRef,
             activityLogRef: this.activityLogRef
           }}
-          isMenu={{ finanical: false,wbs:false,submit:false}}
+          isMenu={{ finanical: false, wbs: false, submit: false }}
           name={workPackageInfo.name}
         />
         <div className="animated fadeIn row">
@@ -80,23 +80,22 @@ class WorkPackageWiki extends Component {
               {/* <Col lg="12">
                   <Comments />
                 </Col> */}
-                <div className="col-12" ref={this.issueChangesRef}>
-                  <WorkPackageIssueChanges issues={issues} changes={changes} />
-                </div>
-                <div className="col-12" ref={this.deliverableRef}>
-                  <WorkPackageDeliverables deliverbales={deliverbales} />
-                </div>
-                <div className="col-12" ref={this.meetingMinutesRef}>
-                  {/* <WorkPackageMeeting /> */}
-                  <Meetings />
-                </div>
-                <div className="col-12" ref={this.activityLogRef}>
-                  {/* <ActivityLog title="WorkPackage ActivityLog"  /> */}
-                  <ActivityLog />
-                </div>
-              </Row>
-            </div>
-          
+              <div className="col-12" ref={this.issueChangesRef}>
+                <WorkPackageIssueChanges issues={issues} changes={changes} />
+              </div>
+              <div className="col-12" ref={this.deliverableRef}>
+                <WorkPackageDeliverables deliverbales={deliverbales} />
+              </div>
+              <div className="col-12" ref={this.meetingMinutesRef}>
+                {/* <WorkPackageMeeting /> */}
+                <Meetings />
+              </div>
+              <div className="col-12" ref={this.activityLogRef}>
+                {/* <ActivityLog title="WorkPackage ActivityLog"  /> */}
+                <ActivityLog />
+              </div>
+            </Row>
+          </div>
 
           <div className="col-12 col-lg-4">
             <div className="aside">

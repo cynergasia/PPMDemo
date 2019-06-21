@@ -32,7 +32,9 @@ class DeliverablesApprovalStatus extends Component {
                       <i className="fa fa-user" />
                     </div>
                     <div className="col-12 text-center p-0 mt-2">Approved</div>
-                    <div className="col-12 text-center p-0 mt-2">####</div>
+                    <div className="col-12 text-center p-0 mt-2">
+                      05-05-2019
+                    </div>
                   </div>
                   {/* Item */}
                   <div className="col approval-item">

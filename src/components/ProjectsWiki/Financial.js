@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody, Row, Col } from "reactstrap";
-import database from "../../database";
+import database from "../../database/database";
 
 class Financial extends Component {
   render() {

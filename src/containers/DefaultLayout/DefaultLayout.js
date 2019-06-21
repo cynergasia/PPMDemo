@@ -128,7 +128,7 @@ class DefaultLayout extends Component {
         </AppHeader>
         <div
           className="app-body"
-          style={{ overflowY: "scroll", maxHeight: "calc(100vh - 96px)" }}
+          style={{ overflowY: "scroll", maxHeight: "calc(100vh - 95px)" }}
         >
           {/* <AppSidebar fixed display="lg">
             <AppSidebarHeader />

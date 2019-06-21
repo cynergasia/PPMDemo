@@ -9,124 +9,6 @@ import {
 } from "reactstrap";
 import ExportExcel from "../../helper/ExportExcel";
 import { CSVLink } from "react-csv";
-import database from "../../database";
-
-// let data = {
-//   columns: [
-//     {
-//       label: "Description",
-//       field: "description",
-//       sort: "asc"
-//     },
-//     {
-//       label: "Assigned To",
-//       field: "assigned_to",
-//       sort: "asc"
-//     },
-//     {
-//       label: "Start Date",
-//       field: "start_date",
-//       sort: "asc"
-//     },
-//     {
-//       label: "Due Date",
-//       field: "due_date",
-//       sort: "asc"
-//     },
-//     {
-//       label: "Status",
-//       field: "status",
-//       sort: "asc"
-//     },
-//     {
-//       label: "% Complete",
-//       field: "perc_complete",
-//       sort: "asc"
-//     },
-//     {
-//       label: "Planned Hrs",
-//       field: "planned_hrs",
-//       sort: "asc"
-//     },
-//     {
-//       label: "Actual Hrs",
-//       field: "actual_hrs",
-//       sort: "asc"
-//     }
-//   ],
-//   rows: [
-//     {
-//       description: "asd",
-//       assigned_to: "abc",
-//       start_date: "02-05-2019",
-//       due_date: "31-02-2019",
-//       status: "Pending",
-//       perc_complete: "80",
-//       planned_hrs: "50",
-//       actual_hrs: "60"
-//     },
-//     {
-//       description: "bbb",
-//       assigned_to: "abc",
-//       start_date: "02-08-2016",
-//       due_date: "31-07-206",
-//       status: "Complete",
-//       perc_complete: "100",
-//       planned_hrs: "200",
-//       actual_hrs: "250"
-//     },
-//     {
-//       description: "ccc",
-//       assigned_to: "abc",
-//       start_date: "02-08-2016",
-//       due_date: "31-07-206",
-//       status: "Complete",
-//       perc_complete: "100",
-//       planned_hrs: "200",
-//       actual_hrs: "250"
-//     },
-//     {
-//       description: "ddd",
-//       assigned_to: "abc",
-//       start_date: "02-08-2016",
-//       due_date: "31-03-206",
-//       status: "Complete",
-//       perc_complete: "100",
-//       planned_hrs: "200",
-//       actual_hrs: "250"
-//     },
-//     {
-//       description: "eee",
-//       assigned_to: "abc",
-//       start_date: "02-08-2016",
-//       due_date: "31-07-206",
-//       status: "Complete",
-//       perc_complete: "100",
-//       planned_hrs: "200",
-//       actual_hrs: "250"
-//     },
-//     {
-//       description: "fff",
-//       assigned_to: "abc",
-//       start_date: "02-08-2016",
-//       due_date: "31-05-206",
-//       status: "Complete",
-//       perc_complete: "100",
-//       planned_hrs: "200",
-//       actual_hrs: "250"
-//     },
-//     {
-//       description: "ggg",
-//       assigned_to: "abc",
-//       start_date: "02-08-2016",
-//       due_date: "31-08-206",
-//       status: "Complete",
-//       perc_complete: "100",
-//       planned_hrs: "200",
-//       actual_hrs: "250"
-//     }
-//   ]
-// };
 
 let data = {
   columns: [
@@ -205,7 +87,7 @@ class Activities extends Component {
   };
 
   componentDidMount() {
-    data.rows = database.activity;
+    data.rows = this.props.activity;
     this.setState({ data });
   }
   render() {

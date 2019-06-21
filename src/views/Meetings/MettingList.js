@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import MeetingTableList from "../../components/Meeting/MeetingTableList";
-import getMeetingList from "../../meetinglist_database";
+import getMeetingList from "../../database/meetinglist_database";
 
 class MettingList extends Component {
   render() {

@@ -9,7 +9,7 @@ import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import MeetingInformation from "../../components/Meeting/MeetingInformation";
 import MeetingDescription from "../../components/Meeting/MeetingDescription";
 import { scrollTop } from "../../utils";
-import meeting_database from "../../meeting_database";
+import meeting_database from "../../database/database";
 
 class Meeting extends Component {
   sidebar = null;
@@ -39,8 +39,8 @@ class Meeting extends Component {
          // name={workPackageInfo.name}
         />
         {/* <MeetingMenu /> */}
-        <div className="animated fadeIn row">       
-            
+        <div className="animated fadeIn row">
+
 
             <div className="col-12 col-lg-8">
               <Row>
@@ -71,7 +71,7 @@ class Meeting extends Component {
               </div>
           </div>
 
-      
+
         </div>
         </div>
 

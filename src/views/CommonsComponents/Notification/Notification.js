@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import {CardHeader, CardBody } from "reactstrap";
+import { CardHeader, CardBody } from "reactstrap";
 import ReactDataTableNew from "../../../components/ReactDataTableNew";
-import database from "../../../database";
+import database from "../../../database/database";
 
 let data = {
   columns: [
@@ -56,9 +56,7 @@ class title extends Component {
           });
         });
       }
-    } 
-    else
-    {
+    } else {
       data.rows = [];
       database.projects.forEach(project => {
         project.notification.forEach(item => {

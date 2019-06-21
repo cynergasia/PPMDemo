@@ -11,39 +11,31 @@ import Meetings from "../../components/ProjectsWiki/Meetings";
 import Financial from "../../components/ProjectsWiki/Financial";
 import Risks from "../../components/ProjectsWiki/Risks";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
-import StickySidebar from "sticky-sidebar";
 import { Row, Col } from "reactstrap";
-import projectwiki_database from "../../projectwiki_database";
-import deliverableswiki_database from "../../deliverableswiki_database";
-import database from "../../database";
+import projectwiki_database from "../../database/projectwiki_database";
+import deliverableswiki_database from "../../database/deliverableswiki_database";
+import database from "../../database/database";
+import { routesURL } from "../../constant/routesURL";
 
 class ProjectWiki extends Component {
-  sidebar = null;
-
   issueChangesRef = React.createRef();
   workPackageRef = React.createRef();
   meetingMinutesRef = React.createRef();
   financialsRef = React.createRef();
   activityLogRef = React.createRef();
 
-  componentDidMount() {
-    setTimeout(this.fixSidebar, 320);
-  }
-
-  fixSidebar = () => {
-    // this.sidebar = new StickySidebar(".sidebar", {
-    //   topSpacing: 0,
-    //   bottomSpacing: 0,
-    //   containerSelector: ".main-content",
-    //   innerWrapperSelector: ".sidebar__inner"
-    // });
-  };
-
   render() {
+    const { id } = this.props.match.params;
+    const project = database.projects.filter(item => `${item.id}` === id);
+    if (project.length === 0) {
+      return (window.location.hash = routesURL.DASHBOARD);
+    }
+
     const tasks = projectwiki_database;
     const { record_information } = database;
     const { deliverablesInfo } = deliverableswiki_database;
-
+    const { basicProjectInfo, activity } = project[0].projectwiki;
+    console.log("ProjectWiki", project[0].projectwiki);
     return (
       <React.Fragment>
         <SubMenu
@@ -54,17 +46,20 @@ class ProjectWiki extends Component {
             financialsRef: this.financialsRef,
             activityLogRef: this.activityLogRef
           }}
-          isMenu={{ deliverable: false,work_package:false,submit:false }}
+          isMenu={{ deliverable: false, work_package: false, submit: false }}
         />
         <div className="animated fadeIn row">
           {/* flex-row-reverse align-items-start */}
           <div className="col-12 col-lg-8">
             <Row>
               <Col xs="12">
-                <BasicInformation />
+                <BasicInformation
+                  projectID={id}
+                  basicProjectInfo={basicProjectInfo}
+                />
               </Col>
               <Col xs="12">
-                <Activities />
+                <Activities activity={activity} />
               </Col>
 
               <Col xs="12">

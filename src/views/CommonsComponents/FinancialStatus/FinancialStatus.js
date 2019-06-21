@@ -4,7 +4,7 @@ import { Line } from "react-chartjs-2";
 import { Card, CardBody, CardHeader } from "reactstrap";
 import { CustomTooltips } from "@coreui/coreui-plugin-chartjs-custom-tooltips";
 import { getStyle, hexToRgba } from "@coreui/coreui/dist/js/coreui-utilities";
-import database from "../../../database";
+import database from "../../../database/database";
 
 // eslint-disable-next-line no-unused-vars
 const brandPrimary = getStyle("--primary");

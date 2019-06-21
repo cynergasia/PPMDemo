@@ -3,7 +3,7 @@ export const BASE_PATH = "/";
 export const routesURL = {
   DASHBOARD: `${BASE_PATH}dashboard`,
   PSR: `${BASE_PATH}psr/`,
-  PROJECT_WIKI: `${BASE_PATH}projectwiki`,
+  PROJECT_WIKI: `${BASE_PATH}projectwiki/`,
   DELIVERABLES_WIKI: `${BASE_PATH}deliverableswiki/`,
   DELIVERABLES_LIST: `${BASE_PATH}deliverableslist`,
   WORKPACKAGE_WIKI: `${BASE_PATH}workpackagewiki/`,

@@ -275,12 +275,20 @@
   ],
   "activities": [
     {
-      "description": "NULL",
-      "assigned_to": "NULL",
-      "start_date": "NULL",
-      "due_date": "NULL",
-      "status": "NULL",
-      "per_complete": "NULL"
+      "description": "Digital Draft",
+      "assigned_to": "Suresh Padmanabhan",
+      "start_date": "06-01-2019",
+      "due_date": "09-01-2019",
+      "status": "In progress",
+      "per_complete": "0%"
+    },
+    {
+      "description": "Printed Draft",
+      "assigned_to": "Arindam Mukherjee",
+      "start_date": "02-09-2019",
+      "due_date": "09-012-2019",
+      "status": "Not Started",
+      "per_complete": "0%"
     }
   ],
   "activityLog": [

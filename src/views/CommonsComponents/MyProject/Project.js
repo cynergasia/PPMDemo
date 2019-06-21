@@ -4,7 +4,7 @@ import { Card, CardBody, CardHeader } from "reactstrap";
 import { getStyle } from "@coreui/coreui/dist/js/coreui-utilities";
 import _maxBy from "lodash/maxBy";
 
-import database from "../../../database";
+import database from "../../../database/database";
 
 // eslint-disable-next-line no-unused-vars
 const Widget03 = lazy(() => import("../../Widgets/Widget03"));
