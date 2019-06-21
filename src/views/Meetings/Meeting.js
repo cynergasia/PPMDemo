@@ -31,6 +31,7 @@ class Meeting extends Component {
 
   render() {
     const { record_information } = meeting_database;
+    //{menulink,data:["meeting_register","submit"]
     return (
       <React.Fragment>
         <SubMenu
@@ -41,7 +42,7 @@ class Meeting extends Component {
             activityLogRef: this.activityLogRef
           }}
           isMenu={{ finanical: false,wbs:false,issue_changes:false,deliverable:false,work_package:false}}
-          link={{menulink,data:["meeting_register","submit"]}}
+          link={{meeting_register:true}}
         //  name={workPackageInfo.name}
         />
         {/* <MeetingMenu /> */}

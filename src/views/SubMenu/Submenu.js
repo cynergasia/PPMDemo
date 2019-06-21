@@ -82,13 +82,20 @@ class Submenu extends Component {
                       <i className="fa fa-edit" /> Edit
                     </Link>
                   </li> */}
-              {link && (
+              {link && 
+                <>
                 <li className="nav-head active" aria-current="page">
                   <Link exact to={routesURL.MEETING_LIST}>
                     <i className="fa fa-check-square" /> Meeting Register
                   </Link>
                 </li>
-              )}
+                <li className="nav-head active" aria-current="page">
+                <Link exact to={routesURL.PAGE_NOT_FOUND}>
+                  <i className="fa fa-sitemap" /> Save/Cancel
+                </Link>
+              </li>
+              </>
+              }
 
               {keylist.map(
                 (list, index) =>
