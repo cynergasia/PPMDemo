@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import DeliverablesWikiMenu from "../SubMenu/DeliverablesWikiMenu";
+import SubMenu from "../SubMenu/Submenu";
 import RecoardInformation from "../../components/RecoardInformation";
 import Attachments from "../../components/Attachments";
 import DeliverablesInformation from "../../components/DeliverablesWiki/DeliverablesInformation";
@@ -8,7 +9,7 @@ import DeliverablesActivities from "../../components/DeliverablesWiki/Deliverabl
 // import Comments from "../../components/Comments";
 import DeliverablesApprovalStatus from "../../components/DeliverablesWiki/DeliverablesApprovalStatus";
 // import DeliverablesActivityLog from "../../components/DeliverablesWiki/DeliverablesActivityLog";
-import deliverableswiki_database from "../../deliverableswiki_database";
+import deliverableswiki_database from "../../database/deliverableswiki_database";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 
 class DeliverablesWiki extends Component {
@@ -29,11 +30,19 @@ class DeliverablesWiki extends Component {
     console.log(deliverInfo[0]);
     return (
       <React.Fragment>
+        {/* <SubMenu
+          refs={{
+            approvedStatus: this.approvedStatus,
+            activityLogRef: this.activityLogRef
+          }}
+          isMenu={{ finanical: false,wbs:false,issue_changes:false,work_package:false}}
+        /> */}
         <DeliverablesWikiMenu
           refs={{
             approvedStatus: this.approvedStatus,
             activityLogRef: this.activityLogRef
           }}
+          name={deliverInfo[0].name}
         />
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">

@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import routesURL from "./constant/routesURL";
+import routesURL from "../constant/routesURL";
 
 const data = props => ({
   issueList: [

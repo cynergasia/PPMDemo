@@ -7,7 +7,7 @@ import Attachments from "../../components/Attachments";
 import Comments from "../../components/Comments";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import StickySidebar from "sticky-sidebar";
-import taskwiki_database from "../../taskwiki_database";
+import database from "../../database/database";
 import { scrollTop } from "../../utils/index";
 
 class TaskWiki extends Component {
@@ -16,7 +16,7 @@ class TaskWiki extends Component {
   }
 
   render() {
-    const { recoard_information } = taskwiki_database;
+    const { recoard_information } = database;
     return (
       <React.Fragment>
         <TaskWikiMenu />

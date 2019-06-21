@@ -404,6 +404,15 @@ h6.chart-title {
   font-weight: 600;
 }
 
+.sub-navbar.sticky {
+  position: fixed;
+  left: 0px;  
+  top: 45px;
+  right: 0px;
+  z-index: 9999;
+}
+
+
 /***** Responsive *****/
 
 @media (min-width: 768px) {

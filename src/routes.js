@@ -38,7 +38,7 @@ const routes = [
     title: "Project Status Report"
   },
   {
-    path: routesURL.PROJECT_WIKI,
+    path: `${routesURL.PROJECT_WIKI}:id`,
     component: ProjectWiki,
     title: "Project Wiki"
   },

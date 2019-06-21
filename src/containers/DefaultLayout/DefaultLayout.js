@@ -32,6 +32,7 @@ class DefaultLayout extends Component {
   };
 
   state = { ...this.initialState };
+  
   componentDidMount = () => {
     window.addEventListener("scroll", this.handleScroll);
   };

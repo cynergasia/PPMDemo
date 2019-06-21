@@ -13,7 +13,7 @@ class DeliverablesWikiMenu extends Component {
     document.querySelector(".app-body").scrollTo(scrollOptions);
   };
   render() {
-    const { refs } = this.props;
+    const { refs,name} = this.props;
     return (
       <React.Fragment>
         <nav className="sub-navbar" aria-label="breadcrumb">
@@ -21,8 +21,7 @@ class DeliverablesWikiMenu extends Component {
             <div class="col-12 col-sm-12 col-lg-12">
               <ol className="breadcrumb left-breadcrumb">
                 <li className="nav-head active" area-current="page">
-                  <i className="fa fa-map-marker" /> Bay Bridge Construction
-                  design(P0001)
+                  <i className="fa fa-map-marker" /> <Link to="/projectwiki"> Extensions N/Cape Mall Phase 3 (60453005)</Link>:{name}
                 </li>
               </ol>
               <ol className="breadcrumb left-breadcrumb">
@@ -42,25 +41,33 @@ class DeliverablesWikiMenu extends Component {
                   </Link>
                 </li>
 
-                <li className="nav-head active " aria-current="page">
-                  <Link
-                    exact
-                    to="#"
-                    onClick={() => this.scrollTo(refs.approvedStatus)}
-                  >
-                    <i className="fa fa-check-square" /> Approved Status
-                  </Link>
-                </li>
+                  <li className="nav-head active " aria-current="page">
+                    <Link
+                      exact
+                      to="#"
+                      onClick={() => this.scrollTo(refs.approvedStatus)}
+                    >
+                      <i className="fa fa-check-square" /> Approval Status
+                    </Link>
+                  </li>
 
-                <li className="nav-head active " aria-current="page">
-                  <Link
-                    exact
-                    to="#"
-                    onClick={() => this.scrollTo(refs.activityLogRef)}
-                  >
-                    <i className="fa fa-clipboard" /> Activity Log
-                  </Link>
-                </li>
+                  <li className="nav-head active " aria-current="page">
+                    <Link
+                      exact
+                      to="#"
+                      onClick={() => this.scrollTo(refs.activityLogRef)}
+                    >
+                      <i className="fa fa-clipboard" /> Activity Log
+                    </Link>
+                  </li>
+                  <li className="nav-head active " aria-current="page">
+                    <Link
+                      exact
+                      to="#"                     
+                    >
+                      <i className="fa fa-sitemap" /> Submit
+                    </Link>
+                  </li>
 
                 <li className="nav-head active " aria-current="page">
                   <Link exact to="#">

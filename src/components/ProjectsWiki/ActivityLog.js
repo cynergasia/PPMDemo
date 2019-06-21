@@ -208,12 +208,13 @@ export class ActivityLog extends Component {
                         {data.date}
                       </small>
                     </div>
-                    <div className="text-truncate font-weight-bold">
+                    <div className="text-truncate font-weight-bold text-muted">
                       {data.comment}
                     </div>
                     {/* <small className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt...
                   </small> */}
+                    <hr />
                   </div>
                 ))}
               </TabPane>

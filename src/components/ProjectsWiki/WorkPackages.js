@@ -131,7 +131,7 @@ class WorkPackages extends Component {
                       </ListGroupItemHeading>
                       {workPackages.map(
                         ({ name, id }) =>
-                          ["admin", "design"].includes(name) && (
+                          ["Admin", "Design"].includes(name) && (
                             <React.Fragment>
                               <Link
                                 to={routesURL.WORKPACKAGE_WIKI + id}
@@ -152,7 +152,7 @@ class WorkPackages extends Component {
 
                       {workPackages.map(
                         ({ id, name }) =>
-                          ["modelling"].includes(name) && (
+                          ["Modelling"].includes(name) && (
                             <React.Fragment>
                               <Link
                                 to={routesURL.WORKPACKAGE_WIKI + id}
@@ -172,7 +172,7 @@ class WorkPackages extends Component {
 
                       {workPackages.map(
                         ({ name, id }) =>
-                          ["rebar"].includes(name) && (
+                          ["Rebar"].includes(name) && (
                             <React.Fragment>
                               <Link
                                 to={routesURL.WORKPACKAGE_WIKI + id}

@@ -38,7 +38,7 @@ class ProjectStatusReport extends Component {
     const { id } = this.props.match.params;
     const project = database.projects.filter(project => `${project.id}` === id);
     if (project.length === 0) {
-      window.location.hash = routesURL.DASHBOARD;
+      return (window.location.hash = routesURL.DASHBOARD);
     }
     const {
       tiles,
@@ -52,6 +52,7 @@ class ProjectStatusReport extends Component {
       deliverablesRegister,
       financialAnalysis
     } = project[0];
+    console.log(project);
 
     return (
       <React.Fragment>

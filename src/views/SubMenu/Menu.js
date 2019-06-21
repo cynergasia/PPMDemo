@@ -22,7 +22,7 @@ class Menu extends Component {
             <h4 className="customer-title">Project</h4>
             <ol className="breadcrumb right-breadcrumb">
               <li className="nav-head active" aria-current="page">
-                <Link exact="true" to={routesURL.PROJECT_WIKI}>
+                <Link exact="true" to={routesURL.PROJECT_WIKI + this.props.id}>
                   {this.props.id}
                 </Link>
               </li>

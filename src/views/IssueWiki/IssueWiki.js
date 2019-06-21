@@ -8,7 +8,7 @@ import Attachments from "../../components/Attachments";
 import IssueApprovalStatus from "../../components/IssueWiki/IssueApprovalStatus";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import StickySidebar from "sticky-sidebar";
-import deliverableswiki_database from "../../deliverableswiki_database";
+import deliverableswiki_database from "../../database/database";
 import issuewiki_database from "../../database/database";
 
 class IssueWiki extends Component {
