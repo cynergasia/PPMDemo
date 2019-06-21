@@ -28,6 +28,7 @@ class IssueChanges extends Component {
   };
   render() {
     const { activeTab } = this.state;
+    const { issues } = this.props;
     return (
       <React.Fragment>
         <Card>
@@ -85,55 +86,67 @@ class IssueChanges extends Component {
                         {" "}
                         {"Overdue High Priority Issues (<30 days)"}:{" "}
                       </ListGroupItemHeading>
-                      <Link to={routesURL.ISSUE_WIKI}>
-                        {" "}
-                        issue1 (Neeraj)
-                      </Link>
-                      <br />
-                      <Link to={routesURL.ISSUE_WIKI}>
-                        {" "}
-                        issue 2(Suresh)
-                      </Link>
-                      <br />
-                      <Link to={routesURL.ISSUE_WIKI}>
-                        {" "}
-                        Issue3 (Arindam)
-                      </Link>
-                      <br />
+                      {issues.map(
+                        (item, index) =>
+                          item.status === "Overdue" &&
+                          item.days < 30 && (
+                            <>
+                              <Link
+                                key={index}
+                                to={routesURL.ISSUE_WIKI + item.i_id}
+                              >
+                                {" "}
+                                {item.name} ({item.owner})
+                              </Link>
+                              <br />
+                            </>
+                          )
+                      )}
                       <br />
                       <ListGroupItemHeading>
                         {" "}
                         {"Overdue High Prioirity Issues(>30 & < 60)"}:{" "}
                       </ListGroupItemHeading>
-                      <Link to={routesURL.ISSUE_WIKI}>
-                        {" "}
-                        Issue 4(Suresh)
-                      </Link>
-                      <br />
-                      <Link to={routesURL.ISSUE_WIKI}>
-                        {" "}
-                        Issue 9(Arindam)
-                      </Link>
-                      <br />
+                      {issues.map(
+                        (item, index) =>
+                          item.status === "Overdue" &&
+                          (item.days >= 30 && item.days < 60) && (
+                            <>
+                              <Link
+                                key={index}
+                                to={routesURL.ISSUE_WIKI + item.i_id}
+                              >
+                                {" "}
+                                {item.name} ({item.owner})
+                              </Link>
+                              <br />
+                            </>
+                          )
+                      )}
                       <br />
                       <ListGroupItemHeading>
                         {" "}
                         {"Overdue High Prioirity Issues(> 60)"}:{" "}
                       </ListGroupItemHeading>
-                      <Link to={routesURL.ISSUE_WIKI}>
-                        {" "}
-                        Issue 0(Suresh)
-                      </Link>,<br />
-                      <Link to={routesURL.ISSUE_WIKI}>
-                        {" "}
-                        Issue 900(Arindam){" "}
-                      </Link>
+                      {issues.map(
+                        (item, index) =>
+                          item.status === "Overdue" &&
+                          item.days >= 60 && (
+                            <>
+                              <Link
+                                key={index}
+                                to={routesURL.ISSUE_WIKI + item.i_id}
+                              >
+                                {" "}
+                                {item.name} ({item.owner})
+                              </Link>
+                              <br />
+                            </>
+                          )
+                      )}
+
                       <br />
-                      <br />
-                      <Link to={routesURL.ISSUE_LIST}>
-                        {" "}
-                        All Issues ...{" "}
-                      </Link>
+                      <Link to={routesURL.ISSUE_LIST}> All Issues ... </Link>
                     </ListGroupItemText>
                   </ListGroupItem>
                 </ListGroup>

@@ -18,11 +18,17 @@ const Meeting = React.lazy(() => import("./views/Meetings/Meeting"));
 
 ///Reamaing Pages
 const MettingList = React.lazy(() => import("./views/Meetings/MettingList"));
-const ActivitiesList = React.lazy(() => import("./views/Activities/ActivitiesList"));
+const ActivitiesList = React.lazy(() =>
+  import("./views/Activities/ActivitiesList")
+);
 const IssueList = React.lazy(() => import("./views/IssueWiki/IssueList"));
 const IssueWiki = React.lazy(() => import("./views/IssueWiki/IssueWiki"));
-const ResourcesList = React.lazy(() => import("./views/ProjectWiki/ResourcesList"));
- const DeliverablesList = React.lazy(() => import("./views/DeliverablesWiki/DeliverablesList"));
+const ResourcesList = React.lazy(() =>
+  import("./views/ProjectWiki/ResourcesList")
+);
+const DeliverablesList = React.lazy(() =>
+  import("./views/DeliverablesWiki/DeliverablesList")
+);
 
 const routes = [
   { path: "/", exact: true, name: "Home" },
@@ -72,7 +78,7 @@ const routes = [
     title: "Meetings List"
   },
   {
-    path: routesURL.ISSUE_WIKI,
+    path: `${routesURL.ISSUE_WIKI}:id`,
     component: IssueWiki,
     title: "Issue Home"
   },

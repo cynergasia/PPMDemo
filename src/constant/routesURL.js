@@ -12,7 +12,7 @@ export const routesURL = {
   MEETING_LIST: `${BASE_PATH}meetinglist`,
   ACTIVITIES_LIST: `${BASE_PATH}activitieslist`,
   RESOURCE_LIST: `${BASE_PATH}resourcelist/`,
-  ISSUE_WIKI: `${BASE_PATH}issuewiki`,
+  ISSUE_WIKI: `${BASE_PATH}issuewiki/`,
   ISSUE_LIST: `${BASE_PATH}issuelist`,
   PAGE_NOT_FOUND: `${BASE_PATH}500`
 };

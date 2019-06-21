@@ -7,13 +7,9 @@ export const menulist = [
   { wbs: ["WBS", "workPackageRef", "fa fa-sitemap"] },
   { work_package: ["Work Package", "workPackageRef", "fa fa-sitemap"] },
   { issue_changes: ["Issues/Changes", "issueChangesRef", "fa fa-refresh"] },
-  { deliverable:["Deliverables", "deliverableRef", "fa fa-refresh"]}, 
+  { deliverable: ["Deliverables", "deliverableRef", "fa fa-refresh"] },
   {
-    meeting_minutes: [
-      "Meeting",
-      "meetingMinutesRef",
-      "fa fa-pencil-square"
-    ]
+    meeting_minutes: ["Meeting", "meetingMinutesRef", "fa fa-pencil-square"]
   },
   { finanical: ["Financials", "financialsRef", "fa fa-bar-chart"] },
   { activity_log: ["Activity Log", "activityLogRef", "fa fa-clipboard"] },  
@@ -25,7 +21,7 @@ export const keylist = [
   "wbs",
   "work_package",
   "issue_changes",
-  "deliverable", 
+  "deliverable",
   "meeting_minutes",
   "finanical",
   "activity_log",
@@ -36,9 +32,9 @@ class Submenu extends Component {
   state = {
     comment: true,
     wbs: true,
-    work_package:true,
+    work_package: true,
     issue_changes: true,
-    deliverable:true,   
+    deliverable: true,
     meeting_minutes: true,
     finanical: true,
     activity_log: true,    
@@ -72,8 +68,12 @@ class Submenu extends Component {
           <div className="col-12 col-sm-12 col-lg-12">
             <ol className="breadcrumb left-breadcrumb">
               <li className="nav-head active" area-current="page">
-                <i className="fa fa-map-marker" /><Link to={routesURL.PROJECT_WIKI}> Extensions N/Cape Mall Phase
-                3 (60453005)</Link>  {name && <span>: {name}</span>}
+                <i className="fa fa-map-marker" />
+                <Link to={routesURL.PROJECT_WIKI}>
+                  {" "}
+                  Extensions N/Cape Mall Phase 3 (60453005)
+                </Link>{" "}
+                {name && <span>: {name}</span>}
               </li>
             </ol>
             <ol className="breadcrumb left-breadcrumb">
@@ -82,16 +82,14 @@ class Submenu extends Component {
                       <i className="fa fa-edit" /> Edit
                     </Link>
                   </li> */}
-              {/* {link && link.menulink.map((list, index) =>(list
+              {link && (
+                <li className="nav-head active" aria-current="page">
+                  <Link exact to={routesURL.MEETING_LIST}>
+                    <i className="fa fa-check-square" /> Meeting Register
+                  </Link>
+                </li>
+              )}
 
-                  )
-              )} */}
-             {/* {link.submit && <li className="nav-head active" aria-current="page">
-              <Link exact to={routesURL.PAGE_NOT_FOUND}>
-                <i className="fa fa-check-square" /> Submit/Cancel
-              </Link>
-             </li>} */}
-               
               {keylist.map(
                 (list, index) =>
                   this.state[list] && (

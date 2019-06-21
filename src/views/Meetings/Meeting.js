@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import MeetingMenu from "../SubMenu/MeetingMenu";
@@ -29,8 +30,7 @@ class Meeting extends Component {
   }
 
   render() {
-    const { record_information} = meeting_database;
-
+    const { record_information } = meeting_database;
     return (
       <React.Fragment>
         <SubMenu
@@ -46,27 +46,25 @@ class Meeting extends Component {
         />
         {/* <MeetingMenu /> */}
         <div className="animated fadeIn row">
+          <div className="col-12 col-lg-8">
+            <Row>
+              <div className="col-12" ref={this.meetingMinutesRef}>
+                <MeetingInformation />
+              </div>
+              <div className="col-12">
+                <MeetingDescription />
+              </div>
 
+              <Col xs="12">
+                <Attachments />
+              </Col>
 
-            <div className="col-12 col-lg-8">
-              <Row>
-                <div className="col-12" ref={this.meetingMinutesRef}>
-                  <MeetingInformation  />
-                </div>
-                <div className="col-12" >
-                  <MeetingDescription />
-                </div>
-
-                <Col xs="12">
-                  <Attachments />
-                </Col>
-
-                <div className="col-12" ref={this.activityLogRef}>
-                  <ActivityLog />
-                </div>
-              </Row>
-            </div>
-            <div className="col-12 col-lg-4">
+              <div className="col-12" ref={this.activityLogRef}>
+                <ActivityLog />
+              </div>
+            </Row>
+          </div>
+          <div className="col-12 col-lg-4">
             <div className="aside">
               <div className="aside-inner">
                 <RecordInformation
@@ -75,10 +73,8 @@ class Meeting extends Component {
                   isWorkflowinfo={false}
                 />
               </div>
+            </div>
           </div>
-
-
-        </div>
         </div>
 
         <Row />
