@@ -23,7 +23,7 @@ const ActivitiesList = React.lazy(() =>
 );
 const IssueList = React.lazy(() => import("./views/IssueWiki/IssueList"));
 const IssueWiki = React.lazy(() => import("./views/IssueWiki/IssueWiki"));
-// const ChangesList = React.lazy(() => import("./views/ChangeWiki/ChangesList"));
+const ChangesList = React.lazy(() => import("./views/ChangeWiki/ChangesList"));
 const ChangeWiki = React.lazy(() => import("./views/ChangeWiki/ChangeWiki"));
 const ResourcesList = React.lazy(() =>
   import("./views/ProjectWiki/ResourcesList")
@@ -94,11 +94,11 @@ const routes = [
     component: ChangeWiki,
     title: "Change Home"
   },
-  // {
-  //   path: routesURL.CHANGES_LIST,
-  //   component: ChangesList,
-  //   title: "Changes List"
-  // },
+  {
+    path: routesURL.CHANGES_LIST,
+    component: ChangesList,
+    title: "Changes List"
+  },
   {
     path: routesURL.ACTIVITIES_LIST,
     component: ActivitiesList
