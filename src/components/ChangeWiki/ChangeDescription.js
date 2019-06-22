@@ -16,7 +16,6 @@ class ChangeDescription extends Component {
       actual_effort,
       impact_type,
       severity,
-      days,
       description
     } = this.props.changes;
     return (

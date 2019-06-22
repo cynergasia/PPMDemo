@@ -27,7 +27,9 @@ class ProjectWiki extends Component {
 
   render() {
     const { id } = this.props.match.params;
+
     const project = database.projects.filter(item => `${item.id}` === id);
+    console.log(project);
     if (project.length === 0) {
       return (window.location.hash = routesURL.DASHBOARD);
     }
