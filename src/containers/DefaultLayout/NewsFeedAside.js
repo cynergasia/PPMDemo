@@ -63,7 +63,7 @@ class NewsFeedAside extends Component {
               tag={"div"}
             >
               <ListGroupItem className="list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">
-                Notification
+                News Feed
               </ListGroupItem>
               {database.globalNewsFeed.map(item => (
                 <ListGroupItem

@@ -89,7 +89,7 @@ class Submenu extends Component {
                   </li>
                   <li className="nav-head active" aria-current="page">
                     <Link exact to={routesURL.PAGE_NOT_FOUND}>
-                      <i className="fa fa-sitemap" /> Save/Cancel
+                      <i className="fa fa-sitemap" /> Save
                     </Link>
                   </li>
                 </>

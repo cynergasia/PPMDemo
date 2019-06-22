@@ -31,13 +31,15 @@ class ProjectWiki extends Component {
     if (project.length === 0) {
       return (window.location.hash = routesURL.DASHBOARD);
     }
-
+    
     const tasks = projectwiki_database;
     const { record_information } = database;
     const { deliverablesInfo } = deliverableswiki_database;
     const { basicProjectInfo, activity } = project[0].projectwiki;
     const { issues } = issuewiki_database;
     const { changes } = changewiki_database;
+    
+    console.log("project",basicProjectInfo);
     return (
       <React.Fragment>
         <SubMenu

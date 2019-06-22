@@ -50,7 +50,7 @@ class Menu extends Component {
             <ol className="breadcrumb right-breadcrumb">
               {database.projects.map((project, index) => (
                 <li key={index} className="nav-head active" aria-current="page">
-                  <Link exact="true" to={routesURL.PSR + project.id}>
+                  <Link exact="true" to={routesURL.PROJECT_WIKI + project.id}>
                     {project.id}
                   </Link>
                 </li>
