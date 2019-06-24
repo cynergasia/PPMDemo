@@ -216,7 +216,7 @@ class IssueChanges extends Component {
                           )
                       )}
                       <br />
-                      <Link to={routesURL.PAGE_NOT_FOUND}>
+                      <Link to={routesURL.CHANGES_LIST}>
                         {" "}
                         All Changes ...{" "}
                       </Link>
