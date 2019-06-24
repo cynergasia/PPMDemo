@@ -40,7 +40,7 @@ class ChangeWikiMenu extends Component {
                     <i className="cui-comment-square" /> Comment
                   </Link>
                 </li>
-                <li />
+                <li/>
                 <li className="nav-head active " aria-current="page">
                   <Link
                     exact

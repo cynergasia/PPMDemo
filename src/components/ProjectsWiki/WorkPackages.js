@@ -184,6 +184,8 @@ class WorkPackages extends Component {
                             </React.Fragment>
                           )
                       )}
+                      <br/>
+                    <Link to={routesURL.WORKPACKAGE_LIST}> All Workpackage  ... </Link>
                     </ListGroupItemText>
                   </ListGroupItem>
                 </ListGroup>

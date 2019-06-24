@@ -60,6 +60,7 @@ class Submenu extends Component {
 
   render() {
     const { refs, name, link } = this.props;
+    console.log("refs",link);
     return (
       <nav className="sub-navbar navbar-fixed-top" aria-label="breadcrumb">
         <div className="row">
