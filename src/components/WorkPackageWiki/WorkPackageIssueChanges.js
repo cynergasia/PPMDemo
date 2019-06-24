@@ -113,7 +113,7 @@ class WorkPackageIssueChanges extends Component {
       <React.Fragment>
         <Card>
           <CardHeader className="cardtabsboxs">
-            <ul class="nav nav-tabs">
+            <ul className="nav nav-tabs">
               <li className="nav-item">
                 <a
                   data-toggle="tab"

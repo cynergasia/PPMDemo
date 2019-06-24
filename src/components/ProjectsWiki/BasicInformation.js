@@ -107,7 +107,11 @@ class BasicInformation extends Component {
           />
           <div className="form-inline">
             <div className="ml-auto">
-              <Button color="success" onClick={this.handleSubmit}>
+              <Button
+                color="success"
+                onClick={this.handleSubmit}
+                className="mr-2"
+              >
                 Edit & Save
               </Button>
               <Button
@@ -281,7 +285,7 @@ class BasicInformation extends Component {
                             <Input
                               type="textarea"
                               rows="2"
-                              value={description}
+                              defaultValue={description}
                             />
                           </td>
                         </tr>

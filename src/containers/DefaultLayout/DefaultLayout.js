@@ -2,11 +2,7 @@
 import React, { Component, Suspense } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { Container } from "reactstrap";
-// import $ from "jquery";
-
 import { AppAside, AppFooter, AppHeader } from "@coreui/react";
-// sidebar nav config
-
 // routes config
 import routes from "../../routes";
 import { routesURL } from "../../constant/routesURL";
@@ -28,27 +24,10 @@ class DefaultLayout extends Component {
     isCalendar: false,
     isMisc: false,
     isNewsFeed: false,
-    position: null
+    visible: false
   };
 
   state = { ...this.initialState };
-  
-  componentDidMount = () => {
-    window.addEventListener("scroll", this.handleScroll);
-  };
-
-  componentWillUnmount = () => {
-    window.removeEventListener("scroll", this.handleScroll);
-  };
-
-  handleScroll = event => {
-    // let scrollTop = event.srcElement.body.scrollTop,
-    //     itemTranslate = Math.min(0, scrollTop/3 - 60);
-    // this.setState({
-    //   transform: itemTranslate
-    // });
-    // this.scrollSidebar();
-  };
 
   toggle = toggle => {
     this.setState({
@@ -57,47 +36,21 @@ class DefaultLayout extends Component {
     });
   };
 
-  toggleChat = () => this.toggle("Chat");
-
-  toggleNotification = () => this.toggle("Notification");
-
-  toggleCalendar = () => this.toggle("Calendar");
-
-  toggleMisc = () => this.toggle("Misc");
-
-  toggleNewsFeed = () => this.toggle("NewsFeed");
-
   loading = () => (
     <div className="animated fadeIn pt-1 text-center">Loading...</div>
   );
-  // scrollSidebar method
-  // scrollSidebar=()=>{
-  //   // alert("rip");
-  //   // if($('.aside-menu-lg-show .sidebar__inner').position()){
-
-  //   var position = $('.is-affixed').children().first().position();
-  //   var widthfiex = $('.is-affixed').children().first().width();
-  //   var asidemenuwidth = $('.aside-menu').width();
-
-  //   if(this.state.isChat){
-
-  //     $('.is-affixed').children().first().css( "left",  position.left + asidemenuwidth - 100);
-  //     $('.is-affixed').children().first().css( "width", widthfiex + asidemenuwidth - 250);
-  //     //alert("raj");
-  //   }
-  //   else{
-  //     $('.is-affixed').children().first().css( "left", position.left - asidemenuwidth + 100);
-  //     $('.is-affixed').children().first().css( "width", widthfiex - asidemenuwidth + 250);
-  //     //alert("rip");
-  //   }
-
-  //   return false;
-  //   // alert(asidemenuwidth);
-  // }
 
   render() {
+    const {
+      isChat,
+      isCalendar,
+      isMisc,
+      isNewsFeed,
+      isNotification,
+      visible
+    } = this.state;
     const path = this.props.location.pathname;
-    let currentpath = "/" + path.split("/")[1];
+    const currentpath = "/" + path.split("/")[1];
 
     let title = "";
     routes.forEach(route => {
@@ -113,16 +66,16 @@ class DefaultLayout extends Component {
           <Suspense fallback={this.loading()}>
             <DefaultHeader
               title={title}
-              toggleChat={this.toggleChat}
-              toggleNotification={this.toggleNotification}
-              toggleCalendar={this.toggleCalendar}
-              toggleMisc={this.toggleMisc}
-              toggleNewsFeed={this.toggleNewsFeed}
-              isChat={this.state.isChat}
-              isNotification={this.state.isNotification}
-              isCalendar={this.state.isCalendar}
-              isMisc={this.state.isMisc}
-              isNewsFeed={this.state.isNewsFeed}
+              toggleChat={() => this.toggle("Chat")}
+              toggleNotification={() => this.toggle("Notification")}
+              toggleCalendar={() => this.toggle("Calendar")}
+              toggleMisc={() => this.toggle("Misc")}
+              toggleNewsFeed={() => this.toggle("NewsFeed")}
+              isChat={isChat}
+              isNotification={isNotification}
+              isCalendar={isCalendar}
+              isMisc={isMisc}
+              isNewsFeed={isNewsFeed}
             />
           </Suspense>
         </AppHeader>
@@ -130,21 +83,7 @@ class DefaultLayout extends Component {
           className="app-body"
           style={{ overflowY: "scroll", maxHeight: "calc(100vh - 95px)" }}
         >
-          {/* <AppSidebar fixed display="lg">
-            <AppSidebarHeader />
-            <AppSidebarForm />
-            <Suspense>
-              <AppSidebarNav
-                navConfig={navigation}
-                {...this.props}
-                router={router}
-              />
-            </Suspense>
-            <AppSidebarFooter />
-            <AppSidebarMinimizer />
-          </AppSidebar> */}
           <main className="main">
-            {/* <AppBreadcrumb appRoutes={routes} router={router} /> */}
             <Container fluid className="position-relative">
               <Suspense fallback={this.loading()}>
                 <Switch>
@@ -164,53 +103,19 @@ class DefaultLayout extends Component {
               </Suspense>
             </Container>
           </main>
-          {this.state.isChat ? (
-            <AppAside fixed className="animated slideInRight">
-              <Suspense fallback={this.loading()}>
-                <ChatAside />
-              </Suspense>
-            </AppAside>
-          ) : (
-            <AppAside className="animated slideOutRight" />
-          )}
-          {this.state.isNotification ? (
-            <AppAside fixed className="animated slideInRight">
-              <Suspense fallback={this.loading()}>
+          <AppAside fixed>
+            <Suspense fallback={this.loading()}>
+              {isChat && <ChatAside />}
+              {isCalendar && <CalendarAside />}
+              {isMisc && <MiscAside />}
+              {isNewsFeed && <NewsFeedAside />}
+              {isNotification && (
                 <NotificationAside
-                  toggleNotification={this.toggleNotification}
+                  toggleNotification={() => this.toggle("Notification")}
                 />
-              </Suspense>
-            </AppAside>
-          ) : (
-            <AppAside className="animated slideOutRight" />
-          )}
-          {this.state.isCalendar ? (
-            <AppAside fixed className="animated slideInRight">
-              <Suspense fallback={this.loading()}>
-                <CalendarAside />
-              </Suspense>
-            </AppAside>
-          ) : (
-            <AppAside className="animated slideOutRight" />
-          )}
-          {this.state.isMisc ? (
-            <AppAside fixed className="animated slideInRight">
-              <Suspense fallback={this.loading()}>
-                <MiscAside />
-              </Suspense>
-            </AppAside>
-          ) : (
-            <AppAside className="animated slideOutRight" />
-          )}
-          {this.state.isNewsFeed ? (
-            <AppAside fixed className="animated slideInRight">
-              <Suspense fallback={this.loading()}>
-                <NewsFeedAside />
-              </Suspense>
-            </AppAside>
-          ) : (
-            <AppAside className="animated slideOutRight" />
-          )}
+              )}
+            </Suspense>
+          </AppAside>
         </div>
         <AppFooter>
           <Suspense fallback={this.loading()}>

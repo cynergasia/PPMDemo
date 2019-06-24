@@ -22,7 +22,7 @@ class Menu extends Component {
             <h4 className="customer-title">Project</h4>
             <ol className="breadcrumb right-breadcrumb">
               <li className="nav-head active" aria-current="page">
-                <Link exact="true" to={routesURL.PROJECT_WIKI + this.props.id}>
+                <Link exact={true} to={routesURL.PROJECT_WIKI + this.props.id}>
                   {this.props.id}
                 </Link>
               </li>
@@ -50,7 +50,7 @@ class Menu extends Component {
             <ol className="breadcrumb right-breadcrumb">
               {database.projects.map((project, index) => (
                 <li key={index} className="nav-head active" aria-current="page">
-                  <Link exact="true" to={routesURL.PROJECT_WIKI + project.id}>
+                  <Link exact="true" to={routesURL.PSR + project.id}>
                     {project.id}
                   </Link>
                 </li>

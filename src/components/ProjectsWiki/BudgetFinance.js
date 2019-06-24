@@ -16,7 +16,7 @@ import Modal from "../../helper/Modal";
 import { formatDate } from "../../helper/TextFormat";
 import { APP_LOCAL_DATETIME_FORMAT } from "../../constant";
 
-let commentData = {
+let activityData = {
   columns: [
     {
       label: "Date",
@@ -37,88 +37,88 @@ let commentData = {
   rows: []
 };
 
- class BudgetFinance extends Component {
-    state = {
-        activeTab: "1",
-        commentsData: { ...commentData },
-        activityLogData: { ...activityData },
-        isModal: false,
-        comment: ""
-      };
-    
-      toggle = tab => {
-        if (this.state.activeTab !== tab) {
-          this.setState({
-            activeTab: tab
-          });
-        }
-      };
-    
-      toggleModal = () => this.setState({ isModal: !this.state.isModal });
-    
-      handleChangeComment = ({ target }) =>
-        this.setState({ [target.name]: target.value });
-    
-      addComment = () => {
-        const { comment } = this.state;
-        commentData.rows.push({
-          date: formatDate(new Date(), APP_LOCAL_DATETIME_FORMAT),
-          by: "Suresh Padmanabhan",
-          comment
-        });
-        this.setState({
-          commentsData: { ...commentData },
-          comment: "",
-          isModal: false
-        });
-      };
-    
-      componentDidMount() {
-        commentData.rows = database.comments;
-        activityData.rows = database.activityLog;
-        this.setState({
-          commentsData: { ...commentData },
-          activityLogData: { ...activityData }
-        });
-      }
-    render() {
-        const { activeTab } = this.state;
-        console.log("Comment data", database.comments);
-        const addCommentBody = (
-          <React.Fragment>
-            <Input
-              type="textarea"
-              rows="2"
-              name="comment"
-              placeholder="Enter Comment"
-              value={this.state.comment}
-              onChange={this.handleChangeComment}
-            />
-            <div className="mt-3">
-              <Button
-                onClick={this.addComment}
-                color="success"
-                size="sm"
-                className="m-0 float-right"
-              >
-                Add
-              </Button>
-              <Button
-                onClick={this.toggleModal}
-                color="danger"
-                size="sm"
-                className="m-0"
-              >
-                Close
-              </Button>
-            </div>
-          </React.Fragment>
-        );
-        return (
-            <React.Fragment>
+class BudgetFinance extends Component {
+  state = {
+    activeTab: "1",
+    commentsData: { ...activityData },
+    activityLogData: { ...activityData },
+    isModal: false,
+    comment: ""
+  };
+
+  toggle = tab => {
+    if (this.state.activeTab !== tab) {
+      this.setState({
+        activeTab: tab
+      });
+    }
+  };
+
+  toggleModal = () => this.setState({ isModal: !this.state.isModal });
+
+  handleChangeComment = ({ target }) =>
+    this.setState({ [target.name]: target.value });
+
+  addComment = () => {
+    const { comment } = this.state;
+    activityData.rows.push({
+      date: formatDate(new Date(), APP_LOCAL_DATETIME_FORMAT),
+      by: "Suresh Padmanabhan",
+      comment
+    });
+    this.setState({
+      commentsData: { ...activityData },
+      comment: "",
+      isModal: false
+    });
+  };
+
+  componentDidMount() {
+    activityData.rows = database.comments;
+    activityData.rows = database.activityLog;
+    this.setState({
+      commentsData: { ...activityData },
+      activityLogData: { ...activityData }
+    });
+  }
+  render() {
+    const { activeTab } = this.state;
+    console.log("Comment data", database.comments);
+    const addCommentBody = (
+      <React.Fragment>
+        <Input
+          type="textarea"
+          rows="2"
+          name="comment"
+          placeholder="Enter Comment"
+          value={this.state.comment}
+          onChange={this.handleChangeComment}
+        />
+        <div className="mt-3">
+          <Button
+            onClick={this.addComment}
+            color="success"
+            size="sm"
+            className="m-0 float-right"
+          >
+            Add
+          </Button>
+          <Button
+            onClick={this.toggleModal}
+            color="danger"
+            size="sm"
+            className="m-0"
+          >
+            Close
+          </Button>
+        </div>
+      </React.Fragment>
+    );
+    return (
+      <React.Fragment>
         <Card>
           <CardHeader className="cardtabsboxs">
-            <ul class="nav nav-tabs">
+            <ul className="nav nav-tabs">
               <li className="nav-item">
                 <a
                   data-toggle="tab"
@@ -128,7 +128,7 @@ let commentData = {
                   onClick={() => this.toggle("1")}
                 >
                   {" "}
-                  Comments
+                  Budget
                 </a>
               </li>
 
@@ -140,7 +140,7 @@ let commentData = {
                   }`}
                   onClick={() => this.toggle("2")}
                 >
-                  Activity Log
+                  Finance
                 </a>
               </li>
             </ul>
@@ -207,7 +207,7 @@ let commentData = {
           </CardBody>
         </Card>
       </React.Fragment>
-        )
-    }
+    );
+  }
 }
-export default BudgetFinance
+export default BudgetFinance;

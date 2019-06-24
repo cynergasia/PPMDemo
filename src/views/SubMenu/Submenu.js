@@ -98,7 +98,11 @@ class Submenu extends Component {
               {keylist.map(
                 (list, index) =>
                   this.state[list] && (
-                    <li className="nav-head active" aria-current="page">
+                    <li
+                      key={index}
+                      className="nav-head active"
+                      aria-current="page"
+                    >
                       <Link
                         to="#"
                         onClick={e => {

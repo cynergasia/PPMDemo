@@ -11,8 +11,8 @@ class ActivitiesList extends Component {
           <Row>
             <Col sm="12" md="12" lg="12">
               <nav className="sub-navbar" aria-label="breadcrumb">
-                <div class="row">
-                  <div class="col-12 col-sm-12 col-lg-12">
+                <div className="row">
+                  <div className="col-12 col-sm-12 col-lg-12">
                     <ol className="breadcrumb left-breadcrumb">
                       <li className="nav-head active" area-current="page">
                         <Link to="/projectWiki">

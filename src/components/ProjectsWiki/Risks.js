@@ -25,28 +25,29 @@ class Risks extends Component {
           <CardBody>
             <ListGroup>
               <ListGroupItem>
-                <ListGroupItemText>
-                  <ListGroupItemHeading>
-                    High Risk Items :{" "}
-                  </ListGroupItemHeading>
-
+                <ListGroupItemHeading>High Risk Items : </ListGroupItemHeading>
+                <ListGroupItemText className="mb-0">
                   <Link to={routesURL.PAGE_NOT_FOUND}> Risk1</Link>
-                  <br />
+                </ListGroupItemText>
+
+                <ListGroupItemText className="mb-0">
                   <Link to={routesURL.PAGE_NOT_FOUND}> Risk9</Link>
-                  <br />
-
-                  <br />
-                  <ListGroupItemHeading>
-                    {" "}
-                    Medium Risk Items :{" "}
-                  </ListGroupItemHeading>
-
+                </ListGroupItemText>
+                <br />
+                <ListGroupItemHeading>
+                  {" "}
+                  Medium Risk Items :{" "}
+                </ListGroupItemHeading>
+                <ListGroupItemText className="mb-0">
                   <Link to={routesURL.PAGE_NOT_FOUND}>Risk4</Link>
-                  <br />
-                  <Link to={routesURL.PAGE_NOT_FOUND}> Risk0</Link>
-                  <br />
+                </ListGroupItemText>
 
-                  <br />
+                <ListGroupItemText className="mb-0">
+                  <Link to={routesURL.PAGE_NOT_FOUND}> Risk0</Link>
+                </ListGroupItemText>
+
+                <br />
+                <ListGroupItemText className="mb-0">
                   <Link to={routesURL.PAGE_NOT_FOUND}> More... </Link>
                 </ListGroupItemText>
               </ListGroupItem>

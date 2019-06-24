@@ -12,8 +12,8 @@ class ActivitiesTableList extends Component {
           <Row>
             <Col sm="12" md="12" lg="12">
               <nav className="sub-navbar" aria-label="breadcrumb">
-                <div class="row">
-                  <div class="col-12 col-sm-12 col-lg-12">
+                <div className="row">
+                  <div className="col-12 col-sm-12 col-lg-12">
                     <ol className="breadcrumb left-breadcrumb">
                       <li className="nav-head active" area-current="page">
                         <Link to="/projectWiki">
@@ -28,7 +28,7 @@ class ActivitiesTableList extends Component {
           </Row>
           <Row>
             <Col sm="12" md="12" lg="12">
-          
+
         <Card>
           <CardHeader>
             <div className="card-header-actions">
@@ -60,7 +60,7 @@ class ActivitiesTableList extends Component {
             </Table>
           </CardBody>
         </Card>
-          
+
         </Col>
           </Row>
         </div>

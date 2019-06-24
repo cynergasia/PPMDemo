@@ -41,7 +41,7 @@ const DeliverablesList = React.lazy(() =>
 );
 
 const routes = [
-  { path: "/", exact: true, name: "Home" },
+  { path: "/", exact: true, name: "Home", title: "Home" },
   {
     path: routesURL.DASHBOARD,
     component: Dashboard,
@@ -50,12 +50,14 @@ const routes = [
   {
     path: `${routesURL.PSR}:id`,
     component: ProjectStatusReport,
-    title: "Project Status Report"
+    title: "Project Status Report",
+    exact: true
   },
   {
     path: `${routesURL.PROJECT_WIKI}:id`,
     component: ProjectWiki,
-    title: "Project Wiki"
+    title: "Project Wiki",
+    exact: true
   },
   {
     path: `${routesURL.DELIVERABLES_WIKI}:id`,

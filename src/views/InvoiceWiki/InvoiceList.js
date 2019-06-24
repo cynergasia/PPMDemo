@@ -14,10 +14,10 @@ class InvoiceList extends Component {
       <React.Fragment>
         <div className="animated fadeIn">
           <Row>
-            <Col sm="12" md="12" lg="12">
+            <Col md="12" lg="12">
               <nav className="sub-navbar" aria-label="breadcrumb">
-                <div class="row">
-                  <div class="col-12 col-sm-12 col-lg-12">
+                <div className="row">
+                  <div className="col-12 col-sm-12 col-lg-12">
                     <ol className="breadcrumb left-breadcrumb">
                       <li className="nav-head active" area-current="page">
                         <Link to="/projectWiki">
@@ -32,7 +32,7 @@ class InvoiceList extends Component {
             </Col>
           </Row>
           <Row>
-            <Col sm="12" md="6" lg="6">
+            <Col lg="12" xl="6">
               <Row>
                 <Col sm="12" md="6" lg="6">
                   <Card>
@@ -52,7 +52,7 @@ class InvoiceList extends Component {
                 </Col>
               </Row>
             </Col>
-            <Col sm="12" md="6" lg="6">
+            <Col lg="12" xl="6">
               <Card>
                 <CardBody>
                   <InvoiceGraph />
