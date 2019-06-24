@@ -13,6 +13,9 @@ const DeliverablesWiki = React.lazy(() =>
 const WorkPackageWiki = React.lazy(() =>
   import("./views/WorkPackageWiki/WorkPackageWiki")
 );
+const WorkPackageList = React.lazy(() =>
+  import("./views/WorkPackageWiki/WorkPackageList")
+);
 const TaskWiki = React.lazy(() => import("./views/TaskWiki/TaskWiki"));
 const Meeting = React.lazy(() => import("./views/Meetings/Meeting"));
 
@@ -59,12 +62,17 @@ const routes = [
   {
     path: routesURL.DELIVERABLES_LIST,
     component: DeliverablesList,
-    title: "Deliverables List"
+    title: "Deliverables Register"
   },
   {
     path: `${routesURL.WORKPACKAGE_WIKI}:id`,
     component: WorkPackageWiki,
     title: "WorkPackage Wiki"
+  },
+  {
+    path: `${routesURL.WORKPACKAGE_LIST}`,
+    component: WorkPackageList,
+    title: "WorkPackage Register"
   },
   {
     path: routesURL.TASK_WIKI,
@@ -79,7 +87,7 @@ const routes = [
   {
     path: routesURL.MEETING_LIST,
     component: MettingList,
-    title: "Meetings List"
+    title: "Meetings Register"
   },
   {
     path: `${routesURL.ISSUE_WIKI}:id`,
@@ -89,7 +97,7 @@ const routes = [
   {
     path: routesURL.ISSUE_LIST,
     component: IssueList,
-    title: "Issue List"
+    title: "Issue Register"
   },
   {
     path: `${routesURL.CHANGE_WIKI}:id`,
@@ -99,7 +107,7 @@ const routes = [
   {
     path: routesURL.CHANGES_LIST,
     component: ChangesList,
-    title: "Changes List"
+    title: "Changes Register"
   },
   {
     path: `${routesURL.INVOICE_WIKI}`,
@@ -109,7 +117,7 @@ const routes = [
   {
     path: `${routesURL.INVOICE_LIST}`,
     component: InvoiceList,
-    title: "Invoice List"
+    title: "Invoice Register"
   },
   {
     path: routesURL.ACTIVITIES_LIST,

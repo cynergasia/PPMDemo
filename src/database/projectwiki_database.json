@@ -15,6 +15,9 @@
     "workPackages": [
       {
         "id": "d588dc46-d7a8-4ac4-ad12-f0ff3914cebf",
+        "deliverable": "1",
+        "issues": "0",
+        "changes": "0",
         "type": "WorkPackage",
         "wbsNumber": "1.01",
         "name": "Admin",
@@ -77,7 +80,7 @@
             {
               "title": "Transaction End Date",
               "value": "03-02-19"
-            },           
+            },
             {
               "title": "Planned Efforts",
               "value": "300 Hours"
@@ -125,6 +128,9 @@
       },
       {
         "id": "f943d9a6-5fe9-4c97-957d-16d3f8af117d",
+        "deliverable": "1",
+        "issues": "0",
+        "changes": "1",
         "type": "WorkPackage",
         "wbsNumber": "1.02",
         "name": "Design",
@@ -230,7 +236,7 @@
               "title": "Transaction End Date",
               "value": "04-06-19"
             },
-          
+
             {
               "title": "Planned Efforts",
               "value": "548 Hours"
@@ -278,6 +284,9 @@
       },
       {
         "id": "cab9c763-517c-41ac-829d-6f961d8b67c4",
+        "deliverable": "1",
+        "issues": "0",
+        "changes": "1",
         "type": "WorkPackage",
         "wbsNumber": "1.03",
         "name": "Modelling",
@@ -383,7 +392,7 @@
               "title": "Transaction End Date",
               "value": "12-31-2019"
             },
-           
+
             {
               "title": "Planned Efforts",
               "value": "968 Hours"
@@ -431,6 +440,9 @@
       },
       {
         "id": "e19f1bfa-af5d-4e40-8488-9183f7a3dbfb",
+        "deliverable": "1",
+        "issues": "0",
+        "changes": "1",
         "type": "WorkPackage",
         "wbsNumber": "1.04",
         "name": "Rebar",
@@ -549,7 +561,7 @@
             {
               "title": "Transaction End Date",
               "value": "02-16-20"
-            },           
+            },
             {
               "title": "Planned Efforts",
               "value": "888 Hours"

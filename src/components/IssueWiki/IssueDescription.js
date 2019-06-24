@@ -5,19 +5,16 @@ class IssueDescription extends Component {
   render() {
     const {
       number,
-
       title,
       due_date,
       complete,
       status,
-
       workpackage,
       planned_effort,
       owner,
       actual_effort,
       issue_type,
       issue_severity,
-
       description
     } = this.props.issue;
     return (
