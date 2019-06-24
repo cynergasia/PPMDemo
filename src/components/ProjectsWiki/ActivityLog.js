@@ -121,7 +121,7 @@ export class ActivityLog extends Component {
             onClick={this.addComment}
             color="success"
             size="sm"
-            className="m-0 float-right"
+            className="mr-2 float-right"
           >
             Add
           </Button>
@@ -141,7 +141,7 @@ export class ActivityLog extends Component {
       <React.Fragment>
         <Card>
           <CardHeader className="cardtabsboxs">
-            <ul class="nav nav-tabs">
+            <ul className="nav nav-tabs">
               <li className="nav-item">
                 <a
                   data-toggle="tab"
@@ -190,8 +190,8 @@ export class ActivityLog extends Component {
                   paging={false}
                   searching={false}
                 /> */}
-                {database.comments.map(data => (
-                  <div className="message">
+                {database.comments.map((data, index) => (
+                  <div className="message" key={index}>
                     <div className=" mr-3 float-left">
                       <div className="avatar">
                         <img

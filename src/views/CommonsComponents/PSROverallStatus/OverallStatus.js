@@ -135,7 +135,11 @@ class OverallStatus extends Component {
             <Row className="mt-2">
               <Col sm="12" md="12" lg="12">
                 <div className="float-right">
-                  <Button color="primary" style={{ textTransform: "none" }}>
+                  <Button
+                    color="primary"
+                    style={{ textTransform: "none" }}
+                    className="mr-2"
+                  >
                     <i className="fa fa-save mr-2" />Save
                   </Button>
                   <Button color="primary" style={{ textTransform: "none" }}>

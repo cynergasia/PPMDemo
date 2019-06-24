@@ -119,14 +119,18 @@ class WorkPackageInformation extends Component {
                 <tr>
                   <td className=" basicinfo text-left">Description</td>
                   <td colSpan="3">
-                    <Input type="textarea" rows="2" value={description} />
+                    <Input
+                      type="textarea"
+                      rows="2"
+                      defaultValue={description}
+                    />
                   </td>
                 </tr>
 
                 <tr>
                   <td className=" basicinfo text-left">Location</td>
                   <td colSpan="3">
-                    <Input type="textarea" rows="2" value={location} />
+                    <Input type="textarea" rows="2" defaultValue={location} />
                   </td>
                 </tr>
               </tbody>

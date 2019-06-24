@@ -130,7 +130,11 @@ class IssueDescription extends Component {
                 <tr>
                   <td className=" basicinfo text-left">Description</td>
                   <td colSpan="3">
-                    <Input type="textarea" rows="3" value={description} />
+                    <Input
+                      type="textarea"
+                      rows="3"
+                      defaultValue={description}
+                    />
                   </td>
                 </tr>
               </tbody>

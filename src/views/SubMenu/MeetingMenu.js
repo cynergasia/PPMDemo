@@ -6,8 +6,8 @@ class MeetingMenu extends Component {
     return (
       <React.Fragment>
         <nav className="sub-navbar" aria-label="breadcrumb">
-          <div class="row">
-            <div class="col-12 col-sm-12 col-lg-12">
+          <div className="row">
+            <div className="col-12 col-sm-12 col-lg-12">
               <ol className="breadcrumb left-breadcrumb">
                 <li className="nav-head active" area-current="page">
                   <Link to="/projectWiki">

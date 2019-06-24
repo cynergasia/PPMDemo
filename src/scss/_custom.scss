@@ -50,8 +50,10 @@
       }
 
       a.nav-link {
-        font-size: 22px;
-        line-height: 30px;
+        .fa {
+          font-size: 22px;
+          line-height: 30px;
+        }
 
         .navbar-toggler-icon {
           display: block;

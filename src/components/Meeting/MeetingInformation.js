@@ -23,7 +23,7 @@ class MeetingInformation extends Component {
             </div> */}
           </div>
           <div className="card-body">
-            <div className="row">             
+            <div className="row">
               <div className="col-12 col-md-6">
                 <div className="form-group row">
                   <label for="template" className="col col-form-label">
@@ -31,11 +31,11 @@ class MeetingInformation extends Component {
                   </label>
                   <div className="col">
 
-                    <select name="template" class="form-control">
+                    <select name="template" className="form-control">
                       <option>Select</option>
                       <option>Professional</option>
-                      <option>Detailed</option> 
-                      <option>Simple</option>                   
+                      <option>Detailed</option>
+                      <option>Simple</option>
                     </select>
 
                   </div>
@@ -44,8 +44,8 @@ class MeetingInformation extends Component {
                   <label for="frequency" className="col col-form-label">
                     Frequency :
                   </label>
-                  <div className="col">                   
-                    <select name="frequency" class="form-control">
+                  <div className="col">
+                    <select name="frequency" className="form-control">
                     <option>Select</option>
                     <option>Daily</option>
                     <option>Weekly</option>
@@ -76,11 +76,11 @@ class MeetingInformation extends Component {
                   <label for="recurring" className="col col-form-label">
                     Recurring :
                   </label>
-                  <div className="col">                 
-                    <select name="recurring" class="form-control">
+                  <div className="col">
+                    <select name="recurring" className="form-control">
                     <option>Select</option>
                     <option>Y</option>
-                    <option>N</option>                 
+                    <option>N</option>
                     </select>
                   </div>
                 </div>

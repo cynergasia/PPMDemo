@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from "react";
 import { NavLink as Link } from "react-router-dom";
 import {
@@ -20,6 +21,7 @@ import logo from "../../assets/img/brand/logo.png";
 import sygnet from "../../assets/img/brand/sygnet.svg";
 import Popup from "./Popup";
 import { routesURL } from "../../constant/routesURL";
+import _history from "../../history";
 
 const propTypes = {
   children: PropTypes.node
@@ -100,40 +102,38 @@ class DefaultHeader extends Component {
               <DropdownItem header tag="div" className="text-center">
                 <strong>Most Recent</strong>
               </DropdownItem>
+              {/* {_history
+                .getHistory()
+                .reverse()
+                .map(hash => {
+                  const title = _history._routes[`${hash.split("/")["0"]}`];
+                  return (
+                    title && (
+                      <DropdownItem key={hash}>
+                        <NavLink
+                          tag={Link}
+                          to={`/${hash}`}
+                          className="nav-link"
+                        >
+                          {title}
+                        </NavLink>
+                      </DropdownItem>
+                    )
+                  );
+                })} */}
               <DropdownItem>
-                <NavLink
-                  tag={Link}
-                  to={routesURL.PAGE_NOT_FOUND}
-                  className="nav-link"
-                >
-                  Project1
+                <NavLink tag={Link} to={"/500"} className="nav-link">
+                  Project 1
                 </NavLink>
               </DropdownItem>
               <DropdownItem>
-                <NavLink
-                  tag={Link}
-                  to={routesURL.PAGE_NOT_FOUND}
-                  className="nav-link"
-                >
-                  Project4
+                <NavLink tag={Link} to={"/500"} className="nav-link">
+                  Project 5
                 </NavLink>
               </DropdownItem>
               <DropdownItem>
-                <NavLink
-                  tag={Link}
-                  to={routesURL.PAGE_NOT_FOUND}
-                  className="nav-link"
-                >
-                  Project8
-                </NavLink>
-              </DropdownItem>
-              <DropdownItem>
-                <NavLink
-                  tag={Link}
-                  to={routesURL.PAGE_NOT_FOUND}
-                  className="nav-link"
-                >
-                  Project6
+                <NavLink tag={Link} to={"/500"} className="nav-link">
+                  Project 3
                 </NavLink>
               </DropdownItem>
             </DropdownMenu>
@@ -240,9 +240,9 @@ class DefaultHeader extends Component {
                 display="lg"
               />
             ) : (
-              <NavLink tag={Link} to={"#"} className="nav-link">
-                <span className="navbar-toggler-icon" tag={"a"} />
-              </NavLink>
+              <button className="nav-link navbar-toggler">
+                <span className="navbar-toggler-icon" />
+              </button>
             )}
           </NavItem>
 

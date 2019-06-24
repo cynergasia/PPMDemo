@@ -5,6 +5,7 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import "./App.scss";
 import "./index.css";
 import { scrollTop } from "./utils";
+import "./history";
 
 const loading = () => (
   <div className="animated fadeIn pt-3 text-center">Loading...</div>

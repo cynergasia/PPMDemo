@@ -17,8 +17,8 @@ class DeliverablesWikiMenu extends Component {
     return (
       <React.Fragment>
         <nav className="sub-navbar" aria-label="breadcrumb">
-          <div class="row">
-            <div class="col-12 col-sm-12 col-lg-12">
+          <div className="row">
+            <div className="col-12 col-sm-12 col-lg-12">
               <ol className="breadcrumb left-breadcrumb">
                 <li className="nav-head active" area-current="page">
                   <i className="fa fa-map-marker" /> <Link to="/projectwiki"> Extensions N/Cape Mall Phase 3 (60453005)</Link>:{name}
@@ -63,7 +63,7 @@ class DeliverablesWikiMenu extends Component {
                   <li className="nav-head active " aria-current="page">
                     <Link
                       exact
-                      to="#"                     
+                      to="#"
                     >
                       <i className="fa fa-sitemap" /> Submit
                     </Link>
