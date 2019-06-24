@@ -121,7 +121,8 @@ const routes = [
   },
   {
     path: routesURL.ACTIVITIES_LIST,
-    component: ActivitiesList
+    component: ActivitiesList,
+    title: "Activities Register"
   },
   {
     path: `${routesURL.RESOURCE_LIST}:id`,
