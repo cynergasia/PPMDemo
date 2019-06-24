@@ -18,5 +18,8 @@ export const routesURL = {
   CHANGES_LIST: `${BASE_PATH}changeslist`,
   INVOICE_WIKI: `${BASE_PATH}invoicewiki`,
   INVOICE_LIST: `${BASE_PATH}invoicelist`,
+  WBS: `${BASE_PATH}wbs`,
+  RISK_WIKI: `${BASE_PATH}riskwiki`,
+  RISK_LIST: `${BASE_PATH}risklist`,
   PAGE_NOT_FOUND: `${BASE_PATH}500`
 };

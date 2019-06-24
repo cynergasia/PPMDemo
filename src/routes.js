@@ -27,6 +27,9 @@ const ChangesList = React.lazy(() => import("./views/ChangeWiki/ChangesList"));
 const ChangeWiki = React.lazy(() => import("./views/ChangeWiki/ChangeWiki"));
 const InvoiceWiki = React.lazy(() => import("./views/InvoiceWiki/InvoiceWiki"));
 const InvoiceList = React.lazy(() => import("./views/InvoiceWiki/InvoiceList"));
+const RiskWiki = React.lazy(() => import("./views/RisksWiki/RiskWiki"));
+const RiskList = React.lazy(() => import("./views/RisksWiki/RiskList"));
+const WBS = React.lazy(() => import("./views/WBS/WBS"));
 const ResourcesList = React.lazy(() =>
   import("./views/ProjectWiki/ResourcesList")
 );
@@ -110,6 +113,21 @@ const routes = [
     path: `${routesURL.INVOICE_LIST}`,
     component: InvoiceList,
     title: "Invoice List"
+  },
+  {
+    path: `${routesURL.WBS}`,
+    component: WBS,
+    title: "WBS Home"
+  },
+  {
+    path: `${routesURL.RISK_WIKI}`,
+    component: RiskWiki,
+    title: "Risk Home"
+  },
+  {
+    path: `${routesURL.RISK_LIST}`,
+    component: RiskList,
+    title: "Risk List"
   },
   {
     path: routesURL.ACTIVITIES_LIST,

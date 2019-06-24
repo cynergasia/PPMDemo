@@ -51,6 +51,7 @@ class NewsFeedAside extends Component {
               onClick={() => {
                 this.toggle("1");
               }}
+
             >
               <i className="icon-list" />
             </NavLink>
@@ -67,7 +68,8 @@ class NewsFeedAside extends Component {
               </ListGroupItem>
               {database.globalNewsFeed.map(item => (
                 <ListGroupItem
-                  action
+                  
+                
                   className="list-group-item-accent-warning list-group-item-divider"
                   onClick={this.handleClick}
                 >

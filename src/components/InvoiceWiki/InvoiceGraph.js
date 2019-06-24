@@ -51,7 +51,7 @@ class InvoiceGraph extends Component {
   render() {
     return (
       <React.Fragment>
-        <Bar data={barChartData} options={barChartOptions} />
+        <Bar data={barChartData} options={barChartOptions} height={130} />
       </React.Fragment>
     );
   }
