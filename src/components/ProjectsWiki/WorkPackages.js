@@ -116,7 +116,7 @@ class WorkPackages extends Component {
                         Design - 2.0 (Open, 06/30/19){" "}
                       </Link>
                       <br />
-                      <Link to={routesURL.PAGE_NOT_FOUND}> All Tasks ... </Link>
+                      <Link to={routesURL.WBS}> All Tasks ... </Link>
                     </ListGroupItemText>
                   </ListGroupItem>
                 </ListGroup>
