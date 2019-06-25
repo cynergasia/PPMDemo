@@ -406,12 +406,16 @@ h6.chart-title {
 
 .sub-navbar.sticky {
   position: fixed;
-  left: 0px;  
+  left: 0;
   top: 45px;
-  right: 0px;
+  right: 0;
   z-index: 9999;
 }
 
+.custome-datepicker .react-datepicker-wrapper,
+.custome-datepicker .react-datepicker__input-container {
+  width: 100%;
+}
 
 /***** Responsive *****/
 

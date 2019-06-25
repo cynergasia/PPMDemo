@@ -19,11 +19,7 @@ class DeliverablesWiki extends Component {
 
   render() {
     const { id } = this.props.match.params;
-    const {
-      activities,
-
-      deliverablesInfo
-    } = deliverableswiki_database;
+    const { activities, deliverablesInfo } = deliverableswiki_database;
     const deliverInfo = deliverablesInfo.filter(item => item.d_id === id);
     if (deliverInfo.length === 0) {
       window.location.hash = "#/";

@@ -6,22 +6,21 @@ import getDeliverableswiki from "../../database/deliverableswiki_database1";
 // import deliverableswiki_database from "../../database/database";
 
 class DeliverablesList extends Component {
-  handleChange = (name, value) => {
-    switch (name) {
-      case "status":
-        return console.info(value);
-
-      default:
-        return false;
-    }
+  state = {
+    isModal: false
   };
-
   deliverablesWiki = getDeliverableswiki({
     handleChange: this.handleChange
   });
-
+  toggle = () => {
+    this.setState({ isModal: !this.state.isModal });
+  };
   render() {
     const { deliverablesList: list1 } = this.deliverablesWiki;
+    const newDeliverablesList = list1.map(item => {
+      const { d_id, d_status, ...rest } = item;
+      return { ...rest };
+    });
     // const { deliverablesList: list2 } = deliverableswiki_database;
     return (
       <React.Fragment>
@@ -39,6 +38,13 @@ class DeliverablesList extends Component {
                         </Link>
                       </li>
                     </ol>
+                    <ol className="breadcrumb left-breadcrumb">
+                      <li className="nav-head active" area-current="page">
+                        <Link to="#" onClick={this.toggle}>
+                          <i className="fa fa-plus-square-o" /> New
+                        </Link>
+                      </li>
+                    </ol>
                   </div>
                 </div>
               </nav>
@@ -46,7 +52,11 @@ class DeliverablesList extends Component {
           </Row>
           <Row>
             <Col sm="12" md="12" lg="12">
-              <DeliverablesTableList deliverablesList={list1} />
+              <DeliverablesTableList
+                toggle={this.toggle}
+                isModal={this.state.isModal}
+                deliverablesList={newDeliverablesList}
+              />
             </Col>
             {/* <Col sm="12" md="12" lg="12">
               <DeliverablesTableList deliverablesList={list2} />
