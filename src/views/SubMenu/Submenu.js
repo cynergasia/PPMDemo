@@ -47,8 +47,7 @@ class Submenu extends Component {
     e.persist();
     const scrollRef = ReactDOM.findDOMNode(ref);
     const appBody = document.querySelector(".app-body");
-    try {
-      appBody.scrollTo({
+    try {    appBody.scrollTo({
         left: 0,
         top: scrollRef.offsetTop,
         behavior: "smooth"
@@ -59,8 +58,7 @@ class Submenu extends Component {
   };
 
   render() {
-    const { refs, name, link } = this.props;
-    console.log("refs",link);
+    const { refs, name, link,id } = this.props;  
     return (
       <nav className="sub-navbar navbar-fixed-top" aria-label="breadcrumb">
         <div className="row">
@@ -76,12 +74,8 @@ class Submenu extends Component {
               </li>
             </ol>
             <ol className="breadcrumb left-breadcrumb">
-              {/* <li className="nav-head active" aria-current="page">
-                    <Link exact to="/500">
-                      <i className="fa fa-edit" /> Edit
-                    </Link>
-                  </li> */}
-              {link && (
+            
+              {link==="meeting" && (
                 <>
                   <li className="nav-head active" aria-current="page">
                     <Link exact to={routesURL.MEETING_LIST}>
@@ -95,15 +89,21 @@ class Submenu extends Component {
                   </li>
                 </>
               )}
+             
 
+             
               {keylist.map(
                 (list, index) =>
                   this.state[list] && (
-                    <li
-                      key={index}
-                      className="nav-head active"
-                      aria-current="page"
-                    >
+                    <li className="nav-head active" aria-current="page">
+                       {link==="projectwiki" && menulist[index][list][0]==="Follow" && (
+                          <>         
+                             <Link exact to={routesURL.PSR + id} className="cursor-pointer">
+                                <i className="fa fa-check-square"/> PSR <i className="px-2"/>
+                               
+                              </Link>
+                          </>
+                      )}
                       <Link
                         to="#"
                         onClick={e => {
@@ -111,10 +111,11 @@ class Submenu extends Component {
                         }}
                         className="cursor-pointer"
                       >
-                        <i className={menulist[index][list][2]} />{" "}
-                        {menulist[index][list][0]}
+                      <i className={menulist[index][list][2]} />{" "}
+                      {menulist[index][list][0]}
                       </Link>
                     </li>
+                    
                   )
               )}
             </ol>

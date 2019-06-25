@@ -38,6 +38,7 @@ class IssueWiki extends Component {
             activityLogRef: this.activityLogRef
           }}
         />
+        {/* <SubMenu/> */}
 
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">

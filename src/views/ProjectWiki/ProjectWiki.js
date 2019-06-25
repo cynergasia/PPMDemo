@@ -39,7 +39,7 @@ class ProjectWiki extends Component {
     const { id } = this.props.match.params;
     const project = database.projects.filter(item => `${item.id}` === id);
     if (project.length === 0)
-      return (window.location.hash = routesURL.DASHBOARD);
+    return (window.location.hash = routesURL.DASHBOARD);
     const tasks = projectwiki_database;
     const { record_information } = database;
     const { deliverablesInfo } = deliverableswiki_database;
@@ -70,6 +70,8 @@ class ProjectWiki extends Component {
             work_package: false,
             approved_status: false
           }}
+          link={"projectwiki"}
+          id={id}
         />
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">
