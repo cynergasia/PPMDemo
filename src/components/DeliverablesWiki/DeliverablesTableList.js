@@ -1,33 +1,30 @@
 import React, { Component } from "react";
-import { Card, CardHeader, CardBody } from "reactstrap";
+import { Card, CardBody } from "reactstrap";
+import Modal from "../../helper/Modal";
 // import DeliverablesTableListItems from "./DeliverablesTableListItems";
 import ReactDataTableNew from "../ReactDataTableNew";
+import DeliverablesListForm from "./DeliverablesListForm";
 
 let deliveriablesListData = {
   columns: [
+    {
+      label: "Deliverable Number",
+      field: "number",
+      sort: "asc"
+    },
     {
       label: "Deliverable Name",
       field: "deliverable_name",
       sort: "asc"
     },
     {
-      label: "Workpackage",
-      field: "workpackage",
-      sort: "asc"
-    },
-    {
-      label: "Type",
-      field: "type",
-      sort: "asc"
-    },
-    {
-      label: "Owner",
-      field: "owner",
-      sort: "asc"
-    },
-    {
       label: "Due Date",
       field: "due_date",
+      sort: "asc"
+    },
+    {
+      label: "Completed",
+      field: "completed",
       sort: "asc"
     },
 
@@ -37,18 +34,43 @@ let deliveriablesListData = {
       sort: "asc"
     },
     {
-      label: "Completion Date",
-      field: "completion_date",
+      label: "Workpackage",
+      field: "workpackage",
       sort: "asc"
     },
     {
-      label: "Progress",
-      field: "progress",
+      label: "Planned Effort",
+      field: "planned_effort",
       sort: "asc"
     },
     {
-      label: "Comments",
-      field: "comments",
+      label: "Actual Effort",
+      field: "actual_effort",
+      sort: "asc"
+    },
+    {
+      label: "Value",
+      field: "value",
+      sort: "asc"
+    },
+    {
+      label: "Owner",
+      field: "owner",
+      sort: "asc"
+    },
+    {
+      label: "Severity",
+      field: "severity",
+      sort: "asc"
+    },
+    {
+      label: "Type",
+      field: "type",
+      sort: "asc"
+    },
+    {
+      label: "Description",
+      field: "description",
       sort: "asc"
     },
     {
@@ -71,41 +93,37 @@ class DeliverablesTableList extends Component {
     deliveriablesListData.rows = this.props.deliverablesList;
     this.setState({ data: { ...deliveriablesListData } });
   }
+  handleSubmit = values => {
+    deliveriablesListData.rows.push(values);
+    this.setState({ data: { ...deliveriablesListData } });
+    this.props.toggle();
+  };
   render() {
+    const deliverablesBody = (
+      <DeliverablesListForm
+        toggle={this.props.toggle}
+        handleSubmit={this.handleSubmit}
+      />
+    );
     return (
-      <Card>
-        <CardHeader>
-          <div className="card-header-actions">
-            <i className="fa fa-window-close-o mr-2" />
-            <i className="fa fa-plus-circle mr-2" />
-            <i className="fa fa-save" />
-          </div>
-        </CardHeader>
-        <CardBody>
-          {/* <Table responsive>
-            <thead>
-              <tr>
-                <th>Deliverable Name</th>
-                <th>Workpackage</th>
-                <th>Type</th>
-                <th>Owner</th>
-                <th>Due Date</th>
-                <th>Status</th>
-                <th>Completion Date</th>
-                <th>Progress</th>
-                <th>Comments</th>
-                <th>Public</th>
-              </tr>
-            </thead>
-            <tbody>
-              <DeliverablesTableListItems />
-              <DeliverablesTableListItems />
-              <DeliverablesTableListItems />
-            </tbody>
-          </Table> */}
-          <ReactDataTableNew data={this.state.data} />
-        </CardBody>
-      </Card>
+      <React.Fragment>
+        <Modal
+          isOpen={this.props.isModal}
+          toggle={this.props.toggle}
+          header={"Add New Deliverable"}
+          body={deliverablesBody}
+          size="xl"
+        />
+        <Card>
+          <CardBody>
+            <ReactDataTableNew
+              data={this.state.data}
+              entries={10}
+              entriesOptions={[10, 20, 50, 100]}
+            />
+          </CardBody>
+        </Card>
+      </React.Fragment>
     );
   }
 }

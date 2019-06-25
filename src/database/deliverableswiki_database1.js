@@ -25,84 +25,108 @@ const data = props => ({
   ],
   deliverablesList: [
     {
-      deliverable_name: (
-        <a href="#/404" className="text-primary">
-          Design Documen1
-        </a>
-      ),
-      workpackage: (
-        <a href="#/404" className="text-primary">
-          WP01
-        </a>
-      ),
-      type: "Document",
+      d_id: "46188ebb-3e76-434e-8641-5951e194bf96",
+      number: "D2",
+      name: "Design.Code.01(01-May-2019)",
+      due_date: "12-09-2019",
+      completed: "0%",
+      status: "In Progress",
+      workpackage: "MODELING(1.03)",
+      planEffort: "240",
+      actualEffort: "0",
+      value: "USD 30,000.00",
       owner: (
-        <a href="#/404" className="text-primary">
-          Arindam
+        <a
+          href="#/resourcelist/eecb7a0e-c560-415a-9d7b-4657d0169adb"
+          className="text-primary"
+        >
+          @Suresh,
         </a>
       ),
-      due_date: "01-03-20",
-      status: "Transmitted",
-      // (
-      //   <select
-      //     name="status"
-      //     className="custom-select custom-select-sm"
-      //     defaultValue="closed"
-      //     onChange={({ target: { name, value } }) =>
-      //       props.handleChange(name, { id: "3as2d1f65asd4f", value })
-      //     }
-      //   >
-      //     <option value="transmitted">Transmitted</option>
-      //     <option value="not_started">Not Started</option>
-      //     <option value="in_progress">In Progress</option>
-      //     <option value="submitted">Submitted</option>
-      //     <option value="closed">Closed</option>
-      //   </select>
-      // ),
-      completion_date: "NULL",
-      progress: "NULL",
-      comments: "NULL",
-      public: "Y"
+      severity: "High",
+      type: "Drawing",
+      description:
+        "Updated digital and printed draft for cart path modifications",
+      d_status: "Overdue",
+      public: "N"
     },
     {
-      deliverable_name: (
-        <a href="#/404" className="text-primary">
-          Design Document
-        </a>
-      ),
-      workpackage: (
-        <a href="#/404" className="text-primary">
-          WP02
-        </a>
-      ),
-      type: "Document",
+      d_id: "6a6065b9-e308-46c0-a42c-650b58488dad",
+      number: "D1",
+      name: "Design.Code.01(01-May-2019)",
+      due_date: "12-09-2019",
+      completed: "0%",
+      status: "In Progress",
+      workpackage: "MODELING(1.03)",
+      planEffort: "240",
+      actualEffort: "0",
+      value: "USD 30,000.00",
       owner: (
-        <a href="#/404" className="text-primary">
-          SD
+        <a
+          href="#/resourcelist/eecb7a0e-c560-415a-9d7b-4657d0169adb"
+          className="text-primary"
+        >
+          @Suresh,
         </a>
       ),
-      due_date: "01-03-20",
-      status: "Closed",
-      // (
-      //   <select
-      //     name="status"
-      //     className="custom-select custom-select-sm"
-      //     defaultValue="transmitted"
-      //     onChange={({ target: { name, value } }) =>
-      //       props.handleChange(name, { id: "3as2d1f65", value })
-      //     }
-      //   >
-      //     <option value="transmitted">Transmitted</option>
-      //     <option value="not_started">Not Started</option>
-      //     <option value="in_progress">In Progress</option>
-      //     <option value="submitted">Submitted</option>
-      //     <option value="closed">Closed</option>
-      //   </select>
-      // ),
-      completion_date: "NULL",
-      progress: "NULL",
-      comments: "NULL",
-      public: "Y"
+      severity: "High",
+      type: "Drawing",
+      description:
+        "Updated digital and printed draft for cart path modifications",
+      d_status: "Upcoming",
+      public: "N"
+    },
+    {
+      d_id: "4ccd5179-dce4-4cf1-8af4-562aa16774a3",
+      number: "D3",
+      name: "Design 2.0",
+      due_date: "12-09-2019",
+      completed: "0%",
+      status: "In Progress",
+      workpackage: "MODELING(1.03)",
+      planEffort: "240",
+      actualEffort: "0",
+      value: "USD 30,000.00",
+      owner: (
+        <a
+          href="#/resourcelist/eecb7a0e-c560-415a-9d7b-4657d0169adb"
+          className="text-primary"
+        >
+          @Suresh,
+        </a>
+      ),
+      severity: "High",
+      type: "Drawing",
+      description:
+        "Updated digital and printed draft for cart path modifications",
+      d_status: "Not Started",
+      public: "N"
+    },
+    {
+      d_id: "1b81c733-2621-4388-8f2a-a029653ec9d2",
+      number: "D4",
+      name: "Digital and Printed Draft of cart path modifications",
+      due_date: "12-09-2019",
+      completed: "0%",
+      status: "In Progress",
+      workpackage: "MODELING(1.03)",
+      planEffort: "240",
+      actualEffort: "0",
+      value: "USD 30,000.00",
+      owner: (
+        <a
+          href="#/resourcelist/eecb7a0e-c560-415a-9d7b-4657d0169adb"
+          className="text-primary"
+        >
+          @Suresh,
+        </a>
+      ),
+      severity: "High",
+      type: "Drawing",
+      description:
+        "Updated digital and printed draft for cart path modifications",
+      d_status: "Overdue",
+      public: "N"
     }
   ]
 });

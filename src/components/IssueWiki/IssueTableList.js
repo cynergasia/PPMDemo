@@ -1,47 +1,74 @@
 import React, { Component } from "react";
-import { Card, CardHeader, CardBody } from "reactstrap";
+import { Card, CardBody } from "reactstrap";
 
 import ReactDataTableNew from "../ReactDataTableNew";
+import Modal from "../../helper/Modal";
+import IssueListForm from "./IssueListForm";
 
 const issueListData = {
   columns: [
     {
       label: "Issue Number",
-      field: "issue_number",
+      field: "number",
       sort: "asc"
     },
     {
       label: "Issue Name",
-      field: "issue_name",
+      field: "name",
       sort: "asc"
     },
     {
-      label: "Type",
-      field: "type",
+      label: "Title",
+      field: "title",
       sort: "asc"
     },
     {
-      label: "Assignee",
-      field: "assignee",
-      sort: "asc"
-    },
-    {
-      label: "Comments",
-      field: "comments",
-      sort: "asc"
-    },
-    {
-      label: "Activities Due",
-      field: "activities_due",
-      sort: "asc"
-    },
-    {
-      label: "Impact Type",
-      field: "impact_type",
+      label: "Due Date",
+      field: "due_date",
       sort: "asc"
     },
     {
       label: "% Complete",
+      field: "complete",
+      sort: "asc"
+    },
+    {
+      label: "Status",
+      field: "issue_status",
+      sort: "asc"
+    },
+    {
+      label: "Workpackage",
+      field: "workpackage",
+      sort: "asc"
+    },
+    {
+      label: "Planned Effort",
+      field: "planned_effort",
+      sort: "asc"
+    },
+    {
+      label: "Actual Effort",
+      field: "actual_effort",
+      sort: "asc"
+    },
+    {
+      label: "Assignee",
+      field: "owner",
+      sort: "asc"
+    },
+    {
+      label: "Issue Type",
+      field: "issue_type",
+      sort: "asc"
+    },
+    {
+      label: "Issue Severity",
+      field: "issue_severity",
+      sort: "asc"
+    },
+    {
+      label: "Description",
       field: "per_complete",
       sort: "asc"
     },
@@ -62,19 +89,34 @@ class IssueTableList extends Component {
     issueListData.rows = this.props.issueList;
     this.setState({ data: { ...issueListData } });
   }
+  handleSubmit = values => {
+    issueListData.rows.push(values);
+    this.setState({ data: { ...issueListData } });
+    this.props.toggle();
+  };
   render() {
+    const modalBody = (
+      <IssueListForm
+        handleSubmit={this.handleSubmit}
+        toggle={this.props.toggle}
+      />
+    );
     return (
       <React.Fragment>
+        <Modal
+          header={"Add New Issues"}
+          isOpen={this.props.isModal}
+          toggle={this.props.toggle}
+          size="xl"
+          body={modalBody}
+        />
         <Card>
-          <CardHeader>
-            <div className="card-header-actions">
-              <i className="fa fa-file-excel-o mr-2" />
-              <i className="fa fa-plus-circle mr-2" />
-              <i className="fa fa-pencil-square" />
-            </div>
-          </CardHeader>
           <CardBody>
-            <ReactDataTableNew data={this.state.data} />
+            <ReactDataTableNew
+              data={this.state.data}
+              entries={10}
+              entriesOptions={[10, 20, 50, 100]}
+            />
           </CardBody>
         </Card>
       </React.Fragment>
