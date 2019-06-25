@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import { Row, Col, FormGroup, Input, Button } from "reactstrap";
+import { Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import IssueTableList from "../../components/IssueWiki/IssueTableList";
 import getIssueList from "../../database/issuelist_database";
-
-import Modal from "../../helper/Modal";
 
 class IssueList extends Component {
   state = {
