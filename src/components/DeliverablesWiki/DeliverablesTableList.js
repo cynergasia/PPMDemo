@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Card, CardBody } from "reactstrap";
 import Modal from "../../helper/Modal";
-// import DeliverablesTableListItems from "./DeliverablesTableListItems";
 import ReactDataTableNew from "../ReactDataTableNew";
 import DeliverablesListForm from "./DeliverablesListForm";
 

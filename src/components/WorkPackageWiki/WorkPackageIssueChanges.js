@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody, TabContent, TabPane } from "reactstrap";
-// import { routesURL } from "../../constant/routesURL";
-// import { Link } from "react-router-dom";
+
 import ReactDataTableNew from "../ReactDataTableNew";
 
 let issueData = {

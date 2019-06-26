@@ -49,18 +49,19 @@ class Submenu extends Component {
     const appBody = document.querySelector(".app-body");
     try {
       appBody.scrollTo({
-        left: 0,
         top: scrollRef.offsetTop,
+        left: 0,
         behavior: "smooth"
       });
     } catch (e) {
       appBody.scrollTop = scrollRef.offsetTop;
+      appBody.scrollLeft = 0;
     }
   };
 
   render() {
     const { refs, name, link } = this.props;
-    console.log("refs",link);
+    console.log("refs", link);
     return (
       <nav className="sub-navbar navbar-fixed-top" aria-label="breadcrumb">
         <div className="row">

@@ -3,7 +3,6 @@ import { Bubble } from "react-chartjs-2";
 import { Card, CardBody, CardHeader } from "reactstrap";
 import { getStyle } from "@coreui/coreui/dist/js/coreui-utilities";
 import _maxBy from "lodash/maxBy";
-
 import database from "../../../database/database";
 
 // eslint-disable-next-line no-unused-vars

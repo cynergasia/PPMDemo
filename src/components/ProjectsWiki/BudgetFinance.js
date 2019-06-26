@@ -9,7 +9,6 @@ import {
   Input,
   Button
 } from "reactstrap";
-
 import ReactDataTableNew from "../ReactDataTableNew";
 import database from "../../database/database";
 import Modal from "../../helper/Modal";

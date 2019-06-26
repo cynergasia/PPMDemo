@@ -9,12 +9,13 @@ import Comments from "../../components/Comments";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import MeetingInformation from "../../components/Meeting/MeetingInformation";
 import MeetingDescription from "../../components/Meeting/MeetingDescription";
-import { scrollTop } from "../../utils";
 import meeting_database from "../../database/database";
 
 export const menulink = [
-  { meeting_register: ["Meeting Register", "PROJECT_WIKI", "fa fa-check-square"] },
-  { submit: ["Submit/Cancel", "500", "fa fa-sitemap"] }, 
+  {
+    meeting_register: ["Meeting Register", "PROJECT_WIKI", "fa fa-check-square"]
+  },
+  { submit: ["Submit/Cancel", "500", "fa fa-sitemap"] }
 ];
 
 class Meeting extends Component {
@@ -24,10 +25,6 @@ class Meeting extends Component {
   meetingMinutesRef = React.createRef();
   financialsRef = React.createRef();
   activityLogRef = React.createRef();
-
-  componentDidMount() {
-    scrollTop();
-  }
 
   render() {
     const { record_information } = meeting_database;
@@ -41,9 +38,16 @@ class Meeting extends Component {
             meetingMinutesRef: this.meetingMinutesRef,
             activityLogRef: this.activityLogRef
           }}
-          isMenu={{ finanical: false,wbs:false,issue_changes:false,deliverable:false,work_package:false}}
-          link={{meeting_register:true}}
-        //  name={workPackageInfo.name}
+          isMenu={{
+            finanical: false,
+            wbs: false,
+            issue_changes: false,
+            deliverable: false,
+            work_package: false,
+            meeting_minutes: false
+          }}
+          link={{ meeting_register: true }}
+          //  name={workPackageInfo.name}
         />
         {/* <MeetingMenu /> */}
         <div className="animated fadeIn row">

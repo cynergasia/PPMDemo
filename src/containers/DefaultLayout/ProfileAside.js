@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from "react";
 import { DropdownItem, DropdownMenu, DropdownToggle } from "reactstrap";
-
-import { AppHeaderDropdown } from "@coreui/react";
+import{ AppHeaderDropdown } from "@coreui/react";
 import img1 from "../../assets/img/avatars/6.jpg";
 import PropTypes from "prop-types";
 const propTypes = {
