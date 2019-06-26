@@ -1,15 +1,30 @@
-/* eslint-disable no-unused-vars */
 import React from "react";
-import routesURL from "../constant/routesURL";
+import { routesURL } from "../constant/routesURL";
+import { Link } from "react-router-dom";
+
+const publicSwitch = (id, value = false) => (
+  <div class="custom-control custom-switch switch-lg ">
+    <input
+      type="checkbox"
+      class="custom-control-input"
+      id={`switch-${id}`}
+      defaultChecked={value}
+    />
+    <label class="custom-control-label" for={`switch-${id}`} />
+  </div>
+);
 
 const data = props => ({
   issueList: [
     {
       i_id: "e5a84a85-30d8-406a-9c47-743e873dec94",
       number: (
-        <a className="text-primary" href="/issuewiki">
+        <Link
+          className="text-primary"
+          to={routesURL.ISSUE_WIKI + "e5a84a85-30d8-406a-9c47-743e873dec94"}
+        >
           I2
-        </a>
+        </Link>
       ),
       name: "issue1",
       title: "Model missing cart path modification",
@@ -30,7 +45,7 @@ const data = props => ({
       actual_effort: "0",
       issue_type: "Design",
       issue_severity: "Medium",
-      public: "N",
+      public: publicSwitch("28205", true),
       days: "25",
       description: ""
     },
@@ -38,9 +53,12 @@ const data = props => ({
     {
       i_id: "1c5d1ee3-edc8-4dc5-97a5-d70e0aee36bb",
       number: (
-        <a className="text-primary" href="/issuewiki">
+        <Link
+          className="text-primary"
+          to={routesURL.ISSUE_WIKI + "1c5d1ee3-edc8-4dc5-97a5-d70e0aee36bb"}
+        >
           I1
-        </a>
+        </Link>
       ),
       name: "issue2",
       title: "Model missing cart path modification",
@@ -61,7 +79,7 @@ const data = props => ({
       actual_effort: "0",
       issue_type: "Schedule",
       issue_severity: "Medium",
-      public: "N",
+      public: publicSwitch("97846"),
       days: "25",
       description: ""
     },
@@ -69,9 +87,12 @@ const data = props => ({
     {
       i_id: "5362a855-0195-4fa7-aa15-f18c1d711bb7",
       number: (
-        <a className="text-primary" href="/issuewiki">
+        <Link
+          className="text-primary"
+          to={routesURL.ISSUE_WIKI + "5362a855-0195-4fa7-aa15-f18c1d711bb7"}
+        >
           I3
-        </a>
+        </Link>
       ),
       name: "issue3",
       title: "Model missing cart path modification",
@@ -92,7 +113,7 @@ const data = props => ({
       actual_effort: "0",
       issue_type: "Budget",
       issue_severity: "Medium",
-      public: "N",
+      public: publicSwitch("3350"),
       days: "25",
       description: ""
     },
@@ -100,9 +121,12 @@ const data = props => ({
     {
       i_id: "bd88878e-1101-4ab6-a36d-beac2b684597",
       number: (
-        <a className="text-primary" href="/issuewiki">
+        <Link
+          className="text-primary"
+          to={routesURL.ISSUE_WIKI + "bd88878e-1101-4ab6-a36d-beac2b684597"}
+        >
           I5
-        </a>
+        </Link>
       ),
       name: "issue4",
       title: "Model missing cart path modification",
@@ -123,16 +147,19 @@ const data = props => ({
       actual_effort: "0",
       issue_type: "Invoice",
       issue_severity: "Medium",
-      public: "N",
+      public: publicSwitch("1328"),
       days: "35",
       description: ""
     },
     {
       i_id: "76acd683-7175-4c8c-98e8-d3a70886acad",
       number: (
-        <a className="text-primary" href="/issuewiki">
+        <Link
+          className="text-primary"
+          to={routesURL.ISSUE_WIKI + "76acd683-7175-4c8c-98e8-d3a70886acad"}
+        >
           I9
-        </a>
+        </Link>
       ),
       name: "issue9",
       title: "Model missing cart path modification",
@@ -153,7 +180,7 @@ const data = props => ({
       actual_effort: "0",
       issue_type: "Contract",
       issue_severity: "Medium",
-      public: "N",
+      public: publicSwitch("81038"),
       days: "35",
       description: ""
     },
@@ -161,9 +188,12 @@ const data = props => ({
     {
       i_id: "7239eb52-1060-429a-a1d5-66a0da2a2406",
       number: (
-        <a className="text-primary" href="/issuewiki">
+        <Link
+          className="text-primary"
+          to={routesURL.ISSUE_WIKI + "7239eb52-1060-429a-a1d5-66a0da2a2406"}
+        >
           I12
-        </a>
+        </Link>
       ),
       name: "issue0",
       title: "Model missing cart path modification",
@@ -184,7 +214,7 @@ const data = props => ({
       actual_effort: "0",
       issue_type: "Design",
       issue_severity: "Medium",
-      public: "N",
+      public: publicSwitch("16183", true),
       days: "65",
       description: ""
     },
@@ -192,9 +222,12 @@ const data = props => ({
     {
       i_id: "1d6aa4df-7651-487e-ac93-c07da567578d",
       number: (
-        <a className="text-primary" href="/issuewiki">
+        <Link
+          className="text-primary"
+          to={routesURL.ISSUE_WIKI + "1d6aa4df-7651-487e-ac93-c07da567578d"}
+        >
           I6
-        </a>
+        </Link>
       ),
       name: "issue900",
       title: "Model missing cart path modification",
@@ -215,7 +248,7 @@ const data = props => ({
       ),
       issue_type: "Contract",
       issue_severity: "Medium",
-      public: "N",
+      public: publicSwitch("38554"),
       days: "65",
       description: ""
     },

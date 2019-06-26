@@ -15,8 +15,43 @@ const changesListData = {
       sort: "asc"
     },
     {
-      label: "Type",
-      field: "type",
+      label: "Title",
+      field: "title",
+      sort: "asc"
+    },
+    {
+      label: "Due Date",
+      field: "due_date",
+      sort: "asc"
+    },
+    {
+      label: "% Complete",
+      field: "per_complete",
+      sort: "asc"
+    },
+    {
+      label: "Status",
+      field: "status",
+      sort: "asc"
+    },
+    {
+      label: "Workpackage",
+      field: "workpackage",
+      sort: "asc"
+    },
+    {
+      label: "Value",
+      field: "value",
+      sort: "asc"
+    },
+    {
+      label: "Planned Effort",
+      field: "planned_effort",
+      sort: "asc"
+    },
+    {
+      label: "Actual Effort",
+      field: "actual_effort",
       sort: "asc"
     },
     {
@@ -25,25 +60,21 @@ const changesListData = {
       sort: "asc"
     },
     {
-      label: "Comments",
-      field: "comments",
-      sort: "asc"
-    },
-    {
-      label: "Activities Due",
-      field: "activities_due",
-      sort: "asc"
-    },
-    {
       label: "Impact Type",
       field: "impact_type",
       sort: "asc"
     },
     {
-      label: "% Complete",
-      field: "per_complete",
+      label: "Severity",
+      field: "severity",
       sort: "asc"
     },
+    {
+      label: "Description",
+      field: "description",
+      sort: "asc"
+    },
+
     {
       label: "Public",
       field: "public",

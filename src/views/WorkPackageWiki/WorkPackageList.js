@@ -16,7 +16,7 @@ class WorkPackageList extends Component {
         start_date: item.start_date,
         end_date: item.end_date,
         owners: item.resources,
-        description: item.name,
+        description: item.description,
         status: item.status,
         deliverables: item.deliverable,
         issues: item.issues,

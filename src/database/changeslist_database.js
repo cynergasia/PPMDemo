@@ -2,6 +2,18 @@
 import React from "react";
 import routesURL from "../constant/routesURL";
 
+const publicSwitch = (id, value = false) => (
+  <div class="custom-control custom-switch switch-lg">
+    <input
+      type="checkbox"
+      class="custom-control-input"
+      id={`switch-${id}`}
+      defaultChecked={value}
+    />
+    <label class="custom-control-label" for={`switch-${id}`} />
+  </div>
+);
+
 const data = props => ({
   changesList: [
     {
@@ -20,7 +32,7 @@ const data = props => ({
       activities_due: "AD001 AD002",
       impact_type: "Schedule",
       per_complete: "",
-      public: "N"
+      public: publicSwitch("25883")
     },
     {
       change_number: 35181,
@@ -44,7 +56,7 @@ const data = props => ({
       activities_due: "AD003 AD004",
       impact_type: "Budget",
       per_complete: "",
-      public: "Y"
+      public: publicSwitch("96100", true)
     }
   ]
 });
