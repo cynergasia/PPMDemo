@@ -21,6 +21,7 @@ class TaskWiki extends Component {
           }}
           isMenu={{
             deliverable: false,
+            project:false,
             meeting_minutes: false,
             finanical: false,
             wbs: false,

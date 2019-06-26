@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 import { routesURL } from "../../constant/routesURL";
+
 export const menulist = [
   { comment: ["Comment", "activityLogRef", "cui-comment-square"] },
+  { project: ["Project Info", "projectInfoRef", "fa fa-sitemap"] },
   { wbs: ["WBS", "workPackageRef", "fa fa-sitemap"] },
   { work_package: ["Work Package", "workPackageRef", "fa fa-sitemap"] },
   { issue_changes: ["Issues/Changes", "issueChangesRef", "fa fa-refresh"] },
@@ -16,6 +18,7 @@ export const menulist = [
 
 export const keylist = [
   "comment",
+  "project",
   "wbs",
   "work_package",
   "issue_changes",
@@ -29,6 +32,7 @@ export const keylist = [
 class Submenu extends Component {
   state = {
     comment: true,
+    project:true,
     wbs: true,
     work_package: true,
     issue_changes: true,
@@ -36,7 +40,8 @@ class Submenu extends Component {
     meeting_minutes: true,
     finanical: true,
     activity_log: true,
-    follow: true
+    follow: true,
+    
   };
 
   componentDidMount() {
@@ -60,7 +65,7 @@ class Submenu extends Component {
   };
 
   render() {
-    const { refs, name, link, id } = this.props;
+    const { refs,name, link, id } = this.props; 
     return (
       <nav className="sub-navbar navbar-fixed-top" aria-label="breadcrumb">
         <div className="row">
@@ -90,6 +95,34 @@ class Submenu extends Component {
                   </li>
                 </>
               )}
+
+                {link === "deliverable" && (
+                  <>
+                    <li className="nav-head active " aria-current="page">
+                      <Link exact to="#">
+                        <i className="fa fa-user-secret" /> Assign
+                      </Link>
+                    </li>
+
+                      <li className="nav-head active " aria-current="page">
+                        <Link
+                          exact
+                          to="#"
+                          onClick={e => {
+                            this.scrollTo(e,refs['approvedStatus']);
+                          }}                         
+                        >
+                          <i className="fa fa-check-square" /> Approval Status
+                        </Link>                       
+                      </li>
+
+                      <li className="nav-head active" aria-current="page">
+                        <Link exact to={routesURL.PAGE_NOT_FOUND}>
+                          <i className="fa fa-sitemap" /> Save
+                        </Link>
+                      </li>
+                      </>
+                   )}
 
               {keylist.map(
                 (list, index) =>

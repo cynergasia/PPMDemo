@@ -14,6 +14,7 @@ import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 class DeliverablesWiki extends Component {
   approvedStatus = React.createRef();
   activityLogRef = React.createRef();
+  deliverableRef = React.createRef();
 
   render() {
     const { id } = this.props.match.params;
@@ -32,19 +33,39 @@ class DeliverablesWiki extends Component {
           }}
           isMenu={{ finanical: false,wbs:false,issue_changes:false,work_package:false}}
         /> */}
-        <DeliverablesWikiMenu
+         <SubMenu
+          refs={{    
+            approvedStatus: this.approvedStatus,           
+            deliverableRef: this.deliverableRef,       
+            activityLogRef: this.activityLogRef
+          }}
+         //temp={{approvedStatus: this.approvedStatus}  }
+          isMenu={{
+            project:false,
+            meeting_minutes:false,  
+            finanical: false,          
+            wbs: false,
+            issue_changes: false,           
+            work_package: false,   
+               
+          }}
+          name={deliverInfo[0].name}
+          link={"deliverable"}
+          //  name={workPackageInfo.name}
+        />
+        {/* <DeliverablesWikiMenu
           refs={{
             approvedStatus: this.approvedStatus,
             activityLogRef: this.activityLogRef
           }}
           name={deliverInfo[0].name}
-        />
+        /> */}
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">
             <Row>
-              <Col xs="12">
+              <div className="col-12" ref={this.deliverableRef} >
                 <DeliverablesInformation deliverInfo={deliverInfo[0]} />
-              </Col>
+              </div>
               <Col xs="12">
                 <DeliverablesActivities activities={activities} />
               </Col>

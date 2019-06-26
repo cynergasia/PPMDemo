@@ -36,14 +36,14 @@ class Meeting extends Component {
             activityLogRef: this.activityLogRef
           }}
           isMenu={{
-            finanical: false,
+            project:false,
+            finanical: false,          
             wbs: false,
             issue_changes: false,
             deliverable: false,
-            work_package: false,
-            meeting_minutes: false
+            work_package: false,         
           }}
-          link={{ meeting_register: true }}
+          link={"meeting"}
           //  name={workPackageInfo.name}
         />
 

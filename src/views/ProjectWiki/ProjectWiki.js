@@ -20,6 +20,7 @@ import BudgetFinance from "../../components/ProjectsWiki/BudgetFinance";
 class ProjectWiki extends Component {
   // reference variables
   issueChangesRef = React.createRef();
+  projectInfoRef = React.createRef();
   workPackageRef = React.createRef();
   meetingMinutesRef = React.createRef();
   financialsRef = React.createRef();
@@ -59,12 +60,13 @@ class ProjectWiki extends Component {
         <SubMenu
           refs={{
             issueChangesRef: this.issueChangesRef,
+            projectInfoRef:this.projectInfoRef,
             workPackageRef: this.workPackageRef,
             meetingMinutesRef: this.meetingMinutesRef,
             financialsRef: this.financialsRef,
             activityLogRef: this.activityLogRef
           }}
-          isMenu={{
+          isMenu={{           
             deliverable: false,
             work_package: false,
             approved_status: false
@@ -75,7 +77,7 @@ class ProjectWiki extends Component {
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">
             <div className="row">
-              <div className="col-12">
+              <div className="col-12" ref={this.projectInfoRef}>
                 <BasicInformation
                   projectID={id}
                   basicProjectInfo={basicProjectInfo}

@@ -17,7 +17,7 @@ const labels = [
 
 const datasets = [
   {
-    data: [5, 0, 0, 0, 3, 0, 1],
+    data: [8, 0, 0, 0, 13, 0, 5],
     backgroundColor: [
       "#edc02d", // Yellow
       "#bf2511", // Red

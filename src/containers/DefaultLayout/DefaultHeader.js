@@ -17,7 +17,7 @@ import {
   AppHeaderDropdown,
   AppNavbarBrand
 } from "@coreui/react";
-import logo from "../../assets/img/brand/logo.png";
+import logo from "../../assets/img/brand/Synergasia.png";
 import sygnet from "../../assets/img/brand/sygnet.svg";
 import Popup from "./Popup";
 import { routesURL } from "../../constant/routesURL";
@@ -56,8 +56,8 @@ class DefaultHeader extends Component {
         {/* <AppSidebarToggler className="d-lg-none" display="md" mobile /> */}
         {/* <AppAsideToggler className="d-lg-none" display="md" mobile /> */}
         <AppNavbarBrand
-          full={{ src: logo, width: 30, height: 30, alt: "ANS Corp" }}
-          minimized={{ src: sygnet, width: 30, height: 30, alt: "ANS Corp" }}
+          full={{ src: logo,  height: 30, alt: "ANS Corp" }}
+          minimized={{ src: sygnet,  height: 30, alt: "ANS Corp" }}
         />
 
         <p className="project-name">ANS Corp - {this.props.title} </p>

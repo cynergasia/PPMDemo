@@ -23,7 +23,7 @@
         "per_complete": "68%",
         "active_workpackages": "2",
         "open_activities": "4",
-        "open_issues": "3",
+        "open_issues": "6",
         "pending_risks": "3",
         "pending_changes": "1"
       },
@@ -196,13 +196,13 @@
 
       "issueRegister": {
         "status": {
-          "overdue": 2,
+          "overdue": 4,
           "actionRequired": 0,
           "onHold": 0,
           "atRisk": 0,
           "completed": 3,
           "notStarted": 0,
-          "started": 1
+          "started": 2
         }
       },
 
@@ -1473,7 +1473,7 @@
     "per_complete": "76%",
     "active_workpackages": "9",
     "open_activities": "11",
-    "open_issues": "6",
+    "open_issues": "13",
     "pending_risks": "8",
     "pending_changes": "5"
   },
@@ -1836,13 +1836,13 @@
   },
   "issueRegister": {
     "status": {
-      "overdue": 5,
+      "overdue": 8,
       "actionRequired": 0,
       "onHold": 0,
       "atRisk": 0,
-      "completed": 3,
+      "completed": 13,
       "notStarted": 0,
-      "started": 1
+      "started": 5
     }
   },
   "financialAnalysis": {
