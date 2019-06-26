@@ -130,14 +130,14 @@ class WorkPackages extends Component {
                         Overdue Workpackages :
                       </ListGroupItemHeading>
                       {workPackages.map(
-                        ({ name, id }) =>
-                          ["Admin", "Design"].includes(name) && (
+                        ({ wbsType, id }) =>
+                          ["Admin", "Design"].includes(wbsType) && (
                             <React.Fragment>
                               <Link
                                 to={routesURL.WORKPACKAGE_WIKI + id}
                                 className="text-capitalize"
                               >
-                                {name}
+                                {wbsType}
                               </Link>
                               <br />
                             </React.Fragment>
@@ -151,14 +151,14 @@ class WorkPackages extends Component {
                       </ListGroupItemHeading>
 
                       {workPackages.map(
-                        ({ id, name }) =>
-                          ["Modelling"].includes(name) && (
+                        ({ id, wbsType }) =>
+                          ["Modelling"].includes(wbsType) && (
                             <React.Fragment>
                               <Link
                                 to={routesURL.WORKPACKAGE_WIKI + id}
                                 className="text-capitalize"
                               >
-                                {name}
+                                {wbsType}
                               </Link>
                               <br />
                             </React.Fragment>
@@ -171,21 +171,24 @@ class WorkPackages extends Component {
                       </ListGroupItemHeading>
 
                       {workPackages.map(
-                        ({ name, id }) =>
-                          ["Rebar"].includes(name) && (
+                        ({ wbsType, id }) =>
+                          ["Rebar"].includes(wbsType) && (
                             <React.Fragment>
                               <Link
                                 to={routesURL.WORKPACKAGE_WIKI + id}
                                 className="text-capitalize"
                               >
-                                {name}
+                                {wbsType}
                               </Link>
                               <br />
                             </React.Fragment>
                           )
                       )}
-                      <br/>
-                    <Link to={routesURL.WORKPACKAGE_LIST}> All Workpackage  ... </Link>
+                      <br />
+                      <Link to={routesURL.WORKPACKAGE_LIST}>
+                        {" "}
+                        All Workpackage ...{" "}
+                      </Link>
                     </ListGroupItemText>
                   </ListGroupItem>
                 </ListGroup>
