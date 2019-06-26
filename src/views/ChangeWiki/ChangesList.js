@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
-import getChangesList from "../../database/changeslist_database";
+import changewiki_database from "../../database/changewiki_database";
 import ChangeTableList from "../../components/ChangeWiki/ChangeTableList";
 
 class ChangesList extends Component {
   render() {
-    const { changesList } = getChangesList();
+    const { changes } = changewiki_database;
+    const newChangeList = changes.map(item => {
+      const { c_id, days, status, ...rest } = item;
+      return { ...rest };
+    });
     return (
       <React.Fragment>
         <div className="animated fadeIn">
@@ -30,7 +34,7 @@ class ChangesList extends Component {
           </Row>
           <Row>
             <Col sm="12" md="12" lg="12">
-              <ChangeTableList changesList={changesList} />
+              <ChangeTableList changesList={newChangeList} />
             </Col>
           </Row>
         </div>

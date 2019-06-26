@@ -34,7 +34,7 @@ class ChangeDescription extends Component {
               <tbody>
                 <tr>
                   <td className="basicinfo text-left">
-                    <div>Issue Number </div>
+                    <div>Change Number </div>
                   </td>
                   <td className="text-left">
                     <div>{number}</div>
