@@ -32,7 +32,7 @@ class Meetings extends Component {
                   </Link>
                   <br />
                   <Link to={routesURL.MEETING}>
-                    20-Jun-2019 : Review Design with Client{" "}
+                    29-Jun-2019 : Review Design with Client{" "}
                   </Link>
                   <br />
                   <Link to={routesURL.MEETING_LIST}>More..</Link>

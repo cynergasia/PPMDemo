@@ -21,7 +21,7 @@ class DeliverablesWikiMenu extends Component {
             <div className="col-12 col-sm-12 col-lg-12">
               <ol className="breadcrumb left-breadcrumb">
                 <li className="nav-head active" area-current="page">
-                  <i className="fa fa-map-marker" /> <Link to="/projectwiki"> Extensions N/Cape Mall Phase 3 (60453005)</Link>:{name}
+                  <i className="fa fa-map-marker" /> <Link to="/projectwiki/60453005"> Extensions N/Cape Mall Phase 3 (60453005)</Link>:{name}
                 </li>
               </ol>
               <ol className="breadcrumb left-breadcrumb">

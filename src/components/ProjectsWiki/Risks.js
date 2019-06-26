@@ -27,11 +27,11 @@ class Risks extends Component {
               <ListGroupItem>
                 <ListGroupItemHeading>High Risk Items : </ListGroupItemHeading>
                 <ListGroupItemText className="mb-0">
-                  <Link to={routesURL.PAGE_NOT_FOUND}> Risk1</Link>
+                  <Link to={routesURL.RISK_WIKI}> Risk1</Link>
                 </ListGroupItemText>
 
                 <ListGroupItemText className="mb-0">
-                  <Link to={routesURL.PAGE_NOT_FOUND}> Risk9</Link>
+                  <Link to={routesURL.RISK_WIKI}> Risk9</Link>
                 </ListGroupItemText>
                 <br />
                 <ListGroupItemHeading>
@@ -39,16 +39,16 @@ class Risks extends Component {
                   Medium Risk Items :{" "}
                 </ListGroupItemHeading>
                 <ListGroupItemText className="mb-0">
-                  <Link to={routesURL.PAGE_NOT_FOUND}>Risk4</Link>
+                  <Link to={routesURL.RISK_WIKI}>Risk4</Link>
                 </ListGroupItemText>
 
                 <ListGroupItemText className="mb-0">
-                  <Link to={routesURL.PAGE_NOT_FOUND}> Risk0</Link>
+                  <Link to={routesURL.RISK_WIKI}> Risk0</Link>
                 </ListGroupItemText>
 
                 <br />
                 <ListGroupItemText className="mb-0">
-                  <Link to={routesURL.PAGE_NOT_FOUND}> More... </Link>
+                  <Link to={routesURL.RISK_LIST}> More... </Link>
                 </ListGroupItemText>
               </ListGroupItem>
             </ListGroup>

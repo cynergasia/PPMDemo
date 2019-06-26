@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
+import Financial from "../../components/ProjectsWiki/Financial";
 import {
   Card,
   CardHeader,
@@ -122,7 +123,7 @@ class BudgetFinance extends Component {
                   }`}
                   onClick={() => this.toggle("2")}
                 >
-                  Finance
+                 Forcast
                 </a>
               </li>
               <li className="nav-item">
@@ -131,9 +132,10 @@ class BudgetFinance extends Component {
                   className={`${
                     activeTab === "3" ? "active nav-link" : "nav-link"
                   }`}
-                  onClick={() => this.toggle("2")}
+                  onClick={() => this.toggle("3")}
                 >
-                  Forcast
+                 Financials
+                  
                 </a>
               </li>
             </ul>
@@ -163,8 +165,9 @@ class BudgetFinance extends Component {
               Finance
               </TabPane>
 
-              <TabPane tabId="2">
-              Forecast
+              <TabPane tabId="3">
+              <Financial/>
+
               </TabPane>
             </TabContent>
           </CardBody>

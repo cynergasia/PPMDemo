@@ -16,7 +16,7 @@ class ActivitiesTableList extends Component {
                   <div className="col-12 col-sm-12 col-lg-12">
                     <ol className="breadcrumb left-breadcrumb">
                       <li className="nav-head active" area-current="page">
-                        <Link to="/projectWiki">
+                        <Link to="/projectWiki/60453005">
                           <i className="fa fa-map-marker" />Extensions N/Cape Mall Phase 3 (60453005)
                         </Link>
                       </li>

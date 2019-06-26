@@ -7,7 +7,6 @@ import Attachments from "../../components/Attachments";
 import WorkPackages from "../../components/ProjectsWiki/WorkPackages";
 import IssueChanges from "../../components/ProjectsWiki/IssueChanges";
 import Meetings from "../../components/ProjectsWiki/Meetings";
-import Financial from "../../components/ProjectsWiki/Financial";
 import Risks from "../../components/ProjectsWiki/Risks";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import projectwiki_database from "../../database/projectwiki_database";
@@ -108,11 +107,7 @@ class ProjectWiki extends Component {
 
               <div className="col-12" ref={this.financialsRef}>
                 <BudgetFinance />
-              </div>
-
-              <div className="col-12" ref={this.financialsRef}>
-                <Financial />
-              </div>
+              </div>            
 
               <div className="col-12">
                 <Risks />

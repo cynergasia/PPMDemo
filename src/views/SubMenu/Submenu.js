@@ -66,7 +66,7 @@ class Submenu extends Component {
             <ol className="breadcrumb left-breadcrumb">
               <li className="nav-head active" area-current="page">
                 <i className="fa fa-map-marker" />
-                <Link to={routesURL.PROJECT_WIKI}>
+                <Link to={routesURL.PROJECT_WIKI+"60453005"}>
                   {" "}
                   Extensions N/Cape Mall Phase 3 (60453005)
                 </Link>{" "}
