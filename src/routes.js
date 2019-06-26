@@ -19,7 +19,7 @@ const WorkPackageList = React.lazy(() =>
 const TaskWiki = React.lazy(() => import("./views/TaskWiki/TaskWiki"));
 const Meeting = React.lazy(() => import("./views/Meetings/Meeting"));
 
-///Reamaing Pages
+
 const MettingList = React.lazy(() => import("./views/Meetings/MettingList"));
 const ActivitiesList = React.lazy(() =>
   import("./views/Activities/ActivitiesList")

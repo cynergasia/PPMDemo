@@ -131,7 +131,7 @@ class WorkPackages extends Component {
                       </ListGroupItemHeading>
                       {workPackages.map(
                         ({ name, id }) =>
-                          ["Admin", "Design"].includes(name) && (
+                          ["Design"].includes(name) && (
                             <React.Fragment>
                               <Link
                                 to={routesURL.WORKPACKAGE_WIKI + id}
@@ -147,7 +147,7 @@ class WorkPackages extends Component {
                       <br />
                       <ListGroupItemHeading>
                         {" "}
-                        Upcoming Workpackages :
+                        In Progress Workpackages :
                       </ListGroupItemHeading>
 
                       {workPackages.map(
@@ -167,7 +167,7 @@ class WorkPackages extends Component {
                       <br />
                       <ListGroupItemHeading>
                         {" "}
-                        Workpackage Not started:{" "}
+                        Not started Workpackage :{" "}
                       </ListGroupItemHeading>
 
                       {workPackages.map(

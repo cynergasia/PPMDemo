@@ -123,7 +123,7 @@ class BudgetFinance extends Component {
                   }`}
                   onClick={() => this.toggle("2")}
                 >
-                 Forcast
+                 Forecast
                 </a>
               </li>
               <li className="nav-item">
