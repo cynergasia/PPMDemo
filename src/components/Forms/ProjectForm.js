@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Row, Col, Input, FormGroup, Button } from "reactstrap";
-import DatePicker from "react-datepicker";
 
 class ProjectForm extends Component {
   state = {

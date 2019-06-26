@@ -1,15 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
+import Financial from "../../components/ProjectsWiki/Financial";
 import {
   Card,
   CardHeader,
   CardBody,
   TabContent,
   TabPane,
-  Input,
-  Button
+  Input
 } from "reactstrap";
-import ReactDataTableNew from "../ReactDataTableNew";
 import database from "../../database/database";
 import Modal from "../../helper/Modal";
 import { formatDate } from "../../helper/TextFormat";
@@ -93,24 +92,6 @@ class BudgetFinance extends Component {
           value={this.state.comment}
           onChange={this.handleChangeComment}
         />
-        <div className="mt-3">
-          <Button
-            onClick={this.addComment}
-            color="success"
-            size="sm"
-            className="m-0 float-right"
-          >
-            Add
-          </Button>
-          <Button
-            onClick={this.toggleModal}
-            color="danger"
-            size="sm"
-            className="m-0"
-          >
-            Close
-          </Button>
-        </div>
       </React.Fragment>
     );
     return (
@@ -139,16 +120,24 @@ class BudgetFinance extends Component {
                   }`}
                   onClick={() => this.toggle("2")}
                 >
-                  Finance
+                  Forcast
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  data-toggle="tab"
+                  className={`${
+                    activeTab === "3" ? "active nav-link" : "nav-link"
+                  }`}
+                  onClick={() => this.toggle("3")}
+                >
+                  Financials
                 </a>
               </li>
             </ul>
 
             <div className="card-header-actions">
-              <i
-                className="fa fa-plus-circle text-primary mr-2 cursor-pointer"
-                onClick={this.toggleModal}
-              />
+              <i className="fa fa-plus-circle text-primary mr-2 cursor-pointer" />
               <i className="fa fa-pencil-square" />
             </div>
             <Modal
@@ -160,47 +149,12 @@ class BudgetFinance extends Component {
           </CardHeader>
           <CardBody>
             <TabContent activeTab={activeTab} className="border-0">
-              <TabPane tabId="1">
-                {/* <ReactDataTableNew
-                  data={this.state.commentsData}
-                  paging={false}
-                  searching={false}
-                /> */}
-                {database.comments.map(data => (
-                  <div className="message">
-                    <div className=" mr-3 float-left">
-                      <div className="avatar">
-                        <img
-                          src={"assets/img/avatars/7.jpg"}
-                          className="img-avatar"
-                          alt="admin@bootstrapmaster.com"
-                        />
-                        <span className="avatar-status badge-success" />
-                      </div>
-                    </div>
-                    <div>
-                      <small className="text-muted">{data.by}</small>
-                      <small className="text-muted float-right mt-1">
-                        {data.date}
-                      </small>
-                    </div>
-                    <div className="text-truncate font-weight-bold text-muted">
-                      {data.comment}
-                    </div>
-                    {/* <small className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt...
-                  </small> */}
-                    <hr />
-                  </div>
-                ))}
-              </TabPane>
+              <TabPane tabId="1">Budget</TabPane>
 
-              <TabPane tabId="2">
-                <ReactDataTableNew
-                  data={this.state.activityLogData}
-                  paging={false}
-                  searching={false}
-                />
+              <TabPane tabId="2">Finance</TabPane>
+
+              <TabPane tabId="3">
+                <Financial />
               </TabPane>
             </TabContent>
           </CardBody>

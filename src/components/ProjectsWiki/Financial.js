@@ -14,15 +14,7 @@ class Financial extends Component {
       overdue
     } = database.financialDetails;
     return (
-      <React.Fragment>
-        <Card>
-          <CardHeader>
-            Financials
-            <div className="card-header-actions">
-              <i className="fa fa-pencil-square" />
-            </div>
-          </CardHeader>
-          <CardBody>
+      <React.Fragment>     
             <Row className="financial-detail">
               <Col sm="12" md="6" lg="5">
                 <label>
@@ -57,8 +49,7 @@ class Financial extends Component {
                 </label>
               </Col>
             </Row>
-          </CardBody>
-        </Card>
+         
       </React.Fragment>
     );
   }

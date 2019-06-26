@@ -1,11 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
-import MeetingMenu from "../SubMenu/MeetingMenu";
 import SubMenu from "../SubMenu/Submenu";
 import RecordInformation from "../../components/RecordInformation";
 import Attachments from "../../components/Attachments";
-import Comments from "../../components/Comments";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import MeetingInformation from "../../components/Meeting/MeetingInformation";
 import MeetingDescription from "../../components/Meeting/MeetingDescription";
@@ -28,7 +26,6 @@ class Meeting extends Component {
 
   render() {
     const { record_information } = meeting_database;
-    //{menulink,data:["meeting_register","submit"]
     return (
       <React.Fragment>
         <SubMenu
@@ -49,7 +46,7 @@ class Meeting extends Component {
           link={{ meeting_register: true }}
           //  name={workPackageInfo.name}
         />
-        {/* <MeetingMenu /> */}
+
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">
             <Row>

@@ -60,8 +60,7 @@ class Submenu extends Component {
   };
 
   render() {
-    const { refs, name, link } = this.props;
-    console.log("refs", link);
+    const { refs, name, link, id } = this.props;
     return (
       <nav className="sub-navbar navbar-fixed-top" aria-label="breadcrumb">
         <div className="row">
@@ -69,7 +68,7 @@ class Submenu extends Component {
             <ol className="breadcrumb left-breadcrumb">
               <li className="nav-head active" area-current="page">
                 <i className="fa fa-map-marker" />
-                <Link to={routesURL.PROJECT_WIKI}>
+                <Link to={routesURL.PROJECT_WIKI + "60453005"}>
                   {" "}
                   Extensions N/Cape Mall Phase 3 (60453005)
                 </Link>{" "}
@@ -77,12 +76,7 @@ class Submenu extends Component {
               </li>
             </ol>
             <ol className="breadcrumb left-breadcrumb">
-              {/* <li className="nav-head active" aria-current="page">
-                    <Link exact to="/500">
-                      <i className="fa fa-edit" /> Edit
-                    </Link>
-                  </li> */}
-              {link && (
+              {link === "meeting" && (
                 <>
                   <li className="nav-head active" aria-current="page">
                     <Link exact to={routesURL.MEETING_LIST}>
@@ -100,11 +94,20 @@ class Submenu extends Component {
               {keylist.map(
                 (list, index) =>
                   this.state[list] && (
-                    <li
-                      key={index}
-                      className="nav-head active"
-                      aria-current="page"
-                    >
+                    <li className="nav-head active" aria-current="page">
+                      {link === "projectwiki" &&
+                        menulist[index][list][0] === "Follow" && (
+                          <>
+                            <Link
+                              exact
+                              to={routesURL.PSR + id}
+                              className="cursor-pointer"
+                            >
+                              <i className="fa fa-check-square" /> PSR{" "}
+                              <i className="px-2" />
+                            </Link>
+                          </>
+                        )}
                       <Link
                         to="#"
                         onClick={e => {

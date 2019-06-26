@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Card, CardBody } from "reactstrap";
 import ReactDataTableNew from "../ReactDataTableNew";
 import Modal from "../../helper/Modal";
-import IssueListForm from "./IssueListForm";
+//import IssueListForm from "./IssueListForm";
 
 const issueListData = {
   columns: [
@@ -95,10 +95,11 @@ class IssueTableList extends Component {
   };
   render() {
     const modalBody = (
-      <IssueListForm
-        handleSubmit={this.handleSubmit}
-        toggle={this.props.toggle}
-      />
+      <div/>
+      // <IssueListForm
+      //   handleSubmit={this.handleSubmit}
+      //   toggle={this.props.toggle}
+      // />
     );
     return (
       <React.Fragment>

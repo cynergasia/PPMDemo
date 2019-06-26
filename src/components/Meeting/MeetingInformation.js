@@ -31,8 +31,7 @@ class MeetingInformation extends Component {
                   </label>
                   <div className="col">
 
-                    <select name="template" className="form-control">
-                      <option>Select</option>
+                    <select name="template" className="form-control">                     
                       <option>Professional</option>
                       <option>Detailed</option>
                       <option>Simple</option>
@@ -45,8 +44,7 @@ class MeetingInformation extends Component {
                     Frequency :
                   </label>
                   <div className="col">
-                    <select name="frequency" className="form-control">
-                    <option>Select</option>
+                    <select name="frequency" className="form-control">                   
                     <option>Daily</option>
                     <option>Weekly</option>
                     <option>Monthly</option>
@@ -70,6 +68,23 @@ class MeetingInformation extends Component {
                     />
                   </div>
                 </div>
+                <div className="form-group row">
+                  <label for="date" className="col col-form-label">
+                    Strat on :
+                  </label>
+                  <div className="col">
+                    <DatePicker
+                      selected={this.state.startDate}
+                      onChange={this.handleChange}
+                      className="form-control"
+                      showYearDropdown
+                      showMonthDropdown
+                      useShortMonthInDropdown
+                      todayButton={"Today"}
+                      dateFormat="MM-dd-yyyy"
+                    />
+                  </div>
+                </div>
               </div>
               <div className="col-12 col-md-6">
                 <div className="form-group row">
@@ -77,8 +92,7 @@ class MeetingInformation extends Component {
                     Recurring :
                   </label>
                   <div className="col">
-                    <select name="recurring" className="form-control">
-                    <option>Select</option>
+                    <select name="recurring" className="form-control">                   
                     <option>Y</option>
                     <option>N</option>
                     </select>
@@ -110,6 +124,18 @@ class MeetingInformation extends Component {
                       type="text"
                       className="form-control"
                       name="location"
+                    />
+                  </div>
+                </div>
+                <div className="form-group row">
+                  <label for="date" className="col col-form-label">
+                    Duration :
+                  </label>
+                  <div className="col">
+                  <input
+                      type="text"
+                      className="form-control"
+                      name="duration"
                     />
                   </div>
                 </div>
