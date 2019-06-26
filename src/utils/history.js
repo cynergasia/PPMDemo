@@ -1,4 +1,4 @@
-import routesData from "./routes";
+import routesData from "../routes";
 
 let _routes = {};
 routesData.forEach(({ path, title }) => {

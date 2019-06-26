@@ -7,10 +7,8 @@ import {
   CardBody,
   TabContent,
   TabPane,
-  Input,
- 
+  Input
 } from "reactstrap";
-
 import database from "../../database/database";
 import Modal from "../../helper/Modal";
 import { formatDate } from "../../helper/TextFormat";
@@ -94,7 +92,6 @@ class BudgetFinance extends Component {
           value={this.state.comment}
           onChange={this.handleChangeComment}
         />
-       
       </React.Fragment>
     );
     return (
@@ -134,17 +131,13 @@ class BudgetFinance extends Component {
                   }`}
                   onClick={() => this.toggle("3")}
                 >
-                 Financials
-                  
+                  Financials
                 </a>
               </li>
             </ul>
 
             <div className="card-header-actions">
-              <i
-                className="fa fa-plus-circle text-primary mr-2 cursor-pointer"
-                
-              />
+              <i className="fa fa-plus-circle text-primary mr-2 cursor-pointer" />
               <i className="fa fa-pencil-square" />
             </div>
             <Modal
@@ -156,18 +149,12 @@ class BudgetFinance extends Component {
           </CardHeader>
           <CardBody>
             <TabContent activeTab={activeTab} className="border-0">
-              <TabPane tabId="1">
-              Budget
-        
-              </TabPane>
+              <TabPane tabId="1">Budget</TabPane>
 
-              <TabPane tabId="2">
-              Finance
-              </TabPane>
+              <TabPane tabId="2">Finance</TabPane>
 
               <TabPane tabId="3">
-              <Financial/>
-
+                <Financial />
               </TabPane>
             </TabContent>
           </CardBody>

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody } from "reactstrap";
-
 import ReactDataTableNew from "../ReactDataTableNew";
 
 const changesListData = {

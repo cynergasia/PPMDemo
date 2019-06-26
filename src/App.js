@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
-// import { renderRoutes } from 'react-router-config';
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import "./App.scss";
 import "./index.css";
-import { scrollTop } from "./utils";
-import "./history";
+import "./utils/history";
+import "./utils/scrollTop";
 
 const loading = () => (
   <div className="animated fadeIn pt-3 text-center">Loading...</div>
@@ -24,10 +23,6 @@ const Page500 = React.lazy(() => import("./views/Pages/Page500"));
 // );
 
 class App extends Component {
-  componentDidMount() {
-    scrollTop();
-  }
-
   render() {
     return (
       <HashRouter>

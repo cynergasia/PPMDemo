@@ -3,14 +3,14 @@ import { Row, Col } from "reactstrap";
 import SubMenu from "../SubMenu/Submenu";
 import RecordInformation from "../../components/RecordInformation";
 import Attachments from "../../components/Attachments";
-// import Comments from "../../components/Comments";
-// import ActivityLog from "../../components/ActivityLog";
+
+
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import WorkPackageInformation from "../../components/WorkPackageWiki/WorkPackageInformation";
 import WorkPackageActivities from "../../components/WorkPackageWiki/WorkPackageActivities";
 import WorkPackageIssueChanges from "../../components/WorkPackageWiki/WorkPackageIssueChanges";
 import WorkPackageDeliverables from "../../components/WorkPackageWiki/WorkPackageDeliverables";
-// import WorkPackageMeeting from "../../components/WorkPackageWiki/WorkPackageMeeting";
+
 import Meetings from "../../components/ProjectsWiki/Meetings";
 import projectwiki_database from "../../database/projectwiki_database";
 import workpackagewiki_database from "../../database/workpackagewiki_database";

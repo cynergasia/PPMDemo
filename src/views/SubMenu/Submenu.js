@@ -47,18 +47,20 @@ class Submenu extends Component {
     e.persist();
     const scrollRef = ReactDOM.findDOMNode(ref);
     const appBody = document.querySelector(".app-body");
-    try {    appBody.scrollTo({
-        left: 0,
+    try {
+      appBody.scrollTo({
         top: scrollRef.offsetTop,
+        left: 0,
         behavior: "smooth"
       });
     } catch (e) {
       appBody.scrollTop = scrollRef.offsetTop;
+      appBody.scrollLeft = 0;
     }
   };
 
   render() {
-    const { refs, name, link,id } = this.props;  
+    const { refs, name, link, id } = this.props;
     return (
       <nav className="sub-navbar navbar-fixed-top" aria-label="breadcrumb">
         <div className="row">
@@ -66,7 +68,7 @@ class Submenu extends Component {
             <ol className="breadcrumb left-breadcrumb">
               <li className="nav-head active" area-current="page">
                 <i className="fa fa-map-marker" />
-                <Link to={routesURL.PROJECT_WIKI+"60453005"}>
+                <Link to={routesURL.PROJECT_WIKI + "60453005"}>
                   {" "}
                   Extensions N/Cape Mall Phase 3 (60453005)
                 </Link>{" "}
@@ -74,8 +76,7 @@ class Submenu extends Component {
               </li>
             </ol>
             <ol className="breadcrumb left-breadcrumb">
-            
-              {link==="meeting" && (
+              {link === "meeting" && (
                 <>
                   <li className="nav-head active" aria-current="page">
                     <Link exact to={routesURL.MEETING_LIST}>
@@ -89,21 +90,24 @@ class Submenu extends Component {
                   </li>
                 </>
               )}
-             
 
-             
               {keylist.map(
                 (list, index) =>
                   this.state[list] && (
                     <li className="nav-head active" aria-current="page">
-                       {link==="projectwiki" && menulist[index][list][0]==="Follow" && (
-                          <>         
-                             <Link exact to={routesURL.PSR + id} className="cursor-pointer">
-                                <i className="fa fa-check-square"/> PSR <i className="px-2"/>
-                               
-                              </Link>
+                      {link === "projectwiki" &&
+                        menulist[index][list][0] === "Follow" && (
+                          <>
+                            <Link
+                              exact
+                              to={routesURL.PSR + id}
+                              className="cursor-pointer"
+                            >
+                              <i className="fa fa-check-square" /> PSR{" "}
+                              <i className="px-2" />
+                            </Link>
                           </>
-                      )}
+                        )}
                       <Link
                         to="#"
                         onClick={e => {
@@ -111,11 +115,10 @@ class Submenu extends Component {
                         }}
                         className="cursor-pointer"
                       >
-                      <i className={menulist[index][list][2]} />{" "}
-                      {menulist[index][list][0]}
+                        <i className={menulist[index][list][2]} />{" "}
+                        {menulist[index][list][0]}
                       </Link>
                     </li>
-                    
                   )
               )}
             </ol>

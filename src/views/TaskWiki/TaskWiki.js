@@ -4,17 +4,11 @@ import SubMenu from "../SubMenu/Submenu";
 import RecordInformation from "../../components/RecordInformation";
 import TaskInformation from "../../components/TaskWiki/TaskInformation";
 import Attachments from "../../components/Attachments";
-// import Comments from "../../components/Comments";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import database from "../../database/database";
-import { scrollTop } from "../../utils/index";
 
 class TaskWiki extends Component {
   activityLogRef = React.createRef();
-
-  componentDidMount() {
-    scrollTop();
-  }
 
   render() {
     const { record_information } = database;

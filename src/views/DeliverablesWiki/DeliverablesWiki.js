@@ -7,9 +7,7 @@ import RecordInformation from "../../components/RecordInformation";
 import Attachments from "../../components/Attachments";
 import DeliverablesInformation from "../../components/DeliverablesWiki/DeliverablesInformation";
 import DeliverablesActivities from "../../components/DeliverablesWiki/DeliverablesActivities";
-// import Comments from "../../components/Comments";
 import DeliverablesApprovalStatus from "../../components/DeliverablesWiki/DeliverablesApprovalStatus";
-// import DeliverablesActivityLog from "../../components/DeliverablesWiki/DeliverablesActivityLog";
 import deliverableswiki_database from "../../database/deliverableswiki_database";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 

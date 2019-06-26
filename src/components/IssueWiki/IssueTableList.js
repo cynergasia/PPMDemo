@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Card, CardBody } from "reactstrap";
-
 import ReactDataTableNew from "../ReactDataTableNew";
 import Modal from "../../helper/Modal";
 //import IssueListForm from "./IssueListForm";

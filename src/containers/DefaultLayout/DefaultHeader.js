@@ -21,7 +21,7 @@ import logo from "../../assets/img/brand/logo.png";
 import sygnet from "../../assets/img/brand/sygnet.svg";
 import Popup from "./Popup";
 import { routesURL } from "../../constant/routesURL";
-import _history from "../../history";
+import _history from "../../utils/history";
 
 const propTypes = {
   children: PropTypes.node
