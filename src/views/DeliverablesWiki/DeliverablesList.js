@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import DeliverablesTableList from "../../components/DeliverablesWiki/DeliverablesTableList";
 import getDeliverableswiki from "../../database/deliverableswiki_database1";
 
-
 class DeliverablesList extends Component {
   state = {
     isModal: false
@@ -41,7 +40,7 @@ class DeliverablesList extends Component {
                     <ol className="breadcrumb left-breadcrumb">
                       <li className="nav-head active" area-current="page">
                         <Link to="#" onClick={this.toggle}>
-                          <i className="fa fa-plus-square-o" /> New
+                          <i className="fa fa-plus-square" /> Create New
                         </Link>
                       </li>
                     </ol>

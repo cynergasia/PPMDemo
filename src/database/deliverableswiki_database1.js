@@ -1,4 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { routesURL } from "../constant/routesURL";
+
+const publicSwitch = (id, value = false) => (
+  <div class="custom-control custom-switch switch-lg ">
+    <input
+      type="checkbox"
+      class="custom-control-input"
+      id={`switch-${id}`}
+      defaultChecked={value}
+    />
+    <label class="custom-control-label" for={`switch-${id}`} />
+  </div>
+);
 
 const data = props => ({
   activities: [
@@ -26,7 +40,16 @@ const data = props => ({
   deliverablesList: [
     {
       d_id: "46188ebb-3e76-434e-8641-5951e194bf96",
-      number: "D2",
+      number: (
+        <Link
+          className="text-primary"
+          to={
+            routesURL.DELIVERABLES_WIKI + "46188ebb-3e76-434e-8641-5951e194bf96"
+          }
+        >
+          D2
+        </Link>
+      ),
       name: "Design.Code.01(01-May-2019)",
       due_date: "12-09-2019",
       completed: "0%",
@@ -48,11 +71,20 @@ const data = props => ({
       description:
         "Updated digital and printed draft for cart path modifications",
       d_status: "Overdue",
-      public: "N"
+      public: publicSwitch("45183")
     },
     {
       d_id: "6a6065b9-e308-46c0-a42c-650b58488dad",
-      number: "D1",
+      number: (
+        <Link
+          className="text-primary"
+          to={
+            routesURL.DELIVERABLES_WIKI + "6a6065b9-e308-46c0-a42c-650b58488dad"
+          }
+        >
+          D1
+        </Link>
+      ),
       name: "Design.Code.01(01-May-2019)",
       due_date: "12-09-2019",
       completed: "0%",
@@ -74,11 +106,20 @@ const data = props => ({
       description:
         "Updated digital and printed draft for cart path modifications",
       d_status: "Upcoming",
-      public: "N"
+      public: publicSwitch("69421")
     },
     {
       d_id: "4ccd5179-dce4-4cf1-8af4-562aa16774a3",
-      number: "D3",
+      number: (
+        <Link
+          className="text-primary"
+          to={
+            routesURL.DELIVERABLES_WIKI + "4ccd5179-dce4-4cf1-8af4-562aa16774a3"
+          }
+        >
+          D3
+        </Link>
+      ),
       name: "Design 2.0",
       due_date: "12-09-2019",
       completed: "0%",
@@ -100,11 +141,20 @@ const data = props => ({
       description:
         "Updated digital and printed draft for cart path modifications",
       d_status: "Not Started",
-      public: "N"
+      public: publicSwitch("4679")
     },
     {
       d_id: "1b81c733-2621-4388-8f2a-a029653ec9d2",
-      number: "D4",
+      number: (
+        <Link
+          className="text-primary"
+          to={
+            routesURL.DELIVERABLES_WIKI + "1b81c733-2621-4388-8f2a-a029653ec9d2"
+          }
+        >
+          D4
+        </Link>
+      ),
       name: "Digital and Printed Draft of cart path modifications",
       due_date: "12-09-2019",
       completed: "0%",
@@ -126,7 +176,7 @@ const data = props => ({
       description:
         "Updated digital and printed draft for cart path modifications",
       d_status: "Overdue",
-      public: "N"
+      public: publicSwitch("50348")
     }
   ]
 });
