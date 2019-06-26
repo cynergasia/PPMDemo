@@ -2,6 +2,7 @@ import React from "react";
 import { Input, NavLink } from "reactstrap";
 import Modal from "../../helper/Modal";
 import ProjectForm from "../../components/Forms/ProjectForm";
+import { routesURL } from "../../constant/routesURL";
 
 class Popup extends React.Component {
   state = {
@@ -17,7 +18,8 @@ class Popup extends React.Component {
     this.setState({ active: value });
   };
   onSubmit = () => {
-    console.log("click");
+    const randomNumber = Math.floor(Math.random() * 1000000) + 6000000;
+    window.location.hash = `${routesURL.PROJECT_WIKI}` + randomNumber;
   };
   render() {
     const { active } = this.state;
