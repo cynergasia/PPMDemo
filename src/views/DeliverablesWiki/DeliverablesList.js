@@ -31,9 +31,8 @@ class DeliverablesList extends Component {
                   <div className="col-12 col-sm-12 col-lg-12">
                     <ol className="breadcrumb left-breadcrumb">
                       <li className="nav-head active" area-current="page">
-                        <Link to="/projectWiki">
-                          <i className="fa fa-map-marker" /> Bay Bridge
-                          Construction in the bay(P001)
+                        <Link to="/projectwiki/60453005">
+                          <i className="fa fa-map-marker" />  Extensions N/Cape Mall Phase 3 (60453005)
                         </Link>
                       </li>
                     </ol>

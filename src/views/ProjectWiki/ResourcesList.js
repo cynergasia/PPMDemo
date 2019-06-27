@@ -23,7 +23,7 @@ class ResourcesList extends Component {
                   <div className="col-12 col-sm-12 col-lg-12">
                     <ol className="breadcrumb left-breadcrumb">
                       <li className="nav-head active" area-current="page">
-                        <Link to="/projectWiki">
+                        <Link to="/projectwiki">
                           <i className="fa fa-map-marker" /> Bay Bridge
                           Construction in the bay(P001)
                         </Link>

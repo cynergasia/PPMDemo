@@ -6,7 +6,7 @@ const ResourcesTableListItems = props => {
     <React.Fragment>
       <tr>
         <td>
-          <Link to="/projectWiki">P0001</Link>
+          <Link to="/projectwiki">P0001</Link>
         </td>
         <td>
           <Link to="/workpackageWiki">WP01</Link>
