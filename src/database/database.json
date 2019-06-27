@@ -2053,12 +2053,12 @@
     }
   ],
   "financialDetails": {
-    "contractedAmount": "USD 3,000,000.00",
-    "approvedCost": "USD 2,100,000.00",
-    "currentCost": "USD 900,000.00",
-    "invoiced": "USD 1,400,000.00",
-    "backlog": "USD 2,600,000.00",
-    "paid": "USD 1,000,000.00",
+    "contractValue": "USD 300,000.00",
+    "changeOrders": "USD 15,000.00",
+    "totalBilled": "USD 60,000.00",
+    "totalPaid": "USD 20,000.00",
+    "backlog": "USD 255,000.00",
+    "totalCost": "USD 45,000.00",
     "overdue": "USD 20,000.00"
   },
   "globalNotification": [

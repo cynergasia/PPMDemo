@@ -37,6 +37,7 @@ class IssueWiki extends Component {
             approvedStatusRef: this.approvedStatusRef,
             activityLogRef: this.activityLogRef
           }}
+          title={issue[0].title}
         />
         {/* <SubMenu/> */}
 

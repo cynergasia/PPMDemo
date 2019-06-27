@@ -13,17 +13,17 @@ const barChartData = {
   datasets: [
     {
       label: "Series1",
-      data: [0, 0, 0, 0, 0, 0],
+      data: [0, 20000, 0, 0, 0,0],
       backgroundColor: "#467fa0"
     },
     {
       label: "Series2",
-      data: [0, -6, 0, 0, 0, 6],
-      backgroundColor: "#910838"
+      data: [0, 0, 20000, 0,0,0],
+      backgroundColor: "#467fa0"
     }
   ]
 };
-
+//#910838
 const barChartOptions = {
   scales: {
     xAxes: [
@@ -38,9 +38,9 @@ const barChartOptions = {
       {
         stacked: true,
         ticks: {
-          stepSize: 2,
-          max: 8,
-          min: -8
+          stepSize: 5000,
+          max: 25000,
+          min: 0
         }
       }
     ]

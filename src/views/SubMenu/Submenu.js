@@ -95,6 +95,39 @@ class Submenu extends Component {
                   </li>
                 </>
               )}
+               {link === "invoiceWiki" && (
+                <>
+                   <li className="nav-head active " aria-current="page">
+                        <Link
+                          exact
+                          to="#"
+                          onClick={e => {
+                            this.scrollTo(e,refs['approvedStatusRef']);
+                          }}                         
+                        >
+                          <i className="fa fa-check-square" /> Activities
+                        </Link>                       
+                  </li>
+                    <li className="nav-head active " aria-current="page">
+                          <Link
+                            exact
+                            to="#"
+                            onClick={e => {
+                              this.scrollTo(e,refs['descriptionRef']);
+                            }}                         
+                          >
+                            <i className="fa fa-check-square" /> Invoice Description
+                          </Link>                       
+                    </li>
+                  
+                  <li className="nav-head active" aria-current="page">
+                    <Link exact to={routesURL.INVOICE_LIST}>
+                      <i className="fa fa-sitemap" /> Invoce List
+                    </Link>
+                  </li>
+                </>
+              )}
+
 
                 {link === "deliverable" && (
                   <>

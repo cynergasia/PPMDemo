@@ -149,9 +149,11 @@ class BudgetFinance extends Component {
           </CardHeader>
           <CardBody>
             <TabContent activeTab={activeTab} className="border-0">
-              <TabPane tabId="1">Budget</TabPane>
+              <TabPane tabId="1"> <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1FSLJbvp1EMw5SDxtkvRgu8QUK-dSp9qf/view?ts=5d145159">
+                  Link For Budget</a></TabPane>
 
-              <TabPane tabId="2">Finance</TabPane>
+              <TabPane tabId="2"> <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1FSLJbvp1EMw5SDxtkvRgu8QUK-dSp9qf/view?ts=5d145159">
+                  Link For Forecast</a></TabPane>
 
               <TabPane tabId="3">
                 <Financial />

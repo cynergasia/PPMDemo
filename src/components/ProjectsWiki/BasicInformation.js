@@ -29,12 +29,17 @@ const intialState = {
 class BasicInformation extends Component {
   state = { ...intialState };
   state = {
+    data:[],
     modal: false,
     basicProjectInfo:
       "This project has 6 internal stakeholders and 2 external stakeholders.",
     editBasicProjectInfo:
       "This project has 6 internal stakeholders and 2 external stakeholders."
   };
+
+  componentDidMount=()=>{
+      this.setState({data:this.props.basicProjectInfo.projectInfo})
+  }
   toggle = () => this.setState(prevState => ({ modal: !prevState.modal }));
 
   toggleInfo = () => {
@@ -75,6 +80,7 @@ class BasicInformation extends Component {
     });
 
   render() {    
+    console.log("raj",this.state.data);
     const { modal, editBasicProjectInfo } = this.state;
     const { teamMembers, classification } = this.props.basicProjectInfo;
     const {
@@ -235,7 +241,7 @@ class BasicInformation extends Component {
                             <div>Project Manager </div>
                           </td>
                           <td className="text-left">
-                            <div><Input name="project_manager" value={project_manager} />{project_manager}</div>
+                            <div><Input name="project_manager" value={project_manager} /></div>
                           </td>
                         </tr>
                         <tr>

@@ -35,6 +35,7 @@ class ChangeWiki extends Component {
             approvedStatusRef: this.approvedStatusRef,
             activityLogRef: this.activityLogRef
           }}
+          title={changes[0].title}
         />
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">

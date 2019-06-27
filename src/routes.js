@@ -87,7 +87,7 @@ const routes = [
   {
     path: routesURL.MEETING,
     component: Meeting,
-    title: "Meetings Home"
+    title: "Meetings Wiki"
   },
   {
     path: routesURL.MEETING_LIST,
@@ -97,7 +97,7 @@ const routes = [
   {
     path: `${routesURL.ISSUE_WIKI}:id`,
     component: IssueWiki,
-    title: "Issue Home"
+    title: "Issue Wiki"
   },
   {
     path: routesURL.ISSUE_LIST,
@@ -107,7 +107,7 @@ const routes = [
   {
     path: `${routesURL.CHANGE_WIKI}:id`,
     component: ChangeWiki,
-    title: "Change Home"
+    title: "Change Wiki"
   },
   {
     path: routesURL.CHANGES_LIST,
@@ -117,7 +117,7 @@ const routes = [
   {
     path: `${routesURL.INVOICE_WIKI}`,
     component: InvoiceWiki,
-    title: "Invoice Home"
+    title: "Invoice Wiki"
   },
   {
     path: `${routesURL.INVOICE_LIST}`,
@@ -127,17 +127,17 @@ const routes = [
   {
     path: `${routesURL.WBS}`,
     component: WBS,
-    title: "WBS Home"
+    title: "WBS Register"
   },
   {
     path: `${routesURL.RISK_WIKI}`,
     component: RiskWiki,
-    title: "Risk Home"
+    title: "Risk Wiki"
   },
   {
     path: `${routesURL.RISK_LIST}`,
     component: RiskList,
-    title: "Risk List"
+    title: "Risk Register"
   },
   {
     path: routesURL.ACTIVITIES_LIST,

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody, Table, Input } from "reactstrap";
-
+import data from "../../database/invoicelist_database";
 class InvoiceDescription extends Component {
   render() {
+    // var data = data().invoiceDetails;
+    // console.log("list",data().invoiceDetails);
     return (
       <React.Fragment>
         <Card>
@@ -59,7 +61,7 @@ class InvoiceDescription extends Component {
 
               <tr>
                 <td>
-                  <div>P001</div>
+                  <div>60453005</div>
                 </td>
                 <td>
                   <div>PO1001</div>
@@ -74,7 +76,7 @@ class InvoiceDescription extends Component {
                   <div>NET60</div>
                 </td>
                 <td>
-                  <div />
+                <div>07-30-2019</div>
                 </td>
                 <td>
                   <div>USD 10,000.00</div>
@@ -91,7 +93,7 @@ class InvoiceDescription extends Component {
               <tr>
                 <td colSpan="4">
                   <div>
-                    <Input type="textarea" rows="3" />
+                    <Input type="textarea" rows="3" defaultValue="Please contact Suresh Padmanabhan if you need additional information on this invoice." />
                   </div>
                 </td>
               </tr>
@@ -109,48 +111,23 @@ class InvoiceDescription extends Component {
                   <div>Amount</div>
                 </td>
               </tr>
-              <tr>
-                <td>
-                  <div>NULL</div>
-                </td>
-                <td>
-                  <div>NULL</div>
-                </td>
-                <td>
-                  <div>NULL</div>
-                </td>
-                <td>
-                  <div>NULL</div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div>NULL</div>
-                </td>
-                <td>
-                  <div>NULL</div>
-                </td>
-                <td>
-                  <div>NULL</div>
-                </td>
-                <td>
-                  <div>NULL</div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div>NULL</div>
-                </td>
-                <td>
-                  <div>NULL</div>
-                </td>
-                <td>
-                  <div>NULL</div>
-                </td>
-                <td>
-                  <div>NULL</div>
-                </td>
-              </tr>
+              {data().invoiceDetails.map((invoice,index) => (
+                 <tr key={index}>
+                 <td>
+                   <div>{invoice.Details}</div>
+                 </td>
+                 <td>
+                   <div>{invoice.Hours}</div>
+                 </td>
+                 <td>
+                   <div>{invoice.Rate}</div>
+                 </td>
+                 <td>
+                   <div>{invoice.Amount}</div>
+                 </td>
+               </tr>
+                ))
+              }              
             </Table>
           </CardBody>
         </Card>

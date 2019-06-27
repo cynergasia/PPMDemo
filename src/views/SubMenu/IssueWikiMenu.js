@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
+import { routesURL } from "../../constant/routesURL";
 
 class IssueWikiMenu extends Component {
   scrollTo = ({ current: ref }) => {
@@ -14,7 +15,7 @@ class IssueWikiMenu extends Component {
   };
 
   render() {
-    const { refs } = this.props;
+    const { refs,title } = this.props;
     return (
       <React.Fragment>
         <nav className="sub-navbar" aria-label="breadcrumb">
@@ -22,8 +23,12 @@ class IssueWikiMenu extends Component {
             <div className="col-12 col-sm-12 col-lg-12">
               <ol className="breadcrumb left-breadcrumb">
                 <li className="nav-head active" area-current="page">
-                  <i className="fa fa-map-marker" /> Extensions N/Cape Mall
-                  Phase 3 (60453005)
+                <i className="fa fa-map-marker" />  
+                <Link to={routesURL.PROJECT_WIKI + "60453005"}>
+                  {" "}
+                  Extensions N/Cape Mall Phase 3 (60453005)
+                </Link>{" "}
+                  {title && <>:{title}</>}
                 </li>
               
               </ol>

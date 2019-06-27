@@ -1,41 +1,50 @@
 import React, { Component } from "react";
-import { Row, Col } from "reactstrap";
+import { Row} from "reactstrap";
 import InvoiceDescription from "../../components/InvoiceWiki/InvoiceDescription";
 import InvoiceActivities from "../../components/InvoiceWiki/InvoiceActivities";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import Attachments from "../../components/Attachments";
 import RecordInformation from "../../components/RecordInformation";
-import ChangeWikiMenu from "../SubMenu/ChangeWikiMenu";
-import changewiki_database from "../../database/changewiki_database";
-import deliverableswiki_database from "../../database/deliverableswiki_database";
+import SubMenu from "../SubMenu/Submenu";
+import data from "../../database/invoicelist_database";
 
 class InvoiceWiki extends Component {
-  attachmentRef = React.createRef();
+  descriptionRef = React.createRef();
   approvedStatusRef = React.createRef();
   activityLogRef = React.createRef();
 
   render() {
-    const { record_information } = changewiki_database;
-    const { activities } = deliverableswiki_database;
+    console.log(data().audit_info);
     return (
-      <React.Fragment>
-        <ChangeWikiMenu
+      <React.Fragment>        
+        <SubMenu
           refs={{
-            attachmentRef: this.attachmentRef,
-            approvedStatusRef: this.approvedStatusRef,
-            activityLogRef: this.activityLogRef
+            descriptionRef: this.descriptionRef,
+            activityLogRef: this.activityLogRef,  
+            approvedStatusRef:this.approvedStatusRef      
           }}
+          isMenu={{
+            project:false,
+            finanical: false,          
+            wbs: false,
+            meeting_minutes:false,
+            issue_changes: false,
+            deliverable: false,
+            work_package: false,         
+          }}
+          link={"invoiceWiki"}         
         />
+
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">
             <Row>
-              <Col xs="12">
+              <div className="col-12" ref={this.descriptionRef}>
                 <InvoiceDescription />
-              </Col>
-              <Col xs="12">
-                <InvoiceActivities activities={activities} />
-              </Col>
-              <div className="col-12" ref={this.attachmentRef}>
+              </div>
+              <div className="col-12" ref={this.approvedStatusRef} >
+                <InvoiceActivities activities={data().invoiceActivites} />
+              </div>
+              <div className="col-12">
                 <Attachments />
               </div>
               <div className="col-12" ref={this.activityLogRef}>
@@ -48,7 +57,8 @@ class InvoiceWiki extends Component {
               <div className="aside-inner">
                 <RecordInformation
                   isScheduleinfo={false}
-                  record_information={record_information}
+                  isWorkflowinfo={false}
+                  record_information={data().record_information}
                 />
               </div>
             </div>

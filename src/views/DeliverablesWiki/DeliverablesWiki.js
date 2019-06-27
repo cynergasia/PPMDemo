@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
-import DeliverablesWikiMenu from "../SubMenu/DeliverablesWikiMenu";
 import SubMenu from "../SubMenu/Submenu";
 import RecordInformation from "../../components/RecordInformation";
 import Attachments from "../../components/Attachments";
@@ -26,20 +25,13 @@ class DeliverablesWiki extends Component {
     console.log(deliverInfo[0]);
     return (
       <React.Fragment>
-        {/* <SubMenu
-          refs={{
-            approvedStatus: this.approvedStatus,
-            activityLogRef: this.activityLogRef
-          }}
-          isMenu={{ finanical: false,wbs:false,issue_changes:false,work_package:false}}
-        /> */}
+       
          <SubMenu
           refs={{    
             approvedStatus: this.approvedStatus,           
             deliverableRef: this.deliverableRef,       
             activityLogRef: this.activityLogRef
-          }}
-         //temp={{approvedStatus: this.approvedStatus}  }
+          }}        
           isMenu={{
             project:false,
             meeting_minutes:false,  
@@ -50,16 +42,9 @@ class DeliverablesWiki extends Component {
                
           }}
           name={deliverInfo[0].name}
-          link={"deliverable"}
-          //  name={workPackageInfo.name}
+          link={"deliverable"}         
         />
-        {/* <DeliverablesWikiMenu
-          refs={{
-            approvedStatus: this.approvedStatus,
-            activityLogRef: this.activityLogRef
-          }}
-          name={deliverInfo[0].name}
-        /> */}
+      
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">
             <Row>

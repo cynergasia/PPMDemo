@@ -34,7 +34,7 @@ const invoiceListData = {
       sort: "asc"
     },
     {
-      label: "Payment Terms",
+      label: "Payment",
       field: "payment_terms",
       sort: "asc"
     },

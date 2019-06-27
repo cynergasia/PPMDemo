@@ -10,7 +10,7 @@ const InvoiceFinancialTableList = props => {
             <div>Contract Value</div>
           </td>
           <td className="text-left">
-            <div>NULL</div>
+            <div>USD 300,000.00</div>
           </td>
         </tr>
         <tr>
@@ -18,7 +18,7 @@ const InvoiceFinancialTableList = props => {
             <div>Change Orders</div>
           </td>
           <td className="text-left">
-            <div>NULL</div>
+            <div>USD 15,000.00</div>
           </td>
         </tr>
         <tr>
@@ -26,7 +26,7 @@ const InvoiceFinancialTableList = props => {
             <div>Total Billed</div>
           </td>
           <td className="text-left">
-            <div>NULL</div>
+            <div>USD 60,000.00</div>
           </td>
         </tr>
         <tr>
@@ -34,7 +34,7 @@ const InvoiceFinancialTableList = props => {
             <div>Total Paid</div>
           </td>
           <td className="text-left">
-            <div>NULL</div>
+            <div>USD 20,000.00</div>
           </td>
         </tr>
         <tr>
@@ -42,7 +42,7 @@ const InvoiceFinancialTableList = props => {
             <div>Total Cost</div>
           </td>
           <td className="text-left">
-            <div>NULL</div>
+            <div>USD 45,000.00</div>
           </td>
         </tr>
         <tr>
@@ -50,7 +50,7 @@ const InvoiceFinancialTableList = props => {
             <div>Backlog</div>
           </td>
           <td className="text-left">
-            <div>NULL</div>
+            <div>USD 255,000.00</div>
           </td>
         </tr>
       </Table>

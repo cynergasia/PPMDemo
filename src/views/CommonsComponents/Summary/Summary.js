@@ -36,7 +36,7 @@ const Summary = props => {
           <CardBody className="pb-0">
             <div className="text-value">{tiles.open_activities}</div>
             <Link to="/500">
-              <div className="text-summary">Open Activitiess</div>
+              <div className="text-summary">Open Activities</div>
             </Link>
           </CardBody>
           <div className="chart-wrapper mx-3" style={{ height: "30px" }} />

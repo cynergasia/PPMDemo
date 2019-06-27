@@ -10,7 +10,7 @@ const InvoiceARTableList = props => {
             <div>Current</div>
           </td>
           <td className="text-left">
-            <div>NULL</div>
+            <div> </div>
           </td>
         </tr>
         <tr>
@@ -18,7 +18,7 @@ const InvoiceARTableList = props => {
             <div>1-30 Days </div>
           </td>
           <td className="text-left">
-            <div>NULL</div>
+            <div>20,000</div>
           </td>
         </tr>
         <tr>
@@ -26,7 +26,7 @@ const InvoiceARTableList = props => {
             <div>31-60 Days</div>
           </td>
           <td className="text-left">
-            <div>NULL</div>
+            <div>20,000</div>
           </td>
         </tr>
         <tr>
@@ -34,7 +34,7 @@ const InvoiceARTableList = props => {
             <div>61-90 Days</div>
           </td>
           <td className="text-left">
-            <div>NULL</div>
+            <div></div>
           </td>
         </tr>
         <tr>
@@ -42,7 +42,7 @@ const InvoiceARTableList = props => {
             <div>91-180 Days</div>
           </td>
           <td className="text-left">
-            <div>NULL</div>
+            <div></div>
           </td>
         </tr>
         <tr>
@@ -50,7 +50,7 @@ const InvoiceARTableList = props => {
             <div>{">180 Days"}</div>
           </td>
           <td className="text-left">
-            <div>NULL</div>
+            <div></div>
           </td>
         </tr>
       </Table>

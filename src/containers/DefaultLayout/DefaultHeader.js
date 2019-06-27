@@ -60,7 +60,7 @@ class DefaultHeader extends Component {
           minimized={{ src: sygnet,  height: 30, alt: "ANS Corp" }}
         />
 
-        <p className="project-name">ANS Corp - {this.props.title} </p>
+        <p className="project-name">{this.props.title} </p>
 
         {/* <AppSidebarToggler className="d-md-down-none" display="lg" /> Project Dashboard*/}
 
