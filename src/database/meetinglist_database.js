@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { routesURL } from "../constant/routesURL";
-import { APP_DATE_FORMAT } from "../constant";
-import moment from "moment";
 
 const data = props => ({
   meetingList: [
