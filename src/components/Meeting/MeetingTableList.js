@@ -5,28 +5,68 @@ import ReactDataTableNew from "../ReactDataTableNew";
 let meetingListData = {
   columns: [
     {
+      label: "Meeting Number",
+      field: "number",
+      sort: "asc"
+    },
+    {
+      label: "Template",
+      field: "template",
+      sort: "asc"
+    },
+    {
+      label: "Recurring",
+      field: "recurring",
+      sort: "asc"
+    },
+    {
+      label: "Frequency",
+      field: "frequency",
+      sort: "asc"
+    },
+    {
+      label: "Ends on",
+      field: "endson",
+      sort: "asc"
+    },
+    {
       label: "Date",
       field: "date",
       sort: "asc"
     },
     {
-      label: "Meeting Title",
-      field: "meeting_title",
+      label: "Location",
+      field: "location",
       sort: "asc"
     },
     {
-      label: "Attendees",
-      field: "attendees",
+      label: "Start time",
+      field: "starttime",
       sort: "asc"
     },
     {
-      label: "Document",
-      field: "document",
+      label: "Duration",
+      field: "duration",
       sort: "asc"
     },
     {
-      label: "Public",
-      field: "public",
+      label: "Subject",
+      field: "subject",
+      sort: "asc"
+    },
+    {
+      label: "Attendee",
+      field: "attendee",
+      sort: "asc"
+    },
+    {
+      label: "Status",
+      field: "status",
+      sort: "asc"
+    },
+    {
+      label: "Description",
+      field: "description",
       sort: "asc"
     }
   ],
@@ -67,7 +107,11 @@ class MeetingTableList extends Component {
                 <MeetingTableListItems />
               </tbody>
             </Table> */}
-            <ReactDataTableNew data={this.state.data} />
+            <ReactDataTableNew
+              data={this.state.data}
+              entries={10}
+              entriesOptions={[10, 20, 50, 100]}
+            />
           </CardBody>
         </Card>
       </React.Fragment>

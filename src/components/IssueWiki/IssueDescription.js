@@ -8,7 +8,7 @@ class IssueDescription extends Component {
       title,
       due_date,
       complete,
-      status,
+      issue_status,
       workpackage,
       planned_effort,
       owner,
@@ -64,7 +64,7 @@ class IssueDescription extends Component {
                     <div>Status</div>
                   </td>
                   <td className="text-left">
-                    <div>{status}</div>
+                    <div>{issue_status}</div>
                   </td>
                   <td className="basicinfo text-left">
                     <div>Workpackage</div>

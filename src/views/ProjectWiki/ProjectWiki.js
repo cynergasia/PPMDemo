@@ -13,6 +13,7 @@ import projectwiki_database from "../../database/projectwiki_database";
 import deliverableswiki_database from "../../database/deliverableswiki_database";
 import issuewiki_database from "../../database/issuewiki_database";
 import changewiki_database from "../../database/changewiki_database";
+import getmeetingList from "../../database/meetinglist_database";
 import database from "../../database/database";
 import { routesURL } from "../../constant/routesURL";
 import BudgetFinance from "../../components/ProjectsWiki/BudgetFinance";
@@ -39,13 +40,14 @@ class ProjectWiki extends Component {
     const { id } = this.props.match.params;
     const project = database.projects.filter(item => `${item.id}` === id);
     if (project.length === 0)
-    return (window.location.hash = routesURL.DASHBOARD);
+      return (window.location.hash = routesURL.DASHBOARD);
     const tasks = projectwiki_database;
     const { record_information } = database;
     const { deliverablesInfo } = deliverableswiki_database;
     const { basicProjectInfo, activity } = project[0].projectwiki;
     const { issues } = issuewiki_database;
     const { changes } = changewiki_database;
+    const { meetingList } = getmeetingList();
 
     return (
       <React.Fragment>
@@ -60,13 +62,13 @@ class ProjectWiki extends Component {
         <SubMenu
           refs={{
             issueChangesRef: this.issueChangesRef,
-            projectInfoRef:this.projectInfoRef,
+            projectInfoRef: this.projectInfoRef,
             workPackageRef: this.workPackageRef,
             meetingMinutesRef: this.meetingMinutesRef,
             financialsRef: this.financialsRef,
             activityLogRef: this.activityLogRef
           }}
-          isMenu={{           
+          isMenu={{
             deliverable: false,
             work_package: false,
             approved_status: false
@@ -104,12 +106,12 @@ class ProjectWiki extends Component {
               </div>
 
               <div className="col-12" ref={this.meetingMinutesRef}>
-                <Meetings />
+                <Meetings meetingList={meetingList} />
               </div>
 
               <div className="col-12" ref={this.financialsRef}>
                 <BudgetFinance />
-              </div>            
+              </div>
 
               <div className="col-12">
                 <Risks />

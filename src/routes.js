@@ -19,7 +19,6 @@ const WorkPackageList = React.lazy(() =>
 const TaskWiki = React.lazy(() => import("./views/TaskWiki/TaskWiki"));
 const Meeting = React.lazy(() => import("./views/Meetings/Meeting"));
 
-
 const MettingList = React.lazy(() => import("./views/Meetings/MettingList"));
 const ActivitiesList = React.lazy(() =>
   import("./views/Activities/ActivitiesList")
@@ -85,12 +84,12 @@ const routes = [
     title: "Task Wiki"
   },
   {
-    path: routesURL.MEETING,
+    path: `${routesURL.MEETING}:id`,
     component: Meeting,
     title: "Meetings Home"
   },
   {
-    path: routesURL.MEETING_LIST,
+    path: `${routesURL.MEETING_LIST}:id`,
     component: MettingList,
     title: "Meetings Register"
   },

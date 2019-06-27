@@ -1,17 +1,51 @@
 import React, { Component } from "react";
 import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 class MeetingInformation extends Component {
   state = {
-    startDate: new Date()
+    startDate: new Date(),
+    startOn: new Date(),
+    endsOn: new Date()
   };
   handleChange = date => {
     this.setState({
       startDate: date
     });
   };
-
+  handleChangeEndsOn = date => {
+    this.setState({
+      endsOn: date
+    });
+  };
+  handleChangeStartOn = date => {
+    this.setState({
+      startOn: date
+    });
+  };
+  componentDidMount() {
+    if (this.props.meetingInfo.endon !== "") {
+      const endDate = new Date(this.props.meetingInfo.endon);
+      this.setState({
+        startDate: this.props.meetingInfo.date,
+        endsOn: new Date(endDate)
+      });
+    }
+  }
   render() {
+    console.log(this.props.meetingInfo);
+    const {
+      template,
+      recurring,
+      frequency,
+      endon,
+      date,
+      location,
+      starttime,
+      duration,
+      subject,
+      attendee
+    } = this.props.meetingInfo;
     return (
       <form>
         <div className="card">
@@ -30,13 +64,15 @@ class MeetingInformation extends Component {
                     Template :
                   </label>
                   <div className="col">
-
-                    <select name="template" className="form-control">                     
+                    <select
+                      name="template"
+                      className="form-control custom-select"
+                      defaultValue={template}
+                    >
                       <option>Professional</option>
                       <option>Detailed</option>
                       <option>Simple</option>
                     </select>
-
                   </div>
                 </div>
                 <div className="form-group row">
@@ -44,10 +80,14 @@ class MeetingInformation extends Component {
                     Frequency :
                   </label>
                   <div className="col">
-                    <select name="frequency" className="form-control">                   
-                    <option>Daily</option>
-                    <option>Weekly</option>
-                    <option>Monthly</option>
+                    <select
+                      name="frequency"
+                      className="form-control custom-select"
+                      defaultValue={frequency}
+                    >
+                      <option>Daily</option>
+                      <option>Weekly</option>
+                      <option>Monthly</option>
                     </select>
                   </div>
                 </div>
@@ -65,23 +105,26 @@ class MeetingInformation extends Component {
                       useShortMonthInDropdown
                       todayButton={"Today"}
                       dateFormat="MM-dd-yyyy"
+                      startDate={date}
                     />
                   </div>
                 </div>
                 <div className="form-group row">
                   <label for="date" className="col col-form-label">
-                    Strat on :
+                    Start Time :
                   </label>
-                  <div className="col">
+                  <div className="col custom-timepicker">
                     <DatePicker
-                      selected={this.state.startDate}
-                      onChange={this.handleChange}
+                      name="startOn"
+                      selected={this.state.startOn}
+                      onChange={this.handleChangeStartOn}
                       className="form-control"
-                      showYearDropdown
-                      showMonthDropdown
-                      useShortMonthInDropdown
-                      todayButton={"Today"}
-                      dateFormat="MM-dd-yyyy"
+                      showTimeSelect
+                      showTimeSelectOnly
+                      timeIntervals={15}
+                      dateFormat="h:mm aa"
+                      timeCaption="Time"
+                      defaultValue={starttime}
                     />
                   </div>
                 </div>
@@ -92,9 +135,13 @@ class MeetingInformation extends Component {
                     Recurring :
                   </label>
                   <div className="col">
-                    <select name="recurring" className="form-control">                   
-                    <option>Y</option>
-                    <option>N</option>
+                    <select
+                      name="recurring"
+                      className="form-control custom-select"
+                      defaultValue={recurring}
+                    >
+                      <option>Y</option>
+                      <option>N</option>
                     </select>
                   </div>
                 </div>
@@ -103,9 +150,9 @@ class MeetingInformation extends Component {
                     Ends on :
                   </label>
                   <div className="col">
-                  <DatePicker
-                      selected={this.state.startDate}
-                      onChange={this.handleChange}
+                    <DatePicker
+                      selected={endon !== "" && this.state.endsOn}
+                      onChange={this.handleChangeEndsOnnge}
                       className="form-control"
                       showYearDropdown
                       showMonthDropdown
@@ -124,6 +171,7 @@ class MeetingInformation extends Component {
                       type="text"
                       className="form-control"
                       name="location"
+                      defaultValue={location}
                     />
                   </div>
                 </div>
@@ -132,10 +180,11 @@ class MeetingInformation extends Component {
                     Duration :
                   </label>
                   <div className="col">
-                  <input
+                    <input
                       type="text"
                       className="form-control"
                       name="duration"
+                      defaultValue={duration}
                     />
                   </div>
                 </div>
@@ -150,6 +199,7 @@ class MeetingInformation extends Component {
                       type="text"
                       className="form-control"
                       name="subject"
+                      defaultValue={subject}
                     />
                   </div>
                 </div>
@@ -160,7 +210,11 @@ class MeetingInformation extends Component {
                     Attendee :
                   </label>
                   <div className="col">
-                    <textarea className="form-control" name="attendee" />
+                    <textarea
+                      className="form-control"
+                      name="attendee"
+                      defaultValue={attendee}
+                    />
                   </div>
                 </div>
               </div>

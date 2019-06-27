@@ -417,6 +417,14 @@ h6.chart-title {
   width: 100%;
 }
 
+.custom-timepicker .react-datepicker__time-container {
+  width: 9rem;
+}
+
+.custom-timepicker .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box {
+  width: 100%;
+}
+
 /***** Responsive *****/
 
 @media (min-width: 768px) {

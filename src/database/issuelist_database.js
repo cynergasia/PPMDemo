@@ -23,17 +23,18 @@ const data = props => ({
           className="text-primary"
           to={routesURL.ISSUE_WIKI + "e5a84a85-30d8-406a-9c47-743e873dec94"}
         >
-          I2
+          I1
         </Link>
       ),
-      name: "issue1",
-      title: "Model missing cart path modification",
-      due_date: "09-30-19",
-      complete: "0%",
+      name: "PM Time not included",
+      title: "PM Time not included",
+      due_date: "03-01-19",
+      complete: "80%",
       status: "Overdue",
-      issue_status: "In Progress",
-      workpackage: "DESIGN(1.02)",
-      planned_effort: "10",
+      issue_status: "Overdue",
+      workpackage: "1.01",
+      planned_effort: "",
+      actual_effort: "",
       owner: (
         <a
           href="#/resourcelist/ee36cf63-b54e-4a14-8422-91b731b148b4"
@@ -42,14 +43,12 @@ const data = props => ({
           @Neeraj
         </a>
       ),
-      actual_effort: "0",
-      issue_type: "Design",
-      issue_severity: "Medium",
+      issue_type: "",
+      issue_severity: "",
       public: publicSwitch("28205", true),
-      days: "25",
+      days: "65",
       description: ""
     },
-    {},
     {
       i_id: "1c5d1ee3-edc8-4dc5-97a5-d70e0aee36bb",
       number: (
@@ -57,16 +56,16 @@ const data = props => ({
           className="text-primary"
           to={routesURL.ISSUE_WIKI + "1c5d1ee3-edc8-4dc5-97a5-d70e0aee36bb"}
         >
-          I1
+          I2
         </Link>
       ),
-      name: "issue2",
+      name: "Model missing cart path modification",
       title: "Model missing cart path modification",
-      due_date: "09-30-19",
-      complete: "0%",
+      due_date: "06-10-19",
+      complete: "30%",
       status: "Overdue",
-      issue_status: "In Progress",
-      workpackage: "DESIGN(1.02)",
+      issue_status: "Overdue",
+      workpackage: "1.03",
       planned_effort: "10",
       owner: (
         <a
@@ -77,13 +76,12 @@ const data = props => ({
         </a>
       ),
       actual_effort: "0",
-      issue_type: "Schedule",
-      issue_severity: "Medium",
+      issue_type: "",
+      issue_severity: "",
       public: publicSwitch("97846"),
       days: "25",
       description: ""
     },
-    {},
     {
       i_id: "5362a855-0195-4fa7-aa15-f18c1d711bb7",
       number: (
@@ -94,14 +92,15 @@ const data = props => ({
           I3
         </Link>
       ),
-      name: "issue3",
-      title: "Model missing cart path modification",
-      due_date: "09-30-19",
-      complete: "0%",
+      name: "Rebar estimation revisit",
+      title: "Rebar estimation revisit",
+      due_date: "06-15-19",
+      complete: "60%",
       status: "Overdue",
-      issue_status: "In Progress",
-      workpackage: "DESIGN(1.02)",
-      planned_effort: "10",
+      issue_status: "Overdue",
+      workpackage: "1.04",
+      planned_effort: "",
+      actual_effort: "",
       owner: (
         <a
           href="#/resourcelist/4c3e38e5-532e-4532-a0c3-6d44ece047ed"
@@ -110,14 +109,12 @@ const data = props => ({
           @Arindam
         </a>
       ),
-      actual_effort: "0",
-      issue_type: "Budget",
-      issue_severity: "Medium",
+      issue_type: "",
+      issue_severity: "",
       public: publicSwitch("3350"),
       days: "25",
       description: ""
     },
-    {},
     {
       i_id: "bd88878e-1101-4ab6-a36d-beac2b684597",
       number: (
@@ -125,17 +122,18 @@ const data = props => ({
           className="text-primary"
           to={routesURL.ISSUE_WIKI + "bd88878e-1101-4ab6-a36d-beac2b684597"}
         >
-          I5
+          I4
         </Link>
       ),
-      name: "issue4",
-      title: "Model missing cart path modification",
-      due_date: "09-30-19",
-      complete: "0%",
+      name: "Change in scope might increase liability",
+      title: "Change in scope might increase liability",
+      due_date: "05-15-19",
+      complete: "40%",
       status: "Overdue",
-      issue_status: "In Progress",
-      workpackage: "DESIGN(1.02)",
-      planned_effort: "10",
+      issue_status: "Overdue",
+      workpackage: "1.04",
+      planned_effort: "20",
+      actual_effort: "10",
       owner: (
         <a
           href="#/resourcelist/eecb7a0e-c560-415a-9d7b-4657d0169adb"
@@ -144,9 +142,8 @@ const data = props => ({
           @Suresh,
         </a>
       ),
-      actual_effort: "0",
-      issue_type: "Invoice",
-      issue_severity: "Medium",
+      issue_type: "",
+      issue_severity: "",
       public: publicSwitch("1328"),
       days: "35",
       description: ""
@@ -158,17 +155,18 @@ const data = props => ({
           className="text-primary"
           to={routesURL.ISSUE_WIKI + "76acd683-7175-4c8c-98e8-d3a70886acad"}
         >
-          I9
+          I5
         </Link>
       ),
-      name: "issue9",
-      title: "Model missing cart path modification",
-      due_date: "09-30-19",
-      complete: "0%",
+      name: "Unapproved Changes to project plan",
+      title: "Unapproved Changes to project plan",
+      due_date: "07-20-19",
+      complete: "800%",
       status: "Overdue",
       issue_status: "In Progress",
-      workpackage: "DESIGN(1.02)",
-      planned_effort: "10",
+      workpackage: "1.04",
+      planned_effort: "",
+      actual_effort: "",
       owner: (
         <a
           href="#/resourcelist/4c3e38e5-532e-4532-a0c3-6d44ece047ed"
@@ -177,14 +175,12 @@ const data = props => ({
           @Arindam
         </a>
       ),
-      actual_effort: "0",
-      issue_type: "Contract",
-      issue_severity: "Medium",
+      issue_type: "",
+      issue_severity: "",
       public: publicSwitch("81038"),
       days: "35",
       description: ""
     },
-    {},
     {
       i_id: "7239eb52-1060-429a-a1d5-66a0da2a2406",
       number: (
@@ -192,17 +188,18 @@ const data = props => ({
           className="text-primary"
           to={routesURL.ISSUE_WIKI + "7239eb52-1060-429a-a1d5-66a0da2a2406"}
         >
-          I12
+          I6
         </Link>
       ),
-      name: "issue0",
-      title: "Model missing cart path modification",
-      due_date: "09-30-19",
-      complete: "0%",
+      name: "Workpackage running out of budget",
+      title: "Workpackage running out of budget",
+      due_date: "07-20-19",
+      complete: "60%",
       status: "Overdue",
       issue_status: "In Progress",
       workpackage: "DESIGN(1.02)",
-      planned_effort: "10",
+      planned_effort: "",
+      actual_effort: "",
       owner: (
         <a
           href="#/resourcelist/eecb7a0e-c560-415a-9d7b-4657d0169adb"
@@ -211,14 +208,12 @@ const data = props => ({
           @Suresh,
         </a>
       ),
-      actual_effort: "0",
-      issue_type: "Design",
-      issue_severity: "Medium",
+      issue_type: "",
+      issue_severity: "",
       public: publicSwitch("16183", true),
-      days: "65",
+      days: "45",
       description: ""
     },
-    {},
     {
       i_id: "1d6aa4df-7651-487e-ac93-c07da567578d",
       number: (
@@ -226,18 +221,18 @@ const data = props => ({
           className="text-primary"
           to={routesURL.ISSUE_WIKI + "1d6aa4df-7651-487e-ac93-c07da567578d"}
         >
-          I6
+          I7
         </Link>
       ),
-      name: "issue900",
-      title: "Model missing cart path modification",
-      due_date: "09-30-19",
-      complete: "0%",
+      name: "Schedule overrage 1.04",
+      title: "Schedule overrage 1.04",
+      due_date: "06-10-19",
+      complete: "100%",
       status: "Overdue",
-      issue_status: "In Progress",
-      workpackage: "DESIGN(1.02)",
-      planned_effort: "10",
-      actual_effort: "0",
+      issue_status: "Completed",
+      workpackage: "1.04",
+      planned_effort: "",
+      actual_effort: "",
       owner: (
         <a
           href="#/resourcelist/4c3e38e5-532e-4532-a0c3-6d44ece047ed"
@@ -246,13 +241,78 @@ const data = props => ({
           @Arindam
         </a>
       ),
-      issue_type: "Contract",
-      issue_severity: "Medium",
+      issue_type: "",
+      issue_severity: "",
       public: publicSwitch("38554"),
-      days: "65",
+      days: "35",
       description: ""
     },
-    {}
+    {
+      i_id: "7823ac89-700e-4032-b49e-fc2f97889770",
+      number: (
+        <Link
+          className="text-primary"
+          to={routesURL.ISSUE_WIKI + "7823ac89-700e-4032-b49e-fc2f97889770"}
+        >
+          I8
+        </Link>
+      ),
+      name: "Schedule overrage 1.03",
+      title: "Schedule overrage 1.03",
+      due_date: "06-11-19",
+      complete: "100%",
+      status: "Overdue",
+      issue_status: "Completed",
+      workpackage: "1.03",
+      planned_effort: "",
+      actual_effort: "",
+      owner: (
+        <a
+          href="#/resourcelist/4c3e38e5-532e-4532-a0c3-6d44ece047ed"
+          className="text-primary"
+        >
+          @Arindam
+        </a>
+      ),
+      issue_type: "",
+      issue_severity: "",
+      public: publicSwitch("38554"),
+      days: "35",
+      description: ""
+    },
+    {
+      i_id: "4186bf0a-750a-4a7b-b470-f8429318aff7",
+      number: (
+        <Link
+          className="text-primary"
+          to={routesURL.ISSUE_WIKI + "4186bf0a-750a-4a7b-b470-f8429318aff7"}
+        >
+          I9
+        </Link>
+      ),
+      name: "Schedule overrage 1.02",
+      title: "Schedule overrage 1.02",
+      due_date: "06-12-19",
+      complete: "100%",
+      status: "Overdue",
+      issue_status: "Completed",
+      workpackage: "1.02",
+      planned_effort: "",
+      actual_effort: "",
+      owner: (
+        <a
+          href="#/resourcelist/4c3e38e5-532e-4532-a0c3-6d44ece047ed"
+          className="text-primary"
+        >
+          @Arindam
+        </a>
+      ),
+      issue_type: "",
+      issue_severity: "",
+      public: publicSwitch("38554"),
+      days: "35",
+      description: ""
+    }
   ]
 });
 

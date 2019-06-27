@@ -32,7 +32,7 @@ export const keylist = [
 class Submenu extends Component {
   state = {
     comment: true,
-    project:true,
+    project: true,
     wbs: true,
     work_package: true,
     issue_changes: true,
@@ -40,8 +40,7 @@ class Submenu extends Component {
     meeting_minutes: true,
     finanical: true,
     activity_log: true,
-    follow: true,
-    
+    follow: true
   };
 
   componentDidMount() {
@@ -65,7 +64,7 @@ class Submenu extends Component {
   };
 
   render() {
-    const { refs,name, link, id } = this.props; 
+    const { refs, name, link, id } = this.props;
     return (
       <nav className="sub-navbar navbar-fixed-top" aria-label="breadcrumb">
         <div className="row">
@@ -84,7 +83,7 @@ class Submenu extends Component {
               {link === "meeting" && (
                 <>
                   <li className="nav-head active" aria-current="page">
-                    <Link exact to={routesURL.MEETING_LIST}>
+                    <Link exact to={routesURL.MEETING_LIST + "all"}>
                       <i className="fa fa-check-square" /> Meeting Register
                     </Link>
                   </li>
@@ -96,33 +95,33 @@ class Submenu extends Component {
                 </>
               )}
 
-                {link === "deliverable" && (
-                  <>
-                    <li className="nav-head active " aria-current="page">
-                      <Link exact to="#">
-                        <i className="fa fa-user-secret" /> Assign
-                      </Link>
-                    </li>
+              {link === "deliverable" && (
+                <>
+                  <li className="nav-head active " aria-current="page">
+                    <Link exact to="#">
+                      <i className="fa fa-user-secret" /> Assign
+                    </Link>
+                  </li>
 
-                      <li className="nav-head active " aria-current="page">
-                        <Link
-                          exact
-                          to="#"
-                          onClick={e => {
-                            this.scrollTo(e,refs['approvedStatus']);
-                          }}                         
-                        >
-                          <i className="fa fa-check-square" /> Approval Status
-                        </Link>                       
-                      </li>
+                  <li className="nav-head active " aria-current="page">
+                    <Link
+                      exact
+                      to="#"
+                      onClick={e => {
+                        this.scrollTo(e, refs["approvedStatus"]);
+                      }}
+                    >
+                      <i className="fa fa-check-square" /> Approval Status
+                    </Link>
+                  </li>
 
-                      <li className="nav-head active" aria-current="page">
-                        <Link exact to={routesURL.PAGE_NOT_FOUND}>
-                          <i className="fa fa-sitemap" /> Save
-                        </Link>
-                      </li>
-                      </>
-                   )}
+                  <li className="nav-head active" aria-current="page">
+                    <Link exact to={routesURL.PAGE_NOT_FOUND}>
+                      <i className="fa fa-sitemap" /> Save
+                    </Link>
+                  </li>
+                </>
+              )}
 
               {keylist.map(
                 (list, index) =>

@@ -8,6 +8,8 @@ import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import MeetingInformation from "../../components/Meeting/MeetingInformation";
 import MeetingDescription from "../../components/Meeting/MeetingDescription";
 import meeting_database from "../../database/database";
+import getmeetinglist from "../../database/meetinglist_database";
+import { routesURL } from "../../constant/routesURL";
 
 export const menulink = [
   {
@@ -25,6 +27,10 @@ class Meeting extends Component {
   activityLogRef = React.createRef();
 
   render() {
+    const { id } = this.props.match.params;
+    const { meetingList } = getmeetinglist();
+    const meetingInfo = meetingList.filter(item => `${item.m_id}` === id);
+    if (meetingInfo.lenght === 0) return routesURL.DASHBOARD;
     const { record_information } = meeting_database;
     return (
       <React.Fragment>
@@ -36,12 +42,12 @@ class Meeting extends Component {
             activityLogRef: this.activityLogRef
           }}
           isMenu={{
-            project:false,
-            finanical: false,          
+            project: false,
+            finanical: false,
             wbs: false,
             issue_changes: false,
             deliverable: false,
-            work_package: false,         
+            work_package: false
           }}
           link={"meeting"}
           //  name={workPackageInfo.name}
@@ -51,7 +57,7 @@ class Meeting extends Component {
           <div className="col-12 col-lg-8">
             <Row>
               <div className="col-12" ref={this.meetingMinutesRef}>
-                <MeetingInformation />
+                <MeetingInformation meetingInfo={meetingInfo[0]} />
               </div>
               <div className="col-12">
                 <MeetingDescription />

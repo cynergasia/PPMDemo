@@ -37,6 +37,7 @@ class IssueRegister extends Component {
   state = {
     data: { ...issueProjectData }
   };
+
   componentDidMount() {
     const { status } = this.props.issueRegister
       ? this.props.issueRegister
