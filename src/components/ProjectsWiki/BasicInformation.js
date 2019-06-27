@@ -11,7 +11,7 @@ import {
   ListGroup,
   ListGroupItem,
   ListGroupItemHeading,
-  ListGroupItemText 
+  ListGroupItemText
 } from "reactstrap";
 import Modal from "../../helper/Modal";
 
@@ -131,7 +131,7 @@ class BasicInformation extends Component {
         </FormGroup>
       </React.Fragment>
     );
-    return (     
+    return (
       <React.Fragment>
         <Card>
           <CardHeader>
@@ -146,12 +146,11 @@ class BasicInformation extends Component {
                 header="Edit Basic Project Information"
                 body={modelBody}
               />
-           
             </div>
           </CardHeader>
           <CardBody>
             {/* <pre className="m-0">{basicProjectInfo}</pre> className="project-wiki-basicinfo"  */}
-            
+
             <ListGroup>
               <ListGroupItem>
                 <ListGroupItemHeading
@@ -176,13 +175,20 @@ class BasicInformation extends Component {
                             <div>Project Number </div>
                           </td>
                           <td className="text-left">
-                            <div><Input name="projectName" value={this.props.projectID} /></div>
+                            <div>
+                              <Input
+                                name="projectName"
+                                value={this.props.projectID}
+                              />
+                            </div>
                           </td>
                           <td className="basicinfo text-left">
                             <div>Project Name </div>
                           </td>
                           <td className="text-left">
-                            <div><Input name="projectName" value={projectName} /></div>
+                            <div>
+                              <Input name="projectName" value={projectName} />
+                            </div>
                           </td>
                         </tr>
                         <tr>
@@ -190,13 +196,20 @@ class BasicInformation extends Component {
                             <div>Project Type </div>
                           </td>
                           <td className="text-left">
-                            <div><Input name="projectType" value={projectType}/></div>
+                            <div>
+                              <Input name="projectType" value={projectType} />
+                            </div>
                           </td>
                           <td className="basicinfo text-left">
                             <div>Opportunity Number </div>
                           </td>
                           <td className="text-left">
-                            <div><Input name="opportunity_number" value={opportunity_number}/></div>
+                            <div>
+                              <Input
+                                name="opportunity_number"
+                                value={opportunity_number}
+                              />
+                            </div>
                           </td>
                         </tr>
 
@@ -205,13 +218,20 @@ class BasicInformation extends Component {
                             <div>Organization </div>
                           </td>
                           <td className="text-left">
-                            <div><Input name="organization" value={organization}/></div>
+                            <div>
+                              <Input name="organization" value={organization} />
+                            </div>
                           </td>
                           <td className="basicinfo text-left">
                             <div>Federal Project </div>
                           </td>
                           <td className="text-left">
-                            <div><Input name="federal_project" value={federal_project}/></div>
+                            <div>
+                              <Input
+                                name="federal_project"
+                                value={federal_project}
+                              />
+                            </div>
                           </td>
                         </tr>
 
@@ -220,13 +240,20 @@ class BasicInformation extends Component {
                             <div>Currency </div>
                           </td>
                           <td className="text-left">
-                            <div><Input name="currency" value={currency}/></div>
+                            <div>
+                              <Input name="currency" value={currency} />
+                            </div>
                           </td>
                           <td className="basicinfo text-left">
                             <div>Partnering Needed </div>
                           </td>
                           <td className="text-left">
-                            <div><Input name="partnering_needed" value={partnering_needed}/></div>
+                            <div>
+                              <Input
+                                name="partnering_needed"
+                                value={partnering_needed}
+                              />
+                            </div>
                           </td>
                         </tr>
 
@@ -235,13 +262,24 @@ class BasicInformation extends Component {
                             <div>Stage </div>
                           </td>
                           <td className="text-left">
-                            <div><Input name="stage" value={stage}/></div>
+                            <div>
+                              <Input name="stage" value={stage} />
+                            </div>
                           </td>
                           <td className="basicinfo text-left">
                             <div>Project Manager </div>
                           </td>
                           <td className="text-left">
+<<<<<<< HEAD
                             <div><Input name="project_manager" value={project_manager} /></div>
+=======
+                            <div>
+                              <Input
+                                name="project_manager"
+                                value={project_manager}
+                              />
+                            </div>
+>>>>>>> 53523997947bc93c42aa7f793605711ac70b5aef
                           </td>
                         </tr>
                         <tr>
@@ -249,13 +287,20 @@ class BasicInformation extends Component {
                             <div>Project Approver </div>
                           </td>
                           <td className="text-left">
-                            <div><Input name="project_approver" value={project_approver} /></div>
+                            <div>
+                              <Input
+                                name="project_approver"
+                                value={project_approver}
+                              />
+                            </div>
                           </td>
                           <td className="basicinfo text-left">
                             <div>P&L Manager </div>
                           </td>
                           <td className="text-left">
-                            <div><Input name="pl_manager" value={pl_manager}/></div>
+                            <div>
+                              <Input name="pl_manager" value={pl_manager} />
+                            </div>
                           </td>
                         </tr>
 
@@ -264,13 +309,20 @@ class BasicInformation extends Component {
                             <div>Region </div>
                           </td>
                           <td className="text-left">
-                            <div><Input name="region" value={region}/></div>
+                            <div>
+                              <Input name="region" value={region} />
+                            </div>
                           </td>
                           <td className="basicinfo text-left" rowSpan="2">
                             <div>Available to Copy </div>
                           </td>
                           <td className="text-left" rowSpan="2">
-                            <div><Input name="available_to_copy" value={available_to_copy}/></div>
+                            <div>
+                              <Input
+                                name="available_to_copy"
+                                value={available_to_copy}
+                              />
+                            </div>
                           </td>
                         </tr>
 
@@ -279,7 +331,9 @@ class BasicInformation extends Component {
                             <div>Type </div>
                           </td>
                           <td className="text-left">
-                            <div><Input name="type" value={type}/></div>
+                            <div>
+                              <Input name="type" value={type} />
+                            </div>
                           </td>
                         </tr>
 

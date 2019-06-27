@@ -13,6 +13,8 @@ import { routesURL } from "../../constant/routesURL";
 
 class Meetings extends Component {
   render() {
+    console.log(this.props.meetingList);
+    const { meetingList } = this.props;
     return (
       <React.Fragment>
         <Card>
@@ -26,33 +28,37 @@ class Meetings extends Component {
           <CardBody>
             <ListGroup>
               <ListGroupItem>
-                <ListGroupItemHeading>Upcomming Meeting :</ListGroupItemHeading>
+                <ListGroupItemHeading>Upcoming Meeting :</ListGroupItemHeading>
+                {meetingList.map(
+                  (item, index) =>
+                    item.status === "upcoming" && (
+                      <ListGroupItemText className="mb-0" key={index}>
+                        <Link to={routesURL.MEETING + item.m_id}>
+                          {item.displaydate} {item.subject}
+                        </Link>
+                      </ListGroupItemText>
+                    )
+                )}
                 <ListGroupItemText>
-                  <Link to={routesURL.MEETING}>
-                    20-Jun-2019 : Review Design with Client
-                  </Link>
-                  <br />
-                  <Link to={routesURL.MEETING}>
-                    29-Jun-2019 : Review Design with Client{" "}
-                  </Link>
-                  <br />
-                  <Link to={routesURL.MEETING_LIST}>More..</Link>
+                  <Link to={routesURL.MEETING_LIST + "upcoming"}>More..</Link>
                 </ListGroupItemText>
               </ListGroupItem>
               <ListGroupItem className="mt-3">
                 <ListGroupItemHeading>
                   Review Past Meeting :
                 </ListGroupItemHeading>
+                {meetingList.map(
+                  (item, index) =>
+                    item.status === "past" && (
+                      <ListGroupItemText className="mb-0" key={index}>
+                        <Link to={routesURL.MEETING + item.m_id}>
+                          {item.displaydate} {item.subject}
+                        </Link>
+                      </ListGroupItemText>
+                    )
+                )}
                 <ListGroupItemText>
-                  <Link to={routesURL.MEETING}>
-                    03-May-2019: Initial Requirement collection{" "}
-                  </Link>{" "}
-                  <br />
-                  <Link to={routesURL.MEETING}>
-                    15-May-2019: Requirement Review{" "}
-                  </Link>{" "}
-                  <br />
-                  <Link to={routesURL.MEETING_LIST}>More..</Link>
+                  <Link to={routesURL.MEETING_LIST + "past"}>More..</Link>
                 </ListGroupItemText>
               </ListGroupItem>
             </ListGroup>

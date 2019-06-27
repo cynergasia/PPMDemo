@@ -34,10 +34,7 @@ class Risks extends Component {
                   <Link to={routesURL.RISK_WIKI}> Risk9</Link>
                 </ListGroupItemText>
                 <br />
-                <ListGroupItemHeading>
-                  {" "}
-                  Medium Risk Items :{" "}
-                </ListGroupItemHeading>
+                <ListGroupItemHeading>Medium Risk Items :</ListGroupItemHeading>
                 <ListGroupItemText className="mb-0">
                   <Link to={routesURL.RISK_WIKI}>Risk4</Link>
                 </ListGroupItemText>

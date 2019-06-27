@@ -17,9 +17,11 @@ class Popup extends React.Component {
   handleChange = ({ target: { value } }) => {
     this.setState({ active: value });
   };
-  onSubmit = () => {
-    const randomNumber = Math.floor(Math.random() * 1000000) + 6000000;
-    window.location.hash = `${routesURL.PROJECT_WIKI}` + randomNumber;
+  onSubmit = e => {
+    e.preventDefault();
+    // const randomNumber = Math.floor(Math.random() * 1000000) + 6000000;
+    window.location.hash = `${routesURL.PROJECT_WIKI + 60888013}`;
+    this.setState({ isModal: !this.state.isModal, active: "" });
   };
   render() {
     const { active } = this.state;

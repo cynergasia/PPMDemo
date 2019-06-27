@@ -29,131 +29,131 @@ const database = [
     complete: "48.61%",
     public: publicSwitch("11111"),
     workPackages: [
-  //     {
-  //       id: "d588dc46-d7a8-4ac4-ad12-f0ff3914cebf",
-  //       deliverable: "1",
-  //       issues: "0",
-  //       changes: "0",
-  //       type: "WorkPackage",
-  //       wbsType: "Admin",
-  //       wbsNumber: "1.01",
-  //       name: (
-  //         <Link
-  //           className="text-primary"
-  //           to={
-  //             routesURL.WORKPACKAGE_WIKI +
-  //             "d588dc46-d7a8-4ac4-ad12-f0ff3914cebf"
-  //           }
-  //         >
-  //           Admin
-  //         </Link>
-  //       ),
-  //       duration: "60",
-  //       start_date: "01-01-2019",
-  //       end_date: "03-02-2019",
-  //       resources: "SP",
-  //       estimatehours: "300",
-  //       actualhours: "300",
-  //       remaininghours: "0",
-  //       complete: "100.00%",
-  //       public: publicSwitch("11222"),
-  //       status: "Completed",
-  //       chargeable: "Yes",
-  //       billable: "Yes",
-  //       description: "Admin",
-  //       activities: [
-  //         {
-  //           type: "activity",
-  //           wbsNumber: "a1.01.01",
-  //           name: "Team Managemnet",
-  //           duration: "10",
-  //           start_date: "01-01-2019",
-  //           end_date: "01-11-2019",
-  //           resources: "SP",
-  //           estimatehours: "40",
-  //           actualhours: "40",
-  //           remaininghours: "0",
-  //           complete: "100.00%",
-  //           public: publicSwitch("11333", true)
-  //         },
-  //         {
-  //           type: "activity",
-  //           wbsNumber: "a1.01.02",
-  //           name: "Contract Mangemnet",
-  //           duration: "49",
-  //           start_date: "01-12-2019",
-  //           end_date: "03-02-2019",
-  //           resources: "SP",
-  //           estimatehours: "260",
-  //           actualhours: "260",
-  //           remaininghours: "0",
-  //           complete: "100.00%",
-  //           public: publicSwitch("11444")
-  //         }
-  //       ],
-  //       record_information: {
-  //         schedule_info: [
-  //           {
-  //             title: "Schedule Start Date",
-  //             value: "01-01-19"
-  //           },
-  //           {
-  //             title: "Schedule End Date",
-  //             value: "03-02-19"
-  //           },
-  //           {
-  //             title: "Transaction Start Date",
-  //             value: "01-01-19"
-  //           },
-  //           {
-  //             title: "Transaction End Date",
-  //             value: "03-02-19"
-  //           },
-  //           {
-  //             title: "Planned Efforts",
-  //             value: "300 Hours"
-  //           },
-  //           {
-  //             title: "Actual Efforts",
-  //             value: "300 Hours"
-  //           },
-  //           {
-  //             title: "% Spent",
-  //             value: "0%"
-  //           },
-  //           {
-  //             title: "% Complete",
-  //             value: "100%"
-  //           }
-  //         ],
-  //         audit_info: [
-  //           {
-  //             title: "Created By",
-  //             value: "Suresh Padmanabhan"
-  //           },
-  //           {
-  //             title: "Creation Date",
-  //             value: "12-15-18"
-  //           },
-  //           {
-  //             title: "Last Updated By",
-  //             value: "Suresh Padmanabhan"
-  //           },
-  //           {
-  //             title: "Last Updated Date",
-  //             value: "06-10-19"
-  //           },
-  //           {
-  //             title: "Latest Activity date",
-  //             value: "06-08-19"
-  //           },
-  //           {
-  //             title: "Locked By",
-  //             value: "Suresh Padmanabhan"
-  //           }
-  //         ]
-  //       }
-  //     },
+      // {
+      //   id: "d588dc46-d7a8-4ac4-ad12-f0ff3914cebf",
+      //   deliverable: "1",
+      //   issues: "0",
+      //   changes: "0",
+      //   type: "WorkPackage",
+      //   wbsType: "Admin",
+      //   wbsNumber: "1.01",
+      //   name: (
+      //     <Link
+      //       className="text-primary"
+      //       to={
+      //         routesURL.WORKPACKAGE_WIKI +
+      //         "d588dc46-d7a8-4ac4-ad12-f0ff3914cebf"
+      //       }
+      //     >
+      //       Admin
+      //     </Link>
+      //   ),
+      //   duration: "60",
+      //   start_date: "01-01-2019",
+      //   end_date: "03-02-2019",
+      //   resources: "SP",
+      //   estimatehours: "300",
+      //   actualhours: "300",
+      //   remaininghours: "0",
+      //   complete: "100.00%",
+      //   public: publicSwitch("11222"),
+      //   status: "Completed",
+      //   chargeable: "Yes",
+      //   billable: "Yes",
+      //   description: "Admin",
+      //   activities: [
+      //     {
+      //       type: "activity",
+      //       wbsNumber: "a1.01.01",
+      //       name: "Team Managemnet",
+      //       duration: "10",
+      //       start_date: "01-01-2019",
+      //       end_date: "01-11-2019",
+      //       resources: "SP",
+      //       estimatehours: "40",
+      //       actualhours: "40",
+      //       remaininghours: "0",
+      //       complete: "100.00%",
+      //       public: publicSwitch("11333", true)
+      //     },
+      //     {
+      //       type: "activity",
+      //       wbsNumber: "a1.01.02",
+      //       name: "Contract Mangemnet",
+      //       duration: "49",
+      //       start_date: "01-12-2019",
+      //       end_date: "03-02-2019",
+      //       resources: "SP",
+      //       estimatehours: "260",
+      //       actualhours: "260",
+      //       remaininghours: "0",
+      //       complete: "100.00%",
+      //       public: publicSwitch("11444")
+      //     }
+      //   ],
+      //   record_information: {
+      //     schedule_info: [
+      //       {
+      //         title: "Schedule Start Date",
+      //         value: "01-01-19"
+      //       },
+      //       {
+      //         title: "Schedule End Date",
+      //         value: "03-02-19"
+      //       },
+      //       {
+      //         title: "Transaction Start Date",
+      //         value: "01-01-19"
+      //       },
+      //       {
+      //         title: "Transaction End Date",
+      //         value: "03-02-19"
+      //       },
+      //       {
+      //         title: "Planned Efforts",
+      //         value: "300 Hours"
+      //       },
+      //       {
+      //         title: "Actual Efforts",
+      //         value: "300 Hours"
+      //       },
+      //       {
+      //         title: "% Spent",
+      //         value: "0%"
+      //       },
+      //       {
+      //         title: "% Complete",
+      //         value: "100%"
+      //       }
+      //     ],
+      //     audit_info: [
+      //       {
+      //         title: "Created By",
+      //         value: "Suresh Padmanabhan"
+      //       },
+      //       {
+      //         title: "Creation Date",
+      //         value: "12-15-18"
+      //       },
+      //       {
+      //         title: "Last Updated By",
+      //         value: "Suresh Padmanabhan"
+      //       },
+      //       {
+      //         title: "Last Updated Date",
+      //         value: "06-10-19"
+      //       },
+      //       {
+      //         title: "Latest Activity date",
+      //         value: "06-08-19"
+      //       },
+      //       {
+      //         title: "Locked By",
+      //         value: "Suresh Padmanabhan"
+      //       }
+      //     ]
+      //   }
+      // },
       {
         id: "f943d9a6-5fe9-4c97-957d-16d3f8af117d",
         deliverable: "1",
