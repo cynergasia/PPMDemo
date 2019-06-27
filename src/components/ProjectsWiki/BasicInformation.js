@@ -270,16 +270,12 @@ class BasicInformation extends Component {
                             <div>Project Manager </div>
                           </td>
                           <td className="text-left">
-<<<<<<< HEAD
-                            <div><Input name="project_manager" value={project_manager} /></div>
-=======
                             <div>
                               <Input
                                 name="project_manager"
                                 value={project_manager}
                               />
                             </div>
->>>>>>> 53523997947bc93c42aa7f793605711ac70b5aef
                           </td>
                         </tr>
                         <tr>
