@@ -49,8 +49,11 @@ class IssueList extends Component {
                     </ol>
                     <ol className="breadcrumb left-breadcrumb">
                       <li className="nav-head active" area-current="page">
-                        <Link to="#" onClick={this.toggle}>
+                        <Link to="#" onClick={this.toggle} className="mr-2">
                           <i className="fa fa-plus-square" /> Create New
+                        </Link>
+                        <Link to="#">
+                          <i className="fa fa-sitemap" /> Save
                         </Link>
                       </li>
                     </ol>

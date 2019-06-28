@@ -36,10 +36,10 @@ class Financial extends Component {
           </Col>
           <Col sm="12" md="6" lg="5">
             <label>             
-              <Link to={routesURL.INVOICE_LIST}>
+              
                   {" "}
-                  <span className="financial-title">Total Billed:</span> {totalBilled}
-                </Link>{" "}
+                  <span className="financial-title">Total Billed:</span> <Link to={routesURL.INVOICE_LIST}>{totalBilled} </Link>
+               {" "}
             </label>
             <br />
             <label>

@@ -114,8 +114,8 @@ class IssueTableList extends Component {
           <CardBody>
             <ReactDataTableNew
               data={this.state.data}
-              entries={10}
-              entriesOptions={[10, 20, 50, 100]}
+              entries={5}
+              entriesOptions={[5,10, 20, 50, 100]}
             />
           </CardBody>
         </Card>

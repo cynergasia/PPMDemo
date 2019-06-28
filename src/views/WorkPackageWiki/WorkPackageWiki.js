@@ -15,6 +15,7 @@ import Meetings from "../../components/ProjectsWiki/Meetings";
 import projectwiki_database from "../../database/projectwiki_database";
 import workpackagewiki_database from "../../database/workpackagewiki_database";
 import _omit from "lodash/omit";
+import getmeetingList from '../../database/meetinglist_database'
 
 class WorkPackageWiki extends Component {
   sidebar = null;
@@ -47,6 +48,7 @@ class WorkPackageWiki extends Component {
     const record_information = p[0].record_information;
     const { issues, changes, deliverbales } = workpackagewiki_database;
     //console.log("admin", workPackageInfo);
+    const { meetingList } = getmeetingList();
     return (
       <React.Fragment>
         <SubMenu
@@ -85,7 +87,7 @@ class WorkPackageWiki extends Component {
               </div>
               <div className="col-12" ref={this.meetingMinutesRef}>
                 {/* <WorkPackageMeeting /> */}
-                <Meetings />
+                <Meetings meetingList={meetingList} />
               </div>
               <div className="col-12" ref={this.activityLogRef}>
                 {/* <ActivityLog title="WorkPackage ActivityLog"  /> */}

@@ -48,7 +48,7 @@ class TaskWiki extends Component {
           <div className="col-12 col-lg-4">
             <div className="aside">
               <div className="aside-inner">
-                <RecordInformation record_information={record_information} />
+                <RecordInformation record_information={record_information} isWorkflowinfo={false}/>
               </div>
             </div>
           </div>

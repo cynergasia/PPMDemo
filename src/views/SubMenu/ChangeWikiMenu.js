@@ -39,7 +39,16 @@ class ChangeWikiMenu extends Component {
                     <i className="cui-comment-square" /> Comment
                   </Link>
                 </li>
-                <li/>
+                <li className="nav-head active " aria-current="page">
+                    <Link exact to="/changeslist">
+                      <i className="fa fa-sitemap" /> Change Register
+                    </Link>
+                 </li>
+                <li className="nav-head active " aria-current="page">
+                    <Link exact to="#">
+                      <i className="fa fa-user-secret" /> Assign
+                    </Link>
+                 </li>
                 <li className="nav-head active " aria-current="page">
                   <Link
                     exact

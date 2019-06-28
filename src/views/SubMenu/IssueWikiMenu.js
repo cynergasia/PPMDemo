@@ -48,12 +48,22 @@ class IssueWikiMenu extends Component {
                 </li>
                 <li />
                 <li className="nav-head active " aria-current="page">
+                    <Link exact to="/issuelist">
+                      <i className="fa fa-sitemap" /> Issue Register
+                    </Link>
+                 </li>
+                <li className="nav-head active " aria-current="page">
+                    <Link exact to="#">
+                      <i className="fa fa-user-secret" /> Assign
+                    </Link>
+                 </li>
+                <li className="nav-head active " aria-current="page">
                   <Link
                     exact
                     to="#"
                     onClick={() => this.scrollTo(refs.approvedStatusRef)}
                   >
-                    <i className="fa fa-check-square" /> Approved Status
+                    <i className="fa fa-check-square" /> Approval Status
                   </Link>
                 </li>
                 <li className="nav-head active " aria-current="page">
