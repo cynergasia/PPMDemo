@@ -26,6 +26,7 @@ class ProjectWiki extends Component {
   meetingMinutesRef = React.createRef();
   financialsRef = React.createRef();
   activityLogRef = React.createRef();
+  riskStatusRef = React.createRef();
 
   render() {
     /**
@@ -66,12 +67,17 @@ class ProjectWiki extends Component {
             workPackageRef: this.workPackageRef,
             meetingMinutesRef: this.meetingMinutesRef,
             financialsRef: this.financialsRef,
-            activityLogRef: this.activityLogRef
+            activityLogRef: this.activityLogRef,
+            riskStatusRef: this.riskStatusRef
           }}
           isMenu={{
             deliverable: false,
             work_package: false,
-            approved_status: false
+            approved_status: false,
+            deliverableInfo: false,
+            approvedStatus: false,
+            meetingInfo: false,
+            taskInfo: false
           }}
           link={"projectwiki"}
           id={id}
@@ -102,7 +108,11 @@ class ProjectWiki extends Component {
               </div>
 
               <div className="col-12" ref={this.issueChangesRef}>
-                <IssueChanges issues={issues} changes={changes} />
+                <IssueChanges
+                  issues={issues}
+                  changes={changes}
+                  projectID={id}
+                />
               </div>
 
               <div className="col-12" ref={this.meetingMinutesRef}>
@@ -113,7 +123,7 @@ class ProjectWiki extends Component {
                 <BudgetFinance />
               </div>
 
-              <div className="col-12">
+              <div className="col-12" ref={this.riskStatusRef}>
                 <Risks />
               </div>
 

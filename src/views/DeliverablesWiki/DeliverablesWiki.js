@@ -9,6 +9,7 @@ import DeliverablesActivities from "../../components/DeliverablesWiki/Deliverabl
 import DeliverablesApprovalStatus from "../../components/DeliverablesWiki/DeliverablesApprovalStatus";
 import deliverableswiki_database from "../../database/deliverableswiki_database";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
+import { routesURL } from "../../constant/routesURL";
 
 class DeliverablesWiki extends Component {
   approvedStatus = React.createRef();
@@ -20,35 +21,37 @@ class DeliverablesWiki extends Component {
     const { activities, deliverablesInfo } = deliverableswiki_database;
     const deliverInfo = deliverablesInfo.filter(item => item.d_id === id);
     if (deliverInfo.length === 0) {
-      window.location.hash = "#/";
+      window.location.hash = routesURL.DASHBOARD;
     }
     console.log(deliverInfo[0]);
     return (
       <React.Fragment>
-       
-         <SubMenu
-          refs={{    
-            approvedStatus: this.approvedStatus,           
-            deliverableRef: this.deliverableRef,       
+        <SubMenu
+          refs={{
+            approvedStatus: this.approvedStatus,
+            deliverableRef: this.deliverableRef,
             activityLogRef: this.activityLogRef
-          }}        
+          }}
           isMenu={{
-            project:false,
-            meeting_minutes:false,  
-            finanical: false,          
+            project: false,
+            meeting_minutes: false,
+            finanical: false,
             wbs: false,
-            issue_changes: false,           
-            work_package: false,   
-               
+            risks: false,
+            issue_changes: false,
+            work_package: false,
+            deliverable: false,
+            meetingInfo: false,
+            taskInfo: false
           }}
           name={deliverInfo[0].name}
-          link={"deliverable"}         
+          link={"deliverable"}
         />
-      
+
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">
             <Row>
-              <div className="col-12" ref={this.deliverableRef} >
+              <div className="col-12" ref={this.deliverableRef}>
                 <DeliverablesInformation deliverInfo={deliverInfo[0]} />
               </div>
               <Col xs="12">

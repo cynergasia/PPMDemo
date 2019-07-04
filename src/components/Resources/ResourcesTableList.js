@@ -57,7 +57,7 @@ class ResourcesTableList extends Component {
       <React.Fragment>
         <Card>
           <CardHeader>
-            {name} Alloaction
+            {name} Allocation
             <div className="card-header-actions">
               <i className="fa fa-plus-circle mr-2" />
               <i className="fa fa-save" />

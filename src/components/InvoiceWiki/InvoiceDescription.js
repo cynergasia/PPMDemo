@@ -9,7 +9,7 @@ class InvoiceDescription extends Component {
       <React.Fragment>
         <Card>
           <CardHeader>
-            Description
+            Invoice Description
             <div className="card-header-actions">
               <span className="text-primary cursor-pointer">
                 <i className="fa fa-pencil-square" />
@@ -76,7 +76,7 @@ class InvoiceDescription extends Component {
                   <div>NET60</div>
                 </td>
                 <td>
-                <div>07-30-2019</div>
+                  <div>07-30-2019</div>
                 </td>
                 <td>
                   <div>USD 10,000.00</div>
@@ -93,7 +93,11 @@ class InvoiceDescription extends Component {
               <tr>
                 <td colSpan="4">
                   <div>
-                    <Input type="textarea" rows="3" defaultValue="Please contact Suresh Padmanabhan if you need additional information on this invoice." />
+                    <Input
+                      type="textarea"
+                      rows="3"
+                      defaultValue="Please contact Suresh Padmanabhan if you need additional information on this invoice."
+                    />
                   </div>
                 </td>
               </tr>
@@ -111,23 +115,22 @@ class InvoiceDescription extends Component {
                   <div>Amount</div>
                 </td>
               </tr>
-              {data().invoiceDetails.map((invoice,index) => (
-                 <tr key={index}>
-                 <td>
-                   <div>{invoice.Details}</div>
-                 </td>
-                 <td>
-                   <div>{invoice.Hours}</div>
-                 </td>
-                 <td>
-                   <div>{invoice.Rate}</div>
-                 </td>
-                 <td>
-                   <div>{invoice.Amount}</div>
-                 </td>
-               </tr>
-                ))
-              }              
+              {data().invoiceDetails.map((invoice, index) => (
+                <tr key={index}>
+                  <td>
+                    <div>{invoice.Details}</div>
+                  </td>
+                  <td>
+                    <div>{invoice.Hours}</div>
+                  </td>
+                  <td>
+                    <div>{invoice.Rate}</div>
+                  </td>
+                  <td>
+                    <div>{invoice.Amount}</div>
+                  </td>
+                </tr>
+              ))}
             </Table>
           </CardBody>
         </Card>

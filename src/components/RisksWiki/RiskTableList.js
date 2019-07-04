@@ -73,9 +73,9 @@ class RiskTableList extends Component {
         <Card>
           <CardHeader>
             <div className="card-header-actions">
-              <i className="fa fa-file-excel-o mr-2" />
+              {/* <i className="fa fa-file-excel-o mr-2" />
               <i className="fa fa-plus-circle mr-2" />
-              <i className="fa fa-pencil-square" />
+              <i className="fa fa-pencil-square" /> */}
             </div>
           </CardHeader>
           <CardBody>

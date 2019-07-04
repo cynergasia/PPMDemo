@@ -14,11 +14,13 @@ class ActivitiesList extends Component {
                 <div className="row">
                   <div className="col-12 col-sm-12 col-lg-12">
                     <ol className="breadcrumb left-breadcrumb">
-                      <li className="nav-head active" area-current="page">
-                        <Link to="/projectwiki">
-                          <i className="fa fa-map-marker" /> Bay Bridge
-                          Construction in the bay(P001)
-                        </Link>
+                    <li className="nav-head active" area-current="page">
+                        <i className="fa fa-map-marker" />
+                        <Link to={routesURL.PROJECT_WIKI + "60453005"}>
+                          {" "}
+                          Extensions N/Cape Mall Phase 3 (60453005)
+                        </Link>{" "}
+                     
                       </li>
                     </ol>
                   </div>

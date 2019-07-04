@@ -412,6 +412,11 @@ h6.chart-title {
   z-index: 9999;
 }
 
+.react-datepicker-wrapper,
+.react-datepicker-wrapper>.react-datepicker__input-container {
+  width: 100%;
+}
+
 .custome-datepicker .react-datepicker-wrapper,
 .custome-datepicker .react-datepicker__input-container {
   width: 100%;
@@ -423,6 +428,20 @@ h6.chart-title {
 
 .custom-timepicker .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box {
   width: 100%;
+}
+
+.login-logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#myissue {
+  cursor: pointer;
+}
+
+.aside-menu .navbar-toggler .navbar-toggler-icon {
+  width: 0;
 }
 
 /***** Responsive *****/

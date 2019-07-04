@@ -4,7 +4,6 @@ import SubMenu from "../SubMenu/Submenu";
 import RecordInformation from "../../components/RecordInformation";
 import Attachments from "../../components/Attachments";
 
-
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
 import WorkPackageInformation from "../../components/WorkPackageWiki/WorkPackageInformation";
 import WorkPackageActivities from "../../components/WorkPackageWiki/WorkPackageActivities";
@@ -15,7 +14,7 @@ import Meetings from "../../components/ProjectsWiki/Meetings";
 import projectwiki_database from "../../database/projectwiki_database";
 import workpackagewiki_database from "../../database/workpackagewiki_database";
 import _omit from "lodash/omit";
-import getmeetingList from '../../database/meetinglist_database'
+import getmeetingList from "../../database/meetinglist_database";
 
 class WorkPackageWiki extends Component {
   sidebar = null;
@@ -41,14 +40,21 @@ class WorkPackageWiki extends Component {
   };
   render() {
     const { id } = this.props.match.params;
-    const p = projectwiki_database[0].workPackages.filter(wp => wp.id === id);
-    const { activities: a } = { ...p["0"] };
-    const activities = a.map(item => _omit(item, ["type"]));
+    console.log(id);
+    let workpackagedata = projectwiki_database[0].workPackages;
+
+    const p = workpackagedata.filter(wp => wp.id === id);
+    let activities = [];
+    if (p.length > 0) {
+      const { activities: a } = { ...p["0"] };
+      activities = a.map(item => _omit(item, ["type"]));
+    }
     const workPackageInfo = p[0];
     const record_information = p[0].record_information;
     const { issues, changes, deliverbales } = workpackagewiki_database;
-    //console.log("admin", workPackageInfo);
     const { meetingList } = getmeetingList();
+    //console.log("admin", workPackageInfo);
+
     return (
       <React.Fragment>
         <SubMenu
@@ -59,8 +65,18 @@ class WorkPackageWiki extends Component {
             meetingMinutesRef: this.meetingMinutesRef,
             activityLogRef: this.activityLogRef
           }}
-          isMenu={{ finanical: false, wbs: false,project:false}}
+          isMenu={{
+            finanical: false,
+            wbs: false,
+            project: false,
+            risks: false,
+            deliverableInfo: false,
+            approvedStatus: false,
+            meetingInfo: false,
+            taskInfo: false
+          }}
           name={workPackageInfo.name}
+          link={"workpackage"}
         />
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">

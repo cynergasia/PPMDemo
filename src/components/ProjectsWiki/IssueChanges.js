@@ -72,7 +72,6 @@ class IssueChanges extends Component {
             </ul>
 
             <div className="card-header-actions">
-              <i className="fa fa-plus-circle mr-2" />
               <i className="fa fa-pencil-square" />
             </div>
           </CardHeader>
@@ -146,7 +145,14 @@ class IssueChanges extends Component {
                       )}
 
                       <br />
-                      <Link to={routesURL.ISSUE_LIST}> All Issues ... </Link>
+                      <Link
+                        to={
+                          routesURL.ISSUE_LIST + "all?p=" + this.props.projectID
+                        }
+                      >
+                        {" "}
+                        All Issues ...{" "}
+                      </Link>
                     </ListGroupItemText>
                   </ListGroupItem>
                 </ListGroup>
@@ -216,10 +222,7 @@ class IssueChanges extends Component {
                           )
                       )}
                       <br />
-                      <Link to={routesURL.CHANGES_LIST}>
-                        {" "}
-                        All Changes ...{" "}
-                      </Link>
+                      <Link to={routesURL.CHANGES_LIST}> All Changes ... </Link>
                     </ListGroupItemText>
                   </ListGroupItem>
                 </ListGroup>

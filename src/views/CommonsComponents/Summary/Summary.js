@@ -2,9 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Card, CardBody, Col } from "reactstrap";
 import database from "../../../database/database";
+import { routesURL } from "../../../constant/routesURL";
 
 const Summary = props => {
   let tiles = props.tiles ? props.tiles : database.tiles;
+  const page = props.id ? "psr" : "dashboard";
+  const projectId = props.id ? props.id : "";
   return (
     <React.Fragment>
       <Col xs="8" sm="4" lg="2" className="pr-0">
@@ -23,7 +26,11 @@ const Summary = props => {
         <Card className="text-white bg-success">
           <CardBody className="pb-0">
             <div className="text-value">{tiles.active_workpackages}</div>
-            <Link to="/500">
+            <Link
+              to={
+                routesURL.WORKPACKAGE_LIST + "?p=" + projectId + "&page=" + page
+              }
+            >
               <div className="text-summary"> Active Workpackages</div>
             </Link>
           </CardBody>
@@ -47,7 +54,11 @@ const Summary = props => {
         <Card className="text-white bg-warning">
           <CardBody className="pb-0">
             <div className="text-value">{tiles.open_issues}</div>
-            <Link to="/500">
+            <Link
+              to={
+                routesURL.ISSUE_LIST + "open?p=" + projectId + "&page=" + page
+              }
+            >
               <div className="text-summary">Open Issues</div>
             </Link>
           </CardBody>

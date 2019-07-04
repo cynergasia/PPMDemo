@@ -98,19 +98,40 @@ class DefaultLayout extends Component {
                       />
                     ) : null;
                   })}
-                  <Redirect from="/" to={routesURL.DASHBOARD} />
+                  <Redirect from="/" to={routesURL.LOGIN} />
                 </Switch>
               </Suspense>
             </Container>
           </main>
           <AppAside fixed>
             <Suspense fallback={this.loading()}>
-              {isChat && <ChatAside />}
-              {isCalendar && <CalendarAside />}
-              {isMisc && <MiscAside />}
-              {isNewsFeed && <NewsFeedAside />}
+              {isChat && (
+                <ChatAside
+                  isChat={isChat}
+                  toggleChat={() => this.toggle("Chat")}
+                />
+              )}
+              {isCalendar && (
+                <CalendarAside
+                  isCalendar={isCalendar}
+                  toggleCalendar={() => this.toggle("Calendar")}
+                />
+              )}
+              {isMisc && (
+                <MiscAside
+                  isMisc={isMisc}
+                  toggleMisc={() => this.toggle("Misc")}
+                />
+              )}
+              {isNewsFeed && (
+                <NewsFeedAside
+                  isNewsFeed={isNewsFeed}
+                  toggleNewsFeed={() => this.toggle("NewsFeed")}
+                />
+              )}
               {isNotification && (
                 <NotificationAside
+                  isNotification={isNotification}
                   toggleNotification={() => this.toggle("Notification")}
                 />
               )}

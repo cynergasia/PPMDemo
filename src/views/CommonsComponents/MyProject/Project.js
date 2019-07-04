@@ -21,12 +21,13 @@ let warningData = [];
 let data = [];
 
 database.projects.forEach(item => {
-  item.id !== 60888013 && data.push({
-    x: item.financial_per_complete,
-    y: item.execution_per_complete,
-    contract: item.contract_value,
-    project: item.name
-  });
+  item.id !== 60888013 &&
+    data.push({
+      x: item.financial_per_complete,
+      y: item.execution_per_complete,
+      contract: item.contract_value,
+      project: item.name
+    });
 });
 
 // const data = [

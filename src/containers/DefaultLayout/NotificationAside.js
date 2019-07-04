@@ -10,7 +10,7 @@ import {
 } from "reactstrap";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-
+import { AppAsideToggler } from "@coreui/react";
 import database from "../../database/database";
 
 const propTypes = {
@@ -48,12 +48,18 @@ class NotificationAside extends Component {
         <Nav tabs>
           <NavItem>
             <NavLink
-              className={classNames({ active: this.state.activeTab === "1" })}
-              onClick={() => {
-                this.toggle("1");
-              }}
+              className={classNames({ active: this.state.activeTab === "2" })}
+              onClick={() => this.props.toggleNotification()}
             >
-              <i className="icon-list" />
+              {this.props.isNotification ? (
+                <AppAsideToggler
+                  className="fa fa-close text-muted"
+                  defaultOpen={true}
+                  display="lg"
+                />
+              ) : (
+                <i className="fa fa-close" aria-hidden="true" />
+              )}
             </NavLink>
           </NavItem>
         </Nav>

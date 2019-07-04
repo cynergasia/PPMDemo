@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, CardHeader, CardBody } from "reactstrap";
+import { Card, CardBody } from "reactstrap";
 import ReactDataTableNew from "../ReactDataTableNew";
 
 let meetingListData = {
@@ -84,29 +84,7 @@ class MeetingTableList extends Component {
     return (
       <React.Fragment>
         <Card>
-          <CardHeader>
-            <div className="card-header-actions">
-              <i className="fa fa-plus-circle mr-2" />
-              <i className="fa fa-save" />
-            </div>
-          </CardHeader>
           <CardBody>
-            {/* <Table responsive>
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>Meeting Title</th>
-                  <th>Attendees</th>
-                  <th>Document</th>
-                  <th>Pubic</th>
-                </tr>
-              </thead>
-              <tbody>
-                <MeetingTableListItems />
-                <MeetingTableListItems />
-                <MeetingTableListItems />
-              </tbody>
-            </Table> */}
             <ReactDataTableNew
               data={this.state.data}
               entries={10}

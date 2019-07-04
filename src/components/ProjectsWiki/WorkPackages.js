@@ -85,7 +85,6 @@ class WorkPackages extends Component {
             </ul>
 
             <div className="card-header-actions">
-              <i className="fa fa-plus-circle mr-2" />
               <i className="fa fa-pencil-square" />
             </div>
           </CardHeader>
@@ -130,7 +129,8 @@ class WorkPackages extends Component {
                         Overdue Workpackages :
                       </ListGroupItemHeading>
                       {workPackages.map(
-                        ({ wbsType, id }) =>
+                        ({ wbsType, id, page }) =>
+                          page === "projectwiki" &&
                           ["Design"].includes(wbsType) && (
                             <React.Fragment>
                               <Link
@@ -151,7 +151,8 @@ class WorkPackages extends Component {
                       </ListGroupItemHeading>
 
                       {workPackages.map(
-                        ({ id, wbsType }) =>
+                        ({ id, wbsType, page }) =>
+                          page === "projectwiki" &&
                           ["Modelling"].includes(wbsType) && (
                             <React.Fragment>
                               <Link
@@ -171,7 +172,8 @@ class WorkPackages extends Component {
                       </ListGroupItemHeading>
 
                       {workPackages.map(
-                        ({ wbsType, id }) =>
+                        ({ wbsType, id, page }) =>
+                          page === "projectwiki" &&
                           ["Rebar"].includes(wbsType) && (
                             <React.Fragment>
                               <Link
@@ -185,7 +187,9 @@ class WorkPackages extends Component {
                           )
                       )}
                       <br />
-                      <Link to={routesURL.WORKPACKAGE_LIST}>
+                      <Link
+                        to={routesURL.WORKPACKAGE_LIST + "?page=projectwiki"}
+                      >
                         {" "}
                         All Workpackage ...{" "}
                       </Link>

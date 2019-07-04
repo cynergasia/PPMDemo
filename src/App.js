@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import "./App.scss";
 import "./index.css";
@@ -14,7 +16,7 @@ const loading = () => (
 const DefaultLayout = React.lazy(() => import("./containers/DefaultLayout"));
 
 // Pages
-const Login = React.lazy(() => import("./views/Pages/Login"));
+const Login = React.lazy(() => import("./views/Pages/Login/Login"));
 const Register = React.lazy(() => import("./views/Pages/Register"));
 const Page404 = React.lazy(() => import("./views/Pages/Page404"));
 const Page500 = React.lazy(() => import("./views/Pages/Page500"));
@@ -58,6 +60,7 @@ class App extends Component {
               render={props => <DefaultLayout {...props} />}
             />
           </Switch>
+          <ToastContainer />
         </React.Suspense>
       </HashRouter>
     );

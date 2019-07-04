@@ -1,19 +1,11 @@
 import React, { Component } from "react";
 import { Row, Col, Input, FormGroup, Button } from "reactstrap";
 
-class ProjectForm extends Component {
-  state = {
-    startDate: new Date()
-  };
-  handleDateChange = date => {
-    this.setState({ startDate: date });
-  };
+class ProjectInformationForm extends Component {
   render() {
     return (
       <React.Fragment>
         <form onSubmit={this.props.onSubmit}>
-          <h5 className="mb-3">Project Information</h5>
-          <hr />
           <Row>
             <Col lg="3">
               <FormGroup>
@@ -269,4 +261,4 @@ class ProjectForm extends Component {
   }
 }
 
-export default ProjectForm;
+export default ProjectInformationForm;

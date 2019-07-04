@@ -3,6 +3,7 @@ import { Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import ResourcesTableList from "../../components/Resources/ResourcesTableList";
 import user_database from "../../database/user_database";
+import { routesURL } from "../../constant/routesURL";
 
 class ResourcesList extends Component {
   render() {
@@ -10,7 +11,7 @@ class ResourcesList extends Component {
     const { users } = user_database;
     let user = users.filter(item => item.id === id);
     if (user.length === 0) {
-      window.location.hash = "/";
+      window.location.hash = routesURL.DASHBOARD;
     }
 
     return (
@@ -23,9 +24,9 @@ class ResourcesList extends Component {
                   <div className="col-12 col-sm-12 col-lg-12">
                     <ol className="breadcrumb left-breadcrumb">
                       <li className="nav-head active" area-current="page">
-                        <Link to="/projectwiki">
-                          <i className="fa fa-map-marker" /> Bay Bridge
-                          Construction in the bay(P001)
+                        <i className="fa fa-map-marker" />
+                        <Link to={routesURL.PROJECT_WIKI + "60453005"}>
+                          Extensions N/Cape Mall Phase 3 (60453005)
                         </Link>
                       </li>
                     </ol>

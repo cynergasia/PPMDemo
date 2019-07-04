@@ -22,7 +22,7 @@ class ChangeDescription extends Component {
       <React.Fragment>
         <Card>
           <CardHeader>
-            Description
+            Change Description
             <div className="card-header-actions">
               <span className="text-primary cursor-pointer">
                 <i className="fa fa-pencil-square" />

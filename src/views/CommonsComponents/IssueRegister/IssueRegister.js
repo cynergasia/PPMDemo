@@ -4,6 +4,7 @@ import { Doughnut } from "react-chartjs-2";
 import IssueRegisterStatus from "./IssueRegisterStatus";
 import _sum from "lodash/sum";
 import database from "../../../database/database";
+import { routesURL } from "../../../constant/routesURL";
 
 const labels = [
   "Overdue",
@@ -50,6 +51,13 @@ class IssueRegister extends Component {
     ];
     this.setState({ data: { ...issueProjectData } });
   }
+  handleClick = event => {
+    const issueStatus = labels[event[0]._index];
+    const projectid = this.props.id ? this.props.id : "";
+    const page = this.props.id ? "psr" : "dashboard";
+    window.location.hash =
+      routesURL.ISSUE_LIST + issueStatus + "?p=" + projectid + "&page=" + page;
+  };
   render() {
     return (
       <React.Fragment>
@@ -71,10 +79,12 @@ class IssueRegister extends Component {
               <Col sm="12" className="mx-auto col-doughnut">
                 <div className="chart-wrapper">
                   <Doughnut
+                    id="myissue"
                     data={this.state.data}
                     options={this.props.options}
                     height={150}
                     width={150}
+                    onElementsClick={this.handleClick}
                   />
                 </div>
               </Col>

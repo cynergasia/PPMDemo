@@ -1,7 +1,7 @@
 import React from "react";
 import { Input, NavLink } from "reactstrap";
 import Modal from "../../helper/Modal";
-import ProjectForm from "../../components/Forms/ProjectForm";
+import ProjectForm from "../../components/Forms/BasicProjectInformation/ProjectForm";
 import { routesURL } from "../../constant/routesURL";
 
 class Popup extends React.Component {
@@ -17,8 +17,7 @@ class Popup extends React.Component {
   handleChange = ({ target: { value } }) => {
     this.setState({ active: value });
   };
-  onSubmit = e => {
-    e.preventDefault();
+  onSubmit = () => {
     // const randomNumber = Math.floor(Math.random() * 1000000) + 6000000;
     window.location.hash = `${routesURL.PROJECT_WIKI + 60888013}`;
     this.setState({ isModal: !this.state.isModal, active: "" });
@@ -31,9 +30,9 @@ class Popup extends React.Component {
         name: "Project",
         Component: <ProjectForm onSubmit={this.onSubmit} toggle={this.toggle} />
       },
-      activities: { name: "Activities", Component: "" },
-      deliverables: { name: "Deliverables", Component: "" },
-      issues: { name: "Issues", Component: "" },
+      activities: { name: "Activity", Component: "" },
+      deliverables: { name: "Deliverable", Component: "" },
+      issues: { name: "Issue", Component: "" },
       change: { name: "Change", Component: "" }
     };
 

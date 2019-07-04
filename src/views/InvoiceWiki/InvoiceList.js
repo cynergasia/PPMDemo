@@ -26,6 +26,19 @@ class InvoiceList extends Component {
                         </Link>
                       </li>
                     </ol>
+                    <ol className="breadcrumb left-breadcrumb">
+                      <li className="nav-head active" area-current="page">
+                        <Link to="/500" className="mr-2">
+                          <i className="fa fa-save" /> Save
+                        </Link>
+                        <Link to="/500" className="mr-2">
+                          <i className="fa fa-plus-square" /> Create New
+                        </Link>
+                        <Link to="/500" className="mr-2">
+                          <i className="fa fa-edit" /> Edit
+                        </Link>
+                      </li>
+                    </ol>
                   </div>
                 </div>
               </nav>
@@ -65,7 +78,7 @@ class InvoiceList extends Component {
               <Card>
                 <CardHeader>
                   <div className="card-header-actions">
-                    <i className="fa fa-file-excel-o mr-2" />                  
+                    <i className="fa fa-file-excel-o mr-2" />
                   </div>
                 </CardHeader>
                 <CardBody>

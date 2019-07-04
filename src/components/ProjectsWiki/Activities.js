@@ -48,8 +48,8 @@ let data = {
       sort: "asc"
     },
     {
-      label: "Remaning",
-      field: "remaning",
+      label: "Remaining",
+      field: "Remaining",
       sort: "asc"
     },
     {
@@ -126,8 +126,7 @@ class Activities extends Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-
-              <i className="fa fa-plus-circle mr-2" />
+           
               <i className="fa fa-pencil-square" />
             </div>
           </CardHeader>

@@ -13,6 +13,8 @@ import database from "../../database/database";
 import Modal from "../../helper/Modal";
 import { formatDate } from "../../helper/TextFormat";
 import { APP_LOCAL_DATETIME_FORMAT } from "../../constant";
+import Budget from "./Budget";
+import Forecast from "./Forecast";
 
 let activityData = {
   columns: [
@@ -107,6 +109,17 @@ class BudgetFinance extends Component {
                   }`}
                   onClick={() => this.toggle("1")}
                 >
+                  Financials
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  data-toggle="tab"
+                  className={`${
+                    activeTab === "2" ? "active nav-link" : "nav-link"
+                  }`}
+                  onClick={() => this.toggle("2")}
+                >
                   {" "}
                   Budget
                 </a>
@@ -116,28 +129,16 @@ class BudgetFinance extends Component {
                 <a
                   data-toggle="tab"
                   className={`${
-                    activeTab === "2" ? "active nav-link" : "nav-link"
-                  }`}
-                  onClick={() => this.toggle("2")}
-                >
-                 Forecast
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  data-toggle="tab"
-                  className={`${
                     activeTab === "3" ? "active nav-link" : "nav-link"
                   }`}
                   onClick={() => this.toggle("3")}
                 >
-                  Financials
+                  Forecast
                 </a>
               </li>
             </ul>
 
             <div className="card-header-actions">
-              <i className="fa fa-plus-circle text-primary mr-2 cursor-pointer" />
               <i className="fa fa-pencil-square" />
             </div>
             <Modal
@@ -149,14 +150,15 @@ class BudgetFinance extends Component {
           </CardHeader>
           <CardBody>
             <TabContent activeTab={activeTab} className="border-0">
-              <TabPane tabId="1"> <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1FSLJbvp1EMw5SDxtkvRgu8QUK-dSp9qf/view?ts=5d145159">
-                  Link For Budget</a></TabPane>
-
-              <TabPane tabId="2"> <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1FSLJbvp1EMw5SDxtkvRgu8QUK-dSp9qf/view?ts=5d145159">
-                  Link For Forecast</a></TabPane>
+              <TabPane tabId="1">
+                <Financial />
+              </TabPane>
+              <TabPane tabId="2">
+                <Budget />
+              </TabPane>
 
               <TabPane tabId="3">
-                <Financial />
+                <Forecast />
               </TabPane>
             </TabContent>
           </CardBody>

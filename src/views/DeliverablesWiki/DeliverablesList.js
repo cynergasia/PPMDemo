@@ -32,14 +32,21 @@ class DeliverablesList extends Component {
                     <ol className="breadcrumb left-breadcrumb">
                       <li className="nav-head active" area-current="page">
                         <Link to="/projectwiki/60453005">
-                          <i className="fa fa-map-marker" />  Extensions N/Cape Mall Phase 3 (60453005)
+                          <i className="fa fa-map-marker" /> Extensions N/Cape
+                          Mall Phase 3 (60453005)
                         </Link>
                       </li>
                     </ol>
                     <ol className="breadcrumb left-breadcrumb">
                       <li className="nav-head active" area-current="page">
-                        <Link to="#" onClick={this.toggle}>
+                        <Link to="/500" className="mr-2">
+                          <i className="fa fa-save" /> Save
+                        </Link>
+                        <Link to="#" className="mr-2" onClick={this.toggle}>
                           <i className="fa fa-plus-square" /> Create New
+                        </Link>
+                        <Link to="/500" className="mr-2">
+                          <i className="fa fa-edit" /> Edit
                         </Link>
                       </li>
                     </ol>

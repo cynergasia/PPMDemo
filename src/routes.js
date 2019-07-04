@@ -86,12 +86,12 @@ const routes = [
   {
     path: `${routesURL.MEETING}:id`,
     component: Meeting,
-    title: "Meetings Wiki"
+    title: "Meeting Wiki"
   },
   {
     path: `${routesURL.MEETING_LIST}:id`,
     component: MettingList,
-    title: "Meetings Register"
+    title: "Meeting Register"
   },
   {
     path: `${routesURL.ISSUE_WIKI}:id`,
@@ -99,7 +99,7 @@ const routes = [
     title: "Issue Wiki"
   },
   {
-    path: routesURL.ISSUE_LIST,
+    path: `${routesURL.ISSUE_LIST}:id`,
     component: IssueList,
     title: "Issue Register"
   },

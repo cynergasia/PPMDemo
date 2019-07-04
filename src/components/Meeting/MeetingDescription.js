@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Card, CardHeader, CardBody, Input } from "reactstrap";
+import React, { Component } from 'react'
+import { Card, CardHeader, CardBody, Input } from 'reactstrap'
 
 class MeetingDescription extends Component {
   render() {
@@ -11,12 +11,17 @@ class MeetingDescription extends Component {
             <div className="card-header-actions" />
           </CardHeader>
           <CardBody>
-            <Input type="textarea" name="meetingdesc" rows="6" />
+            <Input
+              type="textarea"
+              name="meetingdesc"
+              rows="6"
+              defaultValue={this.props.description}
+            />
           </CardBody>
         </Card>
       </React.Fragment>
-    );
+    )
   }
 }
 
-export default MeetingDescription;
+export default MeetingDescription

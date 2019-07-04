@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, CardHeader, CardBody } from "reactstrap";
+import { Card, CardBody } from "reactstrap";
 import ReactDataTableNew from "../ReactDataTableNew";
 
 const workpackageListData = {
@@ -85,13 +85,6 @@ class WorkPackageTableList extends Component {
     return (
       <React.Fragment>
         <Card>
-          <CardHeader>
-            <div className="card-header-actions">
-              <i className="fa fa-file-excel-o mr-2" />
-              <i className="fa fa-plus-circle mr-2" />
-              <i className="fa fa-pencil-square" />
-            </div>
-          </CardHeader>
           <CardBody>
             <ReactDataTableNew
               data={this.state.data}

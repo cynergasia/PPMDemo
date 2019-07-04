@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row} from "reactstrap";
+import { Row } from "reactstrap";
 import InvoiceDescription from "../../components/InvoiceWiki/InvoiceDescription";
 import InvoiceActivities from "../../components/InvoiceWiki/InvoiceActivities";
 import ActivityLog from "../../components/ProjectsWiki/ActivityLog";
@@ -16,23 +16,28 @@ class InvoiceWiki extends Component {
   render() {
     console.log(data().audit_info);
     return (
-      <React.Fragment>        
+      <React.Fragment>
         <SubMenu
           refs={{
             descriptionRef: this.descriptionRef,
-            activityLogRef: this.activityLogRef,  
-            approvedStatusRef:this.approvedStatusRef      
+            activityLogRef: this.activityLogRef,
+            approvedStatusRef: this.approvedStatusRef
           }}
           isMenu={{
-            project:false,
-            finanical: false,          
+            project: false,
+            finanical: false,
             wbs: false,
-            meeting_minutes:false,
+            meeting_minutes: false,
             issue_changes: false,
             deliverable: false,
-            work_package: false,         
+            work_package: false,
+            deliverableInfo: false,
+            meetingInfo: false,
+            taskInfo: false,
+            risks: false,
+            approvedStatus: false
           }}
-          link={"invoiceWiki"}         
+          link={"invoiceWiki"}
         />
 
         <div className="animated fadeIn row">
@@ -41,7 +46,7 @@ class InvoiceWiki extends Component {
               <div className="col-12" ref={this.descriptionRef}>
                 <InvoiceDescription />
               </div>
-              <div className="col-12" ref={this.approvedStatusRef} >
+              <div className="col-12" ref={this.approvedStatusRef}>
                 <InvoiceActivities activities={data().invoiceActivites} />
               </div>
               <div className="col-12">

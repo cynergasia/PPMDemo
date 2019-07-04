@@ -81,7 +81,11 @@ class ProjectStatusReport extends Component {
               <Risks riskRegister={riskRegister} />
             </Col>
             <Col xs="12" sm="12" lg="6">
-              <IssueRegister options={options} issueRegister={issueRegister} />
+              <IssueRegister
+                options={options}
+                issueRegister={issueRegister}
+                id={id}
+              />
             </Col>
           </Row>
 

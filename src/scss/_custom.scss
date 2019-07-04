@@ -103,7 +103,7 @@ form {
   .form-group {
     &.row {
       .col-form-label {
-        max-width: 6.5rem;
+        max-width: 7.5rem;
       }
     }
   }
@@ -244,6 +244,28 @@ table.dataTable {
   position: sticky;
   top: 107px;
   height: calc(100vh - 210px);
+}
+
+@media (min-width: 768px) {
+  .main {
+    .container-fluid {
+      .sub-navbar {
+        position: sticky;
+        top: 0;
+        left: 30px;
+        right: 30px;
+        z-index: 1;
+        transition: right 0.5s ease;
+      }
+    }
+  }
+
+  html:not([dir="rtl"]) .aside-menu-show.aside-menu-fixed .main,
+  html:not([dir="rtl"]) .aside-menu-show.aside-menu-fixed .app-footer,
+  html:not([dir="rtl"]) .aside-menu-lg-show.aside-menu-fixed .main,
+  html:not([dir="rtl"]) .aside-menu-lg-show.aside-menu-fixed .app-footer {
+    margin-right: 323px;
+  }
 }
 
 @media (min-width: 992px) {

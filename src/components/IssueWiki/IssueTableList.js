@@ -7,6 +7,11 @@ import Modal from "../../helper/Modal";
 const issueListData = {
   columns: [
     {
+      label: "Project Number",
+      field: "projectId",
+      sort: "asc"
+    },
+    {
       label: "Issue Number",
       field: "number",
       sort: "asc"
@@ -14,11 +19,6 @@ const issueListData = {
     {
       label: "Issue Name",
       field: "name",
-      sort: "asc"
-    },
-    {
-      label: "Title",
-      field: "title",
       sort: "asc"
     },
     {
@@ -51,9 +51,14 @@ const issueListData = {
       field: "actual_effort",
       sort: "asc"
     },
+    // {
+    //   label: "Assignee",
+    //   field: "owner",
+    //   sort: "asc"
+    // },
     {
-      label: "Assignee",
-      field: "owner",
+      label: "Remaining",
+      field: "remaining",
       sort: "asc"
     },
     {
@@ -95,7 +100,7 @@ class IssueTableList extends Component {
   };
   render() {
     const modalBody = (
-      <div/>
+      <div />
       // <IssueListForm
       //   handleSubmit={this.handleSubmit}
       //   toggle={this.props.toggle}
@@ -115,7 +120,7 @@ class IssueTableList extends Component {
             <ReactDataTableNew
               data={this.state.data}
               entries={5}
-              entriesOptions={[5,10, 20, 50, 100]}
+              entriesOptions={[5, 10, 20, 50, 100]}
             />
           </CardBody>
         </Card>

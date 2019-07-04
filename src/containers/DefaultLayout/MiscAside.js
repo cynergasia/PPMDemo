@@ -8,6 +8,7 @@ import {
   Row,
   Col
 } from "reactstrap";
+import { AppAsideToggler } from "@coreui/react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
@@ -36,12 +37,20 @@ class MiscAside extends Component {
         <Nav tabs>
           <NavItem>
             <NavLink
-              className={classNames({ active: this.state.activeTab === "1" })}
-              onClick={() => {
-                this.toggle("1");
-              }}
+              className={classNames({ active: this.state.activeTab === "2" })}
+              onClick={() => this.props.toggleMisc()}
             >
-              <i className="fa fa-bars" />
+              {this.props.isMisc ? (
+                <AppAsideToggler
+                  className="fa fa-close text-muted"
+                  defaultOpen={true}
+                  display="lg"
+                />
+              ) : (
+                <button className="">
+                  <span className="fa fa-close" />
+                </button>
+              )}
             </NavLink>
           </NavItem>
         </Nav>
@@ -50,18 +59,28 @@ class MiscAside extends Component {
             <Row>
               <Col md="4" className="text-center">
                 <Link to={routesURL.DASHBOARD}>
-                  <i className="fa fa-dashboard" style={{ fontSize: "50px" }} />{" "}
-                  DashBoard
+                  <i className="fa fa-clock-o" style={{ fontSize: "50px" }} />
+                  <br />
+                  Time
                 </Link>
               </Col>
 
               <Col md="4" className="text-center">
                 <Link to={routesURL.PROJECT_WIKI}>
-                  <i
-                    className="fa fa-product-hunt"
-                    style={{ fontSize: "50px" }}
-                  />{" "}
-                  ProjectWiki
+                  <i className="fa fa-bars" style={{ fontSize: "50px" }} />{" "}
+                  Expense
+                </Link>
+              </Col>
+              <Col md="4" className="text-center">
+                <Link to={routesURL.PROJECT_WIKI}>
+                  <i className="fa fa-bandcamp" style={{ fontSize: "50px" }} />{" "}
+                  Workday Application
+                </Link>
+              </Col>
+              <Col md="4" className="text-center">
+                <Link to={routesURL.PROJECT_WIKI}>
+                  <i className="fa fa-circle-o" style={{ fontSize: "50px" }} />{" "}
+                  Oracle fusion
                 </Link>
               </Col>
             </Row>

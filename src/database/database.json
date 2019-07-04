@@ -436,40 +436,40 @@
             {
               "person": "Suresh Padmanabhan",
               "role": "Project Manager",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "person": "Neeraj Garg",
               "role": "Project Approver",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "person": "Arindam Mukherjee",
               "role": "P&L Manager",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             }
           ],
           "classification": [
             {
               "category": "Business Line",
               "value": "Transportation",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "category": "Sub-Business Line",
               "value": "Rail",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "category": "Fedral Project",
               "value": "No",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             }
           ]
         },
@@ -483,10 +483,10 @@
             "name": "Prelim Model",
             "work_package": "MODELLING(1.03)",
             "owner": "SP",
-            "due_date": "06-09-2019",
+            "due_date": "06/09/2019",
             "planned": 240,
             "actual": 200,
-            "remaning": 40,
+            "Remaining": 40,
             "status": "In Progress",
             "per_complete": "83%",
             "comments": ""
@@ -496,10 +496,10 @@
             "name": "Tender Model",
             "work_package": "MODELLING(1.03)",
             "owner": "SP",
-            "due_date": "06-11-2019",
+            "due_date": "06/11/2019",
             "planned": 8,
             "actual": 0,
-            "remaning": 8,
+            "Remaining": 8,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -509,10 +509,10 @@
             "name": "Final Model",
             "work_package": "MODELLING(1.03)",
             "owner": "AM",
-            "due_date": "07-12-2019",
+            "due_date": "07/12/2019",
             "planned": 240,
             "actual": 0,
-            "remaning": 240,
+            "Remaining": 240,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -522,10 +522,10 @@
             "name": "Model Maintenance",
             "work_package": "MODELLING(1.03)",
             "owner": "AM",
-            "due_date": "08-12-2019",
+            "due_date": "08/12/2019",
             "planned": 240,
             "actual": 0,
-            "remaning": 240,
+            "Remaining": 240,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -535,10 +535,10 @@
             "name": "Prelim Design",
             "work_package": "DESIGN(1.02)",
             "owner": "SP",
-            "due_date": "03-02-2019",
+            "due_date": "03/02/2019",
             "planned": 300,
             "actual": 300,
-            "remaning": 0,
+            "Remaining": 0,
             "status": "Completed",
             "per_complete": "100%",
             "comments": ""
@@ -548,10 +548,10 @@
             "name": "Tender Design",
             "work_package": "DESIGN(1.02)",
             "owner": "SP",
-            "due_date": "03-04-2019",
+            "due_date": "03/04/2019",
             "planned": 8,
             "actual": 8,
-            "remaning": 0,
+            "Remaining": 0,
             "status": "Completed",
             "per_complete": "100%",
             "comments": ""
@@ -617,40 +617,40 @@
             {
               "person": "Suresh Padmanabhan",
               "role": "Project Manager",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "person": "Neeraj Garg",
               "role": "Project Approver",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "person": "Arindam Mukherjee",
               "role": "P&L Manager",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             }
           ],
           "classification": [
             {
               "category": "Business Line",
               "value": "Transportation",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "category": "Sub-Business Line",
               "value": "Rail",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "category": "Fedral Project",
               "value": "No",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             }
           ]
         },
@@ -664,10 +664,10 @@
             "name": "Prelim Model",
             "work_package": "MODELLING(1.03)",
             "owner": "SP",
-            "due_date": "06-09-2019",
+            "due_date": "06/09/2019",
             "planned": 240,
             "actual": 200,
-            "remaning": 40,
+            "Remaining": 40,
             "status": "In Progress",
             "per_complete": "83%",
             "comments": ""
@@ -677,10 +677,10 @@
             "name": "Tender Model",
             "work_package": "MODELLING(1.03)",
             "owner": "SP",
-            "due_date": "06-11-2019",
+            "due_date": "06/11/2019",
             "planned": 8,
             "actual": 0,
-            "remaning": 8,
+            "Remaining": 8,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -690,10 +690,10 @@
             "name": "Final Model",
             "work_package": "MODELLING(1.03)",
             "owner": "AM",
-            "due_date": "07-12-2019",
+            "due_date": "07/12/2019",
             "planned": 240,
             "actual": 0,
-            "remaning": 240,
+            "Remaining": 240,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -703,10 +703,10 @@
             "name": "Model Maintenance",
             "work_package": "MODELLING(1.03)",
             "owner": "AM",
-            "due_date": "08-12-2019",
+            "due_date": "08/12/2019",
             "planned": 240,
             "actual": 0,
-            "remaning": 240,
+            "Remaining": 240,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -716,10 +716,10 @@
             "name": "Prelim Design",
             "work_package": "DESIGN(1.02)",
             "owner": "SP",
-            "due_date": "03-02-2019",
+            "due_date": "03/02/2019",
             "planned": 300,
             "actual": 300,
-            "remaning": 0,
+            "Remaining": 0,
             "status": "Completed",
             "per_complete": "100%",
             "comments": ""
@@ -729,10 +729,10 @@
             "name": "Tender Design",
             "work_package": "DESIGN(1.02)",
             "owner": "SP",
-            "due_date": "03-04-2019",
+            "due_date": "03/04/2019",
             "planned": 8,
             "actual": 8,
-            "remaning": 0,
+            "Remaining": 0,
             "status": "Completed",
             "per_complete": "100%",
             "comments": ""
@@ -798,40 +798,40 @@
             {
               "person": "Suresh Padmanabhan",
               "role": "Project Manager",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "person": "Neeraj Garg",
               "role": "Project Approver",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "person": "Arindam Mukherjee",
               "role": "P&L Manager",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             }
           ],
           "classification": [
             {
               "category": "Business Line",
               "value": "Transportation",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "category": "Sub-Business Line",
               "value": "Rail",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "category": "Fedral Project",
               "value": "No",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             }
           ]
         },
@@ -845,10 +845,10 @@
             "name": "Prelim Model",
             "work_package": "MODELLING(1.03)",
             "owner": "SP",
-            "due_date": "06-09-2019",
+            "due_date": "06/09/2019",
             "planned": 240,
             "actual": 200,
-            "remaning": 40,
+            "Remaining": 40,
             "status": "In Progress",
             "per_complete": "83%",
             "comments": ""
@@ -858,10 +858,10 @@
             "name": "Tender Model",
             "work_package": "MODELLING(1.03)",
             "owner": "SP",
-            "due_date": "06-11-2019",
+            "due_date": "06/11/2019",
             "planned": 8,
             "actual": 0,
-            "remaning": 8,
+            "Remaining": 8,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -871,10 +871,10 @@
             "name": "Final Model",
             "work_package": "MODELLING(1.03)",
             "owner": "AM",
-            "due_date": "07-12-2019",
+            "due_date": "07/12/2019",
             "planned": 240,
             "actual": 0,
-            "remaning": 240,
+            "Remaining": 240,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -884,10 +884,10 @@
             "name": "Model Maintenance",
             "work_package": "MODELLING(1.03)",
             "owner": "AM",
-            "due_date": "08-12-2019",
+            "due_date": "08/12/2019",
             "planned": 240,
             "actual": 0,
-            "remaning": 240,
+            "Remaining": 240,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -897,10 +897,10 @@
             "name": "Prelim Design",
             "work_package": "DESIGN(1.02)",
             "owner": "SP",
-            "due_date": "03-02-2019",
+            "due_date": "03/02/2019",
             "planned": 300,
             "actual": 300,
-            "remaning": 0,
+            "Remaining": 0,
             "status": "Completed",
             "per_complete": "100%",
             "comments": ""
@@ -910,10 +910,10 @@
             "name": "Tender Design",
             "work_package": "DESIGN(1.02)",
             "owner": "SP",
-            "due_date": "03-04-2019",
+            "due_date": "03/04/2019",
             "planned": 8,
             "actual": 8,
-            "remaning": 0,
+            "Remaining": 0,
             "status": "Completed",
             "per_complete": "100%",
             "comments": ""
@@ -979,40 +979,40 @@
             {
               "person": "Suresh Padmanabhan",
               "role": "Project Manager",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "person": "Neeraj Garg",
               "role": "Project Approver",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "person": "Arindam Mukherjee",
               "role": "P&L Manager",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             }
           ],
           "classification": [
             {
               "category": "Business Line",
               "value": "Transportation",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "category": "Sub-Business Line",
               "value": "Rail",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "category": "Fedral Project",
               "value": "No",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             }
           ]
         },
@@ -1026,10 +1026,10 @@
             "name": "Prelim Model",
             "work_package": "MODELLING(1.03)",
             "owner": "SP",
-            "due_date": "06-09-2019",
+            "due_date": "06/09/2019",
             "planned": 240,
             "actual": 200,
-            "remaning": 40,
+            "Remaining": 40,
             "status": "In Progress",
             "per_complete": "83%",
             "comments": ""
@@ -1039,10 +1039,10 @@
             "name": "Tender Model",
             "work_package": "MODELLING(1.03)",
             "owner": "SP",
-            "due_date": "06-11-2019",
+            "due_date": "06/11/2019",
             "planned": 8,
             "actual": 0,
-            "remaning": 8,
+            "Remaining": 8,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -1052,10 +1052,10 @@
             "name": "Final Model",
             "work_package": "MODELLING(1.03)",
             "owner": "AM",
-            "due_date": "07-12-2019",
+            "due_date": "07/12/2019",
             "planned": 240,
             "actual": 0,
-            "remaning": 240,
+            "Remaining": 240,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -1065,10 +1065,10 @@
             "name": "Model Maintenance",
             "work_package": "MODELLING(1.03)",
             "owner": "AM",
-            "due_date": "08-12-2019",
+            "due_date": "08/12/2019",
             "planned": 240,
             "actual": 0,
-            "remaning": 240,
+            "Remaining": 240,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -1078,10 +1078,10 @@
             "name": "Prelim Design",
             "work_package": "DESIGN(1.02)",
             "owner": "SP",
-            "due_date": "03-02-2019",
+            "due_date": "03/02/2019",
             "planned": 300,
             "actual": 300,
-            "remaning": 0,
+            "Remaining": 0,
             "status": "Completed",
             "per_complete": "100%",
             "comments": ""
@@ -1091,10 +1091,10 @@
             "name": "Tender Design",
             "work_package": "DESIGN(1.02)",
             "owner": "SP",
-            "due_date": "03-04-2019",
+            "due_date": "03/04/2019",
             "planned": 8,
             "actual": 8,
-            "remaning": 0,
+            "Remaining": 0,
             "status": "Completed",
             "per_complete": "100%",
             "comments": ""
@@ -1160,40 +1160,40 @@
             {
               "person": "Suresh Padmanabhan",
               "role": "Project Manager",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "person": "Neeraj Garg",
               "role": "Project Approver",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "person": "Arindam Mukherjee",
               "role": "P&L Manager",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             }
           ],
           "classification": [
             {
               "category": "Business Line",
               "value": "Transportation",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "category": "Sub-Business Line",
               "value": "Rail",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "category": "Fedral Project",
               "value": "No",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             }
           ]
         },
@@ -1207,10 +1207,10 @@
             "name": "Prelim Model",
             "work_package": "MODELLING(1.03)",
             "owner": "SP",
-            "due_date": "06-09-2019",
+            "due_date": "06/09/2019",
             "planned": 240,
             "actual": 200,
-            "remaning": 40,
+            "Remaining": 40,
             "status": "In Progress",
             "per_complete": "83%",
             "comments": ""
@@ -1220,10 +1220,10 @@
             "name": "Tender Model",
             "work_package": "MODELLING(1.03)",
             "owner": "SP",
-            "due_date": "06-11-2019",
+            "due_date": "06/11/2019",
             "planned": 8,
             "actual": 0,
-            "remaning": 8,
+            "Remaining": 8,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -1233,10 +1233,10 @@
             "name": "Final Model",
             "work_package": "MODELLING(1.03)",
             "owner": "AM",
-            "due_date": "07-12-2019",
+            "due_date": "07/12/2019",
             "planned": 240,
             "actual": 0,
-            "remaning": 240,
+            "Remaining": 240,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -1246,10 +1246,10 @@
             "name": "Model Maintenance",
             "work_package": "MODELLING(1.03)",
             "owner": "AM",
-            "due_date": "08-12-2019",
+            "due_date": "08/12/2019",
             "planned": 240,
             "actual": 0,
-            "remaning": 240,
+            "Remaining": 240,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -1259,10 +1259,10 @@
             "name": "Prelim Design",
             "work_package": "DESIGN(1.02)",
             "owner": "SP",
-            "due_date": "03-02-2019",
+            "due_date": "03/02/2019",
             "planned": 300,
             "actual": 300,
-            "remaning": 0,
+            "Remaining": 0,
             "status": "Completed",
             "per_complete": "100%",
             "comments": ""
@@ -1272,10 +1272,10 @@
             "name": "Tender Design",
             "work_package": "DESIGN(1.02)",
             "owner": "SP",
-            "due_date": "03-04-2019",
+            "due_date": "03/04/2019",
             "planned": 8,
             "actual": 8,
-            "remaning": 0,
+            "Remaining": 0,
             "status": "Completed",
             "per_complete": "100%",
             "comments": ""
@@ -1341,40 +1341,40 @@
             {
               "person": "Suresh Padmanabhan",
               "role": "Project Manager",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "person": "Neeraj Garg",
               "role": "Project Approver",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "person": "Arindam Mukherjee",
               "role": "P&L Manager",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             }
           ],
           "classification": [
             {
               "category": "Business Line",
               "value": "Transportation",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "category": "Sub-Business Line",
               "value": "Rail",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "category": "Fedral Project",
               "value": "No",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             }
           ]
         },
@@ -1388,10 +1388,10 @@
             "name": "Prelim Model",
             "work_package": "MODELLING(1.03)",
             "owner": "SP",
-            "due_date": "06-09-2019",
+            "due_date": "06/09/2019",
             "planned": 240,
             "actual": 200,
-            "remaning": 40,
+            "Remaining": 40,
             "status": "In Progress",
             "per_complete": "83%",
             "comments": ""
@@ -1401,10 +1401,10 @@
             "name": "Tender Model",
             "work_package": "MODELLING(1.03)",
             "owner": "SP",
-            "due_date": "06-11-2019",
+            "due_date": "06/11/2019",
             "planned": 8,
             "actual": 0,
-            "remaning": 8,
+            "Remaining": 8,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -1414,10 +1414,10 @@
             "name": "Final Model",
             "work_package": "MODELLING(1.03)",
             "owner": "AM",
-            "due_date": "07-12-2019",
+            "due_date": "07/12/2019",
             "planned": 240,
             "actual": 0,
-            "remaning": 240,
+            "Remaining": 240,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -1427,10 +1427,10 @@
             "name": "Model Maintenance",
             "work_package": "MODELLING(1.03)",
             "owner": "AM",
-            "due_date": "08-12-2019",
+            "due_date": "08/12/2019",
             "planned": 240,
             "actual": 0,
-            "remaning": 240,
+            "Remaining": 240,
             "status": "Not Started",
             "per_complete": "0%",
             "comments": ""
@@ -1440,10 +1440,10 @@
             "name": "Prelim Design",
             "work_package": "DESIGN(1.02)",
             "owner": "SP",
-            "due_date": "03-02-2019",
+            "due_date": "03/02/2019",
             "planned": 300,
             "actual": 300,
-            "remaning": 0,
+            "Remaining": 0,
             "status": "Completed",
             "per_complete": "100%",
             "comments": ""
@@ -1453,10 +1453,10 @@
             "name": "Tender Design",
             "work_package": "DESIGN(1.02)",
             "owner": "SP",
-            "due_date": "03-04-2019",
+            "due_date": "03/04/2019",
             "planned": 8,
             "actual": 8,
-            "remaning": 0,
+            "Remaining": 0,
             "status": "Completed",
             "per_complete": "100%",
             "comments": ""
@@ -1517,40 +1517,40 @@
             {
               "person": "Suresh Padmanabhan",
               "role": "Project Manager",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "person": "Neeraj Garg",
               "role": "Project Approver",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "person": "Arindam Mukherjee",
               "role": "P&L Manager",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             }
           ],
           "classification": [
             {
               "category": "Business Line",
               "value": "Transportation",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "category": "Sub-Business Line",
               "value": "Rail",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             },
             {
               "category": "Fedral Project",
               "value": "No",
-              "start_date": "01-01-2019",
-              "end_date": "02-16-2020"
+              "start_date": "01/01/2019",
+              "end_date": "02/16/2020"
             }
           ]
         },
@@ -1586,10 +1586,10 @@
       "name": "Prelim Model",
       "work_package": "MODELLING(1.03)",
       "owner": "SP",
-      "due_date": "06-09-2019",
+      "due_date": "06/09/2019",
       "planned": 240,
       "actual": 200,
-      "remaning": 40,
+      "Remaining": 40,
       "status": "In Progress",
       "per_complete": "83%",
       "comments": ""
@@ -1599,10 +1599,10 @@
       "name": "Tender Model",
       "work_package": "MODELLING(1.03)",
       "owner": "SP",
-      "due_date": "06-11-2019",
+      "due_date": "06/11/2019",
       "planned": 8,
       "actual": 0,
-      "remaning": 8,
+      "Remaining": 8,
       "status": "Not Started",
       "per_complete": "0%",
       "comments": ""
@@ -1612,10 +1612,10 @@
       "name": "Final Model",
       "work_package": "MODELLING(1.03)",
       "owner": "AM",
-      "due_date": "07-12-2019",
+      "due_date": "07/12/2019",
       "planned": 240,
       "actual": 0,
-      "remaning": 240,
+      "Remaining": 240,
       "status": "Not Started",
       "per_complete": "0%",
       "comments": ""
@@ -1625,10 +1625,10 @@
       "name": "Model Maintenance",
       "work_package": "MODELLING(1.03)",
       "owner": "AM",
-      "due_date": "08-12-2019",
+      "due_date": "08/12/2019",
       "planned": 240,
       "actual": 0,
-      "remaning": 240,
+      "Remaining": 240,
       "status": "Not Started",
       "per_complete": "0%",
       "comments": ""
@@ -1638,10 +1638,10 @@
       "name": "Prelim Design",
       "work_package": "DESIGN(1.02)",
       "owner": "SP",
-      "due_date": "03-02-2019",
+      "due_date": "03/02/2019",
       "planned": 300,
       "actual": 300,
-      "remaning": 0,
+      "Remaining": 0,
       "status": "Completed",
       "per_complete": "100%",
       "comments": ""
@@ -1651,10 +1651,10 @@
       "name": "Tender Design",
       "work_package": "DESIGN(1.02)",
       "owner": "SP",
-      "due_date": "03-04-2019",
+      "due_date": "03/04/2019",
       "planned": 8,
       "actual": 8,
-      "remaning": 0,
+      "Remaining": 0,
       "status": "Completed",
       "per_complete": "100%",
       "comments": ""

@@ -4,9 +4,6 @@ import {
   CardHeader,
   CardBody,
   Collapse,
-  Input,
-  FormGroup,
-  Button,
   Table,
   ListGroup,
   ListGroupItem,
@@ -14,6 +11,7 @@ import {
   ListGroupItemText
 } from "reactstrap";
 import Modal from "../../helper/Modal";
+import EditProjectForm from "./Forms/EditProjectForm";
 
 const intialState = {
   isProjectInfo: false,
@@ -29,7 +27,7 @@ const intialState = {
 class BasicInformation extends Component {
   state = { ...intialState };
   state = {
-    data:[],
+    data: [],
     modal: false,
     basicProjectInfo:
       "This project has 6 internal stakeholders and 2 external stakeholders.",
@@ -37,9 +35,9 @@ class BasicInformation extends Component {
       "This project has 6 internal stakeholders and 2 external stakeholders."
   };
 
-  componentDidMount=()=>{
-      this.setState({data:this.props.basicProjectInfo.projectInfo})
-  }
+  componentDidMount = () => {
+    this.setState({ data: this.props.basicProjectInfo.projectInfo });
+  };
   toggle = () => this.setState(prevState => ({ modal: !prevState.modal }));
 
   toggleInfo = () => {
@@ -49,13 +47,6 @@ class BasicInformation extends Component {
       isplusclass1: !this.state.isplusclass1
     });
   };
-  // toggleDetail = () => {
-  //   this.setState({
-  //     ...intialState,
-  //     isProjectDetail: !this.state.isProjectDetail,
-  //     isplusclass2: !this.state.isplusclass2
-  //   });
-  // };
   toggleTeamMember = () => {
     this.setState({
       ...intialState,
@@ -79,9 +70,8 @@ class BasicInformation extends Component {
       modal: false
     });
 
-  render() {    
-    console.log("raj",this.state.data);
-    const { modal, editBasicProjectInfo } = this.state;
+  render() {
+    const { modal } = this.state;
     const { teamMembers, classification } = this.props.basicProjectInfo;
     const {
       projectName,
@@ -102,34 +92,12 @@ class BasicInformation extends Component {
     } = this.props.basicProjectInfo.projectInfo;
 
     const modelBody = (
-      <React.Fragment>
-        <FormGroup>
-          <Input
-            type="textarea"
-            name="editBasicProjectInfo"
-            rows="4"
-            value={editBasicProjectInfo}
-            onChange={this.handleChange}
-          />
-          <div className="form-inline">
-            <div className="ml-auto">
-              <Button
-                color="success"
-                onClick={this.handleSubmit}
-                className="mr-2"
-              >
-                Edit & Save
-              </Button>
-              <Button
-                color="danger"
-                onClick={() => this.setState({ modal: false })}
-              >
-                Close
-              </Button>
-            </div>
-          </div>
-        </FormGroup>
-      </React.Fragment>
+      <EditProjectForm
+        projectInfo={this.props.basicProjectInfo.projectInfo}
+        teamMembers={teamMembers}
+        toggle={this.toggle}
+        classification={classification}
+      />
     );
     return (
       <React.Fragment>
@@ -145,6 +113,7 @@ class BasicInformation extends Component {
                 toggle={this.toggle}
                 header="Edit Basic Project Information"
                 body={modelBody}
+                size="xl"
               />
             </div>
           </CardHeader>
@@ -175,20 +144,13 @@ class BasicInformation extends Component {
                             <div>Project Number </div>
                           </td>
                           <td className="text-left">
-                            <div>
-                              <Input
-                                name="projectName"
-                                value={this.props.projectID}
-                              />
-                            </div>
+                            <div>{this.props.projectID}</div>
                           </td>
                           <td className="basicinfo text-left">
                             <div>Project Name </div>
                           </td>
                           <td className="text-left">
-                            <div>
-                              <Input name="projectName" value={projectName} />
-                            </div>
+                            <div>{projectName}</div>
                           </td>
                         </tr>
                         <tr>
@@ -196,20 +158,13 @@ class BasicInformation extends Component {
                             <div>Project Type </div>
                           </td>
                           <td className="text-left">
-                            <div>
-                              <Input name="projectType" value={projectType} />
-                            </div>
+                            <div>{projectType}</div>
                           </td>
                           <td className="basicinfo text-left">
                             <div>Opportunity Number </div>
                           </td>
                           <td className="text-left">
-                            <div>
-                              <Input
-                                name="opportunity_number"
-                                value={opportunity_number}
-                              />
-                            </div>
+                            <div>{opportunity_number}</div>
                           </td>
                         </tr>
 
@@ -218,20 +173,13 @@ class BasicInformation extends Component {
                             <div>Organization </div>
                           </td>
                           <td className="text-left">
-                            <div>
-                              <Input name="organization" value={organization} />
-                            </div>
+                            <div>{organization}</div>
                           </td>
                           <td className="basicinfo text-left">
                             <div>Federal Project </div>
                           </td>
                           <td className="text-left">
-                            <div>
-                              <Input
-                                name="federal_project"
-                                value={federal_project}
-                              />
-                            </div>
+                            <div>{federal_project}</div>
                           </td>
                         </tr>
 
@@ -240,20 +188,13 @@ class BasicInformation extends Component {
                             <div>Currency </div>
                           </td>
                           <td className="text-left">
-                            <div>
-                              <Input name="currency" value={currency} />
-                            </div>
+                            <div>{currency}</div>
                           </td>
                           <td className="basicinfo text-left">
                             <div>Partnering Needed </div>
                           </td>
                           <td className="text-left">
-                            <div>
-                              <Input
-                                name="partnering_needed"
-                                value={partnering_needed}
-                              />
-                            </div>
+                            <div>{partnering_needed}</div>
                           </td>
                         </tr>
 
@@ -262,20 +203,13 @@ class BasicInformation extends Component {
                             <div>Stage </div>
                           </td>
                           <td className="text-left">
-                            <div>
-                              <Input name="stage" value={stage} />
-                            </div>
+                            <div>{stage}</div>
                           </td>
                           <td className="basicinfo text-left">
                             <div>Project Manager </div>
                           </td>
                           <td className="text-left">
-                            <div>
-                              <Input
-                                name="project_manager"
-                                value={project_manager}
-                              />
-                            </div>
+                            <div>{project_manager}</div>
                           </td>
                         </tr>
                         <tr>
@@ -283,20 +217,13 @@ class BasicInformation extends Component {
                             <div>Project Approver </div>
                           </td>
                           <td className="text-left">
-                            <div>
-                              <Input
-                                name="project_approver"
-                                value={project_approver}
-                              />
-                            </div>
+                            <div>{project_approver}</div>
                           </td>
                           <td className="basicinfo text-left">
                             <div>P&L Manager </div>
                           </td>
                           <td className="text-left">
-                            <div>
-                              <Input name="pl_manager" value={pl_manager} />
-                            </div>
+                            <div>{pl_manager}</div>
                           </td>
                         </tr>
 
@@ -305,20 +232,13 @@ class BasicInformation extends Component {
                             <div>Region </div>
                           </td>
                           <td className="text-left">
-                            <div>
-                              <Input name="region" value={region} />
-                            </div>
+                            <div>{region}</div>
                           </td>
                           <td className="basicinfo text-left" rowSpan="2">
                             <div>Available to Copy </div>
                           </td>
                           <td className="text-left" rowSpan="2">
-                            <div>
-                              <Input
-                                name="available_to_copy"
-                                value={available_to_copy}
-                              />
-                            </div>
+                            <div>{available_to_copy}</div>
                           </td>
                         </tr>
 
@@ -327,9 +247,7 @@ class BasicInformation extends Component {
                             <div>Type </div>
                           </td>
                           <td className="text-left">
-                            <div>
-                              <Input name="type" value={type} />
-                            </div>
+                            <div>{type}</div>
                           </td>
                         </tr>
 
@@ -337,13 +255,7 @@ class BasicInformation extends Component {
                           <td className=" basicinfo text-left">
                             Project Details
                           </td>
-                          <td colSpan="3">
-                            <Input
-                              type="textarea"
-                              rows="2"
-                              defaultValue={description}
-                            />
-                          </td>
+                          <td colSpan="3">{description}</td>
                         </tr>
                       </tbody>
                     </Table>

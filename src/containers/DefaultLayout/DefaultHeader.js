@@ -121,19 +121,21 @@ class DefaultHeader extends Component {
                     )
                   );
                 })} */}
+
+
               <DropdownItem>
                 <NavLink tag={Link} to={"/500"} className="nav-link">
-                  Project 1
+                60453007
                 </NavLink>
               </DropdownItem>
               <DropdownItem>
                 <NavLink tag={Link} to={"/500"} className="nav-link">
-                  Project 5
+                60453009
                 </NavLink>
               </DropdownItem>
               <DropdownItem>
                 <NavLink tag={Link} to={"/500"} className="nav-link">
-                  Project 3
+                60453010
                 </NavLink>
               </DropdownItem>
             </DropdownMenu>

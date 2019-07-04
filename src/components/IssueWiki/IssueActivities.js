@@ -72,7 +72,7 @@ class IssueActivities extends Component {
                 <DropdownToggle tag="i">
                   <i className="fa fa-download card-header-icons text-primary" />
                 </DropdownToggle>
-                <DropdownMenu right>
+                <DropdownMenu right >
                   <DropdownItem header>Download as </DropdownItem>
                   <DropdownItem onClick={() => <ExportExcel />}>
                     <i className="fa fa-file-excel-o mr-2" />{" "}

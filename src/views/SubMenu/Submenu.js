@@ -4,27 +4,39 @@ import { Link } from "react-router-dom";
 import { routesURL } from "../../constant/routesURL";
 
 export const menulist = [
-  { comment: ["Comment", "activityLogRef", "cui-comment-square"] },
-  { project: ["Project Info", "projectInfoRef", "fa fa-sitemap"] },
+  { project: ["Basic Info", "projectInfoRef", "fa fa-sitemap"] },
+  { work_package: ["Basic Info", "workPackageRef", "fa fa-sitemap"] },
+  { deliverableInfo: ["Basic Info", "deliverableRef", "fa fa-sitemap"] },
+  { meetingInfo: ["Basic Info", "meetingMinutesRef", "fa fa-sitemap"] },
+  { taskInfo: ["Basic Info", "taskInfoRef", "fa fa-sitemap"] },
   { wbs: ["WBS", "workPackageRef", "fa fa-sitemap"] },
-  { work_package: ["Work Package", "workPackageRef", "fa fa-sitemap"] },
+  {
+    approvedStatus: ["Approval Status", "approvedStatus", "fa fa-check-square"]
+  },
   { issue_changes: ["Issues/Changes", "issueChangesRef", "fa fa-refresh"] },
   { deliverable: ["Deliverables", "deliverableRef", "fa fa-refresh"] },
   { meeting_minutes: ["Meeting", "meetingMinutesRef", "fa fa-pencil-square"] },
   { finanical: ["Financials", "financialsRef", "fa fa-bar-chart"] },
+  { risks: ["Risks", "riskStatusRef", "fa fa-exclamation-triangle"] },
+  { comment: ["Comment", "activityLogRef", "cui-comment-square"] },
   { activity_log: ["Activity Log", "activityLogRef", "fa fa-clipboard"] },
   { follow: ["Follow", "dummy", "fa fa-rss"] }
 ];
 
 export const keylist = [
-  "comment",
   "project",
-  "wbs",
   "work_package",
+  "deliverableInfo",
+  "meetingInfo",
+  "taskInfo",
+  "wbs",
+  "approvedStatus",
   "issue_changes",
   "deliverable",
   "meeting_minutes",
   "finanical",
+  "risks",
+  "comment",
   "activity_log",
   "follow"
 ];
@@ -33,8 +45,13 @@ class Submenu extends Component {
   state = {
     comment: true,
     project: true,
+    deliverableInfo: true,
+    meetingInfo: true,
+    taskInfo: true,
     wbs: true,
+    risks: true,
     work_package: true,
+    approvedStatus: true,
     issue_changes: true,
     deliverable: true,
     meeting_minutes: true,
@@ -80,6 +97,32 @@ class Submenu extends Component {
               </li>
             </ol>
             <ol className="breadcrumb left-breadcrumb">
+              {/*TASK WIKI*/}
+              {link === "task" && (
+                <>
+                  {" "}
+                  <li className="nav-head active" aria-current="page">
+                    <Link exact to={routesURL.WBS}>
+                      <i className="fa fa-check-square" /> Wbs Register
+                    </Link>
+                  </li>
+                </>
+              )}
+              {/* WORKPACKAGE */}
+              {link === "workpackage" && (
+                <>
+                  {" "}
+                  <li className="nav-head active" aria-current="page">
+                    <Link
+                      exact
+                      to={routesURL.WORKPACKAGE_LIST + "?page=projectwiki"}
+                    >
+                      <i className="fa fa-check-square" /> WorkPackage Register
+                    </Link>
+                  </li>
+                </>
+              )}
+              {/*MEETING */}
               {link === "meeting" && (
                 <>
                   <li className="nav-head active" aria-current="page">
@@ -89,53 +132,69 @@ class Submenu extends Component {
                   </li>
                   <li className="nav-head active" aria-current="page">
                     <Link exact to={routesURL.PAGE_NOT_FOUND}>
-                      <i className="fa fa-sitemap" /> Save
+                      <i className="fa fa-save" /> Save
                     </Link>
                   </li>
                 </>
               )}
-               {link === "invoiceWiki" && (
+              {/*INVOICEWIKI*/}
+              {link === "invoiceWiki" && (
                 <>
-                   <li className="nav-head active " aria-current="page">
-                        <Link
-                          exact
-                          to="#"
-                          onClick={e => {
-                            this.scrollTo(e,refs['approvedStatusRef']);
-                          }}                         
-                        >
-                          <i className="fa fa-check-square" /> Activities
-                        </Link>                       
-                  </li>
-                    <li className="nav-head active " aria-current="page">
-                          <Link
-                            exact
-                            to="#"
-                            onClick={e => {
-                              this.scrollTo(e,refs['descriptionRef']);
-                            }}                         
-                          >
-                            <i className="fa fa-check-square" /> Invoice Description
-                          </Link>                       
-                    </li>
-                  
                   <li className="nav-head active" aria-current="page">
                     <Link exact to={routesURL.INVOICE_LIST}>
                       <i className="fa fa-sitemap" /> Invoce List
                     </Link>
                   </li>
+                  <li className="nav-head active " aria-current="page">
+                    <Link
+                      exact
+                      to="#"
+                      onClick={e => {
+                        this.scrollTo(e, refs["descriptionRef"]);
+                      }}
+                    >
+                      <i className="fa fa-sitemap" /> Basic Info
+                    </Link>
+                  </li>
+                  <li className="nav-head active " aria-current="page">
+                    <Link
+                      exact
+                      to="#"
+                      onClick={e => {
+                        this.scrollTo(e, refs["approvedStatusRef"]);
+                      }}
+                    >
+                      <i className="fa fa-check-square" /> Activities
+                    </Link>
+                  </li>
+                  <li className="nav-head active " aria-current="page">
+                    <Link exact to={routesURL.PAGE_NOT_FOUND}>
+                      <i className="fa fa-usd" /> Approve Invoice
+                    </Link>
+                  </li>
                 </>
               )}
 
-
+              {/*DELIVERABLE*/}
               {link === "deliverable" && (
                 <>
                   <li className="nav-head active " aria-current="page">
-                    <Link exact to="#">
-                      <i className="fa fa-user-secret" /> Assign
+                    <Link exact to={routesURL.DELIVERABLES_LIST}>
+                      <i className="fa fa-check-square px-1" />Deliverables
+                      Register
                     </Link>
                   </li>
-
+                  {/* <li className="nav-head active " aria-current="page">
+                    <Link
+                      exact
+                      to="#"
+                      onClick={e => {
+                        this.scrollTo(e, refs["deliverableRef"]);
+                      }}
+                    >
+                      <i className="fa fa-refresh px-1" />Deliverables
+                    </Link>
+                  </li>
                   <li className="nav-head active " aria-current="page">
                     <Link
                       exact
@@ -146,11 +205,16 @@ class Submenu extends Component {
                     >
                       <i className="fa fa-check-square" /> Approval Status
                     </Link>
+                  </li> */}
+                  <li className="nav-head active " aria-current="page">
+                    <Link exact to="#">
+                      <i className="fa fa-user-secret" /> Associations
+                    </Link>
                   </li>
 
                   <li className="nav-head active" aria-current="page">
                     <Link exact to={routesURL.PAGE_NOT_FOUND}>
-                      <i className="fa fa-sitemap" /> Save
+                      <i className="fa fa-save" /> Save
                     </Link>
                   </li>
                 </>
@@ -171,6 +235,16 @@ class Submenu extends Component {
                               <i className="fa fa-check-square" /> PSR{" "}
                               <i className="px-2" />
                             </Link>
+                            {/* <Link
+                              exact
+                              to="#"
+                              onClick={e => {
+                                this.scrollTo(e, refs["riskStatusRef"]);
+                              }}
+                            >
+                              <i className="fa fa-exclamation-triangle" /> Risks
+                              <i className="px-2" />
+                            </Link> */}
                           </>
                         )}
                       <Link

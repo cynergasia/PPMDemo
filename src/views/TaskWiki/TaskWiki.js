@@ -9,7 +9,7 @@ import database from "../../database/database";
 
 class TaskWiki extends Component {
   activityLogRef = React.createRef();
-
+  taskInfoRef = React.createRef();
   render() {
     const { record_information } = database;
     return (
@@ -17,24 +17,30 @@ class TaskWiki extends Component {
         {/* <TaskWikiMenu /> */}
         <SubMenu
           refs={{
-            activityLogRef: this.activityLogRef
+            activityLogRef: this.activityLogRef,
+            taskInfoRef: this.taskInfoRef
           }}
           isMenu={{
             deliverable: false,
-            project:false,
+            project: false,
             meeting_minutes: false,
             finanical: false,
+            risks: false,
             wbs: false,
             issue_changes: false,
-            work_package: false
+            work_package: false,
+            meetingInfo: false,
+            deliverableInfo: false,
+            approvedStatus: false
           }}
+          link={"task"}
         />
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">
             <Row>
-              <Col xs="12">
+              <div className="col-12" ref={this.taskInfoRef}>
                 <TaskInformation />
-              </Col>
+              </div>
 
               <Col xs="12">
                 <Attachments />
@@ -48,7 +54,10 @@ class TaskWiki extends Component {
           <div className="col-12 col-lg-4">
             <div className="aside">
               <div className="aside-inner">
-                <RecordInformation record_information={record_information} isWorkflowinfo={false}/>
+                <RecordInformation
+                  record_information={record_information}
+                  isWorkflowinfo={false}
+                />
               </div>
             </div>
           </div>

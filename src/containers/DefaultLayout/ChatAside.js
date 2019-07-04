@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Nav, NavItem, NavLink, TabContent, TabPane } from "reactstrap";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-
+import { AppAsideToggler } from "@coreui/react";
 
 const propTypes = {
   children: PropTypes.node
@@ -46,11 +46,17 @@ class ChatAside extends Component {
           <NavItem>
             <NavLink
               className={classNames({ active: this.state.activeTab === "2" })}
-              onClick={() => {
-                this.toggle("1");
-              }}
+              onClick={() => this.props.toggleChat()}
             >
-              <i className="icon-speech" />
+              {this.props.isChat ? (
+                <AppAsideToggler
+                  defaultOpen={true}
+                  className="fa fa-close text-muted"
+                  display="lg"
+                />
+              ) : (
+                <i className="fa fa-close" aria-hidden="true" />
+              )}
             </NavLink>
           </NavItem>
           {/* <NavItem>

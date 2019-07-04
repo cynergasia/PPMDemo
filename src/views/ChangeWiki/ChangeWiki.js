@@ -15,6 +15,7 @@ class ChangeWiki extends Component {
   attachmentRef = React.createRef();
   approvedStatusRef = React.createRef();
   activityLogRef = React.createRef();
+  changeDescRef=React.createRef();
 
   render() {
     const { id } = this.props.match.params;
@@ -33,16 +34,17 @@ class ChangeWiki extends Component {
           refs={{
             attachmentRef: this.attachmentRef,
             approvedStatusRef: this.approvedStatusRef,
-            activityLogRef: this.activityLogRef
+            activityLogRef: this.activityLogRef,
+            changeDescRef:this.changeDescRef,
           }}
           title={changes[0].title}
         />
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">
             <Row>
-              <Col xs="12">
+              <div className="col-12" ref={this.changeDescRef}>
                 <ChangeDescription changes={changes[0]} />
-              </Col>
+              </div>
               <Col xs="12">
                 <ChangeActivities activities={activities} />
               </Col>

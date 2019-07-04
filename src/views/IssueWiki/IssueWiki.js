@@ -17,6 +17,7 @@ class IssueWiki extends Component {
   attachmentRef = React.createRef();
   approvedStatusRef = React.createRef();
   activityLogRef = React.createRef();
+  issueDescRef=React.createRef();
 
   render() {
     const { id } = this.props.match.params;
@@ -35,7 +36,8 @@ class IssueWiki extends Component {
           refs={{
             attachmentRef: this.attachmentRef,
             approvedStatusRef: this.approvedStatusRef,
-            activityLogRef: this.activityLogRef
+            activityLogRef: this.activityLogRef,
+            issueDescRef:this.issueDescRef
           }}
           title={issue[0].title}
         />
@@ -44,12 +46,12 @@ class IssueWiki extends Component {
         <div className="animated fadeIn row">
           <div className="col-12 col-lg-8">
             <Row>
-              <Col xs="12">
+              <div className="col-12" ref={this.issueDescRef}>
                 <IssueDescription
                   issue={issue[0]}
                   issueDescription={issueDescription}
                 />
-              </Col>
+              </div>
               <Col xs="12">
                 <IssueActivities activities={activities} />
               </Col>

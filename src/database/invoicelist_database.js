@@ -1,5 +1,16 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+const publicSwitch = (id, value = false) => (
+  <div class="custom-control custom-switch switch-lg ">
+    <input
+      type="checkbox"
+      class="custom-control-input"
+      id={`switch-${id}`}
+      defaultChecked={value}
+    />
+    <label class="custom-control-label" for={`switch-${id}`} />
+  </div>
+);
 
 const data = props => ({
   invoiceList: [
@@ -20,7 +31,7 @@ const data = props => ({
       payment: "",
       type: "Draft Invoice",
       comments: "SP To review",
-      public: "N"
+      public: publicSwitch("81312")
     },
     {
       invoice_number: (
@@ -39,10 +50,14 @@ const data = props => ({
       payment: "",
       type: "Invoice",
       comments: "",
-      public: "Y"
+      public: publicSwitch("50052", true)
     },
     {
-      invoice_number:1002,
+      invoice_number: (
+        <a href="#/invoicewiki" className="text-primary">
+          1002
+        </a>
+      ),
       customer: "SHELL",
       currency: "USD",
       amount: "10,000.00",
@@ -54,10 +69,14 @@ const data = props => ({
       payment: "10,000.00",
       type: "Invoice",
       comments: "",
-      public: "Y"
+      public: publicSwitch("32744")
     },
     {
-      invoice_number:1001,
+      invoice_number: (
+        <a href="#/invoicewiki" className="text-primary">
+          1006
+        </a>
+      ),
       customer: "SHELL",
       currency: "USD",
       amount: "10,000.00",
@@ -69,106 +88,103 @@ const data = props => ({
       payment: "10,000.00",
       type: "Invoice",
       comments: "",
-      public: "Y"
+      public: publicSwitch("54107")
     }
   ],
-  invoiceDetails:[
+  invoiceDetails: [
     {
-      Details:"Week Ending 30-Apr-19 - Suresh Padmanabhan",
+      Details: "Week Ending 30-Apr-19 - Suresh Padmanabhan",
       Hours: "15",
       Rate: "200",
-      Amount: "$ 3,000.00",     
+      Amount: "$ 3,000.00"
     },
     {
-      Details:"Week Ending 30-Apr-19 - Arindam Mukherjee",
+      Details: "Week Ending 30-Apr-19 - Arindam Mukherjee",
       Hours: "25",
       Rate: "200",
-      Amount: "$ 5,000.00",     
+      Amount: "$ 5,000.00"
     },
     {
-      Details:"Suresh Padmanabhan Expenses",
+      Details: "Suresh Padmanabhan Expenses",
       Hours: "",
       Rate: "",
-      Amount: " ",     
+      Amount: " "
     },
     {
-      Details:"Airfare SEA-LAX-SEA",
+      Details: "Airfare SEA-LAX-SEA",
       Hours: "",
       Rate: "",
-      Amount: "1,000.00",     
+      Amount: "1,000.00"
     },
     {
-      Details:"Loding LA Downtown",
+      Details: "Loding LA Downtown",
       Hours: "",
       Rate: "",
-      Amount: "1,000.00",     
-    },
+      Amount: "1,000.00"
+    }
   ],
-  invoiceActivites:[    
-      {
-        "description": "Generate Invoice",
-        "assigned_to": "Suresh Padmanabhan",
-        "start_date": "04-30-2019",
-        "due_date": "05-01-2019",
-        "status": "Complete",
-        "per_complete": "100"
-      },
-      {
-        "description": "Finalize Invoice",
-        "assigned_to": "Suresh Padmanabhan",
-        "start_date": "05-02-2019",
-        "due_date": "05-04-2019",
-        "status": "Complete",
-        "per_complete": "100"
-      },
-      {
-        "description": "Approve Invoice",
-        "assigned_to": "Arindam Mukherjee",
-        "start_date": "05-06-2019",
-        "due_date": "05-10-2019",
-        "status": "In Progress",
-        "per_complete": "0"
-      },
-      {
-        "description": "Send Invoice to Customer",
-        "assigned_to": "Suresh Padmanabhan",
-        "start_date": "05-15-2019",
-        "due_date": "05-11-2019",
-        "status": " ",
-        "per_complete": "0"
-      }
-   
+  invoiceActivites: [
+    {
+      description: "Generate Invoice",
+      assigned_to: "Suresh Padmanabhan",
+      start_date: "04-30-2019",
+      due_date: "05-01-2019",
+      status: "Complete",
+      per_complete: "100"
+    },
+    {
+      description: "Finalize Invoice",
+      assigned_to: "Suresh Padmanabhan",
+      start_date: "05-02-2019",
+      due_date: "05-04-2019",
+      status: "Complete",
+      per_complete: "100"
+    },
+    {
+      description: "Approve Invoice",
+      assigned_to: "Arindam Mukherjee",
+      start_date: "05-06-2019",
+      due_date: "05-10-2019",
+      status: "In Progress",
+      per_complete: "0"
+    },
+    {
+      description: "Send Invoice to Customer",
+      assigned_to: "Suresh Padmanabhan",
+      start_date: "05-15-2019",
+      due_date: "05-11-2019",
+      status: " ",
+      per_complete: "0"
+    }
   ],
   record_information: {
-  audit_info: [
-    {
-      title: "Created By",
-      value: "Suresh Padmanabhan"
-    },
-    {
-      title: "Creation Date",
-      value: "05-01-19"
-    },
-    {
-      title: "Assigned To",
-      value: "Arindam Mukherjee"
-    },
-    {
-      title: "Type",
-      value: "Draft Invoice"
-    },
-    {
-      title: "Last Updated By",
-      value: "Suresh Padmanabhan"
-    },
-    {
-      title: "Last Updated Date",
-      value: "05-15-19"
-    }   
-  ]
-}
+    audit_info: [
+      {
+        title: "Created By",
+        value: "Suresh Padmanabhan"
+      },
+      {
+        title: "Creation Date",
+        value: "05-01-19"
+      },
+      {
+        title: "Assigned To",
+        value: "Arindam Mukherjee"
+      },
+      {
+        title: "Type",
+        value: "Draft Invoice"
+      },
+      {
+        title: "Last Updated By",
+        value: "Suresh Padmanabhan"
+      },
+      {
+        title: "Last Updated Date",
+        value: "05-15-19"
+      }
+    ]
+  }
 });
 
 export default data;
-
-

@@ -1,6 +1,7 @@
 export const BASE_PATH = "/";
 
 export const routesURL = {
+  LOGIN: `${BASE_PATH}login`,
   DASHBOARD: `${BASE_PATH}dashboard`,
   PSR: `${BASE_PATH}psr/`,
   PROJECT_WIKI: `${BASE_PATH}projectwiki/`,
@@ -14,7 +15,7 @@ export const routesURL = {
   ACTIVITIES_LIST: `${BASE_PATH}activitieslist`,
   RESOURCE_LIST: `${BASE_PATH}resourcelist/`,
   ISSUE_WIKI: `${BASE_PATH}issuewiki/`,
-  ISSUE_LIST: `${BASE_PATH}issuelist`,
+  ISSUE_LIST: `${BASE_PATH}issuelist/`,
   CHANGE_WIKI: `${BASE_PATH}changewiki/`,
   CHANGES_LIST: `${BASE_PATH}changeslist`,
   INVOICE_WIKI: `${BASE_PATH}invoicewiki`,

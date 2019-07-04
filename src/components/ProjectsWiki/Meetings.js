@@ -20,8 +20,7 @@ class Meetings extends Component {
         <Card>
           <CardHeader>
             Meetings
-            <div className="card-header-actions">
-              <i className="fa fa-plus-circle mr-2" />
+            <div className="card-header-actions">           
               <i className="fa fa-pencil-square" />
             </div>
           </CardHeader>

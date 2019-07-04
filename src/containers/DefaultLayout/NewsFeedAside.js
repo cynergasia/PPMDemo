@@ -11,6 +11,7 @@ import {
 import classNames from "classnames";
 import database from "../../database/database";
 import PropTypes from "prop-types";
+import { AppAsideToggler } from "@coreui/react";
 
 const propTypes = {
   children: PropTypes.node
@@ -47,13 +48,18 @@ class NewsFeedAside extends Component {
         <Nav tabs>
           <NavItem>
             <NavLink
-              className={classNames({ active: this.state.activeTab === "1" })}
-              onClick={() => {
-                this.toggle("1");
-              }}
-
+              className={classNames({ active: this.state.activeTab === "2" })}
+              onClick={() => this.props.toggleNewsFeed()}
             >
-              <i className="icon-list" />
+              {this.props.isNewsFeed ? (
+                <AppAsideToggler
+                  defaultOpen={true}
+                  className="fa fa-close text-muted"
+                  display="lg"
+                />
+              ) : (
+                <i className="fa fa-close" aria-hidden="true" />
+              )}
             </NavLink>
           </NavItem>
         </Nav>
@@ -68,8 +74,6 @@ class NewsFeedAside extends Component {
               </ListGroupItem>
               {database.globalNewsFeed.map(item => (
                 <ListGroupItem
-                  
-                
                   className="list-group-item-accent-warning list-group-item-divider"
                   onClick={this.handleClick}
                 >
