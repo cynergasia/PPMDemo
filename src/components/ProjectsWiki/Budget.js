@@ -8,14 +8,14 @@ class Budget extends Component {
         <Table responsive bordered>
           <tr>
             <td>
-              <a
+              {/* <a
                 className="text-danger font-weight-bold"
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://drive.google.com/file/d/1FSLJbvp1EMw5SDxtkvRgu8QUK-dSp9qf/view?ts=5d145159"
               >
                 Download Budget.xls
-              </a>
+              </a> */}
             </td>
             <td className="basicinfo text-left">
               <div>Cost </div>

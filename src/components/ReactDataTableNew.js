@@ -14,7 +14,6 @@ class ReactDataTableNew extends Component {
       <React.Fragment>
         {isButton && <React.Fragment />}
         <MDBDataTable
-
           striped
           hover
           responsive

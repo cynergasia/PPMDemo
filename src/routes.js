@@ -2,10 +2,18 @@ import React from "react";
 import { routesURL } from "./constant/routesURL";
 
 const Dashboard = React.lazy(() => import("./views/Dashboard/Dashboard"));
+const CustomerDashboard = React.lazy(() =>
+  import("./views/Dashboard/CustomerDashboard")
+);
 const ProjectStatusReport = React.lazy(() =>
   import("./views/ProjectStatusReport/ProjectStatusReport.js")
 );
 const ProjectWiki = React.lazy(() => import("./views/ProjectWiki/ProjectWiki"));
+const Portfolio = React.lazy(() => import("./views/Portfolio/Portfolio"));
+const Backlog = React.lazy(() => import("./views/Backlog/Backlog"));
+const BacklogView = React.lazy(() => import("./views/Backlog/BacklogView"));
+const Budget = React.lazy(() => import("./views/Budget/Budget"));
+const Forecast = React.lazy(() => import("./views/Forecast/forecast"));
 
 const DeliverablesWiki = React.lazy(() =>
   import("./views/DeliverablesWiki/DeliverablesWiki")
@@ -45,6 +53,37 @@ const routes = [
     path: routesURL.DASHBOARD,
     component: Dashboard,
     title: "Project Dashboard"
+  },
+  {
+    path: routesURL.CUSTOMERDASHBOARD,
+    component: CustomerDashboard,
+    title: "Project Dashboard"
+  },
+  {
+    path: routesURL.PORTFOLIO,
+    component: Portfolio,
+    title: "Portfolio",
+    exact: true
+  },
+  {
+    path: routesURL.BACKLOG2,
+    component: Backlog,
+    title: "Backlog"
+  },
+  {
+    path: `${routesURL.BACKLOG}:id`,
+    component: BacklogView,
+    title: "Backlog"
+  },
+  {
+    path: routesURL.BUDGET,
+    component: Budget,
+    title: "Budget"
+  },
+  {
+    path: routesURL.FORECAST,
+    component: Forecast,
+    title: "Forecast"
   },
   {
     path: `${routesURL.PSR}:id`,

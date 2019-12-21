@@ -15,6 +15,7 @@ import { formatDate } from "../../helper/TextFormat";
 import { APP_LOCAL_DATETIME_FORMAT } from "../../constant";
 import Budget from "./Budget";
 import Forecast from "./Forecast";
+import { Link } from "react-router-dom";
 
 let activityData = {
   columns: [
@@ -139,7 +140,17 @@ class BudgetFinance extends Component {
             </ul>
 
             <div className="card-header-actions">
-              <i className="fa fa-pencil-square" />
+              {activeTab === "1" && <i className="fa fa-pencil-square" />}
+              {activeTab === "2" && (
+                <Link to="/budget">
+                  <i className="fa fa-pencil-square" />
+                </Link>
+              )}
+              {activeTab === "3" && (
+                <Link to="/forecast">
+                  <i className="fa fa-pencil-square" />
+                </Link>
+              )}
             </div>
             <Modal
               isOpen={this.state.isModal}

@@ -47,7 +47,9 @@ class Popup extends React.Component {
           -- Select --
         </option>
         {Object.keys(options).map(opt => (
-          <option value={opt}>{options[opt]["name"]}</option>
+          <option key={opt} value={opt}>
+            {options[opt]["name"]}
+          </option>
         ))}
       </Input>
     );

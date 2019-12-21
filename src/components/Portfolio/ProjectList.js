@@ -1,101 +1,115 @@
 import React, { Component } from "react";
 import { Card, CardHeader, CardBody } from "reactstrap";
-import ReactDataTableNew from "../ReactDataTableNew";
 import {
   DropdownItem,
   DropdownMenu,
   DropdownToggle,
   UncontrolledDropdown
 } from "reactstrap";
-import ExportExcel from "../../helper/ExportExcel";
 import { CSVLink } from "react-csv";
+import ReactDataTableNew from "./../ReactDataTableNew";
+import ExportExcel from "./../../helper/ExportExcel";
+import { Link } from "react-router-dom";
+import database from "../../database/database.json";
 
 let data = {
   columns: [
     {
-      label: "Activity Number",
-      field: "activityNumber",
+      label: "Project Name",
+      field: "project",
       sort: "asc"
     },
     {
-      label: "Name",
-      field: "name",
+      label: "Project Number",
+      field: "project_number",
       sort: "asc"
     },
     {
-      label: "Work Package",
-      field: "work_package",
+      label: "Project Stage",
+      field: "project_stage",
       sort: "asc"
     },
     {
-      label: "Owner",
-      field: "owner",
+      label: "PM",
+      field: "pm",
       sort: "asc"
     },
     {
-      label: "Due Date",
-      field: "due_date",
+      label: "Start Date",
+      field: "start_date",
       sort: "asc"
     },
     {
-      label: "Planned",
-      field: "planned",
-      sort: "asc"
-    },
-    {
-      label: "Actual",
-      field: "actual",
-      sort: "asc"
-    },
-    {
-      label: "Remaining",
-      field: "Remaining",
-      sort: "asc"
-    },
-    {
-      label: "Status",
-      field: "status",
-      sort: "asc"
-    },
-
-    {
-      label: "% Complete",
-      field: "per_complete",
-      sort: "asc"
-    },
-    {
-      label: "Comments",
-      field: "comments",
+      label: "End Date",
+      field: "end_date",
       sort: "asc"
     }
   ],
   rows: []
 };
 
-class Activities extends Component {
+class ProjectList extends Component {
   state = {
-    dropdownOpen: false,
-    data: {}
-  };
-  toggle = () => {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen
-    });
+    data: { ...data }
   };
   handleExcel = () => {
     return;
   };
 
   componentDidMount() {
-    data.rows = this.props.activity;
-    this.setState({ data });
+    this.updateData();
   }
+  updateData() {
+    data.rows = [];
+    const { portfolio } = database;
+    if (portfolio.length < 1) return;
+
+    const projects = [];
+    portfolio.forEach(({ projects: p, name }) => {
+      name === this.props.portfolio &&
+        p.forEach(({ id, customer, name, pm, stage, start_date, end_date }) => {
+          projects.push({
+            name,
+            id,
+            stage,
+            pm,
+            start_date,
+            end_date
+          });
+        });
+    });
+
+    this.setState({
+      data: {
+        ...this.state.data,
+        rows: [...this.state.data.rows, ...projects]
+      }
+    });
+  }
+  // updateData() {
+  //   console.log(this.props);
+  //   data.rows = [];
+  //   const projectdata = database.projectlists;
+  //   if (projectdata.length > 0) {
+  //     projectdata.forEach(({ project_name, id, project_stage, project_manager, start_date, end_date }) => {
+  //       data.rows.push({
+  //         project_name,
+  //         id,
+  //         project_stage,
+  //         project_manager,
+  //         start_date,
+  //         end_date
+  //       });
+  //     });
+  //   }
+  //   this.setState({ data });
+  // }
   render() {
     return (
       <React.Fragment>
         <Card>
           <CardHeader>
-            Activities
+            Project List
             <div className="card-header-actions">
               <UncontrolledDropdown tag="i" className="mr-2 cursor-pointer">
                 <DropdownToggle tag="i">
@@ -126,11 +140,12 @@ class Activities extends Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-
-              <i className="fa fa-pencil-square" />
             </div>
           </CardHeader>
           <CardBody>
+            <Link to="/500" className="mr-2">
+              <i className="fa fa-trash" /> Remove
+            </Link>
             <ReactDataTableNew
               striped
               bordered
@@ -147,4 +162,4 @@ class Activities extends Component {
   }
 }
 
-export default Activities;
+export default ProjectList;

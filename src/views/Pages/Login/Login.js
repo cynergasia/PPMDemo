@@ -13,42 +13,71 @@ import {
   InputGroupText,
   Row
 } from "reactstrap";
-import logo from "../../../assets/img/brand/Synergasia.png";
+// import logo from "../../../assets/img/brand/Synergasia.png";
+import logo from "../../../assets/img/brand/pace-logo.svg";
 import { routesURL } from "../../../constant/routesURL";
 import { tostify } from "../../../helper/Tostify";
+import database from "./../../../database/database.json";
 
 class Login extends Component {
   state = {
     username: null,
     password: null,
-    error: null
+    error: null,
+    members: []
   };
+  componentDidMount() {
+    const members = [...this.state.members];
+    database.members.forEach(res => {
+      members.push(res);
+    });
+    this.setState({
+      members
+    });
+  }
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
   onSubmit = e => {
     e.preventDefault();
-    let { username, password, error } = this.state;
+    let { username, password } = this.state;
+    let error = true;
     if (username !== "admin" || username === null) {
       error = true;
     } else error = false;
     if (password !== "admin123" || password === null) {
       error = true;
     } else error = false;
+    database.members.every(res => {
+      if (username === res.email && password === res.password) {
+        localStorage.setItem("role", "member");
+        localStorage.setItem("member", username);
+        setTimeout(() => (window.location.hash = routesURL.DASHBOARD), 0);
+        error = false;
+      }
+      return error;
+    });
 
-    this.setState({ error });
-    error === false && tostify("Login Success", "success");
-    error === true && tostify("Username and Password invalid", "error");
+    // if (username === "hda@narola.email" && password === "123") {
+    //   tostify("Login Success", "success");
+    //   localStorage.setItem("role", "member");
+    //   return (window.location.hash = routesURL.DASHBOARD);
+    // }
+    // this.setState({ error });
+    void (error === false && tostify("Login Success", "success"));
+    void (error === true && tostify("Username and Password invalid", "error"));
     return error === false && (window.location.hash = routesURL.DASHBOARD);
   };
   render() {
+    console.info("[Login.js] this.state.members ======>", this.state.members);
+
     return (
       <div className="app flex-row align-items-center">
         <Container>
           <Row className="justify-content-center">
             <Col sm="12" md="12" xl="10">
               <CardGroup
-                className="flex-column-reverse flex-md-row "
+                className="flex-column-reverse flex-md-row"
                 style={{ height: "100%" }}
               >
                 <Card className="p-4 " style={{ height: "100%" }}>

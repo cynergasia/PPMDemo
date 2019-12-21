@@ -89,7 +89,6 @@ class RecordInformation extends Component {
                           <small className="text-muted">{item.value}</small>
                           {/* <hr className="mb-0 w-100" /> */}
                         </React.Fragment>
-                        
                       </ListGroupItemText>
                     ))}
                   </Collapse>

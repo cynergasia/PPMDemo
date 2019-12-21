@@ -17,7 +17,8 @@ import {
   AppHeaderDropdown,
   AppNavbarBrand
 } from "@coreui/react";
-import logo from "../../assets/img/brand/Synergasia.png";
+// import logo from "../../assets/img/brand/Synergasia.png";
+import logo from "../../assets/img/brand/pace-logo.svg";
 import sygnet from "../../assets/img/brand/sygnet.svg";
 import Popup from "./Popup";
 import { routesURL } from "../../constant/routesURL";
@@ -35,6 +36,7 @@ class DefaultHeader extends Component {
   };
   signOut(e) {
     e.preventDefault();
+    localStorage.removeItem("role");
     //this.props.history.push("/login");
     window.location.hash = "/login";
   }
@@ -56,8 +58,8 @@ class DefaultHeader extends Component {
         {/* <AppSidebarToggler className="d-lg-none" display="md" mobile /> */}
         {/* <AppAsideToggler className="d-lg-none" display="md" mobile /> */}
         <AppNavbarBrand
-          full={{ src: logo,  height: 30, alt: "ANS Corp" }}
-          minimized={{ src: sygnet,  height: 30, alt: "ANS Corp" }}
+          full={{ src: logo, height: 30, alt: "ANS Corp" }}
+          minimized={{ src: sygnet, height: 30, alt: "ANS Corp" }}
         />
 
         <p className="project-name">{this.props.title} </p>
@@ -73,7 +75,7 @@ class DefaultHeader extends Component {
           </NavItem>
           <div className="topnav">
             <div className="search-container">
-              <form action="/action_page.php" method="post">
+              <form method="post">
                 <input type="text" placeholder="Search.." name="search" />
                 <button type="submit">
                   <i className="fa fa-search" />
@@ -122,20 +124,19 @@ class DefaultHeader extends Component {
                   );
                 })} */}
 
-
               <DropdownItem>
                 <NavLink tag={Link} to={"/500"} className="nav-link">
-                60453007
+                  60453007
                 </NavLink>
               </DropdownItem>
               <DropdownItem>
                 <NavLink tag={Link} to={"/500"} className="nav-link">
-                60453009
+                  60453009
                 </NavLink>
               </DropdownItem>
               <DropdownItem>
                 <NavLink tag={Link} to={"/500"} className="nav-link">
-                60453010
+                  60453010
                 </NavLink>
               </DropdownItem>
             </DropdownMenu>

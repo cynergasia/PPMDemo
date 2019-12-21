@@ -20,15 +20,15 @@ let warningData = [];
 
 let data = [];
 
-database.projects.forEach(item => {
-  item.id !== 60888013 &&
-    data.push({
-      x: item.financial_per_complete,
-      y: item.execution_per_complete,
-      contract: item.contract_value,
-      project: item.name
-    });
-});
+// database.projects.forEach(item => {
+//   item.id !== 60888013 &&
+//     data.push({
+//       x: item.financial_per_complete,
+//       y: item.execution_per_complete,
+//       contract: item.contract_value,
+//       project: item.name
+//     });
+// });
 
 // const data = [
 //   { x: 70, y: 68, contract: 6500000, project: "Shangri-la - SLUB Pha" },
@@ -40,21 +40,20 @@ database.projects.forEach(item => {
 // ];
 // const min = _minBy(data, "contract").contract;
 
-const max = _maxBy(data, "contract").contract;
-// const average = (max + min) / 2;
-// const range = max - min;
-data.forEach(({ x, y, contract, project }) => {
-  // console.log((contract / 2 + average / 2) / 2 * 100);
-  const n = y / x;
-  const r = parseInt(contract / max * 30 + 8);
-  const item = { x, y, r, project, contract };
-  n >= 2
-    ? dangerData.push(item)
-    : n >= 1 && n < 2
-      ? warningData.push(item)
-      : inProgressData.push(item);
-});
-
+// const max = _maxBy(data, "contract").contract;
+// // const average = (max + min) / 2;
+// // const range = max - min;
+// data.forEach(({ x, y, contract, project }) => {
+//   // console.log((contract / 2 + average / 2) / 2 * 100);
+//   const n = y / x;
+//   const r = parseInt((contract / max) * 30 + 8);
+//   const item = { x, y, r, project, contract };
+//   n >= 2
+//     ? dangerData.push(item)
+//     : n >= 1 && n < 2
+//     ? warningData.push(item)
+//     : inProgressData.push(item);
+// });
 const dataBubble = {
   label: ["Danger", "Warning", "Green"],
   datasets: [
@@ -166,6 +165,8 @@ const dataBubbleChartOpts = {
         const datasetIndex = tooltipItem.datasetIndex;
         const Index = tooltipItem.index;
         const project = data.datasets[datasetIndex].data[Index];
+        console.info("[Project.js] project ======>", project);
+
         return (
           "Project : " +
           project.project +
@@ -179,6 +180,42 @@ const dataBubbleChartOpts = {
 
 class Project extends Component {
   render() {
+    const { portfolio } = database;
+
+    data = [];
+    portfolio.forEach(({ projects: p, name }) => {
+      if (name === this.props.portfolio) {
+        p.forEach(
+          ({
+            name,
+            financial_per_complete,
+            execution_per_complete,
+            contract_value
+          }) => {
+            data.push({
+              x: financial_per_complete,
+              y: execution_per_complete,
+              contract: contract_value,
+              project: name
+            });
+          }
+        );
+      }
+    });
+    const max = _maxBy(data, "contract").contract;
+    // const average = (max + min) / 2;
+    // const range = max - min;
+    data.forEach(({ x, y, contract, project }) => {
+      // console.log((contract / 2 + average / 2) / 2 * 100);
+      const n = y / x;
+      const r = parseInt((contract / max) * 30 + 8);
+      const item = { x, y, r, project, contract };
+      n >= 2
+        ? dangerData.push(item)
+        : n >= 1 && n < 2
+        ? warningData.push(item)
+        : inProgressData.push(item);
+    });
     return (
       <div>
         <Card>

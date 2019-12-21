@@ -3,6 +3,12 @@ export const BASE_PATH = "/";
 export const routesURL = {
   LOGIN: `${BASE_PATH}login`,
   DASHBOARD: `${BASE_PATH}dashboard`,
+  CUSTOMERDASHBOARD: `${BASE_PATH}home`,
+  BACKLOG2: `${BASE_PATH}backlogg`,
+  BACKLOG: `${BASE_PATH}backlog/`,
+  BUDGET: `${BASE_PATH}budget`,
+  FORECAST: `${BASE_PATH}forecast`,
+  PORTFOLIO: `${BASE_PATH}portfolio`,
   PSR: `${BASE_PATH}psr/`,
   PROJECT_WIKI: `${BASE_PATH}projectwiki/`,
   DELIVERABLES_WIKI: `${BASE_PATH}deliverableswiki/`,

@@ -88,7 +88,12 @@ class Submenu extends Component {
           <div className="col-12 col-sm-12 col-lg-12">
             <ol className="breadcrumb left-breadcrumb">
               <li className="nav-head active" area-current="page">
-                <i className="fa fa-map-marker" />
+                <Link to="/dashboard">
+                  <i className="fa fa-arrow-left mr-2"></i>
+                  Go to Dashboard
+                </Link>
+                <span className="mx-3">|</span>
+                <i className="fa fa-map-marker mr-2" />
                 <Link to={routesURL.PROJECT_WIKI + "60453005"}>
                   {" "}
                   Extensions N/Cape Mall Phase 3 (60453005)
@@ -180,8 +185,8 @@ class Submenu extends Component {
                 <>
                   <li className="nav-head active " aria-current="page">
                     <Link exact to={routesURL.DELIVERABLES_LIST}>
-                      <i className="fa fa-check-square px-1" />Deliverables
-                      Register
+                      <i className="fa fa-check-square px-1" />
+                      Deliverables Register
                     </Link>
                   </li>
                   {/* <li className="nav-head active " aria-current="page">
@@ -233,6 +238,14 @@ class Submenu extends Component {
                               className="cursor-pointer"
                             >
                               <i className="fa fa-check-square" /> PSR{" "}
+                              <i className="px-2" />
+                            </Link>
+                            <Link
+                              exact
+                              to={routesURL.BACKLOG + id}
+                              className="cursor-pointer"
+                            >
+                              <i className="fa fa-check-square" /> Backlog{" "}
                               <i className="px-2" />
                             </Link>
                             {/* <Link

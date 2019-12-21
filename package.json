@@ -3,7 +3,7 @@
   "version": "2.5.0",
   "description": "Cynergasia",
   "author": "Ritika",
-  "homepage": "http://clientapp.narola.online/HD/BrsoProtype",
+  "homepage": "http://clientapp.narola.online/HD/PACE",
   "copyright": "Copyright 2019",
   "license": "Narola",
   "private": true,
@@ -27,21 +27,25 @@
     "enzyme": "^3.9.0",
     "flag-icon-css": "^3.3.0",
     "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1",
     "mdbreact": "^4.16.0",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-app-polyfill": "^1.0.1",
+    "react-beautiful-dnd": "^11.0.5",
     "react-big-calendar": "^0.21.0",
     "react-chartjs-2": "^2.7.6",
     "react-csv": "^1.1.1",
+    "react-custom-scrollbars": "^4.2.1",
     "react-datepicker": "^2.7.0",
     "react-dom": "^16.8.6",
     "react-dropzone": "^10.1.5",
     "react-excel-workbook": "0.0.4",
     "react-router-dom": "^5.0.0",
     "react-toastify": "^5.3.1",
+    "react-tooltip": "^3.11.1",
     "reactstrap": "^7.1.0",
     "simple-line-icons": "^2.4.1",
     "smoothscroll-polyfill": "^0.4.4"
@@ -58,7 +62,7 @@
     "eject": "react-scripts eject"
   },
   "bugs": {
-    "url": "http://clientapp.narola.online/HD/BrsoProtype"
+    "url": "http://clientapp.narola.online/HD/PACE"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -146,7 +146,7 @@ export class ActivityLog extends Component {
                   data-toggle="tab"
                   className={`${
                     activeTab === "1" ? "active nav-link" : "nav-link"
-                  }`}
+                    }`}
                   onClick={() => this.toggle("1")}
                 >
                   {" "}
@@ -159,7 +159,7 @@ export class ActivityLog extends Component {
                   data-toggle="tab"
                   className={`${
                     activeTab === "2" ? "active nav-link" : "nav-link"
-                  }`}
+                    }`}
                   onClick={() => this.toggle("2")}
                 >
                   Activity Log

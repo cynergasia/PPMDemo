@@ -3,7 +3,7 @@ import { Row, Col, Card, CardBody } from "reactstrap";
 // import WBSList_IMG from "../../assets/img/WBSList.png";
 import { Link } from "react-router-dom";
 
-class WBS extends Component {
+class Budget extends Component {
   render() {
     return (
       <React.Fragment>
@@ -32,8 +32,9 @@ class WBS extends Component {
                 <CardBody style={{ height: "calc(100vh - 12rem)" }}>
                   <iframe
                     className="w-100 h-100"
-                    title="WBS"
-                    src="http://clientapp.narola.online/HD/PACE1/WBS.html"
+                    title="Budget"
+                    src="http://clientapp.narola.online/HD/PACE1/Budget.html"
+                    frameborder="0"
                   ></iframe>
                 </CardBody>
               </Card>
@@ -45,4 +46,4 @@ class WBS extends Component {
   }
 }
 
-export default WBS;
+export default Budget;

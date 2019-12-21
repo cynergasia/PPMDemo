@@ -238,6 +238,10 @@ table.dataTable {
       }
     }
   }
+  th,
+  td {
+    cursor: pointer;
+  }
 }
 
 .aside {
@@ -288,4 +292,12 @@ table.dataTable {
   html:not([dir="rtl"]) .aside-menu-lg-show.aside-menu-fixed .app-footer {
     margin-right: 323px;
   }
+}
+
+.dataTables_wrapper {
+  padding: 0 15px;
+}
+
+.tableScroll > div:first-child {
+  height: initial !important;
 }
