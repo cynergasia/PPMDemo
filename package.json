@@ -27,7 +27,7 @@
     "enzyme": "^3.9.0",
     "flag-icon-css": "^3.3.0",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mdbreact": "^4.16.0",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
